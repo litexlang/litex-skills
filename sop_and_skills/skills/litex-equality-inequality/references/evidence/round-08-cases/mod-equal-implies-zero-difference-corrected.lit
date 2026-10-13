@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b Z,m N+:
+        a%m = b%m
+        =>:
+            (a-b)%m = 0
+    b%m-b%m = 0
+    (a-b)%m = (a%m-b%m)%m = (b%m-b%m)%m = 0%m = 0

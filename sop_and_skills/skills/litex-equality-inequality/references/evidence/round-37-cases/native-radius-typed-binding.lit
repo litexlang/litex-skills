@@ -1,0 +1,4 @@
+claim:
+    ? forall delta1,delta2 R+:
+        min(delta1,delta2) $in R+
+    have radius R+=min(delta1,delta2)

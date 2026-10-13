@@ -1,0 +1,4 @@
+forall m N,n N+:
+    factorial(m) <= factorial(n)
+    =>:
+        m <= n

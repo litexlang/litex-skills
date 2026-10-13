@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b,M R:
+        b > 0
+        a/b <= M
+        =>:
+            a <= M*b
+    a = (a/b)*b <= M*b

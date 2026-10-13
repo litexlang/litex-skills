@@ -1,0 +1,3 @@
+forall x R:
+    x < floor(x)+1
+    x-1 < (floor(x)+1)-1 = floor(x)

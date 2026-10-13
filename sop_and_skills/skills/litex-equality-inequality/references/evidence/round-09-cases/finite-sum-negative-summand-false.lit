@@ -1,0 +1,2 @@
+forall f fn(x {1,2}) R:
+    f(1) <= finite_set_sum({1,2},f)

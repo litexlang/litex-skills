@@ -1,0 +1,4 @@
+forall a,c,d,f R:
+    (a+d)/2 = (c+f)/2
+    =>:
+        a-c = d-f

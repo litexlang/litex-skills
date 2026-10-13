@@ -1,0 +1,2 @@
+forall F fn(h fn(t R) R) R,g1,g2 fn(t R) R:
+    F(fn(x R) R {-1*g1(x)}) = F(fn(y R) R {-1*g2(y)})

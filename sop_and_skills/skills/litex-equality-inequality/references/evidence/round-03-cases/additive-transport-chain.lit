@@ -1,0 +1,6 @@
+claim:
+    ? forall a,b,c,d R:
+        a+d = c+b
+        =>:
+            a-c = b-d
+    a-c = (a+d)-c-d = (c+b)-c-d = b-d

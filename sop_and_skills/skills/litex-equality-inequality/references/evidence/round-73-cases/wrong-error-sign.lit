@@ -1,0 +1,8 @@
+have fn square_function(x R) R = x^2
+have fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)
+thm square_tangent_error_at_three:
+    ? forall x R:
+        square_function(x) - square_tangent_at_three(x) = -(x - 3)^2
+    square_function(x) = x^2
+    square_tangent_at_three(x) = 9 + 6 * (x - 3)
+    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2

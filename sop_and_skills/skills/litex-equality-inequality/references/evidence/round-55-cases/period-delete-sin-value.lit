@@ -1,0 +1,7 @@
+claim:
+    ? forall x R:
+        sin(x+2*pi)=sin(x)
+        cos(x+2*pi)=cos(x)
+    cos(2*pi)=1
+    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)
+    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)

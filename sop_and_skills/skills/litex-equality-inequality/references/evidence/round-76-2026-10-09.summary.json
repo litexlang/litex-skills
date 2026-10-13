@@ -1,0 +1,641 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-76-2026-10-09.json",
+  "original_sha256": "fb9e10d29631f2f7060ce8e948a33fb4e39cfe6a769c788f2667c72d5d04aef2",
+  "original_bytes": 1234810,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "6f119c3d7067a8f7a023ea88a08952b73bf6070eeab0b7ff0a1b35b01bf5cd54",
+    "cases": [
+      {
+        "id": "prefix",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/prefix.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "df3e44cf9c4582867bd8022ef20485a2427cda3df555aa6d10906a8874f7870b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/prefix.lit"
+        ]
+      },
+      {
+        "id": "source-x",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-x.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-x.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4ef3f9d42ac35fdbf501e8a9156b65905d02b6fd0e2c767f199e36911d72f6f5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-x.lit"
+        ]
+      },
+      {
+        "id": "source-y",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    y - p(2) != 0\n    (p(1), y)(1) = p(1)\n    (p(1), y)(2) = y\n    quadratic_surface((p(1), y)) = p(1)^2 + y^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((p(1), y)) - quadratic_surface(p) = (p(1)^2 + y^2) - (p(1)^2 + p(2)^2) = y^2 - p(2)^2\n    y^2 - p(2)^2 = (y - p(2)) * (y + p(2))\n    (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = (y^2 - p(2)^2) / (y - p(2)) = y + p(2)\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-y.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-y.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "326a5fe9e54cebe5a04d643a43aadc9e9ace104cdd90e230322548c3b39c86b9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-y.lit"
+        ]
+      },
+      {
+        "id": "source-both",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    y - p(2) != 0\n    (p(1), y)(1) = p(1)\n    (p(1), y)(2) = y\n    quadratic_surface((p(1), y)) = p(1)^2 + y^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((p(1), y)) - quadratic_surface(p) = (p(1)^2 + y^2) - (p(1)^2 + p(2)^2) = y^2 - p(2)^2\n    y^2 - p(2)^2 = (y - p(2)) * (y + p(2))\n    (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = (y^2 - p(2)^2) / (y - p(2)) = y + p(2)\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-both.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-both.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "153d13098b0fb98050cbd9efc4411a651a249b3e15990d516dc59c65b11d93a9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-both.lit"
+        ]
+      },
+      {
+        "id": "x-single-final-chain",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x-p(1)!=0\n    (x,p(2))(1)=x\n    (x,p(2))(2)=p(2)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-single-final-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-single-final-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3c3a285f837bcb09a2683402904c0b2d91d0ae08a0e807df497a91f959815c18"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-single-final-chain.lit"
+        ]
+      },
+      {
+        "id": "x-chain-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9923b7a2a9766baf04441d7fcb1bd69c9444bcefa6c1d99afdcadfe452ece4af"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-chain-only.lit"
+        ]
+      },
+      {
+        "id": "x-delete-denominator-fact",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    (x,p(2))(1)=x\n    (x,p(2))(2)=p(2)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-delete-denominator-fact.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-delete-denominator-fact.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73261aa109707f92f96b70d581f91d31d4b6348cfb0285b0bbd7c087da9599c9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-delete-denominator-fact.lit"
+        ]
+      },
+      {
+        "id": "x-delete-coordinate-facts",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x-p(1)!=0\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-delete-coordinate-facts.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-delete-coordinate-facts.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c00d14e4e3490530a1b4bfab3ae4333bef80d19447fe68f9a88944c9b75cf6cc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-delete-coordinate-facts.lit"
+        ]
+      },
+      {
+        "id": "x-delete-function-values",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x-p(1)!=0\n    (x,p(2))(1)=x\n    (x,p(2))(2)=p(2)\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-delete-function-values.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-delete-function-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "81c6989c9306d2d7be1ba07083e93b04ca12add4547153a74200890c4610c5e0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-delete-function-values.lit"
+        ]
+      },
+      {
+        "id": "wrong-x-conclusion",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x - p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/wrong-x-conclusion.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/wrong-x-conclusion.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07e765f46b9f4f51d1608d6731eddefcc27a77f853a7d59cb7920843076b7bef"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/wrong-x-conclusion.lit"
+        ]
+      },
+      {
+        "id": "missing-x-nonzero-premise",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/missing-x-nonzero-premise.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/missing-x-nonzero-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c17e3a1a2b76ca25a675b7e98a1b8fe48ba1196d19a8345d52b9e6e104ffb745"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/missing-x-nonzero-premise.lit"
+        ]
+      },
+      {
+        "id": "x-combined-short",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-combined-short.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-combined-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cfded20928d96c2040812d1aeac3e779942fc4e44cd2b0144bc9ca96d5b3567f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-combined-short.lit"
+        ]
+      },
+      {
+        "id": "x-values-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-values-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/x-values-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a9740fc57c2db31499a2411d13685c5e5db83e7832ba98952e844e99932fabc5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-values-only.lit"
+        ]
+      },
+      {
+        "id": "y-three-fact-route",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    quadratic_surface((p(1),y))=p(1)^2+y^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((p(1),y))-quadratic_surface(p))/(y-p(2))=((p(1)^2+y^2)-(p(1)^2+p(2)^2))/(y-p(2))=(y^2-p(2)^2)/(y-p(2))=((y-p(2))*(y+p(2)))/(y-p(2))=y+p(2)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/y-three-fact-route.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/y-three-fact-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de3ba917b95f07d71a453c032a8ec5eae0d31470102403b2449e111236dbd674"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/y-three-fact-route.lit"
+        ]
+      },
+      {
+        "id": "y-values-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    quadratic_surface((p(1),y))=p(1)^2+y^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/y-values-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/y-values-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "70489643af893b0773eaf3089b41dac37f917d9b84469f2def2957d501be538d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/y-values-only.lit"
+        ]
+      },
+      {
+        "id": "both-values-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    quadratic_surface((p(1),y))=p(1)^2+y^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/both-values-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/both-values-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e5b1e000bfd5d1cf3e06cae781f19078051648811c6cb1c29726049a7a9aa248"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/both-values-only.lit"
+        ]
+      },
+      {
+        "id": "source-through-partial-derivatives",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3259e4777c55e054910f27c52bdc22d63f28a694644e816f131df9bf943604be",
+          "characters": 5642,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-through-partial-derivatives.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/source-through-partial-derivatives.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "97bfea2d8339825f7f0efbb96db8b71faeeb8cadbe42f56ec4043ab6b65232e3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-through-partial-derivatives.lit"
+        ]
+      },
+      {
+        "id": "short-through-partial-derivatives",
+        "source": {
+          "text_omitted": true,
+          "sha256": "bd8043aaf6cfc0a9e43a14d2414c3ff91d2122e8398285fd937da7e6f580ac66",
+          "characters": 4909,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/short-through-partial-derivatives.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/short-through-partial-derivatives.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e93227e92d2ba9c4bd342e46c7d632066f2268b44102de695897e75b2da47d88"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/short-through-partial-derivatives.lit"
+        ]
+      },
+      {
+        "id": "short-wrong-x-conclusion",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x - p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/short-wrong-x-conclusion.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-76-cases/short-wrong-x-conclusion.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0c96451bd76a27f33c6ec5c686f7b851b84dbd5ee77338b0a0eda5c6e5f6a6ce"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/short-wrong-x-conclusion.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 19,
+      "accepted": 14,
+      "normal_rejections": 5
+    },
+    "scope": "Exact two-dimensional surface and coordinate difference quotient source slice; full partial-derivative predicates excluded. Original/shortened source through both actual partial-derivative theorems additionally checked; coordinate-gradient theorem and whole showcase excluded."
+  }
+}

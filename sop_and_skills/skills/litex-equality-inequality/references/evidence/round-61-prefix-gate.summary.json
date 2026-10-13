@@ -1,0 +1,58 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-61-prefix-gate.json",
+  "original_sha256": "5af6c6539b6be634b0a04c041c0a47dbcb7ab2fc681bf45da96b729428e9088a",
+  "original_bytes": 1414,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "kind": "run",
+    "success": true,
+    "target": "file",
+    "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-prefix/main.lit",
+    "detail": "normal",
+    "language": "en",
+    "statement_results": [
+      {
+        "success": true,
+        "statement": "release obj def f0::dot3",
+        "proof_method": {
+          "type": "release",
+          "rule_name": "Release object def",
+          "message": "Release an object definition"
+        },
+        "stores": [
+          "f0::dot3 $in fn (u, v cart(R, R, R)) R",
+          "f0::dot3 = fn (u, v cart(R, R, R)) R{u(1) * v(1) + u(2) * v(2) + u(3) * v(3)}"
+        ],
+        "infers": []
+      },
+      {
+        "success": true,
+        "statement": "release obj def f0::norm3_sq",
+        "proof_method": {
+          "type": "release",
+          "rule_name": "Release object def",
+          "message": "Release an object definition"
+        },
+        "stores": [
+          "f0::norm3_sq $in fn (u cart(R, R, R)) R",
+          "f0::norm3_sq = fn (u cart(R, R, R)) R{f0::dot3(u, u)}"
+        ],
+        "infers": []
+      },
+      {
+        "success": true,
+        "statement": "prop perpendicular3(u, v cart(R, R, R)):\n    f0::dot3(u, v) = 0",
+        "proof_method": {
+          "type": "definition",
+          "rule_name": "Define prop",
+          "message": "Define a predicate"
+        },
+        "stores": [],
+        "infers": []
+      }
+    ],
+    "session_error": null
+  }
+}

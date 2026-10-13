@@ -1,0 +1,567 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-65-2026-10-09.json",
+  "original_sha256": "fc9f1657c9c0dbe4187b800ec9ddb513ac687382d2832c2dc848f40839291832",
+  "original_bytes": 48866,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "d3efd535f75b7885c72f4d4ee9f601f06db92dbe6741ee3f86ab8755629b39eb",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x = r or x = s\n        case x - r = 0:\n            x = r\n        case x - s = 0:\n            x = s\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/source-theorem.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/source-theorem.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8ef6225a5c138e06aac193bdc8f0e4af7c5b1990e94956c1c862ddb0c9031a50"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/source-theorem.lit"
+        ]
+      },
+      {
+        "id": "bodyless-factor-cases",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n        case x-s=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/bodyless-factor-cases.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/bodyless-factor-cases.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e77d7923658c5b40b6862474f36ed828288b425d50a97103d7f2b2174c506b97"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/bodyless-factor-cases.lit"
+        ]
+      },
+      {
+        "id": "direct-root-disjunction",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x=r or x=s\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/direct-root-disjunction.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/direct-root-disjunction.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e556f18f2b7ff4d13855657e78e50b7b8f3d7162d2037816711d578137ddcc56"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/direct-root-disjunction.lit"
+        ]
+      },
+      {
+        "id": "direct-factor-disjunction",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x-r=0 or x-s=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/direct-factor-disjunction.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/direct-factor-disjunction.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ed7da03f2c1b1b77f80f70d551ab622116b209b768f44654d20293a5a79c7207"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/direct-factor-disjunction.lit"
+        ]
+      },
+      {
+        "id": "theorem-empty-body",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/theorem-empty-body.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/theorem-empty-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "83829953dc8d9d7d132bb2aaf5b8176e561c1f801cb442c571fbc357fc1ad900"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/theorem-empty-body.lit"
+        ]
+      },
+      {
+        "id": "root-cases",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x=r\n        case x=s\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/root-cases.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/root-cases.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "45fc9286e286d7da118aa5102df97da8156a2e980d7d189f7e298239b440a8aa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/root-cases.lit"
+        ]
+      },
+      {
+        "id": "wrong-both-roots",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x=r\n        x=s\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/wrong-both-roots.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/wrong-both-roots.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "37958c955bedd77a6db91dfdaeda5e32820ec32d6ed43b5ab21c3b7fec240235"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/wrong-both-roots.lit"
+        ]
+      },
+      {
+        "id": "wrong-first-root",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x=r\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/wrong-first-root.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/wrong-first-root.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0f828b88adf9a64140ec8658727ecadfe41dc7f4714c6e6dd57fb80ab24ea5b2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/wrong-first-root.lit"
+        ]
+      },
+      {
+        "id": "missing-zero-product",
+        "source": "forall r,s,x R:\n    x=r or x=s\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/missing-zero-product.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/missing-zero-product.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc9144254dbeb54e374bcf899a15fd0fbd445552482a12b45480a948dd1aee31"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/missing-zero-product.lit"
+        ]
+      },
+      {
+        "id": "double-root-direct",
+        "source": "forall r,x R:\n    (x-r)^2=0\n    =>:\n        x=r\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/double-root-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/double-root-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9d456dec23b43d57c2484667753d9ad98ba165745429fe2660d1ba8de6266374"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/double-root-direct.lit"
+        ]
+      },
+      {
+        "id": "source-numeric-demo",
+        "source": "(3-2)*(3-3)=0\n3=3\n3=2 or 3=3\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/source-numeric-demo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/source-numeric-demo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e0de5a2cbc9b4735158b127c822c464553e3e17bc3f0cdea35ac551f83ffacaf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/source-numeric-demo.lit"
+        ]
+      },
+      {
+        "id": "numeric-disjunction-only",
+        "source": "3=2 or 3=3\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/numeric-disjunction-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/numeric-disjunction-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e7b3a7490f913b8e9b4f796f1e34568e423073ce9ed319923bc50fb58e0ee0af"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/numeric-disjunction-only.lit"
+        ]
+      },
+      {
+        "id": "numeric-counterexample",
+        "source": "(3-2)*(3-3)=0\n3!=2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/numeric-counterexample.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/numeric-counterexample.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d77c1f1f89417818896f8e68a3748332b33a810da5710d385bbb1df1a7d2a8f1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/numeric-counterexample.lit"
+        ]
+      },
+      {
+        "id": "bodyless-cases-wrong-first-root",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r\n    by cases:\n        ? x=r\n        case x-r=0\n        case x-s=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/bodyless-cases-wrong-first-root.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/bodyless-cases-wrong-first-root.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cbe541e284a185cc012679c3604dcb329bc978f382b7e55ec0ef344036dd6f39"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/bodyless-cases-wrong-first-root.lit"
+        ]
+      },
+      {
+        "id": "missing-second-case",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/missing-second-case.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/missing-second-case.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0544a4c8f1d775dc69fa9c32354cd10b6d3ee40b2a5c32c833f60813551561a5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/missing-second-case.lit"
+        ]
+      },
+      {
+        "id": "double-root-local-zero",
+        "source": "claim:\n    ? forall r,x R:\n        (x-r)^2=0\n        =>:\n            x=r\n    x-r=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/double-root-local-zero.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/double-root-local-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6dc42762b98e538dbf577a1a709506f290c21b6bac2e82cdb1b3c18c895110d1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/double-root-local-zero.lit"
+        ]
+      },
+      {
+        "id": "bodyless-theorem-native-call",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n        case x-s=0\n\nrelease thm factored_quadratic_roots(2,3,3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/bodyless-theorem-native-call.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-65-cases/bodyless-theorem-native-call.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ca07e0ad54a6e1c06aca2056e4fbb1f69382234fd748817cee0836afe001c18f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/bodyless-theorem-native-call.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 17,
+      "accepted": 8,
+      "normal_rejections": 9
+    },
+    "scope": "Exact factored quadratic theorem slice and numeric demonstration; preserve zero product and disjunctive target."
+  }
+}

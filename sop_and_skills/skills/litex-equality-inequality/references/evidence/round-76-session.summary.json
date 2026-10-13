@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-76-session.json",
+  "original_sha256": "7d2e364562f3ff270d45019e0e6aadc991bd7c99a13acb6697c722b3f6f03f35",
+  "original_bytes": 1101,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "26bab1568bf38418f60264b6b912c767a959e837b6bfc3a9d418dca707853b93",
+        "excerpt": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; current round76 cold files own shortening and partial-derivative consumer acceptance."
+    },
+    {
+      "source": "thm r76_x_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1156ae82146019e702409a992a93c24a1ddcfbf58d60881aca3d36c80bca91ff",
+        "excerpt": "thm r76_x_quotient:\r\n    ? forall p cart(R, R), x R:\r\n        x != p(1)\r\n        =>:\r\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\r\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\r\n    quadratic_surface(p)=p(1)^2+p(2)^2\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; current round76 cold files own shortening and partial-derivative consumer acceptance."
+    }
+  ]
+}

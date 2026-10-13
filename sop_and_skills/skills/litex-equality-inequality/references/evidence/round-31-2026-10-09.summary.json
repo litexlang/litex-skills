@@ -1,0 +1,862 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-31-2026-10-09.json",
+  "original_sha256": "e1ca8ac66a6d4048b6f5f4804573425c8b1088c7bee7b5bb17ce86242a77bb4b",
+  "original_bytes": 73888,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+    "sha256": "bfa44ec60b2e76580c3e9d41cc535a9cfa0c4331f9c1ba2ec1b9f7dbf2ad3a5f",
+    "cases": [
+      {
+        "id": "singleton-finite",
+        "source": "forall a R:\n    $is_finite_set({a})",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/singleton-finite.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "877ae5efcf21ba831df1e055feb0f19f6fe35592c58bfa0232b8fdbd658cf354"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/singleton-finite.lit"
+        ]
+      },
+      {
+        "id": "display-finite",
+        "source": "forall a,c R:\n    $is_finite_set({a,c})",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/display-finite.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "22d9c6a60d2609721165651563ac2bade8828f7885a434b6ebdf86d1220aa3eb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/display-finite.lit"
+        ]
+      },
+      {
+        "id": "union-finite-direct",
+        "source": "forall a,c R:\n    $is_finite_set(union({a},{c}))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/union-finite-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "243906db3740a01f71aac3dabc113562fcef985d784954e4cd4ceef017fa7eaf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/union-finite-direct.lit"
+        ]
+      },
+      {
+        "id": "union-finite-singletons",
+        "source": "claim:\n    ? forall a,c R:\n        $is_finite_set(union({a},{c}))\n    $is_finite_set({a})\n    $is_finite_set({c})",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/union-finite-singletons.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9975c69c158ff61a032d64fa2fc29e6ea0f46252a2fc8056baccfad341b7013d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/union-finite-singletons.lit"
+        ]
+      },
+      {
+        "id": "union-equals-display",
+        "source": "forall a,c R:\n    union({a},{c})={a,c}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/union-equals-display.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "876a5398ec2ba942aa6d508c1138a6d23a766c1cb079a3b4d6a723f57946d711"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/union-equals-display.lit"
+        ]
+      },
+      {
+        "id": "union-finite-equality",
+        "source": "claim:\n    ? forall a,c R:\n        $is_finite_set(union({a},{c}))\n    union({a},{c})={a,c}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/union-finite-equality.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "64ed4f19463efcf06c94322b8b6a89a0fa59cef1f3ae3808201a67685d58669d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/union-finite-equality.lit"
+        ]
+      },
+      {
+        "id": "finite-operands-union",
+        "source": "forall A,B finite_set:\n    $is_finite_set(union(A,B))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/finite-operands-union.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0c542a7a6aab69ca327b637f1a2663ba1cdfcf36e18f3a018455f467e1792733"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/finite-operands-union.lit"
+        ]
+      },
+      {
+        "id": "max-display-carrier",
+        "source": "forall a,c R:\n    finite_set_max({a,c}) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/max-display-carrier.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a7ac4c03cb8f978605aa453ff93406ce30a533c341effbbc1d2d3a47347b99ff"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/max-display-carrier.lit"
+        ]
+      },
+      {
+        "id": "max-union-carrier",
+        "source": "forall a,c R:\n    finite_set_max(union({a},{c})) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/max-union-carrier.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cd331a33de94592e4c6355a0acd3fd251ab222c1c2b9eb11ad3fb265ff2e6080"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/max-union-carrier.lit"
+        ]
+      },
+      {
+        "id": "max-union-body-singletons",
+        "source": "claim:\n    ? forall a,c R:\n        finite_set_max(union({a},{c})) $in R\n    $is_finite_set({a})\n    $is_finite_set({c})\n    $is_finite_set(union({a},{c}))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/max-union-body-singletons.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6fc31355190a8e30587762c44829eb6aa4498b6341668f49b61f28f403ee9eb9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/max-union-body-singletons.lit"
+        ]
+      },
+      {
+        "id": "size-union-direct",
+        "source": "forall a,c R:\n    finite_set_size(union({a},{c}))<=2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/size-union-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "01ce42152c7f40d6a2d59940bdea3dcddf69304690016153aefd33580224881f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/size-union-direct.lit"
+        ]
+      },
+      {
+        "id": "max-union-declaration-flow",
+        "source": "have r31a,r31c R\n$is_finite_set({r31a})\n$is_finite_set({r31c})\n$is_finite_set(union({r31a},{r31c}))\nfinite_set_max(union({r31a},{r31c})) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/max-union-declaration-flow.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5c06742b8806c60eac380ee248c8d0ffa755b637a386a63f0fe979faf92344be"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/max-union-declaration-flow.lit"
+        ]
+      },
+      {
+        "id": "infinite-union-false",
+        "source": "forall A finite_set,B set:\n    $is_finite_set(union(A,B))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/infinite-union-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "183eec9871b00d0977af4647848f29887eacf3b67ff2947e03e6088887ec3a6e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/infinite-union-false.lit"
+        ]
+      },
+      {
+        "id": "empty-max",
+        "source": "finite_set_max({}) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/empty-max.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e7c80b9a029510603ec9be92a633343d8a31ec8d8a3510d3c34cc7ae7ba3fdad"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/empty-max.lit"
+        ]
+      },
+      {
+        "id": "display-max-false-bound",
+        "source": "forall a,c R:\n    finite_set_max({a,c})<=a",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/display-max-false-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2f23e6a5841847571e5de3cf93ec887bc9c74b68ee1a1147ac3a445d167af92d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/display-max-false-bound.lit"
+        ]
+      },
+      {
+        "id": "display-max-member-bound",
+        "source": "forall a,c R:\n    a<=finite_set_max({a,c})",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/display-max-member-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "35e16c0e24da8371953ac60d3144787a9a7e19deae2967dcb0f590af9806ba46"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/display-max-member-bound.lit"
+        ]
+      },
+      {
+        "id": "min-display-carrier",
+        "source": "forall b,d R:\n    finite_set_min({b,d}) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/min-display-carrier.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f3613fac776e1a121cc779e7b84871e91a3c5256432889fe400a0cd136cbc3a4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/min-display-carrier.lit"
+        ]
+      },
+      {
+        "id": "min-union-carrier",
+        "source": "forall b,d R:\n    finite_set_min(union({b},{d})) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/min-union-carrier.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f9af16739696002567f44477e3dc6fbc9eb0b281cf0709d1d33f7396b2942d46"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/min-union-carrier.lit"
+        ]
+      },
+      {
+        "id": "display-distinct-finite",
+        "source": "forall a,c R:\n    a!=c\n    =>:\n        $is_finite_set({a,c})",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/display-distinct-finite.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4f36e68950ab369cf25369d2058a4fe64bdeba368d2ea0540a263e6bf1042cd2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/display-distinct-finite.lit"
+        ]
+      },
+      {
+        "id": "union-display-distinct",
+        "source": "forall a,c R:\n    a!=c\n    =>:\n        union({a},{c})={a,c}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/union-display-distinct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eea976a1024a808061fc6078501ab8dd5c37de8d00115d70f7655d63b31303dd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/union-display-distinct.lit"
+        ]
+      },
+      {
+        "id": "named-max-carrier",
+        "source": "thm r31_named_max_carrier:\n    ? forall a,c R:\n        finite_set_max(union({a},{c})) $in R",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/named-max-carrier.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0fd8a09af8227096258b7bc83110647e9d27183368328ce951bfd4bb5bea3991"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/named-max-carrier.lit"
+        ]
+      },
+      {
+        "id": "named-finite-union",
+        "source": "thm r31_named_finite_union:\n    ? forall a,c R:\n        $is_finite_set(union({a},{c}))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/named-finite-union.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5a0a0a80132e9673de314d51e3dda9a41a86b499d161ddfa5c3c01f632fd3158"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/named-finite-union.lit"
+        ]
+      },
+      {
+        "id": "union-bound-with-source",
+        "source": "forall a,c,z R:\n    a<=z\n    c<=z\n    =>:\n        finite_set_max(union({a},{c}))<=z",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/union-bound-with-source.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a0f853a0baf48fbb1b1b84edba9cd5ef1e81e499d6594389a40008b0867d8eac"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/union-bound-with-source.lit"
+        ]
+      },
+      {
+        "id": "named-union-bound",
+        "source": "thm r31_named_union_bound:\n    ? forall a,c,z R:\n        a<=z\n        c<=z\n        =>:\n            finite_set_max(union({a},{c}))<=z",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/named-union-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "995b4928b19f048a1948534501967806e3bf4c751b0334bd986f02be7283dcb1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/named-union-bound.lit"
+        ]
+      },
+      {
+        "id": "numeric-union-size",
+        "source": "finite_set_size(union({1},{2}))=2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/numeric-union-size.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a75be2a1cced81a919df7411ab403ccd15f01da2ccc470d63b05c478f25d018e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/numeric-union-size.lit"
+        ]
+      },
+      {
+        "id": "consumer-finite-prepublished",
+        "source": "forall a,c R:\n    $is_finite_set(union({a},{c}))\n\nprop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n            a <= z\n            z <= b\n        case I = '[a, b):\n            z $in '[a, b)\n            a <= z\n            z < b\n            z <= b\n        case I = '(a, b]:\n            z $in '(a, b]\n            a < z\n            a <= z\n            z <= b\n        case I = '(a, b):\n            z $in '(a, b)\n            a < z\n            a <= z\n            z < b\n            z <= b\n\nthm r30_consumer_original_dependency:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n    have z0 R = z\n    z0 = z\n    z0 $in I\n    z0 $in J\n    by thm interval_endpoint_member_is_between(I, a, b, z0)\n    by thm interval_endpoint_member_is_between(J, c, d, z0)\n    finite_set_max(union({a}, { c})) <= z0\n    z0 <= finite_set_min(union({b}, { d}))\n    finite_set_max(union({a}, { c})) <= z\n    z <= finite_set_min(union({b}, { d}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/consumer-finite-prepublished.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5db2b466ec4abba073707f9ecdbc63c0d17b0dd638008efa024648eb5937f2ca"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/consumer-finite-prepublished.lit"
+        ]
+      },
+      {
+        "id": "consumer-carrier-prepublished",
+        "source": "forall a,c R:\n    $is_finite_set(union({a},{c}))\n\nforall a,c R:\n    finite_set_max(union({a},{c})) $in R\n    finite_set_min(union({a},{c})) $in R\n\nprop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n            a <= z\n            z <= b\n        case I = '[a, b):\n            z $in '[a, b)\n            a <= z\n            z < b\n            z <= b\n        case I = '(a, b]:\n            z $in '(a, b]\n            a < z\n            a <= z\n            z <= b\n        case I = '(a, b):\n            z $in '(a, b)\n            a < z\n            a <= z\n            z < b\n            z <= b\n\nthm r30_consumer_original_dependency:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n    have z0 R = z\n    z0 = z\n    z0 $in I\n    z0 $in J\n    by thm interval_endpoint_member_is_between(I, a, b, z0)\n    by thm interval_endpoint_member_is_between(J, c, d, z0)\n    finite_set_max(union({a}, { c})) <= z0\n    z0 <= finite_set_min(union({b}, { d}))\n    finite_set_max(union({a}, { c})) <= z\n    z <= finite_set_min(union({b}, { d}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-31-cases/consumer-carrier-prepublished.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a7c4c44bebec92bb040cbe6243941b2d5fad1d2f3f1fae825b4961fe6873a097"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round31-cases/consumer-carrier-prepublished.lit"
+        ]
+      }
+    ],
+    "scope": "Evidence-only finite singleton union requirements from round30 original legacy source consumer; no kernel/canonical edits or trust.",
+    "summary": {
+      "accepted": 11,
+      "rejected": 16
+    },
+    "inspected_owner_hashes": {
+      "src/execute/execute_fact_stmt/well_defined_results/verify_obj/sets.rs": "7d804157b229e9273eb82a7ab041cc23325e1b028c3c30c81549ae18d9d7a752",
+      "src/execute/execute_fact_stmt/well_defined_results/verify_obj/requirement.rs": "5f172483167a64fffe8aebc6d3ec5512e4c4ce4505dbbcced02b04894a0716fd",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/is_finite_set.rs": "45344828e27e433ae4b5219af44d88b250ff075120885bf76e4b8d78638a3504"
+    },
+    "source_correspondence": "Fresh release built successfully; snapshot fixes executable identity, not an audited immutable whole checkout. Iteration used older live round29 snapshot; only cold files determine capability."
+  }
+}

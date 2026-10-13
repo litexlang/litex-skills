@@ -1,0 +1,12 @@
+thm r43_missing_lower_bound:
+    ? forall x R+,a,b R:
+        b>=0
+        4*x^2*b=a^2
+        =>:
+            b<=a^2/4
+    x-1>=0
+    x+1>=0
+    x^2-1=(x-1)*(x+1)>=0
+    x^2>=1
+    4*b<=4*x^2*b=a^2
+    b=(4*b)/4<=a^2/4

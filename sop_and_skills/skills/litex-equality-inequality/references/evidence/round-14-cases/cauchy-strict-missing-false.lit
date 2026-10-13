@@ -1,0 +1,2 @@
+forall a,b,c,d R:
+    (a*c+b*d)^2 < (a^2+b^2)*(c^2+d^2)

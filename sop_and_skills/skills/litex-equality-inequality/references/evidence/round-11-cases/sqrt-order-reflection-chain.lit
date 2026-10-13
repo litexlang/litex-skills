@@ -1,0 +1,10 @@
+claim:
+    ? forall x,y R:
+        0 <= x
+        0 <= y
+        sqrt(x) <= sqrt(y)
+        =>:
+            x <= y
+    0 <= sqrt(x)
+    0 <= sqrt(y)
+    x = sqrt(x)^2 <= sqrt(y)^2 = y

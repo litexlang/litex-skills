@@ -1,0 +1,7 @@
+forall a,b,A,B R:
+    b != 0
+    B != 0
+    abs(a) <= A
+    abs(b) >= B
+    =>:
+        abs(a/b) <= A/B

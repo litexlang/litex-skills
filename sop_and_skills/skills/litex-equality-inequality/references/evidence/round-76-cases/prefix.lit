@@ -1,0 +1,1 @@
+have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2

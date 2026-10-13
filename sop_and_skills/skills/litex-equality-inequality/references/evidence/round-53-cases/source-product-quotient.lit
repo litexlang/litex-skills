@@ -1,0 +1,5 @@
+forall a,x,y R+:
+    a!=1
+    =>:
+        log(a,x*y)=log(a,x)+log(a,y)
+        log(a,x/y)=log(a,x)-log(a,y)

@@ -1,0 +1,6 @@
+claim:
+    ? forall a,b,s,t R:
+        (a,b)(1)*s+(a,b)(2)*t = a*s+b*t
+    (a,b)(1)*s = a*s
+    (a,b)(2)*t = b*t
+    (a,b)(1)*s+(a,b)(2)*t = a*s+b*t

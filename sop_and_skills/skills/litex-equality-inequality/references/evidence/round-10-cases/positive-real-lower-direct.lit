@@ -1,0 +1,4 @@
+forall lower R+,x R:
+    lower <= x
+    =>:
+        0 < x

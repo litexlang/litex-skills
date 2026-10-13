@@ -1,0 +1,4 @@
+forall a,b Z,f,g fn(k Z) R:
+    a <= b
+    =>:
+        sum(a,b,fn(k Z) R {f(k)-g(k)}) = sum(a,b,f)-sum(a,b,g)

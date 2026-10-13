@@ -1,0 +1,8 @@
+have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))
+have fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))
+have fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))
+have fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)
+have fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)
+
+forall u,v cart(R,R):
+    r59_dot2(u,v)=r59_dot2(v,u)

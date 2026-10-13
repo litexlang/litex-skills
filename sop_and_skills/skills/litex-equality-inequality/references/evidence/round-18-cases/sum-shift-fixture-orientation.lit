@@ -1,0 +1,5 @@
+forall a,b,t Z,f fn(k Z) R:
+    a <= b
+    a+t <= b+t
+    =>:
+        sum(a,b,fn(k Z) R {f(k+t)}) = sum(a+t,b+t,f)

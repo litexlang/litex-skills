@@ -1,0 +1,4 @@
+forall a,b Z,f fn(k Z) R:
+    a<=b
+    =>:
+        product(a,b+1,f)=product(a,b,f)*f(b+1)

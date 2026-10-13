@@ -1,0 +1,8 @@
+claim:
+    ? forall m,n N:
+        m <= n
+        =>:
+            factorial(m)/factorial(n) <= 1
+    factorial(m) <= factorial(n)
+    factorial(n) > 0
+    factorial(m)/factorial(n) <= factorial(n)/factorial(n) = 1

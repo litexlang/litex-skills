@@ -1,0 +1,222 @@
+# Linear algebra begins with a scalar field and a vector space over that field.
+# Coordinate spaces appear later as instances of these interfaces.
+#
+# Included: first-class field and vector-space structures, linear maps and
+# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2
+# instances, and the projection onto the x-axis.
+
+# A field packages scalar operations together with the laws used below.
+struct Field<K nonempty_set>:
+    zero K
+    one K
+    add fn(x, y K) K
+    neg fn(x K) K
+    mul fn(x, y K) K
+    inv fn(x K) K
+    <=>:
+        zero != one
+        forall x, y, z K:
+            add(add(x, y), z) = add(x, add(y, z))
+            mul(mul(x, y), z) = mul(x, mul(y, z))
+            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))
+        forall x, y K:
+            add(x, y) = add(y, x)
+            mul(x, y) = mul(y, x)
+        forall x K:
+            add(zero, x) = x
+            add(x, neg(x)) = zero
+            mul(one, x) = x
+        forall x K:
+            x != zero
+            =>:
+                mul(x, inv(x)) = one
+
+# A vector space over one fixed scalar field stores its vector operations and
+# compatibility laws as one first-class object.
+
+struct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:
+    zero V
+    add fn(x, y V) V
+    smul fn(a K, x V) V
+    <=>:
+        forall x, y, z V:
+            add(add(x, y), z) = add(x, add(y, z))
+        forall x, y V:
+            add(x, y) = add(y, x)
+        forall x V:
+            add(zero, x) = x
+            exist y V st {add(x, y) = zero}
+        forall a, b K, x V:
+            smul(field.mul(a, b), x) = smul(a, smul(b, x))
+            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))
+        forall a K, x, y V:
+            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))
+        forall x V:
+            smul(field.one, x) = x
+
+# Any element acting as a left additive identity must equal the stored zero.
+
+thm additive_identity_unique:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:
+        forall x V:
+            space.add(identity_candidate, x) = x
+        =>:
+            identity_candidate = space.zero
+    space.add(identity_candidate, space.zero) = space.zero
+    space.add(identity_candidate, space.zero) = space.add(space.zero, identity_candidate) = identity_candidate
+
+# Existence comes from the vector-space law; associativity and commutativity
+# show that any two additive inverses coincide.
+
+thm additive_inverse_exists_unique:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:
+        exist! y V st {space.add(x, y) = space.zero}
+    obtain y from exist y V st {space.add(x, y) = space.zero}
+    forall y1, y2 V:
+        space.add(x, y1) = space.zero
+        space.add(x, y2) = space.zero
+        =>:
+            space.add(y2, x) = space.add(x, y2) = space.zero
+            y1 = space.add(space.zero, y1) = space.add(space.add(y2, x), y1) = space.add(y2, space.add(x, y1)) = space.add(y2, space.zero) = space.add(space.zero, y2) = y2
+            y1 = y2
+    witness exist! y2 V st {space.add(x, y2) = space.zero} from y
+
+template<K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>>:
+    have fn vector_neg by exist!:
+        ? forall x V:
+            exist! y V st {space.add(x, y) = space.zero}
+
+thm vector_neg_spec:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:
+        space.add(x, \vector_neg<K, field, V, space>(x)) = space.zero
+
+template<K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>>:
+    have fn vector_sub(u, v V) V = space.add(u, \vector_neg<K, field, V, space>(v))
+
+# Add the inverse of the common left operand to both sides.
+
+thm add_left_cancel:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x, y, z V:
+        space.add(x, y) = space.add(x, z)
+        =>:
+            y = z
+    let neg = \vector_neg<K, field, V, space>
+    release thm vector_neg_spec(K, field, V, space, x)
+    space.add(neg(x), x) = space.add(x, neg(x)) = space.zero
+    y=space.add(space.zero,y)=space.add(space.add(neg(x),x),y)=space.add(neg(x),space.add(x,y))=space.add(neg(x),space.add(x,z))=space.add(space.add(neg(x),x),z)=space.add(space.zero,z)=z
+thm vector_space_scalar_constants_in_carrier:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>:
+        field.zero $in K
+        field.one $in K
+    field.zero $in K
+    field.one $in K
+
+thm zero_scalar_times_vector:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:
+        space.smul(field.zero, x) = space.zero
+    have p V=space.smul(field.zero,x)
+    field.add(field.zero,field.zero)=field.zero
+    p=space.smul(field.zero,x)=space.smul(field.add(field.zero,field.zero),x)=space.add(space.smul(field.zero,x),space.smul(field.zero,x))=space.add(p,p)
+    space.add(p,p)=p=space.add(space.zero,p)=space.add(p,space.zero)
+    release thm add_left_cancel(K,field,V,space,p,p,space.zero)
+thm scalar_times_zero_vector:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, a K:
+        space.smul(a, space.zero) = space.zero
+    have q V=space.smul(a,space.zero)
+    space.add(space.zero,space.zero)=space.zero
+    q=space.smul(a,space.zero)=space.smul(a,space.add(space.zero,space.zero))=space.add(space.smul(a,space.zero),space.smul(a,space.zero))=space.add(q,q)
+    space.add(q,q)=q=space.add(space.zero,q)=space.add(q,space.zero)
+    release thm add_left_cancel(K,field,V,space,q,q,space.zero)
+prop is_linear_map(K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W):
+    forall u, v V:
+        T(source.add(u, v)) = target.add(T(u), T(v))
+    forall a K, v V:
+        T(source.smul(a, v)) = target.smul(a, T(v))
+
+# A subspace contains zero and is closed under vector addition and scalar action.
+
+prop is_subspace(K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, U power_set(V)):
+    space.zero $in U
+    forall u, v V:
+        u $in U
+        v $in U
+        =>:
+            space.add(u, v) $in U
+    forall a K, v V:
+        v $in U
+        =>:
+            space.smul(a, v) $in U
+
+template<V, W set, zeroW W, T fn(v V) W>:
+    have linear_kernel power_set(V) = {x V: T(x) = zeroW}
+
+template<V set, zeroV V>:
+    have zero_subspace power_set(V) = {zeroV}
+
+# Additivity forces the image of zero to be the target zero vector.
+
+thm linear_map_sends_zero_to_zero:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:
+        $is_linear_map(K, field, V, W, source, target, T)
+        =>:
+            T(source.zero) = target.zero
+    source.add(source.zero,source.zero)=source.zero
+    target.add(T(source.zero),T(source.zero))=T(source.add(source.zero,source.zero))=T(source.zero)=target.add(target.zero,T(source.zero))=target.add(T(source.zero),target.zero)
+    release thm add_left_cancel(K,field,W,target,T(source.zero),T(source.zero),target.zero)
+thm linear_map_sends_neg_to_neg:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W, x V:
+        $is_linear_map(K, field, V, W, source, target, T)
+        =>:
+            T(\vector_neg<K, field, V, source>(x)) = \vector_neg<K, field, W, target>(T(x))
+    release thm vector_neg_spec(K, field, V, source, x)
+    release thm vector_neg_spec(K, field, W, target, T(x))
+    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)
+    target.add(T(x),T(\vector_neg<K, field, V, source>(x)))=T(source.add(x,\vector_neg<K, field, V, source>(x)))=T(source.zero)=target.zero=target.add(T(x),\vector_neg<K, field, W, target>(T(x)))
+    release thm add_left_cancel(K, field, W, target, T(x), T(\vector_neg<K, field, V, source>(x)), \vector_neg<K, field, W, target>(T(x)))
+
+# Verify zero membership and closure under addition and scalar multiplication
+# for the native set-builder kernel.
+
+thm linear_map_kernel_is_subspace:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:
+        $is_linear_map(K, field, V, W, source, target, T)
+        =>:
+            $is_subspace(K, field, V, source, \linear_kernel<V, W, target.zero, T>)
+    let kernel = \linear_kernel<V, W, target.zero, T>
+    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)
+    T(source.zero) = target.zero
+    \linear_kernel<V, W, target.zero, T> = {x V: T(x) = target.zero}
+    kernel = {x V: T(x) = target.zero}
+    release thm set_builder_member(source.zero, {x V: T(x) = target.zero})
+    source.zero $in {x V: T(x) = target.zero}
+    source.zero $in kernel
+    claim:
+        ? forall u, v V:
+            u $in kernel
+            v $in kernel
+            =>:
+                source.add(u, v) $in kernel
+        u $in {x V: T(x) = target.zero}
+        T(u) = target.zero
+        v $in {x V: T(x) = target.zero}
+        T(v) = target.zero
+        T(source.add(u, v)) = target.add(T(u), T(v)) = target.add(target.zero, target.zero) = target.zero
+        release thm set_builder_member(source.add(u, v), {x V: T(x) = target.zero})
+        source.add(u, v) $in {x V: T(x) = target.zero}
+        source.add(u, v) $in kernel
+    claim:
+        ? forall a K, v V:
+            v $in kernel
+            =>:
+                source.smul(a, v) $in kernel
+        v $in {x V: T(x) = target.zero}
+        T(v) = target.zero
+        release thm scalar_times_zero_vector(K, field, W, target, a)
+        target.smul(a, target.zero) = target.zero
+        T(source.smul(a, v)) = target.smul(a, T(v)) = target.smul(a, target.zero) = target.zero
+        release thm set_builder_member(source.smul(a, v), {x V: T(x) = target.zero})
+        source.smul(a, v) $in {x V: T(x) = target.zero}
+        source.smul(a, v) $in kernel
+
+# Injectivity turns T(x)=0=T(0) into x=0, proving kernel(T)={0}.
+

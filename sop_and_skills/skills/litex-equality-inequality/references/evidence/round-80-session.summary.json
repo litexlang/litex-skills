@@ -1,0 +1,19 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-80-session.json",
+  "original_sha256": "0c5d9bf8c7c178d780414dcf2d98635395681bba2404acb07fe457d4cf5c0b9c",
+  "original_bytes": 460,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "release thm tuple_equal_from_coordinates(((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2)),(1+3,2+4))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9ed7132faad9558d4d70eea33e2fbcd3f7214d9d47782b4b50ebd426799c6520",
+        "excerpt": "release thm tuple_equal_from_coordinates(((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2)),(1+3,2+4))\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922 with unrelated symbolic/numeric gradient facts; literal independent sum coordinate theorem probe. Current cold round80 owns direct/negative boundaries."
+    }
+  ]
+}

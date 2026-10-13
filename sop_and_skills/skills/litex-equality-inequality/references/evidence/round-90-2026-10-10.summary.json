@@ -1,0 +1,688 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-90-2026-10-10.json",
+  "original_sha256": "2c8786957bd9f503c0595c725a22c8f7ec03fcd3f04418c6b7dbadf671568974",
+  "original_bytes": 835555,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/5_linear_algebra/main.lit",
+    "source_sha256": "9cfe8d730f564d9a8c567d86eeef0af6e16ef8b788469e60551e7daaa3c7d89b",
+    "binary_sha256": "c253a863e97c38a223d5d2a5377a706ee238401dc4c86b3eca47fc6b4f6984ae",
+    "binary_build": "Reuse successful round88 fixed snapshot",
+    "cases": [
+      {
+        "id": "baseline",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/baseline.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0aa92125fcc18efc6af9c5d0c471cf2bb5134f42b97b5ed611e9b9f3940d4a40",
+          "characters": 13570,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8293c53af66871671396b455f42263e3b51bbf5dbc6224e67a67d43211272851"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "delete-native-echoes",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-native-echoes.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "43c0a3f98b8964ee161d34d99f93aea8a2e15f400cff572adbe12505fc33a69a",
+          "characters": 13316,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-native-echoes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a63b22dd34615c7273db037a12a5270367f5501744d2c9fb4aa14542462df841"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-native-echoes.lit"
+        ]
+      },
+      {
+        "id": "delete-member-chain",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-chain.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "19e057be0aa30af8826bf0c4632852aa23f743de946a9d37e17f03a7d172bb09",
+          "characters": 13308,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "765085692870c485007e938755284c7f8cd9745a2e5eed8e4670007390c37668"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-member-chain.lit"
+        ]
+      },
+      {
+        "id": "delete-alias-equalities",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-alias-equalities.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3a90753c4cbdee04401c01d14b56e416d74a72b5e03ea33f3d3f6a4b9d8fd14c",
+          "characters": 13500,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-alias-equalities.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f2c1fc4fee3c236c61f0ef885bbd44f057674a0199e3db1133c0b6be1dab912b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-alias-equalities.lit"
+        ]
+      },
+      {
+        "id": "delete-final-fold",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-final-fold.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "52183cbf6722d7120b400a0b3c3c35f9786cefb47d5259d5d88462deebb9fbb7",
+          "characters": 13528,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-final-fold.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f64f96042f4570618e5af8efda86bf416d255472f50994cc6d53481140fee794"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-final-fold.lit"
+        ]
+      },
+      {
+        "id": "delete-sub-zero",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-sub-zero.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "cdf46a84cb7c4a3b340d87fe16a6f66c349ebdbc12c9f74f740cc79c6a56e91f",
+          "characters": 13509,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-sub-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c894107313b959ac87f5a2b50486b81d94537ed93b27789eba3226490a26eabe"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-sub-zero.lit"
+        ]
+      },
+      {
+        "id": "delete-add-zero",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-add-zero.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "bce1c25493d869e316e088af59200c90c0fb61e78b9f6076ceedd4f47aa0a659",
+          "characters": 13497,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-add-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fd2d492a1e0f73052594a12e81ef10a809a07f2f0e752addb09834bb8eff0c61"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-add-zero.lit"
+        ]
+      },
+      {
+        "id": "joint-echo-member-alias-deletion",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/joint-echo-member-alias-deletion.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "9f6625ed025d0fb7294130ba5fcc91faffe5e616b08d7cb09577105cbe76314d",
+          "characters": 12984,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/joint-echo-member-alias-deletion.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "196653c6a9190f64948738d6d82473dface7ce7bc0702a67ee9f9536c315ca29"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/joint-echo-member-alias-deletion.lit"
+        ]
+      },
+      {
+        "id": "missing-trivial-kernel",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/missing-trivial-kernel.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "dd3c0072e5e51a3d6d0f9819b3fbab736112edb447968fc33eb037b4de4dc875",
+          "characters": 13492,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/missing-trivial-kernel.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f9fd407ab752867ee9cb535d00fd68f1d9a4f104c161a3e9cea8613381e114f2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/missing-trivial-kernel.lit"
+        ]
+      },
+      {
+        "id": "delete-member-0",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-0.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d39c6668282be96faf686485e8536111577480cdd5a0485f15409145cfc6229d",
+          "characters": 13493,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-0.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2013b242667ecdc43252ee4ddcf545eb0469343f03a3e7bbe607259d347cc41d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-member-0.lit"
+        ]
+      },
+      {
+        "id": "delete-member-1",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-1.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "a2adaf47e889460dd4f91fb9418bd57016df327133d6bc1f2d17a587da30fc4b",
+          "characters": 13512,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-1.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "da24bff2a05d57d91dbcdaed62809085c37ee73b43df5c08dcf28c0c443a65ba"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-member-1.lit"
+        ]
+      },
+      {
+        "id": "delete-member-2",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-2.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "8158c1facf5b6484c75ebb0b623a2da01dc2e7f8ede945d109d01e06468990c7",
+          "characters": 13508,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-2.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5920ced8837d4ff9e813733c38c0a4a17b2b84bf9e15cc37c61779be265a5774"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-member-2.lit"
+        ]
+      },
+      {
+        "id": "delete-member-3",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-3.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ffdd1dfa2e97fd0af05a7bc66d53c92620cead5d38ee847b77607aecfc411c77",
+          "characters": 13505,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/delete-member-3.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b83e8ea65d5a87270ff3ec93d845d27953649469c4e532e3fee3a4f37f304710"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/delete-member-3.lit"
+        ]
+      },
+      {
+        "id": "joint-nonmember-deletion",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/joint-nonmember-deletion.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f60721cf7be806383f6137f16a8f7d7958cfc310c0bf49a056a5696cd128ad8f",
+          "characters": 13070,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/joint-nonmember-deletion.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1c13edd49b031a3386c98fe4577fc87375230f558a9466b7e5c2e45d54d4500b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/joint-nonmember-deletion.lit"
+        ]
+      },
+      {
+        "id": "preferred-short",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-short.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "cf9b44c24c6a7592d39f88f105b5c7c104f37f6e548beebdfb077387215542df",
+          "characters": 12873,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9efa64dc2889b7e3255a564ab4dc79b5af080f732e59440b576bf707e3e6009"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/preferred-short.lit"
+        ]
+      },
+      {
+        "id": "preferred-missing-kernel-premise",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-missing-kernel-premise.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "76ce0e7e71577050ad1b929bab65601e49687a215e3645361f76455144a844b5",
+          "characters": 12795,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-missing-kernel-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9c188990a83119c5cb8221280253a2c0aba6b40c93c2daee6d579ed3786d8f9d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/preferred-missing-kernel-premise.lit"
+        ]
+      },
+      {
+        "id": "preferred-missing-image-equality",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-missing-image-equality.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "66a36fce6b040b89e17bb87677e44ce43d5e73815853a0617896e354a9e25898",
+          "characters": 12849,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-missing-image-equality.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9ff485358cb26e996ee7b5e1ca75aade2b60f1e5d7c8e628d22f9615194f02d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/preferred-missing-image-equality.lit"
+        ]
+      },
+      {
+        "id": "preferred-native-consumer",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-native-consumer.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "aa8211b7fddb1c4bb7f9c58bc42f469e38620f9379898a7bd1c998b6781312a3",
+          "characters": 13330,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-90-cases/preferred-native-consumer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d1924e518bfc6369cdb8c5fd4c70678075d968377504657efe064d79e80cb842"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round90-cases/preferred-native-consumer.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 18,
+      "accepted": 12,
+      "normal_rejections": 6
+    },
+    "scope": "Actual trivial_kernel_implies_injective theorem, round89 short prefix, finite independent cold deletion and missing-premise gates, native consumer; no canonical/kernel changes."
+  }
+}

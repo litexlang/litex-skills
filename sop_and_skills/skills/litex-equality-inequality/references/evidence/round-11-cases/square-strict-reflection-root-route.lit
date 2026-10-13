@@ -1,0 +1,10 @@
+claim:
+    ? forall a,b R:
+        0 <= b
+        a^2 < b^2
+        =>:
+            a < b
+    0 <= a^2
+    0 <= b^2
+    abs(a) = sqrt(a^2) < sqrt(b^2) = abs(b)
+    a <= abs(a) < abs(b) = b

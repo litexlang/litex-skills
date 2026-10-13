@@ -1,0 +1,5 @@
+release obj def chap09::dot3
+release obj def chap09::norm3_sq
+
+forall u cart(R,R,R):
+    chap09::norm3_sq(u)=chap09::dot3(u,u)

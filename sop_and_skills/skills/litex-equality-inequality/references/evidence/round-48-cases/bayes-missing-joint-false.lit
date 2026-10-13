@@ -1,0 +1,9 @@
+have fn r48_conditional_probability(joint, evidence R: evidence > 0) R = joint / evidence
+
+have fn r48_bayes_posterior(prior, likelihood, evidence R: evidence > 0) R = likelihood * prior / evidence
+
+thm r48_missing_joint:
+    ? forall prior, likelihood, evidence, joint R:
+        evidence > 0
+        =>:
+            r48_conditional_probability(joint, evidence) = r48_bayes_posterior(prior, likelihood, evidence)

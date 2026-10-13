@@ -1,0 +1,5 @@
+have r31a,r31c R
+$is_finite_set({r31a})
+$is_finite_set({r31c})
+$is_finite_set(union({r31a},{r31c}))
+finite_set_max(union({r31a},{r31c})) $in R

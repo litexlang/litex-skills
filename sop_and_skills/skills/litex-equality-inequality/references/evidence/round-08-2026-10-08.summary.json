@@ -1,0 +1,1094 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-08-2026-10-08.json",
+  "original_sha256": "86c1869f65c298066d187c12d46a16f0ce2a987b799586fd43714d93c4f6c259",
+  "original_bytes": 538010,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "661b85cfa29255ff8e16aed6a1b8419ed51cb12036db319620ef1b9708d52ed7",
+    "version": "Litex 1.0.4-beta",
+    "source_build": {
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "success": true
+    },
+    "cases": [
+      {
+        "id": "gcd-common-divisor-bound-direct",
+        "source": "forall a,b Z,d N+:\n    a != 0 or b != 0\n    a%d = 0\n    b%d = 0\n    =>:\n        d <= gcd(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/gcd-common-divisor-bound-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "659cb9190c54c6f7e6349c8054083798ed53dbbe6ca6e26780c8abaa2a6b341e"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/gcd-common-divisor-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/gcd-common-divisor-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "gcd-step-direct",
+        "source": "forall a,b Z:\n    b != 0\n    =>:\n        gcd(a,b) = gcd(b,a%abs(b))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/gcd-step-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2b96ee151c818a0e9e2c148eaa62176caa3e7bd50bd93dcd335b3faefab223b6"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/gcd-step-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/gcd-step-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-common-add-cancel-chain",
+        "source": "claim:\n    ? forall a,b,k Z,m N+:\n        (a+k)%m = (b+k)%m\n        =>:\n            a%m = b%m\n    a%m = ((a+k)-k)%m = ((b+k)-k)%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-common-add-cancel-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "95241bfa2458c136e74739b5746616251911cbc29cfba639343645efef4b2790"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-common-add-cancel-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-common-add-cancel-chain.lit"
+        ]
+      },
+      {
+        "id": "mod-common-add-cancel-direct",
+        "source": "forall a,b,k Z,m N+:\n    (a+k)%m = (b+k)%m\n    =>:\n        a%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-common-add-cancel-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "046a24d30acf1e11ca63b2e21bb94cd900cdbfdc66672ad477f034264ab9fe8f"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-common-add-cancel-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-common-add-cancel-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-congruence-add-direct",
+        "source": "forall a,b,c,d Z,m N+:\n    a%m = b%m\n    c%m = d%m\n    =>:\n        (a+c)%m = (b+d)%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-congruence-add-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c20c1ba291916a754998a78130de86c43e4867bb56fe8dada36658cffa74151e"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-congruence-add-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-congruence-add-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-congruence-mul-direct",
+        "source": "forall a,b,c,d Z,m N+:\n    a%m = b%m\n    c%m = d%m\n    =>:\n        (a*c)%m = (b*d)%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-congruence-mul-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e4b44f726004eff86ac161e1cf7a13f099593a816643dab9dbacb6f8956db524"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-congruence-mul-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-congruence-mul-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-congruence-sub-direct",
+        "source": "forall a,b,c,d Z,m N+:\n    a%m = b%m\n    c%m = d%m\n    =>:\n        (a-c)%m = (b-d)%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-congruence-sub-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "150e335ee4758645d4f7530cd381fcb9f482661cdee1e110133f872c16002be9"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-congruence-sub-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-congruence-sub-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-coprime-cancel-direct",
+        "source": "forall a,b,k Z,m N+:\n    gcd(k,m) = 1\n    (a*k)%m = (b*k)%m\n    =>:\n        a%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-coprime-cancel-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f819ef5232e0d6dbec131bd0536a00a3a028a17f9933d371804683a06ec46100"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-coprime-cancel-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-coprime-cancel-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-distribution-add-direct",
+        "source": "forall a,b Z,m N+:\n    (a+b)%m = (a%m+b%m)%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-distribution-add-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "25dcbb683d3ac3ab72e2708dab6739c288204212ee7406bbca2374af25dc8f08"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-distribution-add-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-distribution-add-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-distribution-mul-direct",
+        "source": "forall a,b Z,m N+:\n    (a*b)%m = ((a%m)*(b%m))%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-distribution-mul-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "53ef761d4ac740b5d62b846632e99496bf3e6c815a4618e1ee37376788b6fdc9"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-distribution-mul-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-distribution-mul-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-distribution-sub-direct",
+        "source": "forall a,b Z,m N+:\n    (a-b)%m = (a%m-b%m)%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-distribution-sub-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "06e30bdb58886aefd8d5a21e3b16776dfadf20745e1539e346c4aad49bfae259"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-distribution-sub-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-distribution-sub-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-equal-implies-object-equal-false",
+        "source": "forall a,b Z,m N+:\n    a%m = b%m\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-equal-implies-object-equal-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bb43a4b8afc9e7176aa836d796e056b295bdf1b2e9a0b3084ee4d80bf4ff7ee2"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-equal-implies-object-equal-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-equal-implies-object-equal-false.lit"
+        ]
+      },
+      {
+        "id": "mod-equal-implies-zero-difference-chain",
+        "source": "claim:\n    ? forall a,b Z,m N+:\n        a%m = b%m\n        =>:\n            (a-b)%m = 0\n    (a-b)%m = (a%m-b%m)%m = (b%m-b%m)%m = 0%m = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-equal-implies-zero-difference-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b8ace68d739d0c3b03d5686e7fb6c8e56f56bdbafe6e24fb56b9512a379711f5"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-equal-implies-zero-difference-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-equal-implies-zero-difference-chain.lit"
+        ]
+      },
+      {
+        "id": "mod-equal-implies-zero-difference-direct",
+        "source": "forall a,b Z,m N+:\n    a%m = b%m\n    =>:\n        (a-b)%m = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-equal-implies-zero-difference-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "34b9bcbc309791e7e4efbf5f95bd59651fa19fe924dd4b436f2b57adbd0309e0"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-equal-implies-zero-difference-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-equal-implies-zero-difference-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-euclidean-negative-remainder-false",
+        "source": "forall a,q,r Z,m N+:\n    a = m*q+r\n    r < m\n    =>:\n        a%m = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-euclidean-negative-remainder-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fd8db4d7aff5a6d7a3c44ea8d6b0bd6909d9b5b18fa5d038af9802c28c013945"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-euclidean-negative-remainder-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-euclidean-negative-remainder-false.lit"
+        ]
+      },
+      {
+        "id": "mod-euclidean-remainder-direct",
+        "source": "forall a,q Z,m N+,r N:\n    a = m*q+r\n    r < m\n    =>:\n        a%m = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-euclidean-remainder-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d07fcc54e5f67558195f3d278ac2da7fb9bb637b3f8e3bb13a9d18917855dfe9"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-euclidean-remainder-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-euclidean-remainder-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-linear-shift-direct",
+        "source": "forall a,k Z,m N+:\n    (a+k*m)%m = a%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-linear-shift-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3644e61771bb527f5f2b3804b72f8124d8dee5061773e6c68121c3c018c7f15f"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-linear-shift-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-linear-shift-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-nested-multiple-direct",
+        "source": "forall a Z,k,m N+:\n    (a%(k*m))%m = a%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-nested-multiple-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "300d36af830b41b42238c42f804e56741328888283f458dc89ea0fc25c219e8e"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-nested-multiple-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-nested-multiple-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-nested-nonmultiple-false",
+        "source": "forall a Z,n,m N+:\n    (a%n)%m = a%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-nested-nonmultiple-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "459f763bbf79452bdd0137ed6b2c3a727ac4ec17e461c683aacba289437072d9"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-nested-nonmultiple-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-nested-nonmultiple-false.lit"
+        ]
+      },
+      {
+        "id": "mod-product-cancel-false",
+        "source": "forall a,b,k Z,m N+:\n    (a*k)%m = (b*k)%m\n    =>:\n        a%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-product-cancel-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "363f90cf0240fe4cb87f387ccc692281eeb8dbe3eee0cda84128b9f029f1e0a4"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-product-cancel-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-product-cancel-false.lit"
+        ]
+      },
+      {
+        "id": "mod-zero-difference-implies-equal-chain",
+        "source": "claim:\n    ? forall a,b Z,m N+:\n        (a-b)%m = 0\n        =>:\n            a%m = b%m\n    a-b = m*quot(a-b,m)+(a-b)%m = m*quot(a-b,m)\n    a = b+m*quot(a-b,m)\n    a%m = (b+m*quot(a-b,m))%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-zero-difference-implies-equal-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6320f1d87f31cfec2494824351ddaf97bd6d67e1108645326fcc7b7a10e0bcfa"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-zero-difference-implies-equal-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-zero-difference-implies-equal-chain.lit"
+        ]
+      },
+      {
+        "id": "mod-zero-difference-implies-equal-direct",
+        "source": "forall a,b Z,m N+:\n    (a-b)%m = 0\n    =>:\n        a%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-zero-difference-implies-equal-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "120d5ae218ed35b467d1c3d83f89b1ef93f2ebaaf6f37d9507dbf7bf9800cf9b"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-zero-difference-implies-equal-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-zero-difference-implies-equal-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-equal-implies-zero-difference-bridged",
+        "source": "claim:\n    ? forall a,b Z,m N+:\n        a%m = b%m\n        =>:\n            b%m-b%m = 0\n    (a-b)%m = 0\n    (a-b)%m = (a%m-b%m)%m = (b%m-b%m)%m = 0%m = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-equal-implies-zero-difference-bridged.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5be94d316e56a422182f18416ec7e1e237aa3e39d6f30a3bcc74a0e7187a9662"
+        },
+        "stderr": "",
+        "classification": "authoring_generation_error",
+        "exclude_from_capability_evidence": true,
+        "note": "Text replacement changed the claim goal; retained only as a discarded test-generation attempt."
+      },
+      {
+        "id": "mod-common-add-cancel-bridged",
+        "source": "claim:\n    ? forall a,b,k Z,m N+:\n        (a+k)%m = (b+k)%m\n        =>:\n            a = (a+k)-k\n    b = (b+k)-k\n    ((a+k)-k)%m = ((b+k)-k)%m\n    a%m = b%m\n    a%m = ((a+k)-k)%m = ((b+k)-k)%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-common-add-cancel-bridged.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6ffb423b7a044e742539b5295401b2c6683a9fccfc655f26e627e4e7d22112a2"
+        },
+        "stderr": "",
+        "classification": "authoring_generation_error",
+        "exclude_from_capability_evidence": true,
+        "note": "Text replacement changed the claim goal; retained only as a discarded test-generation attempt."
+      },
+      {
+        "id": "mod-zero-difference-implies-equal-bridged",
+        "source": "claim:\n    ? forall a,b Z,m N+:\n        (a-b)%m = 0\n        =>:\n            a%m = b%m\n    a-b = m*quot(a-b,m)+(a-b)%m = m*quot(a-b,m)\n    a = (a-b)+b = m*quot(a-b,m)+b = b+m*quot(a-b,m)\n    (m*quot(a-b,m))%m = 0\n    b%m+0 = b%m\n    a%m = (b+m*quot(a-b,m))%m = (b%m+(m*quot(a-b,m))%m)%m = (b%m+0)%m = (b%m)%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-zero-difference-implies-equal-bridged.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2122659f306fa531a03c1c51fa00688fb0f4b8f014bc1c4eb7a80b7a7037f32c"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-zero-difference-implies-equal-bridged.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-zero-difference-implies-equal-bridged.lit"
+        ]
+      },
+      {
+        "id": "mod-linear-shift-chain",
+        "source": "claim:\n    ? forall a,k Z,m N+:\n        (a+k*m)%m = a%m\n    (k*m)%m = 0\n    a%m+0 = a%m\n    (a+k*m)%m = (a%m+(k*m)%m)%m = (a%m+0)%m = (a%m)%m = a%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-linear-shift-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2be665705564667951bdd60bc6ea55ba9be7151dd58c16f61f2864a1d57e980c"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-linear-shift-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-linear-shift-chain.lit"
+        ]
+      },
+      {
+        "id": "gcd-step-positive-direct",
+        "source": "forall a Z,b N+:\n    gcd(a,b) = gcd(b,a%b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/gcd-step-positive-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5bc99108b888e16df794afaac39e01bc677abbb660594c59465bf9c940bdd194"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/gcd-step-positive-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/gcd-step-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-equal-implies-zero-difference-corrected",
+        "source": "claim:\n    ? forall a,b Z,m N+:\n        a%m = b%m\n        =>:\n            (a-b)%m = 0\n    b%m-b%m = 0\n    (a-b)%m = (a%m-b%m)%m = (b%m-b%m)%m = 0%m = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-equal-implies-zero-difference-corrected.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20ce4ee9a4746c7c35b7b56bc90feff2065332c95f2e2a5e442ff3189aa7ea4b"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-equal-implies-zero-difference-corrected.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-equal-implies-zero-difference-corrected.lit"
+        ]
+      },
+      {
+        "id": "mod-common-add-cancel-corrected",
+        "source": "claim:\n    ? forall a,b,k Z,m N+:\n        (a+k)%m = (b+k)%m\n        =>:\n            a%m = b%m\n    a = (a+k)-k\n    b = (b+k)-k\n    ((a+k)-k)%m = ((b+k)-k)%m\n    a%m = ((a+k)-k)%m = ((b+k)-k)%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-common-add-cancel-corrected.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f0554135031d1975e7f3898587027a298ef0651c32725403d0db19b983aaa3f"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-common-add-cancel-corrected.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-common-add-cancel-corrected.lit"
+        ]
+      },
+      {
+        "id": "mod-bezout-cancel-chain",
+        "source": "claim:\n    ? forall a,b,k,u,v Z,m N+:\n        k*u+m*v = 1\n        (a*k)%m = (b*k)%m\n        =>:\n            a%m = b%m\n    a = a*1 = a*(k*u+m*v) = (a*k)*u+m*(a*v)\n    b = b*1 = b*(k*u+m*v) = (b*k)*u+m*(b*v)\n    (m*(a*v))%m = 0\n    (m*(b*v))%m = 0\n    ((a*k)*u)%m = ((b*k)*u)%m\n    ((a*k)*u)%m+0 = ((a*k)*u)%m\n    ((b*k)*u)%m+0 = ((b*k)*u)%m\n    a%m = ((a*k)*u+m*(a*v))%m = (((a*k)*u)%m+(m*(a*v))%m)%m = (((a*k)*u)%m+0)%m = (((a*k)*u)%m)%m = ((a*k)*u)%m\n    b%m = ((b*k)*u+m*(b*v))%m = (((b*k)*u)%m+(m*(b*v))%m)%m = (((b*k)*u)%m+0)%m = (((b*k)*u)%m)%m = ((b*k)*u)%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-bezout-cancel-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20f6862a658445cc7242705530804465c3a59bec42eca8d5690a84b60b6ca004"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-bezout-cancel-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-bezout-cancel-chain.lit"
+        ]
+      },
+      {
+        "id": "mod-common-add-wrong-offset-false",
+        "source": "forall a,b,k,h Z,m N+:\n    (a+k)%m = (b+h)%m\n    =>:\n        a%m = b%m\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-common-add-wrong-offset-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "63e6741e69ccbd076949747611a88218cc0a976ab7040c948148752ed9d4729a"
+        },
+        "stderr": "",
+        "replay_source": "round-08-cases/mod-common-add-wrong-offset-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-08-cases/mod-common-add-wrong-offset-false.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "mod-equal-implies-zero-difference-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "18b6d042f4aadac2e6c1185c7cae35e6cb75fb31d871dbfc7859c1a80eb23a6d",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, m N+:\\n    a % m = b % m\\n    =>:\\n        (a - b) % m = 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, m N+:\\n    a % m = b % m\\n    =>:\\n        (a - b) % m = 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "mod-equal-implies-zero-difference-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "422db1d50c6a70b04c47739dd2063c0b7540392fb90caad93dfb00ec5954ffa4",
+          "excerpt": "... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall a, b Z, m N+:\\n        a % m = b % m\\n        =>:\\n            (a - b) % m = 0\\n    (a - b) % m = (a % m - b % m) % m = (b % m - b % m) % m = 0 % m = 0\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store its conclusions\",\r\n        \"phase\": \"claim\",\r\n        \"failure"
+        }
+      },
+      {
+        "case": "mod-common-add-cancel-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "4ad3cfad8cba62627eb01525fea99d741756cabee37174146b90cb905f0f3b6c",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, k Z, m N+:\\n    (a + k) % m = (b + k) % m\\n    =>:\\n        a % m = b % m\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, k Z, m N+:\\n    (a + k) % m = (b + k) % m\\n    =>:\\n        a % m = b % m\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "mod-common-add-cancel-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "03949ecc9142826dfcae723e41d910392cfa25a9300abac1d21c5e3979f327b8",
+          "excerpt": "... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall a, b, k Z, m N+:\\n        (a + k) % m = (b + k) % m\\n        =>:\\n            a % m = b % m\\n    a % m = ((a + k) - k) % m = ((b + k) - k) % m = b % m\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store its conclusions\",\r\n        \"phase\": \"claim\",\r\n        \"failure\""
+        }
+      },
+      {
+        "case": "mod-equal-implies-zero-difference-bridged",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9c91339d9eb26a8141761568cea0c63ddbaec2870418c130a334052540941e06",
+          "excerpt": "... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall a, b Z, m N+:\\n        a % m = b % m\\n        =>:\\n            b % m - b % m = 0\\n    (a - b) % m = 0\\n    (a - b) % m = (a % m - b % m) % m = (b % m - b % m) % m = 0 % m = 0\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store its conclusions\",\r\n        \"phase\":"
+        }
+      },
+      {
+        "case": "mod-common-add-cancel-bridged",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "cd873ba9ee1a8745acb16825a52a0b7b1e55438ac752a4fcc6bd09c42aa555dd",
+          "excerpt": "... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall a, b, k Z, m N+:\\n        (a + k) % m = (b + k) % m\\n        =>:\\n            a = (a + k) - k\\n    b = (b + k) - k\\n    ((a + k) - k) % m = ((b + k) - k) % m\\n    a % m = b % m\\n    a % m = ((a + k) - k) % m = ((b + k) - k) % m = b % m\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message"
+        }
+      },
+      {
+        "case": "mod-zero-difference-implies-equal-bridged",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "mod-linear-shift-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "gcd-step-positive-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "89bb9b16ca7e7e32f5f2f0772faa1218aa4bc41c488662615fe92cf8728aeca0",
+          "excerpt": "... ... success\r\n"
+        }
+      },
+      {
+        "case": "mod-equal-implies-zero-difference-corrected",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "mod-common-add-cancel-corrected",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ff140bb7796be24aa695264bf2f9ea4d75e8f1567a0936de9eeec06a2bdccdf",
+          "excerpt": "... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      }
+    ],
+    "source_revision": "422ac3c0197c3c1f49fbc506e9c33c90b14b6c4d",
+    "source_note": "Current working-tree release, existing edits preserved. Two goal-altering generation attempts excluded from capability evidence.",
+    "valid_case_count": 29
+  }
+}

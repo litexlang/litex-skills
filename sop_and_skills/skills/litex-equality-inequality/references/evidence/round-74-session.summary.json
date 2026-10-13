@@ -1,0 +1,37 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-74-session.json",
+  "original_sha256": "02e21490c1ca9959a0595fd469b9a39fb237fac3ee94b27f7cf27e754122eca1",
+  "original_bytes": 2310,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "forall L1,L2 R:\n    L1!=L2\n    =>:\n        0<|L1-L2|",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a36d50bc6e675f4b35d9e87f2680bae314ca1df203014acb62d83ba13b8ae5ee",
+        "excerpt": "forall L1,L2 R:\r\n    L1!=L2\r\n    =>:\r\n        0<|L1-L2|\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall L1, L2 R:\\n    L1 != L2\\n    =>:\\n        0 < abs (L1 - L2)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall L1, L2 R:\\n    L1 != L2\\n    =>:\\n        0 < abs (L1 - L2)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; independent scalar tracer, not whole limit theorem evidence. Current cold round74 required."
+    },
+    {
+      "source": "forall L1,L2 R:\n    L1<=L2\n    =>:\n        0<|L1-L2|",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0cf196ea7254a30ddd7da824d81eafa06bc73ceeb16b4a9034be94d067362ae9",
+        "excerpt": "forall L1,L2 R:\r\n    L1<=L2\r\n    =>:\r\n        0<|L1-L2|\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall L1, L2 R:\\n    L1 <= L2\\n    =>:\\n        0 < abs (L1 - L2)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall L1, L2 R:\\n    L1 <= L2\\n    =>:\\n        0 < abs (L1 - L2)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; independent scalar tracer, not whole limit theorem evidence. Current cold round74 required."
+    },
+    {
+      "source": "claim:\n    ? forall L1,L2 R:\n        L1!=L2\n        =>:\n            0<|L1-L2|\n    L1-L2!=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f6581b27486242f5704923c3f22f4e03675ba5a3a6126d83449ef7220dcc34db",
+        "excerpt": "claim:\r\n    ? forall L1,L2 R:\r\n        L1!=L2\r\n        =>:\r\n            0<|L1-L2|\r\n    L1-L2!=0\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; scalar local bridge only. Current cold full limit theorem exclusively owns deletion evidence."
+    }
+  ]
+}

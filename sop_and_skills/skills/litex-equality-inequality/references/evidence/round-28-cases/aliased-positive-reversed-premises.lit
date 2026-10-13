@@ -1,0 +1,5 @@
+forall E set,p R:
+    p $in E
+    E={x R: x>0}
+    =>:
+        p>0

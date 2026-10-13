@@ -1,0 +1,41 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-99-session.json",
+  "original_sha256": "b789bfe18fea712a6bc7ad57da8c43c94e26bdaa3e73efcaaff2dc0f1dcabfdc",
+  "original_bytes": 8518,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "session_id": 99399,
+    "prefix": "round99-prefix.lit",
+    "scope": "New number-theory source context; ordinary statement failures retain this Session. Cold files own deletion gates.",
+    "attempts": [
+      {
+        "source": "thm r99_divisibility_is_transitive:\n    ? forall a,b,c Z:\n        $divides_by(a,b)\n        $divides_by(b,c)\n        =>:\n            $divides_by(a,c)\n    obtain k from $divides_by(a,b)\n    obtain m from $divides_by(b,c)\n    witness $divides_by(a,c) from k*m",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "15dec03ab31bdeab3459a649f05d2c595ccce276ec7e121b7be5ee7abff35bce",
+          "excerpt": "Warning: truncated output (original token count: 1948)\nTotal output lines: 191\n\nthm r99_divisibility_is_transitive:\r\n    ? forall a,b,c Z:\r\n        $divides_by(a,b)\r\n        $divides_by(b,c)\r\n        =>:\r\n            $divides_by(a,c)\r\n    obtain k from $divides_by(a,b)\r\n    obtain m from $divides_by(b,c)\r\n    witness $divides_by(a,c) from k*m\r\n\r\n... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"thm r99_divisi"
+        },
+        "truncated": true,
+        "note": "Tool token limit truncated first response; independently saved cold gates will own full failure envelope."
+      },
+      {
+        "source": "thm r99_divisibility_is_transitive:\n    ? forall a,b,c Z:\n        $divides_by(a,b)\n        $divides_by(b,c)\n        =>:\n            $divides_by(a,c)\n    obtain k from $divides_by(a,b)\n    obtain m from $divides_by(b,c)\n    c=b*m=(a*k)*m=a*(k*m)\n    witness $divides_by(a,c) from k*m",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "48304514aa67cafc50db3318f07e2666b0e1ea1c24bfdf5a0b1db245f934b819",
+          "excerpt": "thm r99_divisibility_is_transitive:\r\n    ? forall a,b,c Z:\r\n        $divides_by(a,b)\r\n        $divides_by(b,c)\r\n        =>:\r\n            $divides_by(a,c)\r\n    obtain k from $divides_by(a,b)\r\n    obtain m from $divides_by(b,c)\r\n    c=b*m=(a*k)*m=a*(k*m)\r\n    witness $divides_by(a,c) from k*m\r\n\r\n... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+        }
+      },
+      {
+        "source": "thm r99_common_divisor_divides_linear_combination:\n    ? forall d,a,b,x,y Z:\n        $divides_by(d,a)\n        $divides_by(d,b)\n        =>:\n            $divides_by(d,a*x+b*y)\n    obtain p from $divides_by(d,a)\n    obtain q from $divides_by(d,b)\n    a*x+b*y=(d*p)*x+(d*q)*y=d*(p*x+q*y)\n    witness $divides_by(d,a*x+b*y) from p*x+q*y",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ad7c3fa24216a592ff7800efa00835a881dd62fc13cd91d8bc4ab33e522264dd",
+          "excerpt": "thm r99_common_divisor_divides_linear_combination:\r\n    ? forall d,a,b,x,y Z:\r\n        $divides_by(d,a)\r\n        $divides_by(d,b)\r\n        =>:\r\n            $divides_by(d,a*x+b*y)\r\n    obtain p from $divides_by(d,a)\r\n    obtain q from $divides_by(d,b)\r\n    a*x+b*y=(d*p)*x+(d*q)*y=d*(p*x+q*y)\r\n    witness $divides_by(d,a*x+b*y) from p*x+q*y\r\n\r\n... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+        }
+      }
+    ]
+  }
+}

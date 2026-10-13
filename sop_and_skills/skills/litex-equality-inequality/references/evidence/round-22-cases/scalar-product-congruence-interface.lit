@@ -1,0 +1,6 @@
+thm scalar_product_congruence_probe22:
+    ? forall lhs1,rhs1,lhs2,rhs2 R:
+        lhs1=rhs1
+        lhs2=rhs2
+        =>:
+            lhs1*lhs2=rhs1*rhs2

@@ -1,0 +1,2 @@
+forall x R,n Z:
+    ceil(x+n) = ceil(x)+n

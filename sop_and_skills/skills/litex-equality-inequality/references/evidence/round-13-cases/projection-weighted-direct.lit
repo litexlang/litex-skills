@@ -1,0 +1,2 @@
+forall a,b,s,t R:
+    (a,b)(1)*s+(a,b)(2)*t = a*s+b*t

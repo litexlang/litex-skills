@@ -1,0 +1,7 @@
+claim:
+    ? forall a, b, c R:
+        a^2+b^2+c^2 >= a*b+b*c+c*a
+    (a-b)^2+(b-c)^2 >= 0
+    (a-b)^2+(b-c)^2+(c-a)^2 >= 0
+    ((a-b)^2+(b-c)^2+(c-a)^2)/2 >= 0
+    a^2+b^2+c^2 = ((a-b)^2+(b-c)^2+(c-a)^2)/2 + (a*b+b*c+c*a) >= 0+(a*b+b*c+c*a) = a*b+b*c+c*a

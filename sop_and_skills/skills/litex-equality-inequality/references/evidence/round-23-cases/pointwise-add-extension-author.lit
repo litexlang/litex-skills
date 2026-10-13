@@ -1,0 +1,7 @@
+claim:
+    ? forall u,v fn(t R) R:
+        fn(k R) R {u(k)+v(k)}=fn(j R) R {v(j)+u(j)}
+    by fn_extension:
+        ? fn(k R) R {u(k)+v(k)}=fn(j R) R {v(j)+u(j)}
+        forall eval_index R:
+            fn(k R) R {u(k)+v(k)}(eval_index)=u(eval_index)+v(eval_index)=v(eval_index)+u(eval_index)=fn(j R) R {v(j)+u(j)}(eval_index)

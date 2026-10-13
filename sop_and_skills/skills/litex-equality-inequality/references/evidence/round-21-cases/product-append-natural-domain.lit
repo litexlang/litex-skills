@@ -1,0 +1,4 @@
+forall f fn(k N) R,m N:
+    m>=2
+    =>:
+        product(2,m+1,f)=product(2,m,f)*f(m+1)

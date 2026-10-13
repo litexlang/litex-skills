@@ -1,0 +1,7 @@
+claim:
+    ? forall x,y R,c R+:
+        abs(x) >= c
+        abs(y) >= c
+        =>:
+            abs(x*y) >= c^2
+    abs(x*y) = abs(x)*abs(y) >= c*abs(y) >= c*c = c^2

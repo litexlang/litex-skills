@@ -1,0 +1,12 @@
+let r49_two_point_vector = fn(index N+: index <= 2) R
+
+have fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)
+
+template<X, Y r49_two_point_vector, a, b R>:
+    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)
+
+have fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \r49_affine_coordinates<X, Y, a, b>
+
+thm r49_affine_false_coefficient:
+    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:
+        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = 2 * a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)

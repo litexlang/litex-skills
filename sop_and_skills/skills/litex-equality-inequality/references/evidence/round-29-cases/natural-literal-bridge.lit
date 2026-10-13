@@ -1,0 +1,7 @@
+claim:
+    ? forall S set,x R:
+        x $in S
+        S=N
+        =>:
+            x>=0
+    x $in N

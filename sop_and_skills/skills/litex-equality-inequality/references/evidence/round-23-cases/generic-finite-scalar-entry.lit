@@ -1,0 +1,4 @@
+forall carrier nonempty_set,n N+,scale fn(left,right carrier) carrier,u,result finite_seq(carrier,n),a carrier,idx closed_range(1,n):
+    result=fn(k closed_range(1,n)) carrier {scale(a,u(k))}
+    =>:
+        result(idx)=scale(a,u(idx))

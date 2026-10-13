@@ -1,0 +1,217 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-44-session.json",
+  "original_sha256": "dae48ae7ead78f855c2fb1469709afac1b3625918aec5d01c778d771916ea1bd",
+  "original_bytes": 33935,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "id": "prefix-0",
+      "source": "have fn r44_square_root_two_residual(x R) R = x^2 - 2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "df6ae9ce413851b45bc25912b1fbe64534e263a242be0f1e7365228037ee9fd8",
+        "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "prefix-1",
+      "source": "claim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "071bfc75a418381ed4827677aa13650fd99c9dd71fc438ea174051e3b743d3d0",
+        "excerpt": "claim:\r\n    ? forall x R+:\r\n        (x + 2 / x) / 2 $in R+\r\n    2 / x > 0\r\n    x + 2 / x > 0\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-2",
+      "source": "have fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2fdf2cfe7b90a8253f8e88c41ae483394052be7d04d013fb9d4d4969d26bdda8",
+        "excerpt": "have fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "prefix-3",
+      "source": "thm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r44_square_root_two_residual(x)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "82740a4147adac3267220cc5844f70f7c076fe920c92c5db29a44ce6214add57",
+        "excerpt": "thm r44_newton_sqrt_two_residual_identity:\r\n    ? forall x R+:\r\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\r\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\r\n    r44_square_root_two_residual(x) = x^2 - 2\r\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\r\n    4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r44_square_root_two_residual(x)^2\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-4",
+      "source": "thm r44_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r44_square_root_two_residual(r44_newton_sqrt_two(x)) >= 0\n    release thm r44_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r44_square_root_two_residual(x)^2 >= 0\n    r44_square_root_two_residual(r44_newton_sqrt_two(x))=r44_square_root_two_residual(x)^2/(4*x^2)>=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f6bae9e57cddc318bfee305d1f8f240cd5b2b6b16bf2f8aae99c56f482a0ba33",
+        "excerpt": "thm r44_newton_sqrt_two_residual_nonnegative:\r\n    ? forall x R+:\r\n        r44_square_root_two_residual(r44_newton_sqrt_two(x)) >= 0\r\n    release thm r44_newton_sqrt_two_residual_identity(x)\r\n    x^2 > 0\r\n    4*x^2 > 0\r\n    r44_square_root_two_residual(x)^2 >= 0\r\n    r44_square_root_two_residual(r44_newton_sqrt_two(x))=r44_square_root_two_residual(x)^2/(4*x^2)>=0\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-5",
+      "source": "claim:\n    ? forall n N:\n        n = 0 or n > 0\n    n >= 0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "81ad1a1369f08660da71d11feb40a1d19e55989a73cda644c65bfe8f46c74788",
+        "excerpt": "claim:\r\n    ? forall n N:\r\n        n = 0 or n > 0\r\n    n >= 0\r\n\r\n... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-6",
+      "source": "claim:\n    ? forall n N:\n        n > 0\n        =>:\n            n - 1 >= 0\n    n - 1 $in N\n    n - 1 >= 0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "af29138834fb75bdc7205f1dde698f60486463ff130441b12e26befaff7603aa",
+        "excerpt": "claim:\r\n    ? forall n N:\r\n        n > 0\r\n        =>:\r\n            n - 1 >= 0\r\n    n - 1 $in N\r\n    n - 1 >= 0\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-7",
+      "source": "have fn r44_sqrt_two_newton_iterate(n N) R+ by induc n from 0:\n    case n = 0: 1\n    case n > 0: r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n - 1))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5de5157e0ea2d6655d4859e997e86b80d7c25ead5189668fbbfe211fe46b8ba9",
+        "excerpt": "have fn r44_sqrt_two_newton_iterate(n N) R+ by induc n from 0:\r\n    case n = 0: 1\r\n    case n > 0: r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n - 1))\r\n\r\n... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-8",
+      "source": "have fn r44_sqrt_two_newton_gap(n N) R = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n)))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b586315f1f01ed6d524b9e832f262099517beacad6684dc44608f1ade51a1fef",
+        "excerpt": "have fn r44_sqrt_two_newton_gap(n N) R = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n)))\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "prefix-9",
+      "source": "thm r44_sqrt_two_newton_iterate_step:\n    ? forall n N:\n        r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))\n    n + 1 > 0\n    (n + 1) - 1 = n\n    r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate((n + 1) - 1))\n    r44_sqrt_two_newton_iterate((n + 1) - 1) = r44_sqrt_two_newton_iterate(n)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "368908d8b00a48f7152b955c39de64362ab87d3472dad485d75259efc727643a",
+        "excerpt": "thm r44_sqrt_two_newton_iterate_step:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))\r\n    n + 1 > 0\r\n    (n + 1) - 1 = n\r\n    r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate((n + 1) - 1))\r\n    r44_sqrt_two_newton_iterate((n + 1) - 1) = r44_sqrt_two_newton_iterate(n)\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-10",
+      "source": "thm r44_newton_sqrt_two_greater_than_one:\n    ? forall x R+:\n        r44_newton_sqrt_two(x) > 1\n    r44_newton_sqrt_two(x)=(x+2/x)/2\n    r44_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2+1>0\n    2*x>0\n    r44_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e996feadcc9303a3b4f3b443614a84406a91ee3883fcafc112515f836393fbce",
+        "excerpt": "thm r44_newton_sqrt_two_greater_than_one:\r\n    ? forall x R+:\r\n        r44_newton_sqrt_two(x) > 1\r\n    r44_newton_sqrt_two(x)=(x+2/x)/2\r\n    r44_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\r\n    (x-1)^2+1>0\r\n    2*x>0\r\n    r44_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-11",
+      "source": "thm r44_newton_sqrt_two_one_step_gap_identity:\n    ? forall x R+:\n        4 * x^2 * abs(r44_square_root_two_residual(r44_newton_sqrt_two(x))) = abs(r44_square_root_two_residual(x))^2\n    release thm r44_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * abs(r44_square_root_two_residual(r44_newton_sqrt_two(x))) = 4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2 = abs(r44_square_root_two_residual(x))^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4b7ae3bc730015aea8fcfe1c243e27da871aeabcca691f60185c30cc0f21f15c",
+        "excerpt": "thm r44_newton_sqrt_two_one_step_gap_identity:\r\n    ? forall x R+:\r\n        4 * x^2 * abs(r44_square_root_two_residual(r44_newton_sqrt_two(x))) = abs(r44_square_root_two_residual(x))^2\r\n    release thm r44_newton_sqrt_two_residual_nonnegative(x)\r\n    4 * x^2 * abs(r44_square_root_two_residual(r44_newton_sqrt_two(x))) = 4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2 = abs(r44_square_root_two_residual(x))^2\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-12",
+      "source": "thm r44_sqrt_two_newton_iterate_at_least_one:\n    ? forall n N:\n        r44_sqrt_two_newton_iterate(n) >= 1\n    by induc k from 0:\n        ? r44_sqrt_two_newton_iterate(k) >= 1\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0) = 1\n        ? induc:\n            r44_sqrt_two_newton_iterate(k + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k))\n            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))\n            r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k)) > 1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "91ba418fcf48795228cacb3b567cac39d036ff4590371421641d8f99e1f10230",
+        "excerpt": "thm r44_sqrt_two_newton_iterate_at_least_one:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_iterate(n) >= 1\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_iterate(k) >= 1\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0) = 1\r\n        ? induc:\r\n            r44_sqrt_two_newton_iterate(k + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k))\r\n            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))\r\n            r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k)) > 1\r\n\r\n... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "prefix-13",
+      "source": "thm r44_sqrt_two_newton_gap_step_identity:\n    ? forall n N:\n        4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1) = r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))\n    r44_sqrt_two_newton_gap(n + 1) = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1))) = abs(r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))))\n    r44_sqrt_two_newton_gap(n) = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n)))\n    4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1) = 4 * r44_sqrt_two_newton_iterate(n)^2 * abs(r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))))\n    r44_sqrt_two_newton_gap(n)^2 = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n)))^2\n    release thm r44_newton_sqrt_two_one_step_gap_identity(r44_sqrt_two_newton_iterate(n))\n    4 * r44_sqrt_two_newton_iterate(n)^2 * abs(r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n)))) = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n)))^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "40846a8ddef3f0f8593a28616e866b9f9ff9902f073e2959cf4c72f615e5259a",
+        "excerpt": "thm r44_sqrt_two_newton_gap_step_identity:\r\n    ? forall n N:\r\n        4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1) = r44_sqrt_two_newton_gap(n)^2\r\n    r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))\r\n    r44_sqrt_two_newton_gap(n + 1) = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1))) = abs(r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))))\r\n    r44_sqrt_two_newton_gap(n) = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n)))\r\n    4 * r44_sqrt_two_newton_iterate("
+      }
+    },
+    {
+      "id": "lower-short",
+      "source": "thm r44_lower_short:\n    ? forall n N:\n        r44_sqrt_two_newton_iterate(n) >= 1\n    by induc k from 0:\n        ? r44_sqrt_two_newton_iterate(k) >= 1\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0) = 1\n        ? induc:\n            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e9e6b4e06ed2b5d78ff00f8cc19bbf92ae0c37f1d2a4f93af1e3a49be2aca8e6",
+        "excerpt": "thm r44_lower_short:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_iterate(n) >= 1\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_iterate(k) >= 1\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0) = 1\r\n        ? induc:\r\n            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))\r\n\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "contraction-original",
+      "source": "thm r44_sqrt_two_newton_gap_contracts_quadratically:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\n    r44_sqrt_two_newton_iterate(n) >= 1\n    r44_sqrt_two_newton_iterate(n) - 1 $in R\n    r44_sqrt_two_newton_iterate(n) + 1 $in R\n    r44_sqrt_two_newton_iterate(n) - 1 >= 0\n    r44_sqrt_two_newton_iterate(n) + 1 > 0\n    r44_sqrt_two_newton_iterate(n) + 1 >= 0\n    (r44_sqrt_two_newton_iterate(n) - 1) * (r44_sqrt_two_newton_iterate(n) + 1) >= 0\n    r44_sqrt_two_newton_iterate(n)^2 - 1 = (r44_sqrt_two_newton_iterate(n) - 1) * (r44_sqrt_two_newton_iterate(n) + 1) >= 0\n    0 <= r44_sqrt_two_newton_iterate(n)^2 - 1\n    1 <= r44_sqrt_two_newton_iterate(n)^2\n    r44_sqrt_two_newton_iterate(n)^2 >= 1\n    r44_sqrt_two_newton_gap(n + 1) = abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))\n    abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1))) >= 0\n    r44_sqrt_two_newton_gap(n + 1) >= 0\n    r44_sqrt_two_newton_gap(n + 1) $in R\n    r44_sqrt_two_newton_iterate(n)^2 $in R\n    0 <= r44_sqrt_two_newton_gap(n + 1)\n    1 * r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1)\n    0 <= 4\n    4 * (1 * r44_sqrt_two_newton_gap(n + 1)) <= 4 * (r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1))\n    4 * (1 * r44_sqrt_two_newton_gap(n + 1)) = 4 * r44_sqrt_two_newton_gap(n + 1)\n    4 * (r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1)) = 4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1)\n    4 * r44_sqrt_two_newton_gap(n + 1) <= 4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1)\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\n    4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1) = r44_sqrt_two_newton_gap(n)^2\n    4 * r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "7063516159f02ca393748aa58929ea5936c54673c7e7e635c80d02bd02969168",
+        "excerpt": "Warning: truncated output (original token count: 528)\nTotal output lines: 33\n\nthm r44_sqrt_two_newton_gap_contracts_quadratically:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\r\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\r\n    r44_sqrt_two_newton_iterate(n) >= 1\r\n    r44_sqrt_two_newton_iterate(n) - 1 $in R\r\n    r44_sqrt_two_newton_iterate(n) + 1 $in R\r\n    r44_sqrt_two_newton_iterate(n) - 1 >= 0\r\n    r44_sqrt_two_newton_iterate(n) + 1 > 0\r\n    r44_sqrt_two_newton_iterate(n) + 1 >= 0\r\n    (r44_sqrt_two_newton_iterate(n) - 1) * (r"
+      }
+    },
+    {
+      "id": "contraction-short",
+      "source": "thm r44_contraction_short:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\n    r44_sqrt_two_newton_iterate(n)^2>=1\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "57eb0f6592d4392b484741f54b28d133c2096bfbd0a4b878789a6ea123f4aa74",
+        "excerpt": "thm r44_contraction_short:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\r\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\r\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\r\n    r44_sqrt_two_newton_iterate(n)^2>=1\r\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\r\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\r\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_"
+      }
+    },
+    {
+      "id": "lower-keep-step",
+      "source": "thm r44_lower_keep_step:\n    ? forall n N:\n        r44_sqrt_two_newton_iterate(n) >= 1\n    by induc k from 0:\n        ? r44_sqrt_two_newton_iterate(k) >= 1\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0) = 1\n        ? induc:\n            r44_sqrt_two_newton_iterate(k + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k))\n            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "da6d3388fee3e3a97123792520f53078c18ef4df756b84f12276d727c6b4a928",
+        "excerpt": "thm r44_lower_keep_step:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_iterate(n) >= 1\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_iterate(k) >= 1\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0) = 1\r\n        ? induc:\r\n            r44_sqrt_two_newton_iterate(k + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k))\r\n            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))\r\n\r\n\r\n... ... ... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "contraction-sign-bridges",
+      "source": "thm r44_contraction_sign_bridges:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\n    r44_sqrt_two_newton_iterate(n)-1>=0\n    r44_sqrt_two_newton_iterate(n)+1>=0\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\n    r44_sqrt_two_newton_iterate(n)^2>=1\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "7b76dc11ba4e8038e5eeca5218039fdc314c280e5eeee4a56be2823d346fee63",
+        "excerpt": "thm r44_contraction_sign_bridges:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\r\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\r\n    r44_sqrt_two_newton_iterate(n)-1>=0\r\n    r44_sqrt_two_newton_iterate(n)+1>=0\r\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\r\n    r44_sqrt_two_newton_iterate(n)^2>=1\r\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\r\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\r\n    4*"
+      }
+    },
+    {
+      "id": "contraction-delete-lower-call",
+      "source": "thm r44_delete_lower_call:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\n    r44_sqrt_two_newton_iterate(n)-1>=0\n    r44_sqrt_two_newton_iterate(n)+1>=0\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\n    r44_sqrt_two_newton_iterate(n)^2>=1\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "85a3541f60ea0f02f5f99499e84677038e18f4b9bff797e04eea9bf5def6f125",
+        "excerpt": "Warning: truncated output (original token count: 9493)\nTotal output lines: 756\n\nthm r44_delete_lower_call:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\r\n    r44_sqrt_two_newton_iterate(n)-1>=0\r\n    r44_sqrt_two_newton_iterate(n)+1>=0\r\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\r\n    r44_sqrt_two_newton_iterate(n)^2>=1\r\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\r\n    release thm r44_sqrt_two_newton_gap_step_identit"
+      }
+    },
+    {
+      "id": "contraction-delete-identity-call",
+      "source": "thm r44_delete_identity_call:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\n    r44_sqrt_two_newton_iterate(n)-1>=0\n    r44_sqrt_two_newton_iterate(n)+1>=0\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\n    r44_sqrt_two_newton_iterate(n)^2>=1\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "74701cd35eb82bf59e5617e1f31cc319e09d3b039110a55c93b340e4fcce1086",
+        "excerpt": "thm r44_delete_identity_call:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\r\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\r\n    r44_sqrt_two_newton_iterate(n)-1>=0\r\n    r44_sqrt_two_newton_iterate(n)+1>=0\r\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\r\n    r44_sqrt_two_newton_iterate(n)^2>=1\r\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\r\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n "
+      }
+    },
+    {
+      "id": "contraction-wrong-denominator-eight",
+      "source": "thm r44_wrong_denominator_eight:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\n    r44_sqrt_two_newton_iterate(n)-1>=0\n    r44_sqrt_two_newton_iterate(n)+1>=0\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\n    r44_sqrt_two_newton_iterate(n)^2>=1\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a39fb434f5caa299a4c52dd8c40affeaca2bf6ce107a22a07a096356dd826108",
+        "excerpt": "thm r44_wrong_denominator_eight:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4\r\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\r\n    r44_sqrt_two_newton_iterate(n)-1>=0\r\n    r44_sqrt_two_newton_iterate(n)+1>=0\r\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\r\n    r44_sqrt_two_newton_iterate(n)^2>=1\r\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\r\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\r\n    4*r"
+      }
+    },
+    {
+      "id": "contraction-wrong-denominator-eight-corrected",
+      "source": "thm r44_wrong_denominator_eight_corrected:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 8\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\n    r44_sqrt_two_newton_iterate(n)-1>=0\n    r44_sqrt_two_newton_iterate(n)+1>=0\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\n    r44_sqrt_two_newton_iterate(n)^2>=1\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\n    release thm r44_sqrt_two_newton_gap_step_identity(n)\n    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2\n    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a2ee8775d5f697167ae44fc1efb1db663fd09fe91f2e06aa586d3ef0c1701448",
+        "excerpt": "thm r44_wrong_denominator_eight_corrected:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 8\r\n    release thm r44_sqrt_two_newton_iterate_at_least_one(n)\r\n    r44_sqrt_two_newton_iterate(n)-1>=0\r\n    r44_sqrt_two_newton_iterate(n)+1>=0\r\n    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0\r\n    r44_sqrt_two_newton_iterate(n)^2>=1\r\n    r44_sqrt_two_newton_gap(n + 1)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1)))>=0\r\n    release thm r44_sqrt_two_newton_gap_step_identity(n"
+      }
+    }
+  ]
+}

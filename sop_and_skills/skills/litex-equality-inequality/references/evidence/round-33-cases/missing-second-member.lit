@@ -1,0 +1,4 @@
+forall a,b,c,d,z R:
+    z $in '[a,b]
+    =>:
+        max(a,c)<=z

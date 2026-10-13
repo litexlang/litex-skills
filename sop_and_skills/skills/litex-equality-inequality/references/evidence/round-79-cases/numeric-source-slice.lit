@@ -1,0 +1,3 @@
+have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))
+release thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))
+quadratic_gradient((3,4))=(2*3,2*4)=(6,8)

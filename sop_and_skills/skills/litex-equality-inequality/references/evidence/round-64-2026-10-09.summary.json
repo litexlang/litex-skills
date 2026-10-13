@@ -1,0 +1,471 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-64-2026-10-09.json",
+  "original_sha256": "911509855a4c017522445d4d4d6b17dc470a8a7aa69432a6b9a80e7089c4f903",
+  "original_bytes": 81165,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "35ddccb1c670f4d59f285411db00ac22de2e70b39c4a5aeb0a6a80b071453e61",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a * x = c - b\n    x = (a * x) / a = (c - b) / a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/source-theorem.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/source-theorem.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b7d3add9b11b70a9e0c23a75beb1343ab4ae2fed9568106a21faa1a5a2e7fc67"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/source-theorem.lit"
+        ]
+      },
+      {
+        "id": "theorem-division-chain-only",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    x=(a*x)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-division-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-division-chain-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0ac700d6e08200e63fbc028a188ad8a472d288f9397130ded541bdcdd8651c87"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-division-chain-only.lit"
+        ]
+      },
+      {
+        "id": "theorem-shift-division-chain",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    x=(a*x+b-b)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-shift-division-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-shift-division-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5173102db5eab5beab03d03c1a57898090f92d36d31036212bdbab05e4b0e6e4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-shift-division-chain.lit"
+        ]
+      },
+      {
+        "id": "theorem-intermediate-only",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a*x=c-b\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-intermediate-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-intermediate-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9f64caa79dc2288037f8b935b09fc078eb79d908d2b89b5e701db03f2ef249b5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-intermediate-only.lit"
+        ]
+      },
+      {
+        "id": "direct-implication",
+        "source": "forall a,b,c,x R:\n    a!=0\n    a*x+b=c\n    =>:\n        x=(c-b)/a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/direct-implication.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/direct-implication.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5d56abf6f4a606beeb79b407e7fc2b2f84074a62017e938ef1210b7fcf14a1e2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/direct-implication.lit"
+        ]
+      },
+      {
+        "id": "source-original-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a * x = c - b\n    x = (a * x) / a = (c - b) / a\n\n3!=0\n3*2+(-6)=0\nrelease thm solve_linear_equation(3,-6,0,2)\n2=(0-(-6))/3\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/source-original-caller.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/source-original-caller.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8573070ef217f5261f06ca0114c61b057054bcb4f41ff43147abc9623ad5e8e8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/source-original-caller.lit"
+        ]
+      },
+      {
+        "id": "source-bare-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a * x = c - b\n    x = (a * x) / a = (c - b) / a\n\nrelease thm solve_linear_equation(3,-6,0,2)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/source-bare-caller.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/source-bare-caller.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a86b1f0b763ecf21a560182701666bac854df37e1dabb439c02cafabf0c024b3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/source-bare-caller.lit"
+        ]
+      },
+      {
+        "id": "wrong-sign-conclusion",
+        "source": "claim:\n    ? forall a,b,c,x R:\n        a!=0\n        a*x+b=c\n        =>:\n            x=(b-c)/a\n    x=(b-c)/a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/wrong-sign-conclusion.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/wrong-sign-conclusion.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3c4fc2dd07a80c30e4791cf022523b0f3c6be9be141379138e428a9c464c7c06"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/wrong-sign-conclusion.lit"
+        ]
+      },
+      {
+        "id": "missing-nonzero-chain",
+        "source": "claim:\n    ? forall a,b,c,x R:\n        a*x+b=c\n        =>:\n            x=(c-b)/a\n    x=(a*x+b-b)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/missing-nonzero-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/missing-nonzero-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c454fb878ba6c2dd71e1b24d0adbd53fac3453796067df777f28b679fb4a62da"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/missing-nonzero-chain.lit"
+        ]
+      },
+      {
+        "id": "zero-coefficient-counterexample",
+        "source": "0*7+2=2\n7!=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/zero-coefficient-counterexample.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/zero-coefficient-counterexample.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1a27a650caec5126274cd641afac42658fa0228d71ac6e4b3e7e15a061018446"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/zero-coefficient-counterexample.lit"
+        ]
+      },
+      {
+        "id": "negative-coefficient-chain",
+        "source": "claim:\n    ? forall a,b,c,x R:\n        a!=0\n        a<0\n        a*x+b=c\n        =>:\n            x=(c-b)/a\n    x=(a*x+b-b)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/negative-coefficient-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/negative-coefficient-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7dda08b70139bcdd7bbd90838ff2b176723048238a13d8f2ba70914ae07cac41"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/negative-coefficient-chain.lit"
+        ]
+      },
+      {
+        "id": "short-chain-bare-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    x=(a*x+b-b)/a=(c-b)/a\n\nrelease thm solve_linear_equation(3,-6,0,2)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/short-chain-bare-caller.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/short-chain-bare-caller.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "da108dfeadc364bf3e2c2613f905fdeca73ae4b8de64cd65941960948f1cab02"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/short-chain-bare-caller.lit"
+        ]
+      },
+      {
+        "id": "intermediate-bare-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a*x=c-b\n\nrelease thm solve_linear_equation(3,-6,0,2)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/intermediate-bare-caller.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/intermediate-bare-caller.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "650a4de453bfed5eb5fce0442def8290248f07657b93755b2e947444e2efa27a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/intermediate-bare-caller.lit"
+        ]
+      },
+      {
+        "id": "theorem-empty-body",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-empty-body.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-64-cases/theorem-empty-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f8395cd017263f339a12784f8ef09c16783a20b33ade39fc5d460a0698822478"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-empty-body.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 14,
+      "accepted": 10,
+      "normal_rejections": 4
+    },
+    "scope": "Actual named linear equation theorem and concrete caller, no source premise changes for shortening; source slice independent of other showcase sections."
+  }
+}

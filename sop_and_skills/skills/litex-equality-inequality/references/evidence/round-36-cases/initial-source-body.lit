@@ -1,0 +1,8 @@
+have fn r36_quadratic_solution(c,x R) R = x^2+c
+
+thm r36_initial_source:
+    ? forall c,y0 R:
+        r36_quadratic_solution(c,0)=y0
+        =>:
+            c=y0
+    r36_quadratic_solution(c,0)=0^2+c=c

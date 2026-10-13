@@ -1,0 +1,6 @@
+claim:
+    ? forall a R+, n Z:
+        a < 1
+        =>:
+            a^(n+1) < a^n
+    a^(n+1) = a^n*a^1 = a^n*a < a^n*1 = a^n

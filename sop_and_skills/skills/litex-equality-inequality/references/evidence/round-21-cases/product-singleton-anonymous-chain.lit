@@ -1,0 +1,4 @@
+claim:
+    ? forall c R,m Z:
+        product(m,m,fn(k Z) R {c})=c
+    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)=c

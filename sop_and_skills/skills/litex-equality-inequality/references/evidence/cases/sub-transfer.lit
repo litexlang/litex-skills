@@ -1,0 +1,7 @@
+claim:
+    ? forall u, v, x, y R:
+        u <= v
+        x <= y
+        =>:
+            u-y <= v-x
+    u-y <= v-y <= v-x

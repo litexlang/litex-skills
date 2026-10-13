@@ -1,0 +1,2 @@
+forall a Z,k,m N+:
+    (a%(k*m))%m = a%m

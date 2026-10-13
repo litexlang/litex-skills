@@ -1,0 +1,2 @@
+forall x,y R:
+    abs(abs(x)-abs(y)) <= abs(x-y)

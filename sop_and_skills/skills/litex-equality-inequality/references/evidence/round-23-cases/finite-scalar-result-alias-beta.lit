@@ -1,0 +1,4 @@
+forall n N+,u,result finite_seq(R,n),a R,idx closed_range(1,n):
+    result=fn(k closed_range(1,n)) R {a*u(k)}
+    =>:
+        result(idx)=a*u(idx)

@@ -1,0 +1,6 @@
+forall p,q,x,y,M R:
+    p+q > 0
+    x <= M
+    y <= M
+    =>:
+        (p*x+q*y)/(p+q) <= M

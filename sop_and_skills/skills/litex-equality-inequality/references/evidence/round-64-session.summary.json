@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-64-session.json",
+  "original_sha256": "d33e026c09150f0ba57a2b5a335c2c352f018f9b997aea45ba8f07d7ae554fa1",
+  "original_bytes": 743,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "thm r64_solve_linear_equation:\n    ? forall a,b,c,x R:\n        a!=0\n        a*x+b=c\n        =>:\n            x=(c-b)/a\n    x=(a*x+b-b)/a=(c-b)/a",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3d574837ba552ced5d45faa47b29b440ebfc9d908d70e45b305cd9e3329985ae",
+        "excerpt": "thm r64_solve_linear_equation:\r\n    ? forall a,b,c,x R:\r\n        a!=0\r\n        a*x+b=c\r\n        =>:\r\n            x=(c-b)/a\r\n    x=(a*x+b-b)/a=(c-b)/a\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round64 required."
+    },
+    {
+      "source": "release thm r64_solve_linear_equation(3,-6,0,2)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "86a42b7b5ea5654cd7d86f1acc0d6a0a895554e079f24166d81c0a765aff2b07",
+        "excerpt": "release thm r64_solve_linear_equation(3,-6,0,2)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold current caller owns acceptance."
+    }
+  ]
+}

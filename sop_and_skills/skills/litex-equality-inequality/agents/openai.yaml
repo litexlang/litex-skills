@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Equality and Inequality"
+  short_description: "Write concise Litex calculations and identify automation gaps"
+  default_prompt: "Use $litex-equality-inequality to find and verify a concise equality or inequality proof."

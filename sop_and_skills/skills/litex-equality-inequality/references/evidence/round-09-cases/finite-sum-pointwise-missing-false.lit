@@ -1,0 +1,4 @@
+forall f,g fn(x {1,2}) R:
+    f(1) <= g(1)
+    =>:
+        finite_set_sum({1,2},f) <= finite_set_sum({1,2},g)

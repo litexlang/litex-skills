@@ -1,0 +1,22 @@
+prop r47_is_least_squares_center(center, a, b, c R):
+    forall candidate R:
+        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2
+
+have fn r47_mean3(a, b, c R) R = (a + b + c) / 3
+
+thm r47_three_point_sse_decomposition:
+    ? forall a, b, c, candidate R:
+        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2
+
+thm r47_mean_formula_is_least_squares_center:
+    ? forall a, b, c R:
+        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)
+    claim:
+        ? forall candidate R:
+            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2
+        0 <= (candidate - (a + b + c) / 3)^2
+        0 <= 3 * (candidate - (a + b + c) / 3)^2
+        release thm r47_three_point_sse_decomposition(a, b, c, candidate)
+        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2
+        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2
+    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)

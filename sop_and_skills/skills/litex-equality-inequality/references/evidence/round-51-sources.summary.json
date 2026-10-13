@@ -1,0 +1,74 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-51-sources.json",
+  "original_sha256": "4fe51d10ab20dc2d97537ee0128b7eeee2d2bb025ef94cd0e66b1f9b71be53ad",
+  "original_bytes": 4315,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter16-sequences-and-induction.lit",
+    "source_sha256": "0b097b7d3de64160ac13aa09e252d21cb726e90904ab8a2ca01e6bbaaf8727fb",
+    "cases": [
+      {
+        "id": "legacy-raw",
+        "source": "claim:\n    ? forall n N:\n        2 ^ n >= n + 1\n    by induc n from 0:\n        ? 2 ^ n >= n + 1\n        2^0 = 1 >= 0 + 1\n\n        forall m Z:\n            m >= 0\n            2^m >= m + 1\n            =>:\n                2^m * 2^1 >= (m + 1) * 2\n                2 ^ (m + 1) = 2 ^ m * 2^1 >= (m + 1) * 2 = (m + 1) + (m + 1) >= m + 1 + 1\n",
+        "statement": "claim:\n    ? forall n N:\n        2 ^ n >= n + 1\n    by induc n from 0:\n        ? 2 ^ n >= n + 1\n        2^0 = 1 >= 0 + 1\n\n        forall m Z:\n            m >= 0\n            2^m >= m + 1\n            =>:\n                2^m * 2^1 >= (m + 1) * 2\n                2 ^ (m + 1) = 2 ^ m * 2^1 >= (m + 1) * 2 = (m + 1) + (m + 1) >= m + 1 + 1\n"
+      },
+      {
+        "id": "modern-original-route",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n            2^k>=k+1\n            2^k*2^1>=(k+1)*2\n            2^(k+1)=2^k*2^1>=(k+1)*2=(k+1)+(k+1)>=k+1+1\n",
+        "statement": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n            2^k>=k+1\n            2^k*2^1>=(k+1)*2\n            2^(k+1)=2^k*2^1>=(k+1)*2=(k+1)+(k+1)>=k+1+1\n"
+      },
+      {
+        "id": "modern-short",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\n",
+        "statement": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\n"
+      },
+      {
+        "id": "direct-natural",
+        "source": "forall n N:\n    2^n>=n+1\n",
+        "statement": "forall n N:\n    2^n>=n+1\n"
+      },
+      {
+        "id": "bodyless-claim",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n",
+        "statement": "claim:\n    ? forall n N:\n        2^n>=n+1\n"
+      },
+      {
+        "id": "empty-step-parse-control",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n",
+        "statement": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n"
+      },
+      {
+        "id": "false-strict-natural",
+        "source": "forall n N:\n    2^n>n+1\n",
+        "statement": "forall n N:\n    2^n>n+1\n"
+      },
+      {
+        "id": "numeric-counterexample",
+        "source": "not 2^0>0+1\n",
+        "statement": "not 2^0>0+1\n"
+      },
+      {
+        "id": "integer-extension-direct",
+        "source": "forall n Z:\n    2^n>=n+1\n",
+        "statement": "forall n Z:\n    2^n>=n+1\n"
+      },
+      {
+        "id": "successor-nonnegative-only",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n",
+        "statement": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n"
+      },
+      {
+        "id": "modern-no-base-branch",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\n",
+        "statement": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\n"
+      },
+      {
+        "id": "false-double-linear-bound",
+        "source": "forall n N:\n    2^n>=2*n+1\n",
+        "statement": "forall n N:\n    2^n>=2*n+1\n"
+      }
+    ]
+  }
+}

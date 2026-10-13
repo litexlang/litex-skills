@@ -1,0 +1,8 @@
+have fn r54_deg(theta R) R = theta * pi / 180
+
+have fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)
+
+have fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)
+
+cos(pi/2)=0
+r54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25

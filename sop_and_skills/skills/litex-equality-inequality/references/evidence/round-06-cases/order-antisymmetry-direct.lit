@@ -1,0 +1,5 @@
+forall a,b R:
+    a <= b
+    b <= a
+    =>:
+        a = b

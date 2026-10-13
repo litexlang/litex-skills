@@ -1,0 +1,5 @@
+have fn r57_identity(x R) R = x
+have fn r57_identity_on_range(y fn_range(r57_identity)) R = y
+
+forall x R:
+    r57_identity_on_range(r57_identity(x))=x+1

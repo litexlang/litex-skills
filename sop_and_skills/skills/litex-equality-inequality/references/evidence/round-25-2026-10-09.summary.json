@@ -1,0 +1,1445 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-25-2026-10-09.json",
+  "original_sha256": "5221704315217067107ea6179856d7d4b1ded97e966af996542cbd85e2e5dfc9",
+  "original_bytes": 170768,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+    "sha256": "5d2608802cd612483929f0d73f9277ffd026daf5fd3e11902063cb7a92ca2f86",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-25.log"
+    },
+    "source_anchor": {
+      "source_path": "showcases/math_concepts_in_litex/9_topology/main.lit",
+      "source_sha256": "b283936d6de2758690e0dc01d7a9f46ece5e931842eba7e6ce5467a52322f70d",
+      "prefix": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n",
+      "composition_type": "thm composition_type:\n    ? forall A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC:\n        \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\n    release thm fn_set_member(\\composition<A,B,CarrierC,f,g>, fn(x A) CarrierC)\n",
+      "restriction_type": "thm restriction_type:\n    ? forall X, Y set, f fn(x X) Y, K power_set(X):\n        \\restricted<X,Y,f,K> $in fn(x K) Y\n    release thm fn_set_member(\\restricted<X,Y,f,K>, fn(x K) Y)\n",
+      "restriction_value": "thm restriction_value:\n    ? forall X,Y set,f fn(x X)Y,K power_set(X),p K:\n        \\restricted<X,Y,f,K>(p) = f(p)\n    \\restricted<X,Y,f,K> $in fn(x K) Y\n    f(p) $in Y\n    \\restricted<X,Y,f,K>(p) $in Y\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n    \\restricted<X,Y,f,K>(p) = f(p)\n"
+    },
+    "session": [
+      {
+        "id": "prefix-0",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3cefe4ab8e31f3ef40eb84c19c608003fb7646683b5de2bfbb20682060127eaa",
+          "excerpt": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\r\n    have fn composition(x A) CarrierC = g(f(x))\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 98193,
+        "role": "declaration"
+      },
+      {
+        "id": "prefix-1",
+        "source": "template<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5ed60a98b88f1e7b766074225c4f0ae9423eaedd46db8bb3bb83534a557bc3a2",
+          "excerpt": "template<X, Y set, f fn(x X) Y, K power_set(X)>:\r\n    have fn restricted(x K) Y = f(x)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 98193,
+        "role": "declaration"
+      },
+      {
+        "id": "composition-type-original",
+        "source": "thm composition_type:\n    ? forall A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC:\n        \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\n    release thm fn_set_member(\\composition<A,B,CarrierC,f,g>, fn(x A) CarrierC)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ed31bf1f62b913a93a9f609b2ef6cbe978fb2595feee37cf734df39c7965fb07",
+          "excerpt": "thm composition_type:\r\n    ? forall A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC:\r\n        \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\r\n    release thm fn_set_member(\\composition<A,B,CarrierC,f,g>, fn(x A) CarrierC)\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-type-original",
+        "source": "thm restriction_type:\n    ? forall X, Y set, f fn(x X) Y, K power_set(X):\n        \\restricted<X,Y,f,K> $in fn(x K) Y\n    release thm fn_set_member(\\restricted<X,Y,f,K>, fn(x K) Y)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "352497a62eed62a527f9990e302b1252ac621333ff20168854305c63db5f12ae",
+          "excerpt": "thm restriction_type:\r\n    ? forall X, Y set, f fn(x X) Y, K power_set(X):\r\n        \\restricted<X,Y,f,K> $in fn(x K) Y\r\n    release thm fn_set_member(\\restricted<X,Y,f,K>, fn(x K) Y)\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-value-original",
+        "source": "thm restriction_value:\n    ? forall X,Y set,f fn(x X)Y,K power_set(X),p K:\n        \\restricted<X,Y,f,K>(p) = f(p)\n    \\restricted<X,Y,f,K> $in fn(x K) Y\n    f(p) $in Y\n    \\restricted<X,Y,f,K>(p) $in Y\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n    \\restricted<X,Y,f,K>(p) = f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "fe82aeae21183e22aa328738c6d3292fb337bbd07e649c1e6e401252accb2333",
+          "excerpt": "thm restriction_value:\r\n    ? forall X,Y set,f fn(x X)Y,K power_set(X),p K:\r\n        \\restricted<X,Y,f,K>(p) = f(p)\r\n    \\restricted<X,Y,f,K> $in fn(x K) Y\r\n    f(p) $in Y\r\n    \\restricted<X,Y,f,K>(p) $in Y\r\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\r\n    \\restricted<X,Y,f,K>(p) = f(p)\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "composition-type-direct",
+        "source": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC:\n    \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6d157b4150a7bddcdfe42ed5d4e7aa502861ae95cbe6d6a3d4ca1360b850cbfb",
+          "excerpt": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC:\r\n    \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-type-direct",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X):\n    \\restricted<X,Y,f,K> $in fn(x K) Y\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2121d264e344b917a93c85f73febb7a9c10cb50724931b198df2a04d40b85302",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X):\r\n    \\restricted<X,Y,f,K> $in fn(x K) Y\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-value-direct",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X),p K:\n    \\restricted<X,Y,f,K>(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3c1f0bb5eb6ede3de78c0a87c4ff764b2646b25f69e53f095c5551daa65ee650",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X),p K:\r\n    \\restricted<X,Y,f,K>(p)=f(p)\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "composition-value-direct",
+        "source": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC,p A:\n    \\composition<A,B,CarrierC,f,g>(p)=g(f(p))\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "49aae19f654cbcacc2b4308dee4934d66d781ef576fd9600625716035ba1ad4e",
+          "excerpt": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC,p A:\r\n    \\composition<A,B,CarrierC,f,g>(p)=g(f(p))\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "composition-order-false",
+        "source": "forall f,g fn(x R) R,p R:\n    \\composition<R,R,R,f,g>(p)=f(g(p))\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "4758cf48f581057bfd6c7465c11ef97db5ecd30a0c160d6f333951fccb332528",
+          "excerpt": "forall f,g fn(x R) R,p R:\r\n    \\composition<R,R,R,f,g>(p)=f(g(p))\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f, g fn (x R) R, p R:\\n    \\\\composition<R, R, R, f, g>(p) = f(g(p))\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f, g fn (x R) R, p R:\\n    \\\\composition<R, R, R, f, g>(p) = f(g(p))\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r"
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-domain-missing",
+        "source": "forall f fn(x R) R,K power_set(R),p R:\n    \\restricted<R,R,f,K>(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "61292dde078cf24739601dbd4b0e77465beb9bccf84375057f0b366e3e140b73",
+          "excerpt": "forall f fn(x R) R,K power_set(R),p R:\r\n    \\restricted<R,R,f,K>(p)=f(p)\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (x R) R, K power_set(R), p R:\\n    \\\\restricted<R, R, f, K>(p) = f(p)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (x R) R, K power_set(R), p R:\\n    \\\\restricted<R, R, f, K>(p) = f(p)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"se"
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-outside-empty",
+        "source": "forall f fn(x R) R:\n    \\restricted<R,R,f,{}>(0)=f(0)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c46e1f86ae5f471c5319b21627379d29d0777084754824ce5c5d84637aa42655",
+          "excerpt": "forall f fn(x R) R:\r\n    \\restricted<R,R,f,{}>(0)=f(0)\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (x R) R:\\n    \\\\restricted<R, R, f, {}>(0) = f(0)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (x R) R:\\n    \\\\restricted<R, R, f, {}>(0) = f(0)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-empty-type",
+        "source": "forall f fn(x R) R:\n    \\restricted<R,R,f,{}> $in fn(x {}) R\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "49958495d453a29153ebbddce63e809c43e5a6142ebcc24b773115855dbedfe7",
+          "excerpt": "forall f fn(x R) R:\r\n    \\restricted<R,R,f,{}> $in fn(x {}) R\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-empty-graph",
+        "source": "forall f fn(x R) R:\n    \\restricted<R,R,f,{}>={}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "82c8f5a21aebff2a51038eb085a47b234feedfca75d68ba52938eddfbb1e2139",
+          "excerpt": "Warning: truncated output (original token count: 11284)\nTotal output lines: 889\n\nforall f fn(x R) R:\r\n    \\restricted<R,R,f,{}>={}\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"file\",\r\n  \"path\": \"tmp/2026-10-09/equality-inequality-search/round25-adopted-prefix.lit\",\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": true,\r\n      \"statement\": \"forall f fn (k N) R, m N:\\n    product(m, m, f) = f(m)\",\r\n      \"proof_method\": {\r\n        \"type\": \"compound_fact\",\r\n        \"rule_name\": \"Universal\",\r\n        \"message\": \"Verified as a for"
+        },
+        "session_id": 98193,
+        "role": "case"
+      },
+      {
+        "id": "restriction-empty-graph-corrected",
+        "source": "forall f fn(x R) R:\n    \\restricted<R,R,f,{}> = {}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "fc7f14e2d248d1f9f997a028d72187e8ff20b7cd1ab5fa60a15b4b678f2333d7",
+          "excerpt": "forall f fn(x R) R:\r\n    \\restricted<R,R,f,{}> = {}\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (x R) R:\\n    \\\\restricted<R, R, f, {}> = {}\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (x R) R:\\n    \\\\restricted<R, R, f, {}> = {}\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-full-identity",
+        "source": "forall f fn(x R) R:\n    \\restricted<R,R,f,R> = f\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a081d4637a62b5488694ec1faf949509c4f5bf20bafa54b3c9facc60bbe62b50",
+          "excerpt": "forall f fn(x R) R:\r\n    \\restricted<R,R,f,R> = f\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (x R) R:\\n    \\\\restricted<R, R, f, R> = f\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (x R) R:\\n    \\\\restricted<R, R, f, R> = f\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "composition-function-equality",
+        "source": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC:\n    \\composition<A,B,CarrierC,f,g> = fn(x A) CarrierC {g(f(x))}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "47f9283c1456eb55c5819faae53099ec9cea68bd90f560faf5d4cfa375a8539b",
+          "excerpt": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC:\r\n    \\composition<A,B,CarrierC,f,g> = fn(x A) CarrierC {g(f(x))}\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-function-equality",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X):\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e233f76de2e27f4db32f639629cec17650ba3fb1d3ff40298f17f32d11d558e4",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X):\r\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-result-alias",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    =>:\n        result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2a8c97978acc3ba847d1798b2a3a2d043d647508d24c65efaf02940456ce5007",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n    result=\\restricted<X,Y,f,K>\r\n    =>:\r\n        result(p)=f(p)\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, K power_set(X), result fn (x K) Y, p K:\\n    result = \\\\restricted<X, Y, f, K>\\n    =>:\\n        result(p) = f(p)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f fn (x "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "composition-result-alias",
+        "source": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC,result fn(x A) CarrierC,p A:\n    result=\\composition<A,B,CarrierC,f,g>\n    =>:\n        result(p)=g(f(p))\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "aed84738898e60198ade65beb5882f22c7b199573137a7e62d5f33774e7f9c55",
+          "excerpt": "forall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC,result fn(x A) CarrierC,p A:\r\n    result=\\composition<A,B,CarrierC,f,g>\r\n    =>:\r\n        result(p)=g(f(p))\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-full-pointwise",
+        "source": "forall f fn(x R) R,p R:\n    \\restricted<R,R,f,R>(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "645ff6a205cf97e3db1357fd5c889163bf6ba7c5cbba8e8038c079921300509b",
+          "excerpt": "forall f fn(x R) R,p R:\r\n    \\restricted<R,R,f,R>(p)=f(p)\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-domain-bridge",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    p $in X\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d4a61fad9e434b93180fe58a7569b78e3c0869df97d86c986565cbe640f34986",
+          "excerpt": "Warning: truncated output (original token count: 1886)\nTotal output lines: 208\n\nclaim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    p $in X\r\n\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall X, Y set, f fn (x X) Y, K power_set(X), result fn (x K) Y, p K:\\n        result = \\\\restricted<X, Y"
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-application-chain",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6927aaf83586491b8cf383b98dd00988e61710db66f8903baf43a9fc995b8ae1",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    result(p)=\\restricted<X,Y,f,K>(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-definition-chain",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result=\\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "199d3beebea9b2f86649e3efa3aaa568c4a00f6e573b0b94fd0647c8ff6c0738",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    result=\\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-two-bridges",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    p $in X\n    result(p)=\\restricted<X,Y,f,K>(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "7a8a61c2e80cc09489ebe0bc98d8e3162310a275ac66d51295a2bee596a8407b",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    p $in X\r\n    result(p)=\\restricted<X,Y,f,K>(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-empty-graph-chain",
+        "source": "claim:\n    ? forall f fn(x R) R:\n        \\restricted<R,R,f,{}> = {}\n    \\restricted<R,R,f,{}> = fn(x {}) R {f(x)} = {}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ba2dd92288181ffdff381448f06b8af416c200355ade64830a98df07ffcf7daf",
+          "excerpt": "Warning: truncated output (original token count: 4675)\nTotal output lines: 432\n\nclaim:\r\n    ? forall f fn(x R) R:\r\n        \\restricted<R,R,f,{}> = {}\r\n    \\restricted<R,R,f,{}> = fn(x {}) R {f(x)} = {}\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall f fn (x R) R:\\n        \\\\restricted<R, R, f, {}> = {}\\n    \\\\restricted<R, R, f, {}> = fn (x {}) R{f(x)} = {}\",\r\n      \"why_failed\": {\r\n        \"type\": \"p"
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-full-extension",
+        "source": "claim:\n    ? forall f fn(x R) R:\n        \\restricted<R,R,f,R> = f\n    by fn_extension:\n        ? \\restricted<R,R,f,R> = f\n        forall point R:\n            \\restricted<R,R,f,R>(point)=f(point)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2661d7c581e658e6c55722d0d245b44c4eecfea20f108d65e5b2220f563c6998",
+          "excerpt": "claim:\r\n    ? forall f fn(x R) R:\r\n        \\restricted<R,R,f,R> = f\r\n    by fn_extension:\r\n        ? \\restricted<R,R,f,R> = f\r\n        forall point R:\r\n            \\restricted<R,R,f,R>(point)=f(point)\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-supplied-domain",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    p $in X\n    =>:\n        result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5916e12c8f674385e370610105a8f5ad7e24db392fad3c1d98f8ee720b609b83",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n    result=\\restricted<X,Y,f,K>\r\n    p $in X\r\n    =>:\r\n        result(p)=f(p)\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, K power_set(X), result fn (x K) Y, p K:\\n    result = \\\\restricted<X, Y, f, K>\\n    p $in X\\n    =>:\\n        result(p) = f(p)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goa"
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-empty-named-function",
+        "source": "claim:\n    ? forall f fn(x R) R:\n        \\restricted<R,R,f,{}> = {}\n    have h fn(x {}) R=\\restricted<R,R,f,{}>\n    h={}\n    \\restricted<R,R,f,{}> = h = {}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "40d2891107eabf63d7e897bb41cb89972551187004f9ac8d0ea0e5db29d32894",
+          "excerpt": "claim:\r\n    ? forall f fn(x R) R:\r\n        \\restricted<R,R,f,{}> = {}\r\n    have h fn(x {}) R=\\restricted<R,R,f,{}>\r\n    h={}\r\n    \\restricted<R,R,f,{}> = h = {}\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-head-congruence",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    =>:\n        result(p)=\\restricted<X,Y,f,K>(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2b046d777ac114800dfedccada61674ad725587c6aa1c902b0d1fd83ed85f0f3",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n    result=\\restricted<X,Y,f,K>\r\n    =>:\r\n        result(p)=\\restricted<X,Y,f,K>(p)\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-real-domain",
+        "source": "forall f fn(x R) R,K power_set(R),result fn(x K) R,p K:\n    result=\\restricted<R,R,f,K>\n    =>:\n        result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "dd52d271941567c8571c7233840e6b8edf9e6db2da1fb08592352f4cdeec717a",
+          "excerpt": "forall f fn(x R) R,K power_set(R),result fn(x K) R,p K:\r\n    result=\\restricted<R,R,f,K>\r\n    =>:\r\n        result(p)=f(p)\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      },
+      {
+        "id": "restriction-alias-full-domain",
+        "source": "forall f,result fn(x R) R,p R:\n    result=\\restricted<R,R,f,R>\n    =>:\n        result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "26e8a44543a3c41f90025737a09f46dd66c27ee181c26b7e8b762f5149d3601a",
+          "excerpt": "forall f,result fn(x R) R,p R:\r\n    result=\\restricted<R,R,f,R>\r\n    =>:\r\n        result(p)=f(p)\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511,
+        "role": "case"
+      }
+    ],
+    "cases": [
+      {
+        "id": "composition-type-original",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nthm composition_type:\n    ? forall A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC:\n        \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\n    release thm fn_set_member(\\composition<A,B,CarrierC,f,g>, fn(x A) CarrierC)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/composition-type-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e0ca97ac02d3d893613737c67468285c9917d71925428d3f9e6650985a7dbe31"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/composition-type-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-type-original",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nthm restriction_type:\n    ? forall X, Y set, f fn(x X) Y, K power_set(X):\n        \\restricted<X,Y,f,K> $in fn(x K) Y\n    release thm fn_set_member(\\restricted<X,Y,f,K>, fn(x K) Y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-type-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "16b4241a139ea767b24f190fc21bafb216ebb72aefd89b7b9eba2d50738af5be"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-type-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-value-original",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nthm restriction_value:\n    ? forall X,Y set,f fn(x X)Y,K power_set(X),p K:\n        \\restricted<X,Y,f,K>(p) = f(p)\n    \\restricted<X,Y,f,K> $in fn(x K) Y\n    f(p) $in Y\n    \\restricted<X,Y,f,K>(p) $in Y\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n    \\restricted<X,Y,f,K>(p) = f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-value-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "04b5d9fe46d0938528b8f971a1cd44b10316f4dc907fea2a8d49b117ccfb7e1c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-value-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "composition-type-direct",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC:\n    \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/composition-type-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "990616255a3e009a47f7d6090093eeaf5a8f85474a1a00bd45391c4c7fe83aa3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/composition-type-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-type-direct",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X):\n    \\restricted<X,Y,f,K> $in fn(x K) Y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-type-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a3febb270e1c292bd82af05ced18f0e9fde22a5d6b4e58ad53002d487a2556ea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-type-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-value-direct",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X),p K:\n    \\restricted<X,Y,f,K>(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-value-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "23c2fe95d0d7298959bedbeb6eea17a75d5dce99f9a45a3ef4533b7dafa2f48c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-value-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "composition-value-direct",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC,p A:\n    \\composition<A,B,CarrierC,f,g>(p)=g(f(p))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/composition-value-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0191b3f5f5f2428c0d044a2f4b9e7ef799089711efdabdb9845ad903a8f24e6a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/composition-value-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "composition-order-false",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f,g fn(x R) R,p R:\n    \\composition<R,R,R,f,g>(p)=f(g(p))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/composition-order-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "99f03f8bcdadbb6cbf4c9214a48abd9794fd68a764a6d3c5577a08c0c70cefa8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/composition-order-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-domain-missing",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R,K power_set(R),p R:\n    \\restricted<R,R,f,K>(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-domain-missing.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "56ab06d4b157d080df8556150731a8753c72daaf79751f74e9553a4ed7735af1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-domain-missing.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-outside-empty",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R:\n    \\restricted<R,R,f,{}>(0)=f(0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-outside-empty.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "938a8804eba95899e24ca174d7dd2af9af231442957ad3f9cd14a7cdf52ef766"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-outside-empty.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-empty-type",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R:\n    \\restricted<R,R,f,{}> $in fn(x {}) R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-empty-type.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "124836bb724496ef8f3725e9505a9bc8b96f509e7431a84216eb82e05255eb99"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-empty-type.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-empty-graph-corrected",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R:\n    \\restricted<R,R,f,{}> = {}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-empty-graph-corrected.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "54b29fa62a0125df5d59b1dc9001749fe19d6cc32fc004b821b428bbe931b48b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-empty-graph-corrected.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-full-identity",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R:\n    \\restricted<R,R,f,R> = f\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-full-identity.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cb7ce685390cd1bd3e91ca24cc49c7a69d613d028e3c5ad40700f8a6b48b4eaf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-full-identity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "composition-function-equality",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC:\n    \\composition<A,B,CarrierC,f,g> = fn(x A) CarrierC {g(f(x))}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/composition-function-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "881ab523611068fc1a120a71b4f38aea573a02d0a8722f07d9062a6f3f9527cb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/composition-function-equality.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-function-equality",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X):\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-function-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1219c8351fa15d3b7aa65aafedd0e572db90ddd71f880ab18e905f32566f3247"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-function-equality.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-result-alias",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    =>:\n        result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-result-alias.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ea6620423d8a4d1bfb986d012d9989c85dd5bd2b302ccd9bbbb976e9ae900ee5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-result-alias.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "composition-result-alias",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall A,B,CarrierC set,f fn(x A) B,g fn(y B) CarrierC,result fn(x A) CarrierC,p A:\n    result=\\composition<A,B,CarrierC,f,g>\n    =>:\n        result(p)=g(f(p))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/composition-result-alias.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b44516f48fc4b61138e7acf5b6bab13825dfb1c5e6f10650441cc936572e1d8e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/composition-result-alias.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-full-pointwise",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R,p R:\n    \\restricted<R,R,f,R>(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-full-pointwise.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "58a5dea7e447467f87e5e0fa5d7715e1f6079a92b0916cfa50fc68781a84f196"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-full-pointwise.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-domain-bridge",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    p $in X\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-domain-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2b4a6a7b8959039835444aa89d19bcdde9a0fe18c0faed5b9515b537ef1188ee"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-domain-bridge.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-application-chain",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-application-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ba3c36416110a5e617dd4a55975a7d892ce4923978ce2eeb131b8577b1b16962"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-application-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-definition-chain",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result=\\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-definition-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2d4e4a7816403216f6514e458077ec1de87638a2fb3279b03f4b8ea734e5fd17"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-definition-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-two-bridges",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    p $in X\n    result(p)=\\restricted<X,Y,f,K>(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-two-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2fbd4d7cc63d746947238eadb24a00511dcd860454677e5ac987e4123b9e0acd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-two-bridges.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-empty-graph-chain",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall f fn(x R) R:\n        \\restricted<R,R,f,{}> = {}\n    \\restricted<R,R,f,{}> = fn(x {}) R {f(x)} = {}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-empty-graph-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8fbc7149f6ce1d29967f6634e52f0053f4c9aadd65e2618f0a9b3d8f060eb0c8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-empty-graph-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-full-extension",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall f fn(x R) R:\n        \\restricted<R,R,f,R> = f\n    by fn_extension:\n        ? \\restricted<R,R,f,R> = f\n        forall point R:\n            \\restricted<R,R,f,R>(point)=f(point)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-full-extension.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f7b9c78a240046c367d414f5074dd3a3219046feb6ce7af4a03f97dc2674bf68"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-full-extension.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-supplied-domain",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    p $in X\n    =>:\n        result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-supplied-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "294e8ed036c312cf3f0d4d7a496b852d64c9368ae42e60aba90a988802f05d37"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-supplied-domain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-empty-named-function",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall f fn(x R) R:\n        \\restricted<R,R,f,{}> = {}\n    have h fn(x {}) R=\\restricted<R,R,f,{}>\n    h={}\n    \\restricted<R,R,f,{}> = h = {}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-empty-named-function.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93d8c6d1cfae8bd5df3375464f488bfa379ce2af6f891792859e4e03494dcc74"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-empty-named-function.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-head-congruence",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    =>:\n        result(p)=\\restricted<X,Y,f,K>(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-head-congruence.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3fb16c5092a5af23cf857e84fce1aac1607b46a926acafd989d2e9fd3ca5fc7c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-head-congruence.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-real-domain",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f fn(x R) R,K power_set(R),result fn(x K) R,p K:\n    result=\\restricted<R,R,f,K>\n    =>:\n        result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-real-domain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cad0762fa0f9cc126df1c951b4186145a2f1a6ea41559207daaeb6bc9d98e1bb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-real-domain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-full-domain",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall f,result fn(x R) R,p R:\n    result=\\restricted<R,R,f,R>\n    =>:\n        result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-25-cases/restriction-alias-full-domain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "95a43e9d170307b3035e4b4cc772f89270788b18d9824cc4fab50a29adef7f1b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round25-cases/restriction-alias-full-domain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      }
+    ],
+    "restart": {
+      "old_session": 98193,
+      "new_session": 85511,
+      "accepted_replayed": 10,
+      "reason": "Author omitted whitespace between template closing > and equality =; tokenizer produced >=. Corrected with > =; excluded from capability counts."
+    },
+    "summary": {
+      "independent_files": 29,
+      "accepted": 20,
+      "rejected": 9
+    },
+    "scope": {
+      "canonical_edits": false,
+      "kernel_edits": false,
+      "trust_added": false,
+      "whole_showcase_gate": false,
+      "warm_results_not_used_for_cold_support": true
+    }
+  }
+}

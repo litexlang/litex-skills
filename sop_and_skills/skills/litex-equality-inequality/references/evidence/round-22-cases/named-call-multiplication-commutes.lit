@@ -1,0 +1,2 @@
+forall d R,m Z,f fn(k Z) R:
+    f(m)*d=d*f(m)

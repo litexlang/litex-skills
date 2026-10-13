@@ -1,0 +1,4 @@
+interface:
+  display_name: "golitex Repository Policy"
+  short_description: "Apply mandatory golitex repository workflow"
+  default_prompt: "Use $golitex-repository-policy to apply the mandatory workflow, select one representative tracer bullet, and for a kernel capability or major Litex update keep a durable before/now acceptance artifact with executable evidence."

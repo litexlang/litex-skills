@@ -1,0 +1,90 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-57-sources.json",
+  "original_sha256": "bc68c98389a1c162b07b8b90a3978c0bedd9d76003c730eccffd6a432c15a1a6",
+  "original_bytes": 5502,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter04-functions.lit",
+    "source_sha256": "068c97355a2d85a8d528edc02b7f482e7a7f4e0e8e9f9ab551b4440da6b1fd97",
+    "prefix": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n",
+    "cases": [
+      {
+        "id": "definitions-only",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\n",
+        "statement": ""
+      },
+      {
+        "id": "nested-original",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(r57_identity(x))=r57_identity(x)=x\n",
+        "statement": "forall x R:\n    r57_identity(r57_identity(x))=r57_identity(x)=x\n"
+      },
+      {
+        "id": "nested-direct",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(r57_identity(x))=x\n",
+        "statement": "forall x R:\n    r57_identity(r57_identity(x))=x\n"
+      },
+      {
+        "id": "range-original",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)=x\n",
+        "statement": "forall x R:\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)=x\n"
+      },
+      {
+        "id": "range-direct",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "statement": "forall x R:\n    r57_identity_on_range(r57_identity(x))=x\n"
+      },
+      {
+        "id": "range-membership",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(x) $in fn_range(r57_identity)\n",
+        "statement": "forall x R:\n    r57_identity(x) $in fn_range(r57_identity)\n"
+      },
+      {
+        "id": "range-variable-value",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall y fn_range(r57_identity):\n    r57_identity_on_range(y)=y\n",
+        "statement": "forall y fn_range(r57_identity):\n    r57_identity_on_range(y)=y\n"
+      },
+      {
+        "id": "range-membership-and-direct",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(x) $in fn_range(r57_identity)\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "statement": "forall x R:\n    r57_identity(x) $in fn_range(r57_identity)\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n"
+      },
+      {
+        "id": "false-nested-offset",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(r57_identity(x))=x+1\n",
+        "statement": "forall x R:\n    r57_identity(r57_identity(x))=x+1\n"
+      },
+      {
+        "id": "false-range-offset",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x+1\n",
+        "statement": "forall x R:\n    r57_identity_on_range(r57_identity(x))=x+1\n"
+      },
+      {
+        "id": "constant-function-range-negative",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nhave fn r57_constant(x R) R = 5\n0 $in fn_range(r57_constant)\n",
+        "statement": "have fn r57_constant(x R) R = 5\n0 $in fn_range(r57_constant)\n"
+      },
+      {
+        "id": "range-inner-value-bridge",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nclaim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "statement": "claim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n    r57_identity_on_range(r57_identity(x))=x\n"
+      },
+      {
+        "id": "range-outer-value-bridge",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nclaim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)\n"
+      },
+      {
+        "id": "range-direct-after-global-value",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(x)=x\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "statement": "forall x R:\n    r57_identity(x)=x\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n"
+      },
+      {
+        "id": "range-inner-value-only",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nclaim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n",
+        "statement": "claim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n"
+      }
+    ]
+  }
+}

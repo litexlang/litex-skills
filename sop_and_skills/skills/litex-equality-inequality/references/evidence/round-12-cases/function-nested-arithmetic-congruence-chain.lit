@@ -1,0 +1,7 @@
+claim:
+    ? forall x,y R,F fn(t R) R:
+        x = y
+        =>:
+            F(x+1) = F(y+1)
+    x+1 = y+1
+    F(x+1) = F(y+1)

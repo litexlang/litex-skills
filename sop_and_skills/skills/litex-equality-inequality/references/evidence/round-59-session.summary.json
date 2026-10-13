@@ -1,0 +1,69 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-59-session.json",
+  "original_sha256": "d507b7e9bbf5bbd6de144c2a1cb7aa7c8d717d4d018f123fcb55ea1fcd67b7f6",
+  "original_bytes": 3255,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u[1] + v[1], u[2] + v[2])",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3a8a756d5d76235a34e06882a81655f4e3eab0cad6b2b43278b70b909a3c6c0e",
+        "excerpt": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u[1] + v[1], u[2] + v[2])\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"file\",\r\n  \"path\": \"tmp/2026-10-09/equality-inequality-search/round51-cases/modern-short.lit\",\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": true,\r\n      \"statement\": \"claim:\\n    ? forall n N:\\n        2 ^ n >= n + 1\\n    by induc k from 0:\\n        ? 2 ^ k >= k + 1\\n        ? from k = 0:\\n            2 ^ 0 = 1 >= 0 + 1\\n        ? induc:\\n            2 ^ (k + 1) = 2 ^ k * 2 >= (k + 1) * 2 = k + 1 + (k + 1) >= k + 1 "
+      },
+      "baseline": "Existing round51 Session; awaited round59 fresh build/cold files own acceptance."
+    },
+    {
+      "source": "forall u, v cart(R, R):\n    r59_add2(u, v) = (u(1) + v(1), u(2) + v(2)) = (v(1) + u(1), v(2) + u(2)) = r59_add2(v, u)\n    r59_dot2(u, v) = u(1) * v(1) + u(2) * v(2) = v(1) * u(1) + v(2) * u(2) = r59_dot2(v, u)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "43f866e4e0d65186b1fa428609295d28874173e4282dd48797986bc9e6854e81",
+        "excerpt": "forall u, v cart(R, R):\r\n    r59_add2(u, v) = (u(1) + v(1), u(2) + v(2)) = (v(1) + u(1), v(2) + u(2)) = r59_add2(v, u)\r\n    r59_dot2(u, v) = u(1) * v(1) + u(2) * v(2) = v(1) * u(1) + v(2) * u(2) = r59_dot2(v, u)\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "session_id": 6037,
+      "baseline": "Fresh round59 immutable snapshot; corrected () prefix replayed."
+    },
+    {
+      "source": "claim:\n    ? forall u,v cart(R,R):\n        r59_add2(u,v)=r59_add2(v,u)\n    r59_add2(u,v)=(u(1)+v(1),u(2)+v(2))=(v(1)+u(1),v(2)+u(2))=r59_add2(v,u)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5ae91197a0e4bcd513fa512528d899fe9811f184e865fe03d0116348249446b4",
+        "excerpt": "claim:\r\n    ? forall u,v cart(R,R):\r\n        r59_add2(u,v)=r59_add2(v,u)\r\n    r59_add2(u,v)=(u(1)+v(1),u(2)+v(2))=(v(1)+u(1),v(2)+u(2))=r59_add2(v,u)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "session_id": 6037,
+      "baseline": "Fresh round59 immutable snapshot; corrected () prefix replayed."
+    },
+    {
+      "source": "forall u,v cart(R,R):\n    r59_dot2(u,v)=r59_dot2(v,u)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0f7d2cb2c5cfd584fdfe0d9dbefb374cd02406d5f65597b4e15b5c53bd143b75",
+        "excerpt": "forall u,v cart(R,R):\r\n    r59_dot2(u,v)=r59_dot2(v,u)\r\n\r\n... ... success\r\nlitex> "
+      },
+      "session_id": 6037,
+      "baseline": "Fresh round59 immutable snapshot; corrected () prefix replayed."
+    },
+    {
+      "source": "r59_dot2((1,2),(3,4))=11",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9541a0fbf9e839bf04d8556cceebe5da89f38f3e4193c6f873bdb88669d2b4f0",
+        "excerpt": "r59_dot2((1,2),(3,4))=11\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "session_id": 6037,
+      "baseline": "Fresh round59 immutable snapshot; corrected () prefix replayed."
+    },
+    {
+      "source": "r59_norm2_sq((3,4))=25",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8ffd9eea544f188d3145ff3fc1a253398fa15f3572d6aab3f25a1027588bb65e",
+        "excerpt": "r59_norm2_sq((3,4))=25\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "session_id": 6037,
+      "baseline": "Fresh round59 immutable snapshot; corrected () prefix replayed."
+    }
+  ]
+}

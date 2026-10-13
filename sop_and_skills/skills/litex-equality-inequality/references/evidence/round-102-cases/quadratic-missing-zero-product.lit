@@ -1,0 +1,88 @@
+# School mathematics in a nutshell.
+#
+# This standalone tour follows the eleven mathematical directions mapped by
+# the high-school book. Each direction contributes a core definition, a major
+# theorem, and its concrete applications in one linear file. The goal is
+# breadth with usable interfaces, not a second compressed textbook.
+
+# 1. Sets and logic: membership and subset are the language of collections.
+# The opening gcd calculation also keeps elementary number sense visible.
+
+gcd(84, 30) = 6
+
+2 $in {1, 2, 3}
+
+{1, 2} $subset {1, 2, 3}
+
+finite_set_size({1, 2, 3}) = 3
+
+# The symmetric difference keeps exactly the elements that occur in one of
+# two real-valued sets but not in both. It is a set-valued function because
+# applications need to call it and then reason about membership in the result.
+
+claim:
+    ? forall A, B power_set(R):
+        union(set_minus(A, B), set_minus(B, A)) $in power_set(R)
+    A $subset R
+    B $subset R
+    set_minus(A, B) $subset A
+    set_minus(B, A) $subset B
+    set_minus(A, B) $subset R
+    set_minus(B, A) $subset R
+    union(set_minus(A, B), set_minus(B, A)) $subset R
+
+have fn symmetric_difference(A, B power_set(R)) power_set(R) = union(set_minus(A, B), set_minus(B, A))
+
+# Application: compare two attendance lists. The element 1 occurs only in the
+# first list, so it belongs to their symmetric difference.
+
+have first_attendance_list power_set(R) = {1, 2}
+
+have second_attendance_list power_set(R) = {2, 3}
+
+symmetric_difference(first_attendance_list, second_attendance_list) = union(set_minus(first_attendance_list, second_attendance_list), set_minus(second_attendance_list, first_attendance_list))
+
+symmetric_difference({1, 2}, {2, 3}) = symmetric_difference(first_attendance_list, second_attendance_list)
+
+union(set_minus(first_attendance_list, second_attendance_list), set_minus(second_attendance_list, first_attendance_list)) = union(set_minus({1, 2}, {2, 3}), set_minus({2, 3}, {1, 2}))
+
+symmetric_difference({1, 2}, {2, 3}) = union(set_minus({1, 2}, {2, 3}), set_minus({2, 3}, {1, 2}))
+
+1 $in {1, 2}
+not 1 $in {2, 3}
+1 $in set_minus({1, 2}, {2, 3})
+
+1 $in union(set_minus({1, 2}, {2, 3}), set_minus({2, 3}, {1, 2}))
+
+1 $in symmetric_difference({1, 2}, {2, 3})
+
+# 2. Algebra: solve equations, split a zero product, and compare two means.
+
+thm solve_linear_equation:
+    ? forall a, b, c, x R:
+        a != 0
+        a * x + b = c
+        =>:
+            x = (c - b) / a
+    a * x = c - b
+
+thm factored_quadratic_roots:
+    ? forall r, s, x R:
+        =>:
+            x = r or x = s
+    by cases:
+        ? x = r or x = s
+        case x - r = 0:
+            x = r
+        case x - s = 0:
+            x = s
+
+3 != 0
+3 * 2 + (-6) = 0
+release thm solve_linear_equation(3, -6, 0, 2)
+2 = (0 - (-6)) / 3
+(3 - 2) * (3 - 3) = 0
+3 = 3
+3 = 2 or 3 = 3
+
+

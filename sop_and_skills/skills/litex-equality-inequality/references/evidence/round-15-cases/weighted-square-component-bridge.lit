@@ -1,0 +1,9 @@
+claim:
+    ? forall p,q,x,y R:
+        p >= 0
+        q >= 0
+        =>:
+            p*x^2+q*y^2 >= 0
+    p*x^2 >= 0
+    q*y^2 >= 0
+    p*x^2+q*y^2 >= 0

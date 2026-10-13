@@ -1,0 +1,5 @@
+forall x,y R:
+    0 <= x
+    0 <= y
+    =>:
+        sqrt(x)-sqrt(y) = (x-y)/(sqrt(x)+sqrt(y))

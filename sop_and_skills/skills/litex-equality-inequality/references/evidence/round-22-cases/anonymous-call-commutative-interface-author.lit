@@ -1,0 +1,8 @@
+thm scalar_commutative_probe22:
+    ? forall lhs,rhs R:
+        lhs*rhs=rhs*lhs
+
+claim:
+    ? forall c,d R,m Z:
+        fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)
+    by thm scalar_commutative_probe22(fn(k Z) R {c}(m),d) => fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)

@@ -1,0 +1,4 @@
+forall m,n N:
+    m <= n
+    =>:
+        factorial(n)/factorial(m) $in Z

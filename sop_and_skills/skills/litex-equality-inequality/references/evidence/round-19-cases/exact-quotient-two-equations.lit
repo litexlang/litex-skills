@@ -1,0 +1,7 @@
+claim:
+    ? forall a Z,b N+:
+        a%b = 0
+        =>:
+            a/b $in Z
+    a = b*quot(a,b)+a%b = b*quot(a,b)
+    a/b = quot(a,b)

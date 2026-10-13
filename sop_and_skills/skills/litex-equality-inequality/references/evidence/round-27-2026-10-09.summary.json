@@ -1,0 +1,1371 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-27-2026-10-09.json",
+  "original_sha256": "d24daaf56c3ee8971682ef70c127f0cfd87e1cac3af4b3d2361f2a4640eff192",
+  "original_bytes": 144075,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+    "sha256": "23c0c58aab9b90f93f9c473d42c31cbecf768837f5be6c21f7ffddba3e00a3ce",
+    "source_build": {
+      "command": "cargo build --release",
+      "success": true,
+      "exit_code": 0,
+      "log": "build-round-27.log"
+    },
+    "source_anchor": {
+      "source_path": "showcases/math_concepts_in_litex/9_topology/main.lit",
+      "source_sha256": "b283936d6de2758690e0dc01d7a9f46ece5e931842eba7e6ce5467a52322f70d",
+      "prefix": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n",
+      "carrier": "thm preimage_carrier:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n        p $in X\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n    p $in X\n",
+      "value": "thm preimage_value:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n    f(p) $in U\n",
+      "intro": "thm preimage_intro:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        f(p) $in U\n        =>:\n            p $in \\inverse_image<X,Y,f,U>\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+      "powerset": "thm preimage_powerset:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\n        \\inverse_image<X,Y,f,U> $in power_set(X)\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    \\inverse_image<X,Y,f,U> $subset X\n    \\inverse_image<X,Y,f,U> $in power_set(X)\n"
+    },
+    "session": [
+      {
+        "id": "inverse-image-definition",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "04b6345f65041745a175317a76ab52115767d49d5c6ffc43b0f86182bf666759",
+          "excerpt": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\r\n    have inverse_image power_set(X) = {x X: f(x) $in U}\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "declaration"
+      },
+      {
+        "id": "preimage-carrier-original",
+        "source": "thm preimage_carrier:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n        p $in X\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n    p $in X\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "94dfe0c6d450f04e1f854eb1b486d25b5acbb5171cdf7cee8c8c0d42fa1fad70",
+          "excerpt": "thm preimage_carrier:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\r\n        p $in X\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in \\inverse_image<X,Y,f,U>\r\n    p $in X\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-carrier-direct",
+        "source": "forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n    p $in X",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "accf5143aca9c6579e02f7db0b80d1fc34ee99937c69702923201a1d8007902f",
+          "excerpt": "forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\r\n    p $in X\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-carrier-definition-only",
+        "source": "claim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n        p $in X\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "140e175a33a646b51c1c0528052b08b85d59444b12f46d0ba900143d3241c5e5",
+          "excerpt": "claim:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\r\n        p $in X\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-original",
+        "source": "thm preimage_value:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n    f(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c0a043e71dc4884ce445c17ed0a32e839de3f585dc7ef88f848ee57d8ca11ca8",
+          "excerpt": "thm preimage_value:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in \\inverse_image<X,Y,f,U>\r\n    f(p) $in U\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-direct",
+        "source": "forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n    p $in \\inverse_image<X,Y,f,U>\n    =>:\n        f(p) $in U",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0ba7e9bb4f064152f34adbac5833202707a748277b61695e872ee4d0c9a739b4",
+          "excerpt": "forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\r\n    p $in \\inverse_image<X,Y,f,U>\r\n    =>:\r\n        f(p) $in U\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-definition-only",
+        "source": "claim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "488ff8df5e21564acecacc641745886f87402e03541a00cecdc5e7f4571c48b5",
+          "excerpt": "claim:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-intro-original",
+        "source": "thm preimage_intro:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        f(p) $in U\n        =>:\n            p $in \\inverse_image<X,Y,f,U>\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8cb80fe4e52f2db88d909cce0a384ea20548ca6521ef34da7553d0d4f6af9aeb",
+          "excerpt": "thm preimage_intro:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\r\n        f(p) $in U\r\n        =>:\r\n            p $in \\inverse_image<X,Y,f,U>\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in \\inverse_image<X,Y,f,U>\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-intro-direct",
+        "source": "forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n    f(p) $in U\n    =>:\n        p $in \\inverse_image<X,Y,f,U>",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6392cd35658c3d949ee358a18f83919574fa1dafa272f30417459970a9433cc3",
+          "excerpt": "forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\r\n    f(p) $in U\r\n    =>:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-intro-definition-only",
+        "source": "claim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        f(p) $in U\n        =>:\n            p $in \\inverse_image<X,Y,f,U>\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "61bcddf674504fac3edfe38053c303ecb08aa8ec9866d72decc1ad3c75a41614",
+          "excerpt": "claim:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\r\n        f(p) $in U\r\n        =>:\r\n            p $in \\inverse_image<X,Y,f,U>\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-powerset-original",
+        "source": "thm preimage_powerset:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\n        \\inverse_image<X,Y,f,U> $in power_set(X)\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    \\inverse_image<X,Y,f,U> $subset X\n    \\inverse_image<X,Y,f,U> $in power_set(X)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "facc810c6b15ee249c2f680ccfa1e1d9363799786f3e9d51094a4435b7ad2e42",
+          "excerpt": "thm preimage_powerset:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\r\n        \\inverse_image<X,Y,f,U> $in power_set(X)\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    \\inverse_image<X,Y,f,U> $subset X\r\n    \\inverse_image<X,Y,f,U> $in power_set(X)\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-powerset-direct",
+        "source": "forall X, Y set, f fn(x X) Y, U power_set(Y):\n    \\inverse_image<X,Y,f,U> $in power_set(X)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a1727b4391ea76261243265901f3d5d2db904999381c483b24ed92b09df1541c",
+          "excerpt": "forall X, Y set, f fn(x X) Y, U power_set(Y):\r\n    \\inverse_image<X,Y,f,U> $in power_set(X)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-powerset-definition-only",
+        "source": "claim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\n        \\inverse_image<X,Y,f,U> $in power_set(X)\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3c8635f04071e8c1ed26d2ad84e64677d7a38a470f2cdfe24d596026db2a8ec3",
+          "excerpt": "claim:\r\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\r\n        \\inverse_image<X,Y,f,U> $in power_set(X)\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-definition-member",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "26d0761610c24b064274110e831359d7f7efd027b1e218a88b8cef0a7abc627f",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in \\inverse_image<X,Y,f,U>\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-only-member",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d421b4510f975c94056399798c35440c72751435dfcad9aa3840e5a383cfd675",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    p $in \\inverse_image<X,Y,f,U>\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-literal-member",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    p $in {x X: f(x) $in U}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "758e10e90714fc0383d3f613152e6b0e3eb0d593200b95b009e71b4f71817361",
+          "excerpt": "Warning: truncated output (original token count: 1797)\nTotal output lines: 173\n\nclaim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    p $in {x X: f(x) $in U}\r\n\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall X, Y set, f fn (x X) Y, U power_set(Y), p X:\\n        p $in \\\\inverse_image<X, Y, f, U>\\n        =>:\\n"
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-definition-literal-member",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in {x X: f(x) $in U}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ed3d877c763266faf5eb303bc1f02b5f6d072d59d865064fa671118e7d463928",
+          "excerpt": "Warning: truncated output (original token count: 1823)\nTotal output lines: 174\n\nclaim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in {x X: f(x) $in U}\r\n\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall X, Y set, f fn (x X) Y, U power_set(Y), p X:\\n   "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-changed-function-false",
+        "source": "forall X,Y set,f,g fn(x X) Y,U power_set(Y),p X:\n    p $in \\inverse_image<X,Y,f,U>\n    =>:\n        g(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c091c3ddf9f5d0f3226dd9bb2ba32a1eb9934302381b7de5b16562a2cdefc253",
+          "excerpt": "forall X,Y set,f,g fn(x X) Y,U power_set(Y),p X:\r\n    p $in \\inverse_image<X,Y,f,U>\r\n    =>:\r\n        g(p) $in U\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f, g fn (x X) Y, U power_set(Y), p X:\\n    p $in \\\\inverse_image<X, Y, f, U>\\n    =>:\\n        g(p) $in U\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f, g fn (x X) Y, U power_set(Y), p X:\\n    p $i"
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-value-missing-member-false",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n    f(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "08c1074d2b8e4b50e910023deca874629d16680b526e46cb7fc5c37ccf1ce7d3",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n    f(p) $in U\r\n\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), p X:\\n    f(p) $in U\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), p X:\\n    f(p) $in U\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-intro-missing-domain",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),p Y:\n    f(p) $in U\n    =>:\n        p $in \\inverse_image<X,Y,f,U>\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2813fbdad7b275573491d39db1e91a2064e9e3116af090b2605e2afc897a85e7",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),p Y:\r\n    f(p) $in U\r\n    =>:\r\n        p $in \\inverse_image<X,Y,f,U>\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), p Y:\\n    f(p) $in U\\n    =>:\\n        p $in \\\\inverse_image<X, Y, f, U>\",\r\n      \"why_failed\": {\r\n        \"phase\": \"well_defined\",\r\n        \"message\": \"Could not prove that the statement is well-defined.\",\r\n        \"ve"
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-subset-direct",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y):\n    \\inverse_image<X,Y,f,U> $subset X\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b0e38bedd3a43a631e22c4bff06da2bc468872e80927c7f31495d0cfbdb5f72d",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y):\r\n    \\inverse_image<X,Y,f,U> $subset X\r\n\r\n\r\n... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-alias-intro",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\n    E=\\inverse_image<X,Y,f,U>\n    f(p) $in U\n    =>:\n        p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "30f3fd49c45985783e3ebd324346ce7c10be856846f91668348d620c363ea79c",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\r\n    E=\\inverse_image<X,Y,f,U>\r\n    f(p) $in U\r\n    =>:\r\n        p $in E\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-alias-value",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\n    E=\\inverse_image<X,Y,f,U>\n    =>:\n        f(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "04b3f310be7de8a94966d280f751d9fffd68378e3c430d19e02d58131792cb71",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\r\n    E=\\inverse_image<X,Y,f,U>\r\n    =>:\r\n        f(p) $in U\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), E power_set(X), p E:\\n    E = \\\\inverse_image<X, Y, f, U>\\n    =>:\\n        f(p) $in U\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f fn (x X) Y, U power_set(Y"
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-alias-intro-definition-chain",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\n        E=\\inverse_image<X,Y,f,U>\n        f(p) $in U\n        =>:\n            p $in E\n    E=\\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "f57e7a0024358f410634a641464d8de9a68516c04651a338b152c42f14a4275a",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\r\n        E=\\inverse_image<X,Y,f,U>\r\n        f(p) $in U\r\n        =>:\r\n            p $in E\r\n    E=\\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-alias-intro-member-bridge",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\n        E=\\inverse_image<X,Y,f,U>\n        f(p) $in U\n        =>:\n            p $in E\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "bfac666bac4bece60fe81e6492ca08dfe219cf191755f040e8751c5aed6d9e55",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\r\n        E=\\inverse_image<X,Y,f,U>\r\n        f(p) $in U\r\n        =>:\r\n            p $in E\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in \\inverse_image<X,Y,f,U>\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-alias-value-definition-member",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\n        E=\\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    E=\\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c91c48a170e0d2c73d3984e655d7f2d11456ce33f0714729e4365f9c82065a98",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\r\n        E=\\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    E=\\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in E\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-alias-value-template-member",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\n        E=\\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "84126a2c5ef36e2d1a908bc0116a64b2805ab4aaa2028c8235b4c7fab9487d08",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\r\n        E=\\inverse_image<X,Y,f,U>\r\n        =>:\r\n            f(p) $in U\r\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\r\n    p $in \\inverse_image<X,Y,f,U>\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-literal-direct-intro",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n    f(p) $in U\n    =>:\n        p $in {x X: f(x) $in U}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "69d2799bfdaec6961a53c68e3ac3bdf84f75cca96e0f1cd8142a28ab9b51c565",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n    f(p) $in U\r\n    =>:\r\n        p $in {x X: f(x) $in U}\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      },
+      {
+        "id": "preimage-literal-direct-value",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n    p $in {x X: f(x) $in U}\n    =>:\n        f(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e846da86f233e9da76394f442105ea7e0b8a9ea70168f71e33ad9a449d9ea155",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\r\n    p $in {x X: f(x) $in U}\r\n    =>:\r\n        f(p) $in U\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 82150,
+        "role": "case"
+      }
+    ],
+    "cases": [
+      {
+        "id": "preimage-carrier-original",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nthm preimage_carrier:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n        p $in X\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n    p $in X\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-carrier-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c724facc1f2098d00aaf84333c0ace3f777e6dfb2154a69ca49a6a5b38aa09c4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-carrier-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-carrier-direct",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n    p $in X",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-carrier-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "674d34b98a8481a76f1d2edb96628654088354cbb9b889254cd506adc6ddc8d5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-carrier-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-carrier-definition-only",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p \\inverse_image<X,Y,f,U>:\n        p $in X\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-carrier-definition-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9b2b1a693b816235e73ec08455063eea4f9952f153093450068792f2003c1d4c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-carrier-definition-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-original",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nthm preimage_value:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n    f(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b271750fec8b49ea829f673dcb312f1a8da72923182b5f6b929143b9c1f664bb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-direct",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n    p $in \\inverse_image<X,Y,f,U>\n    =>:\n        f(p) $in U",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "af2d02c6dc8f3f0f36b3e31cd6a844e533934709903ba126da123bb657a250ba"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-definition-only",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-definition-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a6cdd69a50e9b5745267a6cf8d43acc07a9170e3a649ada783959d0fcf9effc2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-definition-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-intro-original",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nthm preimage_intro:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        f(p) $in U\n        =>:\n            p $in \\inverse_image<X,Y,f,U>\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-intro-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0551470cedfc81bfaa0f9bc8536139443ff5758e987d5b3f5769aa375e5a172b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-intro-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-intro-direct",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n    f(p) $in U\n    =>:\n        p $in \\inverse_image<X,Y,f,U>",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-intro-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "000bf8ca55938dd26d43e6c8c4e9da3d08c77c6bc11f97c84b02e50b13ccaabf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-intro-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-intro-definition-only",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y), p X:\n        f(p) $in U\n        =>:\n            p $in \\inverse_image<X,Y,f,U>\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-intro-definition-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07c32aed9bdb9abd817743b7fa88d78182983631069734ca96790b1cd33c62cf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-intro-definition-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-powerset-original",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nthm preimage_powerset:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\n        \\inverse_image<X,Y,f,U> $in power_set(X)\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    \\inverse_image<X,Y,f,U> $subset X\n    \\inverse_image<X,Y,f,U> $in power_set(X)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-powerset-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "23b813137ddc874572fb94467ec8868a4b573fb7239778c3482ec6f038879091"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-powerset-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-powerset-direct",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X, Y set, f fn(x X) Y, U power_set(Y):\n    \\inverse_image<X,Y,f,U> $in power_set(X)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-powerset-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dd8a45c372c35272ae873c0a836529c860363abd9dab857a3843ae1e4aaeba79"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-powerset-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-powerset-definition-only",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X, Y set, f fn(x X) Y, U power_set(Y):\n        \\inverse_image<X,Y,f,U> $in power_set(X)\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-powerset-definition-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "78521fb6d6953a837a93c5cdfb3a65c6d31ec582095078968c6dc9e5134c38cb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-powerset-definition-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-definition-member",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-definition-member.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fa98dac61ae0a05e0d14ad81d0497aae7f40517e281b370180f5a04e2b5b9229"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-definition-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-only-member",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-only-member.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d09ee5448626c18ed510502a4d81b1ec7099544f3f507d8438bbfd521d0457b6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-only-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-literal-member",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    p $in {x X: f(x) $in U}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-literal-member.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "766617b7f09a08ead96decc3fc69af6547963b18fb849a317af0e11711b40f29"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-literal-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-definition-literal-member",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n        p $in \\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in {x X: f(x) $in U}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-definition-literal-member.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "093dc54cb44407de6043dbfa1f45ce2c27013b9e2f80337b822c5984c36b8961"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-definition-literal-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-changed-function-false",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f,g fn(x X) Y,U power_set(Y),p X:\n    p $in \\inverse_image<X,Y,f,U>\n    =>:\n        g(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-changed-function-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "129ac2cb81a55c62443bc997d30ecbca775e5da1fb6c50d236ba4d26ee4a1acd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-changed-function-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-value-missing-member-false",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n    f(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-value-missing-member-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a2868f76c02221913daf0b867c3fe65289897c5125de9f8ba61a9566f3268d9c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-value-missing-member-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-intro-missing-domain",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y),p Y:\n    f(p) $in U\n    =>:\n        p $in \\inverse_image<X,Y,f,U>\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-intro-missing-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c3a406bb3208c611fb56b25c692a3283f0702e6fa2ffc82beebbaeb7ff76c68e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-intro-missing-domain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-subset-direct",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y):\n    \\inverse_image<X,Y,f,U> $subset X\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-subset-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eec2821bfbad477815ae44ca94f4b636d98039b9077602f1f528dde0fa138b71"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-subset-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-alias-intro",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\n    E=\\inverse_image<X,Y,f,U>\n    f(p) $in U\n    =>:\n        p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-alias-intro.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "45663cd475c00e9f6e107b87eb78382efea13dc198ff13e9f11c84752969a26d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-alias-intro.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-alias-value",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\n    E=\\inverse_image<X,Y,f,U>\n    =>:\n        f(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-alias-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "079c3c4b41bbf1479e3378480ffe001461f09e2668dd3541d1533ba2c0cda23b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-alias-value.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-alias-intro-definition-chain",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\n        E=\\inverse_image<X,Y,f,U>\n        f(p) $in U\n        =>:\n            p $in E\n    E=\\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-alias-intro-definition-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "116a907dcb4da6eeee79860b92e6d3a8fbf157be93c106f41579abf0340ba48b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-alias-intro-definition-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-alias-intro-member-bridge",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p X:\n        E=\\inverse_image<X,Y,f,U>\n        f(p) $in U\n        =>:\n            p $in E\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-alias-intro-member-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d77637debb310356c9e008136f8e6def533fe14275ca590cc5666733f0a138cd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-alias-intro-member-bridge.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-alias-value-definition-member",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\n        E=\\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    E=\\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-alias-value-definition-member.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ce75940bfb04e0ec757ff01dea8360e0eeb0fd45dc30cc23bcd6cc9f4420fcb4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-alias-value-definition-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-alias-value-template-member",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E power_set(X),p E:\n        E=\\inverse_image<X,Y,f,U>\n        =>:\n            f(p) $in U\n    \\inverse_image<X,Y,f,U> = {x X: f(x) $in U}\n    p $in \\inverse_image<X,Y,f,U>\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-alias-value-template-member.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3aef6cef104c9bd23d4b2fda5ddee3c9df023d23276632f4e6271b9dc33db388"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-alias-value-template-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-literal-direct-intro",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n    f(p) $in U\n    =>:\n        p $in {x X: f(x) $in U}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-literal-direct-intro.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "86c81cb7aa62c71b577048b7144c19a25fd833dfed3e50a3c0eda9f810f96427"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-literal-direct-intro.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "preimage-literal-direct-value",
+        "source": "template<X, Y set, f fn(x X) Y, U power_set(Y)>:\n    have inverse_image power_set(X) = {x X: f(x) $in U}\n\nforall X,Y set,f fn(x X) Y,U power_set(Y),p X:\n    p $in {x X: f(x) $in U}\n    =>:\n        f(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-27-cases/preimage-literal-direct-value.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a894ff8fa6dfda1abe3c4e3f254af2c1a4feaf6ac9d95af9c4843d1bfc0f66c5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round27-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round27-cases/preimage-literal-direct-value.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      }
+    ],
+    "summary": {
+      "independent_files": 28,
+      "accepted": 17,
+      "rejected": 11
+    },
+    "scope": {
+      "canonical_edits": false,
+      "kernel_edits": false,
+      "trust_added": false,
+      "whole_showcase_gate": false,
+      "warm_results_not_used_as_cold_support": true
+    }
+  }
+}

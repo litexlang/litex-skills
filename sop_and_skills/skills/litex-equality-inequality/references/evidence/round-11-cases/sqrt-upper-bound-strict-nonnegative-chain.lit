@@ -1,0 +1,9 @@
+claim:
+    ? forall x,r R:
+        0 <= x
+        0 <= r
+        x < r^2
+        =>:
+            sqrt(x) < r
+    0 <= r^2
+    sqrt(x) < sqrt(r^2) = r

@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-82-session.json",
+  "original_sha256": "e958cbb7cdb5a9deacb966563477f9e79012d026dc77f93bfe76cf5705bfac5c",
+  "original_bytes": 835,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r82_quadratic_solution(c,x R) R=x^2+c",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "05803128fc267f100c60fa37064866dc3c396bb377a0882fae8be86533f892d3",
+        "excerpt": "have fn r82_quadratic_solution(c,x R) R=x^2+c\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; renamed initial-value slice only. Current cold round82 owns direct/deletion/negative evidence."
+    },
+    {
+      "source": "claim:\n    ? forall c,y0 R:\n        r82_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r82_quadratic_solution(c,0)=c",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2aad787e1c747952d3c11ae0b1b611b46eaad2ddc4f471e441d4aec839a28cc6",
+        "excerpt": "claim:\r\n    ? forall c,y0 R:\r\n        r82_quadratic_solution(c,0)=y0\r\n        =>:\r\n            c=y0\r\n    r82_quadratic_solution(c,0)=c\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; renamed initial-value slice only. Current cold round82 owns direct/deletion/negative evidence."
+    }
+  ]
+}

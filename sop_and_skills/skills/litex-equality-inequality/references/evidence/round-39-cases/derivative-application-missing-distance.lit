@@ -1,0 +1,12 @@
+prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):
+    forall x R:
+        x!=x0
+        abs(x-x0)<delta
+        =>:
+            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon
+
+forall f fn(t R) R,x0,slope,sample R,epsilon,delta R+:
+    $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)
+    sample!=x0
+    =>:
+        abs((f(sample)-f(x0))/(sample-x0)-slope)<epsilon

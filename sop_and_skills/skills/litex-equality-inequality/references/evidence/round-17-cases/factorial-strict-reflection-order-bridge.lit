@@ -1,0 +1,10 @@
+claim:
+    ? forall m,n N:
+        factorial(m) < factorial(n)
+        =>:
+            m < n
+    by contra:
+        ? m < n
+        n <= m
+        factorial(n) <= factorial(m)
+        impossible factorial(m) < factorial(n)

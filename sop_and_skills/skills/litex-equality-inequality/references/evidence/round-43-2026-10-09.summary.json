@@ -1,0 +1,634 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-43-2026-10-09.json",
+  "original_sha256": "b425c01907ce783c7bcaaffd74d1b34730c739793b6b3be0575e756af6f0f84d",
+  "original_bytes": 175750,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "greater-original",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/greater-original.lit"
+        ],
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_original:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    x > 0\n    x != 0\n    2 * x != 0\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_newton_sqrt_two(x) - 1 = (x + 2 / x) / 2 - 1\n    (x + 2 / x) / 2 - 1 = ((x - 1)^2 + 1) / (2 * x)\n    r43_newton_sqrt_two(x) - 1 = ((x - 1)^2 + 1) / (2 * x)\n    (x - 1)^2 >= 0\n    (x - 1)^2 + 1 > 0\n    2 * x > 0\n    ((x - 1)^2 + 1) / (2 * x) > 0\n    r43_newton_sqrt_two(x) - 1 > 0\n\n# Induction propagates the one-step lower bound through the recursive iterate.\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e6f7651eac80f239804e91418e7a945560e40e3bc90ac0529166b8d8479e62a4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/greater-original.lit"
+        ]
+      },
+      {
+        "id": "greater-six-statements",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/greater-six-statements.lit"
+        ],
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_six_statements:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2>=0\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bc8e0c0cc9996df852b2927b0540ed02b149ad3815babc80bfe6b06fb82172c6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/greater-six-statements.lit"
+        ]
+      },
+      {
+        "id": "greater-bodyless",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/greater-bodyless.lit"
+        ],
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_bodyless:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3202a7ab6d6920d2e0af7ed3a91e9ec8478d8df88ea3814ea53f48c713f039ec"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/greater-bodyless.lit"
+        ]
+      },
+      {
+        "id": "greater-delete-square-nonnegative",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/greater-delete-square-nonnegative.lit"
+        ],
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_delete_square_nonnegative:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b088af8be554cdb6bede504c653a0d24054487202e1416b31a9e98c109834810"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/greater-delete-square-nonnegative.lit"
+        ]
+      },
+      {
+        "id": "contraction-scalar-short",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-scalar-short.lit"
+        ],
+        "source": "thm r43_scalar_short:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9506723b647c8005f07c66baff3683e39e4491b8f811f27a3e22a32f6ba5b2c5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-scalar-short.lit"
+        ]
+      },
+      {
+        "id": "contraction-scalar-bodyless",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-scalar-bodyless.lit"
+        ],
+        "source": "thm r43_scalar_bodyless:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8073c132e305c7cb215ca8b4264fa0ede5bba9306e89a4852985eb4713370ff9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-scalar-bodyless.lit"
+        ]
+      },
+      {
+        "id": "contraction-delete-square-bound",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-delete-square-bound.lit"
+        ],
+        "source": "thm r43_delete_square_bound:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "183f59845b3248bc78bd11e5d02d1e74611b1e7b174c875c6b0537e4b812f035"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-delete-square-bound.lit"
+        ]
+      },
+      {
+        "id": "contraction-missing-lower-bound",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-missing-lower-bound.lit"
+        ],
+        "source": "thm r43_missing_lower_bound:\n    ? forall x R+,a,b R:\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5bd24f215f999b128c14b44c0c8e2cf7300bb7e5fe1de2004f2e247aa512cd45"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-missing-lower-bound.lit"
+        ]
+      },
+      {
+        "id": "literal-greater-than-one",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/literal-greater-than-one.lit"
+        ],
+        "source": "forall x R+:\n    (x+2/x)/2>1\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5836c5ea5f5e779728ce60d4ce1fcf7427875bf91d79be665fa582a2a70c19be"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/literal-greater-than-one.lit"
+        ]
+      },
+      {
+        "id": "scalar-square-lower-direct",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/scalar-square-lower-direct.lit"
+        ],
+        "source": "forall x R+:\n    x>=1\n    =>:\n        x^2>=1\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b2f8a8fbdee32add74415b4ef4e96fdee3224e207ef97c921709a5fefae709c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/scalar-square-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "small-input-counterexample",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/small-input-counterexample.lit"
+        ],
+        "source": "not 1<=1^2/4\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc5fa8c3bae4b4fdefd2758792fd58dd9d7011c291e37ff4c93fb63c971b1156"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/small-input-counterexample.lit"
+        ]
+      },
+      {
+        "id": "wrong-strong-step-false",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/wrong-strong-step-false.lit"
+        ],
+        "source": "forall x R+:\n    (x+2/x)/2>2\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0e45bc445383b2ecb303b10b6da86db7cd669440c0ddd7c2790ab1b477a9dadb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/wrong-strong-step-false.lit"
+        ]
+      },
+      {
+        "id": "zero-update-domain",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/zero-update-domain.lit"
+        ],
+        "source": "(0+2/0)/2>1\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d507a7db9ab2c62fd4c9505e6deb20ebc02d4fc9e85eedf2d138a4198430dafe"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/zero-update-domain.lit"
+        ]
+      },
+      {
+        "id": "contraction-associated",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-associated.lit"
+        ],
+        "source": "thm r43_scalar_associated:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d048a055464faecd820e3c865092f7211ce22a7ca30c07c69b2e554f51268107"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-associated.lit"
+        ]
+      },
+      {
+        "id": "contraction-associated-delete-sign",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-associated-delete-sign.lit"
+        ],
+        "source": "thm r43_delete_sign:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "94ff3ae63461e9c00a112844f248bd15157ccb6e5378958c8ca850cdfeb1a220"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-associated-delete-sign.lit"
+        ]
+      },
+      {
+        "id": "contraction-associated-missing-b-sign",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-associated-missing-b-sign.lit"
+        ],
+        "source": "thm r43_missing_b:\n    ? forall x R+,a,b R:\n        x>=1\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2fbe4fff3e48b6934722989b648810d855d18748e0e3a86c95829ca7fc93dae2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-associated-missing-b-sign.lit"
+        ]
+      },
+      {
+        "id": "contraction-associated-short-certificate",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-associated-short-certificate.lit"
+        ],
+        "source": "thm r43_short_certificate:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e6cab16fe1cd23aec1c926a145570595e3e6dd186316d5526ebfd163d6850d60"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-associated-short-certificate.lit"
+        ]
+      },
+      {
+        "id": "small-input-full-counterexample",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/small-input-full-counterexample.lit"
+        ],
+        "source": "4*(1/2)^2*1=1^2\n1>=0\nnot 1<=1^2/4\n\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e96e9e692d0a8f0bb17ec76d1f2d8f5d8caae76501aeffbe9ebcbb1385d438d6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/small-input-full-counterexample.lit"
+        ]
+      },
+      {
+        "id": "contraction-five-statements",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-five-statements.lit"
+        ],
+        "source": "thm r43_scalar_five:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8ad9f58f9eaf0928315cc3ba6c81c3bbdf4b6278e68250aef5479e47b171d343"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-five-statements.lit"
+        ]
+      },
+      {
+        "id": "contraction-four-statements",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-43-cases/contraction-four-statements.lit"
+        ],
+        "source": "thm r43_scalar_four:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4e3aca29e5c2f90a51932a216bedeaebe2bb80f660b62966f2e9fdaaf4fad12b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round43-cases/contraction-four-statements.lit"
+        ]
+      }
+    ],
+    "scope": "Actual positive Newton step plus separately labeled scalar contraction; no recursive or whole-showcase acceptance."
+  }
+}

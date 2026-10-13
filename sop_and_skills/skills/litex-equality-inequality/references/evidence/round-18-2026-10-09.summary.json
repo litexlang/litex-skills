@@ -1,0 +1,1145 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-18-2026-10-09.json",
+  "original_sha256": "e39abc928053470cea2eadc913d54d8bceb167e63b2c9658db1e44ecbc1b6d2b",
+  "original_bytes": 1454598,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+    "sha256": "a9e5a10e9e594ddc21f7bf496dd444b1a370a882d96238a5b75f3e3e33bddd79",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-18.log"
+    },
+    "head": "d49fffb53276f19a6ea2abeb9dca1d82913f1086",
+    "session": [
+      {
+        "id": "sum-shift-named-direct",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    =>:\n        sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9d8852cc6824d2db61b3f277bd326555975f187c684b1e82a20cdc293365def7",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    =>:\\n        sum(a, b, f) = sum(a - 1, b - 1, fn (k Z) Z{f(k + 1)})\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    =>:\\n        sum(a, b, f) = sum(a - 1, b - 1, fn (k Z) Z{f(k + 1)})\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "sum-shift-named-legal-ranges",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    a-1 <= b-1\n    =>:\n        sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c0f4f3d89e31abe2e4a89382204f8a859d46926cd85b352f37a600274c11b15f",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    a - 1 <= b - 1\\n    =>:\\n        sum(a, b, f) = sum(a - 1, b - 1, fn (k Z) Z{f(k + 1)})\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    a - 1 <= b - 1\\n    =>:\\n        sum(a, b, f) = sum(a - 1, b - 1, fn (k Z) Z{f(k + 1)})\"\r\n      },\r\n      \"stores\": [],\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "sum-shift-anonymous-direct",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    a-1 <= b-1\n    =>:\n        sum(a,b,fn(k Z) Z {f(k)}) = sum(a-1,b-1,fn(j Z) Z {f(j+1)})",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c2f55e4e6abc1845eb9e43be9219b03866b0492a584e041061d351f6d879c6a4",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    a - 1 <= b - 1\\n    =>:\\n        sum(a, b, fn (k Z) Z{f(k)}) = sum(a - 1, b - 1, fn (j Z) Z{f(j + 1)})\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    a - 1 <= b - 1\\n    =>:\\n        sum(a, b, fn (k Z) Z{f(k)}) = sum(a - 1, b - 1, fn (j Z) Z{f(j + 1)})\"\r\n "
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "native-empty-zero-invalid",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a > b\n    =>:\n        sum(a,b,f) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/native-empty-zero-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a96b6d8f8f8eb624396e9ea6b6d6c5603c9846c39dc831c301c3a823d4d92ccb"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/native-empty-zero-invalid.lit"
+        ]
+      },
+      {
+        "id": "singleton-named-sum",
+        "source": "forall a Z,f fn(k Z) R:\n    sum(a,a,f) = f(a)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-named-sum.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4dcd144000ea9fc29399cb8934b2f8882e58a17ba5f9eed6399b4ca5b0d50bf2"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-named-sum.lit"
+        ]
+      },
+      {
+        "id": "sum-add-direct",
+        "source": "forall a,b Z,f,g fn(k Z) R:\n    a <= b\n    =>:\n        sum(a,b,fn(k Z) R {f(k)+g(k)}) = sum(a,b,f)+sum(a,b,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-add-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73969fbfa361b6f6d041b0a65c7a05a496f27763020caa0f2b0af54dc1ec0997"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-add-direct.lit"
+        ]
+      },
+      {
+        "id": "sum-last-term-named",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a <= b\n    =>:\n        sum(a,b+1,f) = sum(a,b,f)+f(b+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-last-term-named.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "abb3059657186b1c9b9f5ab6de48a1b574e463d88c9351322587dc764a95b36e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-last-term-named.lit"
+        ]
+      },
+      {
+        "id": "sum-partition-direct",
+        "source": "forall a,b,c Z,f fn(k Z) R:\n    a <= c\n    c < b\n    =>:\n        sum(a,b,f) = sum(a,c,f)+sum(c+1,b,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-partition-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f15889679c1fb64fed88f6f2720ebff07b495e3efc515740276a7f050cde8fd6"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-partition-direct.lit"
+        ]
+      },
+      {
+        "id": "sum-scale-direct",
+        "source": "forall a,b Z,f fn(k Z) R,c R:\n    a <= b\n    =>:\n        sum(a,b,fn(k Z) R {c*f(k)}) = c*sum(a,b,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-scale-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5b52da6e1a437fea5ef471055d02ce3d54ff855757955ac1939679d12bb91ec3"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-scale-direct.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-anonymous-direct",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    a-1 <= b-1\n    =>:\n        sum(a,b,fn(k Z) Z {f(k)}) = sum(a-1,b-1,fn(j Z) Z {f(j+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-anonymous-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "03e5068c1bba27735afff25a9ba6f82b34e866a8c176aa61f89db3c576e94f60"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-anonymous-direct.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-domain-invalid",
+        "source": "forall n N+,f fn(k N+) R:\n    sum(1,n,f) = sum(0,n-1,fn(k N+) R {f(k+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-domain-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0dd0f25ca3dffda5314e1b9a6a3bed1e95882f8972ac6f3c92cc56088e5a3535"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-domain-invalid.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-fixture-orientation",
+        "source": "forall a,b,t Z,f fn(k Z) R:\n    a <= b\n    a+t <= b+t\n    =>:\n        sum(a,b,fn(k Z) R {f(k+t)}) = sum(a+t,b+t,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-fixture-orientation.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f7af7a0a211c19c106f90b79808011629c9cb4e94bf84fd1743fd568639104ca"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-fixture-orientation.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-named-direct",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    =>:\n        sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-named-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a36adc2ec1fbbdd7d38d349797f55a42cf9d1d2a3c92bdc0c61d6d6ffeb8c6f2"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-named-direct.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-named-legal-ranges",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    a-1 <= b-1\n    =>:\n        sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-named-legal-ranges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d97d0f546297731bb484bee1a0962b4fd7327c68d24fc0980bbb85441b0afdfe"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-named-legal-ranges.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-wrong-direction-false",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    a-1 <= b-1\n    =>:\n        sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k-1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-wrong-direction-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f6d1d5941c35c5825544a6f97e3f4dcaae0f01f5bfe3bee25c9cf7840a4eafe8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-wrong-direction-false.lit"
+        ]
+      },
+      {
+        "id": "sum-subtract-direct",
+        "source": "forall a,b Z,f,g fn(k Z) R:\n    a <= b\n    =>:\n        sum(a,b,fn(k Z) R {f(k)-g(k)}) = sum(a,b,f)-sum(a,b,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-subtract-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "46170dd1add5993a142bf520f5f62aa904e4fa11afd465f301c742dcc262e8a4"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-subtract-direct.lit"
+        ]
+      },
+      {
+        "id": "telescoping-direct",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a <= b\n    =>:\n        sum(a,b,fn(k Z) R {f(k+1)-f(k)}) = f(b+1)-f(a)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/telescoping-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "88859dc4587d2538bf1beeb55d6a3b11d5f157fe54203c5be20ca0987047204e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/telescoping-direct.lit"
+        ]
+      },
+      {
+        "id": "telescoping-off-by-one-false",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a <= b\n    =>:\n        sum(a,b,fn(k Z) R {f(k+1)-f(k)}) = f(b)-f(a)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/telescoping-off-by-one-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3a0537adec27bc318da57648ae8fd18aa85331207c6b90b1eab604c82144aadf"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/telescoping-off-by-one-false.lit"
+        ]
+      },
+      {
+        "id": "wrapper-empty-zero",
+        "source": "have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:\n    case first <= last: sum(first, last, term)\n    case first > last: 0\n\nforall a,b Z,f fn(k Z) Z:\n    a > b\n    =>:\n        finite_integer_sum(a,b,f) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-empty-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8c30d6b8260cb693e1fcc77c67adc33ed232da7380dff667afa8d3a479b56137"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/wrapper-empty-zero.lit"
+        ]
+      },
+      {
+        "id": "wrapper-shift-direct",
+        "source": "have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:\n    case first <= last: sum(first, last, term)\n    case first > last: 0\n\nforall a,b Z,f fn(k Z) Z:\n    a <= b\n    =>:\n        finite_integer_sum(a,b,f) = finite_integer_sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-shift-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "255ba7e2863b7fb0dbbd6534b0317813c60d3ed0750894d665523920f7d4eca3"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/wrapper-shift-direct.lit"
+        ]
+      },
+      {
+        "id": "wrapper-shift-original",
+        "source": "have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:\n    case first <= last: sum(first, last, term)\n    case first > last: 0\n\nthm finite_integer_sum_shift:\n    ? forall first, last Z, term fn(term_index_shift Z) Z:\n        first <= last\n        =>:\n            finite_integer_sum(first, last, term) = finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n    first - 1 <= last - 1\n    finite_integer_sum(first, last, term) = sum(first, last, term)\n    finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)}) = sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n    claim:\n        ? forall source_index Z:\n            term(source_index) = fn(lambda_index Z) Z {term(lambda_index)}(source_index)\n        term(source_index) = fn(lambda_index Z) Z {term(lambda_index)}(source_index)\n    by def $fn_eq(term, fn(lambda_index Z) Z {term(lambda_index)})\n    term = fn(lambda_index Z) Z {term(lambda_index)}\n    sum(first, last, term) = sum(first, last, fn(lambda_index Z) Z {term(lambda_index)})\n    claim:\n        ? forall shifted_index Z:\n            first - 1 <= shifted_index\n            shifted_index <= last - 1\n            =>:\n                term(shifted_index + 1) = term(shifted_index + 1)\n        term(shifted_index + 1) = term(shifted_index + 1)\n    sum(first, last, fn(lambda_index Z) Z {term(lambda_index)}) = sum(first + (-1), last + (-1), fn(shifted_index Z) Z {term(shifted_index + 1)})\n    sum(first + (-1), last + (-1), fn(shifted_index Z) Z {term(shifted_index + 1)}) = sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n    finite_integer_sum(first, last, term) = finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-shift-original.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: `$fn_eq` is removed; use ordinary equality `f = g` or `by fn_extension` / `forall` for pointwise agreement at line 17 in /Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-shift-original.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "72f5fd9f4c1142cef9758f4daaa77eb6a314276bbf85bad41056d79ae27ea065"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/wrapper-shift-original.lit"
+        ]
+      },
+      {
+        "id": "wrapper-shift-short-chain",
+        "source": "have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:\n    case first <= last: sum(first, last, term)\n    case first > last: 0\n\nclaim:\n    ? forall a,b Z,f fn(k Z) Z:\n        a <= b\n        =>:\n            finite_integer_sum(a,b,f) = finite_integer_sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n    a-1 <= b-1\n    finite_integer_sum(a,b,f) = sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = finite_integer_sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-shift-short-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5e58e69c4fa33b8af627f1a420fa4a3f64165aa035ed44603f4f801dcab1a177"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/wrapper-shift-short-chain.lit"
+        ]
+      },
+      {
+        "id": "wrapper-shift-current-syntax",
+        "source": "have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:\n    case first <= last: sum(first, last, term)\n    case first > last: 0\n\nthm finite_integer_sum_shift:\n    ? forall first, last Z, term fn(term_index_shift Z) Z:\n        first <= last\n        =>:\n            finite_integer_sum(first, last, term) = finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n    first - 1 <= last - 1\n    finite_integer_sum(first, last, term) = sum(first, last, term)\n    finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)}) = sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n    claim:\n        ? forall source_index Z:\n            term(source_index) = fn(lambda_index Z) Z {term(lambda_index)}(source_index)\n        term(source_index) = fn(lambda_index Z) Z {term(lambda_index)}(source_index)\n    by fn_extension:\n        ? term = fn(lambda_index Z) Z {term(lambda_index)}\n        forall extension_index Z:\n            term(extension_index) = fn(lambda_index Z) Z {term(lambda_index)}(extension_index)\n    term = fn(lambda_index Z) Z {term(lambda_index)}\n    sum(first, last, term) = sum(first, last, fn(lambda_index Z) Z {term(lambda_index)})\n    claim:\n        ? forall shifted_index Z:\n            first - 1 <= shifted_index\n            shifted_index <= last - 1\n            =>:\n                term(shifted_index + 1) = term(shifted_index + 1)\n        term(shifted_index + 1) = term(shifted_index + 1)\n    sum(first, last, fn(lambda_index Z) Z {term(lambda_index)}) = sum(first + (-1), last + (-1), fn(shifted_index Z) Z {term(shifted_index + 1)})\n    sum(first + (-1), last + (-1), fn(shifted_index Z) Z {term(shifted_index + 1)}) = sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n    finite_integer_sum(first, last, term) = finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-shift-current-syntax.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7d2454ac88e989ed6c545c9390d8da7b50b25c9aeb4b2d7d08253bfb69e04ae1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/wrapper-shift-current-syntax.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-reverse-endpoint",
+        "source": "claim:\n    ? forall a,b Z,f fn(k Z) Z:\n        a <= b\n        =>:\n            sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n    a-1 <= b-1\n    (a-1)+1 = a\n    (b-1)+1 = b\n    sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = sum((a-1)+1,(b-1)+1,f) = sum(a,b,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-reverse-endpoint.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52ba41c01adeca40b4268bb8e3a1d77ad162776b6abe6bc028b7d590d45245e9"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-reverse-endpoint.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-reverse-no-endpoint-bridges",
+        "source": "claim:\n    ? forall a,b Z,f fn(k Z) Z:\n        a <= b\n        =>:\n            sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n    a-1 <= b-1\n    sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = sum((a-1)+1,(b-1)+1,f) = sum(a,b,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-reverse-no-endpoint-bridges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8f432847a3548985a54fa5ca1850a8f712235c303d4ef0703abdad2873d24a1f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-reverse-no-endpoint-bridges.lit"
+        ]
+      },
+      {
+        "id": "sum-shift-reverse-literal-direct",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    a-1 <= b-1\n    =>:\n        sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = sum((a-1)+1,(b-1)+1,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-shift-reverse-literal-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7e981b1712f3b4099fd7d4adf3960592653ecbaca5cf7c7a49428f3b016c0f95"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/sum-shift-reverse-literal-direct.lit"
+        ]
+      },
+      {
+        "id": "wrapper-shift-reverse-bridge",
+        "source": "have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:\n    case first <= last: sum(first, last, term)\n    case first > last: 0\n\nclaim:\n    ? forall a,b Z,f fn(k Z) Z:\n        a <= b\n        =>:\n            finite_integer_sum(a,b,f) = finite_integer_sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n    a-1 <= b-1\n    (a-1)+1 = a\n    (b-1)+1 = b\n    sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = sum((a-1)+1,(b-1)+1,f) = sum(a,b,f)\n    finite_integer_sum(a,b,f) = sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = finite_integer_sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/wrapper-shift-reverse-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "886ef9449549b4073aaa458d08a8ed26106ae709ffd24a2589e7b23dd8dcdd08"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/wrapper-shift-reverse-bridge.lit"
+        ]
+      },
+      {
+        "id": "telescoping-positive-induction",
+        "source": "claim:\n    ? forall n N+,f fn(k Z) R:\n        sum(1,n,fn(j Z) R {f(j+1)-f(j)}) = f(n+1)-f(1)\n    by induc m from 1:\n        ? sum(1,m,fn(j Z) R {f(j+1)-f(j)}) = f(m+1)-f(1)\n        ? from m = 1:\n            sum(1,m,fn(j Z) R {f(j+1)-f(j)}) = sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = fn(j Z) R {f(j+1)-f(j)}(1) = f(1+1)-f(1) = f(m+1)-f(1)\n        ? induc:\n            fn(j Z) R {f(j+1)-f(j)}(m+1) = f((m+1)+1)-f(m+1)\n            sum(1,m+1,fn(j Z) R {f(j+1)-f(j)}) = sum(1,m,fn(j Z) R {f(j+1)-f(j)})+fn(j Z) R {f(j+1)-f(j)}(m+1) = (f(m+1)-f(1))+(f((m+1)+1)-f(m+1)) = f((m+1)+1)-f(1)\n    n >= 1\n    sum(1,n,fn(j Z) R {f(j+1)-f(j)}) = f(n+1)-f(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/telescoping-positive-induction.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "59ae729f56f0e9a780029a5816d0e08ab9efad9951d84185849716b57dd79b1a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/telescoping-positive-induction.lit"
+        ]
+      },
+      {
+        "id": "singleton-difference-expanded",
+        "source": "forall f fn(k Z) R:\n    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = f(2)-f(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-difference-expanded.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d91b86025bf1529ad7b825cd0a3918c9104a93cdee690a0545d00520a6e204bb"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-difference-expanded.lit"
+        ]
+      },
+      {
+        "id": "singleton-difference-raw-application",
+        "source": "forall f fn(k Z) R:\n    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = fn(j Z) R {f(j+1)-f(j)}(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-difference-raw-application.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a01a281c6a39834ad17f18b17369fc5ba493f3ea924af323a46b8373be186140"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-difference-raw-application.lit"
+        ]
+      },
+      {
+        "id": "singleton-difference-affine-body",
+        "source": "forall f fn(k Z) R:\n    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = f(1+1)-f(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-difference-affine-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "296d357e34fcf1ccd27e5fc295397967d8720c374f81bff6d8a8f7cab1e5a60b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-difference-affine-body.lit"
+        ]
+      },
+      {
+        "id": "singleton-eta-callback",
+        "source": "forall f fn(k Z) R:\n    sum(1,1,fn(j Z) R {f(j)}) = f(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-eta-callback.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c42ffa33271eccf331897d39cd775e8c225cff9077357bb6672b0745bf4ab7b8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-eta-callback.lit"
+        ]
+      },
+      {
+        "id": "singleton-constant-callback",
+        "source": "forall c R:\n    sum(1,1,fn(j Z) R {c}) = c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-constant-callback.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "38e0f3f508e272f07e0c61a2187e05a306b92754852336ab9a23194a2358e305"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-constant-callback.lit"
+        ]
+      },
+      {
+        "id": "singleton-difference-named-bridge",
+        "source": "claim:\n    ? forall f fn(k Z) R:\n        sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = f(2)-f(1)\n    let h = fn(j Z) R {f(j+1)-f(j)}\n    sum(1,1,h) = h(1)\n    h(1) = f(1+1)-f(1)\n    1+1 = 2\n    h(1) = f(2)-f(1)\n    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = sum(1,1,h) = h(1) = f(2)-f(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/singleton-difference-named-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ac4230fe7160ebc199bb76c82e4b2a2fe78eb7892ac24aab7695faa6fe88f7e9"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/singleton-difference-named-bridge.lit"
+        ]
+      },
+      {
+        "id": "telescoping-named-induction",
+        "source": "claim:\n    ? forall n N+,f fn(k Z) R:\n        sum(1,n,fn(j Z) R {f(j+1)-f(j)}) = f(n+1)-f(1)\n    let delta_terms = fn(j Z) R {f(j+1)-f(j)}\n    by induc m from 1:\n        ? sum(1,m,delta_terms) = f(m+1)-f(1)\n        ? from m = 1:\n            delta_terms(1) = f(1+1)-f(1)\n            sum(1,m,delta_terms) = sum(1,1,delta_terms) = delta_terms(1) = f(1+1)-f(1) = f(m+1)-f(1)\n        ? induc:\n            m >= 1\n            delta_terms(m+1) = f((m+1)+1)-f(m+1)\n            sum(1,m+1,delta_terms) = sum(1,m,delta_terms)+delta_terms(m+1) = (f(m+1)-f(1))+(f((m+1)+1)-f(m+1)) = f((m+1)+1)-f(1)\n    n >= 1\n    sum(1,n,delta_terms) = f(n+1)-f(1)\n    sum(1,n,fn(j Z) R {f(j+1)-f(j)}) = sum(1,n,delta_terms) = f(n+1)-f(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/telescoping-named-induction.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e330bb8c5216fc1b114b7e9779a05691dec413ae4980994595e887331c35c3b2"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/telescoping-named-induction.lit"
+        ]
+      },
+      {
+        "id": "telescoping-general-named-induction",
+        "source": "claim:\n    ? forall a,b Z,f fn(k Z) R:\n        a <= b\n        =>:\n            sum(a,b,fn(j Z) R {f(j+1)-f(j)}) = f(b+1)-f(a)\n    let delta_terms = fn(j Z) R {f(j+1)-f(j)}\n    by induc m from a:\n        ? sum(a,m,delta_terms) = f(m+1)-f(a)\n        ? from m = a:\n            delta_terms(a) = f(a+1)-f(a)\n            sum(a,m,delta_terms) = sum(a,a,delta_terms) = delta_terms(a) = f(a+1)-f(a) = f(m+1)-f(a)\n        ? induc:\n            a <= m\n            delta_terms(m+1) = f((m+1)+1)-f(m+1)\n            sum(a,m+1,delta_terms) = sum(a,m,delta_terms)+delta_terms(m+1) = (f(m+1)-f(a))+(f((m+1)+1)-f(m+1)) = f((m+1)+1)-f(a)\n    sum(a,b,delta_terms) = f(b+1)-f(a)\n    sum(a,b,fn(j Z) R {f(j+1)-f(j)}) = sum(a,b,delta_terms) = f(b+1)-f(a)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/telescoping-general-named-induction.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f3daa5115945147e3605659987a308654afeb9f71c95ad8c8fa0cfea7c06ee2f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-18-cases/telescoping-general-named-induction.lit"
+        ]
+      }
+    ],
+    "started_date": "2026-10-08",
+    "date_note": "Round crossed local midnight; draft area reused from task start. Per-case wall timestamps were not captured; commands and binary identity retained.",
+    "repair_session": [
+      {
+        "id": "sum-shift-named-direct",
+        "source": "forall a,b Z,f fn(k Z) Z:\n    a <= b\n    =>:\n        sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9d8852cc6824d2db61b3f277bd326555975f187c684b1e82a20cdc293365def7",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    =>:\\n        sum(a, b, f) = sum(a - 1, b - 1, fn (k Z) Z{f(k + 1)})\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, f fn (k Z) Z:\\n    a <= b\\n    =>:\\n        sum(a, b, f) = sum(a - 1, b - 1, fn (k Z) Z{f(k + 1)})\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "sum-shift-reverse-endpoint",
+        "source": "claim:\n    ? forall a,b Z,f fn(k Z) Z:\n        a <= b\n        =>:\n            sum(a,b,f) = sum(a-1,b-1,fn(k Z) Z {f(k+1)})\n    a-1 <= b-1\n    (a-1)+1 = a\n    (b-1)+1 = b\n    sum(a-1,b-1,fn(k Z) Z {f(k+1)}) = sum((a-1)+1,(b-1)+1,f) = sum(a,b,f)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ff140bb7796be24aa695264bf2f9ea4d75e8f1567a0936de9eeec06a2bdccdf",
+          "excerpt": "... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "singleton-difference-raw-application",
+        "source": "forall f fn(k Z) R:\n    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = fn(j Z) R {f(j+1)-f(j)}(1)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b8e4529f99910e1993203ad01464a4bd9b69b00b86781029c7470a60bed8e23d",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k Z) R:\\n    sum(1, 1, fn (j Z) R{f(j + 1) - f(j)}) = fn (j Z) R{f(j + 1) - f(j)}(1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k Z) R:\\n    sum(1, 1, fn (j Z) R{f(j + 1) - f(j)}) = fn (j Z) R{f(j + 1) - f(j)}(1)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "singleton-difference-named-bridge",
+        "source": "claim:\n    ? forall f fn(k Z) R:\n        sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = f(2)-f(1)\n    let h = fn(j Z) R {f(j+1)-f(j)}\n    sum(1,1,h) = h(1)\n    h(1) = f(1+1)-f(1)\n    1+1 = 2\n    h(1) = f(2)-f(1)\n    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = sum(1,1,h) = h(1) = f(2)-f(1)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ff140bb7796be24aa695264bf2f9ea4d75e8f1567a0936de9eeec06a2bdccdf",
+          "excerpt": "... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "telescoping-direct",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a <= b\n    =>:\n        sum(a,b,fn(k Z) R {f(k+1)-f(k)}) = f(b+1)-f(a)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "46ee4cdc56e2d6f9fa8473f0656bb8bcb8ea99737fd7c8ede9889d2247596a37",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, f fn (k Z) R:\\n    a <= b\\n    =>:\\n        sum(a, b, fn (k Z) R{f(k + 1) - f(k)}) = f(b + 1) - f(a)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, f fn (k Z) R:\\n    a <= b\\n    =>:\\n        sum(a, b, fn (k Z) R{f(k + 1) - f(k)}) = f(b + 1) - f(a)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"sess"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "telescoping-general-named-induction",
+        "source": "claim:\n    ? forall a,b Z,f fn(k Z) R:\n        a <= b\n        =>:\n            sum(a,b,fn(j Z) R {f(j+1)-f(j)}) = f(b+1)-f(a)\n    let delta_terms = fn(j Z) R {f(j+1)-f(j)}\n    by induc m from a:\n        ? sum(a,m,delta_terms) = f(m+1)-f(a)\n        ? from m = a:\n            delta_terms(a) = f(a+1)-f(a)\n            sum(a,m,delta_terms) = sum(a,a,delta_terms) = delta_terms(a) = f(a+1)-f(a) = f(m+1)-f(a)\n        ? induc:\n            a <= m\n            delta_terms(m+1) = f((m+1)+1)-f(m+1)\n            sum(a,m+1,delta_terms) = sum(a,m,delta_terms)+delta_terms(m+1) = (f(m+1)-f(a))+(f((m+1)+1)-f(m+1)) = f((m+1)+1)-f(a)\n    sum(a,b,delta_terms) = f(b+1)-f(a)\n    sum(a,b,fn(j Z) R {f(j+1)-f(j)}) = sum(a,b,delta_terms) = f(b+1)-f(a)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b4580a9dfa83b834ea21996e09b245be537ba2172600c3780908772bf8544a6d",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "scope": "Round began Oct 8 and completed Oct 9 using one immutable release binary and the original stable draft area. Exact isolated Concrete Mathematics shift definition/theorem and native sum probes; no whole registered chapter replacement.",
+    "classification_note": "wrapper-shift-original is a removed $fn_eq parse error, not a mathematical negative or reindex capability miss. Current-syntax rewrite parses and then has a genuine reindex search miss."
+  }
+}

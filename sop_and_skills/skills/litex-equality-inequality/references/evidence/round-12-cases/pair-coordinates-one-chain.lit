@@ -1,0 +1,7 @@
+claim:
+    ? forall p,q cart(R,R):
+        p(1) = q(1)
+        p(2) = q(2)
+        =>:
+            p = q
+    p = (p(1),p(2)) = (q(1),q(2)) = q

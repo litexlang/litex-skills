@@ -1,0 +1,484 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-57-2026-10-09.json",
+  "original_sha256": "5cb180d62c30a6cf868e289b4bcc1ee629c62d58611cb96c0464572e146661a3",
+  "original_bytes": 45761,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "2ceccd921ce93dacf9bc80491f35b2e2b7900bdae6dfefc480399113cbf3ee6e",
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "cases": [
+      {
+        "id": "definitions-only",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/definitions-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "85c110dd9b618187dd2ab11e0d1c95d9ccac45caa366aad19a4d14b4b27f9bef"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/definitions-only.lit"
+        ]
+      },
+      {
+        "id": "nested-original",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(r57_identity(x))=r57_identity(x)=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/nested-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8448e4459191d718d82c9134ad03d1850913604e03c6f5c56525625f47c1ae3b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/nested-original.lit"
+        ]
+      },
+      {
+        "id": "nested-direct",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(r57_identity(x))=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/nested-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2544a37f6e87957eada65f62d892f53cadee123f7a6b71855ea30bcc0736355e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/nested-direct.lit"
+        ]
+      },
+      {
+        "id": "range-original",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ad59c461492b7b561fabdcde4c0dcc61d4e37186b8e091be8a27db2bcfac8458"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-original.lit"
+        ]
+      },
+      {
+        "id": "range-direct",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e652e2e30a5c5540592b9618d16e644c23aca9f6bf405070f0fb25d75dac3ce9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-direct.lit"
+        ]
+      },
+      {
+        "id": "range-membership",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(x) $in fn_range(r57_identity)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-membership.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b586982ad05919e0c1959eca63524697184e6b6f34e5c2fb1065bfab632cd1e5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-membership.lit"
+        ]
+      },
+      {
+        "id": "range-variable-value",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall y fn_range(r57_identity):\n    r57_identity_on_range(y)=y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-variable-value.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6d3409be6adbdbd9c46abbebe1f581f95262cc04639372abfbf9b3a03dbc46c8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-variable-value.lit"
+        ]
+      },
+      {
+        "id": "range-membership-and-direct",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(x) $in fn_range(r57_identity)\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-membership-and-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a5d015ee92548a679227417c906bae008e715282cb092e2b5c52dbed1f329eb9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-membership-and-direct.lit"
+        ]
+      },
+      {
+        "id": "false-nested-offset",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(r57_identity(x))=x+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/false-nested-offset.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "289b13aaf2eb2409444639dacb854e14da242de59515c74a7fb8db0050334071"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/false-nested-offset.lit"
+        ]
+      },
+      {
+        "id": "false-range-offset",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/false-range-offset.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e82106d0265486d93560a15c3a542ee0a8bca4869d4b4949f9edba6b71e670ec"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/false-range-offset.lit"
+        ]
+      },
+      {
+        "id": "constant-function-range-negative",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nhave fn r57_constant(x R) R = 5\n0 $in fn_range(r57_constant)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/constant-function-range-negative.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73215d402dd4ac9e5a4da505a758c462bc395e77c4eefeb9e11f909f556a5776"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/constant-function-range-negative.lit"
+        ]
+      },
+      {
+        "id": "range-inner-value-bridge",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nclaim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-inner-value-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f4a276ad49cb5938cc868e99a69fe50f35f94f12616fd73e1eb127b2051025c3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-inner-value-bridge.lit"
+        ]
+      },
+      {
+        "id": "range-outer-value-bridge",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nclaim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-outer-value-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "95bbb9024a195a0ea3e6ff86dbf025836e9db645c912f2098880a19f3c9e49ca"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-outer-value-bridge.lit"
+        ]
+      },
+      {
+        "id": "range-direct-after-global-value",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nforall x R:\n    r57_identity(x)=x\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-direct-after-global-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0848ae60f5c2032952c9d8740453b007248c87cab2b8ad1f3d333dfc37e43d2d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-direct-after-global-value.lit"
+        ]
+      },
+      {
+        "id": "range-inner-value-only",
+        "source": "have fn r57_identity(x R) R = x\nhave fn r57_identity_on_range(y fn_range(r57_identity)) R = y\n\nclaim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-57-cases/range-inner-value-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07854a410b362aabb0b31330609575c40e89d8bf47f17f34daf7f961cbf0bd6d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round57-cases/range-inner-value-only.lit"
+        ]
+      }
+    ],
+    "source_note": "Current chapter04 had independent forall x range equation at inspection; older anticipated malformed strict-order block is not a current finding.",
+    "scope": "Isolated nested identity/range definitions and central equations, no imported HighSchoolCite predicate/inverse existence/witness or whole chapter acceptance."
+  }
+}

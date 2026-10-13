@@ -1,0 +1,7 @@
+claim:
+    ? forall a,c,z R:
+        a<=z
+        c<=z
+        =>:
+            max(a,c)<=z
+    max(a,c)<=max(z,z)=z

@@ -1,0 +1,2 @@
+forall a R:
+    finite_set_size({a})<=finite_set_size({a})

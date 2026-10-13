@@ -1,0 +1,4 @@
+forall a,d Z:
+    d < 0
+    =>:
+        a%d < d

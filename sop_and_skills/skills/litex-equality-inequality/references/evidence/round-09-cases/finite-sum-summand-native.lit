@@ -1,0 +1,7 @@
+claim:
+    ? forall f fn(x {1,2}) R:
+        forall x {1,2}:
+            0 <= f(x)
+        =>:
+            f(1) <= finite_set_sum({1,2},f)
+    release thm finite_set_summand_le_sum(f(1),finite_set_sum({1,2},f))

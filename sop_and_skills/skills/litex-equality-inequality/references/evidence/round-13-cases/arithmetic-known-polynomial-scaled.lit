@@ -1,0 +1,9 @@
+claim:
+    ? forall x,y,a,b,c,d,s,t R:
+        x = a+b
+        y = c+d
+        =>:
+            x*s+y*t = (a+b)*s+(c+d)*t
+    x*s = (a+b)*s
+    y*t = (c+d)*t
+    x*s+y*t = (a+b)*s+(c+d)*t

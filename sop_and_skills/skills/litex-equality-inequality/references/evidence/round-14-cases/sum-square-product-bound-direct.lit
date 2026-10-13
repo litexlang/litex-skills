@@ -1,0 +1,4 @@
+forall x,y,A,B R:
+    x^2+y^2 = A*B
+    =>:
+        x^2 <= A*B

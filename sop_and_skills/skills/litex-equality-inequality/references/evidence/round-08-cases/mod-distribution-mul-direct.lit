@@ -1,0 +1,2 @@
+forall a,b Z,m N+:
+    (a*b)%m = ((a%m)*(b%m))%m

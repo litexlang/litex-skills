@@ -1,0 +1,6 @@
+claim:
+    ? forall m N+,range_index Z:
+        m <= range_index
+        =>:
+            range_index $in N+
+    0 < m <= range_index

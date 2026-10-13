@@ -1,0 +1,17 @@
+thm near_nonzero_abs_lower:
+    ? forall z, y R:
+        y != 0
+        abs(z - y) <= abs(y) / 2
+        =>:
+            abs(z) >= abs(y) / 2
+    y - z = -(z - y)
+    abs(y - z) = abs(-(z - y)) = abs(z - y)
+    abs(y) = abs((y - z) + z) <= abs(y - z) + abs(z) = abs(z - y) + abs(z) <= abs(y) / 2 + abs(z)
+    abs(z) >= abs(y) / 2 or abs(z) < abs(y) / 2
+    by cases:
+        ? abs(z) >= abs(y) / 2
+        case abs(z) >= abs(y) / 2:
+            abs(z) >= abs(y) / 2
+        case abs(z) < abs(y) / 2:
+            abs(y) / 2 + abs(z) < abs(y) / 2 + abs(y) / 2 = abs(y)
+            impossible abs(y) <= abs(y) / 2 + abs(z)

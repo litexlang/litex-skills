@@ -1,0 +1,578 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-77-2026-10-09.json",
+  "original_sha256": "f0ae69808e5c63853a3ccb5003d8bec059ce6b5109c88e627df41a8c68c3f737",
+  "original_bytes": 492293,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "f98867af9f5b656748b1183d13e31d489d42b3e1310bf2a329049cd106a6a246",
+    "cases": [
+      {
+        "id": "baseline",
+        "source": {
+          "text_omitted": true,
+          "sha256": "bd8043aaf6cfc0a9e43a14d2414c3ff91d2122e8398285fd937da7e6f580ac66",
+          "characters": 4909,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/baseline.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bbecdb11ade60a96eb58e52e50e0a9ceb1333d2d361458a9efbb22927d4c19e9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "delete-x-quotient-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ce19b0f88f85d0f401126b940e70f6dc8f809fd542d4a3703d8c725d834b012f",
+          "characters": 4799,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-x-quotient-echo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-x-quotient-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "950b4b3429dee37b9ea06367daa5928d2f1afe2a292886d8b6375a3cee288162"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/delete-x-quotient-echo.lit"
+        ]
+      },
+      {
+        "id": "delete-y-quotient-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "5981e0323d83051186099dd33c4f20e2b0d31f32dd2841e4bebb824e5d34ea6b",
+          "characters": 4799,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-y-quotient-echo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-y-quotient-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e63c6e8431e91122a74b40b94d90f700cc42780416f24f4349afbadf7d0c58cd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/delete-y-quotient-echo.lit"
+        ]
+      },
+      {
+        "id": "delete-both-quotient-echoes",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2dfa5d151ebe6f93357656fe6f71d99b35ac7568e795b6d8027dbf3b6a06d563",
+          "characters": 4689,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-both-quotient-echoes.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-both-quotient-echoes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93fcd87347127f07dcf64ef95642a75dd6df005e76858fe45f1aad5166cf2444"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/delete-both-quotient-echoes.lit"
+        ]
+      },
+      {
+        "id": "short-delete-x-real-error",
+        "source": {
+          "text_omitted": true,
+          "sha256": "e76f8bfadd7e094f8afc78e4a8fa88d24227412cda1cc62402a04ee4b4fe2ce9",
+          "characters": 4532,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-delete-x-real-error.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-delete-x-real-error.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "290bf2efdfb2547aacd78a3bc6b9d0e99fe826fa24115be89fd63648cc4d7f6b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/short-delete-x-real-error.lit"
+        ]
+      },
+      {
+        "id": "short-delete-y-real-error",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f14ce119b5e7a4c179d3ae11bafa13efd7ae953f429ab9c717672b1ba2089c50",
+          "characters": 4532,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-delete-y-real-error.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-delete-y-real-error.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e63911322cddc3e83745bc0f4f64fea8ce501ce0326e2b619ab36ac1027ce49e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/short-delete-y-real-error.lit"
+        ]
+      },
+      {
+        "id": "short-delete-both-real-errors",
+        "source": {
+          "text_omitted": true,
+          "sha256": "429b107ec30d0e648f88a2f576b6336a72e9bcac96900145496dadc7242fdcdb",
+          "characters": 4375,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-delete-both-real-errors.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-delete-both-real-errors.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "403000351a955484a9bc0ace7a29e14822ddbbc9a71ed7c7bec7e06836d4d61f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/short-delete-both-real-errors.lit"
+        ]
+      },
+      {
+        "id": "wrong-x-partial-slope",
+        "source": {
+          "text_omitted": true,
+          "sha256": "83d49d9e991d9ede3d0123398a3496521be39a3836136c7d688257a6df0a3683",
+          "characters": 4691,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/wrong-x-partial-slope.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/wrong-x-partial-slope.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ea7ce2e0854795478410eb113dfcae03e227b431adfe8bceb94e15f3d4e8492"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/wrong-x-partial-slope.lit"
+        ]
+      },
+      {
+        "id": "merged-absolute-error-chains",
+        "source": {
+          "text_omitted": true,
+          "sha256": "22a71adaeed7b886816dc0be8233c785307052e553275e693d5d3ebcd5cec0fa",
+          "characters": 4443,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/merged-absolute-error-chains.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/merged-absolute-error-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ab2601f72f083e1eac8dc14d3856a52fd71479b295c6ad22046ff976295e8bcd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/merged-absolute-error-chains.lit"
+        ]
+      },
+      {
+        "id": "delete-delta-folds",
+        "source": {
+          "text_omitted": true,
+          "sha256": "1b9715feb08cf0aa1fb16d7cd339db8c04f8f3d3ab8780606ec79e7e34b19bd2",
+          "characters": 4483,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-delta-folds.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-delta-folds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50f1a62d5b49e948c06a199b791b2aa84663bcf0ea32275ab4b83bf5f1bdc6c2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/delete-delta-folds.lit"
+        ]
+      },
+      {
+        "id": "delete-derivative-folds",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4bd5c69452da2d310e2919c4b384f921c75e3d0d574fc98873a0e75f5c963953",
+          "characters": 4529,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-derivative-folds.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/delete-derivative-folds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "437c113d6c9ca09a240b0ca2ad326cf4e51879b81c97bd9fc2fd76fdb9c6f6a2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/delete-derivative-folds.lit"
+        ]
+      },
+      {
+        "id": "combined-short-route",
+        "source": {
+          "text_omitted": true,
+          "sha256": "82ab1626a752e6aed0bc30e362a08a58e8b655c21950fcecc36650f35a1995c8",
+          "characters": 4077,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/combined-short-route.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/combined-short-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "87fc84673164abca4af846edbdf4271c120589b62447d24f3edb25b4cd9e971d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/combined-short-route.lit"
+        ]
+      },
+      {
+        "id": "baseline-through-coordinate-gradient",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4e8386f56f51964bc684e2b782cc7d3eac25f82f3908f349389b9afb770c1061",
+          "characters": 6122,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/baseline-through-coordinate-gradient.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/baseline-through-coordinate-gradient.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "88972397392ce59a5f6c02a0d873f4984dc5cbd63ab4420abf87d9f9fbe3d3a7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/baseline-through-coordinate-gradient.lit"
+        ]
+      },
+      {
+        "id": "short-through-coordinate-gradient",
+        "source": {
+          "text_omitted": true,
+          "sha256": "a52065149e53c33d0cd87bb079d8fadd3e44714599c7046fbcaa1d3653aedf34",
+          "characters": 5290,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-through-coordinate-gradient.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-through-coordinate-gradient.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5759269fb71b48edeaca4d094f4548a7e661be30d0a856c92b127bff2a1f9c0b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/short-through-coordinate-gradient.lit"
+        ]
+      },
+      {
+        "id": "short-wrong-x-slope",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d6fe95614939bddfce20ef24cb4540ada94440c620c105e015d9488938c367a8",
+          "characters": 4079,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-wrong-x-slope.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-77-cases/short-wrong-x-slope.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d98b3dfd27047e240cd4f29401648e4147e67092473ebc4fd2385d60f9af778a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round77-cases/short-wrong-x-slope.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 15,
+      "accepted": 10,
+      "normal_rejections": 5
+    },
+    "scope": "Exact actual coordinate partial-derivative constructions with checked short quotient prefix; exact-line body deletions, original targets/witnesses kept. Original/short partial-derivative proof consumers additionally checked through actual coordinate-gradient theorem; numeric gradient demo excluded."
+  }
+}

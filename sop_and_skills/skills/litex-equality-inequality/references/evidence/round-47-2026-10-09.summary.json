@@ -1,0 +1,472 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-47-2026-10-09.json",
+  "original_sha256": "aa11d9d81f3a4777858f5ab72bfb028b6113047acd270af1193abc5e3610cfc8",
+  "original_bytes": 18616471,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "per_file_observation_limit_seconds": 20,
+    "cases": [
+      {
+        "id": "formula-original",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= (candidate - (a + b + c) / 3)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        release thm r47_three_point_sse_decomposition(a, b, c, candidate)\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5d6e87c839789e68648874d27a8b34fc43b908545b84fc6299afa78484640c6e"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-original.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/formula-original.lit"
+        ]
+      },
+      {
+        "id": "formula-chain-nonnegative",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_formula_nonnegative:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-chain-nonnegative.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7277fa32d7ae238b8a8b9a586fedf0cd0321f77f2e0c18a1a1b485bd09a6cbe5"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-chain-nonnegative.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/formula-chain-nonnegative.lit"
+        ]
+      },
+      {
+        "id": "mean-original-with-original-formula",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= (candidate - (a + b + c) / 3)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        release thm r47_three_point_sse_decomposition(a, b, c, candidate)\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean3_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    r47_mean3(a, b, c) = (a + b + c) / 3\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n    $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-original-with-original-formula.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6b8eb2e1db9cc7e0e5ff5cda83bcef44eccd06c6a25d05111eeb5d8c337b86be"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-original-with-original-formula.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-original-with-original-formula.lit"
+        ]
+      },
+      {
+        "id": "false-center-zero",
+        "status": "rejected",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\n$r47_is_least_squares_center(0,1,1,1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/false-center-zero.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b83cc8be56a576f45f71f4a79427710f221e1f1fce3376d37ce2ffd530bad177"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/false-center-zero.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/false-center-zero.lit"
+        ]
+      },
+      {
+        "id": "false-coefficient-two",
+        "status": "rejected",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_false_coefficient:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 2 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/false-coefficient-two.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f58718e749cfd3d744a31ad5f9ae7c7334824cfddb2634bdab379721399aa09c"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/false-coefficient-two.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/false-coefficient-two.lit"
+        ]
+      },
+      {
+        "id": "formula-bodyless",
+        "status": "rejected",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "390ac525bfd06ee0990d1a4d4544ecb45b9586366e0a64c5b0f20271af01ad8c"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-bodyless.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/formula-bodyless.lit"
+        ]
+      },
+      {
+        "id": "formula-direct-claim",
+        "status": "rejected",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_formula_direct_claim:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-direct-claim.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6269919bf60418a89c6701269ce073d7f345ee8be2820f09ecb7d34a095cb3df"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-direct-claim.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/formula-direct-claim.lit"
+        ]
+      },
+      {
+        "id": "formula-chain-only",
+        "status": "observation_limit_unknown",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_formula_short:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/formula-chain-only.lit"
+        ],
+        "exit_code": null,
+        "output": null,
+        "note": "One-shot file process terminated at explicit 20s budget; no proof result. Persistent Session unchanged.",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/formula-chain-only.lit"
+      },
+      {
+        "id": "mean-original-with-short-formula",
+        "status": "observation_limit_unknown",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean3_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    r47_mean3(a, b, c) = (a + b + c) / 3\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n    $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-original-with-short-formula.lit"
+        ],
+        "exit_code": null,
+        "output": null,
+        "note": "One-shot file process terminated at explicit 20s budget; no proof result. Persistent Session unchanged.",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-original-with-short-formula.lit"
+      },
+      {
+        "id": "mean-bodyless",
+        "status": "observation_limit_unknown",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean3_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-bodyless.lit"
+        ],
+        "exit_code": null,
+        "output": null,
+        "note": "One-shot file process terminated at explicit 20s budget; no proof result. Persistent Session unchanged.",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-bodyless.lit"
+      },
+      {
+        "id": "mean-value-and-call",
+        "status": "observation_limit_unknown",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean_two:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    r47_mean3(a, b, c) = (a + b + c) / 3\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-value-and-call.lit"
+        ],
+        "exit_code": null,
+        "output": null,
+        "note": "One-shot file process terminated at explicit 20s budget; no proof result. Persistent Session unchanged.",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-value-and-call.lit"
+      },
+      {
+        "id": "mean-call-only",
+        "status": "observation_limit_unknown",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean_one:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-call-only.lit"
+        ],
+        "exit_code": null,
+        "output": null,
+        "note": "One-shot file process terminated at explicit 20s budget; no proof result. Persistent Session unchanged.",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-call-only.lit"
+      },
+      {
+        "id": "mean-original-with-original-formula-nonnegative-prefix",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean3_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    r47_mean3(a, b, c) = (a + b + c) / 3\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n    $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-original-with-original-formula-nonnegative-prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1eb7f687e078ae2c53b1f0bca060bef7f4fd561517eaf0114a9292585624c307"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-original-with-original-formula-nonnegative-prefix.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-original-with-original-formula-nonnegative-prefix.lit"
+        ]
+      },
+      {
+        "id": "mean-bodyless-nonnegative-prefix",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean3_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-bodyless-nonnegative-prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f3567b1cd845c6401cda135aa9b52a001c5444bd8d2b5d67df719c0063ae923a"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-bodyless-nonnegative-prefix.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-bodyless-nonnegative-prefix.lit"
+        ]
+      },
+      {
+        "id": "mean-value-and-call-nonnegative-prefix",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean_two:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    r47_mean3(a, b, c) = (a + b + c) / 3\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-value-and-call-nonnegative-prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3f23c468672b30181a8ae15a8b7b32803f24fb4d7c5aa16c484c890aaad5fa5b"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-value-and-call-nonnegative-prefix.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-value-and-call-nonnegative-prefix.lit"
+        ]
+      },
+      {
+        "id": "mean-call-only-nonnegative-prefix",
+        "status": "accepted",
+        "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nhave fn r47_mean3(a, b, c R) R = (a + b + c) / 3\n\nthm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n\nthm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n\nthm r47_mean_one:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center(r47_mean3(a, b, c), a, b, c)\n    release thm r47_mean_formula_is_least_squares_center(a, b, c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-call-only-nonnegative-prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "378c483717ac6f09db0ea30d0a1d0e11e884eaf0f3de85d8afa8f3a4ab645f5f"
+        },
+        "stderr": "",
+        "artifact_path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-47-cases/mean-call-only-nonnegative-prefix.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round47-cases/mean-call-only-nonnegative-prefix.lit"
+        ]
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Verified least-squares nonnegative-chain slice and mean consumer; five cold probes remain observation-limit unknown. Warm chain-only candidate later returned normal failure, retained Session then accepted nonnegative version.",
+    "warm_journal_limit": "Orchestrator736 termination discarded in-memory rows; source/acceptance observations retained explicitly as partial journal. No complete warm response claim.",
+    "warm_followup": {
+      "chain_only": "Normal failure observed; full response truncated, earliest failed phase unavailable. Session remains live.",
+      "nonnegative_version": "Accepted in same Session; exact returned source/response retained in updated partial journal."
+    }
+  }
+}

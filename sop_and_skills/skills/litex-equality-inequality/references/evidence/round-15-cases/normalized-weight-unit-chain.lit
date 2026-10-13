@@ -1,0 +1,9 @@
+claim:
+    ? forall p,q R:
+        p >= 0
+        q >= 0
+        p+q > 0
+        =>:
+            0 <= p/(p+q) <= 1
+    0 <= p <= p+q
+    0 <= p/(p+q) <= (p+q)/(p+q) = 1

@@ -1,0 +1,6 @@
+claim:
+    ? forall slope1,slope2 R:
+        slope1!=slope2
+        =>:
+            abs(slope1-slope2)/3 $in R+
+    slope1-slope2!=0

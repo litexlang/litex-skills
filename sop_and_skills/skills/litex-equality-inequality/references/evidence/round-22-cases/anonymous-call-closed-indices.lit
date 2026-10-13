@@ -1,0 +1,5 @@
+forall c R:
+    fn(k Z) R {c}(0)=c
+    fn(k Z) R {c}(1)=c
+    =>:
+        fn(k Z) R {c}(0)*fn(k Z) R {c}(1)=c*c

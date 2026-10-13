@@ -1,0 +1,5 @@
+forall a,b,M R:
+    b > 0
+    a <= M*b
+    =>:
+        a/b <= M

@@ -1,0 +1,55 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-47-session.json",
+  "original_sha256": "e0645c9634fea10b403fc75c7eca1d6c4a25563cc716a599e5ed422e55052307",
+  "original_bytes": 5339,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "id": "initial-0",
+      "source": "prop r47_is_least_squares_center(center, a, b, c R):\n    forall candidate R:\n        (a - center)^2 + (b - center)^2 + (c - center)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2",
+      "status": "accepted",
+      "response_capture": "Only terminal success observation retained in tool output; complete response unavailable after orchestration cell termination."
+    },
+    {
+      "id": "initial-1",
+      "source": "have fn r47_mean3(a, b, c R) R = (a + b + c) / 3",
+      "status": "accepted",
+      "response_capture": "Only terminal success observation retained in tool output; complete response unavailable after orchestration cell termination."
+    },
+    {
+      "id": "initial-2",
+      "source": "thm r47_three_point_sse_decomposition:\n    ? forall a, b, c, candidate R:\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2",
+      "status": "accepted",
+      "response_capture": "Only terminal success observation retained in tool output; complete response unavailable after orchestration cell termination."
+    },
+    {
+      "id": "initial-3",
+      "source": "thm r47_mean_formula_is_least_squares_center:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= (candidate - (a + b + c) / 3)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        release thm r47_three_point_sse_decomposition(a, b, c, candidate)\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+      "status": "accepted",
+      "response_capture": "Only terminal success observation retained in tool output; complete response unavailable after orchestration cell termination."
+    },
+    {
+      "id": "formula-chain-only-pending",
+      "source": "thm r47_formula_short:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+      "status": "normal_failure_observed",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "excerpt": ""
+      },
+      "session_id": 25852,
+      "response_capture": "write_stdin output was truncated: Normal repl success:false, exact r47_formula_short statement, session_error:null and final litex> were observed; full response and first failing proof phase unavailable.",
+      "response_original_token_count": 12650965
+    },
+    {
+      "source": "thm r47_formula_nonnegative:\n    ? forall a, b, c R:\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n    claim:\n        ? forall candidate R:\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 3 * (candidate - (a + b + c) / 3)^2 = (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\n    by def $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1975280266ad4f07d6db401ad0724ab29a4d908679535ed5df2c75224cbf013c",
+        "excerpt": "thm r47_formula_nonnegative:\r\n    ? forall a, b, c R:\r\n        $r47_is_least_squares_center((a + b + c) / 3, a, b, c)\r\n    claim:\r\n        ? forall candidate R:\r\n            (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 <= (a - candidate)^2 + (b - candidate)^2 + (c - candidate)^2\r\n        0 <= 3 * (candidate - (a + b + c) / 3)^2\r\n        (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 = (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) / 3)^2 + 0 <= (a - (a + b + c) / 3)^2 + (b - (a + b + c) / 3)^2 + (c - (a + b + c) "
+      }
+    }
+  ]
+}

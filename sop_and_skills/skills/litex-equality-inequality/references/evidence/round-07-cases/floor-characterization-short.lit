@@ -1,0 +1,8 @@
+claim:
+    ? forall x R,n Z:
+        n <= x
+        x < n+1
+        =>:
+            floor(x) = n
+    floor(x) <= x < n+1
+    n <= x < floor(x)+1

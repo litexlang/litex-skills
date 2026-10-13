@@ -1,0 +1,1241 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-24-2026-10-09.json",
+  "original_sha256": "9952a3334f960881e2eefa1bdcedbd279d24201a46c979762218371b189985c2",
+  "original_bytes": 925737,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+    "sha256": "fdd886de6c331668e4a6ea998be37644bba3f08dd310418009bb1859136e3eb1",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-24.log"
+    },
+    "source_anchor": {
+      "path": "scripts/linear_algebra_done_right/textbook/chap1a.lit",
+      "sha256": "0bb327ca311b37565794ef1f8a257df685ec890b8c55b459efd9702e569db8f1",
+      "prefix": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n",
+      "original_add": "thm coordinate_add_entry:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n",
+      "original_smul": "thm coordinate_smul_entry:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n"
+    },
+    "session": [
+      {
+        "id": "prefix-0",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e642e25169ab0472b30f10df8d53bf716af18f2f264a54d47bd8c1faf91e3d88",
+          "excerpt": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\r\n    scalar_zero != scalar_one\r\n    forall x, y, z s:\r\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\r\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\r\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\r\n    forall x, y s:\r\n        scalar_add(x, y) = scalar_add(y, x)\r\n        scalar_mul(x, y) = scalar_mul(y, x)\r\n    forall x s:\r\n        scala"
+        },
+        "session_id": 50594,
+        "role": "declaration"
+      },
+      {
+        "id": "prefix-1",
+        "source": "struct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "00fe7e18bc0bd17ea1f616fd49069269f6578d2dfae1aa37e92fa7ed2b97bd68",
+          "excerpt": "struct ScalarSystem<s nonempty_set>:\r\n    zero s\r\n    one s\r\n    add fn(x, y s) s\r\n    neg fn(x s) s\r\n    mul fn(x, y s) s\r\n    inv fn(x s) s\r\n    <=>:\r\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "declaration"
+      },
+      {
+        "id": "prefix-2",
+        "source": "template<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "60e4a23d5f0b2163c5a38d50647d5791cf3576af899adbea71d5dd8bf2a1d9e1",
+          "excerpt": "template<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\r\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "declaration"
+      },
+      {
+        "id": "prefix-3",
+        "source": "template<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d348347837b761b1447c5bb2e8242bd4852b899ab6c5a23c9bbea76596d976a2",
+          "excerpt": "template<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\r\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "declaration"
+      },
+      {
+        "id": "coordinate-add-original",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "70fb00a22c9362d2455cbca46532deb1b7bc487bbbbdabd87afc7aabdc4f083e",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\r\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-original",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "79d6aa5d930fe0afdb0db64155b4fcdbb9e4d2a89fb06ae12f50e4abba565869",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\r\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-direct-thm",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9cd61df99776394a7de4c39016ba3e97b65bb819bec9616810feb29ed584bf32",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-direct-thm",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d9689e673eeb850279e9c843458daefcf5aa581db6883e0b057838c26b91d2d7",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-no-template-equality",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "f26b51307b888d788e9bd82009f6eda21d89ec044f9f18875bab626912556719",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-no-result-chain",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9cd61df99776394a7de4c39016ba3e97b65bb819bec9616810feb29ed584bf32",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-no-template-equality",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5a5f2679dcdccb6acfd67768b9a23bea28f2f462de84302b678ee8f1580c4c1f",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-no-result-chain",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d9689e673eeb850279e9c843458daefcf5aa581db6883e0b057838c26b91d2d7",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-bare-claim",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8904eef7da55473da52b89c9c2adc45502f860926142245ae2b4d439759fd576",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-bare-forall",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = \\coordinate_add<s, scalars, n>(x, y)\n    idx <= n\n    =>:\n        result(idx) = scalars.add(x(idx), y(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5d10df8cd2aa924fedd76f63a87cd06566682f5953ee351012cad4dfcf6149a1",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n    result = \\coordinate_add<s, scalars, n>(x, y)\r\n    idx <= n\r\n    =>:\r\n        result(idx) = scalars.add(x(idx), y(idx))\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-exact-original-thm",
+        "source": "thm coordinate_add_entry:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b289d99d3e31ef4e110a93f1192aa73a8ed9fc0e5bc18beb745ebfefeda3e25d",
+          "excerpt": "thm coordinate_add_entry:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\r\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-bare-claim",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "842f07afd8de6e461f08d2b8014429d0b6731b860d313093a28db1a778c0ac4f",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-bare-forall",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = \\coordinate_smul<s, scalars, n>(a, x)\n    idx <= n\n    =>:\n        result(idx) = scalars.mul(a, x(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c42249d689517703c76a952bb182c1b89cadeec0cdb38542c631bfb90e1dc457",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n    result = \\coordinate_smul<s, scalars, n>(a, x)\r\n    idx <= n\r\n    =>:\r\n        result(idx) = scalars.mul(a, x(idx))\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-exact-original-thm",
+        "source": "thm coordinate_smul_entry:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ea9d79faafc5c41b9f5223c57b4b1c5b04d602f6d8c2af48d21536fe9de0df1f",
+          "excerpt": "thm coordinate_smul_entry:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\r\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-result-literal-only",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    result = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "33ea3d20463ffe9db63eb9cb2c265b6f2bf3ed664349dd987f0638b03ed5e37c",
+          "excerpt": "Warning: truncated output (original token count: 12580)\nTotal output lines: 1016\n\nclaim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    result = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success"
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-call-literal-only",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "acd21bc15fbac1c86872a93252daac8269a0a6664c64e90712ea6e9c43558fe7",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-missing-index-bound",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = \\coordinate_add<s, scalars, n>(x, y)\n    =>:\n        result(idx) = scalars.add(x(idx), y(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6bcbfa9084ab6d9573d4ed4c7aa6e31b3a1d3507cbac749a72e91e06bef1c3b1",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n    result = \\coordinate_add<s, scalars, n>(x, y)\r\n    =>:\r\n        result(idx) = scalars.add(x(idx), y(idx))\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\\n    result = \\\\coordinate_add<s, scalars, n>(x, y)\\n    =>:\\n        result(idx"
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-wrong-result",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = \\coordinate_add<s, scalars, n>(x, y)\n    idx <= n\n    =>:\n        result(idx) = x(idx)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2d853339b244232ebb3ada17d902d6506cce25af61cae07c3e070547899cc767",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n    result = \\coordinate_add<s, scalars, n>(x, y)\r\n    idx <= n\r\n    =>:\r\n        result(idx) = x(idx)\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\\n    result = \\\\coordinate_add<s, scalars, n>(x, y)\\n    idx <= n\\n    =>:\\n       "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-result-literal-only",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    result = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e26ba93032f639c8cfd544308a0feb349d05424cf75800af65a0417db013164d",
+          "excerpt": "Warning: truncated output (original token count: 9086)\nTotal output lines: 762\n\nclaim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    result = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": fals"
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-call-literal-only",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a2d00b1569ff5d4f9c6fb2b9bd8c8719cfe9e67963412ef809c529c7f3ac9154",
+          "excerpt": "claim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        idx <= n\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-missing-index-bound",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = \\coordinate_smul<s, scalars, n>(a, x)\n    =>:\n        result(idx) = scalars.mul(a, x(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "fdfd9d65b3738c0fe17ae6452bf590176713126bd4cafbc1ddea6955aea17abc",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n    result = \\coordinate_smul<s, scalars, n>(a, x)\r\n    =>:\r\n        result(idx) = scalars.mul(a, x(idx))\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\\n    result = \\\\coordinate_smul<s, scalars, n>(a, x)\\n    =>:\\n        result(id"
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-wrong-result",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = \\coordinate_smul<s, scalars, n>(a, x)\n    idx <= n\n    =>:\n        result(idx) = scalars.mul(scalars.zero, x(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "071923b531287c651b6dc9d2a09386d9f1c644df4dfd071f0a408ea3017cf426",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n    result = \\coordinate_smul<s, scalars, n>(a, x)\r\n    idx <= n\r\n    =>:\r\n        result(idx) = scalars.mul(scalars.zero, x(idx))\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\\n    result = \\\\coordinate_smul<s, scalars, n>(a, x"
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-supplied-literal",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n    idx <= n\n    =>:\n        result(idx) = scalars.add(x(idx), y(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "1a8b215caf83c9ea91bfb338f0bd350382b1d55890f4f0f7b51785ee4cb8c16e",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n    result = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n    idx <= n\r\n    =>:\r\n        result(idx) = scalars.add(x(idx), y(idx))\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-add-chain-missing-index-bound",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "305ace052c3f3c72371e2801f34a4cb193e6cf4f692e0bab90d7946816097ddd",
+          "excerpt": "Warning: truncated output (original token count: 1917)\nTotal output lines: 177\n\nclaim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_add<s, scalars, n>(x, y)\r\n        =>:\r\n            result(idx) = scalars.add(x(idx), y(idx))\r\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\r\n\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-supplied-literal",
+        "source": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n    idx <= n\n    =>:\n        result(idx) = scalars.mul(a, x(idx))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b345b603e8497de161e342f0d957550c129085aa85c93295ff03e249ce96ca3",
+          "excerpt": "forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n    result = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n    idx <= n\r\n    =>:\r\n        result(idx) = scalars.mul(a, x(idx))\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 50594,
+        "role": "case"
+      },
+      {
+        "id": "coordinate-smul-chain-missing-index-bound",
+        "source": "claim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "cb56e1a754b0d263d467ac551248b6bc766472b3bc7fd316e8144ce85ee05abf",
+          "excerpt": "Warning: truncated output (original token count: 1915)\nTotal output lines: 177\n\nclaim:\r\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\r\n        result = \\coordinate_smul<s, scalars, n>(a, x)\r\n        =>:\r\n            result(idx) = scalars.mul(a, x(idx))\r\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\r\n\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n "
+        },
+        "session_id": 50594,
+        "role": "case"
+      }
+    ],
+    "cases": [
+      {
+        "id": "coordinate-add-original",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7ea8e7cb0ed656800f778bcefca1e1faeba7566f4ab7ae885ceec57b2ac7a65e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-original",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5cca4685eb8e2979d58b1bea7437b83d67eef937cc6323911d8e184d23755e3f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-original.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-direct-thm",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-direct-thm.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ba9a03314d4f3e817dcd2fc55c819691d4fbc1e9dab10cd296eac749b94350fd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-direct-thm.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-direct-thm",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-direct-thm.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a30b3b6875f114be57413f89fb8f828c797cabe1b2bd262a357d823ea2ba9f3d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-direct-thm.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-no-template-equality",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-no-template-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c337742688e976976ef55ab6e675dd45e8daf024a78e3d5727227e8512a514ea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-no-template-equality.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-no-template-equality",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-no-template-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f6a660f8e725a026496d5c0f7cc2b1a4106097fa4321182fc24c8818d32a88b5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-no-template-equality.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-bare-claim",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-bare-claim.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d2dd91b05588b7a7cf25a6994a640d856469adf4b3a30f510951b4900bafe83a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-bare-claim.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-bare-forall",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = \\coordinate_add<s, scalars, n>(x, y)\n    idx <= n\n    =>:\n        result(idx) = scalars.add(x(idx), y(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-bare-forall.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e154d31e36f38cde2ff9bc0f81f6c32471e8e7b115804631d147bc65763bd46a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-bare-forall.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-exact-original-thm",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nthm coordinate_add_entry:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n> = fn(u, w finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.add(u(k), w(k))}}\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-exact-original-thm.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "435d0cbd49fedaab65547fc2823a4b332cb8fd4f1c48b5a321fb6f5e56a49fa6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-exact-original-thm.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-bare-claim",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-bare-claim.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "85777a8259750f32d608e7e107437f579f6a8b8c4cf0cda982904558238397b4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-bare-claim.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-bare-forall",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = \\coordinate_smul<s, scalars, n>(a, x)\n    idx <= n\n    =>:\n        result(idx) = scalars.mul(a, x(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-bare-forall.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3fe51b1537bf0554261ec3dea1bdc8cda72e88c7576c0a50cad562d21baf84e8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-bare-forall.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-exact-original-thm",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nthm coordinate_smul_entry:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n> = fn(t s, f finite_seq(s, n)) finite_seq(s, n) {fn(k closed_range(1, n)) s {scalars.mul(t, f(k))}}\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-exact-original-thm.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8fcab26d658e15373a2113afa407b383ab937c507b8ea5a7178ee33c302e453e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-exact-original-thm.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-result-literal-only",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    result = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-result-literal-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7a1eb0ed62294fb2acafa05f648a306a80016ac42d2e2a9095209b5e7d6c4bdd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-result-literal-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-call-literal-only",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        idx <= n\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-call-literal-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7a75ca689012d2d05f3fd1eee5f33d07c8203baead6c7230050de943c05426ff"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-call-literal-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-missing-index-bound",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = \\coordinate_add<s, scalars, n>(x, y)\n    =>:\n        result(idx) = scalars.add(x(idx), y(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-missing-index-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5b2649d9ce7d0a0d18ba36034efe732ed268a9c023c3376f43a8f837251699da"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-missing-index-bound.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-wrong-result",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = \\coordinate_add<s, scalars, n>(x, y)\n    idx <= n\n    =>:\n        result(idx) = x(idx)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-wrong-result.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2726e9d986e8676f27afa82b65f6a935a73c2499ab434c9907ec3b04c0fcaf30"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-wrong-result.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-result-literal-only",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    result = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-result-literal-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "75f97cfdafcc25cf75d3d177fc916ae8c53b2e6748507687bf4be5c032430538"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-result-literal-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-call-literal-only",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        idx <= n\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-call-literal-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c60170a745e9089e4ee16495b45b866f7e6e1afc241df1707cad3cf5e659bc22"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-call-literal-only.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-missing-index-bound",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = \\coordinate_smul<s, scalars, n>(a, x)\n    =>:\n        result(idx) = scalars.mul(a, x(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-missing-index-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52bb87a50bcd41f8f7438a764b47e081ccf5080451ca7fb096e7f1fe30920532"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-missing-index-bound.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-wrong-result",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = \\coordinate_smul<s, scalars, n>(a, x)\n    idx <= n\n    =>:\n        result(idx) = scalars.mul(scalars.zero, x(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-wrong-result.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cf17a97e1fdbe1a1c0146a3186d7dcace14895a648a37394ec5647bd7e86f17a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-wrong-result.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-supplied-literal",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n    result = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n    idx <= n\n    =>:\n        result(idx) = scalars.add(x(idx), y(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-supplied-literal.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6cd8ec11b4601f347f51c80d9f02a233fd14ba38fed788a90f8b9466dabacc6c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-supplied-literal.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-add-chain-missing-index-bound",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:\n        result = \\coordinate_add<s, scalars, n>(x, y)\n        =>:\n            result(idx) = scalars.add(x(idx), y(idx))\n    result = \\coordinate_add<s, scalars, n>(x, y) = fn(k closed_range(1, n)) s {scalars.add(x(k), y(k))}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-add-chain-missing-index-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4afd523e4ae2e1e552607cc03cf4908e449b7a69fa884ce393bc4b929a192192"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-add-chain-missing-index-bound.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-supplied-literal",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nforall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n    result = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n    idx <= n\n    =>:\n        result(idx) = scalars.mul(a, x(idx))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-supplied-literal.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d970046857e99d439408b3e4f49d49f5f7a0d04600ceedfae626a329cb656fcb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-supplied-literal.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "coordinate-smul-chain-missing-index-bound",
+        "source": "prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):\n    scalar_zero != scalar_one\n    forall x, y, z s:\n        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))\n        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))\n        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))\n    forall x, y s:\n        scalar_add(x, y) = scalar_add(y, x)\n        scalar_mul(x, y) = scalar_mul(y, x)\n    forall x s:\n        scalar_add(scalar_zero, x) = x\n        scalar_add(x, scalar_neg(x)) = scalar_zero\n        scalar_mul(scalar_one, x) = x\n    forall x s:\n        x != scalar_zero\n        =>:\n            scalar_mul(x, scalar_inv(x)) = scalar_one\n\nstruct ScalarSystem<s nonempty_set>:\n    zero s\n    one s\n    add fn(x, y s) s\n    neg fn(x s) s\n    mul fn(x, y s) s\n    inv fn(x s) s\n    <=>:\n        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}\n\ntemplate<s nonempty_set, scalars &ScalarSystem<s>, n N+>:\n    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}\n\nclaim:\n    ? forall s nonempty_set, scalars &ScalarSystem<s>, n N+, a s, x, result finite_seq(s, n), idx N+:\n        result = \\coordinate_smul<s, scalars, n>(a, x)\n        =>:\n            result(idx) = scalars.mul(a, x(idx))\n    result = \\coordinate_smul<s, scalars, n>(a, x) = fn(k closed_range(1, n)) s {scalars.mul(a, x(k))}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-24-cases/coordinate-smul-chain-missing-index-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "662b59aad448c6ed0ed06bce2ab23967d84c4fc80c66dac943250df381ea8c62"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round24-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round24-cases/coordinate-smul-chain-missing-index-bound.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      }
+    ],
+    "scope": "Exact extracted definitions and original theorem bodies; no registered chapter gate or canonical edits.",
+    "summary": {
+      "independent_unique_source_files": 24,
+      "accepted": 8,
+      "rejected": 16
+    },
+    "duplicate_source_variants_excluded_from_count": [
+      {
+        "id": "coordinate-add-no-result-chain",
+        "same_source_as": "coordinate-add-direct-thm"
+      },
+      {
+        "id": "coordinate-smul-no-result-chain",
+        "same_source_as": "coordinate-smul-direct-thm"
+      }
+    ],
+    "case_name_limits": "direct-thm IDs were early extraction labels: their saved code contains only the template equality, not a bare theorem. Bare-claim/forall cases are the actual zero-bridge probes."
+  }
+}

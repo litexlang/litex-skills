@@ -1,0 +1,5 @@
+forall f,g,h fn(x R) R,p R:
+    f(p)=g(p)
+    g(p)=h(p)
+    =>:
+        f(p)=h(p)

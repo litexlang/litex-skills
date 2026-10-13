@@ -1,0 +1,12 @@
+template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:
+    have fn composition(x A) CarrierC = g(f(x))
+
+template<X, Y set, f fn(x X) Y, K power_set(X)>:
+    have fn restricted(x K) Y = f(x)
+
+claim:
+    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:
+        result=\restricted<X,Y,f,K>
+        =>:
+            result(p)=f(p)
+    result(p)=\restricted<X,Y,f,K>(p)

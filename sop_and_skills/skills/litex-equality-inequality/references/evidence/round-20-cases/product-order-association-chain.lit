@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b,c,d R:
+        a*b <= c
+        d >= 0
+        =>:
+            a*(b*d) <= c*d
+    a*(b*d) = (a*b)*d <= c*d

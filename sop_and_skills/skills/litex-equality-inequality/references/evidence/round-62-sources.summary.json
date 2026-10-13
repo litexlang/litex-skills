@@ -1,0 +1,102 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-62-sources.json",
+  "original_sha256": "b1a332e9eda72cb2909cfa5c12a96908f982e85b57f91288771617b80d6a79ce",
+  "original_bytes": 7194,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_paths": {
+      "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/examples/test_statements/boundaries/recursive-equation-explicit-chain.lit": "b400f90830347dc1da54c54800501b01f712e97f8bcf7c1177359eb06e3e45e1",
+      "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/examples/test_statements/boundaries/recursive-increment-explicit-chain.lit": "1665febbba23b91586786d7a292027a136558f572c94fc2f0f2b9470d897ed77"
+    },
+    "scope": "Exact recursive definitions, independently isolated source/deletion/negative cases. User source classifies explicit-route need as capability limitation, not bug.",
+    "cases": [
+      {
+        "id": "zero-original",
+        "source": "# Task: K003 reclassified as a current proof-search limitation on 2026-10-02.\n# Run: target/release/litex -lang en -strict -f examples/test_statements/boundaries/recursive-equation-explicit-chain.lit\n\nhave fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(0) = 0\n1 - 1 = 0\nf(1) = f(1 - 1)\nf(1 - 1) = f(0)\nf(1) = f(0)\nf(1) = 0\nf(2) = f(2 - 1) = f(1) = 0\n\n# Former short assertion: f(2) = 0\n# The user classifies the required explicit steps as a current capability limit,\n# not a verifier bug. Preserve the accepted chain as normal regression coverage.\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-original.lit"
+      },
+      {
+        "id": "zero-bare-two",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(2)=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-bare-two.lit"
+      },
+      {
+        "id": "zero-two-chain-only",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(2)=f(2-1)=f(1)=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-two-chain-only.lit"
+      },
+      {
+        "id": "zero-compressed-chains",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(1)=f(1-1)=f(0)=0\nf(2)=f(2-1)=f(1)=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-compressed-chains.lit"
+      },
+      {
+        "id": "zero-one-chain-only",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(1)=f(1-1)=f(0)=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-one-chain-only.lit"
+      },
+      {
+        "id": "zero-base-and-bare-two",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(0)=0\nf(2)=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-base-and-bare-two.lit"
+      },
+      {
+        "id": "zero-wrong-two",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(2)=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/zero-wrong-two.lit"
+      },
+      {
+        "id": "increment-original",
+        "source": "# K004: the user supplies an explicit arithmetic equality chain.\n# Former shortcut: f(1) = 1 (automatic search did not close it).\n\nhave fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(0) = 0\nf(1 - 1) = f(0) = 0\nf(1) = f(1 - 1) + 1 = 0 + 1 = 1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-original.lit"
+      },
+      {
+        "id": "increment-bare-one",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-bare-one.lit"
+      },
+      {
+        "id": "increment-one-chain",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=f(1-1)+1=f(0)+1=0+1=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-one-chain.lit"
+      },
+      {
+        "id": "increment-short-chain",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=f(0)+1=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-short-chain.lit"
+      },
+      {
+        "id": "increment-base-and-bare",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(0)=0\nf(1)=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-base-and-bare.lit"
+      },
+      {
+        "id": "increment-wrong-one",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-wrong-one.lit"
+      },
+      {
+        "id": "increment-two-chains",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1-1)=f(0)=0\nf(1)=f(1-1)+1=0+1=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-two-chains.lit"
+      },
+      {
+        "id": "increment-base-one-chain",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(0)=0\nf(1)=f(1-1)+1=f(0)+1=0+1=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-base-one-chain.lit"
+      },
+      {
+        "id": "increment-inner-and-bare",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1-1)=f(0)=0\nf(1)=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-inner-and-bare.lit"
+      },
+      {
+        "id": "increment-two-chains-wrong",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1-1)=f(0)=0\nf(1)=f(1-1)+1=0+1=2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-cases/increment-two-chains-wrong.lit"
+      }
+    ]
+  }
+}

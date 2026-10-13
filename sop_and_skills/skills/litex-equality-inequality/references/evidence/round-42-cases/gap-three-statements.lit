@@ -1,0 +1,32 @@
+have fn r42_square_root_two_residual(x R) R = x^2 - 2
+claim:
+    ? forall x R+:
+        (x + 2 / x) / 2 $in R+
+    2 / x > 0
+    x + 2 / x > 0
+
+have fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2
+
+thm r42_newton_sqrt_two_residual_identity:
+    ? forall x R+:
+        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2
+    r42_newton_sqrt_two(x) = (x + 2 / x) / 2
+    r42_square_root_two_residual(x) = x^2 - 2
+    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2
+    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2
+
+thm r42_newton_sqrt_two_residual_nonnegative:
+    ? forall x R+:
+        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0
+    release thm r42_newton_sqrt_two_residual_identity(x)
+    x^2 > 0
+    4*x^2 > 0
+    r42_square_root_two_residual(x)^2 >= 0
+    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0
+
+thm r42_gap_three_statements:
+    ? forall x R+:
+        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2
+    release thm r42_newton_sqrt_two_residual_identity(x)
+    release thm r42_newton_sqrt_two_residual_nonnegative(x)
+    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2

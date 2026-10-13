@@ -1,0 +1,82 @@
+# Linear algebra begins with a scalar field and a vector space over that field.
+# Coordinate spaces appear later as instances of these interfaces.
+#
+# Included: first-class field and vector-space structures, linear maps and
+# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2
+# instances, and the projection onto the x-axis.
+
+# A field packages scalar operations together with the laws used below.
+struct Field<K nonempty_set>:
+    zero K
+    one K
+    add fn(x, y K) K
+    neg fn(x K) K
+    mul fn(x, y K) K
+    inv fn(x K) K
+    <=>:
+        zero != one
+        forall x, y, z K:
+            add(add(x, y), z) = add(x, add(y, z))
+            mul(mul(x, y), z) = mul(x, mul(y, z))
+            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))
+        forall x, y K:
+            add(x, y) = add(y, x)
+            mul(x, y) = mul(y, x)
+        forall x K:
+            add(zero, x) = x
+            add(x, neg(x)) = zero
+            mul(one, x) = x
+        forall x K:
+            x != zero
+            =>:
+                mul(x, inv(x)) = one
+
+# A vector space over one fixed scalar field stores its vector operations and
+# compatibility laws as one first-class object.
+
+struct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:
+    zero V
+    add fn(x, y V) V
+    smul fn(a K, x V) V
+    <=>:
+        forall x, y, z V:
+            add(add(x, y), z) = add(x, add(y, z))
+        forall x, y V:
+            add(x, y) = add(y, x)
+        forall x V:
+            add(zero, x) = x
+            exist y V st {add(x, y) = zero}
+        forall a, b K, x V:
+            smul(field.mul(a, b), x) = smul(a, smul(b, x))
+            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))
+        forall a K, x, y V:
+            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))
+        forall x V:
+            smul(field.one, x) = x
+
+# Any element acting as a left additive identity must equal the stored zero.
+
+thm additive_identity_unique:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:
+        forall x V:
+            space.add(identity_candidate, x) = x
+        =>:
+            identity_candidate = space.zero
+    space.add(identity_candidate, space.zero) = space.zero
+    space.add(identity_candidate, space.zero) = space.add(space.zero, identity_candidate) = identity_candidate
+
+# Existence comes from the vector-space law; associativity and commutativity
+# show that any two additive inverses coincide.
+
+thm additive_inverse_exists_unique:
+    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:
+        exist! y V st {space.add(x, y) = space.zero}
+    obtain y from exist y V st {space.add(x, y) = space.zero}
+    forall y1, y2 V:
+        space.add(x, y1) = space.zero
+        space.add(x, y2) = space.zero
+        =>:
+            space.add(y2, x) = space.add(x, y2) = space.zero
+            y1 = space.add(space.zero, y1) = space.add(space.add(y2, x), y1) = space.add(y2, space.add(x, y1)) = space.add(y2, space.zero) = space.add(space.zero, y2) = y2
+            y1 = y2
+    witness exist! y2 V st {space.add(x, y2) = space.zero} from y

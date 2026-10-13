@@ -1,0 +1,5 @@
+forall delta1,delta2 R:
+    delta1>=0
+    delta2>=0
+    =>:
+        min(delta1,delta2) $in R+

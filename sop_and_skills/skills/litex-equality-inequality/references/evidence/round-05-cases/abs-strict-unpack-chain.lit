@@ -1,0 +1,9 @@
+claim:
+    ? forall x,r R:
+        abs(x) < r
+        =>:
+            -r < x
+            x < r
+    x <= abs(x) < r
+    0-x <= abs(0-x) = abs(x-0) = abs(x) < r
+    -r = (0-x)+(x-r) < r+(x-r) = x

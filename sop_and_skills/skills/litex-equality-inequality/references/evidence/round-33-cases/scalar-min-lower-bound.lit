@@ -1,0 +1,5 @@
+forall b,d,z R:
+    z<=b
+    z<=d
+    =>:
+        z<=min(b,d)

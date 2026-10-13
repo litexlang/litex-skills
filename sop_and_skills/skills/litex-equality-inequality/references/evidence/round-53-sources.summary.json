@@ -1,0 +1,139 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-53-sources.json",
+  "original_sha256": "d0b180c970ddd5040a2017f2e0b34f28315c6c22f13b02b9dea897fecf5f4a0b",
+  "original_bytes": 7024,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter03-powers-exponentials-and-logarithms.lit",
+    "source_sha256": "2ce680cbf73b108354d899baa14c66966edf82d25e21a5511e32f38817e15038",
+    "cases": [
+      {
+        "id": "source-log-equivalence",
+        "source": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n",
+        "statement": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n"
+      },
+      {
+        "id": "source-product-quotient",
+        "source": "forall a,x,y R+:\n    a!=1\n    =>:\n        log(a,x*y)=log(a,x)+log(a,y)\n        log(a,x/y)=log(a,x)-log(a,y)\n",
+        "statement": "forall a,x,y R+:\n    a!=1\n    =>:\n        log(a,x*y)=log(a,x)+log(a,y)\n        log(a,x/y)=log(a,x)-log(a,y)\n"
+      },
+      {
+        "id": "source-real-power",
+        "source": "forall a,x,b R+:\n    a!=1\n    =>:\n        log(a,x^b)=b*log(a,x)\n",
+        "statement": "forall a,x,b R+:\n    a!=1\n    =>:\n        log(a,x^b)=b*log(a,x)\n"
+      },
+      {
+        "id": "source-increasing",
+        "source": "forall a,x,y R+:\n    a>1\n    x<y\n    =>:\n        log(a,x)<log(a,y)\n",
+        "statement": "forall a,x,y R+:\n    a>1\n    x<y\n    =>:\n        log(a,x)<log(a,y)\n"
+      },
+      {
+        "id": "source-decreasing",
+        "source": "forall a,x,y R+:\n    a<1\n    x<y\n    =>:\n        log(a,x)>log(a,y)\n",
+        "statement": "forall a,x,y R+:\n    a<1\n    x<y\n    =>:\n        log(a,x)>log(a,y)\n"
+      },
+      {
+        "id": "numeric-product-original",
+        "source": "log(2,8*4)=log(2,8)+log(2,4)=3+2=5\n",
+        "statement": "log(2,8*4)=log(2,8)+log(2,4)=3+2=5\n"
+      },
+      {
+        "id": "numeric-product-direct",
+        "source": "log(2,8*4)=5\n",
+        "statement": "log(2,8*4)=5\n"
+      },
+      {
+        "id": "numeric-base-original",
+        "source": "log(4,64)=log(2^2,64)=log(2,64)/2=6/2=3\n",
+        "statement": "log(4,64)=log(2^2,64)=log(2,64)/2=6/2=3\n"
+      },
+      {
+        "id": "numeric-base-direct",
+        "source": "log(4,64)=3\n",
+        "statement": "log(4,64)=3\n"
+      },
+      {
+        "id": "missing-base-domain",
+        "source": "forall a,x,y R+:\n    log(a,x*y)=log(a,x)+log(a,y)\n",
+        "statement": "forall a,x,y R+:\n    log(a,x*y)=log(a,x)+log(a,y)\n"
+      },
+      {
+        "id": "false-order-reversal",
+        "source": "forall a,x,y R+:\n    a<1\n    x<y\n    =>:\n        log(a,x)<log(a,y)\n",
+        "statement": "forall a,x,y R+:\n    a<1\n    x<y\n    =>:\n        log(a,x)<log(a,y)\n"
+      },
+      {
+        "id": "false-numeric",
+        "source": "log(4,64)=6\n",
+        "statement": "log(4,64)=6\n"
+      },
+      {
+        "id": "invalid-base-one",
+        "source": "log(1,4)=2\n",
+        "statement": "log(1,4)=2\n"
+      },
+      {
+        "id": "invalid-argument-zero",
+        "source": "log(2,0)=0\n",
+        "statement": "log(2,0)=0\n"
+      },
+      {
+        "id": "increasing-reversed-guard",
+        "source": "forall a,x,y R+:\n    1<a\n    x<y\n    =>:\n        log(a,x)<log(a,y)\n",
+        "statement": "forall a,x,y R+:\n    1<a\n    x<y\n    =>:\n        log(a,x)<log(a,y)\n"
+      },
+      {
+        "id": "increasing-explicit-ln",
+        "source": "claim:\n    ? forall a,x,y R+:\n        a>1\n        x<y\n        =>:\n            log(a,x)<log(a,y)\n    a!=1\n    ln(a)>0\n    ln(x)<ln(y)\n    log(a,x)=ln(x)/ln(a)<ln(y)/ln(a)=log(a,y)\n",
+        "statement": "claim:\n    ? forall a,x,y R+:\n        a>1\n        x<y\n        =>:\n            log(a,x)<log(a,y)\n    a!=1\n    ln(a)>0\n    ln(x)<ln(y)\n    log(a,x)=ln(x)/ln(a)<ln(y)/ln(a)=log(a,y)\n"
+      },
+      {
+        "id": "equation-forward-chain",
+        "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        log(a,b)=c\n        =>:\n            a^c=b\n    a^c=a^log(a,b)=b\n",
+        "statement": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        log(a,b)=c\n        =>:\n            a^c=b\n    a^c=a^log(a,b)=b\n"
+      },
+      {
+        "id": "equation-backward-chain",
+        "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\n",
+        "statement": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\n"
+      },
+      {
+        "id": "increasing-original-guard-bridge",
+        "source": "claim:\n    ? forall a,x,y R+:\n        a>1\n        x<y\n        =>:\n            log(a,x)<log(a,y)\n    1<a\n    log(a,x)<log(a,y)\n",
+        "statement": "claim:\n    ? forall a,x,y R+:\n        a>1\n        x<y\n        =>:\n            log(a,x)<log(a,y)\n    1<a\n    log(a,x)<log(a,y)\n"
+      },
+      {
+        "id": "backward-log-self-bridge",
+        "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,a)=1\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\n",
+        "statement": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,a)=1\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\n"
+      },
+      {
+        "id": "combined-equivalence",
+        "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        log(a,b)=c\n        =>:\n            a^c=b\n    a^c=a^log(a,b)=b\n\nclaim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,a)=1\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\n\nforall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n",
+        "statement": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n"
+      },
+      {
+        "id": "equivalence-forward-only",
+        "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        log(a,b)=c\n        =>:\n            a^c=b\n    a^c=a^log(a,b)=b\n\nforall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n",
+        "statement": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n"
+      },
+      {
+        "id": "equivalence-backward-only",
+        "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,a)=1\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\n\nforall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n",
+        "statement": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b\n"
+      },
+      {
+        "id": "false-one-way-iff",
+        "source": "forall u,v R:\n    0=0\n    =>:\n        u=v\n    <=>:\n        u^2=v^2\n",
+        "statement": "forall u,v R:\n    0=0\n    =>:\n        u=v\n    <=>:\n        u^2=v^2\n"
+      },
+      {
+        "id": "false-one-way-iff-after-forward",
+        "source": "forall u,v R:\n    u=v\n    =>:\n        u^2=v^2\n\nforall u,v R:\n    0=0\n    =>:\n        u=v\n    <=>:\n        u^2=v^2\n",
+        "statement": "forall u,v R:\n    0=0\n    =>:\n        u=v\n    <=>:\n        u^2=v^2\n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+claim:
+    ? forall a,b Z,f fn(k Z) R:
+        a <= b
+        =>:
+            sum(a,b,fn(j Z) R {f(j+1)-f(j)}) = f(b+1)-f(a)
+    let delta_terms = fn(j Z) R {f(j+1)-f(j)}
+    by induc m from a:
+        ? sum(a,m,delta_terms) = f(m+1)-f(a)
+        ? from m = a:
+            delta_terms(a) = f(a+1)-f(a)
+            sum(a,m,delta_terms) = sum(a,a,delta_terms) = delta_terms(a) = f(a+1)-f(a) = f(m+1)-f(a)
+        ? induc:
+            a <= m
+            delta_terms(m+1) = f((m+1)+1)-f(m+1)
+            sum(a,m+1,delta_terms) = sum(a,m,delta_terms)+delta_terms(m+1) = (f(m+1)-f(a))+(f((m+1)+1)-f(m+1)) = f((m+1)+1)-f(a)
+    sum(a,b,delta_terms) = f(b+1)-f(a)
+    sum(a,b,fn(j Z) R {f(j+1)-f(j)}) = sum(a,b,delta_terms) = f(b+1)-f(a)

@@ -1,0 +1,2 @@
+forall u,v,w fn(t R) R,x R:
+    fn(k R) R {u(k)+v(k)}(x)=u(x)+w(x)

@@ -1,0 +1,2 @@
+forall n N+,f fn(k N+) R:
+    sum(1,n,f) = sum(0,n-1,fn(k N+) R {f(k+1)})

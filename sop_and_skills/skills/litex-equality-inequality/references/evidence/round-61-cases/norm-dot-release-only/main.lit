@@ -1,0 +1,2 @@
+release obj def chap09::dot3
+chap09::norm3_sq((1,2,2))=9

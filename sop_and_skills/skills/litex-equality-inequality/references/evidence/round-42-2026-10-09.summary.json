@@ -1,0 +1,533 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-42-2026-10-09.json",
+  "original_sha256": "e14e07aa78d46c66c2a5c9b01dca034fd228470d45fa1912be390ec6cefd25a3",
+  "original_bytes": 483092,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+    "sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "gap-original",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_original:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) $in R\n    0 <= r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    r42_square_root_two_residual(x) $in R\n    |r42_square_root_two_residual(x)|^2 = r42_square_root_two_residual(x)^2\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n\n# Step 2: show that every positive input is sent above one; therefore all\n# iterates starting from x_0 = 1 stay at least one.\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e128d0ce113df17f1210a575473813b52da026d6feb7621caa2a5529662aa672"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-original.lit"
+        ]
+      },
+      {
+        "id": "gap-three-statements",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_three_statements:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-three-statements.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8277f7ca6b25992a15d428cb6fd5cf8c6bbd6f924a3796b31f9f7fd9a938f6c1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-three-statements.lit"
+        ]
+      },
+      {
+        "id": "gap-two-calls-only",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_two_calls_only:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-two-calls-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1e55b1be07726188b281f23f2ab057503efbbf6e84132b85d99e84231e473203"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-two-calls-only.lit"
+        ]
+      },
+      {
+        "id": "gap-bodyless",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_bodyless:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bb739dee736205b3003fdd6d6347be8419d887721773734a5c8f0192675af7ea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-bodyless.lit"
+        ]
+      },
+      {
+        "id": "gap-identity-call-chain",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_identity_call_chain:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-identity-call-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2fc14ba2c08822283b757daaaf7049c704b55a74601bcbc0dd98d7746f7dc11c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-identity-call-chain.lit"
+        ]
+      },
+      {
+        "id": "gap-sign-call-chain",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_sign_call_chain:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-sign-call-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "19a4e37dbf65fb327e2172a5ef69cc703b2d095a3da134d6df6ccc0abe4664ad"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-sign-call-chain.lit"
+        ]
+      },
+      {
+        "id": "gap-three-with-abs-folds",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_three_with_abs_folds:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    |r42_square_root_two_residual(r42_newton_sqrt_two(x))|=r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    |r42_square_root_two_residual(x)|^2=r42_square_root_two_residual(x)^2\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-three-with-abs-folds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "62c8095ab0c9ebad6bc363db7dc03eebf551dba1b81f63c31b3a4315457f62e4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-three-with-abs-folds.lit"
+        ]
+      },
+      {
+        "id": "abs-square-real",
+        "source": "forall a R:\n    |a|^2=a^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/abs-square-real.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "69badd8943a49e6629947a2f153dc4e81e1e83433f44f8221195743fa0982155"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/abs-square-real.lit"
+        ]
+      },
+      {
+        "id": "scalar-gap-given-sign",
+        "source": "forall a,b,p R:\n    b>=0\n    p*b=a^2\n    =>:\n        p*|b|=|a|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/scalar-gap-given-sign.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e2b02d6cf961d138ffe45fb693516c12c98851d4b7086a63421112338d893c69"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/scalar-gap-given-sign.lit"
+        ]
+      },
+      {
+        "id": "scalar-gap-missing-sign-false",
+        "source": "forall a,b,p R:\n    p*b=a^2\n    =>:\n        p*|b|=|a|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/scalar-gap-missing-sign-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f02904ff06fc5dad89f9f626695de71ea77ee13ae04d7d417ec3d52a28b55d74"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/scalar-gap-missing-sign-false.lit"
+        ]
+      },
+      {
+        "id": "gap-wrong-factor-false",
+        "source": "forall x R+:\n    3*x^2*|((x+2/x)/2)^2-2|=|x^2-2|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-wrong-factor-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a5fb491fac25c1c9f1ae6939d01533abe1e62d0f708d2b4521ab8cda1522ed2f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-wrong-factor-false.lit"
+        ]
+      },
+      {
+        "id": "gap-zero-domain",
+        "source": "4*0^2*|((0+2/0)/2)^2-2|=|0^2-2|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-zero-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "67375e8805fcea8baa4b29dbbf237187c7667b6ecb3a050ebd1a12c56f4da101"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-zero-domain.lit"
+        ]
+      },
+      {
+        "id": "gap-sign-call-only",
+        "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_sign_call_only:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/gap-sign-call-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ca6bc5198f78345dccb5418cc9a87a4f575d9aabed03d77ebbf50004c0b3c4fe"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/gap-sign-call-only.lit"
+        ]
+      },
+      {
+        "id": "scalar-gap-two-bridges",
+        "source": "claim:\n    ? forall a,b,p R:\n        b>=0\n        p*b=a^2\n        =>:\n            p*|b|=|a|^2\n    |b|=b\n    p*|b|=p*b=a^2=|a|^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-42-cases/scalar-gap-two-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b34fc8becdc61883210f0e1a8bc502d4fa473fc314493470e7f9eccbd8a33814"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round42-cases/scalar-gap-two-bridges.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "prefix": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n",
+      "cases": [
+        {
+          "id": "gap-original",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_original:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) $in R\n    0 <= r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    r42_square_root_two_residual(x) $in R\n    |r42_square_root_two_residual(x)|^2 = r42_square_root_two_residual(x)^2\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n\n# Step 2: show that every positive input is sent above one; therefore all\n# iterates starting from x_0 = 1 stay at least one.\n",
+          "statement": "thm r42_gap_original:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) $in R\n    0 <= r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    r42_square_root_two_residual(x) $in R\n    |r42_square_root_two_residual(x)|^2 = r42_square_root_two_residual(x)^2\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n\n# Step 2: show that every positive input is sent above one; therefore all\n# iterates starting from x_0 = 1 stay at least one.\n"
+        },
+        {
+          "id": "gap-three-statements",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_three_statements:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+          "statement": "thm r42_gap_three_statements:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n"
+        },
+        {
+          "id": "gap-two-calls-only",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_two_calls_only:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n",
+          "statement": "thm r42_gap_two_calls_only:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n"
+        },
+        {
+          "id": "gap-bodyless",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_bodyless:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n",
+          "statement": "thm r42_gap_bodyless:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n"
+        },
+        {
+          "id": "gap-identity-call-chain",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_identity_call_chain:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+          "statement": "thm r42_gap_identity_call_chain:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n"
+        },
+        {
+          "id": "gap-sign-call-chain",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_sign_call_chain:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+          "statement": "thm r42_gap_sign_call_chain:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n"
+        },
+        {
+          "id": "gap-three-with-abs-folds",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_three_with_abs_folds:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    |r42_square_root_two_residual(r42_newton_sqrt_two(x))|=r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    |r42_square_root_two_residual(x)|^2=r42_square_root_two_residual(x)^2\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n",
+          "statement": "thm r42_gap_three_with_abs_folds:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n    |r42_square_root_two_residual(r42_newton_sqrt_two(x))|=r42_square_root_two_residual(r42_newton_sqrt_two(x))\n    |r42_square_root_two_residual(x)|^2=r42_square_root_two_residual(x)^2\n    4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = 4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2 = |r42_square_root_two_residual(x)|^2\n"
+        },
+        {
+          "id": "abs-square-real",
+          "source": "forall a R:\n    |a|^2=a^2\n",
+          "statement": "forall a R:\n    |a|^2=a^2"
+        },
+        {
+          "id": "scalar-gap-given-sign",
+          "source": "forall a,b,p R:\n    b>=0\n    p*b=a^2\n    =>:\n        p*|b|=|a|^2\n",
+          "statement": "forall a,b,p R:\n    b>=0\n    p*b=a^2\n    =>:\n        p*|b|=|a|^2"
+        },
+        {
+          "id": "scalar-gap-missing-sign-false",
+          "source": "forall a,b,p R:\n    p*b=a^2\n    =>:\n        p*|b|=|a|^2\n",
+          "statement": "forall a,b,p R:\n    p*b=a^2\n    =>:\n        p*|b|=|a|^2"
+        },
+        {
+          "id": "gap-wrong-factor-false",
+          "source": "forall x R+:\n    3*x^2*|((x+2/x)/2)^2-2|=|x^2-2|^2\n",
+          "statement": "forall x R+:\n    3*x^2*|((x+2/x)/2)^2-2|=|x^2-2|^2"
+        },
+        {
+          "id": "gap-zero-domain",
+          "source": "4*0^2*|((0+2/0)/2)^2-2|=|0^2-2|^2\n",
+          "statement": "4*0^2*|((0+2/0)/2)^2-2|=|0^2-2|^2"
+        },
+        {
+          "id": "gap-sign-call-only",
+          "source": "have fn r42_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r42_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r42_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_square_root_two_residual(x)^2\n    r42_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r42_square_root_two_residual(x) = x^2 - 2\n    r42_square_root_two_residual(r42_newton_sqrt_two(x)) = r42_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r42_square_root_two_residual(r42_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r42_square_root_two_residual(x)^2\n\nthm r42_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r42_square_root_two_residual(r42_newton_sqrt_two(x)) >= 0\n    release thm r42_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r42_square_root_two_residual(x)^2 >= 0\n    r42_square_root_two_residual(r42_newton_sqrt_two(x))=r42_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r42_gap_sign_call_only:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n",
+          "statement": "thm r42_gap_sign_call_only:\n    ? forall x R+:\n        4 * x^2 * |r42_square_root_two_residual(r42_newton_sqrt_two(x))| = |r42_square_root_two_residual(x)|^2\n    release thm r42_newton_sqrt_two_residual_nonnegative(x)\n"
+        },
+        {
+          "id": "scalar-gap-two-bridges",
+          "source": "claim:\n    ? forall a,b,p R:\n        b>=0\n        p*b=a^2\n        =>:\n            p*|b|=|a|^2\n    |b|=b\n    p*|b|=p*b=a^2=|a|^2\n",
+          "statement": "claim:\n    ? forall a,b,p R:\n        b>=0\n        p*b=a^2\n        =>:\n            p*|b|=|a|^2\n    |b|=b\n    p*|b|=p*b=a^2=|a|^2\n"
+        }
+      ],
+      "source_path": "showcases/math_concepts_in_litex/13_numerical_analysis_in_nutshell/main.lit",
+      "source_sha256": "d3ec40fa7d1940903c5815fbcbbf8b2b16109ac14dae22ce430f5fa9dda8e56a",
+      "scope": "Exact one-step absolute residual gap target with accepted short constructor/identity/nonnegative dependencies; recursion/global contraction/extractor excluded."
+    },
+    "scope": "Exact one-step absolute residual target and supplied short upstream dependencies; no recursive/full-showcase/extractor gate or kernel edit.",
+    "summary": {
+      "accepted": 6,
+      "rejected": 8
+    },
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Successful release build and fixed snapshot, not audited immutable whole checkout. Older warm Session can inherit earlier gap theorems; cold files own liveness."
+  }
+}

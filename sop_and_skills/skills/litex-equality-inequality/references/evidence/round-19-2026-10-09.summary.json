@@ -1,0 +1,1121 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-19-2026-10-09.json",
+  "original_sha256": "3c5f657f13b85f651b84f00ec05f9e932b72a4a033476994254190a7efe897a8",
+  "original_bytes": 147688,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+    "sha256": "edc06e90e5ac268ccd824144cec59812948e9faa6379bb4d79bc890c75957bd7",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-19.log"
+    },
+    "head": "2313cf8d6e266278a7a31b0e806b7742cda4b9e5",
+    "session": [
+      {
+        "id": "exact-quotient-positive-divisor",
+        "source": "forall a Z,b N+:\n    a%b = 0\n    =>:\n        a/b $in Z",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "822f763c9a4ee238e68c52f3560adfdb3d2ef646bbea3031300b85e707d54601",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a Z, b N+:\\n    a % b = 0\\n    =>:\\n        a / b $in Z\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a Z, b N+:\\n    a % b = 0\\n    =>:\\n        a / b $in Z\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "exact-quotient-euclidean-bridge",
+        "source": "claim:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    quot(a,b) $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\n    a/b $in Z",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ff140bb7796be24aa695264bf2f9ea4d75e8f1567a0936de9eeec06a2bdccdf",
+          "excerpt": "... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "triangular-integer-direct",
+        "source": "forall n N:\n    n*(n+1)/2 $in Z",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "29dff0648aefedff265fbb0ae273f547571700543aad3cf0fe5ec9973b71cde2",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall n N:\\n    n * (n + 1) / 2 $in Z\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall n N:\\n    n * (n + 1) / 2 $in Z\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "consecutive-product-even",
+        "source": "forall n Z:\n    (n*(n+1))%2 = 0",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8bab648908b985bac519278854bdd2bdbd5d4076c3c8ad43fa86556559489bc4",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall n Z:\\n    n * (n + 1) % 2 = 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall n Z:\\n    n * (n + 1) % 2 = 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "closed-signed-quotients",
+        "source": "6/(-2) $in Z\n(-6)/2 $in Z\n0/2 $in N\nnot 1/2 $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/closed-signed-quotients.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f72f93e7be83ad888709507dc3d2c0f68d43aaccde3358c42273ff26b8c28497"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/closed-signed-quotients.lit"
+        ]
+      },
+      {
+        "id": "consecutive-product-even",
+        "source": "forall n Z:\n    (n*(n+1))%2 = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/consecutive-product-even.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3547daa18f6605714b6fa3a0009a7b19c8abe93c1a44986460093eb76433a7d8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/consecutive-product-even.lit"
+        ]
+      },
+      {
+        "id": "exact-quotient-euclidean-bridge",
+        "source": "claim:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    quot(a,b) $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\n    a/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/exact-quotient-euclidean-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f43add8d5faca84fb3810f1b9b16ca6904f7c5d0be2f8cd394d21d21ef04e0ce"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/exact-quotient-euclidean-bridge.lit"
+        ]
+      },
+      {
+        "id": "exact-quotient-integer-direct",
+        "source": "forall a Z,b Z*:\n    a%b = 0\n    =>:\n        a/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/exact-quotient-integer-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "64507e4cf7f29d3e7f158bc50f6640dec594938e5c35d858f253f7341f18fc12"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/exact-quotient-integer-direct.lit"
+        ]
+      },
+      {
+        "id": "exact-quotient-positive-divisor",
+        "source": "forall a Z,b N+:\n    a%b = 0\n    =>:\n        a/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/exact-quotient-positive-divisor.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a3e9825375c25586fb3a1fb67f4291546a7327592cd2eb97c4ca52da6971853f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/exact-quotient-positive-divisor.lit"
+        ]
+      },
+      {
+        "id": "factorial-ratio-integer-direct",
+        "source": "forall m,n N:\n    m <= n\n    =>:\n        factorial(n)/factorial(m) $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/factorial-ratio-integer-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d42d40ae53e446a7e2b77c2c0a16b5d2c6c592d98385dd2c1889aeac54aab131"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/factorial-ratio-integer-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-ratio-integer-remainder-bridge",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(n)/factorial(m) $in Z\n    factorial(n)%factorial(m) = 0\n    factorial(n)/factorial(m) $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/factorial-ratio-integer-remainder-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c9e269027ee82254ff45b702803f85e380f15fb4a86339cd6f2042a82eacb44d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/factorial-ratio-integer-remainder-bridge.lit"
+        ]
+      },
+      {
+        "id": "half-integer-given-even",
+        "source": "forall n Z:\n    n%2 = 0\n    =>:\n        n/2 $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/half-integer-given-even.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec88540bed002fbcff7a9c57a7ff74c3d122aab3676a078f5ef90cdade0323a7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/half-integer-given-even.lit"
+        ]
+      },
+      {
+        "id": "half-integer-missing-even-false",
+        "source": "forall n N:\n    n/2 $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/half-integer-missing-even-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e97e91ea7bbc7193dca0ee8d83e4a85e67bdc3d30b4a36d12841bd188e06709b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/half-integer-missing-even-false.lit"
+        ]
+      },
+      {
+        "id": "half-positive-given-even",
+        "source": "forall n N+:\n    n%2 = 0\n    =>:\n        n/2 $in N+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/half-positive-given-even.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "690539cafc90ba0a53e31cd284b5f1056dac745d4bd31c05d7efeeaedb62ea8f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/half-positive-given-even.lit"
+        ]
+      },
+      {
+        "id": "multiple-quotient-integer",
+        "source": "forall a Z,b Z*:\n    (a*b)/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/multiple-quotient-integer.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a4e804a420354712b2a964e8a214b75e48bf7a5302e002dde7b09b272161ade8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/multiple-quotient-integer.lit"
+        ]
+      },
+      {
+        "id": "native-euclidean-decomposition",
+        "source": "forall a Z,b N+:\n    a = b*quot(a,b)+a%b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/native-euclidean-decomposition.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "440b6480f56b2b387f754f4b72722aec6e92bd23464baeff0f630d58d626b602"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/native-euclidean-decomposition.lit"
+        ]
+      },
+      {
+        "id": "native-quotient-integer",
+        "source": "forall a Z,b N+:\n    quot(a,b) $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/native-quotient-integer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "322056562685552189987a544572267598c5a7e4ffe33099a96f443113fab8c4"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/native-quotient-integer.lit"
+        ]
+      },
+      {
+        "id": "native-quotient-negative-divisor-invalid",
+        "source": "forall a,b Z:\n    b < 0\n    =>:\n        quot(a,b) $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/native-quotient-negative-divisor-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eabd66cafcbe887548313d1dea3cf6425d934a5c47daf87d57b405acb3e9477d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/native-quotient-negative-divisor-invalid.lit"
+        ]
+      },
+      {
+        "id": "quotient-missing-divisibility-false",
+        "source": "forall a Z,b Z*:\n    a/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/quotient-missing-divisibility-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e8d5c241de4caef8ee9a2366fd59a0cf0dd806031d11512dae65fd3d7f380138"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/quotient-missing-divisibility-false.lit"
+        ]
+      },
+      {
+        "id": "quotient-witness-equality-direct",
+        "source": "forall a,q Z,b Z*:\n    a = b*q\n    =>:\n        a/b = q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/quotient-witness-equality-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b471c9eeabe467b92c6add7144a11c3ad23d9ca108cbb56dc2b1bcf43f3f8df8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/quotient-witness-equality-direct.lit"
+        ]
+      },
+      {
+        "id": "quotient-witness-integer-direct",
+        "source": "forall a,q Z,b Z*:\n    a = b*q\n    =>:\n        a/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/quotient-witness-integer-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "be88573a3ae88db7e0925de4efed3db13052d54b6163e912508349e98ccb8b67"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/quotient-witness-integer-direct.lit"
+        ]
+      },
+      {
+        "id": "quotient-zero-divisor-invalid",
+        "source": "forall a,b Z:\n    b = 0\n    =>:\n        a/b $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/quotient-zero-divisor-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f8f0c5d8e9159311b012337905f36674485c0b7d24cda8f48acc0c916e23c60e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/quotient-zero-divisor-invalid.lit"
+        ]
+      },
+      {
+        "id": "triangular-integer-direct",
+        "source": "forall n N:\n    n*(n+1)/2 $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-integer-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c98396545dd400ba5c8cea9160d6f91804708c3922ab48ca6e110c6fcc7408ed"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-integer-direct.lit"
+        ]
+      },
+      {
+        "id": "triangular-natural-direct",
+        "source": "forall n N:\n    n*(n+1)/2 $in N\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-natural-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3ec3e78bb2caba5935b44c659acd6888d3a18fd78c694184353cba0dbeb4baef"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-natural-direct.lit"
+        ]
+      },
+      {
+        "id": "triangular-positive-zero-false",
+        "source": "forall n N:\n    n*(n+1)/2 $in N+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-positive-zero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1c6f83838f465a67d0bfd27834ce8be7802dc11f5c072956e75966648133e913"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-positive-zero-false.lit"
+        ]
+      },
+      {
+        "id": "quotient-witness-type-bridge",
+        "source": "claim:\n    ? forall a,q Z,b Z*:\n        a = b*q\n        =>:\n            a/b $in Z\n    a/b = q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/quotient-witness-type-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0632b8c070059d811cc7720c67fffedeee3011dc427630455d81b07d00f97f24"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/quotient-witness-type-bridge.lit"
+        ]
+      },
+      {
+        "id": "exact-quotient-two-equations",
+        "source": "claim:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/exact-quotient-two-equations.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50b1f75ccfa73e6c9a08055124b4e557d3153b7b2dd71f9087f7304e8f20f37c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/exact-quotient-two-equations.lit"
+        ]
+      },
+      {
+        "id": "consecutive-product-even-cases",
+        "source": "claim:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q\n            n*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+1\n            n+1 = 2*(q+1)\n            n*(n+1) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/consecutive-product-even-cases.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "712ce39ca3ddd08f82c3ebd4dd3cd92992e9d6d551ae8f824115a81a97d1f43b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/consecutive-product-even-cases.lit"
+        ]
+      },
+      {
+        "id": "consecutive-product-even-supplied-to-type",
+        "source": "forall n N:\n    (n*(n+1))%2 = 0\n    =>:\n        n*(n+1)/2 $in Z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/consecutive-product-even-supplied-to-type.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2190421cfc58242ecac09adb24ca90f1abed6b0cffb2fb8afa2d7a6dfd3b1e90"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/consecutive-product-even-supplied-to-type.lit"
+        ]
+      },
+      {
+        "id": "consecutive-product-even-euclidean-chain",
+        "source": "claim:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q\n            n*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+1\n            n+1 = 2*(q+1)\n            n*(n+1) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/consecutive-product-even-euclidean-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "24171697dca0d4b2ffabc595ccf31ccc036db8d3ac78e37d16230b6f8e8dbdc0"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/consecutive-product-even-euclidean-chain.lit"
+        ]
+      },
+      {
+        "id": "consecutive-product-even-full-chain",
+        "source": "claim:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q+n%2 = 2*q\n            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+n%2 = 2*q+1\n            n+1 = 2*q+1+1 = 2*(q+1)\n            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/consecutive-product-even-full-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c72cda27b8604ead774f97e0d09c1be13b4ccab314f92578c396b2abe5f61c1a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/consecutive-product-even-full-chain.lit"
+        ]
+      },
+      {
+        "id": "triangular-integer-checked-interface",
+        "source": "thm exact_quotient_integer:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\nthm consecutive_product_even:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q+n%2 = 2*q\n            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+n%2 = 2*q+1\n            n+1 = 2*q+1+1 = 2*(q+1)\n            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\nclaim:\n    ? forall n N:\n        n*(n+1)/2 $in Z\n    release thm consecutive_product_even(n)\n    release thm exact_quotient_integer(n*(n+1),2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-integer-checked-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7012ffb4dd4d6966c0999052b26c4b4fb6181a6007c363ac92d5cba6016111c7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-integer-checked-interface.lit"
+        ]
+      },
+      {
+        "id": "triangular-natural-checked-interface",
+        "source": "thm exact_quotient_integer:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\nthm consecutive_product_even:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q+n%2 = 2*q\n            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+n%2 = 2*q+1\n            n+1 = 2*q+1+1 = 2*(q+1)\n            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\nclaim:\n    ? forall n N:\n        n*(n+1)/2 $in N\n    release thm consecutive_product_even(n)\n    release thm exact_quotient_integer(n*(n+1),2)\n    n*(n+1) >= 0\n    n*(n+1)/2 >= 0\n    n*(n+1)/2 $in N\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-natural-checked-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "923ab7b110dee9fd103f672ea6bc355ceaad4da17676a269c6beab0ada51834b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-natural-checked-interface.lit"
+        ]
+      },
+      {
+        "id": "factorial-ratio-checked-interface",
+        "source": "thm exact_quotient_integer:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\nclaim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(n)/factorial(m) $in Z\n    factorial(n)%factorial(m) = 0\n    release thm exact_quotient_integer(factorial(n),factorial(m))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/factorial-ratio-checked-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "43c0f28a4359925524ea0f4817bceecead9e0401be3645cb9819f8fe9404db48"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/factorial-ratio-checked-interface.lit"
+        ]
+      },
+      {
+        "id": "triangular-natural-no-echo",
+        "source": "thm exact_quotient_integer:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\nthm consecutive_product_even:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q+n%2 = 2*q\n            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+n%2 = 2*q+1\n            n+1 = 2*q+1+1 = 2*(q+1)\n            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\nclaim:\n    ? forall n N:\n        n*(n+1)/2 $in N\n    release thm consecutive_product_even(n)\n    release thm exact_quotient_integer(n*(n+1),2)\n    n*(n+1) >= 0\n    n*(n+1)/2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-natural-no-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f4eb288ead99921cafd860d6ae6b6e9fb5c0e64a3d4d03be48e92c896852ab04"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-natural-no-echo.lit"
+        ]
+      },
+      {
+        "id": "triangular-natural-no-product-sign",
+        "source": "thm exact_quotient_integer:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)\nthm consecutive_product_even:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q+n%2 = 2*q\n            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+n%2 = 2*q+1\n            n+1 = 2*q+1+1 = 2*(q+1)\n            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0\nclaim:\n    ? forall n N:\n        n*(n+1)/2 $in N\n    release thm consecutive_product_even(n)\n    release thm exact_quotient_integer(n*(n+1),2)\n    n*(n+1)/2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/triangular-natural-no-product-sign.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1cb00a8d1a90991684d63a60bb8ff169c8d423885a208b5fa39e8c2093ecf68b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-19-cases/triangular-natural-no-product-sign.lit"
+        ]
+      }
+    ],
+    "repair_session": [
+      {
+        "id": "exact-quotient-positive-divisor",
+        "source": "forall a Z,b N+:\n    a%b = 0\n    =>:\n        a/b $in Z",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "822f763c9a4ee238e68c52f3560adfdb3d2ef646bbea3031300b85e707d54601",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a Z, b N+:\\n    a % b = 0\\n    =>:\\n        a / b $in Z\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a Z, b N+:\\n    a % b = 0\\n    =>:\\n        a / b $in Z\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "exact-quotient-two-equations",
+        "source": "claim:\n    ? forall a Z,b N+:\n        a%b = 0\n        =>:\n            a/b $in Z\n    a = b*quot(a,b)+a%b = b*quot(a,b)\n    a/b = quot(a,b)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "quotient-witness-integer-direct",
+        "source": "forall a,q Z,b Z*:\n    a = b*q\n    =>:\n        a/b $in Z",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d9e1a4789be60f245e3b71231c81d14866067ce29866d4c51713a90364e94633",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, q Z, b Z*:\\n    a = b * q\\n    =>:\\n        a / b $in Z\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, q Z, b Z*:\\n    a = b * q\\n    =>:\\n        a / b $in Z\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "quotient-witness-type-bridge",
+        "source": "claim:\n    ? forall a,q Z,b Z*:\n        a = b*q\n        =>:\n            a/b $in Z\n    a/b = q",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "consecutive-product-even",
+        "source": "forall n Z:\n    (n*(n+1))%2 = 0",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8bab648908b985bac519278854bdd2bdbd5d4076c3c8ad43fa86556559489bc4",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall n Z:\\n    n * (n + 1) % 2 = 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall n Z:\\n    n * (n + 1) % 2 = 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "consecutive-product-even-full-chain",
+        "source": "claim:\n    ? forall n Z:\n        (n*(n+1))%2 = 0\n    have q Z = quot(n,2)\n    n = 2*quot(n,2)+n%2 = 2*q+n%2\n    n%2 = 0 or n%2 = 1\n    by cases:\n        ? (n*(n+1))%2 = 0\n        case n%2 = 0:\n            n = 2*q+n%2 = 2*q\n            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))\n            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0\n        case n%2 = 1:\n            n = 2*q+n%2 = 2*q+1\n            n+1 = 2*q+1+1 = 2*(q+1)\n            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))\n            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b4580a9dfa83b834ea21996e09b245be537ba2172600c3780908772bf8544a6d",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "scope": "Fresh-source release snapshot, exact division/parity/triangular carrier use probes adjacent to Concrete Mathematics chapters02/04. No canonical recursive triangular definition or textbook/module changes."
+  }
+}

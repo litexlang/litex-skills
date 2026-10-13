@@ -1,0 +1,15 @@
+claim:
+    ? forall x,r R:
+        -r < x
+        x < r
+        =>:
+            abs(x) < r
+    0 <= x or x < 0
+    by cases:
+        ? abs(x) < r
+        case 0 <= x:
+            abs(x) = x < r
+        case x < 0:
+            x <= 0
+            0-x = -r+(r-x) < x+(r-x) = r
+            abs(x) = 0-x < r

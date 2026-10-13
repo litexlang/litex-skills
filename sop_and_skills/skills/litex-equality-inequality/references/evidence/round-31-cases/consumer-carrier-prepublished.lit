@@ -1,0 +1,59 @@
+forall a,c R:
+    $is_finite_set(union({a},{c}))
+
+forall a,c R:
+    finite_set_max(union({a},{c})) $in R
+    finite_set_min(union({a},{c})) $in R
+
+prop has_interval_endpoints(I power_set(R), a, b R):
+    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)
+
+thm interval_endpoint_member_is_between:
+    ? forall I power_set(R), a, b, z R:
+        $has_interval_endpoints(I, a, b)
+        z $in I
+        =>:
+            a <= z
+            z <= b
+    by cases:
+        ? a <= z
+        ? z <= b
+        case I = '[a, b]:
+            z $in '[a, b]
+            a <= z
+            z <= b
+        case I = '[a, b):
+            z $in '[a, b)
+            a <= z
+            z < b
+            z <= b
+        case I = '(a, b]:
+            z $in '(a, b]
+            a < z
+            a <= z
+            z <= b
+        case I = '(a, b):
+            z $in '(a, b)
+            a < z
+            a <= z
+            z < b
+            z <= b
+
+thm r30_consumer_original_dependency:
+    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):
+        $has_interval_endpoints(I, a, b)
+        $has_interval_endpoints(J, c, d)
+        =>:
+            finite_set_max(union({a}, { c})) <= z
+            z <= finite_set_min(union({b}, { d}))
+    have z0 R = z
+    z0 = z
+    z0 $in I
+    z0 $in J
+    by thm interval_endpoint_member_is_between(I, a, b, z0)
+    by thm interval_endpoint_member_is_between(J, c, d, z0)
+    finite_set_max(union({a}, { c})) <= z0
+    z0 <= finite_set_min(union({b}, { d}))
+    finite_set_max(union({a}, { c})) <= z
+    z <= finite_set_min(union({b}, { d}))
+

@@ -1,0 +1,2 @@
+forall c R,m Z:
+    product(m,m+1,fn(k Z) R {c})=c*c

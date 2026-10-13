@@ -1,0 +1,7 @@
+claim:
+    ? forall S set,a,b,x R:
+        x $in S
+        S='[a,b]
+        =>:
+            a<=x<=b
+    x $in S

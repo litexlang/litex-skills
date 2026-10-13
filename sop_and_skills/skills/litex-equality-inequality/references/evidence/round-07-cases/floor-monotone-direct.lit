@@ -1,0 +1,4 @@
+forall x,y R:
+    x <= y
+    =>:
+        floor(x) <= floor(y)

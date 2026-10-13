@@ -1,0 +1,5 @@
+forall x,y R,c R+:
+    abs(x) >= c
+    abs(y) >= c
+    =>:
+        abs(x*y) >= c^2

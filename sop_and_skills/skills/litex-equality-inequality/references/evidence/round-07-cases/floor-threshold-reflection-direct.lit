@@ -1,0 +1,4 @@
+forall x R,n Z:
+    floor(x) < n
+    =>:
+        x < n

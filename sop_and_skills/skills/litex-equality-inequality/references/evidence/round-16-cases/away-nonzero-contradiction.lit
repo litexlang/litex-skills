@@ -1,0 +1,10 @@
+claim:
+    ? forall x R,c R+:
+        abs(x) >= c
+        =>:
+            x != 0
+    abs(x) >= c > 0
+    by contra:
+        ? x != 0
+        abs(x) = abs(0) = 0
+        impossible abs(x) > 0

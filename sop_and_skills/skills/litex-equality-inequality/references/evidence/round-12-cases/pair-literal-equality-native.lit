@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b,c,d R:
+        a = c
+        b = d
+        =>:
+            (a,b) = (c,d)
+    release thm tuple_equal_from_coordinates((a,b),(c,d))

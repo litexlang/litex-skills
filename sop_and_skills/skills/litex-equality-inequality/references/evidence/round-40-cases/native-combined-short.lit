@@ -1,0 +1,40 @@
+prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):
+    forall x R:
+        x != x0
+        |x - x0| < delta
+        =>:
+            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon
+
+prop r40_has_derivative_at(f fn(x R) R, x0, slope R):
+    forall epsilon R+:
+        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}
+
+thm r40_native_combined_short:
+    ? forall f fn(t R) R, x0, slope1, slope2 R:
+        $r40_has_derivative_at(f, x0, slope1)
+        $r40_has_derivative_at(f, x0, slope2)
+        =>:
+            slope1 = slope2
+    by contra:
+        ? slope1 = slope2
+        slope1 - slope2 != 0
+        |slope1 - slope2| > 0
+        have epsilon R+ = |slope1 - slope2| / 3
+        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}
+        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}
+        have radius R+ = min(delta1,delta2)
+        0 < radius / 2
+        have sample R = x0 + radius / 2
+        sample = x0 + radius / 2 > x0
+        sample - x0 = radius / 2
+        |sample - x0| = |radius / 2| = radius / 2 < radius
+        |sample - x0| = radius / 2 < radius <= delta1
+        |sample - x0| = radius / 2 < radius <= delta2
+        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)
+        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon
+        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon
+        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon
+        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon
+        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|
+        |slope1 - slope2| >= |slope1 - slope2|
+        impossible |slope1 - slope2| < |slope1 - slope2|

@@ -1,0 +1,2 @@
+forall n N+,u,v fn(t closed_range(1,n)) R:
+    fn(k closed_range(1,n)) R {u(k)+v(k)} $in finite_seq(R,n+1)

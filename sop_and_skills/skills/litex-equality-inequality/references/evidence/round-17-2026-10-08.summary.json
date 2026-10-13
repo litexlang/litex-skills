@@ -1,0 +1,1099 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-17-2026-10-08.json",
+  "original_sha256": "dbf45088be5a0faaa1489885af131b550c47ba3529df5a19c0f6de6ac95bbf1e",
+  "original_bytes": 175167,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+    "sha256": "a9e5a10e9e594ddc21f7bf496dd444b1a370a882d96238a5b75f3e3e33bddd79",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-17.log"
+    },
+    "head": "d49fffb53276f19a6ea2abeb9dca1d82913f1086",
+    "session": [
+      {
+        "id": "factorial-strict-reflection-direct",
+        "source": "forall m,n N:\n    factorial(m) < factorial(n)\n    =>:\n        m < n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5bed872e12481fce418f3ad11197bbcaa784a058d8a9c38ab7bd893f63dd5683",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m, n N:\\n    factorial(m) < factorial(n)\\n    =>:\\n        m < n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m, n N:\\n    factorial(m) < factorial(n)\\n    =>:\\n        m < n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-strict-reflection-contradiction",
+        "source": "claim:\n    ? forall m,n N:\n        factorial(m) < factorial(n)\n        =>:\n            m < n\n    by contra:\n        ? m < n\n        factorial(n) <= factorial(m)\n        impossible factorial(m) < factorial(n)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "333f44bf6b67ba0e51a2da9550b35fccc2de4757657da88d2db120953e301383",
+          "excerpt": "... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall m, n N:\\n        factorial(m) < factorial(n)\\n        =>:\\n            m < n\\n    by contra:\\n        ? m < n\\n        factorial(n) <= factorial(m)\\n        impossible factorial(m) < factorial(n)\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store its co"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-weak-reflection-positive-direct",
+        "source": "forall m N,n N+:\n    factorial(m) <= factorial(n)\n    =>:\n        m <= n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a810a6d333c4f2a6fab6736122364568240314c17bad927753a2f4f847b28a0e",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m N, n N+:\\n    factorial(m) <= factorial(n)\\n    =>:\\n        m <= n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m N, n N+:\\n    factorial(m) <= factorial(n)\\n    =>:\\n        m <= n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-weak-reflection-positive-contradiction",
+        "source": "claim:\n    ? forall m N,n N+:\n        factorial(m) <= factorial(n)\n        =>:\n            m <= n\n    by contra:\n        ? m <= n\n        factorial(n) < factorial(m)\n        impossible factorial(m) <= factorial(n)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ddcd90ae9fc06bf4d56ae65d8d39cb2571fb40ec865fc88bf5f082ad1653051",
+          "excerpt": "... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall m N, n N+:\\n        factorial(m) <= factorial(n)\\n        =>:\\n            m <= n\\n    by contra:\\n        ? m <= n\\n        factorial(n) < factorial(m)\\n        impossible factorial(m) <= factorial(n)\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store "
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "factorial-at-least-one",
+        "source": "forall n N:\n    factorial(n) >= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-at-least-one.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4162591de12fd5a15e8ccdd79911b3f7a4c7dcd0a74cb988125ba673154f1c10"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-at-least-one.lit"
+        ]
+      },
+      {
+        "id": "factorial-base-lower-bound",
+        "source": "forall n N:\n    n <= factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-base-lower-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9eb804f7f813e31f3ae98f29824913ee6895b6892b24a614e44223ec9905c36b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-base-lower-bound.lit"
+        ]
+      },
+      {
+        "id": "factorial-closed-boundary",
+        "source": "factorial(0) = factorial(1) = 1\nfactorial(2) = 2\nfactorial(3) = 6\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-closed-boundary.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6e22a305f50529f7a8953f87778e84895dd381de171be501e7100ac256496456"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-closed-boundary.lit"
+        ]
+      },
+      {
+        "id": "factorial-divisibility-direct",
+        "source": "forall m,n N:\n    m <= n\n    =>:\n        factorial(n)%factorial(m) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-divisibility-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8dc7ea1de238cb1ad5272398d154b3901cd5962ef92ca4f13d4383a1c66fc33c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-divisibility-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-equality-positive-direct",
+        "source": "forall m,n N+:\n    factorial(m) = factorial(n)\n    =>:\n        m = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-equality-positive-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4ee6b7fb59a7d93687d52fead5a5a2aa18b127f1dc2e64a40f32537cf852a4dc"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-equality-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-equality-zero-one-false",
+        "source": "forall m,n N:\n    factorial(m) = factorial(n)\n    =>:\n        m = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-equality-zero-one-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cacf5d0eeade76e2a61c4573bb6c8756c9b1ba5d6ff1ad313e048f75652b9337"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-equality-zero-one-false.lit"
+        ]
+      },
+      {
+        "id": "factorial-native-monotonicity",
+        "source": "# Natural factorial order, with the strict 0/1 boundary guarded.\nforall m,n N:\n    m<=n\n    =>:\n        factorial(m)<=factorial(n)\nforall m N+,n N:\n    m<n\n    =>:\n        factorial(m)<factorial(n)\nforall m,n N:\n    n>=m\n    =>:\n        factorial(n)>=factorial(m)\nforall m N+,n N:\n    n>m\n    =>:\n        factorial(n)>factorial(m)\nforall m,n N:\n    0<m\n    m<n\n    =>:\n        m $in N+\n        factorial(m)<factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-native-monotonicity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d4b31774deceb220a3a9410a70a3fc4b417233e9bed415cca0302a7c94a5896d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-native-monotonicity.lit"
+        ]
+      },
+      {
+        "id": "factorial-native-nested-routes",
+        "source": "# Publish a checked inner order before applying the same bounded factorial leaf.\n# The positive-integer direction bridges were checkable before the local shortcut.\n\nclaim:\n    ? forall m,n N:\n        m<=n\n        =>:\n            factorial(factorial(m))<=factorial(factorial(n))\n    factorial(m)<=factorial(n)\n    factorial(factorial(m))<=factorial(factorial(n))\n\nforall m,n N:\n    m<=n\n    =>:\n        factorial(factorial(m))<=factorial(factorial(n))\n\nclaim:\n    ? forall x N:\n        0<x\n        =>:\n            x $in N+\n    x>0\n    x $in N+\n\nforall x N:\n    0<x\n    =>:\n        x $in N+\n\nclaim:\n    ? forall x Z:\n        0<x\n        =>:\n            x $in N+\n    x>0\n    x $in N+\n\nforall x Z:\n    0<x\n    =>:\n        x $in N+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-native-nested-routes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d4580a9b15a5155ffa528f0a0c5d9bbb159dd1120b6cae836e8af0cbebdf2224"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-native-nested-routes.lit"
+        ]
+      },
+      {
+        "id": "factorial-negative-domain-invalid",
+        "source": "forall n Z:\n    n < 0\n    =>:\n        factorial(n) >= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-negative-domain-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7e35d88d8683a44b74f67ec4f82f9019e71682301402af768dd1a58e2f7abd61"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-negative-domain-invalid.lit"
+        ]
+      },
+      {
+        "id": "factorial-nonzero-direct",
+        "source": "forall n N:\n    factorial(n) != 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-nonzero-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b61bfa69ca3dff148d1c57968bb5ae7d47a233409336c4f1ccbc8472d63a26aa"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-nonzero-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-positive-direct",
+        "source": "forall n N:\n    factorial(n) > 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-positive-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c1597edf5330c311300e7b3e50505d41b93883c13a71bdab732512ec4a983ca4"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-positive-monotone",
+        "source": "forall m,n N:\n    m <= n\n    =>:\n        factorial(m) <= factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-positive-monotone.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "784af0d8e8c9c1ba154001408bca6d35f6d443b24e27948d7e2ed12051a98006"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-positive-monotone.lit"
+        ]
+      },
+      {
+        "id": "factorial-ratio-unit-chain",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(m)/factorial(n) <= 1\n    factorial(m) <= factorial(n)\n    factorial(m)/factorial(n) <= factorial(n)/factorial(n) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-ratio-unit-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5621db176013a541b3c309fcd8461042e3cc360b5641126389edcb892807ba70"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-ratio-unit-chain.lit"
+        ]
+      },
+      {
+        "id": "factorial-ratio-unit-direct",
+        "source": "forall m,n N:\n    m <= n\n    =>:\n        factorial(m)/factorial(n) <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-ratio-unit-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a31f2cb791a881abce128fb1e362afe805586c4a96e15c03a65ea24eee24d633"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-ratio-unit-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-strict-forward-zero-one-false",
+        "source": "forall m,n N:\n    m < n\n    =>:\n        factorial(m) < factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-strict-forward-zero-one-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "76ebcc4d300ab6970f5eb8cf1c6b9ea5c95f9710babe493777f37858b39677ef"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-strict-forward-zero-one-false.lit"
+        ]
+      },
+      {
+        "id": "factorial-strict-reflection-contradiction",
+        "source": "claim:\n    ? forall m,n N:\n        factorial(m) < factorial(n)\n        =>:\n            m < n\n    by contra:\n        ? m < n\n        factorial(n) <= factorial(m)\n        impossible factorial(m) < factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-strict-reflection-contradiction.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5ae09dc2f380895f6d648f68711590b74c1d66e43dba5f821182c1fd3b134f13"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-strict-reflection-contradiction.lit"
+        ]
+      },
+      {
+        "id": "factorial-strict-reflection-direct",
+        "source": "forall m,n N:\n    factorial(m) < factorial(n)\n    =>:\n        m < n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-strict-reflection-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "90a3df9fb4733d0758b637aaf1af1c937748f3662f794b290c577dbcf15eb325"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-strict-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-weak-reflection-missing-boundary-false",
+        "source": "forall m,n N:\n    factorial(m) <= factorial(n)\n    =>:\n        m <= n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-weak-reflection-missing-boundary-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3abfff6c21f4c6f246ad912aa3a9ff4563b6877e7f3f6e3a6bbaaed29dd97216"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-weak-reflection-missing-boundary-false.lit"
+        ]
+      },
+      {
+        "id": "factorial-weak-reflection-positive-contradiction",
+        "source": "claim:\n    ? forall m N,n N+:\n        factorial(m) <= factorial(n)\n        =>:\n            m <= n\n    by contra:\n        ? m <= n\n        factorial(n) < factorial(m)\n        impossible factorial(m) <= factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-weak-reflection-positive-contradiction.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "daf93762d25ac6badfbefa589142120ee91401648e42f1ca1bababf02a746c76"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-weak-reflection-positive-contradiction.lit"
+        ]
+      },
+      {
+        "id": "factorial-weak-reflection-positive-direct",
+        "source": "forall m N,n N+:\n    factorial(m) <= factorial(n)\n    =>:\n        m <= n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-weak-reflection-positive-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73574d3d4c18703fb87e0ecf42e38cf122dd6e879dc76f60411d32bf8fdfb9df"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-weak-reflection-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-strict-reflection-order-bridge",
+        "source": "claim:\n    ? forall m,n N:\n        factorial(m) < factorial(n)\n        =>:\n            m < n\n    by contra:\n        ? m < n\n        n <= m\n        factorial(n) <= factorial(m)\n        impossible factorial(m) < factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-strict-reflection-order-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "676b98e5fdeec8353698bcc68e50428429b48f658beb65a6cafc84fb15c5c746"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-strict-reflection-order-bridge.lit"
+        ]
+      },
+      {
+        "id": "factorial-weak-reflection-order-bridge",
+        "source": "claim:\n    ? forall m N,n N+:\n        factorial(m) <= factorial(n)\n        =>:\n            m <= n\n    by contra:\n        ? m <= n\n        n < m\n        factorial(n) < factorial(m)\n        impossible factorial(m) <= factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-weak-reflection-order-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "475aed44c62d6966c0cab6adf9ae7949da0a6bc81513b643b6f6daabfb8c76b1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-weak-reflection-order-bridge.lit"
+        ]
+      },
+      {
+        "id": "factorial-ratio-unit-positive-bridge",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(m)/factorial(n) <= 1\n    factorial(m) <= factorial(n)\n    factorial(n) > 0\n    factorial(m)/factorial(n) <= factorial(n)/factorial(n) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-ratio-unit-positive-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "083366c2905ed491f155530226b1aa1f651a2c1219e7dbfc05a0ae50cc91c13b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-ratio-unit-positive-bridge.lit"
+        ]
+      },
+      {
+        "id": "factorial-lower-induction",
+        "source": "claim:\n    ? forall n N:\n        n <= factorial(n)\n    by induc k from 0:\n        ? k <= factorial(k)\n        ? from k = 0:\n            k = 0 <= 1 = factorial(0) = factorial(k)\n        ? induc:\n            factorial(k) >= 1\n            k+1 <= (k+1)*factorial(k) = factorial(k+1)\n    n <= factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-lower-induction.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4b45e0391e23fbd7214969218224334708dd4f8bd23fd02aa0f533fdae6c55c0"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-lower-induction.lit"
+        ]
+      },
+      {
+        "id": "factorial-equality-reflected-interface",
+        "source": "thm factorial_weak_reflection:\n    ? forall m N,n N+:\n        factorial(m) <= factorial(n)\n        =>:\n            m <= n\n    by contra:\n        ? m <= n\n        n < m\n        factorial(n) < factorial(m)\n        impossible factorial(m) <= factorial(n)\nclaim:\n    ? forall m,n N+:\n        factorial(m) = factorial(n)\n        =>:\n            m = n\n    factorial(m) <= factorial(n)\n    factorial(n) <= factorial(m)\n    release thm factorial_weak_reflection(m,n)\n    release thm factorial_weak_reflection(n,m)\n    m = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-equality-reflected-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3e05d2bb17686d437c2fcfae71d682519ddc7aed56832c033e8eb6145fe952f0"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-equality-reflected-interface.lit"
+        ]
+      },
+      {
+        "id": "factorial-nested-isolated-direct",
+        "source": "forall m,n N:\n    m <= n\n    =>:\n        factorial(factorial(m)) <= factorial(factorial(n))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-nested-isolated-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bb1350f3516b0a850584bc162e46ca9c55febe5f0c26f3e13dbfa8b3dc9f317a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-nested-isolated-direct.lit"
+        ]
+      },
+      {
+        "id": "factorial-nested-isolated-chain",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(factorial(m)) <= factorial(factorial(n))\n    factorial(m) <= factorial(n)\n    factorial(factorial(m)) <= factorial(factorial(n))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-nested-isolated-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1d275c76c72df8c368c35824185bd0403bcbacd5e3eeee4c235a3f3194a1a0b8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-nested-isolated-chain.lit"
+        ]
+      },
+      {
+        "id": "factorial-base-lower-strict-false",
+        "source": "forall n N:\n    n < factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-base-lower-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fbc801120b487cd5ad31750e748f98b8ebecfab02f0a83aca5dee50107090be2"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-base-lower-strict-false.lit"
+        ]
+      },
+      {
+        "id": "factorial-lower-cases",
+        "source": "claim:\n    ? forall n N:\n        n <= factorial(n)\n    n = 0 or n > 0\n    by cases:\n        ? n <= factorial(n)\n        case n = 0:\n            n = 0 <= 1 = factorial(0) = factorial(n)\n        case n > 0:\n            n $in N+\n            factorial(n-1) >= 1\n            n <= n*factorial(n-1) = factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-lower-cases.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "01da8fd97d8e5736ad69c6c92f49f036256cceb2f322abfc7279f23f1c8ee185"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-lower-cases.lit"
+        ]
+      },
+      {
+        "id": "factorial-lower-order-cases",
+        "source": "claim:\n    ? forall n N:\n        n <= factorial(n)\n    n >= 0\n    n <= 0 or n > 0\n    by cases:\n        ? n <= factorial(n)\n        case n <= 0:\n            n = 0\n            n = 0 <= 1 = factorial(0) = factorial(n)\n        case n > 0:\n            n $in N+\n            factorial(n-1) >= 1\n            n <= n*factorial(n-1) = factorial(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/factorial-lower-order-cases.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "40ed8ccacc1b874b7155148b0327802a80eb88e658e6593e66c30a7e8f05fd7d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-17-cases/factorial-lower-order-cases.lit"
+        ]
+      }
+    ],
+    "repair_session": [
+      {
+        "id": "factorial-strict-reflection-direct",
+        "source": "forall m,n N:\n    factorial(m) < factorial(n)\n    =>:\n        m < n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5bed872e12481fce418f3ad11197bbcaa784a058d8a9c38ab7bd893f63dd5683",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m, n N:\\n    factorial(m) < factorial(n)\\n    =>:\\n        m < n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m, n N:\\n    factorial(m) < factorial(n)\\n    =>:\\n        m < n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-strict-reflection-order-bridge",
+        "source": "claim:\n    ? forall m,n N:\n        factorial(m) < factorial(n)\n        =>:\n            m < n\n    by contra:\n        ? m < n\n        n <= m\n        factorial(n) <= factorial(m)\n        impossible factorial(m) < factorial(n)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-weak-reflection-positive-direct",
+        "source": "forall m N,n N+:\n    factorial(m) <= factorial(n)\n    =>:\n        m <= n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a810a6d333c4f2a6fab6736122364568240314c17bad927753a2f4f847b28a0e",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m N, n N+:\\n    factorial(m) <= factorial(n)\\n    =>:\\n        m <= n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m N, n N+:\\n    factorial(m) <= factorial(n)\\n    =>:\\n        m <= n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-weak-reflection-order-bridge",
+        "source": "claim:\n    ? forall m N,n N+:\n        factorial(m) <= factorial(n)\n        =>:\n            m <= n\n    by contra:\n        ? m <= n\n        n < m\n        factorial(n) < factorial(m)\n        impossible factorial(m) <= factorial(n)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-ratio-unit-chain",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(m)/factorial(n) <= 1\n    factorial(m) <= factorial(n)\n    factorial(m)/factorial(n) <= factorial(n)/factorial(n) = 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "99455848efedb42a85c81d2e42dfca641ccfea2689cbbea9a02f6d89fd0483ef",
+          "excerpt": "... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall m, n N:\\n        m <= n\\n        =>:\\n            factorial(m) / factorial(n) <= 1\\n    factorial(m) <= factorial(n)\\n    factorial(m) / factorial(n) <= factorial(n) / factorial(n) = 1\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store its conclusions\",\r\n      "
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-ratio-unit-positive-bridge",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(m)/factorial(n) <= 1\n    factorial(m) <= factorial(n)\n    factorial(n) > 0\n    factorial(m)/factorial(n) <= factorial(n)/factorial(n) = 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-nested-isolated-direct",
+        "source": "forall m,n N:\n    m <= n\n    =>:\n        factorial(factorial(m)) <= factorial(factorial(n))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3673e79963ab70e4151bc2584ecb2d4d91a8218e16385ff498714e865ac61a75",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m, n N:\\n    m <= n\\n    =>:\\n        factorial(factorial(m)) <= factorial(factorial(n))\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m, n N:\\n    m <= n\\n    =>:\\n        factorial(factorial(m)) <= factorial(factorial(n))\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-nested-isolated-chain",
+        "source": "claim:\n    ? forall m,n N:\n        m <= n\n        =>:\n            factorial(factorial(m)) <= factorial(factorial(n))\n    factorial(m) <= factorial(n)\n    factorial(factorial(m)) <= factorial(factorial(n))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-base-lower-bound",
+        "source": "forall n N:\n    n <= factorial(n)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a5f0911ec3631047368f90a5bc265acc04a858828376a28d3d28226b900a9a50",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall n N:\\n    n <= factorial(n)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall n N:\\n    n <= factorial(n)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "factorial-lower-order-cases",
+        "source": "claim:\n    ? forall n N:\n        n <= factorial(n)\n    n >= 0\n    n <= 0 or n > 0\n    by cases:\n        ? n <= factorial(n)\n        case n <= 0:\n            n = 0\n            n = 0 <= 1 = factorial(0) = factorial(n)\n        case n > 0:\n            n $in N+\n            factorial(n-1) >= 1\n            n <= n*factorial(n-1) = factorial(n)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0b773098efd18cd15df2a0d51b90753f37b081447ae3c5b729ae0f188e4ca475",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "scope": "Fresh-source immutable release; native factorial examples and isolated use probes. No recursive choose_fn/binomial claims or whole textbook gates."
+  }
+}

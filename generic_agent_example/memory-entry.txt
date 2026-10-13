@@ -1,0 +1,6 @@
+Litex SOP and skill hub: LITEX_HUB_ROOT
+For Litex tasks, read LITEX_HUB_ROOT/sop_and_skills/README.md and choose the relevant skill.
+Reference entry: LITEX_HUB_ROOT/sop_and_skills/skills/litex-reference/SKILL.md
+Proof authoring: LITEX_HUB_ROOT/sop_and_skills/skills/litex-proof-writer/SKILL.md
+Read supporting references only when the task needs them.
+Keep the complete checkout so shared references and the optional agent example resolve.

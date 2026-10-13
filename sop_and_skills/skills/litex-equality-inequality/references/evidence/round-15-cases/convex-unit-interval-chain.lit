@@ -1,0 +1,9 @@
+claim:
+    ? forall x,y,t R:
+        0 <= t
+        t <= 1
+        x <= y
+        =>:
+            x <= (1-t)*x+t*y <= y
+    1-t >= 0
+    x = (1-t)*x+t*x <= (1-t)*x+t*y <= (1-t)*y+t*y = y

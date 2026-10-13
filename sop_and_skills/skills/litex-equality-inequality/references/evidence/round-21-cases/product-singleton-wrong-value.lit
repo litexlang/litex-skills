@@ -1,0 +1,2 @@
+forall c R,m Z:
+    product(m,m,fn(k Z) R {c})=c+1

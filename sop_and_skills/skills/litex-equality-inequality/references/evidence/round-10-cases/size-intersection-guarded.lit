@@ -1,0 +1,4 @@
+forall A,B finite_set:
+    $is_finite_set(intersect(A,B))
+    =>:
+        finite_set_size(intersect(A,B)) <= finite_set_size(A)

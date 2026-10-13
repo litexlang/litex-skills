@@ -1,0 +1,2 @@
+forall u,v cart(R,R,R):
+    chap09:::dot3(u,v)=chap09:::dot3(v,u)

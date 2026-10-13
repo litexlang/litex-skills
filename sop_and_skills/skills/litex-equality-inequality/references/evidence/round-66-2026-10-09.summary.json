@@ -1,0 +1,535 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-66-2026-10-09.json",
+  "original_sha256": "946934e09ec3abd10862f1c0bad3efeacc9406541320f23f0cb5f798e0101f33",
+  "original_bytes": 59331,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "b312272a820b6e599bec218b9f1274704774ef64766e13fe1baf6779e369d9df",
+    "cases": [
+      {
+        "id": "source-calculations",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(180)=180*pi/180=pi\nradians_from_degrees(60)=60*pi/180=pi/3\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=5^2+12^2-2*5*12*cos(pi/2)=169\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/source-calculations.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/source-calculations.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8fa064cc555232a0de2ff1dda553954925802f6ecfb7f63b2e3ff512427e8564"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/source-calculations.lit"
+        ]
+      },
+      {
+        "id": "radians-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(180)=pi\nradians_from_degrees(60)=pi/3\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/radians-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/radians-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "648b4cf3563d7007a85ff5bde02ee2ca37f11637da807c7af17310172996b2df"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/radians-direct.lit"
+        ]
+      },
+      {
+        "id": "cosine-numeric-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncosine_law_third_side_sq(3,4,pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=169\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-numeric-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-numeric-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "56460e4d6ad20c28186c1860a02099fcb4a7a580b1912e4ff5493788d2c0cc33"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-numeric-direct.lit"
+        ]
+      },
+      {
+        "id": "cosine-direct-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=169\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-direct-with-cos.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-direct-with-cos.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "803d34b20bdabb3d364db872bda640c24562dfbee99b28561c4ce9c6aded92eb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-direct-with-cos.lit"
+        ]
+      },
+      {
+        "id": "cosine-original-without-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=5^2+12^2-2*5*12*cos(pi/2)=169\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-original-without-cos.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-original-without-cos.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a456472acab7c01a736ab95d87de0d71eb23e3a4ff4818f11c280678777a3f16"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-original-without-cos.lit"
+        ]
+      },
+      {
+        "id": "cosine-right-angle-symbolic",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall a,b R:\n    cosine_law_third_side_sq(a,b,pi/2)=a^2+b^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-right-angle-symbolic.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-right-angle-symbolic.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a7ba4c5b4387d1eb7d6f13d5d314765095da3f8267c3d4f8c477102d92c5851a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-right-angle-symbolic.lit"
+        ]
+      },
+      {
+        "id": "cosine-sixty-degree",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncosine_law_third_side_sq(3,4,pi/3)=13\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-sixty-degree.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-sixty-degree.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f50f3aaf4364753e1abef5f2c03fe00c50798bf3076fd2e0420652f44e6809f0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-sixty-degree.lit"
+        ]
+      },
+      {
+        "id": "false-radians",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(60)=pi/2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/false-radians.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/false-radians.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a1e59c5c59fc7955b2ea79751861b1384c3ff12a29a5dbffff2843885ce07819"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/false-radians.lit"
+        ]
+      },
+      {
+        "id": "false-cosine-value",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=24\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/false-cosine-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/false-cosine-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "90a136d94fbc14bc07767d1160a684399e4975d3ed3d67b2af427972be09fe07"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/false-cosine-value.lit"
+        ]
+      },
+      {
+        "id": "false-arbitrary-angle",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall a,b,gamma R:\n    cosine_law_third_side_sq(a,b,gamma)=a^2+b^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/false-arbitrary-angle.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/false-arbitrary-angle.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e5082b0a5c7f32ab6a089df0299fac1a820af005da1d4c0e7370eb1c53946182"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/false-arbitrary-angle.lit"
+        ]
+      },
+      {
+        "id": "radians-180-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(180)=pi\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/radians-180-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/radians-180-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c80401cce77903d20ba6f0f2fc2b4816708e9ffc98895b1e735732facb051c7e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/radians-180-direct.lit"
+        ]
+      },
+      {
+        "id": "radians-60-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(60)=pi/3\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/radians-60-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/radians-60-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "687d138b4633daf53ea27f79b9c69b1a485c4e617ac21dbb9976fc88175d7dcf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/radians-60-direct.lit"
+        ]
+      },
+      {
+        "id": "cosine-chains-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=5^2+12^2-2*5*12*cos(pi/2)=169\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-chains-with-cos.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-chains-with-cos.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0f2137cefbf8409b450effb942002bd5dae24095824a4ba7ebac534e3287d79c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-chains-with-cos.lit"
+        ]
+      },
+      {
+        "id": "cosine-first-chain-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-first-chain-with-cos.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-first-chain-with-cos.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9d7ac1a9555235fe367633f89d1750da45b11334145077ee2067e4f8f800c8d6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-first-chain-with-cos.lit"
+        ]
+      },
+      {
+        "id": "cosine-wrong-chain-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=24\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-wrong-chain-with-cos.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-wrong-chain-with-cos.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ab7dc39f8ea3d84281c4e291b2a69f1770207fa9f34f41c16bf0e2342cfabcc3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-wrong-chain-with-cos.lit"
+        ]
+      },
+      {
+        "id": "cosine-expanded-scalar-without-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\n3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-expanded-scalar-without-cos.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-66-cases/cosine-expanded-scalar-without-cos.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3d84fdf79e351946fa01959e8bd19e627657a7cab40d10b0e8863fcfa7dbaefe"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-expanded-scalar-without-cos.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 16,
+      "accepted": 4,
+      "normal_rejections": 12
+    },
+    "scope": "Exact source radians and cosine-law squared-side functions; isolated scalar section, no new geometry interface."
+  }
+}

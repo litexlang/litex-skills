@@ -1,0 +1,5 @@
+template<X, Y set, f fn(x X) Y, U power_set(Y)>:
+    have inverse_image power_set(X) = {x X: f(x) $in U}
+
+forall X, Y set, f fn(x X) Y, U power_set(Y), p \inverse_image<X,Y,f,U>:
+    p $in X

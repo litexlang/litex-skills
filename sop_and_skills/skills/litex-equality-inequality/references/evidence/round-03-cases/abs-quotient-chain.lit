@@ -1,0 +1,9 @@
+claim:
+    ? forall u,v R:
+        v != 0
+        =>:
+            abs(u/v) = abs(u)/abs(v)
+    abs(v) != 0
+    (u/v)*v = u
+    abs(u/v)*abs(v) = abs((u/v)*v) = abs(u)
+    abs(u/v) = (abs(u/v)*abs(v))/abs(v) = abs(u)/abs(v)

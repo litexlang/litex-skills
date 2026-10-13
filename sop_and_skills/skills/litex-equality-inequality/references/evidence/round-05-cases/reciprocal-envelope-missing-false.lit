@@ -1,0 +1,6 @@
+forall x,y R, c,epsilon R+:
+    x != 0
+    y != 0
+    abs(x-y) <= c^2*epsilon
+    =>:
+        abs(1/x-1/y) <= epsilon

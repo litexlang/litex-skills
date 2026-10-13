@@ -1,0 +1,3 @@
+forall a Z,d N+:
+    0 <= a%d
+    a%d < d

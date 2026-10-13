@@ -1,0 +1,5 @@
+forall z,y R:
+    y != 0
+    abs(z-y) < abs(y)/2
+    =>:
+        abs(z) > abs(y)/2

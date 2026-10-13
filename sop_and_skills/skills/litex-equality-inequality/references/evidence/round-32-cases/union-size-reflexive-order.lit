@@ -1,0 +1,2 @@
+forall a,c R:
+    finite_set_size(union({a},{c}))<=finite_set_size(union({a},{c}))

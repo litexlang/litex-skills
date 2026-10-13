@@ -1,0 +1,12 @@
+claim:
+    ? forall n N+,f fn(k Z) R:
+        sum(1,n,fn(j Z) R {f(j+1)-f(j)}) = f(n+1)-f(1)
+    by induc m from 1:
+        ? sum(1,m,fn(j Z) R {f(j+1)-f(j)}) = f(m+1)-f(1)
+        ? from m = 1:
+            sum(1,m,fn(j Z) R {f(j+1)-f(j)}) = sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = fn(j Z) R {f(j+1)-f(j)}(1) = f(1+1)-f(1) = f(m+1)-f(1)
+        ? induc:
+            fn(j Z) R {f(j+1)-f(j)}(m+1) = f((m+1)+1)-f(m+1)
+            sum(1,m+1,fn(j Z) R {f(j+1)-f(j)}) = sum(1,m,fn(j Z) R {f(j+1)-f(j)})+fn(j Z) R {f(j+1)-f(j)}(m+1) = (f(m+1)-f(1))+(f((m+1)+1)-f(m+1)) = f((m+1)+1)-f(1)
+    n >= 1
+    sum(1,n,fn(j Z) R {f(j+1)-f(j)}) = f(n+1)-f(1)

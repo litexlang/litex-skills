@@ -1,0 +1,7 @@
+claim:
+    ? forall c,s R:
+        c^2+s^2 = 1
+        =>:
+            abs(c) <= 1
+    c^2 <= 1^2
+    abs(c) <= abs(1) = 1

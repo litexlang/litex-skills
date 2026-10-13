@@ -1,0 +1,120 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-76-sources.json",
+  "original_sha256": "dd51fb292ae94624dee34283c6f68f8542d5d5f3c56ebff1403aa691049560b0",
+  "original_bytes": 25251,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/11_multivariable_calculus_in_nutshell/main.lit",
+    "source_sha256": "612d7d4b78563b781945c07b9d118df107ddbd5d49e49e6fc16c3a0b56ee0d5c",
+    "scope": "Exact two-dimensional surface and coordinate difference quotient source slice; full partial-derivative predicates excluded.",
+    "cases": [
+      {
+        "id": "prefix",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/prefix.lit"
+      },
+      {
+        "id": "source-x",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-x.lit"
+      },
+      {
+        "id": "source-y",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    y - p(2) != 0\n    (p(1), y)(1) = p(1)\n    (p(1), y)(2) = y\n    quadratic_surface((p(1), y)) = p(1)^2 + y^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((p(1), y)) - quadratic_surface(p) = (p(1)^2 + y^2) - (p(1)^2 + p(2)^2) = y^2 - p(2)^2\n    y^2 - p(2)^2 = (y - p(2)) * (y + p(2))\n    (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = (y^2 - p(2)^2) / (y - p(2)) = y + p(2)\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-y.lit"
+      },
+      {
+        "id": "source-both",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    y - p(2) != 0\n    (p(1), y)(1) = p(1)\n    (p(1), y)(2) = y\n    quadratic_surface((p(1), y)) = p(1)^2 + y^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((p(1), y)) - quadratic_surface(p) = (p(1)^2 + y^2) - (p(1)^2 + p(2)^2) = y^2 - p(2)^2\n    y^2 - p(2)^2 = (y - p(2)) * (y + p(2))\n    (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = (y^2 - p(2)^2) / (y - p(2)) = y + p(2)\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-both.lit"
+      },
+      {
+        "id": "x-single-final-chain",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x-p(1)!=0\n    (x,p(2))(1)=x\n    (x,p(2))(2)=p(2)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-single-final-chain.lit"
+      },
+      {
+        "id": "x-chain-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-chain-only.lit"
+      },
+      {
+        "id": "x-delete-denominator-fact",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    (x,p(2))(1)=x\n    (x,p(2))(2)=p(2)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-delete-denominator-fact.lit"
+      },
+      {
+        "id": "x-delete-coordinate-facts",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x-p(1)!=0\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-delete-coordinate-facts.lit"
+      },
+      {
+        "id": "x-delete-function-values",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x-p(1)!=0\n    (x,p(2))(1)=x\n    (x,p(2))(2)=p(2)\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-delete-function-values.lit"
+      },
+      {
+        "id": "wrong-x-conclusion",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x - p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/wrong-x-conclusion.lit"
+      },
+      {
+        "id": "missing-x-nonzero-premise",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    x - p(1) != 0\n    (x, p(2))(1) = x\n    (x, p(2))(2) = p(2)\n    quadratic_surface((x, p(2))) = x^2 + p(2)^2\n    quadratic_surface(p) = p(1)^2 + p(2)^2\n    quadratic_surface((x, p(2))) - quadratic_surface(p) = (x^2 + p(2)^2) - (p(1)^2 + p(2)^2) = x^2 - p(1)^2\n    x^2 - p(1)^2 = (x - p(1)) * (x + p(1))\n    (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = (x^2 - p(1)^2) / (x - p(1)) = x + p(1)\n\n# The symmetric calculation holds x fixed and varies only y.\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/missing-x-nonzero-premise.lit"
+      },
+      {
+        "id": "x-combined-short",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-combined-short.lit"
+      },
+      {
+        "id": "x-values-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/x-values-only.lit"
+      },
+      {
+        "id": "y-three-fact-route",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    quadratic_surface((p(1),y))=p(1)^2+y^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n    (quadratic_surface((p(1),y))-quadratic_surface(p))/(y-p(2))=((p(1)^2+y^2)-(p(1)^2+p(2)^2))/(y-p(2))=(y^2-p(2)^2)/(y-p(2))=((y-p(2))*(y+p(2)))/(y-p(2))=y+p(2)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/y-three-fact-route.lit"
+      },
+      {
+        "id": "y-values-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    quadratic_surface((p(1),y))=p(1)^2+y^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/y-values-only.lit"
+      },
+      {
+        "id": "both-values-only",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\nthm quadratic_surface_y_difference_quotient:\n    ? forall p cart(R, R), y R:\n        y != p(2)\n        =>:\n            (quadratic_surface((p(1), y)) - quadratic_surface(p)) / (y - p(2)) = y + p(2)\n    quadratic_surface((p(1),y))=p(1)^2+y^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/both-values-only.lit"
+      },
+      {
+        "id": "source-through-partial-derivatives",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3259e4777c55e054910f27c52bdc22d63f28a694644e816f131df9bf943604be",
+          "characters": 5642,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/source-through-partial-derivatives.lit"
+      },
+      {
+        "id": "short-through-partial-derivatives",
+        "source": {
+          "text_omitted": true,
+          "sha256": "bd8043aaf6cfc0a9e43a14d2414c3ff91d2122e8398285fd937da7e6f580ac66",
+          "characters": 4909,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/short-through-partial-derivatives.lit"
+      },
+      {
+        "id": "short-wrong-x-conclusion",
+        "source": "have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        =>:\n            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x - p(1)\n    quadratic_surface((x,p(2)))=x^2+p(2)^2\n    quadratic_surface(p)=p(1)^2+p(2)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round76-cases/short-wrong-x-conclusion.lit"
+      }
+    ]
+  }
+}

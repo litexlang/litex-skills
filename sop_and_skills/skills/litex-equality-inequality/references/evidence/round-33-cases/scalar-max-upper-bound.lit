@@ -1,0 +1,5 @@
+forall a,c,z R:
+    a<=z
+    c<=z
+    =>:
+        max(a,c)<=z

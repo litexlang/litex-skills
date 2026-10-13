@@ -1,0 +1,16 @@
+let r50_two_point_vector = fn(index N+: index <= 2) R
+
+prop r50_is_probability_vector2(p r50_two_point_vector):
+    p(1) >= 0
+    p(2) >= 0
+    p(1) + p(2) = 1
+
+have fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)
+
+have fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)
+
+have fn r50_fair_coin_values(k N+: k <= 2) R = k - 1
+
+have fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2
+
+r50_fair_coin_probs(3)=1/2

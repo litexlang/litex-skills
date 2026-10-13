@@ -1,0 +1,4 @@
+claim:
+    ? forall m Z:
+        product(m,m,fn(k Z) R {k+1})=m+1
+    product(m,m,fn(k Z) R {k+1})=fn(k Z) R {k+1}(m)=m+1

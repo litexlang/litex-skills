@@ -1,0 +1,10 @@
+claim:
+    ? forall p,q,x,y,M R:
+        p >= 0
+        q >= 0
+        p+q = 1
+        x <= M
+        y <= M
+        =>:
+            p*x+q*y <= M
+    p*x+q*y <= p*M+q*M = (p+q)*M = M

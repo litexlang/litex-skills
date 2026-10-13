@@ -1,0 +1,7 @@
+forall S finite_set,M R:
+    $is_nonempty_set(S)
+    S $subset R
+    forall x S:
+        M <= x
+    =>:
+        M <= finite_set_min(S)

@@ -1,0 +1,55 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-51-session.json",
+  "original_sha256": "212666771b42692591175a228de95d24df185d12ef9c0e188793f6583642a084",
+  "original_bytes": 5091,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "id": "modern-original-route",
+      "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n            2^k>=k+1\n            2^k*2^1>=(k+1)*2\n            2^(k+1)=2^k*2^1>=(k+1)*2=(k+1)+(k+1)>=k+1+1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9b6d9705206bbb1414d914961c8caa5f8aaa867748f622832c595a0eea9055bc",
+        "excerpt": "claim:\r\n    ? forall n N:\r\n        2^n>=n+1\r\n    by induc k from 0:\r\n        ? 2^k>=k+1\r\n        ? from k = 0:\r\n            2^0=1>=0+1\r\n        ? induc:\r\n            k>=0\r\n            2^k>=k+1\r\n            2^k*2^1>=(k+1)*2\r\n            2^(k+1)=2^k*2^1>=(k+1)*2=(k+1)+(k+1)>=k+1+1\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "modern-short",
+      "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "33d96e6f90d1c26d9fe967cf7111df21f7227544200526384987717b02c4bac2",
+        "excerpt": "claim:\r\n    ? forall n N:\r\n        2^n>=n+1\r\n    by induc k from 0:\r\n        ? 2^k>=k+1\r\n        ? from k = 0:\r\n            2^0=1>=0+1\r\n        ? induc:\r\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "direct-natural",
+      "source": "forall n N:\n    2^n>=n+1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "55145e3e915bbd85285c8f37f67e4739286cbf46f9cfb94d26e4bf8a3aa99240",
+        "excerpt": "forall n N:\r\n    2^n>=n+1\r\n\r\n... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "successor-nonnegative-only",
+      "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "be2a5fc1bded4779de1898e71b52e8871fd7972f79aa060a518cfe598c06bc4f",
+        "excerpt": "claim:\r\n    ? forall n N:\r\n        2^n>=n+1\r\n    by induc k from 0:\r\n        ? 2^k>=k+1\r\n        ? from k = 0:\r\n            2^0=1>=0+1\r\n        ? induc:\r\n            k>=0\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "modern-no-base-branch",
+      "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "308c257dd8af5792ffe3e4dedf32fd4fa476cf5b1b96d714caa1e9960dd69bdb",
+        "excerpt": "claim:\r\n    ? forall n N:\r\n        2^n>=n+1\r\n    by induc k from 0:\r\n        ? 2^k>=k+1\r\n        ? induc:\r\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"file\",\r\n  \"path\": \"tmp/2026-10-09/equality-inequality-search/round48-replay.lit\",\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": true,\r\n      \"statement\": \"have fn r48_conditional_probability(joint, evidence R: evidence > 0) = joint / evidence\",\r\n      \"proof_method\": {\r\n        \"type\": \"define_fn\",\r\n     "
+      }
+    }
+  ]
+}

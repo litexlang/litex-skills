@@ -1,0 +1,4 @@
+forall x,y R,F fn(t R) R:
+    x = y
+    =>:
+        F(x+1) = F(y+1)

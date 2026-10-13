@@ -1,0 +1,4 @@
+forall a,b Z,f fn(k Z) R:
+    a <= b
+    =>:
+        sum(a,b,fn(k Z) R {f(k+1)-f(k)}) = f(b)-f(a)

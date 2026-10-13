@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-70-session.json",
+  "original_sha256": "8757eb6f7c5927f8afa10dbf86fec85ce55daaea569437b1908f3f8e4d2cd360",
+  "original_bytes": 1764,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "fb2ac88a653cbe2829793f55fd7bc218d15e9a9dee8804c504adde62235c172d",
+        "excerpt": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\r\n    forall u, v, w A:\r\n        mul(mul(u, v), w) = mul(u, mul(v, w))\r\n    forall u A:\r\n        mul(one, u) = u\r\n        mul(u, one) = u\r\n        mul(inv(u), u) = one\r\n        mul(u, inv(u)) = one\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source GroupSetting and renamed original inverse theorem. Current cold round70 owns acceptance/deletion."
+    },
+    {
+      "source": "thm r70_group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n    mul(a, inv(a)) = one\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ee92cfe5904cc3c1ba125d3017814680cd0d8b9e1e79f5921915053cfed0037f",
+        "excerpt": "thm r70_group_inverse_unique:\r\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\r\n        $GroupSetting(A, mul, one, inv)\r\n        mul(b, a) = one\r\n        =>:\r\n            b = inv(a)\r\n    mul(a, inv(a)) = one\r\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source GroupSetting and renamed original inverse theorem. Current cold round70 owns acceptance/deletion."
+    }
+  ]
+}

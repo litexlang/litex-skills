@@ -1,0 +1,357 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/pilot-2026-10-08.json",
+  "original_sha256": "6a498d399a2d38eb5c221ef0a17e1a817b3d28c5a4ab001e062f5a7ac18a65f2",
+  "original_bytes": 58813,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "dd695670125612a4716f24ef0525388adf3d84566967ef6a250a5ac73a61848d",
+    "version": "Litex 1.0.2-beta",
+    "source_build": {
+      "success": false,
+      "exit_code": 101,
+      "reason": "Current working tree has unrelated compilation errors, including inaccessible ExecByThmStmtSuccess import. Existing binary used; source correspondence unknown."
+    },
+    "cases": [
+      {
+        "id": "newton-false",
+        "source": {
+          "text_omitted": true,
+          "sha256": "089ba3a120447e4699704f6b95eea8b2e12894b12ed98cc982694386082db4b3",
+          "characters": 2679,
+          "excerpt": "# Write mathematically correct code with Litex: Newton's method for sqrt(2).\n#\n# Why this showcase matters: Litex verifies mathematical facts about an\n# algorithm, checks its executable algo, and extracts that checked boundary as\n# ordinary Python or C. The generated function can then run inside existing\n# scripts, scientific-computing pipelines, services, and other host systems;\n# the surrounding application does not have to be rewritten in Litex.\n#\n# Source-only shape (no kernel change) for the current verifier:\n# - keep one extractable `algo … by cases` as the shared definition\n# - prove th"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/newton-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1919b042b098cad68b136a60f350e0aa66af60a1a8f493ded183482a45999b3b"
+        },
+        "stderr": "",
+        "replay_source": "cases/newton-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/newton-false.lit"
+        ]
+      },
+      {
+        "id": "newton-original",
+        "source": {
+          "text_omitted": true,
+          "sha256": "6a44dc8e9f7149f6bda0f7380ff1ba311f693332c01b471eab6994e07a67ed47",
+          "characters": 2803,
+          "excerpt": "# Write mathematically correct code with Litex: Newton's method for sqrt(2).\n#\n# Why this showcase matters: Litex verifies mathematical facts about an\n# algorithm, checks its executable algo, and extracts that checked boundary as\n# ordinary Python or C. The generated function can then run inside existing\n# scripts, scientific-computing pipelines, services, and other host systems;\n# the surrounding application does not have to be rewritten in Litex.\n#\n# Source-only shape (no kernel change) for the current verifier:\n# - keep one extractable `algo … by cases` as the shared definition\n# - prove th"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/newton-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0c84f9fdfee25115a87bffec986c81991a55d5ba82cb2249a9fc1b750cd49dc6"
+        },
+        "stderr": "",
+        "replay_source": "cases/newton-original.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/newton-original.lit"
+        ]
+      },
+      {
+        "id": "newton-short",
+        "source": {
+          "text_omitted": true,
+          "sha256": "71c6df7bde3b081747a8b6cd8b965d8167f0748374e59527e082de0a2a18c303",
+          "characters": 2678,
+          "excerpt": "# Write mathematically correct code with Litex: Newton's method for sqrt(2).\n#\n# Why this showcase matters: Litex verifies mathematical facts about an\n# algorithm, checks its executable algo, and extracts that checked boundary as\n# ordinary Python or C. The generated function can then run inside existing\n# scripts, scientific-computing pipelines, services, and other host systems;\n# the surrounding application does not have to be rewritten in Litex.\n#\n# Source-only shape (no kernel change) for the current verifier:\n# - keep one extractable `algo … by cases` as the shared definition\n# - prove th"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/newton-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c15fde612af106247917336ca53c5d353b532816ff153e738b17a8660b63e347"
+        },
+        "stderr": "",
+        "replay_source": "cases/newton-short.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/newton-short.lit"
+        ]
+      },
+      {
+        "id": "numeric-transfer",
+        "source": "1 / 90 <= 1 / 80\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/numeric-transfer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a96204c08f3fe4285450754f23ab8dd1703e10b83b7874ba4fbec8502c7aa66b"
+        },
+        "stderr": "",
+        "replay_source": "cases/numeric-transfer.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/numeric-transfer.lit"
+        ]
+      },
+      {
+        "id": "sub-chain",
+        "source": "claim:\n    ? forall a, b, c, d R:\n        a <= b\n        c <= d\n        =>:\n            a-d <= b-c\n    a-d <= b-d <= b-c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/sub-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8a69ebabe9c75fa86407a1ef97412db8f20973262a76292aed0026c7f32057a2"
+        },
+        "stderr": "",
+        "replay_source": "cases/sub-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/sub-chain.lit"
+        ]
+      },
+      {
+        "id": "sub-direct",
+        "source": "forall a, b, c, d R:\n    a <= b\n    c <= d\n    =>:\n        a-d <= b-c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/sub-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1987025a11bb408faecca4ba89c1431f8a9d8b2e8f08716ef95e50cd3edce428"
+        },
+        "stderr": "",
+        "replay_source": "cases/sub-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/sub-direct.lit"
+        ]
+      },
+      {
+        "id": "sub-false",
+        "source": "forall a, b, c, d R:\n    a <= b\n    c <= d\n    =>:\n        a-c <= b-d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/sub-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4a46cfff367a6ff0b467e85fecbd872d3b739c4375cfbbec2de9cb500e800e8e"
+        },
+        "stderr": "",
+        "replay_source": "cases/sub-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/sub-false.lit"
+        ]
+      },
+      {
+        "id": "sub-missing",
+        "source": "forall a, b, c, d R:\n    a <= b\n    =>:\n        a-d <= b-c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/sub-missing.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "513a91fcfc0ef86db1694eb921ea9ed460f692eb2ab996b25e4dda08354a9a6f"
+        },
+        "stderr": "",
+        "replay_source": "cases/sub-missing.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/sub-missing.lit"
+        ]
+      },
+      {
+        "id": "sub-strict-false",
+        "source": "forall a, b, c, d R:\n    a <= b\n    c <= d\n    =>:\n        a-d < b-c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/sub-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ce85ef1bf2267b7d1c844cb985f1e263ed1ab7875785571a9bc9ed3df1c7347e"
+        },
+        "stderr": "",
+        "replay_source": "cases/sub-strict-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/sub-strict-false.lit"
+        ]
+      },
+      {
+        "id": "sub-transfer",
+        "source": "claim:\n    ? forall u, v, x, y R:\n        u <= v\n        x <= y\n        =>:\n            u-y <= v-x\n    u-y <= v-y <= v-x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-skill/sub-transfer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f4cf4ec61324b236bfe43310866a7926b1ef388f086d7ab517ef477a1be15518"
+        },
+        "stderr": "",
+        "replay_source": "cases/sub-transfer.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/cases/sub-transfer.lit"
+        ]
+      }
+    ],
+    "acceptance_scope": "Completed two-card pilot against recorded existing binary; current-source acceptance unavailable because release build failed. No kernel or canonical mathematical source edits."
+  }
+}

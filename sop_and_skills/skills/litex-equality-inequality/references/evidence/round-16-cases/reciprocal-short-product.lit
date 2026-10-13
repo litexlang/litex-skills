@@ -1,0 +1,15 @@
+claim:
+    ? forall x,y R,c,epsilon R+:
+        x != 0
+        y != 0
+        abs(x) >= c
+        abs(y) >= c
+        abs(x-y) <= c^2*epsilon
+        =>:
+            abs(1/x-1/y) <= epsilon
+    abs(x*y) = abs(x)*abs(y) >= c*abs(y) >= c*c = c^2
+    (1/x-1/y)*(x*y) = y-x
+    abs(y-x) = abs(x-y)
+    abs(1/x-1/y)*c^2 <= abs(1/x-1/y)*abs(x*y) = abs((1/x-1/y)*(x*y)) = abs(x-y) <= c^2*epsilon
+    c^2 > 0
+    abs(1/x-1/y) <= (c^2*epsilon)/c^2 = epsilon

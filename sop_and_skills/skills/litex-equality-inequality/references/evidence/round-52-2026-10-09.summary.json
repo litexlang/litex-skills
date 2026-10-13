@@ -1,0 +1,545 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-52-2026-10-09.json",
+  "original_sha256": "37a763638887cd8eb1829add5f4d4cf35fb1c946294c5b0680274d88d9a00948",
+  "original_bytes": 1194095,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "original",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x * y >= 0\n    sqrt(x * y)^2 = x * y\n    (x + y)^2 - 4 * x * y = (x - y)^2\n    0 <= (x - y)^2\n    0 <= (x + y)^2 - 4 * x * y\n    4 * x * y <= (x + y)^2\n    x * y <= (x + y)^2 / 4\n    ((x + y) / 2)^2 = (x + y)^2 / 4\n    x * y <= ((x + y) / 2)^2\n    0 <= sqrt(x * y)\n    0 <= x + y\n    0 < 2\n    0 <= (x + y) / 2\n    by contra:\n        ? sqrt(x * y) <= (x + y) / 2\n        sqrt(x * y) > (x + y) / 2\n        sqrt(x * y)^2 > ((x + y) / 2)^2\n        impossible x * y <= ((x + y) / 2)^2\n    r52_geometric_mean(x, y) = sqrt(x * y)\n    r52_arithmetic_mean(x, y) = (x + y) / 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "733e0034727bfa8d5c8588fba0f96f8d09d3017c9d895d1e7a378d60ab06279a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/original.lit"
+        ]
+      },
+      {
+        "id": "bodyless",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "202dd63bfabc44646cac6114a89777d4ca58c4717a191bb2511e973aae4541d8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/bodyless.lit"
+        ]
+      },
+      {
+        "id": "certificate-four-statements",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    sqrt(x*y)<=(x+y)/2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/certificate-four-statements.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a9ae3f9b1344eea0f63a9f52cae900a12cb0fbce86fea9c64c03b86a8e34e75e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/certificate-four-statements.lit"
+        ]
+      },
+      {
+        "id": "literal-direct",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nforall x,y R:\n    x>=0\n    y>=0\n    =>:\n        sqrt(x*y)<=(x+y)/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/literal-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d40f63e2c1ea4828e9e9f2ebfe86caa38bb0b48240cfcc85d6b0b8bac84395f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/literal-direct.lit"
+        ]
+      },
+      {
+        "id": "false-strict",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) < r52_arithmetic_mean(x, y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/false-strict.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b815a60e3ad5bd07ebd245e3215e0daa427862a22cf77beaf84dc45e38c8c835"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/false-strict.lit"
+        ]
+      },
+      {
+        "id": "false-negative-input",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nr52_geometric_mean(-1,-1)<=r52_arithmetic_mean(-1,-1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/false-negative-input.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "77a71deb53bc20d311f4caaeb2a727ad8635c179b115c78b9ac152ad5a021d91"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/false-negative-input.lit"
+        ]
+      },
+      {
+        "id": "zero-boundary",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nr52_geometric_mean(0,0)=r52_arithmetic_mean(0,0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/zero-boundary.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e02aa505d5bde2dff218492553b0a6414591dc5294c2e5c0ffab4fa9e32ad05c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/zero-boundary.lit"
+        ]
+      },
+      {
+        "id": "certificate-radius-bridge",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    sqrt(x*y)<=(x+y)/2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/certificate-radius-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "81306c9efeb30aadedff6e4b3c720af8219afc58b4790d5ba43043170477e6d0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/certificate-radius-bridge.lit"
+        ]
+      },
+      {
+        "id": "certificate-square-bridge",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    sqrt(x*y)^2=x*y<=((x+y)/2)^2\n    sqrt(x*y)<=(x+y)/2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/certificate-square-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f737fac2d9fd534cea9066ae7d54461a0f83f320afde363797eb61f00081c6e1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/certificate-square-bridge.lit"
+        ]
+      },
+      {
+        "id": "certificate-final-chain-only",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/certificate-final-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "653b8efa19da304c8d0deddc7eb073d3bb84762858a6d2b302d263216f3404a6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/certificate-final-chain-only.lit"
+        ]
+      },
+      {
+        "id": "root-chain-six",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x*y>=0\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    0<=((x+y)/2)^2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/root-chain-six.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "547e7d2912caeec75717a105dff499831b276d4cad97c7e7344b0d49bebed5f0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/root-chain-six.lit"
+        ]
+      },
+      {
+        "id": "root-chain-five",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x*y>=0\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/root-chain-five.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ceadf2d7fce12fa6260eff6718424acb62d768824143b4437faf9603a18a89b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/root-chain-five.lit"
+        ]
+      },
+      {
+        "id": "root-chain-four",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x*y>=0\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/root-chain-four.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d177cfd165f694786efcd936883a4a8198ccf35b13dce802f68fa6aff10d2b93"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/root-chain-four.lit"
+        ]
+      },
+      {
+        "id": "delete-product-sign",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/delete-product-sign.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8db799cd391360c6331d67cd6c5c6e137931d9986f12919c55d5910a3217c6f1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/delete-product-sign.lit"
+        ]
+      },
+      {
+        "id": "delete-square-bound",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x*y>=0\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    (x+y)/2>=0\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/delete-square-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "400162fd5aba91b4e45fbeb3124382375650415a5cd70ea9cada5cf220c2003a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/delete-square-bound.lit"
+        ]
+      },
+      {
+        "id": "delete-certificate",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nclaim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x*y>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/delete-certificate.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2a99cd90e2ebd12684ac35bd0e600c38b60549b4c4b99f1ab18125d60e3ebeb2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/delete-certificate.lit"
+        ]
+      },
+      {
+        "id": "negative-literal-counterexample",
+        "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\nhave fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\n\nnot sqrt((-1)*(-1))<=(-1-1)/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-52-cases/negative-literal-counterexample.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cfafcf22a75980b90a05e8b533fa317055c535120448f4c5cc63ea2aa7760e63"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round52-cases/negative-literal-counterexample.lit"
+        ]
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Actual isolated textbook AM-GM proof with unchanged nonnegative domains and mean functions; no whole chapter or kernel change."
+  }
+}

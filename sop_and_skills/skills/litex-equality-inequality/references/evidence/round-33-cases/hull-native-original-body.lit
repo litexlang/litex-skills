@@ -1,0 +1,44 @@
+prop has_interval_endpoints(I power_set(R), a, b R):
+    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)
+
+thm interval_endpoint_member_is_between:
+    ? forall I power_set(R), a, b, z R:
+        $has_interval_endpoints(I, a, b)
+        z $in I
+        =>:
+            a <= z
+            z <= b
+    by cases:
+        ? a <= z
+        ? z <= b
+        case I = '[a, b]:
+            z $in '[a, b]
+        case I = '[a, b):
+            z $in '[a, b)
+        case I = '(a, b]:
+            z $in '(a, b]
+        case I = '(a, b):
+            z $in '(a, b)
+
+thm intersection_of_interval_endpoint_forms_member_bounds:
+    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):
+        $has_interval_endpoints(I, a, b)
+        $has_interval_endpoints(J, c, d)
+        =>:
+            max(a,c) <= z
+            z <= min(b,d)
+    by thm interval_endpoint_member_is_between(I, a, b, z)
+    by thm interval_endpoint_member_is_between(J, c, d, z)
+
+thm r33_hull_native_original_body:
+    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):
+        $has_interval_endpoints(I, a, b)
+        $has_interval_endpoints(J, c, d)
+        =>:
+            z $in '[max(a,c), min(b,d)]
+    have z0 R = z
+    z0 = z
+    by thm intersection_of_interval_endpoint_forms_member_bounds(I, J, a, b, c, d, z)
+    max(a,c) <= z0
+    z0 <= min(b,d)
+    z0 $in '[max(a,c), min(b,d)]

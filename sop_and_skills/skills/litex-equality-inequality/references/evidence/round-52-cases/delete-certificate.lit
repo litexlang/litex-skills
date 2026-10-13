@@ -1,0 +1,13 @@
+have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2
+have fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)
+
+claim:
+    ? forall x, y R:
+        x >= 0
+        y >= 0
+        =>:
+            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)
+    x*y>=0
+    x*y<=((x+y)/2)^2
+    (x+y)/2>=0
+    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)

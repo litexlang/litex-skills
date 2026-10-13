@@ -1,0 +1,1282 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-28-2026-10-09.json",
+  "original_sha256": "47392bf6d40a38ac21a6dbaed517e42ab02734db5b452e5a2284c176b5668dc1",
+  "original_bytes": 106803,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+    "sha256": "eced333ac2d390dc22252f6e512980a524fc0d4f6718ecada75b0b0226313c60",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-28.log"
+    },
+    "session": [
+      {
+        "id": "literal-positive-extract",
+        "source": "forall p R:\n    p $in {x R: x>0}\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d65afffe7b1bb914af521ce95a6b11b0d74c5cc59b6087d2d19ea20148baebda",
+          "excerpt": "forall p R:\r\n    p $in {x R: x>0}\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-extract",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    p $in E\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ac6d41a9c732249e404678421bc76ac45ae623464decfd23ebfac05e3d844ec0",
+          "excerpt": "forall E set,p R:\r\n    E={x R: x>0}\r\n    p $in E\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-intro",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    p>0\n    =>:\n        p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "fe0c383427894d921617a0d739f5ac477c4b837793b51a739c104221f6b7d1fe",
+          "excerpt": "forall E set,p R:\r\n    E={x R: x>0}\r\n    p>0\r\n    =>:\r\n        p $in E\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "set-membership-equality-transport",
+        "source": "forall E,F set,p E:\n    E=F\n    =>:\n        p $in F\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "09bacd5be17cddde5cbad86e6fee540b40a24d519a412513212f09d47501f22b",
+          "excerpt": "forall E,F set,p E:\r\n    E=F\r\n    =>:\r\n        p $in F\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-extract-renamed",
+        "source": "forall E set,p R:\n    E={first R: first>0}\n    p $in E\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "352a5bd6c5ba82a645c52789454d09a063a9ab5827b289ae0f0e1e5a17711cb7",
+          "excerpt": "forall E set,p R:\r\n    E={first R: first>0}\r\n    p $in E\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-wrong-condition",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    p $in E\n    =>:\n        p<0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9ee745e8aa049b7d6934bfd6baed69c8f1f0fa85470e58943a545b0a7841931d",
+          "excerpt": "forall E set,p R:\r\n    E={x R: x>0}\r\n    p $in E\r\n    =>:\r\n        p<0\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall E set, p R:\\n    E = {x R: x > 0}\\n    p $in E\\n    =>:\\n        p < 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall E set, p R:\\n    E = {x R: x > 0}\\n    p $in E\\n    =>:\\n        p < 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \""
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-threshold-capture-false",
+        "source": "forall E set,a,b,p R:\n    E={x R: x>a}\n    p $in E\n    =>:\n        p>b\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ce6cd4f54851e34a846ae317e24fb0382fc32c99d89be78583089061a640246d",
+          "excerpt": "forall E set,a,b,p R:\r\n    E={x R: x>a}\r\n    p $in E\r\n    =>:\r\n        p>b\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall E set, a, b, p R:\\n    E = {x R: x > a}\\n    p $in E\\n    =>:\\n        p > b\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall E set, a, b, p R:\\n    E = {x R: x > a}\\n    p $in E\\n    =>:\\n        p > b\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n"
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-threshold-extract",
+        "source": "forall E set,a,p R:\n    E={x R: x>a}\n    p $in E\n    =>:\n        p>a\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "7ec51998c9c4cffaff83a4e0a017b13c274dd79ac4be358b985e66b7352213ce",
+          "excerpt": "forall E set,a,p R:\r\n    E={x R: x>a}\r\n    p $in E\r\n    =>:\r\n        p>a\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-threshold-intro",
+        "source": "forall E set,a,p R:\n    E={x R: x>a}\n    p>a\n    =>:\n        p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d550f7fb58cbc4091352a358ef8373ccb68450cefcca45aa020044e33b84c10a",
+          "excerpt": "forall E set,a,p R:\r\n    E={x R: x>a}\r\n    p>a\r\n    =>:\r\n        p $in E\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-member-replay",
+        "source": "claim:\n    ? forall E set,p R:\n        E={x R: x>0}\n        p $in E\n        =>:\n            p>0\n    p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "043cd69e20c4e56e7d9a01f9c6877723addfa4c9ab70ef0ec9d2ab0d264e6d4b",
+          "excerpt": "claim:\r\n    ? forall E set,p R:\r\n        E={x R: x>0}\r\n        p $in E\r\n        =>:\r\n            p>0\r\n    p $in E\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-literal-member",
+        "source": "claim:\n    ? forall E set,p R:\n        E={x R: x>0}\n        p $in E\n        =>:\n            p>0\n    p $in {x R: x>0}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "22e032e6fbbefd55ff1bb716bc80dc8ad3232e72da42c1c6bd25e0f86e68929b",
+          "excerpt": "claim:\r\n    ? forall E set,p R:\r\n        E={x R: x>0}\r\n        p $in E\r\n        =>:\r\n            p>0\r\n    p $in {x R: x>0}\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-carrier-extract",
+        "source": "forall E set,p E:\n    E={x R: x>0}\n    =>:\n        p $in R\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d249698ba25cbaab68aa8c08c1875c3743f551944563daddf0a7bae33ea378d9",
+          "excerpt": "forall E set,p E:\r\n    E={x R: x>0}\r\n    =>:\r\n        p $in R\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall E set, p E:\\n    E = {x R: x > 0}\\n    =>:\\n        p $in R\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall E set, p E:\\n    E = {x R: x > 0}\\n    =>:\\n        p $in R\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> lit"
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-reversed-premises",
+        "source": "forall E set,p R:\n    p $in E\n    E={x R: x>0}\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b3b09ca8dc3c168cc93cf64409fa5cfa2c001a3d42bd2f7f8632d7556b9d238b",
+          "excerpt": "forall E set,p R:\r\n    p $in E\r\n    E={x R: x>0}\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall E set, p R:\\n    p $in E\\n    E = {x R: x > 0}\\n    =>:\\n        p > 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall E set, p R:\\n    p $in E\\n    E = {x R: x > 0}\\n    =>:\\n        p > 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \""
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-equation-export",
+        "source": "claim:\n    ? forall E set,p R:\n        p $in E\n        E={x R: x>0}\n        =>:\n            p>0\n    E={x R: x>0}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "13a63225f89034d86651c7bff224d4c06949208a625f316aaf4218df036f30ed",
+          "excerpt": "claim:\r\n    ? forall E set,p R:\r\n        p $in E\r\n        E={x R: x>0}\r\n        =>:\r\n            p>0\r\n    E={x R: x>0}\r\n\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall E set, p R:\\n        p $in E\\n        E = {x R: x > 0}\\n        =>:\\n            p > 0\\n    E = {x R: x > 0}\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a"
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-carrier-member-replay",
+        "source": "claim:\n    ? forall E set,p E:\n        E={x R: x>0}\n        =>:\n            p $in R\n    p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "eabb83a581df3499f3f5751cf8b9099b1858fd251032cc9c65a99fdf7a2282fd",
+          "excerpt": "claim:\r\n    ? forall E set,p E:\r\n        E={x R: x>0}\r\n        =>:\r\n            p $in R\r\n    p $in E\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-carrier-literal-member",
+        "source": "claim:\n    ? forall E set,p E:\n        E={x R: x>0}\n        =>:\n            p $in R\n    p $in {x R: x>0}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ee8004145f324519ccd72a4e4381d59e9d032cedc1e81051466b85043552ae2f",
+          "excerpt": "Warning: truncated output (original token count: 2007)\nTotal output lines: 196\n\nclaim:\r\n    ? forall E set,p E:\r\n        E={x R: x>0}\r\n        =>:\r\n            p $in R\r\n    p $in {x R: x>0}\r\n\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall E set, p E:\\n        E = {x R: x > 0}\\n        =>:\\n            p $in R\\n    p $in {x R: x > 0}\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n    "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-functional-extract",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n    E={x X: f(x) $in U}\n    p $in E\n    =>:\n        f(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a01a15b3b4a9c9f43a9cdaca22c771f5a4aecc701c7370b6b62c55d528d41ae",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\r\n    E={x X: f(x) $in U}\r\n    p $in E\r\n    =>:\r\n        f(p) $in U\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-functional-reversed-premises",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n    p $in E\n    E={x X: f(x) $in U}\n    =>:\n        f(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "722772cbfb951a265a19a80fa04c852f503e1d37d3a9c866a0f5c33386f75fee",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\r\n    p $in E\r\n    E={x X: f(x) $in U}\r\n    =>:\r\n        f(p) $in U\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), E set, p X:\\n    p $in E\\n    E = {x X: f(x) $in U}\\n    =>:\\n        f(p) $in U\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), E"
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-functional-intro",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n    E={x X: f(x) $in U}\n    f(p) $in U\n    =>:\n        p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "1332d2108cb778b4fb73dff046fc9704533da43d44212e916bc395cb16f49a88",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\r\n    E={x X: f(x) $in U}\r\n    f(p) $in U\r\n    =>:\r\n        p $in E\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-functional-member-replay",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n        p $in E\n        E={x X: f(x) $in U}\n        =>:\n            f(p) $in U\n    p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "642bfc083fe135cc549cf15686eeff35277e8c0cf3a2b8bd0a523d91d9591698",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\r\n        p $in E\r\n        E={x X: f(x) $in U}\r\n        =>:\r\n            f(p) $in U\r\n    p $in E\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-functional-changed-capture",
+        "source": "forall X,Y set,f,g fn(x X) Y,U power_set(Y),E set,p X:\n    E={x X: f(x) $in U}\n    p $in E\n    =>:\n        g(p) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b81c47827e77896019701334715ee9df7f0d41ec28176ef7d82d3ea87ae519f",
+          "excerpt": "forall X,Y set,f,g fn(x X) Y,U power_set(Y),E set,p X:\r\n    E={x X: f(x) $in U}\r\n    p $in E\r\n    =>:\r\n        g(p) $in U\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f, g fn (x X) Y, U power_set(Y), E set, p X:\\n    E = {x X: f(x) $in U}\\n    p $in E\\n    =>:\\n        g(p) $in U\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f, g fn (x X) Y, U power_s"
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-reversed-member-replay",
+        "source": "claim:\n    ? forall E set,p R:\n        p $in E\n        E={x R: x>0}\n        =>:\n            p>0\n    p $in E\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5a7f9877e11a646a8c95baa7766877b58659b804b6ffe891cce2d18da3b68575",
+          "excerpt": "claim:\r\n    ? forall E set,p R:\r\n        p $in E\r\n        E={x R: x>0}\r\n        =>:\r\n            p>0\r\n    p $in E\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-reversed-literal-member",
+        "source": "claim:\n    ? forall E set,p R:\n        p $in E\n        E={x R: x>0}\n        =>:\n            p>0\n    p $in {x R: x>0}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "027024dba1edafb2dcef58793e6bc96c853228f287cff396653b6751cf928483",
+          "excerpt": "Warning: truncated output (original token count: 2003)\nTotal output lines: 196\n\nclaim:\r\n    ? forall E set,p R:\r\n        p $in E\r\n        E={x R: x>0}\r\n        =>:\r\n            p>0\r\n    p $in {x R: x>0}\r\n\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall E set, p R:\\n        p $in E\\n        E = {x R: x > 0}\\n        =>:\\n            p > 0\\n    p $in {x R: x > 0}\",\r\n      \"why_failed\": {\r\n    "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-reversed-equality",
+        "source": "forall E set,p R:\n    p $in E\n    {x R: x>0}=E\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e4adefcfc4e6477adeaa3683b18d989eb754a5a5523401fff0b0ca54ef0cf0ed",
+          "excerpt": "forall E set,p R:\r\n    p $in E\r\n    {x R: x>0}=E\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall E set, p R:\\n    p $in E\\n    {x R: x > 0} = E\\n    =>:\\n        p > 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall E set, p R:\\n    p $in E\\n    {x R: x > 0} = E\\n    =>:\\n        p > 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \""
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-supplied-body",
+        "source": "forall E set,p R:\n    p $in E\n    E={x R: x>0}\n    p>0\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d89d614db4ac349844ea31b985cf8812364affc69b1b7d28c97ec8be7f369706",
+          "excerpt": "forall E set,p R:\r\n    p $in E\r\n    E={x R: x>0}\r\n    p>0\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-positive-missing-membership",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    =>:\n        p>0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d0ed4d446b0c4cf64c596fc952738f32c5ccb14f72d37da3fa6475109776b839",
+          "excerpt": "forall E set,p R:\r\n    E={x R: x>0}\r\n    =>:\r\n        p>0\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall E set, p R:\\n    E = {x R: x > 0}\\n    =>:\\n        p > 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall E set, p R:\\n    E = {x R: x > 0}\\n    =>:\\n        p > 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+        },
+        "session_id": 52107
+      },
+      {
+        "id": "aliased-functional-wrong-input",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p,q X:\n    E={x X: f(x) $in U}\n    p $in E\n    =>:\n        f(q) $in U\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "4effa293e6cf2e3a110cb3ff866ce6582312158c2ee896702bb6bc02fe465040",
+          "excerpt": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p,q X:\r\n    E={x X: f(x) $in U}\r\n    p $in E\r\n    =>:\r\n        f(q) $in U\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, U power_set(Y), E set, p, q X:\\n    E = {x X: f(x) $in U}\\n    p $in E\\n    =>:\\n        f(q) $in U\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f fn (x X) Y, U power_set("
+        },
+        "session_id": 52107
+      }
+    ],
+    "cases": [
+      {
+        "id": "literal-positive-extract",
+        "source": "forall p R:\n    p $in {x R: x>0}\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/literal-positive-extract.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "116da9358fad60e7fe811137d5b21d828def154c84c7042e5d773dfc48908ce9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/literal-positive-extract.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-extract",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    p $in E\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-extract.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1b5ce15ad6af37b177a2fe2dd2e68266ff860ba75090aaec5d5ba97bb7a87ef7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-extract.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-intro",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    p>0\n    =>:\n        p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-intro.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "87140accfc4766167d28f29b5fb1e773656293ca064200a06680a01a499fdb7e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-intro.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "set-membership-equality-transport",
+        "source": "forall E,F set,p E:\n    E=F\n    =>:\n        p $in F\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/set-membership-equality-transport.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5aedeb4219b8b17fbbaef63bd76246d6707a1d6d6eb98d9929fa2029f5515f44"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/set-membership-equality-transport.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-extract-renamed",
+        "source": "forall E set,p R:\n    E={first R: first>0}\n    p $in E\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-extract-renamed.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3784de11f3ea17bed7abfbf4bb9c1463459ef4e574e60744ed097814243b031f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-extract-renamed.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-wrong-condition",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    p $in E\n    =>:\n        p<0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-wrong-condition.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ed613e1f85f49c614e64b67ad50056875b3fa11c739ae3754b435ef8007dcca4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-wrong-condition.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-threshold-capture-false",
+        "source": "forall E set,a,b,p R:\n    E={x R: x>a}\n    p $in E\n    =>:\n        p>b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-threshold-capture-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "497a90e9f3cda42370f3acd480a8baad10090eb089ebb9781642ff8b3681932e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-threshold-capture-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-threshold-extract",
+        "source": "forall E set,a,p R:\n    E={x R: x>a}\n    p $in E\n    =>:\n        p>a\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-threshold-extract.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8aa894add8de8562917466d1d85d4f707f62624d3120caee0d26776ad16da381"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-threshold-extract.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-threshold-intro",
+        "source": "forall E set,a,p R:\n    E={x R: x>a}\n    p>a\n    =>:\n        p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-threshold-intro.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c4618d20891356ceead79fb7583fab53268ea5ccbf42578905917b4770b9e24a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-threshold-intro.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-member-replay",
+        "source": "claim:\n    ? forall E set,p R:\n        E={x R: x>0}\n        p $in E\n        =>:\n            p>0\n    p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-member-replay.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9b3ff150f527a2e7b349ceadb4048329cd529cb1525c4a49fbe9c75364c909f3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-member-replay.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-literal-member",
+        "source": "claim:\n    ? forall E set,p R:\n        E={x R: x>0}\n        p $in E\n        =>:\n            p>0\n    p $in {x R: x>0}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-literal-member.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f0d5f5af0086b141e017e7d07c12e8fcfd2f774c74a04f885f62b3c623ddd434"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-literal-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-carrier-extract",
+        "source": "forall E set,p E:\n    E={x R: x>0}\n    =>:\n        p $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-carrier-extract.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "da795134e29b9d42b0b44b121f1aeabc72aaba4a6654b16aa761a587280308d8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-carrier-extract.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-reversed-premises",
+        "source": "forall E set,p R:\n    p $in E\n    E={x R: x>0}\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-reversed-premises.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1e36edc4f2c18714fdf57432cdc334f6a1c9129ced45137cb86dd0ee712a76a1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-reversed-premises.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-equation-export",
+        "source": "claim:\n    ? forall E set,p R:\n        p $in E\n        E={x R: x>0}\n        =>:\n            p>0\n    E={x R: x>0}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-equation-export.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0793f846523c105dd6c7beab0541ba7750dd2f3ebed1a487899077c9ff0db2de"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-equation-export.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-carrier-member-replay",
+        "source": "claim:\n    ? forall E set,p E:\n        E={x R: x>0}\n        =>:\n            p $in R\n    p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-carrier-member-replay.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "95a1ac5af3b37ba0fcb0c2adb8c30177bd7232c542da4cd3991ec632c9300714"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-carrier-member-replay.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-carrier-literal-member",
+        "source": "claim:\n    ? forall E set,p E:\n        E={x R: x>0}\n        =>:\n            p $in R\n    p $in {x R: x>0}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-carrier-literal-member.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c6046f9be05d9b4ea466a0917bf7db1a1db7b4bf076a9eaa05438e3c9ba2d1a2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-carrier-literal-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-functional-extract",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n    E={x X: f(x) $in U}\n    p $in E\n    =>:\n        f(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-functional-extract.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aa012a394d9a197677aab1bc0badf9fa8c6394e0f65db29c3745df94925f28ba"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-functional-extract.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-functional-reversed-premises",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n    p $in E\n    E={x X: f(x) $in U}\n    =>:\n        f(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-functional-reversed-premises.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3d63919ae50067dff7aaf8c81fdba17c42646669d8bae5b6b8fdf1736a14e01d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-functional-reversed-premises.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-functional-intro",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n    E={x X: f(x) $in U}\n    f(p) $in U\n    =>:\n        p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-functional-intro.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f7d17e75391f2f7bf41b4a589a0ba4307b5e822d7e82bdeff47a7970164891c5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-functional-intro.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-functional-member-replay",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p X:\n        p $in E\n        E={x X: f(x) $in U}\n        =>:\n            f(p) $in U\n    p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-functional-member-replay.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b4aa0b723f9b8adf789d246ae5afbdda225421f55f95927604d6876c714861c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-functional-member-replay.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-functional-changed-capture",
+        "source": "forall X,Y set,f,g fn(x X) Y,U power_set(Y),E set,p X:\n    E={x X: f(x) $in U}\n    p $in E\n    =>:\n        g(p) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-functional-changed-capture.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "367a23a0a1eb1c3ba360bf51121b635d5de57bae6870317c288c866bc7b7f3d9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-functional-changed-capture.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-reversed-member-replay",
+        "source": "claim:\n    ? forall E set,p R:\n        p $in E\n        E={x R: x>0}\n        =>:\n            p>0\n    p $in E\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-reversed-member-replay.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc75704350b1060e87eb973f1ed425c543d535964291bf20e14dcbf8622c7807"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-reversed-member-replay.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-reversed-literal-member",
+        "source": "claim:\n    ? forall E set,p R:\n        p $in E\n        E={x R: x>0}\n        =>:\n            p>0\n    p $in {x R: x>0}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-reversed-literal-member.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fdf05ceaea76cc86df66380108bba99b26d022d4328ac9466ef18999f10f6e31"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-reversed-literal-member.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-reversed-equality",
+        "source": "forall E set,p R:\n    p $in E\n    {x R: x>0}=E\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-reversed-equality.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "36f052df1c7b76c7ae932191efb2f22c5480037c89d235c30943d2714afd1e56"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-reversed-equality.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-supplied-body",
+        "source": "forall E set,p R:\n    p $in E\n    E={x R: x>0}\n    p>0\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-supplied-body.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f818be57ec41910f7cb1ccf2daa32deb3714630bec7823f7f673b9dc7f406ea9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-supplied-body.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-positive-missing-membership",
+        "source": "forall E set,p R:\n    E={x R: x>0}\n    =>:\n        p>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-positive-missing-membership.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3f790e8f071d562d36c50a7d0ac2611a9ac45989dd9e65a29224c6fcf8ca6466"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-positive-missing-membership.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "aliased-functional-wrong-input",
+        "source": "forall X,Y set,f fn(x X) Y,U power_set(Y),E set,p,q X:\n    E={x X: f(x) $in U}\n    p $in E\n    =>:\n        f(q) $in U\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-28-cases/aliased-functional-wrong-input.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "15ad82c26c1c222e222c5848dd885f5cad513546483a1cee9d4a38f18d9bd044"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round28-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round28-cases/aliased-functional-wrong-input.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      }
+    ],
+    "source_anchor": "Round27 exact source preimage equality/member consumers; simplified positive-real builders isolate the mechanism.",
+    "summary": {
+      "independent_files": 27,
+      "accepted": 15,
+      "rejected": 12
+    },
+    "read_only_owner_inspection": {
+      "src/store_fact_and_infer/infer_fact/infer_atomic_fact/infer_atomic_except_equality/membership_projection.rs": "81c2f4acc2760186c560fddb7fa23d9a2ba1bbbebeb8567216a70e62550bd227",
+      "src/store_fact_and_infer/infer_fact/infer_atomic_fact/infer_equal_fact/infer_equal_fact.rs": "ed496ab07aa5f7f6b1bce8f37390e7c12bfea2dc9aed51270f7ba58efc3261d5"
+    },
+    "scope": {
+      "kernel_edits": false,
+      "canonical_edits": false,
+      "trust_added": false,
+      "source_condition_order_comparison": true,
+      "complete_causal_repair_claim": false
+    }
+  }
+}

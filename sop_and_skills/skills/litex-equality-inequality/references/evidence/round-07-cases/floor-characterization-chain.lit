@@ -1,0 +1,11 @@
+claim:
+    ? forall x R,n Z:
+        n <= x
+        x < n+1
+        =>:
+            floor(x) = n
+    floor(x) $in Z
+    floor(x) <= x < n+1
+    floor(x) <= n
+    n <= x < floor(x)+1
+    n <= floor(x)

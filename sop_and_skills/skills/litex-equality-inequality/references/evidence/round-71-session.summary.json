@@ -1,0 +1,55 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-71-session.json",
+  "original_sha256": "a48749b8574b48a2f133cd4477ecf23481cae57bac8c3d0fd016c6c4a97f0945",
+  "original_bytes": 5716,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "thm group_left_cancel:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\n        $GroupSetting(A, mul, one, inv)\n        mul(a, b) = mul(a, c)\n        =>:\n            b = c\n    mul(inv(a), a) = one\n    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "deefce2f9354dc6730d46017cbef8081824b42efd9785e0ee589c0aa1a69d539",
+        "excerpt": "thm group_left_cancel:\r\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\r\n        $GroupSetting(A, mul, one, inv)\r\n        mul(a, b) = mul(a, c)\r\n        =>:\r\n            b = c\r\n    mul(inv(a), a) = one\r\n    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; GroupSetting already accepted round70. Literal short theorem/dependency replay; current cold round71 owns deletion."
+    },
+    {
+      "source": "thm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n    mul(a, inv(a)) = one\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "abc7b3f87831a399e3919d5adca9a5b25a2c8eb2775b38d9db0f7fcce859a2da",
+        "excerpt": "thm group_inverse_unique:\r\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\r\n        $GroupSetting(A, mul, one, inv)\r\n        mul(b, a) = one\r\n        =>:\r\n            b = inv(a)\r\n    mul(a, inv(a)) = one\r\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; GroupSetting already accepted round70. Literal short theorem/dependency replay; current cold round71 owns deletion."
+    },
+    {
+      "source": "prop GroupHomomorphismSetting(A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B):\n    $GroupSetting(A, mul_A, one_A, inv_A)\n    $GroupSetting(B, mul_B, one_B, inv_B)\n    forall x, y A:\n        f(mul_A(x, y)) = mul_B(f(x), f(y))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8d7ecdb5b27c3000c92fcaf2fa3c68a9c9d1c50200dd9682258a705b597466a6",
+        "excerpt": "prop GroupHomomorphismSetting(A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B):\r\n    $GroupSetting(A, mul_A, one_A, inv_A)\r\n    $GroupSetting(B, mul_B, one_B, inv_B)\r\n    forall x, y A:\r\n        f(mul_A(x, y)) = mul_B(f(x), f(y))\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; GroupSetting already accepted round70. Literal short theorem/dependency replay; current cold round71 owns deletion."
+    },
+    {
+      "source": "thm homomorphism_maps_identity:\n    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B:\n        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\n        =>:\n            f(one_A) = one_B\n    mul_A(one_A, one_A) = one_A\n    mul_B(f(one_A), f(one_A)) = f(mul_A(one_A, one_A)) = f(one_A) = mul_B(f(one_A), one_B)\n    release thm group_left_cancel(B, mul_B, one_B, inv_B, f(one_A), f(one_A), one_B)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "52411e25a8989bd031d455d73de90f2b4e1ba5d84736ef066ddb937866d72437",
+        "excerpt": "thm homomorphism_maps_identity:\r\n    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B:\r\n        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\r\n        =>:\r\n            f(one_A) = one_B\r\n    mul_A(one_A, one_A) = one_A\r\n    mul_B(f(one_A), f(one_A)) = f(mul_A(one_A, one_A)) = f(one_A) = mul_B(f(one_A), one_B)\r\n    release thm group_left_cancel(B, mul_B, one_B, inv_B, f(one_A), f(one_A), one_B)\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; GroupSetting already accepted round70. Literal short theorem/dependency replay; current cold round71 owns deletion."
+    },
+    {
+      "source": "thm homomorphism_maps_inverse:\n    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B, a A:\n        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\n        =>:\n            f(inv_A(a)) = inv_B(f(a))\n    release thm homomorphism_maps_identity(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\n    mul_A(inv_A(a), a) = one_A\n    mul_B(f(inv_A(a)), f(a)) = f(mul_A(inv_A(a), a)) = f(one_A) = one_B\n    release thm group_inverse_unique(B, mul_B, one_B, inv_B, f(a), f(inv_A(a)))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2b32c64f4783efdb53df69e5a026a973870d8214de728544b223d36107a6b1c3",
+        "excerpt": "thm homomorphism_maps_inverse:\r\n    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B, a A:\r\n        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\r\n        =>:\r\n            f(inv_A(a)) = inv_B(f(a))\r\n    release thm homomorphism_maps_identity(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\r\n    mul_A(inv_A(a), a) = one_A\r\n    mul_B(f(inv_A(a)), f(a)) = f(mul_A(inv_A(a), a)) = f(one_A) = one_B\r\n    release thm group_inverse_unique(B, mul_B, one_B, inv_B, f(a), f(inv_A"
+      },
+      "baseline": "Round68 snapshot Session66922; GroupSetting already accepted round70. Literal short theorem/dependency replay; current cold round71 owns deletion."
+    }
+  ]
+}

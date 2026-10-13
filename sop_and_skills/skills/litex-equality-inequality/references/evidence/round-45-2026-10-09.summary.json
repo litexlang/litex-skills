@@ -1,0 +1,522 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-45-2026-10-09.json",
+  "original_sha256": "5344965fbb895433f1c26be72cd2579323793d08d8ea814cf45449dc8e11303c",
+  "original_bytes": 804731,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "bound-positive-original",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-positive-original.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "11a82022061010ad3cb8d5d63d4aeb7fdf8b54f588b36148d14950f00e32d7a7",
+          "characters": 5246,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "66df06c8048261219c0cf8f7690c18bac125512178085e7ed90cf4744ddac636"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-positive-original.lit"
+        ]
+      },
+      {
+        "id": "bound-positive-bodyless",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-positive-bodyless.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "c773dac2804dd0d2b25e51eaf01eb39c2409aac7493c324e280e853a43794180",
+          "characters": 5170,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "27eb09604d91bb70bcee49187e4b5e924cc19f02837437006bc6d130a3a02da4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-positive-bodyless.lit"
+        ]
+      },
+      {
+        "id": "bound-step-original",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-step-original.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "6aa48f1d0a2f0e947c3fc7d7ddd7bc59b76ad61e34519fbc21f424289a4ee7e8",
+          "characters": 5846,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "036689ce3cf7d97c51ae247e71263a52846ea88d7c96a0271f30133fccf26680"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-step-original.lit"
+        ]
+      },
+      {
+        "id": "bound-step-bodyless",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-step-bodyless.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "515eca1cd9a1bb1647c468af4567f3f04c4ad2a083ad7cb7634c0315573fe7e1",
+          "characters": 5458,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5dab482dd2c7ac7037d8a33d41cb01d131100a32c25abd6d9b2c568b510edd80"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-step-bodyless.lit"
+        ]
+      },
+      {
+        "id": "bound-step-four-statements",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-step-four-statements.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "58b8872aa362f8f7f0076b8ae4f287d64263ad4b93d40a8a9609dc9ce33b078c",
+          "characters": 5681,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c20318a031fc622a74ed568911afd80ce65553fee50c8ff2f048c66fe5af2f9f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-step-four-statements.lit"
+        ]
+      },
+      {
+        "id": "final-bound-original",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/final-bound-original.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "421c37a393e7e07c97e1a4690cfc86289887835704b9b3bed832fd4a4fb0fbc0",
+          "characters": 8735,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8441980b669f962015bdebb23ff8d1e34d68b67a284a38c7c96ab3ab50422cad"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/final-bound-original.lit"
+        ]
+      },
+      {
+        "id": "final-bound-bodyless",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/final-bound-bodyless.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "4e49f02319647ba516fd70efeb4fa35e922c484a98e143085dd7e01d7cbaf826",
+          "characters": 5976,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20fdd74744359131acb0f4a93db840072b4f7b398b21a7f13edaf675bc997f28"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/final-bound-bodyless.lit"
+        ]
+      },
+      {
+        "id": "bound-step-five-statements",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-step-five-statements.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "71c6fd523fdb0831feba277d806be70d0344f738ea3d18202feb276054c08090",
+          "characters": 5734,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f674416c5d4334b8628b1d0f811f9f100ebc619399fe622658ffe436ec3939e9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-step-five-statements.lit"
+        ]
+      },
+      {
+        "id": "final-bound-short",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/final-bound-short.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "252c4d386a8a95423958e6b9f40950040efbb94a7535d97a9d2b0ba1bfedd940",
+          "characters": 7237,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9292d6b6e693c5c7dbfdd456bbdd44d9023c84a4fa332e591ec3e9f99d5e7fab"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/final-bound-short.lit"
+        ]
+      },
+      {
+        "id": "combined-short-through-final-bound",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/combined-short-through-final-bound.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "089692b1ec294f352e506b07ad46c05cbe13f577a98f2d40b4b76cef781c2a35",
+          "characters": 7140,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "562353df9f2f59c8f45656f679c849fa5cc13b12f6d43c0def1f8a515723d61c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/combined-short-through-final-bound.lit"
+        ]
+      },
+      {
+        "id": "bound-step-delete-exponent",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/bound-step-delete-exponent.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "2332eda040f136214287324b1ea7eb917de63bfddc86a1e25c08e560c25201be",
+          "characters": 5708,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "95432d0ffc2294ab39a442530038edbbf7abbb992479b0008eb13d7c47451fd3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/bound-step-delete-exponent.lit"
+        ]
+      },
+      {
+        "id": "final-delete-gap-sign",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/final-delete-gap-sign.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "59c21d9444db6e1cb8c629a2a4e07e7a92b80d1a85a8a542336d26d806fee194",
+          "characters": 7138,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8c57cc803d149b53a87331ce08d5184f59609f084e7c31794958db291666b923"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/final-delete-gap-sign.lit"
+        ]
+      },
+      {
+        "id": "final-false-half-bound",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/final-false-half-bound.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "a56418c364698b8bd3c230d8f1db4c78df3927279740e806462a760917817e4f",
+          "characters": 7244,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b5233f1ccfb9a5019c019847a7ef77aaaeea8ea17e33854056d403dee3cb6dc7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/final-false-half-bound.lit"
+        ]
+      },
+      {
+        "id": "combined-four-step-and-short-final",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-45-cases/combined-four-step-and-short-final.lit"
+        ],
+        "source": {
+          "text_omitted": true,
+          "sha256": "36e182ff068001971c9b72c6bd03fe5c6f831e567335b2fa7fa93a4559593a8d",
+          "characters": 7114,
+          "excerpt": "have fn r44_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r44_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2\n    r44_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r44_square_root_two_residual(x) = x^2 - 2\n    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r44_square_r"
+        },
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "51887202aad175866b6315bce00a56d40813f28b09fb1c4ddd55b24f6f72fa4a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round45-cases/combined-four-step-and-short-final.lit"
+        ]
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Actual comparison-bound recurrence and final bound induction with short recursive Newton prefix; excludes extractor and numerical checkpoint."
+  }
+}

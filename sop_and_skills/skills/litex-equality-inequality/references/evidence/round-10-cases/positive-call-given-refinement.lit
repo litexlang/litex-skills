@@ -1,0 +1,5 @@
+forall m N+,range_index Z,f fn(x N+) R:
+    m <= range_index
+    range_index $in N+
+    =>:
+        f(range_index) $in R

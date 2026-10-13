@@ -1,0 +1,110 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-54-sources.json",
+  "original_sha256": "23c43a124c941d8fe9b12f51ce700da964ab9d69f2ce6d7e3058ac3af0ed0649",
+  "original_bytes": 10525,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter05-trigonometric-identities.lit",
+    "source_sha256": "24bbcb3cb902d7875424b53e35231918cb169c202a44a40b044245a1990968ba",
+    "prefix": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n",
+    "cases": [
+      {
+        "id": "trig-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2\n",
+        "statement": "forall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2\n"
+      },
+      {
+        "id": "trig-combined-conclusions",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n",
+        "statement": "forall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "trig-endpoint-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "statement": "forall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "trig-endpoint-after-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "statement": "forall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "trig-endpoint-after-combined",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "statement": "forall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "false-minus-identity",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1-tan(x)^2=r54_secant(x)^2\n",
+        "statement": "forall x R:\n    cos(x)!=0\n    =>:\n        1-tan(x)^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "missing-cos-domain",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "statement": "forall x R:\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "singular-secant",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_secant(pi/2)=0\n",
+        "statement": "r54_secant(pi/2)=0\n"
+      },
+      {
+        "id": "numeric-deg-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_deg(180)=180*pi/180=pi\nr54_deg(90)=90*pi/180=pi/2\nr54_deg(60)=60*pi/180=pi/3\nr54_deg(45)=45*pi/180=pi/4\n",
+        "statement": "r54_deg(180)=180*pi/180=pi\nr54_deg(90)=90*pi/180=pi/2\nr54_deg(60)=60*pi/180=pi/3\nr54_deg(45)=45*pi/180=pi/4\n"
+      },
+      {
+        "id": "numeric-deg-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_deg(180)=pi\nr54_deg(90)=pi/2\nr54_deg(60)=pi/3\nr54_deg(45)=pi/4\n",
+        "statement": "r54_deg(180)=pi\nr54_deg(90)=pi/2\nr54_deg(60)=pi/3\nr54_deg(45)=pi/4\n"
+      },
+      {
+        "id": "numeric-cosine-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=3^2+4^2-2*3*4*0=25\n",
+        "statement": "cos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=3^2+4^2-2*3*4*0=25\n"
+      },
+      {
+        "id": "numeric-cosine-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_cosine_law_third_side_sq(3,4,pi/2)=25\n",
+        "statement": "r54_cosine_law_third_side_sq(3,4,pi/2)=25\n"
+      },
+      {
+        "id": "false-cosine-value",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_cosine_law_third_side_sq(3,4,pi/2)=24\n",
+        "statement": "r54_cosine_law_third_side_sq(3,4,pi/2)=24\n"
+      },
+      {
+        "id": "endpoint-value-and-chain",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nclaim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    r54_secant(x)=1/cos(x)\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    r54_secant(x)=1/cos(x)\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "endpoint-chain-only",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nclaim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n"
+      },
+      {
+        "id": "cosine-value-and-short-chain",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "statement": "cos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n"
+      },
+      {
+        "id": "cosine-short-chain-only",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "statement": "r54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n"
+      },
+      {
+        "id": "cosine-value-and-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=25\n",
+        "statement": "cos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=25\n"
+      },
+      {
+        "id": "deg-mixed-short",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_deg(180)=pi\nr54_deg(90)=90*pi/180=pi/2\nr54_deg(60)=60*pi/180=pi/3\nr54_deg(45)=45*pi/180=pi/4\n",
+        "statement": "r54_deg(180)=pi\nr54_deg(90)=90*pi/180=pi/2\nr54_deg(60)=60*pi/180=pi/3\nr54_deg(45)=45*pi/180=pi/4\n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+forall a,b,c,d R:
+    0 < b
+    0 < d
+    a/b <= c/d
+    =>:
+        a*d <= c*b

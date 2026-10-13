@@ -1,0 +1,8 @@
+claim:
+    ? forall n N:
+        2^n>=n+1
+    by induc k from 0:
+        ? 2^k>=k+1
+        ? from k = 0:
+            2^0=1>=0+1
+        ? induc:

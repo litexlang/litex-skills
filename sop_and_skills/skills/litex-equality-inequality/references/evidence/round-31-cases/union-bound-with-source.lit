@@ -1,0 +1,5 @@
+forall a,c,z R:
+    a<=z
+    c<=z
+    =>:
+        finite_set_max(union({a},{c}))<=z

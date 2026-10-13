@@ -1,0 +1,5 @@
+forall x,r R:
+    0 <= x
+    r^2 <= x
+    =>:
+        r <= sqrt(x)

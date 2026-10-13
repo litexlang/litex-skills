@@ -1,0 +1,2 @@
+forall x R:
+    sqrt(x^2) = abs(x)

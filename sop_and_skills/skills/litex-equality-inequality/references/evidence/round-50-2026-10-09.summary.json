@@ -1,0 +1,669 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-50-2026-10-09.json",
+  "original_sha256": "783e722b3c4a3d32cec525970015def96787827a225b9305403d6ed8dd269541",
+  "original_bytes": 160670,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "original",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs $in r50_two_point_vector\nr50_fair_coin_values $in r50_two_point_vector\nr50_fair_coin_probs(1) = 1 / 2\nr50_fair_coin_probs(2) = 1 / 2\nr50_fair_coin_values(1) = 0\nr50_fair_coin_values(2) = 1\nby def $r50_is_probability_vector2(r50_fair_coin_probs)\n\nr50_expectation2(r50_fair_coin_values, r50_fair_coin_probs) = r50_fair_coin_values(1) * r50_fair_coin_probs(1) + r50_fair_coin_values(2) * r50_fair_coin_probs(2)\nr50_fair_coin_values(1) * r50_fair_coin_probs(1) + r50_fair_coin_values(2) * r50_fair_coin_probs(2) = 0 * (1 / 2) + 1 * (1 / 2) = 1 / 2\nr50_expectation2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 2\n\nr50_variance2(r50_fair_coin_values, r50_fair_coin_probs) = (r50_fair_coin_values(1) - r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs))^2 * r50_fair_coin_probs(1) + (r50_fair_coin_values(2) - r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs))^2 * r50_fair_coin_probs(2)\n(r50_fair_coin_values(1) - r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs))^2 * r50_fair_coin_probs(1) + (r50_fair_coin_values(2) - r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs))^2 * r50_fair_coin_probs(2) = (0 - 1 / 2)^2 * (1 / 2) + (1 - 1 / 2)^2 * (1 / 2)\n(0 - 1 / 2)^2 * (1 / 2) + (1 - 1 / 2)^2 * (1 / 2) = 1 / 4\nr50_variance2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "53dc26e1e14b80cb7e0e2940ae05b1ad4bddbd4df081611bcc40b94867f7e6c1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/original.lit"
+        ]
+      },
+      {
+        "id": "carrier-direct",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs $in r50_two_point_vector\nr50_fair_coin_values $in r50_two_point_vector\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/carrier-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f114edcca3c32d2191cdfeb6fe5e38fa5faf7d6adcefeffa0a6668b81e5c740b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/carrier-direct.lit"
+        ]
+      },
+      {
+        "id": "probability-direct",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\n$r50_is_probability_vector2(r50_fair_coin_probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/probability-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a633421cd28459d791356e4a3c83794747c2837a60bc3fecbba9775c3ebbf22c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/probability-direct.lit"
+        ]
+      },
+      {
+        "id": "probability-by-def",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nby def $r50_is_probability_vector2(r50_fair_coin_probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/probability-by-def.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "04e990ac58e15ceb3ef70f36b895890e386904e34f10897d95a598fecc19d338"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/probability-by-def.lit"
+        ]
+      },
+      {
+        "id": "expectation-direct",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/expectation-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d24539991bdea087ff8228b9cc665c1e2aa9dfe6b029b943a7c19bc686e9c16"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/expectation-direct.lit"
+        ]
+      },
+      {
+        "id": "variance-direct",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/variance-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cac482935444b5362befcd89ef88621d1465dd896290c12e3eaaa23ebb7e1c61"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/variance-direct.lit"
+        ]
+      },
+      {
+        "id": "combined-direct",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nby def $r50_is_probability_vector2(r50_fair_coin_probs)\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/combined-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "872f9ca7a0f41bff0348ca9f7898dab2ea69add612be31293f4d2d9d05e21028"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/combined-direct.lit"
+        ]
+      },
+      {
+        "id": "expectation-coordinate-values",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nr50_fair_coin_values(1)=0\nr50_fair_coin_values(2)=1\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/expectation-coordinate-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0fc7f85e721c33da8effb5cb8c700e039af0925d874fb9ed6fb6a126a2220b58"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/expectation-coordinate-values.lit"
+        ]
+      },
+      {
+        "id": "variance-coordinate-values",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nr50_fair_coin_values(1)=0\nr50_fair_coin_values(2)=1\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/variance-coordinate-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0c947da098b90e0df6f740867fa18246f41877abfa4d4d2bc24212de1b9001fd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/variance-coordinate-values.lit"
+        ]
+      },
+      {
+        "id": "variance-after-expectation",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/variance-after-expectation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "044ceea13626494bba958566d6da8d8ec3264d957fb485de6db6ab743089a1bd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/variance-after-expectation.lit"
+        ]
+      },
+      {
+        "id": "false-expectation",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/false-expectation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d8eab0a7c208ab69877771cf7d5c00f71b28a57b1d07defda609dd6be5bf10b6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/false-expectation.lit"
+        ]
+      },
+      {
+        "id": "false-variance",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/false-variance.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "813a1bfa2d4cc575259ad60f3adcf10a1aa70e598dced3eeb7b05f10d7c7403d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/false-variance.lit"
+        ]
+      },
+      {
+        "id": "false-normalization",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nhave fn r50_bad_probs(k N+: k<=2) R = 1\nby def $r50_is_probability_vector2(r50_bad_probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/false-normalization.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "09e71a70c54ac3990d0c1de58ddaa9c4139beacedbd402e62ed14043a1f8c755"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/false-normalization.lit"
+        ]
+      },
+      {
+        "id": "invalid-index",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(3)=1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/invalid-index.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fac45fbaf244956dbdda0dfc478ea69e8c9c01d1a7f45c1a9f3187d968713bc2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/invalid-index.lit"
+        ]
+      },
+      {
+        "id": "combined-seven-statements",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nr50_fair_coin_values(1)=0\nr50_fair_coin_values(2)=1\nby def $r50_is_probability_vector2(r50_fair_coin_probs)\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=r50_fair_coin_values(1)*r50_fair_coin_probs(1)+r50_fair_coin_values(2)*r50_fair_coin_probs(2)=0*(1/2)+1*(1/2)=1/2\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=(r50_fair_coin_values(1)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(1)+(r50_fair_coin_values(2)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(2)=(0-1/2)^2*(1/2)+(1-1/2)^2*(1/2)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/combined-seven-statements.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "32c69f194edf9a3e6a6b0a5706729fea9bae070356256f23ec0dcaed42836165"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/combined-seven-statements.lit"
+        ]
+      },
+      {
+        "id": "probability-coordinate-fold",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nby def $r50_is_probability_vector2(r50_fair_coin_probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/probability-coordinate-fold.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9dba1fc85ea7cee6035d2ef33aa83c912d843f2c0144e1a12c6e28f19ee17821"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/probability-coordinate-fold.lit"
+        ]
+      },
+      {
+        "id": "expectation-coordinate-chain",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nr50_fair_coin_values(1)=0\nr50_fair_coin_values(2)=1\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=r50_fair_coin_values(1)*r50_fair_coin_probs(1)+r50_fair_coin_values(2)*r50_fair_coin_probs(2)=0*(1/2)+1*(1/2)=1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/expectation-coordinate-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bf33a5c26573b6a99a80bb94030af7394b84ab1e2012773ba46d14e3a752e36f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/expectation-coordinate-chain.lit"
+        ]
+      },
+      {
+        "id": "variance-coordinate-chain",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nr50_fair_coin_values(1)=0\nr50_fair_coin_values(2)=1\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=r50_fair_coin_values(1)*r50_fair_coin_probs(1)+r50_fair_coin_values(2)*r50_fair_coin_probs(2)=0*(1/2)+1*(1/2)=1/2\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=(r50_fair_coin_values(1)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(1)+(r50_fair_coin_values(2)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(2)=(0-1/2)^2*(1/2)+(1-1/2)^2*(1/2)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/variance-coordinate-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "17374ef03f5a98db077cd9b044cc08c92bb6ae8b65586b3d1016b6b4cdf9ea4b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/variance-coordinate-chain.lit"
+        ]
+      },
+      {
+        "id": "variance-chain-without-expectation",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(1)=1/2\nr50_fair_coin_probs(2)=1/2\nr50_fair_coin_values(1)=0\nr50_fair_coin_values(2)=1\nr50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=(r50_fair_coin_values(1)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(1)+(r50_fair_coin_values(2)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(2)=(0-1/2)^2*(1/2)+(1-1/2)^2*(1/2)=1/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/variance-chain-without-expectation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "212cce233b047f5dee8a69d9c3e2e4d0ac74b113d97a4f25eec648fe82b4adf8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/variance-chain-without-expectation.lit"
+        ]
+      },
+      {
+        "id": "expectation-chain-without-coordinates",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=r50_fair_coin_values(1)*r50_fair_coin_probs(1)+r50_fair_coin_values(2)*r50_fair_coin_probs(2)=0*(1/2)+1*(1/2)=1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/expectation-chain-without-coordinates.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0123059fa6998f79ad658b9a0eecc00ddec0be6e72f4f2620f667634d4720515"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/expectation-chain-without-coordinates.lit"
+        ]
+      },
+      {
+        "id": "probability-delete-first-value",
+        "source": "let r50_two_point_vector = fn(index N+: index <= 2) R\n\nprop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1\n\nhave fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\nhave fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\n\nhave fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\n\nhave fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\n\nr50_fair_coin_probs(2)=1/2\nby def $r50_is_probability_vector2(r50_fair_coin_probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-50-cases/probability-delete-first-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d7710734df87cce96016bd8c7f4622c36e0b67dbf8695c74de3760735e447789"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round50-cases/probability-delete-first-value.lit"
+        ]
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Actual fair-coin probability fold and expectation/variance checkpoint, unchanged domains and definitions; not whole probability showcase."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-68-session.json",
+  "original_sha256": "66e3dd5c0bd489b4fb5de58e777b754a8e1854e7792b1c0f98fa2c7af6ed9df8",
+  "original_bytes": 22688,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "thm pascal_identity:\n    ? forall n, r N+:\n        r < n\n        r > 1\n        =>:\n            choose_fn(n, r) = choose_fn(n - 1, r) + choose_fn(n - 1, r - 1)\n    n - r > 0\n\n    claim:\n        ? choose_fn(n, r) = pascal_entry(r, n - r)\n        by cases:\n            ? choose_fn(n, r) = pascal_entry(r, n - r)\n            case r <= n\n            case r > n:\n                impossible r < n\n\n    claim:\n        ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\n        by cases:\n            ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\n            case r <= n - 1\n            case r > n - 1:\n                impossible r <= n - 1\n\n    claim:\n        ? choose_fn(n - 1, r - 1) = pascal_entry(r - 1, (n - 1) - (r - 1))\n        by cases:\n            ? choose_fn(n - 1, r - 1) = pascal_entry(r - 1, (n - 1) - (r - 1))\n            case r - 1 <= n - 1\n            case r - 1 > n - 1:\n                impossible r - 1 <= n - 1\n\n    (n - 1) - r = n - r - 1\n    (n - 1) - (r - 1) = n - r\n    choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r) = pascal_entry(r, n - r - 1)\n    choose_fn(n - 1, r - 1) = pascal_entry(r - 1, (n - 1) - (r - 1)) = pascal_entry(r - 1, n - r)\n    choose_fn(n,r)=pascal_entry(r,n-r)=pascal_entry(r-1,n-r)+pascal_entry(r,n-r-1)=choose_fn(n-1,r-1)+choose_fn(n-1,r)=choose_fn(n-1,r)+choose_fn(n-1,r-1)\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "224213b7d4f1a51746a48b839bb8cb17606918c8b828c3e6e516a51e83be82fa",
+        "excerpt": "Warning: truncated output (original token count: 26481)\nTotal output lines: 2197\n\nthm pascal_identity:\r\n    ? forall n, r N+:\r\n        r < n\r\n        r > 1\r\n        =>:\r\n            choose_fn(n, r) = choose_fn(n - 1, r) + choose_fn(n - 1, r - 1)\r\n    n - r > 0\r\n\r\n    claim:\r\n        ? choose_fn(n, r) = pascal_entry(r, n - r)\r\n        by cases:\r\n            ? choose_fn(n, r) = pascal_entry(r, n - r)\r\n            case r <= n\r\n            case r > n:\r\n                impossible r < n\r\n\r\n    claim:\r\n        ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\r\n        by cases:\r\n            ? choo"
+      },
+      "baseline": "Current round68 snapshot Session4360; source-prefix cold accepted. Old9174 ended at prefix/binary adoption; prior journals retained.",
+      "transcript_complete": false,
+      "framing_error": "Internal blank lines ended REPL statement early; subsequent indent parse error terminated4360. This was author transport, not failure of the cold theorem."
+    },
+    {
+      "source": "thm pascal_identity:\n    ? forall n, r N+:\n        r < n\n        r > 1\n        =>:\n            choose_fn(n, r) = choose_fn(n - 1, r) + choose_fn(n - 1, r - 1)\n    n - r > 0\n    claim:\n        ? choose_fn(n, r) = pascal_entry(r, n - r)\n        by cases:\n            ? choose_fn(n, r) = pascal_entry(r, n - r)\n            case r <= n\n            case r > n:\n                impossible r < n\n    claim:\n        ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\n        by cases:\n            ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\n            case r <= n - 1\n            case r > n - 1:\n                impossible r <= n - 1\n    claim:\n        ? choose_fn(n - 1, r - 1) = pascal_entry(r - 1, (n - 1) - (r - 1))\n        by cases:\n            ? choose_fn(n - 1, r - 1) = pascal_entry(r - 1, (n - 1) - (r - 1))\n            case r - 1 <= n - 1\n            case r - 1 > n - 1:\n                impossible r - 1 <= n - 1\n    (n - 1) - r = n - r - 1\n    (n - 1) - (r - 1) = n - r\n    choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r) = pascal_entry(r, n - r - 1)\n    choose_fn(n - 1, r - 1) = pascal_entry(r - 1, (n - 1) - (r - 1)) = pascal_entry(r - 1, n - r)\n    choose_fn(n,r)=pascal_entry(r,n-r)=pascal_entry(r-1,n-r)+pascal_entry(r,n-r-1)=choose_fn(n-1,r-1)+choose_fn(n-1,r)=choose_fn(n-1,r)+choose_fn(n-1,r-1)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5edd89d39f8fa062a63c401679c5a3a78f7f7daa441d2316e04cd6ff26e10e2c",
+        "excerpt": "thm pascal_identity:\r\n    ? forall n, r N+:\r\n        r < n\r\n        r > 1\r\n        =>:\r\n            choose_fn(n, r) = choose_fn(n - 1, r) + choose_fn(n - 1, r - 1)\r\n    n - r > 0\r\n    claim:\r\n        ? choose_fn(n, r) = pascal_entry(r, n - r)\r\n        by cases:\r\n            ? choose_fn(n, r) = pascal_entry(r, n - r)\r\n            case r <= n\r\n            case r > n:\r\n                impossible r < n\r\n    claim:\r\n        ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\r\n        by cases:\r\n            ? choose_fn(n - 1, r) = pascal_entry(r, (n - 1) - r)\r\n            case r <= n - 1\r\n         "
+      },
+      "baseline": "Current round68 snapshot Session66922; exact checked prefix replayed. Internal blank lines removed only for one-frame transport."
+    }
+  ]
+}

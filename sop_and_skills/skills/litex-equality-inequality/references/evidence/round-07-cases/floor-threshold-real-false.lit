@@ -1,0 +1,4 @@
+forall x,n R:
+    floor(x) < n
+    =>:
+        x < n

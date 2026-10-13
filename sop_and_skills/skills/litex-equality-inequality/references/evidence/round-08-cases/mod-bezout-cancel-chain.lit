@@ -1,0 +1,15 @@
+claim:
+    ? forall a,b,k,u,v Z,m N+:
+        k*u+m*v = 1
+        (a*k)%m = (b*k)%m
+        =>:
+            a%m = b%m
+    a = a*1 = a*(k*u+m*v) = (a*k)*u+m*(a*v)
+    b = b*1 = b*(k*u+m*v) = (b*k)*u+m*(b*v)
+    (m*(a*v))%m = 0
+    (m*(b*v))%m = 0
+    ((a*k)*u)%m = ((b*k)*u)%m
+    ((a*k)*u)%m+0 = ((a*k)*u)%m
+    ((b*k)*u)%m+0 = ((b*k)*u)%m
+    a%m = ((a*k)*u+m*(a*v))%m = (((a*k)*u)%m+(m*(a*v))%m)%m = (((a*k)*u)%m+0)%m = (((a*k)*u)%m)%m = ((a*k)*u)%m
+    b%m = ((b*k)*u+m*(b*v))%m = (((b*k)*u)%m+(m*(b*v))%m)%m = (((b*k)*u)%m+0)%m = (((b*k)*u)%m)%m = ((b*k)*u)%m

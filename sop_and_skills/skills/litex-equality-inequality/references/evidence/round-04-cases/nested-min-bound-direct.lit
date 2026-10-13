@@ -1,0 +1,2 @@
+forall a,b,c R:
+    min(min(a,b),c) <= a

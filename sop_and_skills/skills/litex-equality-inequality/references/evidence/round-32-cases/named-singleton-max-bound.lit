@@ -1,0 +1,3 @@
+thm r32_singleton_max_bound:
+    ? forall a R:
+        a<=finite_set_max({a})

@@ -1,0 +1,4 @@
+forall r,s,x R:
+    (x-r)*(x-s)=0
+    =>:
+        x-r=0 or x-s=0

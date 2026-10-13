@@ -1,0 +1,24 @@
+have fn r41_square_root_two_residual(x R) R = x^2 - 2
+claim:
+    ? forall x R+:
+        (x + 2 / x) / 2 $in R+
+    x > 0
+    x != 0
+    2 / x > 0
+    x + 2 / x > 0
+    (x + 2 / x) / 2 > 0
+
+have fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2
+
+thm r41_identity_no_next_alias:
+    ? forall x R+:
+        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2
+    x > 0
+    x != 0
+    r41_square_root_two_residual(x) = x^2 - 2
+    r41_newton_sqrt_two(x) = (x + 2 / x) / 2
+    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2
+    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2
+    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2
+    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2
+    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2

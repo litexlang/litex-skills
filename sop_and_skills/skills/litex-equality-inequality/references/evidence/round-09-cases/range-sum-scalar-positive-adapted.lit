@@ -1,0 +1,8 @@
+claim:
+    ? forall f fn(x N+) R,m,n N+,c R:
+        m <= n
+        =>:
+            sum(m,n,fn(x N+) R {c*f(x)}) = c*sum(m,n,fn(x N+) R {f(x)})
+    sum(m,n,fn(x N+) R {c*f(x)}) = sum(m,n,fn(x m...n) R {c*f(x)})
+    sum(m,n,fn(x N+) R {f(x)}) = sum(m,n,fn(x m...n) R {f(x)})
+    sum(m,n,fn(x m...n) R {c*f(x)}) = c*sum(m,n,fn(x m...n) R {f(x)})

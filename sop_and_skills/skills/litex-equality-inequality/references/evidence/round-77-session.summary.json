@@ -1,0 +1,19 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-77-session.json",
+  "original_sha256": "a7e3a5f8718898e224d08b1ac2eb4deea3cfcffff84c0762aca9544d9f6c7f35",
+  "original_bytes": 1110,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "claim:\n    ? forall point cart(R,R),x R,epsilon R+:\n        x!=point(1)\n        |x-point(1)|<epsilon\n        =>:\n            |(quadratic_surface((x,point(2)))-quadratic_surface(point))/(x-point(1))-2*point(1)|<epsilon\n    release thm r76_x_quotient(point,x)\n    |(quadratic_surface((x,point(2)))-quadratic_surface(point))/(x-point(1))-2*point(1)|=|(x+point(1))-2*point(1)|=|x-point(1)|<epsilon",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "bf669469c3a0448c421554c0cdfa3b9795745a7ea26149d735d27a6ea1520ffc",
+        "excerpt": "claim:\r\n    ? forall point cart(R,R),x R,epsilon R+:\r\n        x!=point(1)\r\n        |x-point(1)|<epsilon\r\n        =>:\r\n            |(quadratic_surface((x,point(2)))-quadratic_surface(point))/(x-point(1))-2*point(1)|<epsilon\r\n    release thm r76_x_quotient(point,x)\r\n    |(quadratic_surface((x,point(2)))-quadratic_surface(point))/(x-point(1))-2*point(1)|=|(x+point(1))-2*point(1)|=|x-point(1)|<epsilon\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source surface/r76 quotient accepted previously, scalar inner consumer only. Current cold round77 owns full derivative/gradient acceptance."
+    }
+  ]
+}

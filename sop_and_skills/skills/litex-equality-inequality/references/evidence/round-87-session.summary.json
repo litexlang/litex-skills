@@ -1,0 +1,37 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-87-session.json",
+  "original_sha256": "d09c6c982095ae7439d3c482e927e5375e72afd0b60b26ef604c3d433715db37",
+  "original_bytes": 5163,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "prop is_subspace(K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, U power_set(V)):\n    space.zero $in U\n    forall u, v V:\n        u $in U\n        v $in U\n        =>:\n            space.add(u, v) $in U\n    forall a K, v V:\n        v $in U\n        =>:\n            space.smul(a, v) $in U",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a212e067a3936ce8cf94fa8a450dd313c61568b6d9ab6a969788f3a00b604b80",
+        "excerpt": "prop is_subspace(K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, U power_set(V)):\r\n    space.zero $in U\r\n    forall u, v V:\r\n        u $in U\r\n        v $in U\r\n        =>:\r\n            space.add(u, v) $in U\r\n    forall a K, v V:\r\n        v $in U\r\n        =>:\r\n            space.smul(a, v) $in U\r\n\r\n... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; exact subspace/kernel declarations only. Current cold round87 required for proof/deletion."
+    },
+    {
+      "source": "template<V, W set, zeroW W, T fn(v V) W>:\n    have linear_kernel power_set(V) = {x V: T(x) = zeroW}",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "fc3b5618d6665cbd21bebd55eb077b30c2305a1ee40a45a35dc5af76b82c0c06",
+        "excerpt": "template<V, W set, zeroW W, T fn(v V) W>:\r\n    have linear_kernel power_set(V) = {x V: T(x) = zeroW}\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; exact subspace/kernel declarations only. Current cold round87 required for proof/deletion."
+    },
+    {
+      "source": "thm linear_map_kernel_is_subspace:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:\n        $is_linear_map(K, field, V, W, source, target, T)\n        =>:\n            $is_subspace(K, field, V, source, \\linear_kernel<V, W, target.zero, T>)\n    let kernel = \\linear_kernel<V, W, target.zero, T>\n    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)\n    \\linear_kernel<V, W, target.zero, T> = {x V: T(x) = target.zero}\n    kernel = {x V: T(x) = target.zero}\n    release thm set_builder_member(source.zero, {x V: T(x) = target.zero})\n    claim:\n        ? forall u, v V:\n            u $in kernel\n            v $in kernel\n            =>:\n                source.add(u, v) $in kernel\n        u $in {x V: T(x) = target.zero}\n        T(u) = target.zero\n        v $in {x V: T(x) = target.zero}\n        T(v) = target.zero\n        T(source.add(u, v)) = target.add(T(u), T(v)) = target.add(target.zero, target.zero) = target.zero\n        release thm set_builder_member(source.add(u, v), {x V: T(x) = target.zero})\n    claim:\n        ? forall a K, v V:\n            v $in kernel\n            =>:\n                source.smul(a, v) $in kernel\n        v $in {x V: T(x) = target.zero}\n        T(v) = target.zero\n        release thm scalar_times_zero_vector(K, field, W, target, a)\n        T(source.smul(a, v)) = target.smul(a, T(v)) = target.smul(a, target.zero) = target.zero\n        release thm set_builder_member(source.smul(a, v), {x V: T(x) = target.zero})\n    by def $is_subspace(K, field, V, source, \\linear_kernel<V, W, target.zero, T>)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "168887de2f85d38f08d7fa99f16e167c298d6d9880eb5fee8a25395b40ea6395",
+        "excerpt": "thm linear_map_kernel_is_subspace:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:\r\n        $is_linear_map(K, field, V, W, source, target, T)\r\n        =>:\r\n            $is_subspace(K, field, V, source, \\linear_kernel<V, W, target.zero, T>)\r\n    let kernel = \\linear_kernel<V, W, target.zero, T>\r\n    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)\r\n    \\linear_kernel<V, W, target.zero, T> = {x V: T(x) = target.zero}\r\n    kernel = {x V: T(x) = target.zero}\r\n"
+      },
+      "baseline": "Round68 snapshot Session66922; exact kernel/subspace declarations and source short dependencies accepted. Current cold round87 owns joint deletion."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+claim:
+    ? forall f fn(x Z) R,m,n Z:
+        m <= n
+        =>:
+            abs(sum(m,n,f)) <= sum(m,n,fn(x Z) R {abs(f(x))})
+    sum(m,n,f) = finite_set_sum(m...n,f)
+    finite_set_sum(m...n,fn(x m...n) R {abs(f(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})
+    abs(sum(m,n,f)) = abs(finite_set_sum(m...n,f)) <= finite_set_sum(m...n,fn(x m...n) R {abs(f(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})

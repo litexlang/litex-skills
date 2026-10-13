@@ -1,0 +1,180 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-68-sources.json",
+  "original_sha256": "a354dd570fce74e6465b2c559dde56c0cede03477ab0653df7a590df880bc111",
+  "original_bytes": 58849,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/4_discrete_mathematics_in_nutshell/main.lit",
+    "source_sha256": "9ce0e3654c4cfc1b624d1419ec635bfe03291c9715aa342230f7c90dddb197de",
+    "scope": "Exact source Pascal table and choose function, source theorem premises unchanged; isolated full source and liveness probes, no recursive or carrier replacements.",
+    "cases": [
+      {
+        "id": "source-prefix",
+        "source": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n        b >= 0\n        =>:\n            a - 1 + b >= 0\n            b + (a - 1) >= 0\n    a $in N+\n    a - 1 >= 0\n\nstrategy natural_predecessor:\n    ? forall n N+:\n        n - 1 $in N\n    n - 1 >= 0\n\n# The recursive table parameters are integers. Prove the predecessor bound\n# directly on that domain so recursive-call WD can use the positive branch.\nstrategy integer_predecessor_nonnegative:\n    ? forall n Z:\n        n > 0\n        =>:\n            n - 1 >= 0\n    n $in N+\n\n# The Pascal table is defined recursively from its two boundary rows.\nhave fn pascal_entry(a Z, b Z: a >= 0, b >= 0) N by induc a + b from 0:\n    case a = 0: 1\n    case a > 0:\n        case b = 0: 1\n        case b > 0: pascal_entry(a - 1, b) + pascal_entry(a, b - 1)\n\n# Binomial coefficients read the diagonal coordinates of the Pascal table and\n# are zero outside the usual range k <= n.\nhave fn choose_fn(n, k N) N by cases:\n    case k <= n: pascal_entry(k, n - k)\n    case k > n: 0\n\n# Normalize the three table coordinates and unfold one recursive Pascal step\n# to obtain choose(n,r) = choose(n-1,r) + choose(n-1,r-1).\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/source-prefix.lit"
+      },
+      {
+        "id": "source-full",
+        "source": {
+          "text_omitted": true,
+          "sha256": "9ce0e3654c4cfc1b624d1419ec635bfe03291c9715aa342230f7c90dddb197de",
+          "characters": 3330,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/source-full.lit"
+      },
+      {
+        "id": "theorem-empty",
+        "source": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n        b >= 0\n        =>:\n            a - 1 + b >= 0\n            b + (a - 1) >= 0\n    a $in N+\n    a - 1 >= 0\n\nstrategy natural_predecessor:\n    ? forall n N+:\n        n - 1 $in N\n    n - 1 >= 0\n\n# The recursive table parameters are integers. Prove the predecessor bound\n# directly on that domain so recursive-call WD can use the positive branch.\nstrategy integer_predecessor_nonnegative:\n    ? forall n Z:\n        n > 0\n        =>:\n            n - 1 >= 0\n    n $in N+\n\n# The Pascal table is defined recursively from its two boundary rows.\nhave fn pascal_entry(a Z, b Z: a >= 0, b >= 0) N by induc a + b from 0:\n    case a = 0: 1\n    case a > 0:\n        case b = 0: 1\n        case b > 0: pascal_entry(a - 1, b) + pascal_entry(a, b - 1)\n\n# Binomial coefficients read the diagonal coordinates of the Pascal table and\n# are zero outside the usual range k <= n.\nhave fn choose_fn(n, k N) N by cases:\n    case k <= n: pascal_entry(k, n - k)\n    case k > n: 0\n\n# Normalize the three table coordinates and unfold one recursive Pascal step\n# to obtain choose(n,r) = choose(n-1,r) + choose(n-1,r-1).\nthm pascal_identity:\n    ? forall n, r N+:\n        r < n\n        r > 1\n        =>:\n            choose_fn(n, r) = choose_fn(n - 1, r) + choose_fn(n - 1, r - 1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/theorem-empty.lit"
+      },
+      {
+        "id": "delete-guard-facts",
+        "source": {
+          "text_omitted": true,
+          "sha256": "7a15abd82efb7d18565008250993824f03fa77f27e55af21a2d7af1e544fbfed",
+          "characters": 3261,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/delete-guard-facts.lit"
+      },
+      {
+        "id": "delete-coordinate-normalizations",
+        "source": {
+          "text_omitted": true,
+          "sha256": "27233bfda0dce4f6096e05fd8c7879f36a121cf98304050f94f2bca542b0f3eb",
+          "characters": 3272,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/delete-coordinate-normalizations.lit"
+      },
+      {
+        "id": "single-final-chain",
+        "source": {
+          "text_omitted": true,
+          "sha256": "39523bfda99c951ce8055990b2289c03da6760b699de232f1bae676d8f5f41e2",
+          "characters": 2833,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/single-final-chain.lit"
+      },
+      {
+        "id": "single-final-chain-with-normalizations",
+        "source": {
+          "text_omitted": true,
+          "sha256": "06ce9a23e97422b716dfe98ebd40df1033abcc81758a9878bc27f80df654af49",
+          "characters": 2891,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/single-final-chain-with-normalizations.lit"
+      },
+      {
+        "id": "direct-identity",
+        "source": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n        b >= 0\n        =>:\n            a - 1 + b >= 0\n            b + (a - 1) >= 0\n    a $in N+\n    a - 1 >= 0\n\nstrategy natural_predecessor:\n    ? forall n N+:\n        n - 1 $in N\n    n - 1 >= 0\n\n# The recursive table parameters are integers. Prove the predecessor bound\n# directly on that domain so recursive-call WD can use the positive branch.\nstrategy integer_predecessor_nonnegative:\n    ? forall n Z:\n        n > 0\n        =>:\n            n - 1 >= 0\n    n $in N+\n\n# The Pascal table is defined recursively from its two boundary rows.\nhave fn pascal_entry(a Z, b Z: a >= 0, b >= 0) N by induc a + b from 0:\n    case a = 0: 1\n    case a > 0:\n        case b = 0: 1\n        case b > 0: pascal_entry(a - 1, b) + pascal_entry(a, b - 1)\n\n# Binomial coefficients read the diagonal coordinates of the Pascal table and\n# are zero outside the usual range k <= n.\nhave fn choose_fn(n, k N) N by cases:\n    case k <= n: pascal_entry(k, n - k)\n    case k > n: 0\n\n# Normalize the three table coordinates and unfold one recursive Pascal step\n# to obtain choose(n,r) = choose(n-1,r) + choose(n-1,r-1).\nforall n,r N+:\n    r<n\n    r>1\n    =>:\n        choose_fn(n,r)=choose_fn(n-1,r)+choose_fn(n-1,r-1)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/direct-identity.lit"
+      },
+      {
+        "id": "mapped-values-single-final-chain",
+        "source": {
+          "text_omitted": true,
+          "sha256": "401bd90306e0b48ade002d1e983f3954df5bffcd66973ca6ed7d1468119058bf",
+          "characters": 3073,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/mapped-values-single-final-chain.lit"
+      },
+      {
+        "id": "delete-recursive-equation-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "06d4558c9fdef19ab2c85134fdcd5180a30542bdc7ca80df6069b793c897d9a5",
+          "characters": 3245,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/delete-recursive-equation-echo.lit"
+      },
+      {
+        "id": "delete-main-pascal-sum-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c33784164f0e508b1ca26551c2f00d9b8685c7b3ecfdde9f3b3a982f27cdfcf4",
+          "characters": 3227,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/delete-main-pascal-sum-echo.lit"
+      },
+      {
+        "id": "delete-sum-transport",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2e9219b6fa861f227bef9b515e45ae8d9d68457e2a491e308945b56af7a6de57",
+          "characters": 3222,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/delete-sum-transport.lit"
+      },
+      {
+        "id": "delete-final-chain",
+        "source": {
+          "text_omitted": true,
+          "sha256": "778c8e7f39931e1b8c04afc3d8d1692f8a5656ee0adabfe89c27e64477106d85",
+          "characters": 3214,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/delete-final-chain.lit"
+      },
+      {
+        "id": "wrong-plus-one-conclusion",
+        "source": {
+          "text_omitted": true,
+          "sha256": "9a56ae594c69eb891812c4de68753da9dbb088abdd580b2c0284ad6914999e12",
+          "characters": 3334,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/wrong-plus-one-conclusion.lit"
+      },
+      {
+        "id": "short-route-delete-weak-guard-echoes",
+        "source": {
+          "text_omitted": true,
+          "sha256": "35928047990afbd23edfed316a4939f21fd3a36f1b03602705a065185b630574",
+          "characters": 3028,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/short-route-delete-weak-guard-echoes.lit"
+      },
+      {
+        "id": "short-route-delete-r-positive",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ca6f2209bf8cef552b39471ee876b2e002bc41bcc52864a9dc4935ed033d76c9",
+          "characters": 3063,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/short-route-delete-r-positive.lit"
+      },
+      {
+        "id": "short-route-delete-gap-positive",
+        "source": {
+          "text_omitted": true,
+          "sha256": "49ab8fca81ec9ff47d8605c2b95675347ff9d6e49df1b8506492514ce25c4b13",
+          "characters": 3059,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/short-route-delete-gap-positive.lit"
+      },
+      {
+        "id": "combined-short-route",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ca0aa9c004897daac4fc57ce721590fe6e45714ceaab8f0d18a327c1f8ec1313",
+          "characters": 3018,
+          "excerpt": "# Discrete mathematics in Litex, setting-first.\n#\n# Included: native finite-set cardinalities, a recursive Pascal table,\n# binomial coefficients, and a checked proof of Pascal's identity.\n#\n# Main line: finite counting -> recursive binomial coefficients -> Pascal's identity.\n\nfinite_set_size({1, 2, 3}) = 3\nfinite_set_size({4, 5}) = 2\nfinite_set_size({1, 2, 3, 4, 5}) = 5\nfinite_set_size({1, 2, 3, 4, 5}) = finite_set_size({1, 2, 3}) + finite_set_size({4, 5})\n\n# Removing one unit from a positive integer leaves a nonnegative sum.\nstrategy predecessor_sum_bounds:\n    ? forall a, b Z:\n        a > 0\n"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round68-cases/combined-short-route.lit"
+      }
+    ]
+  }
+}

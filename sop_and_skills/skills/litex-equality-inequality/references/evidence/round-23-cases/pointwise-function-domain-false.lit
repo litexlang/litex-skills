@@ -1,0 +1,2 @@
+forall u fn(t R) R:
+    fn(k R: k>0) R {u(k)}=fn(j R) R {u(j)}

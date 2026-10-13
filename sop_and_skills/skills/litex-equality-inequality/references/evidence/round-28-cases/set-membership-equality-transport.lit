@@ -1,0 +1,4 @@
+forall E,F set,p E:
+    E=F
+    =>:
+        p $in F

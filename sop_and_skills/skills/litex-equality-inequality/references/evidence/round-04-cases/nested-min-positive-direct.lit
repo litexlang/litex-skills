@@ -1,0 +1,2 @@
+have a,b,c R+
+have delta R+ = min(min(a,b),c)

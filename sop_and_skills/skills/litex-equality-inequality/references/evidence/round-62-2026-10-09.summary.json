@@ -1,0 +1,431 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-62-2026-10-09.json",
+  "original_sha256": "23d553612825d9d7e0de41e30171c5c90f296087d9223b79b31451393b14718a",
+  "original_bytes": 43781,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "228655ebb2458ed05177132e14f3dc2554314f501612cfd3d25d570a7795248e",
+    "scope": "Exact recursive definitions, independently isolated source/deletion/negative cases. User source classifies explicit-route need as capability limitation, not bug.",
+    "cases": [
+      {
+        "id": "zero-original",
+        "source": "# Task: K003 reclassified as a current proof-search limitation on 2026-10-02.\n# Run: target/release/litex -lang en -strict -f examples/test_statements/boundaries/recursive-equation-explicit-chain.lit\n\nhave fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(0) = 0\n1 - 1 = 0\nf(1) = f(1 - 1)\nf(1 - 1) = f(0)\nf(1) = f(0)\nf(1) = 0\nf(2) = f(2 - 1) = f(1) = 0\n\n# Former short assertion: f(2) = 0\n# The user classifies the required explicit steps as a current capability limit,\n# not a verifier bug. Preserve the accepted chain as normal regression coverage.\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-original.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "768017816516cb362620dcb787eef234532cda41e4cd57d44065f29a60d07d24"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "zero-bare-two",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(2)=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-bare-two.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-bare-two.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc322bd2d753b9ae49adf1dcbf6735592ea099b615ffe1bba9923e4455d21f32"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "zero-two-chain-only",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(2)=f(2-1)=f(1)=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-two-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-two-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9b5771b1dbeb7fe445b98043232dd44451509e921947b03a4a090df4426b0810"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "zero-compressed-chains",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(1)=f(1-1)=f(0)=0\nf(2)=f(2-1)=f(1)=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-compressed-chains.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-compressed-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5a1aa5756d4ffcec59c8f777e1820a251e8401b02335a47948d196cf37b4739b"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "zero-one-chain-only",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(1)=f(1-1)=f(0)=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-one-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-one-chain-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f12cb4d627e06f46e7d2ed9bec4a9d4cc13eb43720e3c9a49cc5cbe63d3393b"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "zero-base-and-bare-two",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(0)=0\nf(2)=0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-base-and-bare-two.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-base-and-bare-two.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f6d29a41c8cf52b3a34319ed55c2acba45af5ad31961f75b7b95f0dbac4aa43"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "zero-wrong-two",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1)\nf(2)=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-wrong-two.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/zero-wrong-two.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c43bc3929815b64e22fd9b3aaed304b65c96b6f807bf50bee876190d84fe8b0e"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-original",
+        "source": "# K004: the user supplies an explicit arithmetic equality chain.\n# Former shortcut: f(1) = 1 (automatic search did not close it).\n\nhave fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(0) = 0\nf(1 - 1) = f(0) = 0\nf(1) = f(1 - 1) + 1 = 0 + 1 = 1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-original.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7c2cac08501fc233c712080a6de1c48e7575435c9ea26d61003e261003c964f8"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-bare-one",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-bare-one.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-bare-one.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "63859468a5149c517fb66c21f027fc4f822358bfe6cd8fea04b82968b249adb1"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-one-chain",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=f(1-1)+1=f(0)+1=0+1=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-one-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-one-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0ab671efc06e0695a9fdaac0e0397be6ded08ca0ce82195a4ba858e8e6adc6b9"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-short-chain",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=f(0)+1=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-short-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-short-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4a7e519b237486802c382629a9c1ae3c0318aa5220a8f24017f3f7457a25cfaa"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-base-and-bare",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(0)=0\nf(1)=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-base-and-bare.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-base-and-bare.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5c41dfdfc245cca9e76d63c0ad1d97d838b2ff7c26c70332f8926163026135d9"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-wrong-one",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1)=2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-wrong-one.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-wrong-one.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07aee908d1b401b6e9b39913464fe783244cd0c7eccd517897066a72b509681c"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-two-chains",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1-1)=f(0)=0\nf(1)=f(1-1)+1=0+1=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-two-chains.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-two-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0242db8756444e8acde3e6704bade1828d838958e462192c406c153ee6a1afde"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-base-one-chain",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(0)=0\nf(1)=f(1-1)+1=f(0)+1=0+1=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-base-one-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-base-one-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "71fba4aa16081861711e5bd173a3fb89b715b1e1b001bab21fa660f6dc3ef8b7"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-inner-and-bare",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1-1)=f(0)=0\nf(1)=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-inner-and-bare.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-inner-and-bare.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93f95706e7e47e8346e74b6927d1c91df5e07d7b8c00be2394d46aa115a1b7fe"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "increment-two-chains-wrong",
+        "source": "have fn f(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: f(n - 1) + 1\nf(1-1)=f(0)=0\nf(1)=f(1-1)+1=0+1=2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-two-chains-wrong.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round62-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-62-cases/increment-two-chains-wrong.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "239a5466829cf261b9e49f8b3f2f74cf41a115f626ae8d42122fa131e74aa7f3"
+        },
+        "stderr": ""
+      }
+    ],
+    "counts": {
+      "files": 17,
+      "accepted": 6,
+      "normal_rejections": 11
+    }
+  }
+}

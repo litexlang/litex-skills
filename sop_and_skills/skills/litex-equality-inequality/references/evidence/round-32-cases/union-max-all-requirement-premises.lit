@@ -1,0 +1,6 @@
+forall a,c R:
+    $is_finite_set(union({a},{c}))
+    $is_nonempty_set(union({a},{c}))
+    union({a},{c}) $subset R
+    =>:
+        finite_set_max(union({a},{c}))<=finite_set_max(union({a},{c}))

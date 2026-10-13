@@ -1,0 +1,20 @@
+prop has_interval_endpoints(I power_set(R), a, b R):
+    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)
+
+thm r30_intro_target_echo_only:
+    ? forall I power_set(R), a, b, z R:
+        $has_interval_endpoints(I, a, b)
+        a < z
+        z < b
+        =>:
+            z $in I
+    by cases:
+        ? z $in I
+        case I = '[a, b]:
+            z $in I
+        case I = '[a, b):
+            z $in I
+        case I = '(a, b]:
+            z $in I
+        case I = '(a, b):
+            z $in I

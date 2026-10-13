@@ -1,0 +1,11 @@
+thm apply_equal_argument:
+    ? forall X,Y set,F fn(t X) Y,a,b X:
+        a = b
+        =>:
+            F(a) = F(b)
+have F fn(h fn(t R) R) R
+have g fn(t R) R
+have h fn(t R) R = fn(y R) R {-1*g(y)}
+h = fn(x R) R {-1*g(x)}
+release thm apply_equal_argument(fn(t R) R,R,F,h,fn(x R) R {-1*g(x)})
+F(h) = F(fn(x R) R {-1*g(x)})

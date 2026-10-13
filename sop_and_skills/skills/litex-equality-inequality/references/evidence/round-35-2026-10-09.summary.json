@@ -1,0 +1,834 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-35-2026-10-09.json",
+  "original_sha256": "a02265f4316a8502b37de59219979deb9042528f3433a67a6314820e659f6b6f",
+  "original_bytes": 2119901,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+    "sha256": "cd0578584479fb79ee2902d18c3d00f1c3b51e8255d4b0d325c03ce4f6d21fed",
+    "cases": [
+      {
+        "id": "source-algebra-spine",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_source_algebra_spine:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/source-algebra-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a1c05112db3792e4846f783456d3802ce6a8b322dfd4c62e04876826a55e4706"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/source-algebra-spine.lit"
+        ]
+      },
+      {
+        "id": "bodyless",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_bodyless:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "29ad62ad0752c9beedbc602db3e64f73cf3696c838ef140fb30d26eba4e13eb6"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/bodyless.lit"
+        ]
+      },
+      {
+        "id": "one-chain",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_one_chain:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x^2+1)-(x0^2+1))/(x-x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/one-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "01f2dcae8f5de4d2e5c998e5eaa03081da05bd7f717df4bd555e02a0dd7af406"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/one-chain.lit"
+        ]
+      },
+      {
+        "id": "function-values-only",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_function_values_only:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/function-values-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ae1e6ccc35607158dd8694d00a50933641285465fbcc6c540a3cf7a496e35824"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/function-values-only.lit"
+        ]
+      },
+      {
+        "id": "nonzero-only",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_nonzero_only:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/nonzero-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dc0d1a3e0d5f95e276ded055a72938b1cbe2574f8a5568b28a2427214a15f8d6"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/nonzero-only.lit"
+        ]
+      },
+      {
+        "id": "literal-direct",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R:\n    x!=x0\n    =>:\n        ((x^2+1)-(x0^2+1))/(x-x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/literal-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c7c369aaec3ffa38a0b751071f2d3091154909fcb62d9c1b385ac61a8fcf6dc0"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/literal-direct.lit"
+        ]
+      },
+      {
+        "id": "wrong-coefficient",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R:\n    x!=x0\n    =>:\n        (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-3*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/wrong-coefficient.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73b6dbaac08129092d29d68095092bf78fe8a2980b5b780191b5c60163965939"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/wrong-coefficient.lit"
+        ]
+      },
+      {
+        "id": "missing-nonzero",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R:\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/missing-nonzero.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "25228004d48bdb1c4e0e6ac21d4dc322be2d043044e63a35fc8571c522cf2278"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/missing-nonzero.lit"
+        ]
+      },
+      {
+        "id": "derivative-error-direct",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R,epsilon R+:\n    x!=x0\n    abs(x-x0)<epsilon\n    =>:\n        abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/derivative-error-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "931b6f4fea06c82e63aa65a2bd7062e84da29f80b01ff434a086a809e1e46ee0"
+        },
+        "stderr": "",
+        "anchor": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/derivative-error-direct.lit"
+        ]
+      },
+      {
+        "id": "delete-nonzero",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_nonzero:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/delete-nonzero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dd27ff4aaf525ad83c471312c6ac88e873a0fae28250a78c8ce42a838f7697fa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/delete-nonzero.lit"
+        ]
+      },
+      {
+        "id": "delete-function-values",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_function_values:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/delete-function-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ddcd59b35c1e22534c0903f45c9d97b846a64f3564f8548eac4c8af6ba7fba38"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/delete-function-values.lit"
+        ]
+      },
+      {
+        "id": "delete-quotient-line",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_quotient_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/delete-quotient-line.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "85c603d1fa60199a373e33ca3f7324919e9be6ffe95d241bf1a1c5c1ecceb6cc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/delete-quotient-line.lit"
+        ]
+      },
+      {
+        "id": "delete-final-offset-line",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_final_offset_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/delete-final-offset-line.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1f4423e5506909c74f87660b0a75497c717edab2f5e285e8b9c64041bcf67299"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/delete-final-offset-line.lit"
+        ]
+      },
+      {
+        "id": "three-algebra-lines",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_three_algebra_lines:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/three-algebra-lines.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec6732b399b58f8acf63c9da5dc3364610f026d806629f793d2c3c32e4a93a60"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/three-algebra-lines.lit"
+        ]
+      },
+      {
+        "id": "two-full-chains",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_two_full_chains:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/two-full-chains.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7bc7ac9dc0d5e009ddb9ab4f8568693a5d43193304e4f6e476252f806cfd535c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/two-full-chains.lit"
+        ]
+      },
+      {
+        "id": "values-and-two-chains",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_values_and_two_chains:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/values-and-two-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "67fffa169188fbbf2560b050a5f6547766964257512733f40b786e2548ecbcce"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/values-and-two-chains.lit"
+        ]
+      },
+      {
+        "id": "derivative-error-full-spine",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nclaim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n    abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)=abs(x-x0)<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/derivative-error-full-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ea187081f7b6926fb102c967223df2398706b1a0d15b1fdabc6a8f05d22a66f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/derivative-error-full-spine.lit"
+        ]
+      },
+      {
+        "id": "short-difference-chain",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_short_difference_chain:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/short-difference-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dd84d9101e6560543ebbba33068834f55d0b5968e97e501b8a64b3d8d868b1b2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/short-difference-chain.lit"
+        ]
+      },
+      {
+        "id": "direct-factorization-line",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_direct_factorization_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/direct-factorization-line.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ae03808a4e45c05425539bbc7b60f8b721145a9791c6ea67285fb8b84787b1a4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/direct-factorization-line.lit"
+        ]
+      },
+      {
+        "id": "delete-difference-bridge",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_difference_bridge:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/delete-difference-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a1f5c4e07a5b1d6bc572321b326966a176ecd803ef5542844b4c2a6901d15f6e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/delete-difference-bridge.lit"
+        ]
+      },
+      {
+        "id": "derivative-error-four-lines",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nclaim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/derivative-error-four-lines.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b01df3908d125c41c83d9cf07e16f50db142862f1aa2e9abcde3c543599784eb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/derivative-error-four-lines.lit"
+        ]
+      },
+      {
+        "id": "derivative-error-four-lines-and-abs",
+        "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nclaim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n    abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)=abs(x-x0)<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-cases/derivative-error-four-lines-and-abs.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b85b5d7f6a9c853e49a73f5f402af62078547578098134523426b7ceea7de48"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round35-cases/derivative-error-four-lines-and-abs.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "status": "independent_current_source_gate_completed",
+      "prefix": "have fn r35_ode_solution(x R) R = x^2 + 1\n",
+      "cases": [
+        {
+          "id": "source-algebra-spine",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_source_algebra_spine:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_source_algebra_spine:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "bodyless",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_bodyless:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n",
+          "statement": "thm r35_bodyless:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "one-chain",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_one_chain:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x^2+1)-(x0^2+1))/(x-x0)-2*x0=x-x0\n",
+          "statement": "thm r35_one_chain:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x^2+1)-(x0^2+1))/(x-x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "function-values-only",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_function_values_only:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n",
+          "statement": "thm r35_function_values_only:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n"
+        },
+        {
+          "id": "nonzero-only",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_nonzero_only:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n",
+          "statement": "thm r35_nonzero_only:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n"
+        },
+        {
+          "id": "literal-direct",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R:\n    x!=x0\n    =>:\n        ((x^2+1)-(x0^2+1))/(x-x0)-2*x0=x-x0\n",
+          "statement": "forall x,x0 R:\n    x!=x0\n    =>:\n        ((x^2+1)-(x0^2+1))/(x-x0)-2*x0=x-x0"
+        },
+        {
+          "id": "wrong-coefficient",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R:\n    x!=x0\n    =>:\n        (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-3*x0=x-x0\n",
+          "statement": "forall x,x0 R:\n    x!=x0\n    =>:\n        (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-3*x0=x-x0"
+        },
+        {
+          "id": "missing-nonzero",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R:\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n",
+          "statement": "forall x,x0 R:\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0"
+        },
+        {
+          "id": "derivative-error-direct",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nforall x,x0 R,epsilon R+:\n    x!=x0\n    abs(x-x0)<epsilon\n    =>:\n        abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n",
+          "statement": "forall x,x0 R,epsilon R+:\n    x!=x0\n    abs(x-x0)<epsilon\n    =>:\n        abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon"
+        },
+        {
+          "id": "delete-nonzero",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_nonzero:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_delete_nonzero:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "delete-function-values",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_function_values:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_delete_function_values:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "delete-quotient-line",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_quotient_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_delete_quotient_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "delete-final-offset-line",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_final_offset_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n",
+          "statement": "thm r35_delete_final_offset_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n"
+        },
+        {
+          "id": "three-algebra-lines",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_three_algebra_lines:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_three_algebra_lines:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "two-full-chains",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_two_full_chains:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_two_full_chains:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "values-and-two-chains",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_values_and_two_chains:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_values_and_two_chains:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "derivative-error-full-spine",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nclaim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n    abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)=abs(x-x0)<epsilon\n",
+          "statement": "claim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    x-x0!=0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n    abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)=abs(x-x0)<epsilon\n"
+        },
+        {
+          "id": "short-difference-chain",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_short_difference_chain:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_short_difference_chain:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "direct-factorization-line",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_direct_factorization_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_direct_factorization_line:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "delete-difference-bridge",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nthm r35_delete_difference_bridge:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "thm r35_delete_difference_bridge:\n    ? forall x,x0 R:\n        x!=x0\n        =>:\n            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "derivative-error-four-lines",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nclaim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n",
+          "statement": "claim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n"
+        },
+        {
+          "id": "derivative-error-four-lines-and-abs",
+          "source": "have fn r35_ode_solution(x R) R = x^2 + 1\n\nclaim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n    abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)=abs(x-x0)<epsilon\n",
+          "statement": "claim:\n    ? forall x,x0 R,epsilon R+:\n        x!=x0\n        abs(x-x0)<epsilon\n        =>:\n            abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)<epsilon\n    r35_ode_solution(x)=x^2+1\n    r35_ode_solution(x0)=x0^2+1\n    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)\n    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=((x-x0)*(x+x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0\n    abs((r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0)=abs(x-x0)<epsilon\n"
+        }
+      ],
+      "source_path": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+      "source_sha256": "30c6fcf1c2c31e4df4548a5617aedc5968b6120ff8afa625ce485b899dd23815",
+      "adaptation": "Isolated algebra subgoal of the exact ODE proof spine; function identifier renamed for persistent Session probe hygiene. No whole derivative/ODE acceptance.",
+      "acceptance_receipt": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-35-2026-10-09.json"
+    },
+    "build_log": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/build-round-34-recheck.log",
+    "summary": {
+      "accepted": 7,
+      "rejected": 15
+    },
+    "scope": "Independent current-source strict gates; immutable executable identity, no immutable whole-checkout claim. Canonical source/kernel unchanged by search.",
+    "current_anchor_correspondence": {
+      "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit": true
+    }
+  }
+}

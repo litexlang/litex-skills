@@ -1,0 +1,4 @@
+forall n N+,u,v,result finite_seq(R,n),idx closed_range(1,n):
+    result=fn(k closed_range(1,n)) R {u(k)+v(k)}
+    =>:
+        result(idx)=u(idx)+v(idx)

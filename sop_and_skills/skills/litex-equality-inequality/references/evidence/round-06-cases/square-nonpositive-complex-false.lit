@@ -1,0 +1,5 @@
+forall a C:
+    a^2 $in R
+    a^2 <= 0
+    =>:
+        a = 0

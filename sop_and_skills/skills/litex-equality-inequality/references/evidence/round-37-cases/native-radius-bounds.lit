@@ -1,0 +1,3 @@
+forall delta1,delta2 R+:
+    min(delta1,delta2)<=delta1
+    min(delta1,delta2)<=delta2

@@ -1,0 +1,85 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-64-sources.json",
+  "original_sha256": "ace736093969233bf1f58b8b02942383bf924141718f0db14e4d0d4e89fff5d0",
+  "original_bytes": 6030,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/1_middle_school_math_in_nutshell/main.lit",
+    "source_sha256": "967fb75fd2c737f9f98f47f4a413fe111b6a5f1bb5f95ee3740ffe4e94d62ba6",
+    "scope": "Actual named linear equation theorem and concrete caller, no source premise changes for shortening; source slice independent of other showcase sections.",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a * x = c - b\n    x = (a * x) / a = (c - b) / a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/source-theorem.lit"
+      },
+      {
+        "id": "theorem-division-chain-only",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    x=(a*x)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-division-chain-only.lit"
+      },
+      {
+        "id": "theorem-shift-division-chain",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    x=(a*x+b-b)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-shift-division-chain.lit"
+      },
+      {
+        "id": "theorem-intermediate-only",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a*x=c-b\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-intermediate-only.lit"
+      },
+      {
+        "id": "direct-implication",
+        "source": "forall a,b,c,x R:\n    a!=0\n    a*x+b=c\n    =>:\n        x=(c-b)/a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/direct-implication.lit"
+      },
+      {
+        "id": "source-original-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a * x = c - b\n    x = (a * x) / a = (c - b) / a\n\n3!=0\n3*2+(-6)=0\nrelease thm solve_linear_equation(3,-6,0,2)\n2=(0-(-6))/3\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/source-original-caller.lit"
+      },
+      {
+        "id": "source-bare-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a * x = c - b\n    x = (a * x) / a = (c - b) / a\n\nrelease thm solve_linear_equation(3,-6,0,2)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/source-bare-caller.lit"
+      },
+      {
+        "id": "wrong-sign-conclusion",
+        "source": "claim:\n    ? forall a,b,c,x R:\n        a!=0\n        a*x+b=c\n        =>:\n            x=(b-c)/a\n    x=(b-c)/a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/wrong-sign-conclusion.lit"
+      },
+      {
+        "id": "missing-nonzero-chain",
+        "source": "claim:\n    ? forall a,b,c,x R:\n        a*x+b=c\n        =>:\n            x=(c-b)/a\n    x=(a*x+b-b)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/missing-nonzero-chain.lit"
+      },
+      {
+        "id": "zero-coefficient-counterexample",
+        "source": "0*7+2=2\n7!=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/zero-coefficient-counterexample.lit"
+      },
+      {
+        "id": "negative-coefficient-chain",
+        "source": "claim:\n    ? forall a,b,c,x R:\n        a!=0\n        a<0\n        a*x+b=c\n        =>:\n            x=(c-b)/a\n    x=(a*x+b-b)/a=(c-b)/a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/negative-coefficient-chain.lit"
+      },
+      {
+        "id": "short-chain-bare-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    x=(a*x+b-b)/a=(c-b)/a\n\nrelease thm solve_linear_equation(3,-6,0,2)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/short-chain-bare-caller.lit"
+      },
+      {
+        "id": "intermediate-bare-caller",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n    a*x=c-b\n\nrelease thm solve_linear_equation(3,-6,0,2)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/intermediate-bare-caller.lit"
+      },
+      {
+        "id": "theorem-empty-body",
+        "source": "thm solve_linear_equation:\n    ? forall a, b, c, x R:\n        a != 0\n        a * x + b = c\n        =>:\n            x = (c - b) / a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round64-cases/theorem-empty-body.lit"
+      }
+    ]
+  }
+}

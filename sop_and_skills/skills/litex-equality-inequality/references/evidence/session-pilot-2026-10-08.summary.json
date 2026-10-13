@@ -1,0 +1,14 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/session-pilot-2026-10-08.json",
+  "original_sha256": "0f8f4fb366b744275c85289ac830219f442e2a86211eeedfdb148e7a9ecaebe6",
+  "original_bytes": 1212,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "sub_direct": "forall a, b, c, d R:\r\n    a <= b\r\n    c <= d\r\n    =>:\r\n        a-d <= b-c\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, c, d R:\\n    a <= b\\n    c <= d\\n    =>:\\n        a - d <= b - c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, c, d R:\\n    a <= b\\n    c <= d\\n    =>:\\n        a - d <= b - c\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> ",
+    "sub_chain": "claim:\r\n    ? forall a, b, c, d R:\r\n        a <= b\r\n        c <= d\r\n        =>:\r\n            a-d <= b-c\r\n    a-d <= b-d <= b-c\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> ",
+    "newton_short": "square_root_two_residual(newton_sqrt_two_step(3 / 2)) = 1 / 144 <= 1 / 64\r\nsuccess\r\nlitex> ",
+    "newton_prefix": "tmp/2026-10-08/equality-inequality-skill/newton-prefix.lit; original source preceding 80 / 9216 > 0"
+  }
+}

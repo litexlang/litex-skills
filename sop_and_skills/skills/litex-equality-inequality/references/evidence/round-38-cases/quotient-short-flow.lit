@@ -1,0 +1,10 @@
+have r38_x0 R,r38_radius R+
+have r38_f fn(t R) R
+have r38_sample R=r38_x0+r38_radius/2
+0<r38_radius/2
+r38_sample=r38_x0+r38_radius/2>r38_x0
+0<=r38_radius/2
+r38_sample-r38_x0=r38_radius/2
+abs(r38_sample-r38_x0)=abs(r38_radius/2)=r38_radius/2<r38_radius
+have r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)
+

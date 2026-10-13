@@ -1,0 +1,2 @@
+forall c R:
+    sum(1,1,fn(j Z) R {c}) = c

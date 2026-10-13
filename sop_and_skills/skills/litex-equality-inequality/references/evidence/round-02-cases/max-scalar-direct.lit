@@ -1,0 +1,5 @@
+forall a,b,A,B R, epsilon R+:
+    abs(a-A) <= epsilon
+    abs(b-B) <= epsilon
+    =>:
+        abs(max(a,b)-max(A,B)) <= epsilon

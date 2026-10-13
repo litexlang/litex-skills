@@ -1,0 +1,2 @@
+forall a,c R:
+    a<=finite_set_max({a,c})

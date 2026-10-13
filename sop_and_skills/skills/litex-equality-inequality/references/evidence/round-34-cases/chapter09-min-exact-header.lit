@@ -1,0 +1,6 @@
+thm r34_chapter09_min_exact_header:
+    ? forall a, b, A, B R, epsilon R+:
+        abs(a - A) <= epsilon
+        abs(b - B) <= epsilon
+        =>:
+            abs(finite_set_min(union({a}, { b})) - finite_set_min(union({A}, { B}))) <= epsilon

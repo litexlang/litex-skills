@@ -1,0 +1,151 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-60-sources.json",
+  "original_sha256": "abe03c9d5b3cc9509131b4dc43de00530c2c6eae9592f51291138350dff1d503",
+  "original_bytes": 12548,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter07-plane-vectors.lit",
+    "source_sha256": "33aa03be005e539ae266bc08642b0beb8ef7f1b3a088915249318a80a101dac5",
+    "prefix": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n",
+    "cases": [
+      {
+        "id": "perpendicular-direct",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_perpendicular2((1,0),(0,1))\n",
+        "statement": "$r60_perpendicular2((1,0),(0,1))\n"
+      },
+      {
+        "id": "perpendicular-by-def",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nby def $r60_perpendicular2((1,0),(0,1))\n",
+        "statement": "by def $r60_perpendicular2((1,0),(0,1))\n"
+      },
+      {
+        "id": "perpendicular-dot-and-fold",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nr60_dot2((1,0),(0,1))=0\nby def $r60_perpendicular2((1,0),(0,1))\n",
+        "statement": "r60_dot2((1,0),(0,1))=0\nby def $r60_perpendicular2((1,0),(0,1))\n"
+      },
+      {
+        "id": "parallel-source-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n$r60_parallel2((2,4),(1,2))\n",
+        "statement": "witness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n$r60_parallel2((2,4),(1,2))\n"
+      },
+      {
+        "id": "parallel-direct",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((2,4),(1,2))\n",
+        "statement": "$r60_parallel2((2,4),(1,2))\n"
+      },
+      {
+        "id": "parallel-named-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "witness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "parallel-existential-only",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n",
+        "statement": "witness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n"
+      },
+      {
+        "id": "parallel-witness-and-fold",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\nby def $r60_parallel2((2,4),(1,2))\n",
+        "statement": "witness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\nby def $r60_parallel2((2,4),(1,2))\n"
+      },
+      {
+        "id": "false-parallel",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((1,0),(0,1))\n",
+        "statement": "$r60_parallel2((1,0),(0,1))\n"
+      },
+      {
+        "id": "false-perpendicular",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_perpendicular2((1,0),(1,0))\n",
+        "statement": "$r60_perpendicular2((1,0),(1,0))\n"
+      },
+      {
+        "id": "wrong-parallel-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness $r60_parallel2((2,4),(1,2)) from 3\n",
+        "statement": "witness $r60_parallel2((2,4),(1,2)) from 3\n"
+      },
+      {
+        "id": "zero-first-parallel",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((0,0),(1,2))\n",
+        "statement": "$r60_parallel2((0,0),(1,2))\n"
+      },
+      {
+        "id": "parallel-coordinates-named-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "parallel-coordinates-exist-and-fold",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\nby def $r60_parallel2((2,4),(1,2))\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\nby def $r60_parallel2((2,4),(1,2))\n"
+      },
+      {
+        "id": "parallel-coordinates-direct",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\n$r60_parallel2((2,4),(1,2))\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\n$r60_parallel2((2,4),(1,2))\n"
+      },
+      {
+        "id": "parallel-coordinates-wrong-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 3\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 3\n"
+      },
+      {
+        "id": "zero-first-named-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(0,0)(1)=0\n(0,0)(2)=0\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((0,0),(1,2)) from 0\n",
+        "statement": "(0,0)(1)=0\n(0,0)(2)=0\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((0,0),(1,2)) from 0\n"
+      },
+      {
+        "id": "nonzero-first-zero-second",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((1,2),(0,0))\n",
+        "statement": "$r60_parallel2((1,2),(0,0))\n"
+      },
+      {
+        "id": "parallel-delete-coordinate-1",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "parallel-delete-coordinate-2",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "(2,4)(1)=2\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "parallel-delete-coordinate-3",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "parallel-delete-coordinate-4",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\nwitness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "false-perpendicular-by-def",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nby def $r60_perpendicular2((1,0),(1,0))\n",
+        "statement": "by def $r60_perpendicular2((1,0),(1,0))\n"
+      },
+      {
+        "id": "parallel-coordinates-exist-and-bare",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n$r60_parallel2((2,4),(1,2))\n",
+        "statement": "(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n$r60_parallel2((2,4),(1,2))\n"
+      },
+      {
+        "id": "parallel-second-coordinates-only",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "statement": "(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n"
+      },
+      {
+        "id": "parallel-second-coordinates-wrong-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 3\n",
+        "statement": "(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 3\n"
+      },
+      {
+        "id": "zero-first-second-coordinates-only",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((0,0),(1,2)) from 0\n",
+        "statement": "(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((0,0),(1,2)) from 0\n"
+      }
+    ],
+    "scope": "Actual source definitions, ordinary application migration retained; parallel means scalar-multiple relation including zero first vector."
+  }
+}

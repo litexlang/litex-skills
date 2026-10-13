@@ -1,0 +1,4 @@
+forall m,n N:
+    m <= n
+    =>:
+        factorial(m)/factorial(n) <= 1

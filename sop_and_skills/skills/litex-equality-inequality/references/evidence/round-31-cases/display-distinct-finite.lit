@@ -1,0 +1,4 @@
+forall a,c R:
+    a!=c
+    =>:
+        $is_finite_set({a,c})

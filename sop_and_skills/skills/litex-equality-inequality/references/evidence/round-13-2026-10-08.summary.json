@@ -1,0 +1,1287 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-13-2026-10-08.json",
+  "original_sha256": "7f653ca54eb3eb1efad982038fbc1f602d2bdc79deb55729f0523043327bdb40",
+  "original_bytes": 2063878,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+    "sha256": "51911b9d51d931a18275c55f8d5e0bb7ad5c594e7e4894f6592eb845297150ed",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "log": "build-round-13.log"
+    },
+    "head": "d49fffb53276f19a6ea2abeb9dca1d82913f1086",
+    "session": [
+      {
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "forall u,v,w cart(R,R):\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "89bb9b16ca7e7e32f5f2f0772faa1218aa4bc41c488662615fe92cf8728aeca0",
+          "excerpt": "... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "claim:\n    ? forall u,v,w cart(R,R):\n        dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)\n    (u(1)+v(1),u(2)+v(2))(1) = u(1)+v(1)\n    (u(1)+v(1),u(2)+v(2))(2) = u(2)+v(2)\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1),u(2)+v(2))(1)*w(1)+(u(1)+v(1),u(2)+v(2))(2)*w(2) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "031db186c33e059e4bb0fa804c5e8a1a47f04347da3cfc20eff2b18fb4493b02",
+          "excerpt": "... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall u, v, w cart(R, R):\\n        dot((u(1) + v(1), u(2) + v(2)), w) = (u(1) + v(1)) * w(1) + (u(2) + v(2)) * w(2)\\n    (u(1) + v(1), u(2) + v(2))(1) = u(1) + v(1)\\n    (u(1) + v(1), u(2) + v(2))(2) = u(2) + v(2)\\n    dot((u(1) + v(1), u(2) + v(2)), w) = (u(1) + v(1), u(2) + v(2))(1) * w(1) + (u(1) + v(1), u(2) + v(2))(2) * w(2) = (u(1) + v(1)) * w(1) + (u"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "forall u,v,w cart(R,R):\n    dot((u(1)+v(1),u(2)+v(2)),w) = dot(u,w)+dot(v,w)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6b99633db50c19abb94435db8f7184320c26ea7481de12123a34e62d552e04c1",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall u, v, w cart(R, R):\\n    dot((u(1) + v(1), u(2) + v(2)), w) = dot(u, w) + dot(v, w)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall u, v, w cart(R, R):\\n    dot((u(1) + v(1), u(2) + v(2)), w) = dot(u, w) + dot(v, w)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "claim:\n    ? forall u,v,w cart(R,R):\n        dot((u(1)+v(1),u(2)+v(2)),w) = dot(u,w)+dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2) = (u(1)*w(1)+u(2)*w(2))+(v(1)*w(1)+v(2)*w(2)) = dot(u,w)+dot(v,w)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "dot-add-direct",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v,w cart(R,R):\n    dot((u(1)+v(1),u(2)+v(2)),w) = dot(u,w)+dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-add-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ab3a46ad16b93dbb2feda17febf15fcb8eb8fa3901a38b8b98053c061ddeb2d5"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-add-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-add-expanded-chain",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R):\n        dot((u(1)+v(1),u(2)+v(2)),w) = dot(u,w)+dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2) = (u(1)*w(1)+u(2)*w(2))+(v(1)*w(1)+v(2)*w(2)) = dot(u,w)+dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-add-expanded-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "191e34573e725ae9fc380dd644c659e07ed68593d41578fe8dfbea6774d4e783"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-add-expanded-chain.lit"
+        ]
+      },
+      {
+        "id": "dot-add-wrong-sign",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v,w cart(R,R):\n    dot((u(1)+v(1),u(2)+v(2)),w) = dot(u,w)-dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-add-wrong-sign.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7e0a2c05a19f9373d2ff02cd4f04823483213c64a3998435e55a87c0ae05e7a3"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-add-wrong-sign.lit"
+        ]
+      },
+      {
+        "id": "dot-known-symmetry-chain",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v cart(R,R):\n        dot(u,v) = dot(v,u)\n    dot(u,v) = u(1)*v(1)+u(2)*v(2) = v(1)*u(1)+v(2)*u(2) = dot(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-known-symmetry-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a4645d5dc2fd4e55cf94d8a14645214f59edfb2a4f79210ed90ba5e849388bfc"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-known-symmetry-chain.lit"
+        ]
+      },
+      {
+        "id": "dot-known-symmetry-direct",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v cart(R,R):\n    dot(u,v) = dot(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-known-symmetry-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b277c167742595e18822b11fd5fca3d674ea27a988b5ffbeed5282a36ef543a7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-known-symmetry-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-known-vector-transport",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v,w cart(R,R):\n    u = v\n    dot(u,w) = 0\n    =>:\n        dot(v,w) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-known-vector-transport.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6ca7f619e159bec27d04fba6d0b0be89ec71d015f29471920ec250b3acece3c8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-known-vector-transport.lit"
+        ]
+      },
+      {
+        "id": "dot-linear-coordinate-chain",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R),a,b R:\n        dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    (a*u(1)+b*v(1),a*u(2)+b*v(2))(1) = a*u(1)+b*v(1)\n    (a*u(1)+b*v(1),a*u(2)+b*v(2))(2) = a*u(2)+b*v(2)\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = (a*u(1)+b*v(1),a*u(2)+b*v(2))(1)*w(1)+(a*u(1)+b*v(1),a*u(2)+b*v(2))(2)*w(2) = (a*u(1)+b*v(1))*w(1)+(a*u(2)+b*v(2))*w(2) = a*(u(1)*w(1)+u(2)*w(2))+b*(v(1)*w(1)+v(2)*w(2)) = a*dot(u,w)+b*dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-linear-coordinate-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "36476c214bfc5a1b0d3067f77421eec4fda814581ce29b04675465747eac4296"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-linear-coordinate-chain.lit"
+        ]
+      },
+      {
+        "id": "dot-linear-direct",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v,w cart(R,R),a,b R:\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-linear-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5a7f08339927bfeb7a3b8e784b3bdeb802fdd8927c1972d17ca459cb9eec9c44"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-linear-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-literal-expand-direct",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v,w cart(R,R):\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-literal-expand-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "555426cedab9f97612ff2882367946a4c8d984303f80e556ec5a3f0b62320118"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-literal-expand-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-literal-expand-native",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nthm dot_coordinate_formula:\n    ? forall u,v cart(R,R):\n        dot(u,v) = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R):\n        dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)\n    release thm dot_coordinate_formula((u(1)+v(1),u(2)+v(2)),w)\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1),u(2)+v(2))(1)*w(1)+(u(1)+v(1),u(2)+v(2))(2)*w(2) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-literal-expand-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fca64f57c495e6fd134fff5061201cbce54980f1d4dad2d3cfcb7c38a8cb450d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-literal-expand-native.lit"
+        ]
+      },
+      {
+        "id": "dot-literal-expand-projections",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R):\n        dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)\n    (u(1)+v(1),u(2)+v(2))(1) = u(1)+v(1)\n    (u(1)+v(1),u(2)+v(2))(2) = u(2)+v(2)\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1),u(2)+v(2))(1)*w(1)+(u(1)+v(1),u(2)+v(2))(2)*w(2) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-literal-expand-projections.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "689384c3b38c413285d76ce2c7a8076b653b8f2f2f82d27fcf5531552ee9550d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-literal-expand-projections.lit"
+        ]
+      },
+      {
+        "id": "dot-missing-vector-transport",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u,v,w cart(R,R):\n    dot(u,w) = 0\n    =>:\n        dot(v,w) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-missing-vector-transport.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ff24353cc68ad01c3424f01a435c806385b9dd72c74727fe0f663ca3eadc382a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-missing-vector-transport.lit"
+        ]
+      },
+      {
+        "id": "dot-nested-vec-expand-direct",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall a,b,c,d cart(R,R):\n    dot(vec(a,b),vec(c,d)) = (b(1)-a(1))*(d(1)-c(1))+(b(2)-a(2))*(d(2)-c(2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-nested-vec-expand-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "953fdf110e93699590bb0b9466735ac23fed231831e9aadde961d730a0276650"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-nested-vec-expand-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-self-nonnegative-chain",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u cart(R,R):\n        dot(u,u) >= 0\n    dot(u,u) = u(1)*u(1)+u(2)*u(2) = u(1)^2+u(2)^2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-self-nonnegative-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d4818d73adebe533e17282dfabf140eb19980142e1338023a06e8f87b3ef4104"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-self-nonnegative-chain.lit"
+        ]
+      },
+      {
+        "id": "dot-self-nonnegative-direct",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u cart(R,R):\n    dot(u,u) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-self-nonnegative-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d618b98be7b487ab5223dbf2a8e82b3eb016640ebc8122a7e16b0ea6be7ba9f2"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-self-nonnegative-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-self-strict-false",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nforall u cart(R,R):\n    dot(u,u) > 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-self-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bf95fbf955f8c7501c214c0a772a0e83ba1f76736c9a1fedd61064fb98de9b5c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-self-strict-false.lit"
+        ]
+      },
+      {
+        "id": "dot-add-one-chain",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R):\n        dot((u(1)+v(1),u(2)+v(2)),w) = dot(u,w)+dot(v,w)\n    dot((u(1)+v(1),u(2)+v(2)),w) = (u(1)+v(1))*w(1)+(u(2)+v(2))*w(2) = (u(1)*w(1)+u(2)*w(2))+(v(1)*w(1)+v(2)*w(2)) = dot(u,w)+dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-add-one-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "746f4ded433cfe1cf5638d7adf4c7ef2c643075575df940aabf79dd5bf25c172"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-add-one-chain.lit"
+        ]
+      },
+      {
+        "id": "dot-linear-scaled-bridges",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R),a,b R:\n        dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    a*dot(u,w) = a*(u(1)*w(1)+u(2)*w(2))\n    b*dot(v,w) = b*(v(1)*w(1)+v(2)*w(2))\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = (a*u(1)+b*v(1))*w(1)+(a*u(2)+b*v(2))*w(2) = a*(u(1)*w(1)+u(2)*w(2))+b*(v(1)*w(1)+v(2)*w(2)) = a*dot(u,w)+b*dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-linear-scaled-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2aafa4aaef18063ccaa9e1f4b87b83b707949c52c4b484cf85bed3c8837318ac"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-linear-scaled-bridges.lit"
+        ]
+      },
+      {
+        "id": "dot-linear-short-chain",
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))\nhave fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nclaim:\n    ? forall u,v,w cart(R,R),a,b R:\n        dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = (a*u(1)+b*v(1))*w(1)+(a*u(2)+b*v(2))*w(2) = a*(u(1)*w(1)+u(2)*w(2))+b*(v(1)*w(1)+v(2)*w(2)) = a*dot(u,w)+b*dot(v,w)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-linear-short-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a34513e796090fce66b870344677f10dea56cb2fb0042003bdb71ff30e550048"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/dot-linear-short-chain.lit"
+        ]
+      },
+      {
+        "id": "tuple-sum-invalid-index",
+        "source": "have fn sum_pair(p cart(R,R)) R = p(1)+p(2)\nforall a,b R:\n    sum_pair((a,b)) = (a,b)(1)+(a,b)(3)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/tuple-sum-invalid-index.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b33090648e328aeef98de90d1b3a11416eb5f551c6a264970a1f82905d769b32"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/tuple-sum-invalid-index.lit"
+        ]
+      },
+      {
+        "id": "tuple-sum-reduced",
+        "source": "have fn sum_pair(p cart(R,R)) R = p(1)+p(2)\nforall a,b R:\n    sum_pair((a,b)) = a+b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/tuple-sum-reduced.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "98325e4e6f6ae6cdd943b38a3a149303991b18f946841d27abe1d7f3420cdd4b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/tuple-sum-reduced.lit"
+        ]
+      },
+      {
+        "id": "tuple-sum-unreduced",
+        "source": "have fn sum_pair(p cart(R,R)) R = p(1)+p(2)\nforall a,b R:\n    sum_pair((a,b)) = (a,b)(1)+(a,b)(2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/tuple-sum-unreduced.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b37e1a3056eaf7b906061ba48f1f3bd3e23ce52b1f0af2aa1a012dbc6e01ca52"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/tuple-sum-unreduced.lit"
+        ]
+      },
+      {
+        "id": "tuple-sum-wrong-index",
+        "source": "have fn sum_pair(p cart(R,R)) R = p(1)+p(2)\nforall a,b R:\n    sum_pair((a,b)) = (a,b)(1)+(a,b)(1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/tuple-sum-wrong-index.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0611efa7984d86a696381eba40d4b3be34317a850043d5e217bbde75dc9e2da5"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/tuple-sum-wrong-index.lit"
+        ]
+      },
+      {
+        "id": "projection-polynomial-weighted-direct",
+        "source": "forall a,b,c,d,s,t R:\n    (a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-polynomial-weighted-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "593e58e204934fda4369fdefb0bc7a3123d39a9d3ec5025983067ed4e4e0304e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-polynomial-weighted-direct.lit"
+        ]
+      },
+      {
+        "id": "projection-polynomial-weighted-known",
+        "source": "claim:\n    ? forall a,b,c,d,s,t R:\n        (a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t\n    (a+b,c+d)(1) = a+b\n    (a+b,c+d)(2) = c+d\n    (a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-polynomial-weighted-known.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "afa6dd0a63b9ed930a7cbd22d1287be0d7ec8dc7908005ac49b089bd42561b8f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-polynomial-weighted-known.lit"
+        ]
+      },
+      {
+        "id": "projection-polynomial-weighted-scaled",
+        "source": "claim:\n    ? forall a,b,c,d,s,t R:\n        (a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t\n    (a+b,c+d)(1)*s = (a+b)*s\n    (a+b,c+d)(2)*t = (c+d)*t\n    (a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-polynomial-weighted-scaled.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "236e28086465f79fae79350634c60b1947f60da9351ee5e6b074addbed4e1ca6"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-polynomial-weighted-scaled.lit"
+        ]
+      },
+      {
+        "id": "projection-scaled-direct",
+        "source": "forall a,b,s R:\n    (a,b)(1)*s = a*s\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-scaled-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "484c6cdc337aa40a6cfd76c78dd1df0c4847c371ee2f905d28b4c2b4b245acfb"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-scaled-direct.lit"
+        ]
+      },
+      {
+        "id": "projection-weighted-direct",
+        "source": "forall a,b,s,t R:\n    (a,b)(1)*s+(a,b)(2)*t = a*s+b*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-weighted-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f04eaa4346bca06595d3b439fc1426655355f8dd65a508c6c863a6d9cb4fd30d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-weighted-direct.lit"
+        ]
+      },
+      {
+        "id": "projection-weighted-known-leaves",
+        "source": "claim:\n    ? forall a,b,s,t R:\n        (a,b)(1)*s+(a,b)(2)*t = a*s+b*t\n    (a,b)(1) = a\n    (a,b)(2) = b\n    (a,b)(1)*s+(a,b)(2)*t = a*s+b*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-weighted-known-leaves.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6d54f7b1ee87443f03f88a1936cca55584db3c5cecac17b812a393497daca6d4"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-weighted-known-leaves.lit"
+        ]
+      },
+      {
+        "id": "projection-weighted-scaled-leaves",
+        "source": "claim:\n    ? forall a,b,s,t R:\n        (a,b)(1)*s+(a,b)(2)*t = a*s+b*t\n    (a,b)(1)*s = a*s\n    (a,b)(2)*t = b*t\n    (a,b)(1)*s+(a,b)(2)*t = a*s+b*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-weighted-scaled-leaves.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d9e14ac35d985985c646480b8bf0b8ba39d0a11b4807a4e0c41ad652c46fbb81"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-weighted-scaled-leaves.lit"
+        ]
+      },
+      {
+        "id": "projection-weighted-wrong-index",
+        "source": "forall a,b,s,t R:\n    (a,b)(1)*s+(a,b)(1)*t = a*s+b*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/projection-weighted-wrong-index.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4712620b4a7008b72e83d7f21d35b7997fb07cb6f6551686e49fc6cd7d66e549"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/projection-weighted-wrong-index.lit"
+        ]
+      },
+      {
+        "id": "arithmetic-known-polynomial-direct",
+        "source": "forall x,y,a,b,c,d,s,t R:\n    x = a+b\n    y = c+d\n    =>:\n        x*s+y*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/arithmetic-known-polynomial-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ef4c6f3c798b787a60d95135a20acc46c91f7b3e2ccf832a76e2d7a492702517"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/arithmetic-known-polynomial-direct.lit"
+        ]
+      },
+      {
+        "id": "arithmetic-known-polynomial-scaled",
+        "source": "claim:\n    ? forall x,y,a,b,c,d,s,t R:\n        x = a+b\n        y = c+d\n        =>:\n            x*s+y*t = (a+b)*s+(c+d)*t\n    x*s = (a+b)*s\n    y*t = (c+d)*t\n    x*s+y*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/arithmetic-known-polynomial-scaled.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f23d7789f72b80de120455fac823e0d7f022c880a60a231149d4fb275a9d85b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/arithmetic-known-polynomial-scaled.lit"
+        ]
+      },
+      {
+        "id": "arithmetic-known-polynomial-missing",
+        "source": "forall x,y,a,b,c,d,s,t R:\n    x = a+b\n    =>:\n        x*s+y*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/arithmetic-known-polynomial-missing.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c55cfbf205fdb28190a8192c981e21fd0acf58a149bbf771929ce46630119ee7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/arithmetic-known-polynomial-missing.lit"
+        ]
+      },
+      {
+        "id": "arithmetic-known-polynomial-wrong-sign",
+        "source": "forall x,y,a,b,c,d,s,t R:\n    x = a+b\n    y = c+d\n    =>:\n        x*s-y*t = (a+b)*s+(c+d)*t\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/arithmetic-known-polynomial-wrong-sign.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "edfc7680f04fa6c2a296a29fbf1442b8dd76c5256b8407a04ae0e298001cb9fd"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-13-cases/arithmetic-known-polynomial-wrong-sign.lit"
+        ]
+      }
+    ],
+    "linear_session": [
+      {
+        "source": "have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "forall u,v,w cart(R,R),a,b R:\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "03fcefc9e67001635a54eae9c292b660ea7b89699656a9ad839de6fec90f0ebc",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall u, v, w cart(R, R), a, b R:\\n    dot((a * u(1) + b * v(1), a * u(2) + b * v(2)), w) = a * dot(u, w) + b * dot(v, w)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall u, v, w cart(R, R), a, b R:\\n    dot((a * u(1) + b * v(1), a * u(2) + b * v(2)), w) = a * dot(u, w) + b * dot(v, w)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n "
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "claim:\n    ? forall u,v,w cart(R,R),a,b R:\n        dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = (a*u(1)+b*v(1))*w(1)+(a*u(2)+b*v(2))*w(2) = a*(u(1)*w(1)+u(2)*w(2))+b*(v(1)*w(1)+v(2)*w(2)) = a*dot(u,w)+b*dot(v,w)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "claim:\n    ? forall u,v,w cart(R,R),a,b R:\n        dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)\n    dot(u,w) = u(1)*w(1)+u(2)*w(2)\n    dot(v,w) = v(1)*w(1)+v(2)*w(2)\n    a*dot(u,w) = a*(u(1)*w(1)+u(2)*w(2))\n    b*dot(v,w) = b*(v(1)*w(1)+v(2)*w(2))\n    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = (a*u(1)+b*v(1))*w(1)+(a*u(2)+b*v(2))*w(2) = a*(u(1)*w(1)+u(2)*w(2))+b*(v(1)*w(1)+v(2)*w(2)) = a*dot(u,w)+b*dot(v,w)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "projection_session": [
+      {
+        "source": "have a,b,c,d,s,t R",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "69fdf0f87d19e708d1c242b4e1f1c0ff2d043630e795f161f3aea7feb6e211ec",
+          "excerpt": "{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"(a + b, c + d)(1) * s + (a + b, c + d)(2) * t = (a + b) * s + (c + d) * t\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"(a + b, c + d)(1) * s + (a + b, c + d)(2) * t = (a + b) * s + (c + d) * t\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(1) = a+b",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(2) = c+d",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "69fdf0f87d19e708d1c242b4e1f1c0ff2d043630e795f161f3aea7feb6e211ec",
+          "excerpt": "{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"(a + b, c + d)(1) * s + (a + b, c + d)(2) * t = (a + b) * s + (c + d) * t\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"(a + b, c + d)(1) * s + (a + b, c + d)(2) * t = (a + b) * s + (c + d) * t\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(1)*s = (a+b)*s",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(2)*t = (c+d)*t",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "(a+b,c+d)(1)*s+(a+b,c+d)(2)*t = (a+b)*s+(c+d)*t",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "scope": "Independent reduced definitions/interfaces; no canonical geometry replacement or whole module validation; no timing claims."
+  }
+}

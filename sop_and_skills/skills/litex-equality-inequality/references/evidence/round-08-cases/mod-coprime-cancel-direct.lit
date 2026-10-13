@@ -1,0 +1,5 @@
+forall a,b,k Z,m N+:
+    gcd(k,m) = 1
+    (a*k)%m = (b*k)%m
+    =>:
+        a%m = b%m

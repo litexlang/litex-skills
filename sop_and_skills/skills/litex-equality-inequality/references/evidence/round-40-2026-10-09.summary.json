@@ -1,0 +1,641 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-40-2026-10-09.json",
+  "original_sha256": "5d772ceb73b8ce239c1f1083de3110868443b39f77ce7c8995eff10ade8abd77",
+  "original_bytes": 386519,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+    "sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "unique-original",
+        "source": {
+          "text_omitted": true,
+          "sha256": "6f3627fdbaf95586f33737eba599681631d52d2b8ff79949a53422a881a68c27",
+          "characters": 3638,
+          "excerpt": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_original:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "25034d2de3c9f0a4faa0b3175c1d64065514d5b3e28474dc4bc3391778cb21ab"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-original.lit"
+        ]
+      },
+      {
+        "id": "unique-original-explicit-closing",
+        "source": {
+          "text_omitted": true,
+          "sha256": "e7c42138227fd0381640ebb30d6996e9f470d5df3c991b801f1fce332bbc29a4",
+          "characters": 3752,
+          "excerpt": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_original_explicit_closing:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-original-explicit-closing.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d6b97447fab0e07afb36b3b47c93fbfb6dadfecf4ac20ea7ae90454823cd80ed"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-original-explicit-closing.lit"
+        ]
+      },
+      {
+        "id": "unique-short-finite",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_short_finite:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = finite_set_min(union({delta1}, {delta2}))\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        delta1 $in union({delta1}, {delta2})\n        delta2 $in union({delta1}, {delta2})\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta1\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-short-finite.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "556c5afa41afb06e0965a0c38084811c6f58d1e589ea03faff117202d2d04a83"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-short-finite.lit"
+        ]
+      },
+      {
+        "id": "unique-short-native",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_short_native:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-short-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b57d6e8a71d9547448e55b010c40833afa0da50833988030e3c8cf00f873d02e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-short-native.lit"
+        ]
+      },
+      {
+        "id": "unique-short-native-explicit-distinct",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_short_native_explicit_distinct:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample != x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-short-native-explicit-distinct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a26f4f9a800f8054cdfe1ac7e9d32e914871f3a328461202fd655ec45ad71c5a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-short-native-explicit-distinct.lit"
+        ]
+      },
+      {
+        "id": "native-delete-closing-facts",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_closing_facts:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-delete-closing-facts.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec86dd3f72e22f3d9fa94d1a879253443c48e0477813d1037ce3ff1f62033577"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-delete-closing-facts.lit"
+        ]
+      },
+      {
+        "id": "native-alias-chain-only",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_alias_chain_only:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-alias-chain-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "658c28f8a3e0d3937fc3b3495581b8332451d2718f4f093c7214f671ad645b8e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-alias-chain-only.lit"
+        ]
+      },
+      {
+        "id": "native-raw-error-only",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_raw_error_only:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-raw-error-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "612a686711c7d90a426c5b42232f19580e89bb5c88515481ca45cfd05c8ad817"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-raw-error-only.lit"
+        ]
+      },
+      {
+        "id": "native-delete-all-error-publication",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_all_error_publication:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-delete-all-error-publication.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "88efb51a94bbec281db3f6b674cf5f9aa13298a6570eca93d12e3fa9d91e90b1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-delete-all-error-publication.lit"
+        ]
+      },
+      {
+        "id": "unique-bodyless",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_bodyless:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bea700d93500347ee313a1b3627a76f09989abf134dad0df3d53e373170912a2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-bodyless.lit"
+        ]
+      },
+      {
+        "id": "unique-missing-second-derivative",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_missing_second_derivative:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/unique-missing-second-derivative.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee61f19a30c3bdbc3bb6ca986988b592050d78148e24c70f99ff57ae3b7840f3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/unique-missing-second-derivative.lit"
+        ]
+      },
+      {
+        "id": "finite-delete-member-bridges",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_finite_delete_member_bridges:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = finite_set_min(union({delta1}, {delta2}))\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta1\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/finite-delete-member-bridges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "42945cae3db0cafc7f31aae5e1fcdf2369cc49e315ef9e0560d3c1704e207b9f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/finite-delete-member-bridges.lit"
+        ]
+      },
+      {
+        "id": "native-delete-reflexive-ge",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_reflexive_ge:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-delete-reflexive-ge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0a1b579acca3f2385887785933007edacb444df21a6026077d11950c3845f10b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-delete-reflexive-ge.lit"
+        ]
+      },
+      {
+        "id": "native-delete-negated-self",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_negated_self:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-delete-negated-self.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "397a39ae7bdafd9f594361b609a5d4e13d46fc5d5eb12817d269ac8c7e7750db"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-delete-negated-self.lit"
+        ]
+      },
+      {
+        "id": "native-delete-radius-bound-publication",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_radius_bound_publication:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-delete-radius-bound-publication.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "146c9d67ec944a40c022fa4751258e142f68b88e5c7f25e7a4e93cfccfdcc83d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-delete-radius-bound-publication.lit"
+        ]
+      },
+      {
+        "id": "native-combined-short",
+        "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_combined_short:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-40-cases/native-combined-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7845d389519df4cb9347f56c293aa0af52bb5eabff2ea255f9f930a957f7e66e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round40-cases/native-combined-short.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "prefix": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n",
+      "cases": [
+        {
+          "id": "unique-original",
+          "source": {
+            "text_omitted": true,
+            "sha256": "6f3627fdbaf95586f33737eba599681631d52d2b8ff79949a53422a881a68c27",
+            "characters": 3638,
+            "excerpt": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_original:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n"
+          },
+          "statement": {
+            "text_omitted": true,
+            "sha256": "7a9e378c6989eb4526ebe1337dad7226328852e998db36c6e1d1191aadfc2bf1",
+            "characters": 3258,
+            "excerpt": "thm r40_unique_original:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 != slope2\n        slope1 - slope2 != 0\n        claim:\n            ? |slope1 - slope2| > 0\n            by contra:\n                ? |slope1 - slope2| > 0\n                |slope1 - slope2| <= 0\n                0 <= |slope1 - slope2|\n                |slope1 - slope2| = 0\n                |slope1 - slope2| != 0\n                impossible |slo"
+          }
+        },
+        {
+          "id": "unique-original-explicit-closing",
+          "source": {
+            "text_omitted": true,
+            "sha256": "e7c42138227fd0381640ebb30d6996e9f470d5df3c991b801f1fce332bbc29a4",
+            "characters": 3752,
+            "excerpt": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_original_explicit_closing:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope"
+          },
+          "statement": {
+            "text_omitted": true,
+            "sha256": "b67008e9dd616794cc13eaf7c9f3de976407c39d1fed464035af42579b50fca6",
+            "characters": 3372,
+            "excerpt": "thm r40_unique_original_explicit_closing:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 != slope2\n        slope1 - slope2 != 0\n        claim:\n            ? |slope1 - slope2| > 0\n            by contra:\n                ? |slope1 - slope2| > 0\n                |slope1 - slope2| <= 0\n                0 <= |slope1 - slope2|\n                |slope1 - slope2| = 0\n                |slope1 - slope2| != 0\n              "
+          }
+        },
+        {
+          "id": "unique-short-finite",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_short_finite:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = finite_set_min(union({delta1}, {delta2}))\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        delta1 $in union({delta1}, {delta2})\n        delta2 $in union({delta1}, {delta2})\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta1\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_unique_short_finite:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = finite_set_min(union({delta1}, {delta2}))\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        delta1 $in union({delta1}, {delta2})\n        delta2 $in union({delta1}, {delta2})\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta1\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "unique-short-native",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_short_native:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_unique_short_native:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "unique-short-native-explicit-distinct",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_short_native_explicit_distinct:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample != x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_unique_short_native_explicit_distinct:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample != x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-delete-closing-facts",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_closing_facts:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_delete_closing_facts:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-alias-chain-only",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_alias_chain_only:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_alias_chain_only:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-raw-error-only",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_raw_error_only:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_raw_error_only:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-delete-all-error-publication",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_all_error_publication:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_delete_all_error_publication:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "unique-bodyless",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_bodyless:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n",
+          "statement": "thm r40_unique_bodyless:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n"
+        },
+        {
+          "id": "unique-missing-second-derivative",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_unique_missing_second_derivative:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_unique_missing_second_derivative:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "finite-delete-member-bridges",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_finite_delete_member_bridges:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = finite_set_min(union({delta1}, {delta2}))\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta1\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_finite_delete_member_bridges:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = finite_set_min(union({delta1}, {delta2}))\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta1\n        radius = finite_set_min(union({delta1}, {delta2})) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-delete-reflexive-ge",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_reflexive_ge:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_delete_reflexive_ge:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-delete-negated-self",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_negated_self:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_delete_negated_self:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        radius = min(delta1,delta2) <= delta1\n        radius = min(delta1,delta2) <= delta2\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-delete-radius-bound-publication",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_delete_radius_bound_publication:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_delete_radius_bound_publication:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        not |slope1 - slope2| < |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        },
+        {
+          "id": "native-combined-short",
+          "source": "prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):\n    forall x R:\n        x != x0\n        |x - x0| < delta\n        =>:\n            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon\n\nprop r40_has_derivative_at(f fn(x R) R, x0, slope R):\n    forall epsilon R+:\n        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}\n\nthm r40_native_combined_short:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n",
+          "statement": "thm r40_native_combined_short:\n    ? forall f fn(t R) R, x0, slope1, slope2 R:\n        $r40_has_derivative_at(f, x0, slope1)\n        $r40_has_derivative_at(f, x0, slope2)\n        =>:\n            slope1 = slope2\n    by contra:\n        ? slope1 = slope2\n        slope1 - slope2 != 0\n        |slope1 - slope2| > 0\n        have epsilon R+ = |slope1 - slope2| / 3\n        obtain delta1 from exist delta1 R+ st {$r40_derivative_delta_controlled(f, x0, slope1, epsilon, delta1)}\n        obtain delta2 from exist delta2 R+ st {$r40_derivative_delta_controlled(f, x0, slope2, epsilon, delta2)}\n        have radius R+ = min(delta1,delta2)\n        0 < radius / 2\n        have sample R = x0 + radius / 2\n        sample = x0 + radius / 2 > x0\n        sample - x0 = radius / 2\n        |sample - x0| = |radius / 2| = radius / 2 < radius\n        |sample - x0| = radius / 2 < radius <= delta1\n        |sample - x0| = radius / 2 < radius <= delta2\n        have difference_quotient R = (f(sample) - f(x0)) / (sample - x0)\n        |difference_quotient - slope1| = |(f(sample) - f(x0)) / (sample - x0) - slope1| < epsilon\n        |difference_quotient - slope2| = |(f(sample) - f(x0)) / (sample - x0) - slope2| < epsilon\n        |slope1 - difference_quotient| = |difference_quotient - slope1| < epsilon\n        |slope1 - slope2| <= |slope1 - difference_quotient| + |difference_quotient - slope2| < epsilon + epsilon = 2 * epsilon\n        2 * epsilon = 2 * (|slope1 - slope2| / 3) = (2 / 3) * |slope1 - slope2| < 1 * |slope1 - slope2| = |slope1 - slope2|\n        |slope1 - slope2| >= |slope1 - slope2|\n        impossible |slope1 - slope2| < |slope1 - slope2|\n"
+        }
+      ],
+      "source_path": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+      "source_sha256": "abd26bafea5fbde10d30ebb6b91fe7bab852bc12f172a89126c3fa861e072b56",
+      "adaptation": "Exact two derivative definitions and original uniqueness theorem slice, namespaced. Short spines preserve premises; native min variant is equivalent radius choice, separate from exact finite source spelling."
+    },
+    "scope": "Assembled exact derivative definitions and uniqueness theorem slice; no whole-showcase/module acceptance, canonical/kernel edit or trust.",
+    "summary": {
+      "accepted": 9,
+      "rejected": 7
+    },
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Successful release build and fixed executable identity; no immutable whole-checkout claim. Warm Session uses older round29 snapshot and abs spelling, cold files exact current source bars.",
+    "theorem_line_comparison": {
+      "source_original": 61,
+      "native_combined_short": 29,
+      "definition_prefix_included": false,
+      "runtime_claim": false
+    }
+  }
+}

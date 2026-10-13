@@ -1,0 +1,906 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-103-2026-10-10.json",
+  "original_sha256": "43034695bd1b64e966d7810fdebd7015b995b5937136c9fe77e14a444d9834ed",
+  "original_bytes": 339094,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/textbooks/The-Mechanics-of-Litex-Proof/chapter01-proofs-by-calculation.lit",
+    "source_sha256": "034e5ec1a3e36344f0361177def477c86817b309bf7deaae5ef84439933a782e",
+    "slice": "Original source prefix through four §1.1 calculation examples, before §1.2; final endpoints replace full chains only.",
+    "binary_sha256": "c253a863e97c38a223d5d2a5377a706ee238401dc4c86b3eca47fc6b4f6984ae",
+    "binary_build": "Reuse successful round88 fixed snapshot",
+    "cases": [
+      {
+        "id": "baseline",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/baseline.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4310e7a54a6a83dcaa0d7443391fc671b572fc92fb0d24561f4f0ff9b8cd726a",
+          "characters": 6406,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "74f32b536e5416c46624f122ad0d049a2d991ec304bc3ea9fa2b78bf08464cd4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "direct-1",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-1.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d989f114629dbf4c3a28ac4bb40f509a4989d0fb8a761c948013ab9542e6d80f",
+          "characters": 6366,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-1.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50cc614d8df5a47c389795f5697efd0b507cf60227702ab904fec370ad325faf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/direct-1.lit"
+        ]
+      },
+      {
+        "id": "direct-2",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-2.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d348662363a472b324a8e7963a2e21f4136a18c86e0ebe14121c9d027550ab86",
+          "characters": 6362,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-2.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec09268679317dca956b58573e473b48d833802f10c2d5d6e8f41490ddd4abc4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/direct-2.lit"
+        ]
+      },
+      {
+        "id": "direct-3",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-3.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "29939bd9136f788cfc12597daacd19e4b087925b0111538b301e634d283886ef",
+          "characters": 6296,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-3.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "19a032fed9c3e904782ea76dac05c86f70485dcaf284e09cb9591a63c65c1021"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/direct-3.lit"
+        ]
+      },
+      {
+        "id": "direct-4",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-4.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "97c6c57f3eee81aaee8528ce88a4cbb8a071d3bfc933e2859d05cd5bbc203802",
+          "characters": 6297,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/direct-4.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a99aa0fcfbecbc616d1b5b9c4d4e7866c9ef9ab6d15f943c5ca55c14cb65430e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/direct-4.lit"
+        ]
+      },
+      {
+        "id": "all-direct",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/all-direct.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "706a605d7b9e0fc6799afa6f9e502860b276999fe752e7fff8d6c3662f6f3e5c",
+          "characters": 6103,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/all-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93d2f15d5cb938dfd5fc31eb5c6ccf4df7af52bc7065e8e5254caac9d03ce8d3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/all-direct.lit"
+        ]
+      },
+      {
+        "id": "first-certificate-to-end",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/first-certificate-to-end.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ac29d181d3c0841d91f3e62e8b85124f7aa718efb2c70b8c53112e966dd9e8b9",
+          "characters": 6392,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/first-certificate-to-end.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9c08ae80ce3f80e2b16368ea7d116ceb8a514a59c42f7cf54d6ed19a978fff7c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/first-certificate-to-end.lit"
+        ]
+      },
+      {
+        "id": "first-numeric-to-end",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/first-numeric-to-end.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f765919467d0346cf2821e6704bfa825bc8e9adaf418eb8b7664bce0aa138556",
+          "characters": 6380,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/first-numeric-to-end.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "187286902b872acf13ccf0cf5920cc42ea84cb532a0e92e24276dd8aee1a316c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/first-numeric-to-end.lit"
+        ]
+      },
+      {
+        "id": "second-one-bridge",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/second-one-bridge.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "fb1253a893e5c9916501997f140334b9bd0d15aed852873b5d67be1df248068c",
+          "characters": 6384,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/second-one-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f7f571246adf951eb569e6bdf3dfaf6ccdba9e909fe47595aa4036db0d6854a1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/second-one-bridge.lit"
+        ]
+      },
+      {
+        "id": "second-substitution-bridge",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/second-substitution-bridge.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "07758964cd3c0d2af84c2bb18ef2fe66b0a4f8cbf711b3ff666d4c91a0899ccd",
+          "characters": 6375,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/second-substitution-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5446bb79de5f41074758af9a14e41524d03d9cbf331b3957079ecf70ab2486f9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/second-substitution-bridge.lit"
+        ]
+      },
+      {
+        "id": "third-certificate-to-end",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/third-certificate-to-end.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ac9e08a7fb6540be1f5811de445c73a1a94d327b2365569b77c656a2c8f95a31",
+          "characters": 6356,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/third-certificate-to-end.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5e53d81ab121fb1427c6ad2156ad4432f0145fc69643ffc4c22366787e4c128c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/third-certificate-to-end.lit"
+        ]
+      },
+      {
+        "id": "third-substitution-to-end",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/third-substitution-to-end.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "906dbce1f62bc34b8e640421acce2b8c3be54b5dde7bcb084fe02eb153868f90",
+          "characters": 6346,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/third-substitution-to-end.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07cf3debf20e06340b368830477b9f753d49af05f70e87c513755751641242ba"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/third-substitution-to-end.lit"
+        ]
+      },
+      {
+        "id": "fourth-bridge-direct",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-bridge-direct.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4501d8ff9b02386fbf821c9c35ff797d752a1dbd9a6e3514d9fe9fb072b8159a",
+          "characters": 6325,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-bridge-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fd352c840e6fe62b673fb286f742baf80da9e45be2b0ab3b36a0799880b59fad"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-bridge-direct.lit"
+        ]
+      },
+      {
+        "id": "fourth-three-links",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-three-links.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2a4ce057fc31e89c6549e08a26b32f2cd08a4827dd05af0a425b0a9bc98f42b3",
+          "characters": 6353,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-three-links.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1c7734968bb6aa669c5418dd0d3a6af025cc44f929c17420d27a8a7748e8c2ee"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-three-links.lit"
+        ]
+      },
+      {
+        "id": "fourth-numeric-bridge",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-numeric-bridge.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0e7c0ca07c1e2cacf8669344611809ad8f1869e7995e2278d01c59857bc6c070",
+          "characters": 6325,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-numeric-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f45fe6d3307292a86ddb5789fd5309e438fb066b97227ad59d52190b83217669"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-numeric-bridge.lit"
+        ]
+      },
+      {
+        "id": "fourth-delete-node-1",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-1.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "be0f8f01802e9a31c6cc075dce3299706fb4cf674673fc15175f880ce050e2b1",
+          "characters": 6379,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-1.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "13d72c996e6ca704c076c95a4bcf723752936e0cf3973be8fe189d3463f93f4a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-delete-node-1.lit"
+        ]
+      },
+      {
+        "id": "fourth-delete-node-2",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-2.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "34fcf90129054918df29ac13ba5f5ebdc0f777f19d1fc35406e13a7e27a1dcd4",
+          "characters": 6379,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-2.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fecacd41239da07a768f6fae8303e94d44ce1f1a77a8f1fe5f4a32f9edb3eabe"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-delete-node-2.lit"
+        ]
+      },
+      {
+        "id": "fourth-delete-node-3",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-3.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d3d0b15a01ff5e132c8394bbc87effdd81d2884b1b722bbc21ac36ef9e22546d",
+          "characters": 6379,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-3.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f342c2f7cb4be400cf939794d6d2eeaa0a7d14a232c42ea4d89893de79cb8f2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-delete-node-3.lit"
+        ]
+      },
+      {
+        "id": "fourth-delete-node-4",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-4.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d5856b5cd246d526f0a1adc4a97a792f02ff71ecb8b9bec500f49774e3c03700",
+          "characters": 6378,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/fourth-delete-node-4.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5695612b16114e381eeb7a0fb48349e8e7fd81e57ea4f7e420bb69c1cf1a07b2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/fourth-delete-node-4.lit"
+        ]
+      },
+      {
+        "id": "joint-first-two-short",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/joint-first-two-short.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f029af5afccece560ff2d5614ba145c7d41e3156b5507d23e9ec7381ba840326",
+          "characters": 6370,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/joint-first-two-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0e249f0a14035bccd2df9b3154c2082d943efadf8a34900828e3f51c64e15828"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/joint-first-two-short.lit"
+        ]
+      },
+      {
+        "id": "false-first-endpoint",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/false-first-endpoint.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2a26c7861d1935fcfbfd645f5ed5f7204c35ce40c78339ed60dc2f6ef7991a0b",
+          "characters": 6370,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/false-first-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "100750b55335fd609f67e598b50248408866ed6da9c29af09d6edc61d388a2dd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/false-first-endpoint.lit"
+        ]
+      },
+      {
+        "id": "false-second-endpoint",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/false-second-endpoint.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "77217e7faa2a0aa6271cc6149a6c4804b88ad30a5148cd6953b3bf8ad7a54275",
+          "characters": 6370,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/false-second-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "013e79ca728bb48ffd66fbd6243d551f9ff6ab148375cc505997c3d014602c7c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/false-second-endpoint.lit"
+        ]
+      },
+      {
+        "id": "missing-first-product-premise",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/missing-first-product-premise.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f01519bd57f862536f3c2ee130ae919a98bcbaecdac95f5255aa15cb335a229b",
+          "characters": 6356,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/missing-first-product-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "97f22958e495c012954e6a9ca90a50e1396603fc77430c9ff08bda1bfe9edae5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/missing-first-product-premise.lit"
+        ]
+      },
+      {
+        "id": "missing-second-value-premise",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/missing-second-value-premise.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0c7dc36173936f20883bfd7fc1908caf77b759b8ccf5f5841001c2b79b4d9985",
+          "characters": 6360,
+          "excerpt": "# Chapter 1 — Proofs By Calculation\n\n# > _Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things._\n# >\n# > _– Isaac Newton_\n\n# Litex proofs are meant to look close to the mathematical sentence they justify.\n# To help you get started, this first chapter begins with the smallest possible\n# experience: write a fact, let Litex check it, then add context so more facts\n# become checkable.\n\n# The proofs in this chapter are often written in a **full, step-by-step** style\n# so you can see how Litex verifies each link. That is for learning; it does not\n# mean every "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-103-cases/missing-second-value-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "18ab87ba8d8be93229e3372306a8d9a8d4d8fbc04592acad3391e9bf77585a95"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round103-cases/missing-second-value-premise.lit"
+        ]
+      }
+    ],
+    "excluded": []
+  }
+}

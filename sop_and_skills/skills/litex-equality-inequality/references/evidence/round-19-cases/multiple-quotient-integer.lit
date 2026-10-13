@@ -1,0 +1,2 @@
+forall a Z,b Z*:
+    (a*b)/b $in Z

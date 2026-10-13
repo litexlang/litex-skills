@@ -1,0 +1,14 @@
+have fn r56_identity(x R) R = x
+have fn r56_neg_identity(x R) R = -x
+have fn r56_constant_five(x R) R = 5
+
+forall t R:
+    r56_neg_identity(t)=-t
+
+forall y R:
+    r56_identity(y)=y
+
+forall x,y R:
+    x<y
+    =>:
+        r56_neg_identity(y)<r56_neg_identity(x)

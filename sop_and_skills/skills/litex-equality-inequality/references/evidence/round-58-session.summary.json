@@ -1,0 +1,112 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-58-session.json",
+  "original_sha256": "2e2ed9dd75d3b4cc71afd03b47934666c4d4883265d0c983673f38ef962af8bc",
+  "original_bytes": 4284,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r58_identity(x R) R = x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3a4606548f85e5d02d1f3b8aa91f1f1f5729654673838cc0d1daa8f481b2b9d8",
+        "excerpt": "have fn r58_identity(x R) R = x\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "have fn r58_square(x R) R = x^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "863449f297759df34e8af35d3fbff56fd27d41e906274b5ef64864f9c9e931a1",
+        "excerpt": "have fn r58_square(x R) R = x^2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "have fn r58_shifted_zero(x R) R = x-2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2d652493257b4b8ea292ce069047d4a7ff28734aa9fdd7b5ccecac4cbde233cb",
+        "excerpt": "have fn r58_shifted_zero(x R) R = x-2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "forall x R:\n    r58_identity(-x)=-x=-r58_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6ff8643ba3383de3cefbaf7b7f786608029dc1150552b7674d9b441e94e85f56",
+        "excerpt": "forall x R:\r\n    r58_identity(-x)=-x=-r58_identity(x)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R:\\n    r58_identity(-x) = -x = -r58_identity(x)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R:\\n    r58_identity(-x) = -x = -r58_identity(x)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "forall x R:\n    r58_identity(-x)=-r58_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "138eabfe1aaa98a6b6518e95952b58fa37322b73d932722226eff486d3b4d56f",
+        "excerpt": "forall x R:\r\n    r58_identity(-x)=-r58_identity(x)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R:\\n    r58_identity(-x) = -r58_identity(x)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R:\\n    r58_identity(-x) = -r58_identity(x)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "forall x R:\n    r58_square(-x)=(-x)^2=x^2=r58_square(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9247a51cc8e270089cd278bf6859975554a3039dd1009c036b28184b65f7b5e2",
+        "excerpt": "forall x R:\r\n    r58_square(-x)=(-x)^2=x^2=r58_square(x)\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "forall x R:\n    r58_square(-x)=r58_square(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f834d4c3868b858284e3b8dd1b0ea6fb906c2b55ed2350c286ce33db8a5ad1d4",
+        "excerpt": "forall x R:\r\n    r58_square(-x)=r58_square(x)\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "source": "r58_shifted_zero(2)=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "7f0ae670745b7a6c09c8f17a472abce0fd41fe6a494e99df2db2537370044b1a",
+        "excerpt": "r58_shifted_zero(2)=0\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 executable; round58 current build blocked."
+    },
+    {
+      "id": "odd-local-value-only",
+      "source": "claim:\n    ? forall x R:\n        r58_identity(-x)=-r58_identity(x)\n    r58_identity(x)=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6c78af2fbfdae08d5f9ef7cab8c5f0b50c592e10f3a47194da832985febeecf4",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        r58_identity(-x)=-r58_identity(x)\r\n    r58_identity(x)=x\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Older round51 Session; current build pending."
+    },
+    {
+      "id": "odd-local-value-and-chain",
+      "source": "claim:\n    ? forall x R:\n        r58_identity(-x)=-r58_identity(x)\n    r58_identity(x)=x\n    r58_identity(-x)=-x=-r58_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4e7799e9cac7ad0317f746d60bde84e858fbaada225b7ec0b54f8b377add247d",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        r58_identity(-x)=-r58_identity(x)\r\n    r58_identity(x)=x\r\n    r58_identity(-x)=-x=-r58_identity(x)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Older round51 Session; current build pending."
+    },
+    {
+      "id": "odd-after-global-value",
+      "source": "forall x R:\n    r58_identity(x)=x\n\nforall x R:\n    r58_identity(-x)=-r58_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "356321f89fafe16f9d3606ab66b4851cf31ce0a99075b391df42c5637edace5c",
+        "excerpt": "forall x R:\r\n    r58_identity(x)=x\r\n\r\nforall x R:\r\n    r58_identity(-x)=-r58_identity(x)\r\n\r\n... ... success\r\nlitex> ... ... success\r\nlitex> "
+      },
+      "baseline": "Older round51 Session; current build pending."
+    }
+  ]
+}

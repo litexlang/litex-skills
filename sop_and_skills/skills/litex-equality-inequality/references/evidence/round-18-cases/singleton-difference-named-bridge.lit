@@ -1,0 +1,9 @@
+claim:
+    ? forall f fn(k Z) R:
+        sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = f(2)-f(1)
+    let h = fn(j Z) R {f(j+1)-f(j)}
+    sum(1,1,h) = h(1)
+    h(1) = f(1+1)-f(1)
+    1+1 = 2
+    h(1) = f(2)-f(1)
+    sum(1,1,fn(j Z) R {f(j+1)-f(j)}) = sum(1,1,h) = h(1) = f(2)-f(1)

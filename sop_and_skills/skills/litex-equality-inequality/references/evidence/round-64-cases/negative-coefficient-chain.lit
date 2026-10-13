@@ -1,0 +1,8 @@
+claim:
+    ? forall a,b,c,x R:
+        a!=0
+        a<0
+        a*x+b=c
+        =>:
+            x=(c-b)/a
+    x=(a*x+b-b)/a=(c-b)/a

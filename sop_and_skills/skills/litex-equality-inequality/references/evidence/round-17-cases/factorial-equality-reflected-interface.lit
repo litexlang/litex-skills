@@ -1,0 +1,20 @@
+thm factorial_weak_reflection:
+    ? forall m N,n N+:
+        factorial(m) <= factorial(n)
+        =>:
+            m <= n
+    by contra:
+        ? m <= n
+        n < m
+        factorial(n) < factorial(m)
+        impossible factorial(m) <= factorial(n)
+claim:
+    ? forall m,n N+:
+        factorial(m) = factorial(n)
+        =>:
+            m = n
+    factorial(m) <= factorial(n)
+    factorial(n) <= factorial(m)
+    release thm factorial_weak_reflection(m,n)
+    release thm factorial_weak_reflection(n,m)
+    m = n

@@ -1,0 +1,2 @@
+forall A,B finite_set:
+    finite_set_size(intersect(A,B)) <= finite_set_size(A)

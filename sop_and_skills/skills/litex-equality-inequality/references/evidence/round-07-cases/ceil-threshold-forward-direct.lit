@@ -1,0 +1,4 @@
+forall x R,n Z:
+    n < x
+    =>:
+        n < ceil(x)

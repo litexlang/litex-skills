@@ -1,0 +1,135 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-71-sources.json",
+  "original_sha256": "68176ca2b3962613d6ee20c14d6dfbf60b39678a9553434191436393459d4e21",
+  "original_bytes": 56458,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/6_abstract_algebra/main.lit",
+    "source_sha256": "cad9f2170e08dc14fea418daea245bccfb5f6e3d7f1e6bf265af2ba4ad9b625a",
+    "scope": "Exact source prefix and homomorphism identity/inverse theorem consumers, existing flat predicates and generic carriers preserved.",
+    "cases": [
+      {
+        "id": "prefix",
+        "source": {
+          "text_omitted": true,
+          "sha256": "03ce3b03b5ee5aaffb6ff6c81c51d55f61681ef6dbce21e930ba305cbb47773c",
+          "characters": 2786,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/prefix.lit"
+      },
+      {
+        "id": "source-both",
+        "source": {
+          "text_omitted": true,
+          "sha256": "1a4bddfbc142bc290d9069903424aa8dc1d94f499c7a3ca09c121f5055e2e56b",
+          "characters": 3973,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/source-both.lit"
+      },
+      {
+        "id": "identity-delete-final-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "cc17b350db13941c02d02bd1cf86f3b20b6d86ab94f6a3026e61d681586b83bc",
+          "characters": 3303,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/identity-delete-final-echo.lit"
+      },
+      {
+        "id": "identity-delete-source-unit-value",
+        "source": {
+          "text_omitted": true,
+          "sha256": "45b8fe1db40debc37ed0af2c1bb36ee5b2b8058e3a130ff32315778417eb18f9",
+          "characters": 3292,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/identity-delete-source-unit-value.lit"
+      },
+      {
+        "id": "inverse-delete-two-echoes",
+        "source": {
+          "text_omitted": true,
+          "sha256": "8c73931b0cba5d91530c4d24c5f313bfba63b55bd73d5fcc335c9616fd677240",
+          "characters": 3922,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-two-echoes.lit"
+      },
+      {
+        "id": "inverse-delete-source-product",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3b2618ebd61372f939e90d6544acefe3c4d8800dd24bcc8af368228ccc256a6b",
+          "characters": 3942,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-source-product.lit"
+      },
+      {
+        "id": "combined-short",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2a03fef501a7fe22393555f50f3d0e712b9fd14759a72ee0d7055ca4c28679a5",
+          "characters": 3901,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/combined-short.lit"
+      },
+      {
+        "id": "inverse-empty-body",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d6a85c77cd95262a3368c8c8c510193ee61ba7b395e3d8b5622818ba1fdcecd8",
+          "characters": 3645,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-empty-body.lit"
+      },
+      {
+        "id": "wrong-inverse-conclusion",
+        "source": {
+          "text_omitted": true,
+          "sha256": "29a6b8c9231f2ec49c798df92c57726547b771d603cb20751c7548fc278f1d27",
+          "characters": 3966,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/wrong-inverse-conclusion.lit"
+      },
+      {
+        "id": "missing-homomorphism-assumption",
+        "source": {
+          "text_omitted": true,
+          "sha256": "fa714819529499f70033cb197af52df7252ddfd741f8c36a38a434932053761c",
+          "characters": 3888,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/missing-homomorphism-assumption.lit"
+      },
+      {
+        "id": "source-through-normal-kernel",
+        "source": {
+          "text_omitted": true,
+          "sha256": "73abeb7aa4939d3dd00d2959eed5315d6d7953a2e993f51d9323857f87579300",
+          "characters": 7702,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/source-through-normal-kernel.lit"
+      },
+      {
+        "id": "short-through-normal-kernel",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ee47cd9b464360ff22c4599fd6ac10d921e81818eca986413aa2d7c84eabdf85",
+          "characters": 7491,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/short-through-normal-kernel.lit"
+      }
+    ]
+  }
+}

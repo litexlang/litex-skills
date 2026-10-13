@@ -1,0 +1,115 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-67-sources.json",
+  "original_sha256": "69f446422da022b6a750e8967ad8900c501628377736db7da24c528bacd0e4a2",
+  "original_bytes": 9508,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/1_middle_school_math_in_nutshell/main.lit",
+    "source_sha256": "967fb75fd2c737f9f98f47f4a413fe111b6a5f1bb5f95ee3740ffe4e94d62ba6",
+    "scope": "Exact complex conjugate definition and complex-number source section, independent cold deletion/negative consumers; no builtin re/img/C_abs replacement.",
+    "cases": [
+      {
+        "id": "source-section",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\n\ni^2 = -1\n\nre(3 + 4 * i) = 3\n\nimg(3 + 4 * i) = 4\n\nC_abs(3 + 4 * i) = sqrt(re(3 + 4 * i)^2 + img(3 + 4 * i)^2)\n\nre(3 + 4 * i)^2 + img(3 + 4 * i)^2 = 3^2 + 4^2\n\nC_abs(3 + 4 * i) = sqrt(re(3 + 4 * i)^2 + img(3 + 4 * i)^2) = sqrt(3^2 + 4^2) = sqrt(25) = 5\n\n# Application: conjugation keeps the real coordinate and reverses the\n# imaginary coordinate. The canonical a+b*i form bridges re and img.\n\ncomplex_conjugate(3 + 4 * i) = re(3 + 4 * i) - img(3 + 4 * i) * i = 3 + (-4) * i\n\nre(3 + (-4) * i) = 3\n\nimg(3 + (-4) * i) = -4\n\nre(complex_conjugate(3 + 4 * i)) = re(3 + (-4) * i) = 3\n\nimg(complex_conjugate(3 + 4 * i)) = img(3 + (-4) * i) = -4\n\nforall z C:\n    z = re(z) + img(z) * i\n    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/source-section.lit"
+      },
+      {
+        "id": "abs-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nC_abs(3+4*i)=5\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/abs-direct.lit"
+      },
+      {
+        "id": "abs-direct-after-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\nC_abs(3+4*i)=5\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/abs-direct-after-coordinates.lit"
+      },
+      {
+        "id": "abs-chain-after-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\nC_abs(3+4*i)=sqrt(re(3+4*i)^2+img(3+4*i)^2)=sqrt(3^2+4^2)=sqrt(25)=5\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/abs-chain-after-coordinates.lit"
+      },
+      {
+        "id": "abs-chain-without-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nC_abs(3+4*i)=sqrt(re(3+4*i)^2+img(3+4*i)^2)=sqrt(3^2+4^2)=sqrt(25)=5\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/abs-chain-without-coordinates.lit"
+      },
+      {
+        "id": "conjugate-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/conjugate-direct.lit"
+      },
+      {
+        "id": "conjugate-chain-after-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/conjugate-chain-after-coordinates.lit"
+      },
+      {
+        "id": "conjugate-consumers-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(complex_conjugate(3+4*i))=3\nimg(complex_conjugate(3+4*i))=-4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/conjugate-consumers-direct.lit"
+      },
+      {
+        "id": "conjugate-consumers-after-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i\nre(complex_conjugate(3+4*i))=3\nimg(complex_conjugate(3+4*i))=-4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/conjugate-consumers-after-value.lit"
+      },
+      {
+        "id": "symbolic-original",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    z = re(z) + img(z) * i\n    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/symbolic-original.lit"
+      },
+      {
+        "id": "symbolic-without-reconstruction",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/symbolic-without-reconstruction.lit"
+      },
+      {
+        "id": "symbolic-consumers-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    re(complex_conjugate(z))=re(z)\n    img(complex_conjugate(z))=-img(z)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/symbolic-consumers-direct.lit"
+      },
+      {
+        "id": "wrong-abs-chain",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\nC_abs(3+4*i)=sqrt(re(3+4*i)^2+img(3+4*i)^2)=sqrt(3^2+4^2)=sqrt(25)=6\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/wrong-abs-chain.lit"
+      },
+      {
+        "id": "wrong-conjugate-sign",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=3+4*i\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/wrong-conjugate-sign.lit"
+      },
+      {
+        "id": "wrong-imaginary-consumer",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i\nimg(complex_conjugate(3+4*i))=4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/wrong-imaginary-consumer.lit"
+      },
+      {
+        "id": "numeric-consumer-chains-after-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\nre(complex_conjugate(3+4*i))=re(3+(-4)*i)=3\nimg(complex_conjugate(3+4*i))=img(3+(-4)*i)=-4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/numeric-consumer-chains-after-value.lit"
+      },
+      {
+        "id": "numeric-consumer-chains-alone",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(complex_conjugate(3+4*i))=re(3+(-4)*i)=3\nimg(complex_conjugate(3+4*i))=img(3+(-4)*i)=-4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/numeric-consumer-chains-alone.lit"
+      },
+      {
+        "id": "numeric-consumers-direct-after-canonical-values",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\nre(3+(-4)*i)=3\nimg(3+(-4)*i)=-4\nre(complex_conjugate(3+4*i))=3\nimg(complex_conjugate(3+4*i))=-4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/numeric-consumers-direct-after-canonical-values.lit"
+      },
+      {
+        "id": "symbolic-without-conjugate-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/symbolic-without-conjugate-value.lit"
+      },
+      {
+        "id": "wrong-consumer-chain-after-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\nre(complex_conjugate(3+4*i))=re(3+(-4)*i)=3\nimg(complex_conjugate(3+4*i))=img(3+(-4)*i)=4\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-cases/wrong-consumer-chain-after-value.lit"
+      }
+    ]
+  }
+}

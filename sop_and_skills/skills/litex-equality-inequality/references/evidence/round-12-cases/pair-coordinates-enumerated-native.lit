@@ -1,0 +1,10 @@
+claim:
+    ? forall p,q cart(R,R):
+        p(1) = q(1)
+        p(2) = q(2)
+        =>:
+            p = q
+    by enumerate finite_set:
+        ? forall coordinate_index 1...2:
+            p(coordinate_index) = q(coordinate_index)
+    release thm tuple_equal_from_coordinates(p,q)

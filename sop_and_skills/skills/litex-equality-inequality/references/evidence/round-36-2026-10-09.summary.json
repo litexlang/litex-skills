@@ -1,0 +1,651 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-36-2026-10-09.json",
+  "original_sha256": "f84fc7fe68a7580af2b2d62867ce95733f86bfa5d63093569de18f34ea40c558",
+  "original_bytes": 50039,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+    "sha256": "21b62708a211d2addaf675f271978567eb5ac723bcc8d47596f93704839e9434",
+    "cases": [
+      {
+        "id": "initial-source-body",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nthm r36_initial_source:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r36_quadratic_solution(c,0)=0^2+c=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/initial-source-body.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "98f0eca67de75e18ae22edaf213a92f826e3f4a9f4a28b04f02913c19fda5ac6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/initial-source-body.lit"
+        ]
+      },
+      {
+        "id": "initial-short-value",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nthm r36_initial_short:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r36_quadratic_solution(c,0)=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/initial-short-value.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc9273c3d1d6bb0b0552f6c62847b2c8e253b8df3121c50b9f414cd444d464c8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/initial-short-value.lit"
+        ]
+      },
+      {
+        "id": "initial-bodyless",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nthm r36_initial_bodyless:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/initial-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "68df58c190b9bfa82c134c32bc3b0c1183e6d1c42776bc6ee6387dc0afc3e9c4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/initial-bodyless.lit"
+        ]
+      },
+      {
+        "id": "value-at-zero-direct",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c R:\n    r36_quadratic_solution(c,0)=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/value-at-zero-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8b1f2ecbc9711bbd03cbc1f95a6400c606a1f9c4404356eb7db4f87fdbb2a5bd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/value-at-zero-direct.lit"
+        ]
+      },
+      {
+        "id": "value-at-one-direct",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c R:\n    r36_quadratic_solution(c,1)=1+c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/value-at-one-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20ba4d7c58a656092c09376abd050fd4a95f7624e2784f0e512928843b0e389d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/value-at-one-direct.lit"
+        ]
+      },
+      {
+        "id": "shifted-input-direct",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,y0 R:\n    r36_quadratic_solution(c,1)=y0\n    =>:\n        c=y0-1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/shifted-input-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "618f3f1f8eea07cd6232b547a946872c9ee6ff33672f96c5a2c7e142152b5f96"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/shifted-input-direct.lit"
+        ]
+      },
+      {
+        "id": "shifted-input-value-bridge",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,1)=y0\n        =>:\n            c=y0-1\n    r36_quadratic_solution(c,1)=1^2+c=1+c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/shifted-input-value-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b1eaf06bddb62bad74d9a217de7d8d231c47ab98a7f9c1f029f3f87103e2bcc1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/shifted-input-value-bridge.lit"
+        ]
+      },
+      {
+        "id": "symbolic-input-direct",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,x,y0 R:\n    r36_quadratic_solution(c,x)=y0\n    =>:\n        c=y0-x^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/symbolic-input-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "35177c5613e3adf1a7480c9b4af7b02fad2f0d7485f8c8b3039daa3003b9a536"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/symbolic-input-direct.lit"
+        ]
+      },
+      {
+        "id": "symbolic-input-value-bridge",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,x,y0 R:\n        r36_quadratic_solution(c,x)=y0\n        =>:\n            c=y0-x^2\n    r36_quadratic_solution(c,x)=x^2+c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/symbolic-input-value-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "823cced892f1dfc239faed5f04a1c5d3cb8f04419ec1c1dbde995a2f927de09e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/symbolic-input-value-bridge.lit"
+        ]
+      },
+      {
+        "id": "upper-bound-direct",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,M R:\n    r36_quadratic_solution(c,0)<=M\n    =>:\n        c<=M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/upper-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d9f3e7b50949eab4c617682403fa4b2568d4e4b171165ed3e05d2594706e5616"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/upper-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "upper-bound-value-bridge",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<=M\n        =>:\n            c<=M\n    r36_quadratic_solution(c,0)=0^2+c=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/upper-bound-value-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d94c77ebc85318f874d864dd5d9e534ee060c9b000778e3421a843a588107642"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/upper-bound-value-bridge.lit"
+        ]
+      },
+      {
+        "id": "upper-bound-one-chain",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<=M\n        =>:\n            c<=M\n    c=r36_quadratic_solution(c,0)<=M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/upper-bound-one-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "850242df63b2d769144d3d04328a1ef2618f31e760534338bfa44070f64e2c65"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/upper-bound-one-chain.lit"
+        ]
+      },
+      {
+        "id": "strict-upper-bound-direct",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,M R:\n    r36_quadratic_solution(c,0)<M\n    =>:\n        c<M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/strict-upper-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "df80e48f67200c54ab43cda102d381ee50edd58231d433b5308a1f97296447f3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/strict-upper-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "strict-upper-bound-value-bridge",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<M\n        =>:\n            c<M\n    r36_quadratic_solution(c,0)=0^2+c=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/strict-upper-bound-value-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "72af9cad431a576c61b113edcbefcda4470e58fe8f8c6a751fa7815cce50cf11"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/strict-upper-bound-value-bridge.lit"
+        ]
+      },
+      {
+        "id": "wrong-point-false",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,y0 R:\n    r36_quadratic_solution(c,1)=y0\n    =>:\n        c=y0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/wrong-point-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bca80c506806109c39bfd89567b3bf1ab9e515698647be228e8a9c07fe469315"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/wrong-point-false.lit"
+        ]
+      },
+      {
+        "id": "wrong-parameter-false",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,d,y0 R:\n    r36_quadratic_solution(d,0)=y0\n    =>:\n        c=y0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/wrong-parameter-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "44df33c6dc4e5e550ba805cb027bff87ab6b75f9c2fe3a87ba291e7962ef4ce8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/wrong-parameter-false.lit"
+        ]
+      },
+      {
+        "id": "weak-to-strict-false",
+        "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,M R:\n    r36_quadratic_solution(c,0)<=M\n    =>:\n        c<M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-36-cases/weak-to-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8d15ff107e045e95126053fd9dd2ed19fb5e04045cd882f18ffdec35538c3662"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round36-cases/weak-to-strict-false.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "status": "independent_current_source_gate_completed",
+      "cases": [
+        {
+          "id": "initial-source-body",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nthm r36_initial_source:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r36_quadratic_solution(c,0)=0^2+c=c\n",
+          "statement": "thm r36_initial_source:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r36_quadratic_solution(c,0)=0^2+c=c"
+        },
+        {
+          "id": "initial-short-value",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nthm r36_initial_short:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r36_quadratic_solution(c,0)=c\n",
+          "statement": "thm r36_initial_short:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n    r36_quadratic_solution(c,0)=c"
+        },
+        {
+          "id": "initial-bodyless",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nthm r36_initial_bodyless:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0\n",
+          "statement": "thm r36_initial_bodyless:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,0)=y0\n        =>:\n            c=y0"
+        },
+        {
+          "id": "value-at-zero-direct",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c R:\n    r36_quadratic_solution(c,0)=c\n",
+          "statement": "forall c R:\n    r36_quadratic_solution(c,0)=c"
+        },
+        {
+          "id": "value-at-one-direct",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c R:\n    r36_quadratic_solution(c,1)=1+c\n",
+          "statement": "forall c R:\n    r36_quadratic_solution(c,1)=1+c"
+        },
+        {
+          "id": "shifted-input-direct",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,y0 R:\n    r36_quadratic_solution(c,1)=y0\n    =>:\n        c=y0-1\n",
+          "statement": "forall c,y0 R:\n    r36_quadratic_solution(c,1)=y0\n    =>:\n        c=y0-1"
+        },
+        {
+          "id": "shifted-input-value-bridge",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,1)=y0\n        =>:\n            c=y0-1\n    r36_quadratic_solution(c,1)=1^2+c=1+c\n",
+          "statement": "claim:\n    ? forall c,y0 R:\n        r36_quadratic_solution(c,1)=y0\n        =>:\n            c=y0-1\n    r36_quadratic_solution(c,1)=1^2+c=1+c"
+        },
+        {
+          "id": "symbolic-input-direct",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,x,y0 R:\n    r36_quadratic_solution(c,x)=y0\n    =>:\n        c=y0-x^2\n",
+          "statement": "forall c,x,y0 R:\n    r36_quadratic_solution(c,x)=y0\n    =>:\n        c=y0-x^2"
+        },
+        {
+          "id": "symbolic-input-value-bridge",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,x,y0 R:\n        r36_quadratic_solution(c,x)=y0\n        =>:\n            c=y0-x^2\n    r36_quadratic_solution(c,x)=x^2+c\n",
+          "statement": "claim:\n    ? forall c,x,y0 R:\n        r36_quadratic_solution(c,x)=y0\n        =>:\n            c=y0-x^2\n    r36_quadratic_solution(c,x)=x^2+c"
+        },
+        {
+          "id": "upper-bound-direct",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,M R:\n    r36_quadratic_solution(c,0)<=M\n    =>:\n        c<=M\n",
+          "statement": "forall c,M R:\n    r36_quadratic_solution(c,0)<=M\n    =>:\n        c<=M"
+        },
+        {
+          "id": "upper-bound-value-bridge",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<=M\n        =>:\n            c<=M\n    r36_quadratic_solution(c,0)=0^2+c=c\n",
+          "statement": "claim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<=M\n        =>:\n            c<=M\n    r36_quadratic_solution(c,0)=0^2+c=c"
+        },
+        {
+          "id": "upper-bound-one-chain",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<=M\n        =>:\n            c<=M\n    c=r36_quadratic_solution(c,0)<=M\n",
+          "statement": "claim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<=M\n        =>:\n            c<=M\n    c=r36_quadratic_solution(c,0)<=M"
+        },
+        {
+          "id": "strict-upper-bound-direct",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,M R:\n    r36_quadratic_solution(c,0)<M\n    =>:\n        c<M\n",
+          "statement": "forall c,M R:\n    r36_quadratic_solution(c,0)<M\n    =>:\n        c<M"
+        },
+        {
+          "id": "strict-upper-bound-value-bridge",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nclaim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<M\n        =>:\n            c<M\n    r36_quadratic_solution(c,0)=0^2+c=c\n",
+          "statement": "claim:\n    ? forall c,M R:\n        r36_quadratic_solution(c,0)<M\n        =>:\n            c<M\n    r36_quadratic_solution(c,0)=0^2+c=c"
+        },
+        {
+          "id": "wrong-point-false",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,y0 R:\n    r36_quadratic_solution(c,1)=y0\n    =>:\n        c=y0\n",
+          "statement": "forall c,y0 R:\n    r36_quadratic_solution(c,1)=y0\n    =>:\n        c=y0"
+        },
+        {
+          "id": "wrong-parameter-false",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,d,y0 R:\n    r36_quadratic_solution(d,0)=y0\n    =>:\n        c=y0\n",
+          "statement": "forall c,d,y0 R:\n    r36_quadratic_solution(d,0)=y0\n    =>:\n        c=y0"
+        },
+        {
+          "id": "weak-to-strict-false",
+          "source": "have fn r36_quadratic_solution(c,x R) R = x^2+c\n\nforall c,M R:\n    r36_quadratic_solution(c,0)<=M\n    =>:\n        c<M\n",
+          "statement": "forall c,M R:\n    r36_quadratic_solution(c,0)<=M\n    =>:\n        c<M"
+        }
+      ],
+      "source_path": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+      "source_sha256": "30c6fcf1c2c31e4df4548a5617aedc5968b6120ff8afa625ce485b899dd23815",
+      "source_adaptation": "Exact zero-initial-value source slice; function name renamed for Session hygiene. Additional point/parameter/order probes held-out, with unchanged function mathematics.",
+      "build_command": "cargo build --release",
+      "build_exit": 101,
+      "build_log": "tmp/2026-10-09/equality-inequality-search/build-round-36.log",
+      "blocking_owner_hashes": {
+        "src/run/run_compile_to_lean.rs": "0b3b5c0327efcff91a3431d75b359747afa2c1bf674454b6f6553df0414012ee",
+        "src/compile_to_lean/litex_to_lean_compiler.rs": "c2bbb262da5e59b628a1104d6de8537c3893f72a67a8a627dce8e9d6888e7e8a"
+      },
+      "next_step": "Rebuild current source after concurrent Lean changes stabilize; immutable round36 snapshot, 17 cold strict source files and promoted recheck before skill promotion.",
+      "historical_build_block": "Initial current-source build exited101; successful build-round-36-recheck.log supersedes this block. No concurrent source owners were repaired by this task."
+    },
+    "build_log": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/build-round-36-recheck.log",
+    "summary": {
+      "accepted": 9,
+      "rejected": 8
+    },
+    "scope": "Exact zero-initial-value source slice, function renamed only. Other input/order consumers are held-out probes, not new premises in the source theorem. No canonical/kernel edits or whole-showcase/runtime claim.",
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Fresh successful release build and fixed executable identity, not an audited immutable whole-checkout claim. Warm Session uses round29 snapshot; only cold files establish capability."
+  }
+}

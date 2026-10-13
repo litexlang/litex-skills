@@ -1,0 +1,2 @@
+forall range_index N+,f fn(x N+) R:
+    f(range_index) $in R

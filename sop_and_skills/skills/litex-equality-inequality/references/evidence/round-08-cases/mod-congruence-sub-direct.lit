@@ -1,0 +1,5 @@
+forall a,b,c,d Z,m N+:
+    a%m = b%m
+    c%m = d%m
+    =>:
+        (a-c)%m = (b-d)%m

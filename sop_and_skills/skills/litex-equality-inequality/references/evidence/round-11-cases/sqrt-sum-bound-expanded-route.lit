@@ -1,0 +1,17 @@
+claim:
+    ? forall x,y R:
+        0 <= x
+        0 <= y
+        =>:
+            sqrt(x+y) <= sqrt(x)+sqrt(y)
+    0 <= sqrt(x)
+    0 <= sqrt(y)
+    0 <= sqrt(x)+sqrt(y)
+    sqrt(x)^2 = x
+    sqrt(y)^2 = y
+    0 <= sqrt(x)*sqrt(y)
+    0 <= 2*sqrt(x)*sqrt(y)
+    (sqrt(x)+sqrt(y))^2 = sqrt(x)^2+2*sqrt(x)*sqrt(y)+sqrt(y)^2
+    sqrt(x)^2+2*sqrt(x)*sqrt(y)+sqrt(y)^2 = x+2*sqrt(x)*sqrt(y)+sqrt(y)^2 = x+2*sqrt(x)*sqrt(y)+y = x+y+2*sqrt(x)*sqrt(y) >= x+y
+    0 <= (sqrt(x)+sqrt(y))^2
+    sqrt(x+y) <= sqrt((sqrt(x)+sqrt(y))^2) = sqrt(x)+sqrt(y)

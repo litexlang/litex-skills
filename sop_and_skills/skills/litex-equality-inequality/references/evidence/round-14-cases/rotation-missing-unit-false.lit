@@ -1,0 +1,2 @@
+forall c,s,x,y R:
+    (c*x-s*y)^2+(s*x+c*y)^2 = x^2+y^2

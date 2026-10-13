@@ -1,0 +1,1640 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-15-2026-10-08.json",
+  "original_sha256": "e968fcc98cf1d31362b0777ef8dae7cc7175a0f81a74bab21cb822cdd4a0ce11",
+  "original_bytes": 38974100,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+    "sha256": "a9e5a10e9e594ddc21f7bf496dd444b1a370a882d96238a5b75f3e3e33bddd79",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-15.log"
+    },
+    "head": "d49fffb53276f19a6ea2abeb9dca1d82913f1086",
+    "session": [
+      {
+        "id": "convex-upper-direct",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q = 1\n    x <= M\n    y <= M\n    =>:\n        p*x+q*y <= M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "270e33048ce21595638da9d1619f8a0492edfd96fbdc559529ad10cb9c6db029",
+          "excerpt": "... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall p, q, x, y, M R:\\n    p >= 0\\n    q >= 0\\n    p + q = 1\\n    x <= M\\n    y <= M\\n    =>:\\n        p * x + q * y <= M\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall p, q, x, y, M R:\\n    p >= 0\\n    q >= 0\\n    p + q = 1\\n    x <= M\\n    y <= M\\n    =>:\\n        p * x + q * y <= M\"\r\n      },\r\n      \"stores\": [],\r\n      \"i"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "convex-upper-chain",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p >= 0\n        q >= 0\n        p+q = 1\n        x <= M\n        y <= M\n        =>:\n            p*x+q*y <= M\n    p*x+q*y <= p*M+q*M = (p+q)*M = M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "normalized-upper-direct",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q > 0\n    x <= M\n    y <= M\n    =>:\n        (p*x+q*y)/(p+q) <= M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d41d40d058de9e7d1c2cafd8109a29253027f856a6c8fe118d1c69ba812d02f0",
+          "excerpt": "... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall p, q, x, y, M R:\\n    p >= 0\\n    q >= 0\\n    p + q > 0\\n    x <= M\\n    y <= M\\n    =>:\\n        (p * x + q * y) / (p + q) <= M\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall p, q, x, y, M R:\\n    p >= 0\\n    q >= 0\\n    p + q > 0\\n    x <= M\\n    y <= M\\n    =>:\\n        (p * x + q * y) / (p + q) <= M\"\r\n      },\r\n     "
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "normalized-upper-chain",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p >= 0\n        q >= 0\n        p+q > 0\n        x <= M\n        y <= M\n        =>:\n            (p*x+q*y)/(p+q) <= M\n    p*x+q*y <= p*M+q*M = (p+q)*M\n    (p*x+q*y)/(p+q) <= ((p+q)*M)/(p+q) = M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e97632604fe2f19bd717ca7f7d2d6043f757bca820d4ed86a750b36151761360",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "convex-lower-direct",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q = 1\n    M <= x\n    M <= y\n    =>:\n        M <= p*x+q*y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-lower-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2706a4083de0579af1a1e520fc6bd191c8524f516c0d2a77470d8ee1a6675cb6"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "convex-missing-normalization-false",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    x <= M\n    y <= M\n    =>:\n        p*x+q*y <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-missing-normalization-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e11f7b7888a79ba79a3293ed7e01c6320c5422ae31f1b8c1ff13f7853db9fc67"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-missing-normalization-false.lit"
+        ]
+      },
+      {
+        "id": "convex-negative-weight-false",
+        "source": "forall p,q,x,y,M R:\n    p+q = 1\n    x <= M\n    y <= M\n    =>:\n        p*x+q*y <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-negative-weight-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a9ce8f51c596747b94a3c93dff8e4b5f00063d8e3a5b640d164ca17bd37d0d45"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-negative-weight-false.lit"
+        ]
+      },
+      {
+        "id": "convex-strict-missing-positive-false",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q = 1\n    x < M\n    y <= M\n    =>:\n        p*x+q*y < M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-strict-missing-positive-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c8c4883413ded888ec29bfc1384d7562c8754bf67fe7208687295b4dee6169e9"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-strict-missing-positive-false.lit"
+        ]
+      },
+      {
+        "id": "convex-strict-positive-weight",
+        "source": "forall p,q,x,y,M R:\n    p > 0\n    q >= 0\n    p+q = 1\n    x < M\n    y <= M\n    =>:\n        p*x+q*y < M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-strict-positive-weight.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "98f752983302da8174ec7dac17aa20dbf866bcf2913e6abfb7fd2c0e5bb37a75"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-strict-positive-weight.lit"
+        ]
+      },
+      {
+        "id": "convex-unit-interval-chain",
+        "source": "claim:\n    ? forall x,y,t R:\n        0 <= t\n        t <= 1\n        x <= y\n        =>:\n            x <= (1-t)*x+t*y <= y\n    1-t >= 0\n    x = (1-t)*x+t*x <= (1-t)*x+t*y <= (1-t)*y+t*y = y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-unit-interval-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "38ddf88dbc6bd453926bee93bf35a3d0990c451f9211b832edc76b2898b0e66d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-unit-interval-chain.lit"
+        ]
+      },
+      {
+        "id": "convex-unit-lower-direct",
+        "source": "forall x,y,t R:\n    0 <= t\n    t <= 1\n    x <= y\n    =>:\n        x <= (1-t)*x+t*y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-unit-lower-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "13b8e9f98467315b1f2d323241b4174f553669f492ef9b7ee434c82325c1b0d5"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-unit-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "convex-unit-upper-direct",
+        "source": "forall x,y,t R:\n    0 <= t\n    t <= 1\n    x <= y\n    =>:\n        (1-t)*x+t*y <= y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-unit-upper-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a1682c6c6cbf0da32b74919218450ec326b24084466200492d1679443d28a849"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-unit-upper-direct.lit"
+        ]
+      },
+      {
+        "id": "convex-upper-chain",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p >= 0\n        q >= 0\n        p+q = 1\n        x <= M\n        y <= M\n        =>:\n            p*x+q*y <= M\n    p*x+q*y <= p*M+q*M = (p+q)*M = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-upper-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e1a876199b7a8d2f19ae4a04838dd2e87e9a0dca221406936961f06e0ea5ac57"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-upper-chain.lit"
+        ]
+      },
+      {
+        "id": "convex-upper-direct",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q = 1\n    x <= M\n    y <= M\n    =>:\n        p*x+q*y <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-upper-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "485284140e4105066bf0fb53b5978a3da241b1ec28ee22c807503cf10ccf1f29"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-upper-direct.lit"
+        ]
+      },
+      {
+        "id": "expectation-upper-chain",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nclaim:\n    ? forall values,probs two_point_vector,M R:\n        probs(1) >= 0\n        probs(2) >= 0\n        probs(1)+probs(2) = 1\n        values(1) <= M\n        values(2) <= M\n        =>:\n            expectation2(values,probs) <= M\n    expectation2(values,probs) = values(1)*probs(1)+values(2)*probs(2)\n    values(1)*probs(1)+values(2)*probs(2) <= M*probs(1)+M*probs(2) = M*(probs(1)+probs(2)) = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/expectation-upper-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "904e0b543748dd39667c3715509111df538785ed6459467a9bf57a239057ba93"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/expectation-upper-chain.lit"
+        ]
+      },
+      {
+        "id": "expectation-upper-direct",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nforall values,probs two_point_vector,M R:\n    probs(1) >= 0\n    probs(2) >= 0\n    probs(1)+probs(2) = 1\n    values(1) <= M\n    values(2) <= M\n    =>:\n        expectation2(values,probs) <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/expectation-upper-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "85149f8af6a869663adaa4716f0dcf6a010c64ece8a378c0ae08a79b42e829c1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/expectation-upper-direct.lit"
+        ]
+      },
+      {
+        "id": "mean-least-squares-certificate",
+        "source": "claim:\n    ? forall a,b,c,z R:\n        (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-z)^2+(b-z)^2+(c-z)^2\n    (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2+3*(z-(a+b+c)/3)^2 = (a-z)^2+(b-z)^2+(c-z)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mean-least-squares-certificate.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c80f1e02f9d5bd618d85fef4ed452ad4be71d9b58aa72efcb9dd72f923a55eac"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/mean-least-squares-certificate.lit"
+        ]
+      },
+      {
+        "id": "mean-least-squares-direct",
+        "source": "forall a,b,c,z R:\n    (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-z)^2+(b-z)^2+(c-z)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mean-least-squares-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c3c0d8582c30be3382a46c193ba3e967f20725eff4c42160eb5b440c7748d830"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/mean-least-squares-direct.lit"
+        ]
+      },
+      {
+        "id": "normalized-lower-direct",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q > 0\n    M <= x\n    M <= y\n    =>:\n        M <= (p*x+q*y)/(p+q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-lower-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e1c8a26fc57d0cd7c30446e0fb28a0b5e944ae3881b26e88798477f90527ea41"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "normalized-negative-weight-false",
+        "source": "forall p,q,x,y,M R:\n    p+q > 0\n    x <= M\n    y <= M\n    =>:\n        (p*x+q*y)/(p+q) <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-negative-weight-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c7e125af98c83d1b25762844753afd395562b51c7794206945aed9baf055cacb"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-negative-weight-false.lit"
+        ]
+      },
+      {
+        "id": "normalized-strict-chain",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p > 0\n        q >= 0\n        p+q > 0\n        x < M\n        y <= M\n        =>:\n            (p*x+q*y)/(p+q) < M\n    p*x+q*y < p*M+q*M = (p+q)*M\n    (p*x+q*y)/(p+q) < ((p+q)*M)/(p+q) = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-strict-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "497042c8b56d4faa9dbd103a40823476c0c9f45daf0c49b320145bf28135b4a1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-strict-chain.lit"
+        ]
+      },
+      {
+        "id": "normalized-strict-direct",
+        "source": "forall p,q,x,y,M R:\n    p > 0\n    q >= 0\n    p+q > 0\n    x < M\n    y <= M\n    =>:\n        (p*x+q*y)/(p+q) < M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-strict-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1c529cbdfd23aafb84e3e963353d2d283409c859ca2a534e9c5d23528843a35a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-strict-direct.lit"
+        ]
+      },
+      {
+        "id": "normalized-strict-missing-weight-false",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q > 0\n    x < M\n    y <= M\n    =>:\n        (p*x+q*y)/(p+q) < M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-strict-missing-weight-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5b61be0e4f2af940fd3d9dfdc18906d9829d8a19a57de147315d36ff92401894"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-strict-missing-weight-false.lit"
+        ]
+      },
+      {
+        "id": "normalized-upper-chain",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p >= 0\n        q >= 0\n        p+q > 0\n        x <= M\n        y <= M\n        =>:\n            (p*x+q*y)/(p+q) <= M\n    p*x+q*y <= p*M+q*M = (p+q)*M\n    (p*x+q*y)/(p+q) <= ((p+q)*M)/(p+q) = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-upper-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b1c69dc40aa63fe47d7c4e6c2ab37212dab51e9ec5b3bd8d69ac6df95f00f410"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-upper-chain.lit"
+        ]
+      },
+      {
+        "id": "normalized-upper-direct",
+        "source": "forall p,q,x,y,M R:\n    p >= 0\n    q >= 0\n    p+q > 0\n    x <= M\n    y <= M\n    =>:\n        (p*x+q*y)/(p+q) <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-upper-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "51cb1a85a5e94d7d11d3192ce89ad014350ffb4d4e09c4c4bf0bc52dabd77085"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-upper-direct.lit"
+        ]
+      },
+      {
+        "id": "normalized-weight-unit-chain",
+        "source": "claim:\n    ? forall p,q R:\n        p >= 0\n        q >= 0\n        p+q > 0\n        =>:\n            0 <= p/(p+q) <= 1\n    0 <= p <= p+q\n    0 <= p/(p+q) <= (p+q)/(p+q) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-weight-unit-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9424e06366687d1259aa654f8735da9f325e18da52ce6b7d7df70bfc8f655b2f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-weight-unit-chain.lit"
+        ]
+      },
+      {
+        "id": "normalized-weight-unit-direct",
+        "source": "forall p,q R:\n    p >= 0\n    q >= 0\n    p+q > 0\n    =>:\n        0 <= p/(p+q) <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-weight-unit-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6e48420ffaf6182cb2ffb154794f4d6164e266c4d11693c07a2edc55d7387777"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-weight-unit-direct.lit"
+        ]
+      },
+      {
+        "id": "normalized-zero-total-invalid",
+        "source": "forall p,q,x,y R:\n    p = 0\n    q = 0\n    =>:\n        (p*x+q*y)/(p+q) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-zero-total-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7504bea3726a8714506e400b2004ff2605c46916e885af896bcef7a2c25bec05"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-zero-total-invalid.lit"
+        ]
+      },
+      {
+        "id": "variance-nonnegative-direct",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nhave fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)\nforall values,probs two_point_vector:\n    probs(1) >= 0\n    probs(2) >= 0\n    =>:\n        variance2(values,probs) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/variance-nonnegative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "987249698769e0c8e386c5ba421848d94431d9a8d0f96552190c74b5e0522059"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/variance-nonnegative-direct.lit"
+        ]
+      },
+      {
+        "id": "weighted-square-negative-weight-false",
+        "source": "forall p,q,x,y R:\n    p*x^2+q*y^2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/weighted-square-negative-weight-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8aba481b6eb1d2a2debd89bd50de52167b628af978827f643e54559fe450b001"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/weighted-square-negative-weight-false.lit"
+        ]
+      },
+      {
+        "id": "weighted-square-nonnegative",
+        "source": "forall p,q,x,y R:\n    p >= 0\n    q >= 0\n    =>:\n        p*x^2+q*y^2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/weighted-square-nonnegative.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec91acf5744263b1fa70c156121dff4a43445c344912306c3a76f4f87960dd70"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/weighted-square-nonnegative.lit"
+        ]
+      },
+      {
+        "id": "convex-strict-component-bridges",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p > 0\n        q >= 0\n        p+q = 1\n        x < M\n        y <= M\n        =>:\n            p*x+q*y < M\n    p*x < p*M\n    q*y <= q*M\n    p*x+q*y < p*M+q*M = (p+q)*M = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/convex-strict-component-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b352c7da6377f71e84112c65c47f05e669e59e9768bd75d6698af33b9a5747c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/convex-strict-component-bridges.lit"
+        ]
+      },
+      {
+        "id": "normalized-ratio-strict-inside",
+        "source": "forall p,q R:\n    p > 0\n    q > 0\n    =>:\n        0 < p/(p+q) < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-ratio-strict-inside.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8ea02c3b5230d4e57fe2acf55e1dc549dfbf822a6013333bb6fe7fb671ec811e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-ratio-strict-inside.lit"
+        ]
+      },
+      {
+        "id": "normalized-strict-component-bridges",
+        "source": "claim:\n    ? forall p,q,x,y,M R:\n        p > 0\n        q >= 0\n        p+q > 0\n        x < M\n        y <= M\n        =>:\n            (p*x+q*y)/(p+q) < M\n    p*x < p*M\n    q*y <= q*M\n    p*x+q*y < p*M+q*M = (p+q)*M\n    (p*x+q*y)/(p+q) < ((p+q)*M)/(p+q) = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/normalized-strict-component-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "486f3a16c36c6524a26dd6299e0a90f78f7ec4b1eb8c80c464e0e12bc6966c3d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/normalized-strict-component-bridges.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-upper-known-product",
+        "source": "forall a,b,M R:\n    b > 0\n    a <= M*b\n    =>:\n        a/b <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-upper-known-product.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6fc2132024604e058153dc9ff46de27982dda9e97496b611484ae868391f2a6e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-upper-known-product.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-upper-negative-denominator-false",
+        "source": "forall a,b,M R:\n    b < 0\n    a <= M*b\n    =>:\n        a/b <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-upper-negative-denominator-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0de9fe1aace351e2af25e77de41fb9a2397b3433d81bc372b6672fd791a590d4"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-upper-negative-denominator-false.lit"
+        ]
+      },
+      {
+        "id": "quotient-unit-known-bound",
+        "source": "forall a,b R:\n    b > 0\n    a <= b\n    =>:\n        a/b <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-unit-known-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9584bf2088c9b993f201ddda14b8eb066600a9e0bd1e9a36b15377105fbfc9aa"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-unit-known-bound.lit"
+        ]
+      },
+      {
+        "id": "quotient-unit-strict-known-bound",
+        "source": "forall a,b R:\n    b > 0\n    a < b\n    =>:\n        a/b < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-unit-strict-known-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6da76b21c523d92576121b742994365ce7e506c61a1854db5d685ff394378f6a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-unit-strict-known-bound.lit"
+        ]
+      },
+      {
+        "id": "mean-least-squares-nonnegative-bridge",
+        "source": "claim:\n    ? forall a,b,c,z R:\n        (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-z)^2+(b-z)^2+(c-z)^2\n    3*(z-(a+b+c)/3)^2 >= 0\n    (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2+3*(z-(a+b+c)/3)^2 = (a-z)^2+(b-z)^2+(c-z)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mean-least-squares-nonnegative-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9a6e2c5b02912e46152d5a5a0fe356047bcd08fbbf72f650bd67ba6aa9616f38"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/mean-least-squares-nonnegative-bridge.lit"
+        ]
+      },
+      {
+        "id": "mean-least-squares-aligned-chain",
+        "source": "claim:\n    ? forall a,b,c,z R:\n        (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-z)^2+(b-z)^2+(c-z)^2\n    (z-(a+b+c)/3)^2 >= 0\n    3*(z-(a+b+c)/3)^2 >= 0\n    (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 = (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2+0 <= (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2+3*(z-(a+b+c)/3)^2 = (a-z)^2+(b-z)^2+(c-z)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mean-least-squares-aligned-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c9ac9d871b53e380e9ef6fe46d221f0f57606b1667124e8ac20eee3c1d06855c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/mean-least-squares-aligned-chain.lit"
+        ]
+      },
+      {
+        "id": "weighted-square-component-bridge",
+        "source": "claim:\n    ? forall p,q,x,y R:\n        p >= 0\n        q >= 0\n        =>:\n            p*x^2+q*y^2 >= 0\n    p*x^2 >= 0\n    q*y^2 >= 0\n    p*x^2+q*y^2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/weighted-square-component-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "026fd5eedf9eee51cf8525698d16e52f56e079d3b2d697dadeb3b2d5f9c1cd05"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/weighted-square-component-bridge.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-upper-chain",
+        "source": "claim:\n    ? forall a,b,M R:\n        b > 0\n        a <= M*b\n        =>:\n            a/b <= M\n    a/b <= (M*b)/b = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-upper-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e28a9c7df4a2cbb67b5bad8a61e8fd2fe7e3e847e171ff177b2019aea9bbbe3d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-upper-chain.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-strict-upper-direct",
+        "source": "forall a,b,M R:\n    b > 0\n    a < M*b\n    =>:\n        a/b < M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-strict-upper-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3ae463a2525a23658adf21a25de051d20bb5120c3ac4e6519b3d1d4a9aa02c46"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-strict-upper-direct.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-strict-upper-chain",
+        "source": "claim:\n    ? forall a,b,M R:\n        b > 0\n        a < M*b\n        =>:\n            a/b < M\n    a/b < (M*b)/b = M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-strict-upper-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "da52852eeec10b50782d126e91c3430225849473b458dda247363bf726685cf8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-strict-upper-chain.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-reflection-direct",
+        "source": "forall a,b,M R:\n    b > 0\n    a/b <= M\n    =>:\n        a <= M*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-reflection-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "29b29205d6cc5c2d36a3c465a5480397c504a08292a48d00df4a232c55e94e4d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "quotient-scalar-reflection-chain",
+        "source": "claim:\n    ? forall a,b,M R:\n        b > 0\n        a/b <= M\n        =>:\n            a <= M*b\n    a = (a/b)*b <= M*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/quotient-scalar-reflection-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cf64790304e631d9ad0bfd008876ffa453b277f2ea59c07fde3939517cedfc2f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/quotient-scalar-reflection-chain.lit"
+        ]
+      },
+      {
+        "id": "variance-nonnegative-component-bridge",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nhave fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)\nclaim:\n    ? forall values,probs two_point_vector:\n        probs(1) >= 0\n        probs(2) >= 0\n        =>:\n            variance2(values,probs) >= 0\n    (values(1)-expectation2(values,probs))^2*probs(1) >= 0\n    (values(2)-expectation2(values,probs))^2*probs(2) >= 0\n    variance2(values,probs) = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/variance-nonnegative-component-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ab231fdc28f94f54a65df46c639a3213a1301f7c68fcc736310b95360cf94980"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/variance-nonnegative-component-bridge.lit"
+        ]
+      },
+      {
+        "id": "variance-nonnegative-square-bridges",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nhave fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)\nclaim:\n    ? forall values,probs two_point_vector:\n        probs(1) >= 0\n        probs(2) >= 0\n        =>:\n            variance2(values,probs) >= 0\n    (values(1)-expectation2(values,probs))^2 >= 0\n    (values(2)-expectation2(values,probs))^2 >= 0\n    (values(1)-expectation2(values,probs))^2*probs(1) >= 0\n    (values(2)-expectation2(values,probs))^2*probs(2) >= 0\n    variance2(values,probs) = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/variance-nonnegative-square-bridges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c7853eb13bfbfaa4c8b43bec81a6831d17ad947661e167364ba9c41a9960d93c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/variance-nonnegative-square-bridges.lit"
+        ]
+      },
+      {
+        "id": "variance-nonnegative-carrier-bridges",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nhave fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)\nclaim:\n    ? forall values,probs two_point_vector:\n        probs(1) >= 0\n        probs(2) >= 0\n        =>:\n            variance2(values,probs) >= 0\n    values(1)-expectation2(values,probs) $in R\n    values(2)-expectation2(values,probs) $in R\n    (values(1)-expectation2(values,probs))^2 >= 0\n    (values(2)-expectation2(values,probs))^2 >= 0\n    (values(1)-expectation2(values,probs))^2*probs(1) >= 0\n    (values(2)-expectation2(values,probs))^2*probs(2) >= 0\n    variance2(values,probs) = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/variance-nonnegative-carrier-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "344d3cb1522cefcc4aff71ce6473171b795572d0fcd1f84e48d253ddecfdf21e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/variance-nonnegative-carrier-bridges.lit"
+        ]
+      },
+      {
+        "id": "expectation-centered-value-real",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nhave fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)\nforall values,probs two_point_vector:\n    values(1)-expectation2(values,probs) $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/expectation-centered-value-real.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6a51bff215c829efbd42d45ce1974841c2998e3be37ed463ecf6863bcb1534ab"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/expectation-centered-value-real.lit"
+        ]
+      },
+      {
+        "id": "variance-missing-weight-sign-false",
+        "source": "let two_point_vector = fn(index N+: index <= 2) R\nhave fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)\nhave fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)\nforall values,probs two_point_vector:\n    variance2(values,probs) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/variance-missing-weight-sign-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4170453525a12c07e0025a3a54bc7559f50aa201e259c6938a5fbe97de20a998"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-cases/variance-missing-weight-sign-false.lit"
+        ]
+      }
+    ],
+    "excluded_cases": [
+      {
+        "id": "mean-least-squares-nonnegative-bridge",
+        "source": "claim:\n    ? forall a,b,c,z R:\n        3*(z-(a+b+c)/3)^2 >= 0\n    (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-z)^2+(b-z)^2+(c-z)^2\n    3*(z-(a+b+c)/3)^2 >= 0\n    (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2 <= (a-(a+b+c)/3)^2+(b-(a+b+c)/3)^2+(c-(a+b+c)/3)^2+3*(z-(a+b+c)/3)^2 = (a-z)^2+(b-z)^2+(c-z)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mean-least-squares-nonnegative-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8a9c5d48c7784b12dc59f48c2f016e53029ba0cf42ea524ed9d96e6345bd49c4"
+        },
+        "stderr": "",
+        "reason": "Authoring generation error: replaced a target line and leaked the intended inequality out of its forall. Not mathematical/kernel evidence.",
+        "retained_source": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-15-excluded-cases/mean-least-squares-nonnegative-bridge.lit"
+      }
+    ],
+    "quotient_session": [
+      {
+        "id": "quotient-scalar-upper-known-product",
+        "source": "forall a,b,M R:\n    b > 0\n    a <= M*b\n    =>:\n        a/b <= M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "106fab6a757e00546c58ede0e22df92e82229ee9c603e44c13ff8a7d30d8876e",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, M R:\\n    b > 0\\n    a <= M * b\\n    =>:\\n        a / b <= M\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, M R:\\n    b > 0\\n    a <= M * b\\n    =>:\\n        a / b <= M\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "quotient-scalar-upper-chain",
+        "source": "claim:\n    ? forall a,b,M R:\n        b > 0\n        a <= M*b\n        =>:\n            a/b <= M\n    a/b <= (M*b)/b = M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "quotient-scalar-strict-upper-direct",
+        "source": "forall a,b,M R:\n    b > 0\n    a < M*b\n    =>:\n        a/b < M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "34df846a17a4611a1cff6ed232a07601b1c02e8b02dcae773a470b8af7c2bdd3",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, M R:\\n    b > 0\\n    a < M * b\\n    =>:\\n        a / b < M\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, M R:\\n    b > 0\\n    a < M * b\\n    =>:\\n        a / b < M\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "quotient-scalar-strict-upper-chain",
+        "source": "claim:\n    ? forall a,b,M R:\n        b > 0\n        a < M*b\n        =>:\n            a/b < M\n    a/b < (M*b)/b = M",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "variance_session": [
+      {
+        "source": "let two_point_vector = fn(index N+: index <= 2) R",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "have fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "have fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410",
+          "excerpt": "success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "forall values,probs two_point_vector:\n    probs(1) >= 0\n    probs(2) >= 0\n    =>:\n        variance2(values,probs) >= 0",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "47deab71f90289573800ae55097fee4709fe3b3554b4eb16c8c54433b531ac8b",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall values, probs two_point_vector:\\n    probs(1) >= 0\\n    probs(2) >= 0\\n    =>:\\n        variance2(values, probs) >= 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall values, probs two_point_vector:\\n    probs(1) >= 0\\n    probs(2) >= 0\\n    =>:\\n        variance2(values, probs) >= 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []"
+        },
+        "same_live_session": true
+      },
+      {
+        "source": "claim:\n    ? forall values,probs two_point_vector:\n        probs(1) >= 0\n        probs(2) >= 0\n        =>:\n            variance2(values,probs) >= 0\n    values(1)-expectation2(values,probs) $in R\n    values(2)-expectation2(values,probs) $in R\n    (values(1)-expectation2(values,probs))^2 >= 0\n    (values(2)-expectation2(values,probs))^2 >= 0\n    (values(1)-expectation2(values,probs))^2*probs(1) >= 0\n    (values(2)-expectation2(values,probs))^2*probs(2) >= 0\n    variance2(values,probs) = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2) >= 0",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "851e882124ea21c3df339b809daf5f3dbdc671acd57a9a9117a2eaf3b51294ff",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "scope": "Immutable current-source release binary; reduced scalar use probes adjacent to probability showcase definitions and source least-squares argument. No enclosing showcase/module replacement."
+  }
+}

@@ -1,0 +1,4 @@
+forall carrier nonempty_set,n N+,combine fn(left,right carrier) carrier,u,v,result finite_seq(carrier,n),idx closed_range(1,n):
+    result=fn(k closed_range(1,n)) carrier {combine(u(k),v(k))}
+    =>:
+        result(idx)=combine(u(idx),v(idx))

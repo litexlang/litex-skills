@@ -1,0 +1,112 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-57-session.json",
+  "original_sha256": "d763a76f76a5ccca0edbcdaee0fae30dc5ac000987d30a87e5be6dd7364a88ae",
+  "original_bytes": 4276,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r57_identity(x R) R = x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6a70c15458c9b58754a11313ac147b8018084f72ece57037d56b240feffd6e7f",
+        "excerpt": "have fn r57_identity(x R) R = x\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "have fn r57_identity_on_range(y fn_range(r57_identity)) R = y",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0323a6785043fddd803b444fa7aed36923c8fab2891d39eaebcd1bbb1f075e97",
+        "excerpt": "have fn r57_identity_on_range(y fn_range(r57_identity)) R = y\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "forall x R:\n    r57_identity(r57_identity(x))=r57_identity(x)=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f251f073112f510f0dfbe701fb0b7f3ee99993fa97c18ec25d32c85dfecea9b2",
+        "excerpt": "forall x R:\r\n    r57_identity(r57_identity(x))=r57_identity(x)=x\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "forall x R:\n    r57_identity(r57_identity(x))=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5c7328cf5d6fe0672e8b2e36e763216a438fd10ba13e119282186f4d9f2e2d9a",
+        "excerpt": "forall x R:\r\n    r57_identity(r57_identity(x))=x\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "forall x R:\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4f1a5add4454b70e76594f9161ecf87a1e1d478fcce20e2aa17d2ba5bb4013f6",
+        "excerpt": "forall x R:\r\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)=x\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "forall x R:\n    r57_identity_on_range(r57_identity(x))=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ec9d591791095d47acad27702a8507fcf8759f125b1dc29ac6aeddeb95664baa",
+        "excerpt": "forall x R:\r\n    r57_identity_on_range(r57_identity(x))=x\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R:\\n    r57_identity_on_range(r57_identity(x)) = x\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R:\\n    r57_identity_on_range(r57_identity(x)) = x\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "forall x R:\n    r57_identity(x) $in fn_range(r57_identity)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e18b63cfa42aea3b8d6b16036cb6d9ea5466eafe9a1b2eca7b3066db0a8ba7d9",
+        "excerpt": "forall x R:\r\n    r57_identity(x) $in fn_range(r57_identity)\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "source": "forall y fn_range(r57_identity):\n    r57_identity_on_range(y)=y",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "dbdec7c2fbe8deb8914c81bc5671a82be9d396dfeba3b985bb11772f8e467bc0",
+        "excerpt": "forall y fn_range(r57_identity):\r\n    r57_identity_on_range(y)=y\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round57 fresh cold snapshot owns acceptance."
+    },
+    {
+      "id": "range-inner-value-bridge",
+      "source": "claim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity(x)=x\n    r57_identity_on_range(r57_identity(x))=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f132ad79ca0e3d95da049d4ef560fc0281964ff9980b2042ac33fa26601e0aaf",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        r57_identity_on_range(r57_identity(x))=x\r\n    r57_identity(x)=x\r\n    r57_identity_on_range(r57_identity(x))=x\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; fresh round57 cold owns acceptance."
+    },
+    {
+      "id": "range-outer-value-bridge",
+      "source": "claim:\n    ? forall x R:\n        r57_identity_on_range(r57_identity(x))=x\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d002753b350bb4b4b8833d926be8806a53d8ca795810fda6d4d8237924da5dff",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        r57_identity_on_range(r57_identity(x))=x\r\n    r57_identity_on_range(r57_identity(x))=r57_identity(x)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; fresh round57 cold owns acceptance."
+    },
+    {
+      "id": "range-direct-after-global-value",
+      "source": "forall x R:\n    r57_identity(x)=x\n\nforall x R:\n    r57_identity_on_range(r57_identity(x))=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "84abc19599749d15ab6ac336acca110330db43b8ed36530c998ad5dbc481850a",
+        "excerpt": "forall x R:\r\n    r57_identity(x)=x\r\n\r\nforall x R:\r\n    r57_identity_on_range(r57_identity(x))=x\r\n\r\n... ... success\r\nlitex> ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; fresh round57 cold owns acceptance."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Lean Adapter Writer"
+  short_description: "Bridge generated Litex proofs into native Lean"
+  default_prompt: "Use $litex-generated-lean-to-standard-lean-adapter-writer to produce Adapter.lean and a Litex-free Final.lean theorem."

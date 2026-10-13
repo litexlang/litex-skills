@@ -1,0 +1,12 @@
+thm r34_chapter06_two_point_max_stability:
+    ? forall epsilon R+, u, v, x, y R:
+        abs(u - x) < epsilon
+        abs(v - y) < epsilon
+        $is_finite_set(union({u}, {v}))
+        $is_nonempty_set(union({u}, {v}))
+        union({u}, {v}) $subset R
+        $is_finite_set(union({x}, {y}))
+        $is_nonempty_set(union({x}, {y}))
+        union({x}, {y}) $subset R
+        =>:
+            abs(finite_set_max(union({u}, { v})) - finite_set_max(union({x}, { y}))) <= epsilon

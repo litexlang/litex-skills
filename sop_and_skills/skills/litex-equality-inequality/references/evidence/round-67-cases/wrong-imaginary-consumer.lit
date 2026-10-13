@@ -1,0 +1,5 @@
+have fn complex_conjugate(z C) C = re(z) - img(z) * i
+re(3+4*i)=3
+img(3+4*i)=4
+complex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i
+img(complex_conjugate(3+4*i))=4

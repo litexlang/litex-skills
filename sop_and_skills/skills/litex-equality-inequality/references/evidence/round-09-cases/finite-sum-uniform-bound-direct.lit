@@ -1,0 +1,5 @@
+forall S finite_set,f fn(x S) R,M R:
+    forall x S:
+        f(x) <= M
+    =>:
+        finite_set_sum(S,f) <= finite_set_size(S)*M

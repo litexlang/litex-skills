@@ -1,0 +1,4 @@
+forall a,b,p R:
+    p*b=a^2
+    =>:
+        p*|b|=|a|^2

@@ -1,0 +1,9 @@
+claim:
+    ? forall a,b,k Z,m N+:
+        (a+k)%m = (b+k)%m
+        =>:
+            a%m = b%m
+    a = (a+k)-k
+    b = (b+k)-k
+    ((a+k)-k)%m = ((b+k)-k)%m
+    a%m = ((a+k)-k)%m = ((b+k)-k)%m = b%m

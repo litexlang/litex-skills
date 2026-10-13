@@ -1,0 +1,2 @@
+forall u fn(t R) R,a,b R:
+    fn(k R) R {a*(b*u(k))}=fn(j R) R {(a*b)*u(j)}

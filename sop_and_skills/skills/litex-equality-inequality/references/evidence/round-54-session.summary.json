@@ -1,0 +1,76 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-54-session.json",
+  "original_sha256": "ad43d2019f6f52e23d3b9a0ab58007a8c6e001e27c644a52b6dae9ff3ea0c108",
+  "original_bytes": 3285,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r54_deg(theta R) R = theta * pi / 180",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b090d66d096fd1391c283065a1123ea8dfa0e4d524faee0deff80fcb6723628a",
+        "excerpt": "have fn r54_deg(theta R) R = theta * pi / 180\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "have fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "77e698e6ad1dbf684e090241aeb63325fb6253126a6946f7386b21494d679734",
+        "excerpt": "have fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "have fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0c74c5b6eed7a3ad7a99117b54ba9c5abc4d86195b723afc79e9a5c04f644abe",
+        "excerpt": "have fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "forall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "aa39e6a699453a1a5446c8f2f8d36bf3ad009363a1726683c94e0fed82a48fd8",
+        "excerpt": "forall x R:\r\n    cos(x) != 0\r\n    =>:\r\n        tan(x) = sin(x) / cos(x)\r\n        r54_secant(x) = 1 / cos(x)\r\n        1 + tan(x)^2 = 1 / cos(x)^2\r\n        1 / cos(x)^2 = (1 / cos(x))^2\r\n        (1 / cos(x))^2 = r54_secant(x)^2\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "source": "forall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f937f8189a5ec7370451cbedf37313d7e321783f86a9e4b09ae58663da391fca",
+        "excerpt": "forall x R:\r\n    cos(x)!=0\r\n    =>:\r\n        tan(x)=sin(x)/cos(x)\r\n        r54_secant(x)=1/cos(x)\r\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "source": "r54_cosine_law_third_side_sq(3,4,pi/2)=25",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9f478fe8b9fd58a8ce1f4c7156bc3c90719b54d662824f5e2a15f943b1468963",
+        "excerpt": "r54_cosine_law_third_side_sq(3,4,pi/2)=25\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r54_cosine_law_third_side_sq(3, 4, pi / 2) = 25\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r54_cosine_law_third_side_sq(3, 4, pi / 2) = 25\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "endpoint-value-and-chain",
+      "source": "claim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    r54_secant(x)=1/cos(x)\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "67054e817387d9efbcf836ffc58716272732657534f44097ed1c9157a38313b0",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        cos(x)!=0\r\n        =>:\r\n            1+tan(x)^2=r54_secant(x)^2\r\n    r54_secant(x)=1/cos(x)\r\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "endpoint-chain-only",
+      "source": "claim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "95d694592307a1968cec00de9a6f4b53455ed42b19306b969e73d4caa8c85d90",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        cos(x)!=0\r\n        =>:\r\n            1+tan(x)^2=r54_secant(x)^2\r\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      }
+    }
+  ]
+}

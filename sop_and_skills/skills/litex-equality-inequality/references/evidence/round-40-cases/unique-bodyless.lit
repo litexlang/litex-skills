@@ -1,0 +1,17 @@
+prop r40_derivative_delta_controlled(f fn(x R) R, x0, slope R, epsilon, delta R+):
+    forall x R:
+        x != x0
+        |x - x0| < delta
+        =>:
+            |(f(x) - f(x0)) / (x - x0) - slope| < epsilon
+
+prop r40_has_derivative_at(f fn(x R) R, x0, slope R):
+    forall epsilon R+:
+        exist delta R+ st {$r40_derivative_delta_controlled(f, x0, slope, epsilon, delta)}
+
+thm r40_unique_bodyless:
+    ? forall f fn(t R) R, x0, slope1, slope2 R:
+        $r40_has_derivative_at(f, x0, slope1)
+        $r40_has_derivative_at(f, x0, slope2)
+        =>:
+            slope1 = slope2

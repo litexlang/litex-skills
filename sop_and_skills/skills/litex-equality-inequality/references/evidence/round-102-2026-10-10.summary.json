@@ -1,0 +1,677 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-102-2026-10-10.json",
+  "original_sha256": "012f9b4852a3f66dbfbd5798b54b6d02d26ad31525eae926ef8174ef17913c25",
+  "original_bytes": 389528,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/1_middle_school_math_in_nutshell/main.lit",
+    "source_sha256": "967fb75fd2c737f9f98f47f4a413fe111b6a5f1bb5f95ee3740ffe4e94d62ba6",
+    "slice": "Original ordered source prefix through school algebra numerical consumers, before arithmetic_mean; no changed domains/math definitions.",
+    "binary_sha256": "c253a863e97c38a223d5d2a5377a706ee238401dc4c86b3eca47fc6b4f6984ae",
+    "binary_build": "Reuse successful round88 fixed snapshot",
+    "cases": [
+      {
+        "id": "baseline",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/baseline.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f72706d8e33dad581d024fc921c0ab1ada8fa98419052fcc89ed879000e6de2a",
+          "characters": 2865,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b49187c2d724bc58b8a82246201133dfacfd96d6afcf326acbcb300819948a0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "linear-empty-body",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-empty-body.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "55742c850e830cb93c2afc81a16feac88a32fed49bcf3e76ea19576da9994a61",
+          "characters": 2812,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-empty-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "116c9917ecf17e93d9abfb3d3272405f4536d3a62212c75ba747528d556d3993"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/linear-empty-body.lit"
+        ]
+      },
+      {
+        "id": "linear-delete-product-echo",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-delete-product-echo.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3db18c9f8986bba673826dc6b5bfa29334633678c6ef41370a2acd1ec87b5a68",
+          "characters": 2847,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-delete-product-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7a46460e8e0c0d01d9554f6595f36479e679b6ee3a1ea9a87b3943e62b1a291b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/linear-delete-product-echo.lit"
+        ]
+      },
+      {
+        "id": "linear-product-only",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-product-only.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "1825e5d0fdecb4b6f6bcfcc2f23a1ade5da6a0bb7355900578afaa6842982fae",
+          "characters": 2831,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-product-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0339ad16bf009920c04865047a98a4cdc12d0b98c3dd63996cd48e908fc510cc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/linear-product-only.lit"
+        ]
+      },
+      {
+        "id": "quadratic-empty-body",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-empty-body.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d6e1e390e5011843e2d131da130bfff773259a1e3d08b5fa9cf6cb34c172ab42",
+          "characters": 2741,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-empty-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a31ac0e7ea78007700be8059541e3f0bcb8f751c43c9f936800dc136ceea2953"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-empty-body.lit"
+        ]
+      },
+      {
+        "id": "quadratic-direct-or",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-direct-or.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "64c76cd2b674a26dc4d7b94d2d066beaf1b146e751671b7922c8f33b1a69e20f",
+          "characters": 2760,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-direct-or.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "17457edaf38726d24273b86e7e96709ec05b66ab1271bba236c52fb433efa017"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-direct-or.lit"
+        ]
+      },
+      {
+        "id": "quadratic-factor-or",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-factor-or.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "45a63de5b2d9cafa0082cd8cf8d3370fff5da1f27c39e40792e05749f65f030f",
+          "characters": 2760,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-factor-or.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6c475dbfe654705743835378a6448c7e10951e6da062a27c69d5a7d98ad672e7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-factor-or.lit"
+        ]
+      },
+      {
+        "id": "linear-missing-nonzero",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-missing-nonzero.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c227a3e9a4afc8d53dde584fd4b0034dfc269508422aeb3d624f69c7ed27349b",
+          "characters": 2850,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-missing-nonzero.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d11b052b7e19481e8d8c45dbdee8f5535ab78d2a8eee319f54724f65bf528bd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/linear-missing-nonzero.lit"
+        ]
+      },
+      {
+        "id": "quadratic-false-and",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-false-and.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "b5deb3713b1c377a82c75d825191ce02ae261cecfc24669cbae8f8809d0cb594",
+          "characters": 2866,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-false-and.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a8c59855dd1e04ba943f326406efd3b5afc7452af91a7f70a3493fbb5fe107ed"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-false-and.lit"
+        ]
+      },
+      {
+        "id": "quadratic-root-cases",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-root-cases.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "8983b4b78719353bd3be7ffbe1132d861a7bdb196afb4fc009dfd7f4aeb4dbb1",
+          "characters": 2823,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-root-cases.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d0bd3036e52dd73438dada6c52c8f6582de4d68fc8a36b8a6bfeaab8ba6877d6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-root-cases.lit"
+        ]
+      },
+      {
+        "id": "linear-false-solution",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-false-solution.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c61fb6d10b05b332cd23ee9d32987d01a805cbd493019ae2fab910a7bae28820",
+          "characters": 2831,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/linear-false-solution.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6368aba895f762aa3489b1a4586c56318ce390b0e6b4a8e9157d015ddfc7bb91"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/linear-false-solution.lit"
+        ]
+      },
+      {
+        "id": "quadratic-missing-zero-product",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-missing-zero-product.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "40fc8db20a2de241ef70742cb16d1e18d9c99edf2bfc3e5fe09ee1922899d077",
+          "characters": 2801,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-missing-zero-product.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8e788c2ee5e7276a7994e6fafb309711a23c022d55abde9643b327605117d535"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-missing-zero-product.lit"
+        ]
+      },
+      {
+        "id": "short-linear-negative-coefficient",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/short-linear-negative-coefficient.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "6bddd31bed93975057aaf706fe6d058241bc2128db8a2e75dc5120c773667b6d",
+          "characters": 2906,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/short-linear-negative-coefficient.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8a5b7ff270aef927936cfbe89edaa5e0e35152e354e22c9c5db2e8b0c84a4f7f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/short-linear-negative-coefficient.lit"
+        ]
+      },
+      {
+        "id": "preferred-joint",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-joint.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "1825e5d0fdecb4b6f6bcfcc2f23a1ade5da6a0bb7355900578afaa6842982fae",
+          "characters": 2831,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-joint.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "367882791fcc6ab1efc3840dca41362df7b9af644a9c17631d55a9e3f53d4ecc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/preferred-joint.lit"
+        ]
+      },
+      {
+        "id": "preferred-repeated-root-consumer",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-repeated-root-consumer.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c92aa53cd5c7ed80d17be7194b5ce85df131c17d5c631d3c169d09cbf9daea80",
+          "characters": 2901,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-repeated-root-consumer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9cd0346fc10d189efc797bcd18066ac87f93bf06b917ce4d450cdd3fed5d1288"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/preferred-repeated-root-consumer.lit"
+        ]
+      },
+      {
+        "id": "preferred-negative-root-consumer",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-negative-root-consumer.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "7583fb9249a6db654965078345f5aade46c71c068f7157ddde4418f80fbec724",
+          "characters": 2915,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-negative-root-consumer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1d122f8e8fc4813d4db37ca168214d0b65fb4a481e88efa2e30b7615fc3decbd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/preferred-negative-root-consumer.lit"
+        ]
+      },
+      {
+        "id": "preferred-both-short",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-both-short.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "105628e84bb16e8825656235e0e50b9bf679a25215609e6b10ca0d63dc6b12eb",
+          "characters": 2793,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/preferred-both-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5e87f9eba17de89a7d112dc5a78b4282ea063fa31a1bc804c8ba91088608f996"
+        },
+        "stderr": ""
+      }
+    ],
+    "excluded": [
+      {
+        "id": "quadratic-empty-case-bodies",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-empty-case-bodies.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "5e290f5269229016eb83be6f7680a0eaa977b53b77d31c852450d0eeca1e5272",
+          "characters": 2795,
+          "excerpt": "# School mathematics in a nutshell.\n#\n# This standalone tour follows the eleven mathematical directions mapped by\n# the high-school book. Each direction contributes a core definition, a major\n# theorem, and its concrete applications in one linear file. The goal is\n# breadth with usable interfaces, not a second compressed textbook.\n\n# 1. Sets and logic: membership and subset are the language of collections.\n# The opening gcd calculation also keeps elementary number sense visible.\n\ngcd(84, 30) = 6\n\n2 $in {1, 2, 3}\n\n{1, 2} $subset {1, 2, 3}\n\nfinite_set_size({1, 2, 3}) = 3\n\n# The symmetric differe"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-empty-case-bodies.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: expected indent at line 77 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-102-cases/quadratic-empty-case-bodies.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20da641410d351825dddf5439427c3df4887fb673d3064b2166d6159bfc1ca22"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round102-cases/quadratic-empty-case-bodies.lit"
+        ]
+      }
+    ]
+  }
+}

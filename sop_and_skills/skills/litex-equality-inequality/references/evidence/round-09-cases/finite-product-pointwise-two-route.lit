@@ -1,0 +1,12 @@
+claim:
+    ? forall f,g fn(x {1,2}) R:
+        forall x {1,2}:
+            0 <= f(x)
+            f(x) <= g(x)
+        =>:
+            finite_set_product({1,2},f) <= finite_set_product({1,2},g)
+    0 <= f(1)
+    0 <= f(2)
+    f(1) <= g(1)
+    f(2) <= g(2)
+    finite_set_product({1,2},f) = f(1)*f(2) <= g(1)*g(2) = finite_set_product({1,2},g)

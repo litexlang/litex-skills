@@ -1,0 +1,4 @@
+forall a,b N,f fn(k N) R:
+    a<=b
+    =>:
+        product(a,b,f)=product(a,b,fn(k N) R {f(k)})

@@ -1,0 +1,607 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-54-2026-10-09.json",
+  "original_sha256": "f76723b395666380e48ad50482937ca9b16b2ba02da97b2e96835b9e7642b550",
+  "original_bytes": 272584,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "trig-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/trig-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d9b2758cffa8c57ac7f6b0a6a1c6f20895751ff0e2c33aa91bdc93ce35bb81db"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/trig-original.lit"
+        ]
+      },
+      {
+        "id": "trig-combined-conclusions",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/trig-combined-conclusions.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0dd05848075c5266779b0fc6113da1005503a7872953ac473437fa4d7c53d2ab"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/trig-combined-conclusions.lit"
+        ]
+      },
+      {
+        "id": "trig-endpoint-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/trig-endpoint-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3f53da753cfc0040b12ac9c6728c057e44d8acb0d22cb7eb2ae1f84d3dd3dcb9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/trig-endpoint-direct.lit"
+        ]
+      },
+      {
+        "id": "trig-endpoint-after-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x) != 0\n    =>:\n        tan(x) = sin(x) / cos(x)\n        r54_secant(x) = 1 / cos(x)\n        1 + tan(x)^2 = 1 / cos(x)^2\n        1 / cos(x)^2 = (1 / cos(x))^2\n        (1 / cos(x))^2 = r54_secant(x)^2\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/trig-endpoint-after-original.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4337d6827d1a561e75a88c13f9eaf711cfb8de8ad8472acd16c5984df5f577a3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/trig-endpoint-after-original.lit"
+        ]
+      },
+      {
+        "id": "trig-endpoint-after-combined",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        tan(x)=sin(x)/cos(x)\n        r54_secant(x)=1/cos(x)\n        1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/trig-endpoint-after-combined.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0715833bc69b1aa5e8c6e1af11290bb02dc1e33577877ad5c7353a078f46cc7f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/trig-endpoint-after-combined.lit"
+        ]
+      },
+      {
+        "id": "false-minus-identity",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    cos(x)!=0\n    =>:\n        1-tan(x)^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/false-minus-identity.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c7831003cbdf9e1ea6da1be4f5bfad71bb51456c398cb089bbe80299d8d33def"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/false-minus-identity.lit"
+        ]
+      },
+      {
+        "id": "missing-cos-domain",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall x R:\n    =>:\n        1+tan(x)^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/missing-cos-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "242b1eb90b3fa34fdb01efe8518130119bbf549609aae27d8a023d1a82bce015"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/missing-cos-domain.lit"
+        ]
+      },
+      {
+        "id": "singular-secant",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_secant(pi/2)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/singular-secant.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bdd9b03bad99b85ea89085d48c9fa8ca3b2d340a1c131f3149427660586f4d68"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/singular-secant.lit"
+        ]
+      },
+      {
+        "id": "numeric-deg-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_deg(180)=180*pi/180=pi\nr54_deg(90)=90*pi/180=pi/2\nr54_deg(60)=60*pi/180=pi/3\nr54_deg(45)=45*pi/180=pi/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/numeric-deg-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1ce024ca89bc01433691531a299fd8c1856cdc2d0c7baea49e2a103b18437317"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/numeric-deg-original.lit"
+        ]
+      },
+      {
+        "id": "numeric-deg-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_deg(180)=pi\nr54_deg(90)=pi/2\nr54_deg(60)=pi/3\nr54_deg(45)=pi/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/numeric-deg-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52cf36ce5f4018376c7b4d147b2a45abfc79e28e6dcd9f8e423f29f2fd4a914e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/numeric-deg-direct.lit"
+        ]
+      },
+      {
+        "id": "numeric-cosine-original",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=3^2+4^2-2*3*4*0=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/numeric-cosine-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9d7792d27ae30de1cc28e4a45ac247ac04b23db5c9c1fb5b59b60bf64dc63dea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/numeric-cosine-original.lit"
+        ]
+      },
+      {
+        "id": "numeric-cosine-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_cosine_law_third_side_sq(3,4,pi/2)=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/numeric-cosine-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e97c1b1754071841f14e709758e3d1b6f59a333a3297a7e9b8b5c1fd8c372b2a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/numeric-cosine-direct.lit"
+        ]
+      },
+      {
+        "id": "false-cosine-value",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_cosine_law_third_side_sq(3,4,pi/2)=24\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/false-cosine-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d45d0c7353761e55530b30da3fa8b722761fb5cd6b732563d63b4246830cf629"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/false-cosine-value.lit"
+        ]
+      },
+      {
+        "id": "endpoint-value-and-chain",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nclaim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    r54_secant(x)=1/cos(x)\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/endpoint-value-and-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6d543351d8997e5f5da7002bf26d462de673f71a1b043f7fe3eab5a16b38d2d1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/endpoint-value-and-chain.lit"
+        ]
+      },
+      {
+        "id": "endpoint-chain-only",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nclaim:\n    ? forall x R:\n        cos(x)!=0\n        =>:\n            1+tan(x)^2=r54_secant(x)^2\n    1+tan(x)^2=1/cos(x)^2=(1/cos(x))^2=r54_secant(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/endpoint-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "353017907eb3bbd654c9f37847d70ae69fc328bce07a739dc0f9fcd855a18c8b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/endpoint-chain-only.lit"
+        ]
+      },
+      {
+        "id": "cosine-value-and-short-chain",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/cosine-value-and-short-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2b1f92ac2672800996f5c24ceab7ea5b0538b388159c3d6ae56a24699f0cd655"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/cosine-value-and-short-chain.lit"
+        ]
+      },
+      {
+        "id": "cosine-short-chain-only",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_cosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/cosine-short-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "725d180578d2de07c13a3000da13460f0793dc097acea9232433e224959499ee"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/cosine-short-chain-only.lit"
+        ]
+      },
+      {
+        "id": "cosine-value-and-direct",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\nr54_cosine_law_third_side_sq(3,4,pi/2)=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/cosine-value-and-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3642840318c68f1a7a2d9acd60cc621a05fadb05a7f53190fd4ef91c55daa9dc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/cosine-value-and-direct.lit"
+        ]
+      },
+      {
+        "id": "deg-mixed-short",
+        "source": "have fn r54_deg(theta R) R = theta * pi / 180\n\nhave fn r54_secant(theta R: cos(theta) != 0) R = 1 / cos(theta)\n\nhave fn r54_cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nr54_deg(180)=pi\nr54_deg(90)=90*pi/180=pi/2\nr54_deg(60)=60*pi/180=pi/3\nr54_deg(45)=45*pi/180=pi/4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-54-cases/deg-mixed-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "72c3c579f6ac376cd4f29f602d83b94630f34519dbb2503b2b61418e5fc314db"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round54-cases/deg-mixed-short.lit"
+        ]
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Actual textbook guarded trig relations and numeric degree/cosine-law consumers, preserving all source identities; not whole chapter."
+  }
+}

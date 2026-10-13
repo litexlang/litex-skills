@@ -1,0 +1,5 @@
+forall x,n R:
+    n-1 < x
+    x <= n
+    =>:
+        ceil(x) = n

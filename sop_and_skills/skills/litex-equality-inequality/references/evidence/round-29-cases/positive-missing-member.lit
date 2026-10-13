@@ -1,0 +1,4 @@
+forall S set,x R:
+    S=R+
+    =>:
+        x>0

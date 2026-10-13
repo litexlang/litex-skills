@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Concept Modeler"
+  short_description: "Design Litex concepts, interfaces, and dependencies"
+  default_prompt: "Use $litex-concept-modeler to design these interfaces around one representative concept and use probe; for a major interface migration, preserve the commented-before and verified-now comparison artifact."

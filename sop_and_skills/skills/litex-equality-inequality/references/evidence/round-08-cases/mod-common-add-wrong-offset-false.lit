@@ -1,0 +1,4 @@
+forall a,b,k,h Z,m N+:
+    (a+k)%m = (b+h)%m
+    =>:
+        a%m = b%m

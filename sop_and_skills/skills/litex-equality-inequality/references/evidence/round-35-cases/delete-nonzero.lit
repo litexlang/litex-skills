@@ -1,0 +1,12 @@
+have fn r35_ode_solution(x R) R = x^2 + 1
+
+thm r35_delete_nonzero:
+    ? forall x,x0 R:
+        x!=x0
+        =>:
+            (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0
+    r35_ode_solution(x)=x^2+1
+    r35_ode_solution(x0)=x0^2+1
+    r35_ode_solution(x)-r35_ode_solution(x0)=(x^2+1)-(x0^2+1)=x^2-x0^2=(x-x0)*(x+x0)
+    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)=((x-x0)*(x+x0))/(x-x0)=x+x0
+    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=(x+x0)-2*x0=x-x0

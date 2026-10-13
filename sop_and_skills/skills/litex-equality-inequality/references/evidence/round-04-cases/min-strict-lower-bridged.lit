@@ -1,0 +1,14 @@
+claim:
+    ? forall x,a,b R:
+        x < a
+        x < b
+        =>:
+            x < min(a,b)
+    a <= b or a > b
+    by cases:
+        ? x < min(a,b)
+        case a <= b:
+            x < a = min(a,b)
+        case a > b:
+            b <= a
+            x < b = min(a,b)

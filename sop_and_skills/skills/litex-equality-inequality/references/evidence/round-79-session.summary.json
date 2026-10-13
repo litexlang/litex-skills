@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-79-session.json",
+  "original_sha256": "4e0dfc685eae011097846852fffa3894b0ab115e3636bf1ada2d8e47163a5b96",
+  "original_bytes": 742,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "release thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "718e81b3eebe7b90003b95597e5345e05e1d1970e1f0312ba06ad3ce3d7b354a",
+        "excerpt": "release thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; preexisting symbolic gradient coordinate facts can contaminate this warm numeric probe. Current cold round79 owns necessity."
+    },
+    {
+      "source": "quadratic_gradient((3,4))=(2*3,2*4)=(6,8)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2c74e74b0976fc522fcee16df02fb2ce5346664e131567b0b118f9a4338cb833",
+        "excerpt": "quadratic_gradient((3,4))=(2*3,2*4)=(6,8)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; preexisting symbolic gradient coordinate facts can contaminate this warm numeric probe. Current cold round79 owns necessity."
+    }
+  ]
+}

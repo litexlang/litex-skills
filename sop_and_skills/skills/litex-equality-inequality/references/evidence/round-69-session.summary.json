@@ -1,0 +1,19 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-69-session.json",
+  "original_sha256": "01601be90f765cbf0a56dda468fa97e2065a0294df6c1bda58a3c552b8cdb965",
+  "original_bytes": 329,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "release thm pascal_identity(5,2)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8e46eb3f81c61ba2b57ef2ab25f32ad122b1ed2761fac5208fdf73ce86c15a53",
+        "excerpt": "release thm pascal_identity(5,2)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922 contains accepted round68 theorem; native consumer check only. Current round69 cold files own shortened theorem and deletion evidence."
+    }
+  ]
+}

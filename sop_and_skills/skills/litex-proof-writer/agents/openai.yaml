@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Proof Writer"
+  short_description: "Write Litex proofs and mine verifier gaps"
+  default_prompt: "Use $litex-proof-writer to write around one representative tracer theorem and, for a major rewrite, keep a durable commented-before and verified-now acceptance note linked to the clean gate."

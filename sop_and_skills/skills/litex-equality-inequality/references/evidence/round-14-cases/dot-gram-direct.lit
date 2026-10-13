@@ -1,0 +1,4 @@
+have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)
+have fn det(u,v cart(R,R)) R = u(1)*v(2)-u(2)*v(1)
+forall u,v cart(R,R):
+    dot(u,v)^2+det(u,v)^2 = dot(u,u)*dot(v,v)

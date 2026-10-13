@@ -1,0 +1,677 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-20-2026-10-09.json",
+  "original_sha256": "6ac1ac2713c7685a375b24e1278dd65b616aab7e10d1298d74773b862bc44a69",
+  "original_bytes": 2268631,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+    "sha256": "9df07d3b48a263820071ccd6dc12f017a5c1c436ac4218ba9f4db93c26de6e4f",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-20.log"
+    },
+    "head": "3c5befb5605193a53827b472b15462714ee8690b",
+    "session": [
+      {
+        "id": "scalar-substitution-direct",
+        "source": "forall lhs_value,coef,offset,previous_value,new_coef,scale R:\n    lhs_value = coef*previous_value+offset\n    scale*coef = new_coef\n    =>:\n        scale*lhs_value = new_coef*previous_value+scale*offset",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "010bca344ded77db65b18288346284d19153f3366cdb5ffe8c228573283e50d9",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall lhs_value, coef, offset, previous_value, new_coef, scale R:\\n    lhs_value = coef * previous_value + offset\\n    scale * coef = new_coef\\n    =>:\\n        scale * lhs_value = new_coef * previous_value + scale * offset\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall lhs_value, coef, offset, previous_value, new_coef, scale R:\\n    lhs_"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "scalar-substitution-chain",
+        "source": "claim:\n    ? forall lhs_value,coef,offset,previous_value,new_coef,scale R:\n        lhs_value = coef*previous_value+offset\n        scale*coef = new_coef\n        =>:\n            scale*lhs_value = new_coef*previous_value+scale*offset\n    scale*lhs_value = scale*(coef*previous_value+offset) = (scale*coef)*previous_value+scale*offset = new_coef*previous_value+scale*offset",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "product-associated-known-equality",
+        "source": "forall a,b,c,d R:\n    a*b = c\n    =>:\n        a*(b*d) = c*d",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "61887c2eaf8f69da0238ab5755f07071a8b19ff9d3ff13cbe2a34c6de88bd0bf",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, c, d R:\\n    a * b = c\\n    =>:\\n        a * b * d = c * d\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, c, d R:\\n    a * b = c\\n    =>:\\n        a * b * d = c * d\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "product-associated-equality-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a*b = c\n        =>:\n            a*(b*d) = c*d\n    a*(b*d) = (a*b)*d = c*d",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "product-order-association-direct",
+        "source": "forall a,b,c,d R:\n    a*b <= c\n    d >= 0\n    =>:\n        a*(b*d) <= c*d",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ccdd3ab28a6f43975b57482caf07469a1ad1c439098e352b009a193db68888e1",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, c, d R:\\n    a * b <= c\\n    d >= 0\\n    =>:\\n        a * b * d <= c * d\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, c, d R:\\n    a * b <= c\\n    d >= 0\\n    =>:\\n        a * b * d <= c * d\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "product-order-association-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a*b <= c\n        d >= 0\n        =>:\n            a*(b*d) <= c*d\n    a*(b*d) = (a*b)*d <= c*d",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "product-associated-equality-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a*b = c\n        =>:\n            a*(b*d) = c*d\n    a*(b*d) = (a*b)*d = c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/product-associated-equality-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3f9d8ae173c81555ef0434b79f8ad394c7ea1b14690338cf7412374719a7462d"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/product-associated-equality-chain.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-associated-known-equality",
+        "source": "forall a,b,c,d R:\n    a*b = c\n    =>:\n        a*(b*d) = c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/product-associated-known-equality.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fdbf821731e94f26db4cd263746eebe423c728b81ffd0c8e54e3262d6905e7db"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/product-associated-known-equality.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-explicit-known-equality",
+        "source": "forall a,b,c,d R:\n    a*b = c\n    =>:\n        (a*b)*d = c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/product-explicit-known-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5b92f6fcd55e7dc62b9a0e125a410c90500e1d34a73959d7795ae505838263c0"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/product-explicit-known-equality.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-order-association-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a*b <= c\n        d >= 0\n        =>:\n            a*(b*d) <= c*d\n    a*(b*d) = (a*b)*d <= c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/product-order-association-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f5e14314df0a04e70105c842d7e1ff7473e5014910b7dfa658e4693c38e15c7"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/product-order-association-chain.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-order-association-direct",
+        "source": "forall a,b,c,d R:\n    a*b <= c\n    d >= 0\n    =>:\n        a*(b*d) <= c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/product-order-association-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52c4d1c9b45ce7dd1c155d4cc847fa00f5e0590761d518e1983d35b6d388f527"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/product-order-association-direct.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-order-negative-factor-false",
+        "source": "forall a,b,c,d R:\n    a*b <= c\n    d < 0\n    =>:\n        a*(b*d) <= c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/product-order-negative-factor-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7031e4ffc47fc21183390cd809c063a096b6895dd594a86e5678a7bd6a24f223"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/product-order-negative-factor-false.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "scalar-substitution-chain",
+        "source": "claim:\n    ? forall lhs_value,coef,offset,previous_value,new_coef,scale R:\n        lhs_value = coef*previous_value+offset\n        scale*coef = new_coef\n        =>:\n            scale*lhs_value = new_coef*previous_value+scale*offset\n    scale*lhs_value = scale*(coef*previous_value+offset) = (scale*coef)*previous_value+scale*offset = new_coef*previous_value+scale*offset\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/scalar-substitution-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4cbae075a6d78894d66d064b714ae53b10aca92e2dadb804594fcace1ebdb306"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/scalar-substitution-chain.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "scalar-substitution-direct",
+        "source": "forall lhs_value,coef,offset,previous_value,new_coef,scale R:\n    lhs_value = coef*previous_value+offset\n    scale*coef = new_coef\n    =>:\n        scale*lhs_value = new_coef*previous_value+scale*offset\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/scalar-substitution-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc6d82a3d0069283713bbcb952765b3a6d008662f77efa71dd88d42c9ded3446"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/scalar-substitution-direct.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "scalar-substitution-missing-equation-false",
+        "source": "forall lhs_value,coef,offset,previous_value,new_coef,scale R:\n    lhs_value = coef*previous_value+offset\n    =>:\n        scale*lhs_value = new_coef*previous_value+scale*offset\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/scalar-substitution-missing-equation-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6d8ace3a0d8bd5701e4330b7f338cc744ca4d4e755cd3b91c214f055f700df8f"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/scalar-substitution-missing-equation-false.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-direct",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nforall a,b,c,T,s fn(k N) R,n N+:\n    $is_first_order_linear_recurrence_29(a,b,c,T)\n    $is_summation_factor_29(a,b,s)\n    =>:\n        scaled_recurrence_value_210(n,s,a,T) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5aee1a5e9489dbe16cffb134d94831c3c8657c3c1ab15d98ce823493cf9f4ba6"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-direct.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-four-statements",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nclaim:\n    ? forall a,b,c,T,s fn(k N) R,n N+:\n        $is_first_order_linear_recurrence_29(a,b,c,T)\n        $is_summation_factor_29(a,b,s)\n        =>:\n            scaled_recurrence_value_210(n,s,a,T) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n    a(n)*T(n) = b(n)*T(n-1)+c(n)\n    s(n)*b(n) = s(n-1)*a(n-1)\n    scaled_recurrence_value_210(n-1,s,a,T) = s(n-1)*a(n-1)*T(n-1)\n    scaled_recurrence_value_210(n,s,a,T) = s(n)*a(n)*T(n) = s(n)*(a(n)*T(n)) = s(n)*(b(n)*T(n-1)+c(n)) = (s(n)*b(n))*T(n-1)+s(n)*c(n) = (s(n-1)*a(n-1))*T(n-1)+s(n)*c(n) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-four-statements.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "812b4842c2fbd7522e12ede9a6db3f31ae435a338346655fb6c9394031b338f9"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-four-statements.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-no-helper",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nthm summation_factor_step_210:\n    ? forall a, b, c, T, s fn(step_index_210 N) R, n N+:\n        $is_first_order_linear_recurrence_29(a, b, c, T)\n        $is_summation_factor_29(a, b, s)\n        =>:\n            scaled_recurrence_value_210(n, s, a, T) = scaled_recurrence_value_210(n - 1, s, a, T) + s(n) * c(n)\n    a(n) * T(n) = b(n) * T(n - 1) + c(n)\n    s(n) * b(n) = s(n - 1) * a(n - 1)\n    scaled_recurrence_value_210(n, s, a, T) = s(n) * a(n) * T(n)\n    scaled_recurrence_value_210(n - 1, s, a, T) = s(n - 1) * a(n - 1) * T(n - 1)\n    s(n) * a(n) * T(n) = s(n) * (a(n) * T(n))\n    s(n) * (a(n) * T(n)) = s(n) * (b(n) * T(n - 1) + c(n))\n    s(n) * (b(n) * T(n - 1) + c(n)) = s(n) * b(n) * T(n - 1) + s(n) * c(n)\n    s(n) * b(n) * T(n - 1) = s(n - 1) * a(n - 1) * T(n - 1)\n    s(n) * b(n) * T(n - 1) + s(n) * c(n) = s(n - 1) * a(n - 1) * T(n - 1) + s(n) * c(n)\n    scaled_recurrence_value_210(n, s, a, T) = s(n) * b(n) * T(n - 1) + s(n) * c(n)\n    scaled_recurrence_value_210(n - 1, s, a, T) + s(n) * c(n) = s(n - 1) * a(n - 1) * T(n - 1) + s(n) * c(n)\n    scaled_recurrence_value_210(n, s, a, T) = scaled_recurrence_value_210(n - 1, s, a, T) + s(n) * c(n)\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-no-helper.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c903567416d27dfe152a585c2e87ccb65ba0db43b22044dd60983f30266c2be8"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-no-helper.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-original",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nthm summation_factor_step_210:\n    ? forall a, b, c, T, s fn(step_index_210 N) R, n N+:\n        $is_first_order_linear_recurrence_29(a, b, c, T)\n        $is_summation_factor_29(a, b, s)\n        =>:\n            scaled_recurrence_value_210(n, s, a, T) = scaled_recurrence_value_210(n - 1, s, a, T) + s(n) * c(n)\n    claim:\n        ? forall left_value, right_value, added_value R:\n            left_value = right_value\n            =>:\n                left_value + added_value = right_value + added_value\n    a(n) * T(n) = b(n) * T(n - 1) + c(n)\n    s(n) * b(n) = s(n - 1) * a(n - 1)\n    scaled_recurrence_value_210(n, s, a, T) = s(n) * a(n) * T(n)\n    scaled_recurrence_value_210(n - 1, s, a, T) = s(n - 1) * a(n - 1) * T(n - 1)\n    s(n) * a(n) * T(n) = s(n) * (a(n) * T(n))\n    s(n) * (a(n) * T(n)) = s(n) * (b(n) * T(n - 1) + c(n))\n    s(n) * (b(n) * T(n - 1) + c(n)) = s(n) * b(n) * T(n - 1) + s(n) * c(n)\n    s(n) * b(n) * T(n - 1) = s(n - 1) * a(n - 1) * T(n - 1)\n    s(n) * b(n) * T(n - 1) + s(n) * c(n) = s(n - 1) * a(n - 1) * T(n - 1) + s(n) * c(n)\n    scaled_recurrence_value_210(n, s, a, T) = s(n) * b(n) * T(n - 1) + s(n) * c(n)\n    scaled_recurrence_value_210(n - 1, s, a, T) + s(n) * c(n) = s(n - 1) * a(n - 1) * T(n - 1) + s(n) * c(n)\n    scaled_recurrence_value_210(n, s, a, T) = scaled_recurrence_value_210(n - 1, s, a, T) + s(n) * c(n)\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ce349e4adb23a02a2abb13ca5aa2f8f185c3c86c7414494af49579b3b21d5491"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-original.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-three-statements",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nclaim:\n    ? forall a,b,c,T,s fn(k N) R,n N+:\n        $is_first_order_linear_recurrence_29(a,b,c,T)\n        $is_summation_factor_29(a,b,s)\n        =>:\n            scaled_recurrence_value_210(n,s,a,T) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n    a(n)*T(n) = b(n)*T(n-1)+c(n)\n    s(n)*b(n) = s(n-1)*a(n-1)\n    scaled_recurrence_value_210(n,s,a,T) = s(n)*a(n)*T(n) = s(n)*(a(n)*T(n)) = s(n)*(b(n)*T(n-1)+c(n)) = (s(n)*b(n))*T(n-1)+s(n)*c(n) = (s(n-1)*a(n-1))*T(n-1)+s(n)*c(n) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-three-statements.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e86b47007562808f8ceab7adf6c22ac8c35214ec9fa5b40788d169452d1c7396"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-three-statements.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-five-statements",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nclaim:\n    ? forall a,b,c,T,s fn(k N) R,n N+:\n        $is_first_order_linear_recurrence_29(a,b,c,T)\n        $is_summation_factor_29(a,b,s)\n        =>:\n            scaled_recurrence_value_210(n,s,a,T) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n    a(n)*T(n) = b(n)*T(n-1)+c(n)\n    s(n)*b(n) = s(n-1)*a(n-1)\n    scaled_recurrence_value_210(n-1,s,a,T) = s(n-1)*a(n-1)*T(n-1)\n    (s(n)*b(n))*T(n-1) = (s(n-1)*a(n-1))*T(n-1)\n    scaled_recurrence_value_210(n,s,a,T) = s(n)*a(n)*T(n) = s(n)*(a(n)*T(n)) = s(n)*(b(n)*T(n-1)+c(n)) = (s(n)*b(n))*T(n-1)+s(n)*c(n) = (s(n-1)*a(n-1))*T(n-1)+s(n)*c(n) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-five-statements.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6027fb7cae67e47629fa933f604c27d9b9486b6457224fc31e86c8cc70eefaaf"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-five-statements.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "source-recurrence-no-previous-definition",
+        "source": "prop is_first_order_linear_recurrence_29(a, b, c, T fn(recurrence_index_29 N) R):\n    forall n N+:\n        a(n) * T(n) = b(n) * T(n - 1) + c(n)\n\nprop is_summation_factor_29(a, b, s fn(factor_index_29 N) R):\n    forall n N+:\n        s(n) * b(n) = s(n - 1) * a(n - 1)\n\nhave fn scaled_recurrence_value_210(n N, s, a, T fn(scaled_index_210 N) R) R = s(n) * a(n) * T(n)\n\nclaim:\n    ? forall a,b,c,T,s fn(k N) R,n N+:\n        $is_first_order_linear_recurrence_29(a,b,c,T)\n        $is_summation_factor_29(a,b,s)\n        =>:\n            scaled_recurrence_value_210(n,s,a,T) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n    a(n)*T(n) = b(n)*T(n-1)+c(n)\n    s(n)*b(n) = s(n-1)*a(n-1)\n    (s(n)*b(n))*T(n-1) = (s(n-1)*a(n-1))*T(n-1)\n    scaled_recurrence_value_210(n,s,a,T) = s(n)*a(n)*T(n) = s(n)*(a(n)*T(n)) = s(n)*(b(n)*T(n-1)+c(n)) = (s(n)*b(n))*T(n-1)+s(n)*c(n) = (s(n-1)*a(n-1))*T(n-1)+s(n)*c(n) = scaled_recurrence_value_210(n-1,s,a,T)+s(n)*c(n)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-20-cases/source-recurrence-no-previous-definition.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a2ee41a57e39ea2a697faa04818e50d6184112d1f7c1d8b4f34fb9260e725835"
+        },
+        "stderr": "",
+        "historical_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/source-recurrence-no-previous-definition.lit"
+        ],
+        "resume_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      }
+    ],
+    "excluded_authoring_attempt": {
+      "source": "forall A,B,C,D,E,s R:\n    A = B*D+C\n    s*B = E\n    =>:\n        s*A = E*D+s*C\n",
+      "surface": "Session",
+      "session_error": "parse_error: `C` is a reserved builtin name at line 1 in <repl>",
+      "hard_exit_observed": true,
+      "note": "Only this direct statement was attempted; corrected binder names before further probes. Not kernel evidence."
+    },
+    "diagnostic_note": "Normal statement display flattens a*(b*d) and (a*b)*d alike, while independent proof outcomes differ. Exact original source is retained; do not infer grouping from pretty JSON.",
+    "resume_scope": {
+      "snapshot_hash_rechecked": true,
+      "all_16_replayed_same_outcomes": true,
+      "current_worktree_build": "blocked by concurrent Lean compiler edits; this receipt is historical snapshot evidence",
+      "selected_scalar_bt_rules": "implemented later; not present in this historical binary",
+      "canonical_sources_modified": false
+    }
+  }
+}

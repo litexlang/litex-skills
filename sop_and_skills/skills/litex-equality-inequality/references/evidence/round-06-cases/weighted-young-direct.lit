@@ -1,0 +1,2 @@
+forall a,b R,t R+:
+    2*a*b <= t*a^2+b^2/t

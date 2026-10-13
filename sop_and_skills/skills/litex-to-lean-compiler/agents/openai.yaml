@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex to Lean Compiler"
+  short_description: "Replay typed Litex results into checked Lean"
+  default_prompt: "Use $litex-to-lean-compiler to compile the selected Litex example from typed verifier results and check the generated Lean proof."

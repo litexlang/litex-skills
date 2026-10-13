@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex to Lean"
+  short_description: "Build proof-transparent Litex compiler wrappers"
+  default_prompt: "Use $litex-to-lean to design and verify the Litex-to-Lean compiler with a proved unwrapping path to Mathlib."

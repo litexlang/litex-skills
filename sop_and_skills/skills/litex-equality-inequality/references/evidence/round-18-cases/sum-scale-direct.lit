@@ -1,0 +1,4 @@
+forall a,b Z,f fn(k Z) R,c R:
+    a <= b
+    =>:
+        sum(a,b,fn(k Z) R {c*f(k)}) = c*sum(a,b,f)

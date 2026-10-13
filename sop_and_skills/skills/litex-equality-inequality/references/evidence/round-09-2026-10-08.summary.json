@@ -1,0 +1,1433 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-09-2026-10-08.json",
+  "original_sha256": "1cb615fb2bb5085f8c61284957d301b3022100f1b1e1f1b1d36635abe80903c3",
+  "original_bytes": 1764624,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "34bc436245b2619929c713595e4ddb38a2e93d49259a1255646fa086e2373345",
+    "version": "Litex 1.0.4-beta",
+    "source_build": {
+      "command": "cargo build --release",
+      "success": true,
+      "exit_code": 0
+    },
+    "cases": [
+      {
+        "id": "finite-product-negative-false",
+        "source": "forall f,g fn(x {1,2}) R:\n    forall x {1,2}:\n        f(x) <= g(x)\n    =>:\n        finite_set_product({1,2},f) <= finite_set_product({1,2},g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-negative-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ccadcacceedd0f7c63897c7511f7a6a9f52d6b45dfdc00d519ef355fb1b194a2"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-negative-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-negative-false.lit"
+        ]
+      },
+      {
+        "id": "finite-product-nonnegative-direct",
+        "source": "forall S finite_set,f fn(x S) R:\n    forall x S:\n        0 <= f(x)\n    =>:\n        0 <= finite_set_product(S,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-nonnegative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "68d3bd022e95f0508e58ffc0d3100545c8a6dd67172ac50d3cca3ac14bafe881"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-nonnegative-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-nonnegative-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-product-pointwise-direct",
+        "source": "forall S finite_set,f,g fn(x S) R:\n    forall x S:\n        0 <= f(x)\n        f(x) <= g(x)\n    =>:\n        finite_set_product(S,f) <= finite_set_product(S,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-pointwise-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "040721c9aeee3f1ae18c4f9eb481a736b2a866c299d3598ecd994c486734034a"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-pointwise-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-pointwise-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-product-pointwise-equal-direct",
+        "source": "forall S finite_set,f,g fn(x S) R:\n    forall x S:\n        f(x) = g(x)\n    =>:\n        finite_set_product(S,f) = finite_set_product(S,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-pointwise-equal-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f8b2147ddbf2dd53f881c657c473fd5b16d127a1a43a9faaba2e1177bb45a10c"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-pointwise-equal-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-pointwise-equal-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-negative-summand-false",
+        "source": "forall f fn(x {1,2}) R:\n    f(1) <= finite_set_sum({1,2},f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-negative-summand-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b70cb42466f0f09842faa22129fb1305cd225cd4420858d3232ba3c4f4dc979f"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-negative-summand-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-negative-summand-false.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-nonnegative-direct",
+        "source": "forall S finite_set,f fn(x S) R:\n    forall x S:\n        0 <= f(x)\n    =>:\n        0 <= finite_set_sum(S,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-nonnegative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "82c2ef9a35f45f6dda3901bbd7dd42cec5b27f23665ed5dee6c0ccf817d8ef86"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-nonnegative-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-nonnegative-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-nonnegative-native",
+        "source": "claim:\n    ? forall S finite_set,f fn(x S) R:\n        forall x S:\n            0 <= f(x)\n        =>:\n            0 <= finite_set_sum(S,f)\n    finite_set_sum(S,fn(x S) R {0}) = 0\n    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S,fn(x S) R {0}),finite_set_sum(S,f))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-nonnegative-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "714061917222e294fa8b025a24e66f2dc935b48ddbcbb0c7a2bf2b02ea1f0cbe"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-nonnegative-native.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-nonnegative-native.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-pointwise-direct",
+        "source": "forall S finite_set,f,g fn(x S) R:\n    forall x S:\n        f(x) <= g(x)\n    =>:\n        finite_set_sum(S,f) <= finite_set_sum(S,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-pointwise-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6299f842015277acc3647bcd1e6155fbbe6290fef5f155ad8172168f253bbee9"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-pointwise-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-pointwise-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-pointwise-missing-false",
+        "source": "forall f,g fn(x {1,2}) R:\n    f(1) <= g(1)\n    =>:\n        finite_set_sum({1,2},f) <= finite_set_sum({1,2},g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-pointwise-missing-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "463d9baa4e874acc0828d2c650dd121cef1ecfcf973b0d537af5da35e6477b58"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-pointwise-missing-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-pointwise-missing-false.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-pointwise-native",
+        "source": "claim:\n    ? forall S finite_set,f,g fn(x S) R:\n        forall x S:\n            f(x) <= g(x)\n        =>:\n            finite_set_sum(S,f) <= finite_set_sum(S,g)\n    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S,f),finite_set_sum(S,g))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-pointwise-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1e2d721b66045f0c8d2fd439c9b8d3650b023a1be29d87530906dc7490fe4338"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-pointwise-native.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-pointwise-native.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-positive-empty-false",
+        "source": "0 < finite_set_sum({},fn(x Z) R {1})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-positive-empty-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "171c363d93bfbbadabbf9ac1370f6357a4b023a45b4f4ab05926da98c664b1c4"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-positive-empty-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-positive-empty-false.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-summand-direct",
+        "source": "forall f fn(x {1,2}) R:\n    forall x {1,2}:\n        0 <= f(x)\n    =>:\n        f(1) <= finite_set_sum({1,2},f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-summand-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b01b81330d37695ea94c74cc12f01ac066ae28ffd17dff5ae7950097fc6a9738"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-summand-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-summand-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-summand-native",
+        "source": "claim:\n    ? forall f fn(x {1,2}) R:\n        forall x {1,2}:\n            0 <= f(x)\n        =>:\n            f(1) <= finite_set_sum({1,2},f)\n    release thm finite_set_summand_le_sum(f(1),finite_set_sum({1,2},f))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-summand-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f4a16361e67cbd76af34946739ca0c3ca500a6d361648e9d3a539dc5e4be2be"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-summand-native.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-summand-native.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-triangle-direct",
+        "source": "forall S finite_set,f fn(x S) R:\n    abs(finite_set_sum(S,f)) <= finite_set_sum(S,fn(x S) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-triangle-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d951fe974af4a24e4790599f8a55c42443d9e068437dd51937a3f48b6efcc18e"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-triangle-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-triangle-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-uniform-bound-direct",
+        "source": "forall S finite_set,f fn(x S) R,M R:\n    forall x S:\n        f(x) <= M\n    =>:\n        finite_set_sum(S,f) <= finite_set_size(S)*M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-uniform-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9e979d8b7978c8dee9d6f62118cf7f881c3c9077c915aa79a1083d75dc3bfd9a"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-uniform-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-uniform-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-uniform-bound-native",
+        "source": "claim:\n    ? forall S finite_set,f fn(x S) R,M R:\n        forall x S:\n            f(x) <= M\n        =>:\n            finite_set_sum(S,f) <= finite_set_size(S)*M\n    finite_set_sum(S,fn(x S) R {M}) = M*finite_set_size(S) = finite_set_size(S)*M\n    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S,f),finite_set_sum(S,fn(x S) R {M}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-uniform-bound-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "502a49876b9f1125602f8d8ea4b3bcc7bf180e1584da027261bf634e8740c785"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-uniform-bound-native.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-uniform-bound-native.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-zero-constant-direct",
+        "source": "forall S finite_set:\n    finite_set_sum(S,fn(x S) R {0}) = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-zero-constant-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "54c736e8672c83d7739e76b0dc3dd9f7b969a5b704a3b16355abba51587b08d7"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-zero-constant-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-zero-constant-direct.lit"
+        ]
+      },
+      {
+        "id": "range-sum-finite-conversion",
+        "source": "forall f fn(x Z) R,m,n Z:\n    m <= n\n    =>:\n        sum(m,n,fn(x Z) R {f(x)}) = finite_set_sum(m...n,fn(x Z) R {f(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-finite-conversion.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "43147e0857bb297b41299f8b327e8959d08ac2d5b1b53c9d742858d38bdaeaf7"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-finite-conversion.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-finite-conversion.lit"
+        ]
+      },
+      {
+        "id": "range-sum-pointwise-direct",
+        "source": "forall f,g fn(x Z) R,m,n Z:\n    m <= n\n    forall x Z:\n        m <= x <= n\n        =>:\n            f(x) <= g(x)\n    =>:\n        sum(m,n,f) <= sum(m,n,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-pointwise-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "76121847500c3206eef839b622fe6b0157096636fcbe584b351999e83cbd02d7"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-pointwise-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-pointwise-direct.lit"
+        ]
+      },
+      {
+        "id": "range-sum-pointwise-native",
+        "source": "claim:\n    ? forall f,g fn(x Z) R,m,n Z:\n        m <= n\n        forall x Z:\n            m <= x <= n\n            =>:\n                f(x) <= g(x)\n        =>:\n            sum(m,n,f) <= sum(m,n,g)\n    release thm sum_le_sum_from_pointwise(sum(m,n,f),sum(m,n,g))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-pointwise-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "838014dc23ee91fa8ab725f292cfa68bf4d864ae586bdc4eeb78d6a529f1c12a"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-pointwise-native.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-pointwise-native.lit"
+        ]
+      },
+      {
+        "id": "range-sum-scalar-Z-direct",
+        "source": "forall f fn(x Z) R,m,n Z,c R:\n    m <= n\n    =>:\n        sum(m,n,fn(x Z) R {c*f(x)}) = c*sum(m,n,fn(x Z) R {f(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-scalar-Z-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0804bcd8f47a99c710a4d08c85785ae4490d77b285329daae10098e4db4fb7de"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-scalar-Z-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-scalar-Z-direct.lit"
+        ]
+      },
+      {
+        "id": "range-sum-scalar-positive-domain",
+        "source": "forall f fn(x N+) R,m,n N+,c R:\n    m <= n\n    =>:\n        sum(m,n,fn(x N+) R {c*f(x)}) = c*sum(m,n,fn(x N+) R {f(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-scalar-positive-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "030824d9b5bab858007c9989d7f89f6845a2f4b93e8e9bcbff88aaf4df51fa39"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-scalar-positive-domain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-scalar-positive-domain.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-direct",
+        "source": "forall f fn(x Z) R,m,n Z:\n    m <= n\n    =>:\n        abs(sum(m,n,fn(x Z) R {f(x)})) <= sum(m,n,fn(x Z) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3ae6aeb93c7b16dd179a3a59a0596fe1a4d9cbbcb458b98f3c7462b0f75d221b"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-constant-canonical",
+        "source": "forall S finite_set,M R:\n    finite_set_sum(S,fn(x S) R {M}) = finite_set_size(S)*M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-constant-canonical.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4df78dda4d7c775483dbdeedaebabdb65042ec0470363047f18c983761abe32e"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-constant-canonical.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-constant-canonical.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-zero-constant-chain",
+        "source": "forall S finite_set:\n    finite_set_sum(S,fn(x S) R {0}) = finite_set_size(S)*0 = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-zero-constant-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5a568c5c02e76e08f5db2ec0d0cdb2d7cc44f504e0b654c833eade77d92d8305"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-zero-constant-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-zero-constant-chain.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-nonnegative-canonical",
+        "source": "claim:\n    ? forall S finite_set,f fn(x S) R:\n        forall x S:\n            0 <= f(x)\n        =>:\n            0 <= finite_set_sum(S,f)\n    finite_set_sum(S,fn(x S) R {0}) = finite_set_size(S)*0 = 0\n    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S,fn(x S) R {0}),finite_set_sum(S,f))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-nonnegative-canonical.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fa411b6264fdf9c93053a88a74c33f28e4f482ca763b0caf186f49ff30607b44"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-nonnegative-canonical.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-nonnegative-canonical.lit"
+        ]
+      },
+      {
+        "id": "finite-sum-uniform-bound-canonical",
+        "source": "claim:\n    ? forall S finite_set,f fn(x S) R,M R:\n        forall x S:\n            f(x) <= M\n        =>:\n            finite_set_sum(S,f) <= finite_set_size(S)*M\n    finite_set_sum(S,fn(x S) R {M}) = finite_set_size(S)*M\n    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S,f),finite_set_sum(S,fn(x S) R {M}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-sum-uniform-bound-canonical.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "10383791963712d4c3d4f4b185abf8f7a520a01fe4d7641c6de73b4184be32f9"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-sum-uniform-bound-canonical.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-sum-uniform-bound-canonical.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-finite-bridge",
+        "source": "claim:\n    ? forall f fn(x Z) R,m,n Z:\n        m <= n\n        =>:\n            abs(sum(m,n,fn(x Z) R {f(x)})) <= sum(m,n,fn(x Z) R {abs(f(x))})\n    sum(m,n,fn(x Z) R {f(x)}) = finite_set_sum(m...n,fn(x Z) R {f(x)})\n    sum(m,n,fn(x Z) R {abs(f(x))}) = finite_set_sum(m...n,fn(x Z) R {abs(f(x))})\n    finite_set_sum(m...n,fn(x Z) R {abs(f(x))}) = finite_set_sum(m...n,fn(x m...n) R {abs(f(x))})\n    abs(sum(m,n,fn(x Z) R {f(x)})) = abs(finite_set_sum(m...n,fn(x Z) R {f(x)})) <= finite_set_sum(m...n,fn(x m...n) R {abs(f(x))}) = finite_set_sum(m...n,fn(x Z) R {abs(f(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-finite-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9d3a2846643cf76902ebf3c8f4819fe1c1bc2ba107242c96aaac6a99b0e48e50"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-finite-bridge.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-finite-bridge.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-direct-callback-f",
+        "source": "forall f fn(x Z) R,m,n Z:\n    m <= n\n    =>:\n        abs(sum(m,n,f)) <= sum(m,n,fn(x Z) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-direct-callback-f.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "76dffcb877564e5b301a5c8675dd2a5999d5ba829f495ea6f56782720f2dee08"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-direct-callback-f.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-direct-callback-f.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-canonical-finite",
+        "source": "claim:\n    ? forall f fn(x Z) R,m,n Z:\n        m <= n\n        =>:\n            abs(sum(m,n,fn(x Z) R {f(x)})) <= sum(m,n,fn(x Z) R {abs(f(x))})\n    sum(m,n,fn(x Z) R {f(x)}) = finite_set_sum(m...n,fn(x Z) R {f(x)})\n    finite_set_sum(m...n,fn(x m...n) R {abs(fn(y Z) R {f(y)}(x))}) = finite_set_sum(m...n,fn(x Z) R {abs(f(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})\n    abs(sum(m,n,fn(x Z) R {f(x)})) = abs(finite_set_sum(m...n,fn(x Z) R {f(x)})) <= finite_set_sum(m...n,fn(x m...n) R {abs(fn(y Z) R {f(y)}(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-canonical-finite.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "be5876411aac3adb738539cd1d13b348af9d80400c1c82fb0cf4abde1c6deac6"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-canonical-finite.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-canonical-finite.lit"
+        ]
+      },
+      {
+        "id": "range-sum-scalar-positive-adapted",
+        "source": "claim:\n    ? forall f fn(x N+) R,m,n N+,c R:\n        m <= n\n        =>:\n            sum(m,n,fn(x N+) R {c*f(x)}) = c*sum(m,n,fn(x N+) R {f(x)})\n    sum(m,n,fn(x N+) R {c*f(x)}) = sum(m,n,fn(x m...n) R {c*f(x)})\n    sum(m,n,fn(x N+) R {f(x)}) = sum(m,n,fn(x m...n) R {f(x)})\n    sum(m,n,fn(x m...n) R {c*f(x)}) = c*sum(m,n,fn(x m...n) R {f(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-scalar-positive-adapted.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "57a8082c7c3e4455668297b863aa3d29a5db9142088dc87b122ab554d928b994"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-scalar-positive-adapted.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-scalar-positive-adapted.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-named-source",
+        "source": "claim:\n    ? forall f fn(x Z) R,m,n Z:\n        m <= n\n        =>:\n            abs(sum(m,n,f)) <= sum(m,n,fn(x Z) R {abs(f(x))})\n    sum(m,n,f) = finite_set_sum(m...n,f)\n    finite_set_sum(m...n,fn(x m...n) R {abs(f(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})\n    abs(sum(m,n,f)) = abs(finite_set_sum(m...n,f)) <= finite_set_sum(m...n,fn(x m...n) R {abs(f(x))}) = sum(m,n,fn(x Z) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-named-source.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "195e26cffed3f6df536bafa18017d4e0c5d455ca28495097d6c8162ebbf9924a"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-named-source.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-named-source.lit"
+        ]
+      },
+      {
+        "id": "finite-product-pointwise-equal-extension",
+        "source": "claim:\n    ? forall S finite_set,f,g fn(x S) R:\n        forall x S:\n            f(x) = g(x)\n        =>:\n            finite_set_product(S,f) = finite_set_product(S,g)\n    by fn_extension f = g\n    finite_set_product(S,f) = finite_set_product(S,g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-pointwise-equal-extension.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "03abfe57a9224b9811386b00536e2a3b36061222e346db227ebc8f7e28706f87"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-pointwise-equal-extension.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-pointwise-equal-extension.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-exact-domain-route",
+        "source": "claim:\n    ? forall m,n Z,f fn(x m...n) R:\n        m <= n\n        =>:\n            abs(sum(m,n,f)) <= sum(m,n,fn(x m...n) R {abs(f(x))})\n    sum(m,n,f) = finite_set_sum(m...n,f)\n    sum(m,n,fn(x m...n) R {abs(f(x))}) = finite_set_sum(m...n,fn(x m...n) R {abs(f(x))})\n    abs(sum(m,n,f)) = abs(finite_set_sum(m...n,f)) <= finite_set_sum(m...n,fn(x m...n) R {abs(f(x))}) = sum(m,n,fn(x m...n) R {abs(f(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-exact-domain-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dada9ea26726f3259f1f8a094a6378242f8f4f3e315310170a2a3fd3cd8856ef"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-exact-domain-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-exact-domain-route.lit"
+        ]
+      },
+      {
+        "id": "range-sum-scalar-exact-domain-direct",
+        "source": "forall m,n N+,f fn(x m...n) R,c R:\n    m <= n\n    =>:\n        sum(m,n,fn(x m...n) R {c*f(x)}) = c*sum(m,n,fn(x m...n) R {f(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-scalar-exact-domain-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5592edca37dda6809f5eb69cba69fa97a299667b5b69a3d4f39c4b8fa2c58c31"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-scalar-exact-domain-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-scalar-exact-domain-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-product-pointwise-equal-short",
+        "source": "claim:\n    ? forall S finite_set,f,g fn(x S) R:\n        forall x S:\n            f(x) = g(x)\n        =>:\n            finite_set_product(S,f) = finite_set_product(S,g)\n    by fn_extension f = g\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-pointwise-equal-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cba4d1fa89ae21fdc10bf321864126eca70415bad82d7bc7c13c0cb6baa7f536"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-pointwise-equal-short.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-pointwise-equal-short.lit"
+        ]
+      },
+      {
+        "id": "finite-product-pointwise-two-route",
+        "source": "claim:\n    ? forall f,g fn(x {1,2}) R:\n        forall x {1,2}:\n            0 <= f(x)\n            f(x) <= g(x)\n        =>:\n            finite_set_product({1,2},f) <= finite_set_product({1,2},g)\n    0 <= f(1)\n    0 <= f(2)\n    f(1) <= g(1)\n    f(2) <= g(2)\n    finite_set_product({1,2},f) = f(1)*f(2) <= g(1)*g(2) = finite_set_product({1,2},g)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-pointwise-two-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e7bc6267214358a81537018f20b0048f6c7efcaa12563c9776977060e3f93c90"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-pointwise-two-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-pointwise-two-route.lit"
+        ]
+      },
+      {
+        "id": "finite-product-nonnegative-two-route",
+        "source": "claim:\n    ? forall f fn(x {1,2}) R:\n        forall x {1,2}:\n            0 <= f(x)\n        =>:\n            0 <= finite_set_product({1,2},f)\n    0 <= f(1)\n    0 <= f(2)\n    0 <= f(1)*f(2) = finite_set_product({1,2},f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-nonnegative-two-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bc49bf00f4b3015b94da7a5c96cbd3a9decfd8fa62ff6ec1e378954bcdc74e96"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-nonnegative-two-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-nonnegative-two-route.lit"
+        ]
+      },
+      {
+        "id": "range-sum-triangle-wrong-function-false",
+        "source": "forall f,g fn(x Z) R,m,n Z:\n    m <= n\n    =>:\n        abs(sum(m,n,f)) <= sum(m,n,fn(x Z) R {abs(g(x))})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-sum-triangle-wrong-function-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "77a8e6b0e462b4e0981e862b5d026220a00f5cde2d1c5c27a1bbb4ca2851a946"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-sum-triangle-wrong-function-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-sum-triangle-wrong-function-false.lit"
+        ]
+      },
+      {
+        "id": "finite-product-empty-identity",
+        "source": "finite_set_product({},fn(x Z) R {-1}) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-product-empty-identity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b6af22d34c1c66a8df8efee6bcffa5daa984188c0c9c6e1e07ebbcec5a814668"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/finite-product-empty-identity.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/finite-product-empty-identity.lit"
+        ]
+      },
+      {
+        "id": "range-positive-domain-zero-start-invalid",
+        "source": "forall f fn(x N+) R,n N+:\n    sum(0,n,f) = sum(0,n,f)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/range-positive-domain-zero-start-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cd6f799c0c5f92aa8d8b0fdc9319c499d8781273ae0ddc4a463aae17c0cd9cfa"
+        },
+        "stderr": "",
+        "replay_source": "round-09-cases/range-positive-domain-zero-start-invalid.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-09-cases/range-positive-domain-zero-start-invalid.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "finite-sum-pointwise-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0d805170ab351363247d947066d9f86c3ef991ced4dac44ad76c363d9984f2b9",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall S finite_set, f, g fn (x S) R:\\n    forall x S:\\n        f(x) <= g(x)\\n    =>:\\n        finite_set_sum(S, f) <= finite_set_sum(S, g)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall S finite_set, f, g fn (x S) R:\\n    forall x S:\\n        f(x) <= g(x)\\n    =>:\\n        finite_set_sum(S, f) <= finite_set_sum(S, g)\"\r\n      },\r\n      \"st"
+        }
+      },
+      {
+        "case": "finite-sum-pointwise-native",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "finite-sum-nonnegative-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "277d1522e099982d3586d981488a585d4757f2aa61c7f82c56fb9b63f04bb47b",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall S finite_set, f fn (x S) R:\\n    forall x S:\\n        0 <= f(x)\\n    =>:\\n        0 <= finite_set_sum(S, f)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall S finite_set, f fn (x S) R:\\n    forall x S:\\n        0 <= f(x)\\n    =>:\\n        0 <= finite_set_sum(S, f)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"se"
+        }
+      },
+      {
+        "case": "finite-sum-nonnegative-native",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c9df32144d796303db120bcc406b3c01beb39c6131f2766706e4e7c235d54071",
+          "excerpt": "... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall S finite_set, f fn (x S) R:\\n        forall x S:\\n            0 <= f(x)\\n        =>:\\n            0 <= finite_set_sum(S, f)\\n    finite_set_sum(S, fn (x S) R{0}) = 0\\n    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S, fn (x S) R{0}), finite_set_sum(S, f))\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_n"
+        }
+      },
+      {
+        "case": "finite-sum-constant-canonical",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "89bb9b16ca7e7e32f5f2f0772faa1218aa4bc41c488662615fe92cf8728aeca0",
+          "excerpt": "... ... success\r\n"
+        }
+      },
+      {
+        "case": "finite-sum-zero-constant-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "89bb9b16ca7e7e32f5f2f0772faa1218aa4bc41c488662615fe92cf8728aeca0",
+          "excerpt": "... ... success\r\n"
+        }
+      },
+      {
+        "case": "finite-sum-nonnegative-canonical",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "finite-sum-uniform-bound-canonical",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "range-sum-triangle-finite-bridge",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "25f59c56aa478480e19418fb23ceeee9b9796fb52fa58eb1006cc4bd6ccf05ff",
+          "excerpt": "... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall f fn (x Z) R, m, n Z:\\n        m <= n\\n        =>:\\n            abs (sum(m, n, fn (x Z) R{f(x)})) <= sum(m, n, fn (x Z) R{abs (f(x))})\\n    sum(m, n, fn (x Z) R{f(x)}) = finite_set_sum(closed_range(m, n), fn (x Z) R{f(x)})\\n    sum(m, n, fn (x Z) R{abs (f(x))}) = finite_set_sum(closed_range(m, n), fn (x Z) R{abs (f(x))})\\n    finite_set_su"
+        }
+      },
+      {
+        "case": "range-sum-triangle-direct-callback-f",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "99611b109f9365d92387abbf98eb41eb43e2293ac9a37dfc5d199ea4e4d46eb3",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (x Z) R, m, n Z:\\n    m <= n\\n    =>:\\n        abs (sum(m, n, f)) <= sum(m, n, fn (x Z) R{abs (f(x))})\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (x Z) R, m, n Z:\\n    m <= n\\n    =>:\\n        abs (sum(m, n, f)) <= sum(m, n, fn (x Z) R{abs (f(x))})\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"sessio"
+        }
+      },
+      {
+        "case": "range-sum-triangle-canonical-finite",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "83c949504d470a86ae10cbf01a7cc98abbcf9eef4d512464d09b307b16c3807e",
+          "excerpt": "... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall f fn (x Z) R, m, n Z:\\n        m <= n\\n        =>:\\n            abs (sum(m, n, fn (x Z) R{f(x)})) <= sum(m, n, fn (x Z) R{abs (f(x))})\\n    sum(m, n, fn (x Z) R{f(x)}) = finite_set_sum(closed_range(m, n), fn (x Z) R{f(x)})\\n    finite_set_sum(closed_range(m, n), fn (x closed_range(m, n)) R{abs (fn (y Z) R{f(y)}(x))}) = finite_set_sum(closed_ra"
+        }
+      },
+      {
+        "case": "range-sum-scalar-positive-adapted",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "03c6c64931dc5c25b9be5106c629ce631e9147c2a81404efe4c3941899af5c55",
+          "excerpt": "... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall f fn (x N+) R, m, n N+, c R:\\n        m <= n\\n        =>:\\n            sum(m, n, fn (x N+) R{c * f(x)}) = c * sum(m, n, fn (x N+) R{f(x)})\\n    sum(m, n, fn (x N+) R{c * f(x)}) = sum(m, n, fn (x closed_range(m, n)) R{c * f(x)})\\n    sum(m, n, fn (x N+) R{f(x)}) = sum(m, n, fn (x closed_range(m, n)) R{f(x)})\\n    sum(m, n, fn (x closed_range(m,"
+        }
+      }
+    ],
+    "source_revision": "59280af894ababa413dc0773a69eb7eeb0735fb3",
+    "source_note": "Current working-tree release, unrelated edits preserved. No kernel or canonical mathematics edits."
+  }
+}

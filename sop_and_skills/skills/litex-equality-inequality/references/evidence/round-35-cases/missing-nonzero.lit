@@ -1,0 +1,4 @@
+have fn r35_ode_solution(x R) R = x^2 + 1
+
+forall x,x0 R:
+    (r35_ode_solution(x)-r35_ode_solution(x0))/(x-x0)-2*x0=x-x0

@@ -1,0 +1,4 @@
+forall A,B finite_set:
+    $is_finite_set(union(A,B))
+    =>:
+        finite_set_size(union(A,B)) <= finite_set_size(A)+finite_set_size(B)

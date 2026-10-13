@@ -1,0 +1,11 @@
+thm scalar_mul_congruence_probe22:
+    ? forall lhs,rhs,factor R:
+        lhs=rhs
+        =>:
+            lhs*factor=rhs*factor
+
+claim:
+    ? forall u,v fn(t R) R,a,x R:
+        fn(k R) R {u(k)+v(k)}(x)*a=(u(x)+v(x))*a
+    fn(k R) R {u(k)+v(k)}(x)=u(x)+v(x)
+    by thm scalar_mul_congruence_probe22(fn(k R) R {u(k)+v(k)}(x),u(x)+v(x),a) => fn(k R) R {u(k)+v(k)}(x)*a=(u(x)+v(x))*a

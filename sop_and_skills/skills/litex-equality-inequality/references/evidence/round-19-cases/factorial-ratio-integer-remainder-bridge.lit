@@ -1,0 +1,7 @@
+claim:
+    ? forall m,n N:
+        m <= n
+        =>:
+            factorial(n)/factorial(m) $in Z
+    factorial(n)%factorial(m) = 0
+    factorial(n)/factorial(m) $in Z

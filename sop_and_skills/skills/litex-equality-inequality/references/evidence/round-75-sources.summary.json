@@ -1,0 +1,160 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-75-sources.json",
+  "original_sha256": "0f0fca749021773626fa0d9e7a1719808addab34216644b5dc8b4b47e3e38b48",
+  "original_bytes": 45960,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/10_real_analysis_in_nutshell/main.lit",
+    "source_sha256": "2bcca5119939bd6dfdb6d7e444b487057a3e536c788cf76325cc79be53713f9c",
+    "scope": "Same source sequence-limit uniqueness, round74 baseline with exact two tail witnesses and radius; tail/triangle liveness, one source family.",
+    "cases": [
+      {
+        "id": "baseline",
+        "source": {
+          "text_omitted": true,
+          "sha256": "a4c4749216345721c6bc670b839d2402c2ecfc58c243db4e098a62b568d179d1",
+          "characters": 3029,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/baseline.lit"
+      },
+      {
+        "id": "delete-tail-index-bounds",
+        "source": {
+          "text_omitted": true,
+          "sha256": "55aa288493473cf2cfd9e36d187523aceb54d2ba7f3c9b68bebefdcafbf3838d",
+          "characters": 2995,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/delete-tail-index-bounds.lit"
+      },
+      {
+        "id": "delete-absolute-symmetry",
+        "source": {
+          "text_omitted": true,
+          "sha256": "80384a315631d853ce27f8578920e219b1b279930b8de837610089633b1d736c",
+          "characters": 2993,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/delete-absolute-symmetry.lit"
+      },
+      {
+        "id": "delete-triangle-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4134c8de95eb489187ed6ff3cc1c22cc699ee2b7900d97fff93ed9d4d5e31199",
+          "characters": 2980,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/delete-triangle-echo.lit"
+      },
+      {
+        "id": "delete-sum-bound-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f860c729e712475e069ad5227a878d433393897d39165a06c6e0441b1f1372bd",
+          "characters": 2961,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/delete-sum-bound-echo.lit"
+      },
+      {
+        "id": "delete-numeric-ratio",
+        "source": {
+          "text_omitted": true,
+          "sha256": "1d60b6d68f713207b5b5ef14da3870d73b1f6368aa5ab5f720499fb458d85e93",
+          "characters": 3011,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/delete-numeric-ratio.lit"
+      },
+      {
+        "id": "single-comparison-chain",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c7861064e48cc692157c3508e58336718c2676067a59fdb891a62e79c7a5731e",
+          "characters": 2836,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/single-comparison-chain.lit"
+      },
+      {
+        "id": "single-chain-without-tail-bounds",
+        "source": {
+          "text_omitted": true,
+          "sha256": "66e266f2c8790d53bc60234cdd496b654d508fc2e27fe78e180a57ebe988b958",
+          "characters": 2802,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/single-chain-without-tail-bounds.lit"
+      },
+      {
+        "id": "single-chain-without-symmetry",
+        "source": {
+          "text_omitted": true,
+          "sha256": "5e5a8a1e017962253783f1b321279d1803c74fb00a9cc98a65d4b5b1161eca66",
+          "characters": 2800,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/single-chain-without-symmetry.lit"
+      },
+      {
+        "id": "wrong-shifted-limit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "bc81107981e9dd7babbdadd80657132ec10b0094afefc0233272b026cc0b89b7",
+          "characters": 2838,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/wrong-shifted-limit.lit"
+      },
+      {
+        "id": "single-chain-common-index-chain",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f983226ba52c729551e204b8950f6d775269cd4c1dfca500beec51dfd69b58e8",
+          "characters": 2821,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/single-chain-common-index-chain.lit"
+      },
+      {
+        "id": "single-chain-combined-symmetry-bound",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4f0961d907defedad9c2d2309eae9165967afea6d2220eec97b13d3ac34b3e52",
+          "characters": 2803,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/single-chain-combined-symmetry-bound.lit"
+      },
+      {
+        "id": "combined-short-route",
+        "source": {
+          "text_omitted": true,
+          "sha256": "f8a1f1ce73112c87f81c45c722df247c5322a3439a23ad2738cb7d63ae2bb9ed",
+          "characters": 2788,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/combined-short-route.lit"
+      },
+      {
+        "id": "wrong-common-index-endpoint",
+        "source": "claim:\n    ? forall n1,n2 N+:\n        n1<=n2\n    have n0 N+=n1+n2\n    n1<=n0>=n2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/wrong-common-index-endpoint.lit"
+      },
+      {
+        "id": "combined-short-wrong-limit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "e4273ce5ac75988a80643d031531258f10866a8b4f16872d388a84790f6cab45",
+          "characters": 2790,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round75-cases/combined-short-wrong-limit.lit"
+      }
+    ]
+  }
+}

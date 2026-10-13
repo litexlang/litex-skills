@@ -1,0 +1,3 @@
+claim:
+    ? forall n N:
+        2^n>=n+1

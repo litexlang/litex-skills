@@ -1,0 +1,2 @@
+forall f fn(k N) R,m N:
+    product(m,m,fn(k N) R {f(k)})=f(m)

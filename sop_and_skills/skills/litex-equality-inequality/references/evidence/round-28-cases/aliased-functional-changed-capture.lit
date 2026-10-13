@@ -1,0 +1,5 @@
+forall X,Y set,f,g fn(x X) Y,U power_set(Y),E set,p X:
+    E={x X: f(x) $in U}
+    p $in E
+    =>:
+        g(p) $in U

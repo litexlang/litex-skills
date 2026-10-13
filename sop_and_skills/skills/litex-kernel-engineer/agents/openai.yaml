@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Kernel Engineer"
+  short_description: "Modify Litex verifier and rules."
+  default_prompt: "Use $litex-kernel-engineer to implement this change around one durable runnable tracer file with commented-before, active-now, and a separate executable negative boundary regression."

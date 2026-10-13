@@ -1,0 +1,321 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-79-2026-10-09.json",
+  "original_sha256": "06c62d37e1792890a544a227c519ef5fde0125f1f669ae9a2d25b16694d951db",
+  "original_bytes": 61783,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "f98867af9f5b656748b1183d13e31d489d42b3e1310bf2a329049cd106a6a246",
+    "cases": [
+      {
+        "id": "numeric-source-slice",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\nrelease thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))\nquadratic_gradient((3,4))=(2*3,2*4)=(6,8)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-source-slice.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-source-slice.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9afb6d5b336bc34397fb8e39f787b1963a9cf1d3f981193322def073d2c9347b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/numeric-source-slice.lit"
+        ]
+      },
+      {
+        "id": "numeric-direct",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\nquadratic_gradient((3,4))=(6,8)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9e56241996fcdcd5b6b53089fd6f47471e177fe1a03c71b52265e91722c5e545"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/numeric-direct.lit"
+        ]
+      },
+      {
+        "id": "numeric-chain-only",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\nquadratic_gradient((3,4))=(2*3,2*4)=(6,8)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "38b61e221fd3233bec68898641a053a4461a2f8634695c499ea3a478b2c2a497"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/numeric-chain-only.lit"
+        ]
+      },
+      {
+        "id": "numeric-coordinates-native",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n(3,4)(1)=3\n(3,4)(2)=4\nrelease thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))\nquadratic_gradient((3,4))=(2*3,2*4)=(6,8)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-coordinates-native.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-coordinates-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "70e57dbe148937f3f5504f9b4e87836d78168c02a6b074395dfc29be4f02d89b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/numeric-coordinates-native.lit"
+        ]
+      },
+      {
+        "id": "numeric-coordinates-direct",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n(3,4)(1)=3\n(3,4)(2)=4\nquadratic_gradient((3,4))=(6,8)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-coordinates-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-coordinates-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3e9325bbf8fa93fa72154b2aaefe53aab0c5b89fd0b81d4c98345237128726af"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/numeric-coordinates-direct.lit"
+        ]
+      },
+      {
+        "id": "numeric-wrong-value",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n(3,4)(1)=3\n(3,4)(2)=4\nrelease thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))\nquadratic_gradient((3,4))=(2*3,2*4)=(6,9)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-wrong-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/numeric-wrong-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "39a8179e4fd8e3405e807a4c4683cec4d70d1a74cb656271830a1b5899522e5d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/numeric-wrong-value.lit"
+        ]
+      },
+      {
+        "id": "short-source-through-demo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3c2c94836f9cb100746640a8d73db35a72d1f32e15287d80f2529d46eddbcde8",
+          "characters": 5025,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/short-source-through-demo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/short-source-through-demo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "80deb6e51122c13c874e71eafc213e6382351cd47707ef674dc50a68455f55df"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/short-source-through-demo.lit"
+        ]
+      },
+      {
+        "id": "native-and-direct-endpoint",
+        "source": "have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\nrelease thm tuple_equal_from_coordinates((2*(3,4)(1),2*(3,4)(2)),(2*3,2*4))\nquadratic_gradient((3,4))=(6,8)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/native-and-direct-endpoint.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/native-and-direct-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "51148b86242d42fa372d70f654c9dead782729ded262ba8776cae421bc17dce2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/native-and-direct-endpoint.lit"
+        ]
+      },
+      {
+        "id": "short-demo-delete-predicate-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "fc6a3e8e2c839c52a1c26418ae32227e7269472fac3423ea64ffe5f4d4902441",
+          "characters": 4943,
+          "excerpt": "# Multivariable calculus in Litex, setting-first.\n#\n# Included: a quadratic scalar field, exact coordinate difference quotients,\n# epsilon-delta partial derivatives, and its coordinate gradient.\n#\n# Main line: a scalar field -> exact coordinate difference quotients -> gradient.\n\nhave fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2\nhave fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))\n\n# Holding y fixed reduces the x-coordinate quotient to a difference of squares.\nthm quadratic_surface_x_difference_quotient:\n    ? forall p cart(R, R), x R:\n        x != p(1)\n        ="
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/short-demo-delete-predicate-echo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-79-cases/short-demo-delete-predicate-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a9b99ffa15398509f923ce58a0a9345d89c65aafd38eaeedc9088b331d32289b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round79-cases/short-demo-delete-predicate-echo.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 9,
+      "accepted": 4,
+      "normal_rejections": 5
+    },
+    "scope": "Actual numeric gradient consumer, independent small slice and current short complete-prefix consumer; no tuple gap inferred resolved elsewhere."
+  }
+}

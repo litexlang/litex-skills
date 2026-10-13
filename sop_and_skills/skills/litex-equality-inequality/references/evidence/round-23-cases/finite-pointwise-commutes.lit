@@ -1,0 +1,2 @@
+forall n N+,u,v fn(t closed_range(1,n)) R,a R,idx closed_range(1,n):
+    fn(k closed_range(1,n)) R {u(k)+v(k)}(idx)*a=a*fn(k closed_range(1,n)) R {u(k)+v(k)}(idx)

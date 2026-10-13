@@ -1,0 +1,4 @@
+forall a,x,b R+:
+    a!=1
+    =>:
+        log(a,x^b)=b*log(a,x)

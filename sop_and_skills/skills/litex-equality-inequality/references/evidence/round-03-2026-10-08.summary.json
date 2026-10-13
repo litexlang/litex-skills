@@ -1,0 +1,1178 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-03-2026-10-08.json",
+  "original_sha256": "4a44b05a0a6ec7eba27bd02711c1eaa9da78dd4f7645a84f2be6bb3423c64867",
+  "original_bytes": 284356,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "7ea4cd7308c10241be1714728ecedd57bef345534059aea5acfc6f721490b497",
+    "source_build": {
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "success": true,
+      "log": "round-03-build.log"
+    },
+    "version": "Litex 1.0.4-beta",
+    "cases": [
+      {
+        "id": "additive-cancel-chain",
+        "source": "claim:\n    ? forall a,b,k R:\n        a+k = b+k\n        =>:\n            a = b\n    a = (a+k)-k = (b+k)-k = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-cancel-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2fc6622451ad8ddd3b39d62e14c7166cd67d77630b5e7daa07022a372cfd3332"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-cancel-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-cancel-chain.lit"
+        ]
+      },
+      {
+        "id": "additive-cancel-direct",
+        "source": "forall a,b,k R:\n    a+k = b+k\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-cancel-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f8617bead4bc9dcd9b67eedc425d7fd95c3e6fad626f694827f8f944e729fd75"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-cancel-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-cancel-direct.lit"
+        ]
+      },
+      {
+        "id": "additive-cancel-false",
+        "source": "forall a,b,k,h R:\n    a+k = b+h\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-cancel-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b1a29cb1839439ff5247abf69519ce9328d404315d5cbc4a6cf1dbf020bb21c9"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-cancel-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-cancel-false.lit"
+        ]
+      },
+      {
+        "id": "additive-order-cancel-chain",
+        "source": "claim:\n    ? forall a,b,k R:\n        a+k <= b+k\n        =>:\n            a <= b\n    a = (a+k)-k <= (b+k)-k = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-order-cancel-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7081a7ce2dfeb3e877133e3ed005ab0556f4d6e959f2bc6f75abbd57c33feec3"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-order-cancel-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-order-cancel-chain.lit"
+        ]
+      },
+      {
+        "id": "additive-order-cancel-direct",
+        "source": "forall a,b,k R:\n    a+k <= b+k\n    =>:\n        a <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-order-cancel-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f104b43c587c8d6b512dbefa335e8bac57ae185945034b3fcc19a8f039db4cb3"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-order-cancel-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-order-cancel-direct.lit"
+        ]
+      },
+      {
+        "id": "additive-transport-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a+d = c+b\n        =>:\n            a-c = b-d\n    a-c = (a+d)-c-d = (c+b)-c-d = b-d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-transport-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "11165634eb1485ad523f1ddcc61e7e44679584c40686ed7ee8001b92d09aa056"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-transport-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-transport-chain.lit"
+        ]
+      },
+      {
+        "id": "additive-transport-direct",
+        "source": "forall a,b,c,d R:\n    a+d = c+b\n    =>:\n        a-c = b-d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/additive-transport-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a116102c354cf65a582325bc1bed1a0d844b328c9c0fcb66d590c0ba3bfd56e2"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/additive-transport-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/additive-transport-direct.lit"
+        ]
+      },
+      {
+        "id": "equal-cancel-chain",
+        "source": "claim:\n    ? forall a,b,k R:\n        k != 0\n        a*k = b*k\n        =>:\n            a = b\n    a = (a*k)/k = (b*k)/k = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/equal-cancel-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "705ac327b2c2b4d6167bee9782aa1bda2c67f4ff4071df2374ba45573a262382"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/equal-cancel-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/equal-cancel-chain.lit"
+        ]
+      },
+      {
+        "id": "equal-cancel-direct",
+        "source": "forall a,b,k R:\n    k != 0\n    a*k = b*k\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/equal-cancel-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9498c68447cc7981d0f4f384ba33bf7668ef21e264d2923a4f7c9a71e8ccb404"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/equal-cancel-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/equal-cancel-direct.lit"
+        ]
+      },
+      {
+        "id": "equal-cancel-zero-false",
+        "source": "forall a,b,k R:\n    a*k = b*k\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/equal-cancel-zero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f68f9ce13389f1f05b1008782c02632ef4cfaa61102a2113acfba01315366e6b"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/equal-cancel-zero-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/equal-cancel-zero-false.lit"
+        ]
+      },
+      {
+        "id": "fraction-cross-both-negative-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        b < 0\n        d < 0\n        a/b <= c/d\n        =>:\n            a*d <= c*b\n    (a/b)*b >= (c/d)*b\n    a*d = ((a/b)*b)*d <= ((c/d)*b)*d = c*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-cross-both-negative-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2e8ec837e876b91b75468816cd4d90118784604a1edc41cf1f01fdba5cbec86f"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-cross-both-negative-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-cross-both-negative-chain.lit"
+        ]
+      },
+      {
+        "id": "fraction-cross-both-negative-direct",
+        "source": "forall a,b,c,d R:\n    b < 0\n    d < 0\n    a/b <= c/d\n    =>:\n        a*d <= c*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-cross-both-negative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3d87a890545af62a864cf55401b22fe8d9d813a7a55b70f459ff243dc7113926"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-cross-both-negative-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-cross-both-negative-direct.lit"
+        ]
+      },
+      {
+        "id": "fraction-cross-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        0 < b\n        0 < d\n        a/b <= c/d\n        =>:\n            a*d <= c*b\n    (a/b)*b <= (c/d)*b\n    a*d = ((a/b)*b)*d <= ((c/d)*b)*d = c*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-cross-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dc782b80a8f00bd007f6ccb5a8d045231e2cf84ccdd8e88794396e3015b00858"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-cross-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-cross-chain.lit"
+        ]
+      },
+      {
+        "id": "fraction-cross-direct",
+        "source": "forall a,b,c,d R:\n    0 < b\n    0 < d\n    a/b <= c/d\n    =>:\n        a*d <= c*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-cross-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bf47dbb13adb5a1810680856dc166176f6e0fcac1987f1954054896cfecaeb7d"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-cross-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-cross-direct.lit"
+        ]
+      },
+      {
+        "id": "fraction-cross-nonzero-false",
+        "source": "forall a,b,c,d R:\n    b != 0\n    d != 0\n    a/b <= c/d\n    =>:\n        a*d <= c*b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-cross-nonzero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d63588a717c0a0785bc1b36598240df9fcabdd0753efe04e6f3026ea9825607c"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-cross-nonzero-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-cross-nonzero-false.lit"
+        ]
+      },
+      {
+        "id": "fraction-uncross-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        0 < b\n        0 < d\n        a*d <= c*b\n        =>:\n            a/b <= c/d\n    0 < b*d\n    a/b = (a*d)/(b*d) <= (c*b)/(b*d) = c/d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-uncross-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3c7a78380d3f15dc55838db4ce534eb34bcdcf05cba7a9227316b3e7fe8670d2"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-uncross-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-uncross-chain.lit"
+        ]
+      },
+      {
+        "id": "fraction-uncross-direct",
+        "source": "forall a,b,c,d R:\n    0 < b\n    0 < d\n    a*d <= c*b\n    =>:\n        a/b <= c/d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/fraction-uncross-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e76c938c4204d8656b2a9dcc5c74675272bf8be0017b0569acf5378eee3ca248"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/fraction-uncross-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/fraction-uncross-direct.lit"
+        ]
+      },
+      {
+        "id": "order-cancel-negative-chain",
+        "source": "claim:\n    ? forall a,b,k R:\n        k < 0\n        a*k <= b*k\n        =>:\n            a >= b\n    a = (a*k)/k >= (b*k)/k = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-cancel-negative-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d88d1c4c0bd2cae8b97ee8bf7b1ca3f406cdddef2b0f3d328d177a5aaa5eb03e"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/order-cancel-negative-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/order-cancel-negative-chain.lit"
+        ]
+      },
+      {
+        "id": "order-cancel-negative-direct",
+        "source": "forall a,b,k R:\n    k < 0\n    a*k <= b*k\n    =>:\n        a >= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-cancel-negative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8270888aa0cff15dacfb67afac73fea6d41c26cf125f72bf445d485f3dd47811"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/order-cancel-negative-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/order-cancel-negative-direct.lit"
+        ]
+      },
+      {
+        "id": "order-cancel-negative-false",
+        "source": "forall a,b,k R:\n    k < 0\n    a*k <= b*k\n    =>:\n        a <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-cancel-negative-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a05e65ade02466d1adcd22a40fc61cea2c02e75f754600e07dce2324c88a45d1"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/order-cancel-negative-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/order-cancel-negative-false.lit"
+        ]
+      },
+      {
+        "id": "order-cancel-positive-chain",
+        "source": "claim:\n    ? forall a,b,k R:\n        k > 0\n        a*k <= b*k\n        =>:\n            a <= b\n    a = (a*k)/k <= (b*k)/k = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-cancel-positive-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de3a3b58373091482e2cdae04ab3f705bdcd8a0bed5c2ec025eab8e940139d33"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/order-cancel-positive-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/order-cancel-positive-chain.lit"
+        ]
+      },
+      {
+        "id": "order-cancel-positive-direct",
+        "source": "forall a,b,k R:\n    k > 0\n    a*k <= b*k\n    =>:\n        a <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-cancel-positive-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "709ccb2b4fa90de5f7c2931fcdd11dc2b096d9ca70f5b8ef66d700ae9ec67ead"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/order-cancel-positive-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/order-cancel-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "order-cancel-zero-false",
+        "source": "forall a,b,k R:\n    k >= 0\n    a*k <= b*k\n    =>:\n        a <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-cancel-zero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4c902e0f1b53af6e7c7d86df05eca5dbcfd8d2a9841e3393fe9dc137001b3c0a"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/order-cancel-zero-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/order-cancel-zero-false.lit"
+        ]
+      },
+      {
+        "id": "product-error-chain",
+        "source": "forall u,v,x,y R:\n    abs(u*v-x*y) = abs(u*(v-y)+y*(u-x)) <= abs(u*(v-y))+abs(y*(u-x)) = abs(u)*abs(v-y)+abs(y)*abs(u-x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/product-error-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c83e959cb04e102a0b2759a02a3498e45e989dd8430353f8bb90d4362ca5b4d8"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/product-error-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/product-error-chain.lit"
+        ]
+      },
+      {
+        "id": "product-error-direct",
+        "source": "forall u,v,x,y R:\n    abs(u*v-x*y) <= abs(u)*abs(v-y)+abs(y)*abs(u-x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/product-error-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "23d25f7c6d10f84c4a1b313f92f3010a9ccdcd81327ce8a4a0b16838327cba1b"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/product-error-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/product-error-direct.lit"
+        ]
+      },
+      {
+        "id": "product-error-missing-term-false",
+        "source": "forall u,v,x,y R:\n    abs(u*v-x*y) <= abs(u)*abs(v-y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/product-error-missing-term-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fed07cf3f0a36d2d30a4dc231a30ea7abc8c623c26c7896b4017edc0293229f3"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/product-error-missing-term-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/product-error-missing-term-false.lit"
+        ]
+      },
+      {
+        "id": "reciprocal-difference-bridged",
+        "source": "claim:\n    ? forall x,y R:\n        x != 0\n        y != 0\n        =>:\n            abs(1/x-1/y) = abs(x-y)/(abs(x)*abs(y))\n    x*y != 0\n    abs(x*y) != 0\n    abs(x) != 0\n    abs(y) != 0\n    1/x-1/y = (y-x)/(x*y)\n    abs(1/x-1/y) = abs((y-x)/(x*y)) = abs(y-x)/abs(x*y) = abs(x-y)/(abs(x)*abs(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/reciprocal-difference-bridged.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "640c96219855cb24d8aae5e0ae492866c5bd5ea398d6018fab5861c377f20fc9"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/reciprocal-difference-bridged.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/reciprocal-difference-bridged.lit"
+        ]
+      },
+      {
+        "id": "reciprocal-difference-chain",
+        "source": "claim:\n    ? forall x,y R:\n        x != 0\n        y != 0\n        =>:\n            abs(1/x-1/y) = abs(x-y)/(abs(x)*abs(y))\n    1/x-1/y = (y-x)/(x*y)\n    abs(1/x-1/y) = abs((y-x)/(x*y)) = abs(y-x)/abs(x*y) = abs(x-y)/(abs(x)*abs(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/reciprocal-difference-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1bb56adb292201daa4b61dd48ca922913193c99367dfab6b5498bd415cf6c491"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/reciprocal-difference-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/reciprocal-difference-chain.lit"
+        ]
+      },
+      {
+        "id": "reciprocal-difference-direct",
+        "source": "forall x,y R:\n    x != 0\n    y != 0\n    =>:\n        abs(1/x-1/y) = abs(x-y)/(abs(x)*abs(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/reciprocal-difference-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "825cf65fa7c73ddd832b4860c87b2e0cf91ad3626a5afbd6652e29f20987345e"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/reciprocal-difference-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/reciprocal-difference-direct.lit"
+        ]
+      },
+      {
+        "id": "reciprocal-signed-denominator-false",
+        "source": "forall x,y R:\n    x != 0\n    y != 0\n    =>:\n        abs(1/x-1/y) = abs(x-y)/(x*y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/reciprocal-signed-denominator-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "83dd44a93c6683c60c314200e21d7246c18c2518ca087a2c8e819d0082daae40"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/reciprocal-signed-denominator-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/reciprocal-signed-denominator-false.lit"
+        ]
+      },
+      {
+        "id": "abs-quotient-direct",
+        "source": "forall u,v R:\n    v != 0\n    =>:\n        abs(u/v) = abs(u)/abs(v)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/abs-quotient-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d5877944102f229d6697065f96877bf478a1925c66a83acecc5f2cb69cb02c7d"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/abs-quotient-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/abs-quotient-direct.lit"
+        ]
+      },
+      {
+        "id": "abs-quotient-chain",
+        "source": "claim:\n    ? forall u,v R:\n        v != 0\n        =>:\n            abs(u/v) = abs(u)/abs(v)\n    abs(v) != 0\n    (u/v)*v = u\n    abs(u/v)*abs(v) = abs((u/v)*v) = abs(u)\n    abs(u/v) = (abs(u/v)*abs(v))/abs(v) = abs(u)/abs(v)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/abs-quotient-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1e2a235e2ab764916561c8c0ad6df56d49d89198e8942b3f4a6e7f99827d31c0"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/abs-quotient-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/abs-quotient-chain.lit"
+        ]
+      },
+      {
+        "id": "abs-quotient-signed-false",
+        "source": "forall u,v R:\n    v != 0\n    =>:\n        abs(u/v) = abs(u)/v\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/abs-quotient-signed-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b6a2c8ce7eed4f847895f7e4315c9891b6ae808e96e3f6092b474f411835372d"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/abs-quotient-signed-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/abs-quotient-signed-false.lit"
+        ]
+      },
+      {
+        "id": "reciprocal-product-chain",
+        "source": "claim:\n    ? forall x,y R:\n        x != 0\n        y != 0\n        =>:\n            abs(1/x-1/y) = abs(x-y)/(abs(x)*abs(y))\n    x*y != 0\n    abs(x*y) != 0\n    abs(x) != 0\n    abs(y) != 0\n    abs(x)*abs(y) != 0\n    (1/x-1/y)*(x*y) = y-x\n    abs(1/x-1/y)*abs(x*y) = abs((1/x-1/y)*(x*y)) = abs(y-x) = abs(x-y)\n    abs(1/x-1/y) = (abs(1/x-1/y)*abs(x*y))/abs(x*y) = abs(x-y)/abs(x*y) = abs(x-y)/(abs(x)*abs(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/reciprocal-product-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0f9ff3399c790c7010c14fb69fa4067b3157c56f6fe93ce1af53facd27dc81a5"
+        },
+        "stderr": "",
+        "replay_source": "round-03-cases/reciprocal-product-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-03-cases/reciprocal-product-chain.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "reciprocal-difference-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e243618710dadf27e4a250e782bb377120a23dcf4a29f4ff9fbfc456c685618e",
+          "excerpt": "... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall x, y R:\\n        x != 0\\n        y != 0\\n        =>:\\n            abs (1 / x - 1 / y) = abs (x - y) / (abs (x) * abs (y))\\n    1 / x - 1 / y = (y - x) / (x * y)\\n    abs (1 / x - 1 / y) = abs ((y - x) / (x * y)) = abs (y - x) / abs (x * y) = abs (x - y) / (abs (x) * abs (y))\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"ru"
+        }
+      },
+      {
+        "case": "reciprocal-difference-bridged",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "52bdff11f014553ae9ef0d791e65dac81c36062ebdf24d3c212db8fa0f124f49",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall x, y R:\\n        x != 0\\n        y != 0\\n        =>:\\n            abs (1 / x - 1 / y) = abs (x - y) / (abs (x) * abs (y))\\n    x * y != 0\\n    abs (x * y) != 0\\n    abs (x) != 0\\n    abs (y) != 0\\n    1 / x - 1 / y = (y - x) / (x * y)\\n    abs (1 / x - 1 / y) = abs ((y - x) / (x * y)) = abs (y - x) / abs (x * y) = abs (x - y) /"
+        }
+      },
+      {
+        "case": "additive-cancel-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0a9964965d746f3885411c54802a29cc517bfb64b9e31ff632f5cc13bb936eb5",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b, k R:\\n    a + k = b + k\\n    =>:\\n        a = b\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b, k R:\\n    a + k = b + k\\n    =>:\\n        a = b\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "additive-cancel-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "abs-quotient-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2a70b800a11006f6eda69fa813974305e7b016989de93604843359d607a92ba2",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall u, v R:\\n    v != 0\\n    =>:\\n        abs (u / v) = abs (u) / abs (v)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall u, v R:\\n    v != 0\\n    =>:\\n        abs (u / v) = abs (u) / abs (v)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "abs-quotient-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ff140bb7796be24aa695264bf2f9ea4d75e8f1567a0936de9eeec06a2bdccdf",
+          "excerpt": "... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "abs-quotient-signed-false",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c6d47974a78902f91a7835c195352a30d3645e1534f185ce2df8ea02fc87b1c6",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall u, v R:\\n    v != 0\\n    =>:\\n        abs (u / v) = abs (u) / v\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall u, v R:\\n    v != 0\\n    =>:\\n        abs (u / v) = abs (u) / v\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "reciprocal-product-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0b773098efd18cd15df2a0d51b90753f37b081447ae3c5b729ae0f188e4ca475",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      }
+    ],
+    "source_revision": "422ac3c0197c3c1f49fbc506e9c33c90b14b6c4d",
+    "source_note": "Built current working tree with preexisting changes; no kernel edits by this search."
+  }
+}

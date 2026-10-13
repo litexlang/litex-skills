@@ -1,0 +1,829 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-37-2026-10-09.json",
+  "original_sha256": "0bf7876891aaf3ba429ad42772baf62c81838fa83dba283113169f35063d25f6",
+  "original_bytes": 111596,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+    "sha256": "f125e78b1db70b855e886a7493dac2886b5403976ada3734b673efeaf8e75a33",
+    "cases": [
+      {
+        "id": "positive-source-contradiction",
+        "source": "thm r37_positive_source:\n    ? forall slope1,slope2 R:\n        slope1!=slope2\n        =>:\n            abs(slope1-slope2)>0\n    slope1-slope2!=0\n    by contra:\n        ? abs(slope1-slope2)>0\n        abs(slope1-slope2)<=0\n        0<=abs(slope1-slope2)\n        abs(slope1-slope2)=0\n        abs(slope1-slope2)!=0\n        impossible abs(slope1-slope2)=0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/positive-source-contradiction.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6958062b0f389e5a99b9cd0acd852837c043cd1f04e15ca3cdc277388649fdfb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/positive-source-contradiction.lit"
+        ]
+      },
+      {
+        "id": "positive-direct",
+        "source": "forall slope1,slope2 R:\n    slope1!=slope2\n    =>:\n        abs(slope1-slope2)>0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/positive-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73ae88351114547f62d621c1c7ec29eddaa861b54783bc5536ead5b35ea52d8a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/positive-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-nonzero-bridge",
+        "source": "claim:\n    ? forall slope1,slope2 R:\n        slope1!=slope2\n        =>:\n            abs(slope1-slope2)>0\n    slope1-slope2!=0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/positive-nonzero-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "855b6fc3f20d1fba1305566e2d0faa01254b085847e8da4bdd544f0633a68b50"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/positive-nonzero-bridge.lit"
+        ]
+      },
+      {
+        "id": "epsilon-direct-typing",
+        "source": "forall slope1,slope2 R:\n    slope1!=slope2\n    =>:\n        abs(slope1-slope2)/3 $in R+",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/epsilon-direct-typing.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c488fb1a69e1829520c8d3482a2bab674be76022d5e42c3b1a90ee4de5988238"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/epsilon-direct-typing.lit"
+        ]
+      },
+      {
+        "id": "epsilon-positive-bridge",
+        "source": "claim:\n    ? forall slope1,slope2 R:\n        slope1!=slope2\n        =>:\n            abs(slope1-slope2)/3 $in R+\n    slope1-slope2!=0\n    abs(slope1-slope2)>0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/epsilon-positive-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2926155eed530e0054b8ddc0a4c5b4c04e2c19953fe3dd36602ecc79f8f9e55b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/epsilon-positive-bridge.lit"
+        ]
+      },
+      {
+        "id": "epsilon-source-spine",
+        "source": "claim:\n    ? forall slope1,slope2 R:\n        slope1!=slope2\n        =>:\n            abs(slope1-slope2)/3 $in R+\n    slope1-slope2!=0\n    abs(slope1-slope2)>0\n    abs(slope1-slope2)/3 $in R\n    0<abs(slope1-slope2)/3\n    have epsilon R+=abs(slope1-slope2)/3",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/epsilon-source-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fb1b5bd60e472990e3aec348bdf7e6b60b0b249243714eb4e256e3042e6b122b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/epsilon-source-spine.lit"
+        ]
+      },
+      {
+        "id": "native-radius-direct",
+        "source": "forall delta1,delta2 R+:\n    min(delta1,delta2) $in R+",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/native-radius-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6f7513395cdf8f607da1a4e1535168f5eff84686ac8b2401329bd7cb0c14d054"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/native-radius-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-radius-direct",
+        "source": "forall delta1,delta2 R+:\n    finite_set_min(union({delta1},{delta2})) $in R+",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/finite-radius-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cbc64a616369215d6499c93efc111c72149ac4a7b2b264fa186b3000d1476fb4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/finite-radius-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-radius-source-spine",
+        "source": "claim:\n    ? forall delta1,delta2 R+:\n        finite_set_min(union({delta1},{delta2})) $in R+\n    union({delta1},{delta2}) $subset R+\n    finite_set_min(union({delta1},{delta2})) $in union({delta1},{delta2})\n    finite_set_min(union({delta1},{delta2})) $in R\n    have radius R+=finite_set_min(union({delta1},{delta2}))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/finite-radius-source-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f1de0d9434d21f05646785d42703f1330614c750dc811c81921e59571b8aba4f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/finite-radius-source-spine.lit"
+        ]
+      },
+      {
+        "id": "native-radius-bounds",
+        "source": "forall delta1,delta2 R+:\n    min(delta1,delta2)<=delta1\n    min(delta1,delta2)<=delta2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/native-radius-bounds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ac0c258dfc6e90481ff5151cd87073a6f3ab3f85eda79bda5c610ddf28962e4a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/native-radius-bounds.lit"
+        ]
+      },
+      {
+        "id": "sample-error-native",
+        "source": "forall x0 R,radius R+:\n    abs((x0+radius/2)-x0)=radius/2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-error-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c39ce1b0d9acc1a5222aecfa1d3b1c9c7cf11cbf92ced53b8617c94097f7a38a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-error-native.lit"
+        ]
+      },
+      {
+        "id": "sample-distinct-native",
+        "source": "forall x0 R,radius R+:\n    x0+radius/2!=x0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-distinct-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6ab4b0c99e3211befa4b54f7ac1f72f52ab12069f0facfb3b9da10c1e7596a0f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-distinct-native.lit"
+        ]
+      },
+      {
+        "id": "sample-within-radius",
+        "source": "forall x0 R,radius R+:\n    abs((x0+radius/2)-x0)<radius",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-within-radius.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "02cbbdabf50c3f9b9f7558a2453e5d571edca38d946ea4f1d27229de32988883"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-within-radius.lit"
+        ]
+      },
+      {
+        "id": "missing-distinct-false",
+        "source": "forall slope1,slope2 R:\n    abs(slope1-slope2)>0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/missing-distinct-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "268455af19644433bfd7d3f1c2007e84ccc6e3a0f9364362d45136b7ae74cb14"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/missing-distinct-false.lit"
+        ]
+      },
+      {
+        "id": "zero-radius-false",
+        "source": "forall delta1,delta2 R:\n    delta1>=0\n    delta2>=0\n    =>:\n        min(delta1,delta2) $in R+",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/zero-radius-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "02c313e61ac9a83d0ce259086cf00049f9d6f841d18169420ee73b4cee9c3e17"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/zero-radius-false.lit"
+        ]
+      },
+      {
+        "id": "minimum-wrong-direction",
+        "source": "forall delta1,delta2 R+:\n    min(delta1,delta2)>=delta1",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/minimum-wrong-direction.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c36d7541250230abea5ddd5e442bd975ddad2128351bd14a4e84706338f1fa16"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/minimum-wrong-direction.lit"
+        ]
+      },
+      {
+        "id": "epsilon-nonzero-only",
+        "source": "claim:\n    ? forall slope1,slope2 R:\n        slope1!=slope2\n        =>:\n            abs(slope1-slope2)/3 $in R+\n    slope1-slope2!=0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/epsilon-nonzero-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "346e82f96d7759c4b430a373bf610a2cee0925254ddebc897f860b76532c83a7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/epsilon-nonzero-only.lit"
+        ]
+      },
+      {
+        "id": "finite-radius-typed-binding",
+        "source": "claim:\n    ? forall delta1,delta2 R+:\n        finite_set_min(union({delta1},{delta2})) $in R+\n    have radius R+=finite_set_min(union({delta1},{delta2}))",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/finite-radius-typed-binding.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4fe62d1ade79eb6fe1bb4c4bdaf43565bdb0d74fe09f590e39802b8dbb385b21"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/finite-radius-typed-binding.lit"
+        ]
+      },
+      {
+        "id": "native-radius-typed-binding",
+        "source": "claim:\n    ? forall delta1,delta2 R+:\n        min(delta1,delta2) $in R+\n    have radius R+=min(delta1,delta2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/native-radius-typed-binding.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "871df10df3bc9f52f4fd55cfb54c30ed3ed4e6016781a0e5c192ab303b311f9e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/native-radius-typed-binding.lit"
+        ]
+      },
+      {
+        "id": "sample-error-chain",
+        "source": "claim:\n    ? forall x0 R,radius R+:\n        abs((x0+radius/2)-x0)=radius/2\n    (x0+radius/2)-x0=radius/2\n    abs((x0+radius/2)-x0)=abs(radius/2)=radius/2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-error-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3f0391ec0360fc1c66a52851cab38223999424a1ff138af24e45ba8b3e6c418c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-error-chain.lit"
+        ]
+      },
+      {
+        "id": "sample-distinct-positive-half",
+        "source": "claim:\n    ? forall x0 R,radius R+:\n        x0+radius/2!=x0\n    0<radius/2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-distinct-positive-half.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d5fa05139c61d38c265e8de48f0c36355e46e69d7a3e4a245f73d0d29cc811d6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-distinct-positive-half.lit"
+        ]
+      },
+      {
+        "id": "sample-distinct-source-chain",
+        "source": "claim:\n    ? forall x0 R,radius R+:\n        x0+radius/2!=x0\n    0<radius/2\n    x0+radius/2>x0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-distinct-source-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1d73804712c15666172725fdf6ce207fe667cb86cd3be6b52d17aa0c5add1754"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-distinct-source-chain.lit"
+        ]
+      },
+      {
+        "id": "sample-within-two-chains",
+        "source": "claim:\n    ? forall x0 R,radius R+:\n        abs((x0+radius/2)-x0)<radius\n    (x0+radius/2)-x0=radius/2\n    abs((x0+radius/2)-x0)=abs(radius/2)=radius/2<radius",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-within-two-chains.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c0b085834cd965aaf65fe8d898541feacff70507a2c64df939f56e8cdf9f76a2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-within-two-chains.lit"
+        ]
+      },
+      {
+        "id": "sample-error-nonnegative-half",
+        "source": "claim:\n    ? forall x0 R,radius R+:\n        abs((x0+radius/2)-x0)=radius/2\n    0<=radius/2\n    (x0+radius/2)-x0=radius/2\n    abs((x0+radius/2)-x0)=abs(radius/2)=radius/2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-error-nonnegative-half.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d7d43360dce4ea80da73871dae0b5fcccf0a01a25df69570b3bca2340ce2989a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-error-nonnegative-half.lit"
+        ]
+      },
+      {
+        "id": "sample-within-nonnegative-half",
+        "source": "claim:\n    ? forall x0 R,radius R+:\n        abs((x0+radius/2)-x0)<radius\n    0<=radius/2\n    (x0+radius/2)-x0=radius/2\n    abs((x0+radius/2)-x0)=abs(radius/2)=radius/2<radius",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/sample-within-nonnegative-half.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ffa1696cbef680f17deb0fe16d529c3cf979ad548925f08ebc8038201f2ea87a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/sample-within-nonnegative-half.lit"
+        ]
+      },
+      {
+        "id": "epsilon-typed-binding-two-bridges",
+        "source": "claim:\n    ? forall slope1,slope2 R:\n        slope1!=slope2\n        =>:\n            abs(slope1-slope2)/3 $in R+\n    slope1-slope2!=0\n    abs(slope1-slope2)>0\n    have epsilon R+=abs(slope1-slope2)/3",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-37-cases/epsilon-typed-binding-two-bridges.lit"
+        ],
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round37-cases/epsilon-typed-binding-two-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a3b903e093110314015ed92f304d77e07cb3bf9543d9cf719c6f19ffab45e388"
+        },
+        "stderr": ""
+      }
+    ],
+    "source_path": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+    "source_sha256": "30c6fcf1c2c31e4df4548a5617aedc5968b6120ff8afa625ce485b899dd23815",
+    "scope": "Exact scalar positivity/radius/sample substeps from maintained derivative uniqueness proof; no full derivative/showcase acceptance, source/kernel edits or new trust.",
+    "summary": {
+      "accepted": 14,
+      "rejected": 12
+    },
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Fresh release succeeded, executable fixed by snapshot; no immutable whole-checkout claim. Session iteration uses older round29 binary."
+  }
+}

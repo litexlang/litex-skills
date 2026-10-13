@@ -1,0 +1,8 @@
+thm solve_linear_equation:
+    ? forall a, b, c, x R:
+        a != 0
+        a * x + b = c
+        =>:
+            x = (c - b) / a
+    a * x = c - b
+    x = (a * x) / a = (c - b) / a

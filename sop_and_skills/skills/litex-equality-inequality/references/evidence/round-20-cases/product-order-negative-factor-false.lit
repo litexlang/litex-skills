@@ -1,0 +1,5 @@
+forall a,b,c,d R:
+    a*b <= c
+    d < 0
+    =>:
+        a*(b*d) <= c*d

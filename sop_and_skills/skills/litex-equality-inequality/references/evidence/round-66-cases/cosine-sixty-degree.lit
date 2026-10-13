@@ -1,0 +1,4 @@
+have fn radians_from_degrees(theta R) R = theta * pi / 180
+have fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)
+
+cosine_law_third_side_sq(3,4,pi/3)=13

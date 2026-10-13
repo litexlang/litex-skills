@@ -1,0 +1,12 @@
+claim:
+    ? forall a R,n N+:
+        0 <= a
+        a <= 1
+        =>:
+            a^n <= a
+    by induc n from 1:
+        ? a^n <= a
+        ? from n = 1:
+            a^n = a^1 = a
+        ? induc:
+            a^(n+1) = a^n*a^1 = a^n*a <= a^n*1 = a^n <= a

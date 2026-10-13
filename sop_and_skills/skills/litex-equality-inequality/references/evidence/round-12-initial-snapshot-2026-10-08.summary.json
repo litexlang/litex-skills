@@ -1,0 +1,941 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-12-initial-snapshot-2026-10-08.json",
+  "original_sha256": "5d517272d518ac94fb2e0df5ee7c370887673b0d9efd50982404bff9e81da586",
+  "original_bytes": 165146,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+    "sha256": "2891175d3081c40e9250b1ee19709b70951041651486f7b0d72f18809cd2b0bb",
+    "version": "Litex 1.0.5-beta",
+    "source_build": {
+      "command": "cargo build --release",
+      "success": false,
+      "exit_code": 101,
+      "reason": "EvalRational::zero missing in compile_run.rs:309; preexisting edited file. Existing release snapshot used, source correspondence unverified."
+    },
+    "cases": [
+      {
+        "id": "coordinate-polynomial-transport-chain",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a+d = c+b\n        =>:\n            (a-c,b-d) = (b-d,b-d)\n    a-c = (a+d)-c-d = (c+b)-c-d = b-d\n    release thm tuple_equal_from_coordinates((a-c,b-d),(b-d,b-d))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/coordinate-polynomial-transport-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e2eaa5d33a31085a8525f8631e9b9cc7d140b0451167bffbb961e1b41de5e22c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/coordinate-polynomial-transport-chain.lit"
+        ]
+      },
+      {
+        "id": "coordinate-polynomial-transport-direct",
+        "source": "forall a,b,c,d R:\n    a+d = c+b\n    =>:\n        (a-c,b-d) = (b-d,b-d)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/coordinate-polynomial-transport-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "87024d8ab0d53c90103068cb9c8add4db4c1ccded5dec40a509cd222b139a610"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/coordinate-polynomial-transport-direct.lit"
+        ]
+      },
+      {
+        "id": "function-argument-congruence-direct",
+        "source": "forall x,y R,F fn(t R) R:\n    x = y\n    =>:\n        F(x) = F(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-argument-congruence-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b6b9dc406a18f389ce5e9b28618d0d212529feed3ff4d9e54a1c97c6f84e65df"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-argument-congruence-direct.lit"
+        ]
+      },
+      {
+        "id": "function-argument-reflection-false",
+        "source": "forall x,y R,F fn(t R) R:\n    F(x) = F(y)\n    =>:\n        x = y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-argument-reflection-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e0c7762c462da3cdef807712e17e56db4007cb6529135bd80cd8ef1e2a2b4614"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-argument-reflection-false.lit"
+        ]
+      },
+      {
+        "id": "function-membership-argument-transport",
+        "source": "forall S set,x,y S,F fn(t S) R:\n    x = y\n    =>:\n        F(x) = F(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-membership-argument-transport.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3e22b4d323f2a9720f65ee65538bf2f4a53223ae42baa24d0cb653b76b22c450"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-membership-argument-transport.lit"
+        ]
+      },
+      {
+        "id": "function-nested-algebra-identity-chain",
+        "source": "forall x R,F fn(t R) R:\n    (x+1)-1 = x\n    F((x+1)-1) = F(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-nested-algebra-identity-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9207ed3796fc9d3c77298f8b223822de6e557c159c6fceac37e176f4d452a17b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-nested-algebra-identity-chain.lit"
+        ]
+      },
+      {
+        "id": "function-nested-algebra-identity-direct",
+        "source": "forall x R,F fn(t R) R:\n    F((x+1)-1) = F(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-nested-algebra-identity-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "667676d8882063cdfd46a5ea2e0f11d1a7a2a279273dd0e84bfbccec369f755a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-nested-algebra-identity-direct.lit"
+        ]
+      },
+      {
+        "id": "function-nested-arithmetic-congruence-chain",
+        "source": "claim:\n    ? forall x,y R,F fn(t R) R:\n        x = y\n        =>:\n            F(x+1) = F(y+1)\n    x+1 = y+1\n    F(x+1) = F(y+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-nested-arithmetic-congruence-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f807e31b3a778e5684dfbb6966d2c6a7bbeb35fc379d1032ca188979f74122e8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-nested-arithmetic-congruence-chain.lit"
+        ]
+      },
+      {
+        "id": "function-nested-arithmetic-congruence-direct",
+        "source": "forall x,y R,F fn(t R) R:\n    x = y\n    =>:\n        F(x+1) = F(y+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/function-nested-arithmetic-congruence-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d8c53b47ca1021a84be631967f5d7179cb6297a8ee5baebc2839094f111b002c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/function-nested-arithmetic-congruence-direct.lit"
+        ]
+      },
+      {
+        "id": "higher-function-alpha-alias-direct",
+        "source": "have F fn(h fn(t R) R) R\nhave g fn(t R) R\nhave h fn(t R) R = fn(y R) R {-1*g(y)}\nh = fn(x R) R {-1*g(x)}\nF(h) = F(fn(x R) R {-1*g(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/higher-function-alpha-alias-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b6124e1979390549e3f5108a506075835c4c1b243e2aca93ddd77168280a2fbe"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/higher-function-alpha-alias-direct.lit"
+        ]
+      },
+      {
+        "id": "higher-function-argument-congruence-direct",
+        "source": "forall F fn(h fn(t R) R) R,g,h fn(t R) R:\n    g = h\n    =>:\n        F(g) = F(h)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/higher-function-argument-congruence-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "566f77a8aa37413b511dbede59305e268977ea0c1aa1b9e92372a084b92ea4e1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/higher-function-argument-congruence-direct.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-direct",
+        "source": "forall p,q cart(R,R):\n    p(1) = q(1)\n    p(2) = q(2)\n    =>:\n        p = q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aed59ad0909712da2e430c67bc528e5e926c949851143f9e3e3a2cb5be527dad"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-direct.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-infinite-false",
+        "source": "claim:\n    ? forall p,q fn(x N+) R:\n        p(1) = q(1)\n        p(2) = q(2)\n        =>:\n            p = q\n    release thm tuple_equal_from_coordinates(p,q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-infinite-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9460b6db95b9759ca8213905e13fea95f16c53c4ef224f312a1da1a0d1ba423b"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-infinite-false.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-length-false",
+        "source": "claim:\n    ? forall p cart(R,R),q cart(R,R,R):\n        p(1) = q(1)\n        p(2) = q(2)\n        =>:\n            p = q\n    release thm tuple_equal_from_coordinates(p,q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-length-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5bde59b374ab956f3ef2da225461716be9e3b64b7745a2a2ebbe947039e402fc"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-length-false.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-missing-false",
+        "source": "forall p,q cart(R,R):\n    p(1) = q(1)\n    =>:\n        p = q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-missing-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a75fc6181d8625d9d77b14347ba113153e67e1217395ab417bd9d7b69635834a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-missing-false.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-native",
+        "source": "claim:\n    ? forall p,q cart(R,R):\n        p(1) = q(1)\n        p(2) = q(2)\n        =>:\n            p = q\n    release thm tuple_equal_from_coordinates(p,q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "94badc1d48eec3539140d2930e18b14752dfedcf839b8fbd5a8bb328e1af2bb8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-native.lit"
+        ]
+      },
+      {
+        "id": "pair-literal-equality-direct",
+        "source": "forall a,b,c,d R:\n    a = c\n    b = d\n    =>:\n        (a,b) = (c,d)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-literal-equality-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f89f2dff2e25677b853e9c348fab6d76210411f29d7ed16b0c4da455a3102849"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-literal-equality-direct.lit"
+        ]
+      },
+      {
+        "id": "pair-literal-equality-native",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a = c\n        b = d\n        =>:\n            (a,b) = (c,d)\n    release thm tuple_equal_from_coordinates((a,b),(c,d))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-literal-equality-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c814e82142f238c8fa79c5c14ff290f332a50aad534339b30c64a9199331a60c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-literal-equality-native.lit"
+        ]
+      },
+      {
+        "id": "pair-projections-from-equality",
+        "source": "forall p,q cart(R,R):\n    p = q\n    =>:\n        p(1) = q(1)\n        p(2) = q(2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-projections-from-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aa996ebb5da8a557f37b4dbcbce98af78f44ebd9a2e52c877ce0189740a54d7a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-projections-from-equality.lit"
+        ]
+      },
+      {
+        "id": "pair-reconstruction-direct",
+        "source": "forall p cart(R,R):\n    p = (p(1),p(2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-reconstruction-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f030eb4988289f62ea05ecdbabc29a4cb6c4354843e69348320ecfe19f9e7264"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-reconstruction-direct.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-one-chain",
+        "source": "claim:\n    ? forall p,q cart(R,R):\n        p(1) = q(1)\n        p(2) = q(2)\n        =>:\n            p = q\n    p = (p(1),p(2)) = (q(1),q(2)) = q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-one-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c7c76f49037cffce9ffc1b9a59f207cc7055159a1197afbea03dc5a54e79156e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-one-chain.lit"
+        ]
+      },
+      {
+        "id": "pair-coordinates-enumerated-native",
+        "source": "claim:\n    ? forall p,q cart(R,R):\n        p(1) = q(1)\n        p(2) = q(2)\n        =>:\n            p = q\n    by enumerate finite_set:\n        ? forall coordinate_index 1...2:\n            p(coordinate_index) = q(coordinate_index)\n    release thm tuple_equal_from_coordinates(p,q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/pair-coordinates-enumerated-native.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c2f74dce73e712a09c3bcbbac69ec3939a44f78db347c224b40c026a41a55dd8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/pair-coordinates-enumerated-native.lit"
+        ]
+      },
+      {
+        "id": "higher-function-alpha-alias-explicit",
+        "source": "thm apply_equal_argument:\n    ? forall X,Y set,F fn(t X) Y,a,b X:\n        a = b\n        =>:\n            F(a) = F(b)\nhave F fn(h fn(t R) R) R\nhave g fn(t R) R\nhave h fn(t R) R = fn(y R) R {-1*g(y)}\nh = fn(x R) R {-1*g(x)}\nrelease thm apply_equal_argument(fn(t R) R,R,F,h,fn(x R) R {-1*g(x)})\nF(h) = F(fn(x R) R {-1*g(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/higher-function-alpha-alias-explicit.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d78273828ecc4db8d6aa575b0abfef7b80933b530b22fbd68ded03922470978"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/higher-function-alpha-alias-explicit.lit"
+        ]
+      },
+      {
+        "id": "higher-function-different-capture-false",
+        "source": "forall F fn(h fn(t R) R) R,g1,g2 fn(t R) R:\n    F(fn(x R) R {-1*g1(x)}) = F(fn(y R) R {-1*g2(y)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/higher-function-different-capture-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "161406ceacc8b4d5bbdf4e3a840fbbf73890e79bb1e80b9edc84e80a5a009d87"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/higher-function-different-capture-false.lit"
+        ]
+      },
+      {
+        "id": "higher-function-partial-domain-invalid",
+        "source": "have F fn(h fn(t R) R) R\nhave g fn(t R) R\nF(fn(x R) R {-1*g(x)}) = F(fn(x R+) R {-1*g(x)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/higher-function-partial-domain-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f9bcceb5625b9d394105fb99ea88f3e1412cca9fed5a202e50e1dcef9acb87ec"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/higher-function-partial-domain-invalid.lit"
+        ]
+      },
+      {
+        "id": "midpoint-scalar-two-chain",
+        "source": "claim:\n    ? forall a,c,d,f R:\n        (a+d)/2 = (c+f)/2\n        =>:\n            a-c = f-d\n    a+d = 2*((a+d)/2) = 2*((c+f)/2) = c+f\n    a-c = (a+d)-c-d = (c+f)-c-d = f-d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/midpoint-scalar-two-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f9b78d9f78f20cfb2b091a6704ffc6e0ea5fd891c738911ab9ac4738c22afa1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/midpoint-scalar-two-chain.lit"
+        ]
+      },
+      {
+        "id": "midpoint-scalar-one-chain",
+        "source": "claim:\n    ? forall a,c,d,f R:\n        (a+d)/2 = (c+f)/2\n        =>:\n            a-c = f-d\n    a-c = 2*((a+d)/2)-c-d = 2*((c+f)/2)-c-d = f-d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/midpoint-scalar-one-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5ecebba431b422c49af417eeeb46540739248ca274098afa4b51f74e85ff8012"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/midpoint-scalar-one-chain.lit"
+        ]
+      },
+      {
+        "id": "midpoint-pair-transport",
+        "source": "claim:\n    ? forall a,c,d,f,m,n cart(R,R):\n        m = n\n        m(1) = (a(1)+d(1))/2\n        m(2) = (a(2)+d(2))/2\n        n(1) = (c(1)+f(1))/2\n        n(2) = (c(2)+f(2))/2\n        =>:\n            (a(1)-c(1),a(2)-c(2)) = (f(1)-d(1),f(2)-d(2))\n    m(1) = n(1)\n    m(2) = n(2)\n    a(1)-c(1) = 2*((a(1)+d(1))/2)-c(1)-d(1) = 2*m(1)-c(1)-d(1) = 2*n(1)-c(1)-d(1) = 2*((c(1)+f(1))/2)-c(1)-d(1) = f(1)-d(1)\n    a(2)-c(2) = 2*((a(2)+d(2))/2)-c(2)-d(2) = 2*m(2)-c(2)-d(2) = 2*n(2)-c(2)-d(2) = 2*((c(2)+f(2))/2)-c(2)-d(2) = f(2)-d(2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/midpoint-pair-transport.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1fbca1a08763b6a47d88c55b70a4f0ea24e10952508c8d569e200b8c945b22f0"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-12-cases/midpoint-pair-transport.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "pair-coordinates-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5199a3bbcd2384839b734e72d124f959d38e1daedd1b79b291a5f672db947469",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall p, q cart(R, R):\\n    p(1) = q(1)\\n    p(2) = q(2)\\n    =>:\\n        p = q\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall p, q cart(R, R):\\n    p(1) = q(1)\\n    p(2) = q(2)\\n    =>:\\n        p = q\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "pair-coordinates-native",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ba1afc30dd8ddca706c3e905e0bdb6ae480d274814722e6c6b3d5e022cd71a77",
+          "excerpt": "... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall p, q cart(R, R):\\n        p(1) = q(1)\\n        p(2) = q(2)\\n        =>:\\n            p = q\\n    release thm tuple_equal_from_coordinates(p, q)\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\": \"Claim\",\r\n        \"message\": \"Prove a claim block and store its conclusions\",\r\n        \"phase\": \"claim\",\r\n        \"failure\": {\r"
+        }
+      },
+      {
+        "case": "function-nested-algebra-identity-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "49a471a2ad6d53df815ebbe3aa0405d50389e11db554130e81bc8d06cfffe519",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, F fn (t R) R:\\n    F((x + 1) - 1) = F(x)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, F fn (t R) R:\\n    F((x + 1) - 1) = F(x)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "function-nested-algebra-identity-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0b6a5634ba0913e5e52ff5787c74f15025cea21f40819ec20719f0ca4307c535",
+          "excerpt": "... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "pair-coordinates-one-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "pair-coordinates-enumerated-native",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      }
+    ]
+  }
+}

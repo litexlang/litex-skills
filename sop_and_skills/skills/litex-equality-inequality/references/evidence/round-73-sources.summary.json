@@ -1,0 +1,100 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-73-sources.json",
+  "original_sha256": "97b4796f328dff30ce300dbf3a4e9a97da46efc1f61194443b788c85f34c2545",
+  "original_bytes": 10156,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/7_calculus/main.lit",
+    "source_sha256": "24c104c79b76747e2f02dd9e0dc20a3184b43d11167862b71af769998efc8659",
+    "scope": "Exact calculus showcase square/tangent definitions and algebraic remainder theorem, isolated from derivative predicates; labelled lower-bound consumer probes.",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/source-theorem.lit"
+      },
+      {
+        "id": "chain-only",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)-square_tangent_at_three(x)=x^2-(9+6*(x-3))=(x-3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/chain-only.lit"
+      },
+      {
+        "id": "values-only",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)=x^2\n    square_tangent_at_three(x)=9+6*(x-3)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/values-only.lit"
+      },
+      {
+        "id": "direct-equality",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nforall x R:\n    square_function(x)-square_tangent_at_three(x)=(x-3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/direct-equality.lit"
+      },
+      {
+        "id": "empty-theorem",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/empty-theorem.lit"
+      },
+      {
+        "id": "lower-bound-source-route",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2\n    square_tangent_at_three(x)<=square_function(x)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/lower-bound-source-route.lit"
+      },
+      {
+        "id": "lower-bound-theorem-call-only",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/lower-bound-theorem-call-only.lit"
+      },
+      {
+        "id": "lower-bound-bare",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nforall x R:\n    square_tangent_at_three(x)<=square_function(x)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/lower-bound-bare.lit"
+      },
+      {
+        "id": "wrong-error-sign",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = -(x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/wrong-error-sign.lit"
+      },
+      {
+        "id": "false-strict-lower-bound",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n\nforall x R:\n    square_tangent_at_three(x)<square_function(x)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/false-strict-lower-bound.lit"
+      },
+      {
+        "id": "numeric-contact",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nsquare_function(3)=9\nsquare_tangent_at_three(3)=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/numeric-contact.lit"
+      },
+      {
+        "id": "numeric-gap",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nsquare_function(4)-square_tangent_at_three(4)=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/numeric-gap.lit"
+      },
+      {
+        "id": "delete-square-value",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/delete-square-value.lit"
+      },
+      {
+        "id": "delete-tangent-value",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/delete-tangent-value.lit"
+      },
+      {
+        "id": "short-theorem-lower-bound-no-echo",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)=x^2\n    square_tangent_at_three(x)=9+6*(x-3)\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/short-theorem-lower-bound-no-echo.lit"
+      },
+      {
+        "id": "short-theorem-lower-bound-error-chain",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)=x^2\n    square_tangent_at_three(x)=9+6*(x-3)\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2=square_function(x)-square_tangent_at_three(x)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/short-theorem-lower-bound-error-chain.lit"
+      },
+      {
+        "id": "numeric-gap-with-values",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nsquare_function(4)=16\nsquare_tangent_at_three(4)=15\nsquare_function(4)-square_tangent_at_three(4)=1\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/numeric-gap-with-values.lit"
+      }
+    ]
+  }
+}

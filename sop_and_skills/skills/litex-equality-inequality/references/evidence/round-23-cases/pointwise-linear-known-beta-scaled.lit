@@ -1,0 +1,4 @@
+forall u,v fn(t R) R,a,b,d,x R:
+    fn(k R) R {a*u(k)+b*v(k)}(x)=a*u(x)+b*v(x)
+    =>:
+        fn(k R) R {a*u(k)+b*v(k)}(x)*d=(a*u(x)+b*v(x))*d

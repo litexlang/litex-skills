@@ -1,0 +1,5 @@
+prop perpendicular3(u,v cart(R,R,R)):
+    chap09::dot3(u,v)=0
+
+chap09::dot3((1,0,0),(0,1,0))=0
+$perpendicular3((1,0,0),(0,1,0))

@@ -1,0 +1,42 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-61-session.json",
+  "original_sha256": "430650ecf01dd6e3c5a7e1c7d63f3d0001f5ee45c64f35e0cf37e93aedda2dad",
+  "original_bytes": 1098,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "chap09::dot3((1,2,3),(4,5,6))=32",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "56d1267c367e4369c5bed7f323a1a1b4277207ff9ee1c5732627fa4e6e8260ae",
+        "excerpt": "chap09::dot3((1,2,3),(4,5,6))=32\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "chap09::dot3((1,2,3),(4,5,6))=31",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6cc258f196ca3a9effd75f1193e184bc8a34841d3e6ea0f8a272974270976a07",
+        "excerpt": "chap09::dot3((1,2,3),(4,5,6))=31\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"f0::dot3((1, 2, 3), (4, 5, 6)) = 31\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"f0::dot3((1, 2, 3), (4, 5, 6)) = 31\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "chap09::norm3_sq((1,2,2))=9",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4a9f69f5597939347ec80ce4f2ae673d76f83449c0c1712516e4c5f3906f3e5a",
+        "excerpt": "chap09::norm3_sq((1,2,2))=9\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "by def $perpendicular3((1,0,0),(0,1,0))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "592608fe9be4f6fcf794a5fcc8546511e4c347c8ad161959f8d8a8ef213a9a33",
+        "excerpt": "by def $perpendicular3((1,0,0),(0,1,0))\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    }
+  ]
+}

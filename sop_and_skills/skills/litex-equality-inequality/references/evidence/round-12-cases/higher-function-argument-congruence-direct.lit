@@ -1,0 +1,4 @@
+forall F fn(h fn(t R) R) R,g,h fn(t R) R:
+    g = h
+    =>:
+        F(g) = F(h)

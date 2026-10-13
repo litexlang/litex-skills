@@ -1,0 +1,39 @@
+# Elementary number theory in Litex.
+#
+# Included: witness-based divisibility, linear combinations, a Bezout-style
+# gcd certificate, the linear Diophantine criterion, and modular congruence.
+
+prop divides_by(d, n Z):
+    exist k Z st {n = d * k}
+
+# Compose the two divisibility witnesses by multiplying them.
+thm divisibility_is_transitive:
+    ? forall a, b, c Z:
+        $divides_by(a, b)
+        $divides_by(b, c)
+        =>:
+            $divides_by(a, c)
+    obtain k from $divides_by(a, b)
+    obtain m from $divides_by(b, c)
+    c = b * m = (a * k) * m = a * (k * m)
+    witness $divides_by(a, c) from k * m
+
+witness $divides_by(3, 12) from 4:
+    12 = 3 * 4
+witness $divides_by(12, 60) from 5:
+    60 = 12 * 5
+release thm divisibility_is_transitive(3, 12, 60)
+$divides_by(3, 60)
+
+# A common divisor divides every integer linear combination. The proof is
+# witness arithmetic rather than a hidden divisibility tactic.
+thm common_divisor_divides_linear_combination:
+    ? forall d, a, b, x, y Z:
+        $divides_by(d, a)
+        $divides_by(d, b)
+        =>:
+            $divides_by(d, a * x + b * y)
+    obtain p from $divides_by(d, a)
+    obtain q from $divides_by(d, b)
+    witness $divides_by(d, a * x + b * y) from p * x + q * y
+

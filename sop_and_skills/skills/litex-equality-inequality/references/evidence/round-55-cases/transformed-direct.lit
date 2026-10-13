@@ -1,0 +1,4 @@
+have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)
+have fn r55_sine_scale_amplitude(A R) R = abs(A)
+
+r55_transformed_sine(2,3,pi/6,0)=1

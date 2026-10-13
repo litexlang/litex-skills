@@ -1,0 +1,500 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-74-2026-10-09.json",
+  "original_sha256": "9f10fa41334caa9435ac7068d14072e7c94fa1b55197409a005e86a7f1c23d17",
+  "original_bytes": 270997,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "6f119c3d7067a8f7a023ea88a08952b73bf6070eeab0b7ff0a1b35b01bf5cd54",
+    "cases": [
+      {
+        "id": "source-prefix",
+        "source": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_closeness_to(a fn(index N+) R, L R, epsilon R+):\n    exist n0 N+ st {$is_tail_close_to(a, L, epsilon, n0)}\n\nprop has_limit(a fn(index N+) R, L R):\n    forall epsilon R+:\n        $has_eventual_closeness_to(a, L, epsilon)\n\nprop is_convergent_sequence(a fn(index N+) R):\n    exist L R st {$has_limit(a, L)}\n\n# A constant sequence is eventually epsilon-close immediately, with n0 = 1.\n\ntemplate<c R>:\n    have fn constant_sequence(n N+) R = c\n\nthm constant_sequence_has_limit:\n    ? forall c R:\n        $has_limit(\\constant_sequence<c>, c)\n    claim:\n        ? forall epsilon R+:\n            $has_eventual_closeness_to(\\constant_sequence<c>, c, epsilon)\n        claim:\n            ? forall n N+:\n                n >= 1\n                =>:\n                    |\\constant_sequence<c>(n) - c| < epsilon\n            \\constant_sequence<c>(n) = c\n            \\constant_sequence<c>(n) - c = 0\n            |\\constant_sequence<c>(n) - c| = 0\n            0 < epsilon\n            |\\constant_sequence<c>(n) - c| < epsilon\n        by def $is_tail_close_to(\\constant_sequence<c>, c, epsilon, 1)\n        witness $has_eventual_closeness_to(\\constant_sequence<c>, c, epsilon) from 1\n    by def $has_limit(\\constant_sequence<c>, c)\n    $has_limit(\\constant_sequence<c>, c)\n\n# Keep witness construction in a claim, then close the contradiction with facts.\n# The common tail index n1 + n2 is at least each positive starting index.\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/source-prefix.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/source-prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d1d01aee1707089392aafcb796d4599b27a668a218666820f92d4a42c6abf566"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/source-prefix.lit"
+        ]
+      },
+      {
+        "id": "source-unique",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ac9df395d47000d049aef007c297e841a041ff16c097e9c27e60462ac58fe79f",
+          "characters": 3337,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/source-unique.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/source-unique.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c91f5558c5be134c3b04af7b2f520a8f2a084fb1e5412310dec1d6b91d547823"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/source-unique.lit"
+        ]
+      },
+      {
+        "id": "direct-gap-positivity",
+        "source": {
+          "text_omitted": true,
+          "sha256": "b4d5b6806639955860bfef26b33cedba6e085fdbef3dbc44189396199052dfd8",
+          "characters": 3069,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/direct-gap-positivity.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/direct-gap-positivity.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "79c6b494919e2061234b8ca75e75d14c5299d65d88f3202a89ba39c0d8ee6551"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/direct-gap-positivity.lit"
+        ]
+      },
+      {
+        "id": "gap-nonzero-and-positivity",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ad48a2137f2c0697109a17b156d72a04680407d926e11098a94190fb90c02945",
+          "characters": 3084,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/gap-nonzero-and-positivity.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/gap-nonzero-and-positivity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ca6a55ddac6ef07b82c82ff81a52ee47319eb0d4c3b60f0ea36383edce8b6d15"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/gap-nonzero-and-positivity.lit"
+        ]
+      },
+      {
+        "id": "short-gap-delete-epsilon-positive",
+        "source": {
+          "text_omitted": true,
+          "sha256": "e0055782596a1bbb548fee17e5627e3e5cbfc991e5391d7358b23f233a6a16ff",
+          "characters": 3043,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/short-gap-delete-epsilon-positive.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/short-gap-delete-epsilon-positive.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "955172ab4b9e7a71c31a06304e7bf26757842a0be985ee20c7a77d9e24a422f3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/short-gap-delete-epsilon-positive.lit"
+        ]
+      },
+      {
+        "id": "short-gap-delete-epsilon-membership",
+        "source": {
+          "text_omitted": true,
+          "sha256": "7d6eb1c3addd4d05ebab9c4689efb2164fd3e4847253c3cfa36156db331df682",
+          "characters": 3040,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/short-gap-delete-epsilon-membership.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/short-gap-delete-epsilon-membership.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "658bb9010cffcb80115c00190499387f22942d7457b7b460a8e9ef03c358cbc2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/short-gap-delete-epsilon-membership.lit"
+        ]
+      },
+      {
+        "id": "wrong-shifted-limit-conclusion",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c723629d11ca2d2c92661f8acac6af5ba893839f7aae0912c9e92566ba03c9e3",
+          "characters": 3339,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/wrong-shifted-limit-conclusion.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/wrong-shifted-limit-conclusion.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "75b1ba90dc3a8501bb9c256e0cbafabd1485e85434db55c0c1ea7f9396955d19"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/wrong-shifted-limit-conclusion.lit"
+        ]
+      },
+      {
+        "id": "missing-second-limit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "4e4180b7fc253f9a79127c43bfee753e4216dc380a5814ed7d351a7fff374d13",
+          "characters": 3311,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/missing-second-limit.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/missing-second-limit.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c90960460af02a10cf1647f93e8ed9d482109be5b47c8c80c6348f1f213cf649"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/missing-second-limit.lit"
+        ]
+      },
+      {
+        "id": "nonzero-gap-delete-epsilon-positive",
+        "source": {
+          "text_omitted": true,
+          "sha256": "6a494b1fb7f0f8225b3c1658e187a1ad272f37ebb6eac0ac80465e2880772bdd",
+          "characters": 3058,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/nonzero-gap-delete-epsilon-positive.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/nonzero-gap-delete-epsilon-positive.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0aa3b2fd917c5ef266ffda69d2671be84036044287974deda43fc92e7c86e18e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/nonzero-gap-delete-epsilon-positive.lit"
+        ]
+      },
+      {
+        "id": "nonzero-gap-delete-epsilon-membership",
+        "source": {
+          "text_omitted": true,
+          "sha256": "db7ab1e7262ba2b6cddac7c4208d0f3e00aa5c40551d53cc5481df85d13d30b2",
+          "characters": 3055,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/nonzero-gap-delete-epsilon-membership.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/nonzero-gap-delete-epsilon-membership.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ee309bc853005561336bcb2f9e18d735f3fc15e83d1fee7d9784d62d3d07f5b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/nonzero-gap-delete-epsilon-membership.lit"
+        ]
+      },
+      {
+        "id": "nonzero-gap-delete-both-epsilon-facts",
+        "source": {
+          "text_omitted": true,
+          "sha256": "a4c4749216345721c6bc670b839d2402c2ecfc58c243db4e098a62b568d179d1",
+          "characters": 3029,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/nonzero-gap-delete-both-epsilon-facts.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/nonzero-gap-delete-both-epsilon-facts.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5c357e629a20343e8266a680c63fe6df909a2d192a649b8186f39da40605abd5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/nonzero-gap-delete-both-epsilon-facts.lit"
+        ]
+      },
+      {
+        "id": "only-difference-nonzero-bridge",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2ec64ebda5ecdd65082276ccd7598c3c832ee85168976a267ff8cf70a7b16e27",
+          "characters": 3011,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/only-difference-nonzero-bridge.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/only-difference-nonzero-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5a26509fc477b93d5dcd1366c6c9ff7384063693e9d3905625c764eefa0399c1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/only-difference-nonzero-bridge.lit"
+        ]
+      },
+      {
+        "id": "short-route-wrong-shifted-limit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "afff8ec0d4a5c390d1406f480d89d59f3a3ba30bf6ec29498ea364fd19986f75",
+          "characters": 3031,
+          "excerpt": "# Real analysis in Litex, setting-first.\n#\n# Included: epsilon tails, sequence limits and convergence, constant-sequence\n# convergence, uniqueness of limits, and a uniquely defined limit selector.\n#\n# Main line: epsilon tails -> convergence -> uniqueness of a sequence limit.\n# Sequences here are functions on N+, retaining the original one-based domain.\n# Write that carrier explicitly instead of relying on the migrating seq alias.\n\nprop is_tail_close_to(a fn(index N+) R, L R, epsilon R+, n0 N+):\n    forall n N+:\n        n >= n0\n        =>:\n            |a(n) - L| < epsilon\n\nprop has_eventual_clo"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/short-route-wrong-shifted-limit.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-74-cases/short-route-wrong-shifted-limit.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e8ec49d4d8ee7a4775f9d27971ea363bd88dbe6fa8f1de1d1cca55ee4736fffa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round74-cases/short-route-wrong-shifted-limit.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 13,
+      "accepted": 6,
+      "normal_rejections": 7
+    },
+    "scope": "Actual sequence-limit uniqueness and exact source prefix, fixed radius gap/3 and one-based fn domain retained. Same-target sign/deletion probes, no predicate redesign.",
+    "failed_baseline_deletion_warning": "short-gap-delete-epsilon-positive/membership start from already-failing direct-gap route; they do not establish epsilon fact necessity. Successful nonzero-gap deletion variants own that conclusion."
+  }
+}

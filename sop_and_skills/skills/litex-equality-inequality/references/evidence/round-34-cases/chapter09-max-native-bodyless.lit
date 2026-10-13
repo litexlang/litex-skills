@@ -1,0 +1,6 @@
+thm r34_chapter09_max_native_bodyless:
+    ? forall a, b, A, B R, epsilon R+:
+        abs(a - A) <= epsilon
+        abs(b - B) <= epsilon
+        =>:
+            abs(max(a,b) - max(A,B)) <= epsilon

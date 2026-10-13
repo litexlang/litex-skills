@@ -1,0 +1,1305 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-61-2026-10-09.json",
+  "original_sha256": "387cc416d73163908a843f6b8383468db8eb80c0ea91ab2acc48a0e13c304c39",
+  "original_bytes": 104567,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "048f93f329998a56e90c9c1d0fc25537cf90f3992920288703779f285ca5090e",
+    "cases": [
+      {
+        "id": "dot-numeric-direct",
+        "source": "chap09::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5c765300f7c21876ef872209f9a3348552e3c52f54391feb5d47e6c48ecd3063"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-direct/main.lit"
+        ]
+      },
+      {
+        "id": "dot-numeric-source-chain",
+        "source": "chap09::dot3((1,2,3),(4,5,6))=1*4+2*5+3*6=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dfefa4f3dcfc31a3cfde64dd3dfbe32ddd9e64ce97bcb14b9e793b16eb55a9dd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-source-chain/main.lit"
+        ]
+      },
+      {
+        "id": "norm-numeric-direct",
+        "source": "chap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7bf039503e52839a23844138ae17dcc6df8a430b074cd0a0a50170cdaa99dbac"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-direct/main.lit"
+        ]
+      },
+      {
+        "id": "norm-numeric-source-chain",
+        "source": "chap09::norm3_sq((1,2,2))=chap09::dot3((1,2,2),(1,2,2))=1^2+2^2+2^2=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2a334257d8c32b3d509ccdee0d9a24a7db132edd6e1ba4e1bba1852426b6ad7c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-source-chain/main.lit"
+        ]
+      },
+      {
+        "id": "dot-symmetry-direct",
+        "source": "forall u,v cart(R,R,R):\n    chap09::dot3(u,v)=chap09::dot3(v,u)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a9450eb1d33dfde611d98cd8ecdbaa56c084086fb1141a13151998ee36b1400a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-symmetry-direct/main.lit"
+        ]
+      },
+      {
+        "id": "norm-definition-direct",
+        "source": "forall u cart(R,R,R):\n    chap09::norm3_sq(u)=chap09::dot3(u,u)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c329e0f0662571f4d6ea2b31aada9bd89a22909f0ab94bd3bb936ab9d9494eed"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-definition-direct/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-source",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nchap09::dot3((1,0,0),(0,1,0))=0\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a952b28f2e15d722a837aa0be2ddd044b7a4cfd00f49ffb702a8a4f1f9a909ff"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-source/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-bare",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b3af9679cdc6108e4707ec89491a0cab123079554cd30c8a05fe8acb76746845"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-bare/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-fold",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "034090bfb97bb53130023d067a696d8acff4556be88af756c750327aa5faa746"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-fold/main.lit"
+        ]
+      },
+      {
+        "id": "false-dot-value",
+        "source": "chap09::dot3((1,2,3),(4,5,6))=31\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "af43ab3e41ef3e35c3383374b11a906efdaf3d62b2a700258d777c198f8a13a5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-dot-value/main.lit"
+        ]
+      },
+      {
+        "id": "false-norm-value",
+        "source": "chap09::norm3_sq((1,2,2))=8\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f457086b87174942ac21b9ce2c47b27c72b7347c0f1c727b4632e8cc745c2bff"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-norm-value/main.lit"
+        ]
+      },
+      {
+        "id": "false-perpendicular-fold",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(1,0,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "628d211136ff2ae06239a6a30d7eb946930ed217d2a995a849abb6dbd6427e4e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-perpendicular-fold/main.lit"
+        ]
+      },
+      {
+        "id": "dot-numeric-direct-file-qualified",
+        "source": "chap09:::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0aafa14882f8cabd281e336ea8ddd6970cc1c9d97beaad79ab4d5a18e1b489b0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-direct-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "dot-numeric-source-chain-file-qualified",
+        "source": "chap09:::dot3((1,2,3),(4,5,6))=1*4+2*5+3*6=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "510c1582fc0b98110aa96aa2b8b9ddfdaf7b6d0477c5a07d6aa2fa3720303fdf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-source-chain-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "norm-numeric-direct-file-qualified",
+        "source": "chap09:::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fabeb896339adaaa24d5c1e21f258f3a37c8646ba6ec12147d97a3423570fbc1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-direct-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "norm-numeric-source-chain-file-qualified",
+        "source": "chap09:::norm3_sq((1,2,2))=chap09:::dot3((1,2,2),(1,2,2))=1^2+2^2+2^2=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "55eeb492edf805e2af8e0a93fb08108ed802bd98f0d5329f3861c01bb527bfe0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-source-chain-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "dot-symmetry-direct-file-qualified",
+        "source": "forall u,v cart(R,R,R):\n    chap09:::dot3(u,v)=chap09:::dot3(v,u)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 2 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b5c961835ac2d83d58be759e7bddc5f832801b339c7c879b1abf0efacb1c2c9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-symmetry-direct-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "norm-definition-direct-file-qualified",
+        "source": "forall u cart(R,R,R):\n    chap09:::norm3_sq(u)=chap09:::dot3(u,u)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 2 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ffab4e3083bd5c5e273a2eb1effa8147ec1e4075cfd0df25309ab50250339d66"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-definition-direct-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-source-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\nchap09:::dot3((1,0,0),(0,1,0))=0\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 2 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2f8d4bc6b75afb138b99200e9111248cbd98599459c0b1c55d79d5660f3fef9c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-source-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-bare-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 2 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3620ca5b7601fe21b28df26f93e85a64d1ddafb9ba36964dc71b94883a09e2c7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-bare-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-fold-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 2 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5e4b737cf7976b6bb35637d2438d911543eae3fb19a99832d5dfb5be43e1310b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-fold-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "false-dot-value-file-qualified",
+        "source": "chap09:::dot3((1,2,3),(4,5,6))=31\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "156a4ed624c39215c4f473ecadd94d810175a124f30a3ecae438178cf722d7af"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-dot-value-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "false-norm-value-file-qualified",
+        "source": "chap09:::norm3_sq((1,2,2))=8\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "60ecf86458cb57ea0d4ed5a470a9b90fb9dea2352e5b3c9f651f8daa2fafcea6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-norm-value-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "false-perpendicular-fold-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(1,0,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold-file-qualified/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold-file-qualified/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: unknown import alias `chap09` in the current module at line 2 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold-file-qualified/main.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7acd2d83546e144c4e55cdc6174c224b49711c009ebfbdb30b174432d24a5a73"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-perpendicular-fold-file-qualified/main.lit"
+        ]
+      },
+      {
+        "id": "dot-numeric-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-direct-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50b5690f2aa5d2196757c47beb786cd25fb274c015465a4fed130bea0d7eece9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-direct-released/main.lit"
+        ]
+      },
+      {
+        "id": "dot-numeric-source-chain-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::dot3((1,2,3),(4,5,6))=1*4+2*5+3*6=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-numeric-source-chain-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "87ab817bec01b7b9e28daa7b0f611201e4eabeac90fbf2b4d9837bad74d3c0ca"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-source-chain-released/main.lit"
+        ]
+      },
+      {
+        "id": "norm-numeric-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-direct-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c3f9ba9a2cb3068c6639681e9f942c69173b3df800ca7a356e752001574bc54f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-direct-released/main.lit"
+        ]
+      },
+      {
+        "id": "norm-numeric-source-chain-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::norm3_sq((1,2,2))=chap09::dot3((1,2,2),(1,2,2))=1^2+2^2+2^2=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-numeric-source-chain-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "167c4a0cca261ac5ea9a63244ef0d60b72dea14b16884f442f6ef5e5dd2f6a91"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-source-chain-released/main.lit"
+        ]
+      },
+      {
+        "id": "dot-symmetry-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nforall u,v cart(R,R,R):\n    chap09::dot3(u,v)=chap09::dot3(v,u)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-symmetry-direct-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5d696f81b465b175731f730845b02b2a75568ecf43ac89399dd783640f6efa4f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-symmetry-direct-released/main.lit"
+        ]
+      },
+      {
+        "id": "norm-definition-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nforall u cart(R,R,R):\n    chap09::norm3_sq(u)=chap09::dot3(u,u)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-definition-direct-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a867f2d0c9fd90461cc63bdf7676df59d18559a88435f2939277490821d63ab6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-definition-direct-released/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-source-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nchap09::dot3((1,0,0),(0,1,0))=0\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-source-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "29d79d8afdace28516a1251310d61a4497b9fe1fbdcc6915ae039a38a7ac9a4b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-source-released/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-bare-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-bare-released/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "43640c70c9d22bcccbe5c98d719d14c05182839e488aa307a2b3440fc6275984"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-bare-released/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-fold-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-fold-released/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "829347e292d6ca91712975f0d7589e21ba06d36a4d4b7e7c85f50bc48525b44b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-fold-released/main.lit"
+        ]
+      },
+      {
+        "id": "false-dot-value-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::dot3((1,2,3),(4,5,6))=31\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-dot-value-released/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20dfbc4ac31355c37241cbfc0d270a579b7d976dc46d644fa847791e929f0ad6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-dot-value-released/main.lit"
+        ]
+      },
+      {
+        "id": "false-norm-value-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::norm3_sq((1,2,2))=8\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-norm-value-released/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b8646c65476256dad4210b1f973067c3890fe2fb5a4734b317937ce2153083a8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-norm-value-released/main.lit"
+        ]
+      },
+      {
+        "id": "false-perpendicular-fold-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(1,0,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold-released/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/false-perpendicular-fold-released/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "118361d5ba148e3addb4e409e5cad444b63d6a297b651cbde010be39f19ea869"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-perpendicular-fold-released/main.lit"
+        ]
+      },
+      {
+        "id": "dot-only-release",
+        "source": "release obj def chap09::dot3\nchap09::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-only-release/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/dot-only-release/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "059f25dc65351ae58d1b358fd8d772dddf0f19133d27f60474d217498f54cf35"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-only-release/main.lit"
+        ]
+      },
+      {
+        "id": "norm-only-release",
+        "source": "release obj def chap09::norm3_sq\nchap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-only-release/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-only-release/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "470e295d4ddb9e13870738ec9c83fd032fbd32e5b8c768b3c47c7b903913708b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-only-release/main.lit"
+        ]
+      },
+      {
+        "id": "norm-dot-release-only",
+        "source": "release obj def chap09::dot3\nchap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-dot-release-only/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/norm-dot-release-only/main.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "df572f8b3186652d401d2d2144ba80e17e9147f9abc250b4e28752716fad4897"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-dot-release-only/main.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-dot-release-only",
+        "source": "release obj def chap09::dot3\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-dot-release-only/main.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-61-cases/perpendicular-dot-release-only/main.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6252b38f3d9ca91fc37224e284a8746a21626db1741d6d8469c2516ed086f590"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-dot-release-only/main.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 40,
+      "accepted": 10,
+      "normal_rejections": 18,
+      "syntax_errors": 12
+    },
+    "scope": "Reduced chap09 scalar export slice with []→() spelling; original qualified chap15 consumers. No whole-chapter prefix claim.",
+    "session_transition": "6037 deliberately ended after saved journals; current round61 snapshot adopted in9174 with checked reduced qualified prefix. No failure-triggered restart."
+  }
+}

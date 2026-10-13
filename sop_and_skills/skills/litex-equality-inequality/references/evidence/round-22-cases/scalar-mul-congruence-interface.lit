@@ -1,0 +1,5 @@
+thm scalar_mul_congruence_probe22:
+    ? forall lhs,rhs,factor R:
+        lhs=rhs
+        =>:
+            lhs*factor=rhs*factor

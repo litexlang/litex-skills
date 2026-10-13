@@ -1,0 +1,4 @@
+forall a,b,c,d R:
+    a*b = c
+    =>:
+        a*(b*d) = c*d

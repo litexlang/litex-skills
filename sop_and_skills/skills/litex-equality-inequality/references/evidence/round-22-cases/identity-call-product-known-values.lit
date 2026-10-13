@@ -1,0 +1,5 @@
+forall m Z:
+    fn(k Z) R {k}(m)=m
+    fn(k Z) R {k}(m+1)=m+1
+    =>:
+        fn(k Z) R {k}(m)*fn(k Z) R {k}(m+1)=m*(m+1)

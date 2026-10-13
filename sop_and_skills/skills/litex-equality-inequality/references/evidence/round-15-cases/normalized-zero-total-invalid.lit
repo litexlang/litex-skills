@@ -1,0 +1,5 @@
+forall p,q,x,y R:
+    p = 0
+    q = 0
+    =>:
+        (p*x+q*y)/(p+q) = 0

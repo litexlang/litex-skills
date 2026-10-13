@@ -1,0 +1,37 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-84-session.json",
+  "original_sha256": "cb98c18007e92fc67acd1a3289fd36107f775e84df32f7c44daad0f77d2d79da",
+  "original_bytes": 2810,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "template<K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>>:\n    have fn vector_neg by exist!:\n        ? forall x V:\n            exist! y V st {space.add(x, y) = space.zero}",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9d28d9e820439d1233dd89efbac7bf001ccb7548d88275de71028611df36fb58",
+        "excerpt": "template<K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>>:\r\n    have fn vector_neg by exist!:\r\n        ? forall x V:\r\n            exist! y V st {space.add(x, y) = space.zero}\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source Field/VectorSpace and short uniqueness theorems accepted round83. Current cold round84 owns cancellation deletion and zero-consumer gates."
+    },
+    {
+      "source": "thm vector_neg_spec:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:\n        space.add(x, \\vector_neg<K, field, V, space>(x)) = space.zero",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3ce5e01afbacad6f6b0b3c241d57daba11de65f99d654d852b53944b9bc8fb5b",
+        "excerpt": "thm vector_neg_spec:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:\r\n        space.add(x, \\vector_neg<K, field, V, space>(x)) = space.zero\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source Field/VectorSpace and short uniqueness theorems accepted round83. Current cold round84 owns cancellation deletion and zero-consumer gates."
+    },
+    {
+      "source": "thm add_left_cancel:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x, y, z V:\n        space.add(x, y) = space.add(x, z)\n        =>:\n            y = z\n    let neg = \\vector_neg<K, field, V, space>\n    release thm vector_neg_spec(K, field, V, space, x)\n    space.add(neg(x), x) = space.add(x, neg(x)) = space.zero\n    y=space.add(space.zero,y)=space.add(space.add(neg(x),x),y)=space.add(neg(x),space.add(x,y))=space.add(neg(x),space.add(x,z))=space.add(space.add(neg(x),x),z)=space.add(space.zero,z)=z",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "04914fe5f2274a78f85b3850b6e638b2e73377e942199ccb59b82e36c1ff77b3",
+        "excerpt": "thm add_left_cancel:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x, y, z V:\r\n        space.add(x, y) = space.add(x, z)\r\n        =>:\r\n            y = z\r\n    let neg = \\vector_neg<K, field, V, space>\r\n    release thm vector_neg_spec(K, field, V, space, x)\r\n    space.add(neg(x), x) = space.add(x, neg(x)) = space.zero\r\n    y=space.add(space.zero,y)=space.add(space.add(neg(x),x),y)=space.add(neg(x),space.add(x,y))=space.add(neg(x),space.add(x,z))=space.add(space.add(neg(x),x),z)=space.add(space.zero,z)=z\r\n\r\n... ... ... ... ... ... ... ... ... succ"
+      },
+      "baseline": "Round68 snapshot Session66922; source Field/VectorSpace and short uniqueness theorems accepted round83. Current cold round84 owns cancellation deletion and zero-consumer gates."
+    }
+  ]
+}

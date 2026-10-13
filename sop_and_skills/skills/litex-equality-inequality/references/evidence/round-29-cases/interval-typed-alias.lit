@@ -1,0 +1,4 @@
+forall S set,a,b R,x S:
+    S='[a,b]
+    =>:
+        a<=x<=b

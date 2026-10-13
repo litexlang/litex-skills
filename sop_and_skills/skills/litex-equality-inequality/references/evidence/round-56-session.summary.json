@@ -1,0 +1,127 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-56-session.json",
+  "original_sha256": "5ea9c86566a54b022d477a3fca69278eaff7100faf681ed5c289ec93f78860b4",
+  "original_bytes": 4382,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r56_identity(x R) R = x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "be29d14f24e25fd729ddd859fbc2f5177ebba5f6b3a8140b953068431fd30b26",
+        "excerpt": "have fn r56_identity(x R) R = x\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "have fn r56_neg_identity(x R) R = -x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2903a7241016b431fd2864df409d147d6c34eb35f7da13bfb9a2717cab2f1631",
+        "excerpt": "have fn r56_neg_identity(x R) R = -x\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "have fn r56_constant_five(x R) R = 5",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ce31ff2d29ee6006f49cbfbefce3bc2f4321e35f62dc7a683dab35116244e360",
+        "excerpt": "have fn r56_constant_five(x R) R = 5\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall t R:\n    r56_neg_identity(t)=-t",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5a31aa7c74a07f4b48c8ddc464c569ad71f5d4662f7f2fd788a1d1c0506fd92e",
+        "excerpt": "forall t R:\r\n    r56_neg_identity(t)=-t\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall y R:\n    r56_identity(y)=y",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "35684bfeb259dc22f4f237f24c9b0597da17c3fbefd6b66a3a81c5dc06bf2722",
+        "excerpt": "forall y R:\r\n    r56_identity(y)=y\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)=x<=y=r56_identity(y)\n        r56_identity(x)<=r56_identity(y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0afdc2547d0e534635c56773a4b786613dd2376542d13d00d9f829cc3615dc34",
+        "excerpt": "forall x,y R:\r\n    x<=y\r\n    =>:\r\n        r56_identity(x)=x<=y=r56_identity(y)\r\n        r56_identity(x)<=r56_identity(y)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "42006f177a9d460edaa7548c5ce53dc49c20a674b34d2d6e37951bb9eae1f297",
+        "excerpt": "forall x,y R:\r\n    x<=y\r\n    =>:\r\n        r56_identity(x)<=r56_identity(y)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)=-y<=-x=r56_neg_identity(x)\n        r56_neg_identity(y)<=r56_neg_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8ad34dd22c3bb06b2b6f06d348c51c9c875b61a00071ed6ae0ba598de72e3884",
+        "excerpt": "forall x,y R:\r\n    x<=y\r\n    =>:\r\n        r56_neg_identity(y)=-y<=-x=r56_neg_identity(x)\r\n        r56_neg_identity(y)<=r56_neg_identity(x)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "396748d7fd0a08bd346b5cc5b0031efa818d2d13b2703c2b804b543f58cce0d2",
+        "excerpt": "forall x,y R:\r\n    x<=y\r\n    =>:\r\n        r56_neg_identity(y)<=r56_neg_identity(x)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)=-y<-x=r56_neg_identity(x)\n        r56_neg_identity(y)<r56_neg_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1861dfadd6337ece648313009ea4fb14635dcdbeb5f98d7d56e268eebe970841",
+        "excerpt": "forall x,y R:\r\n    x<y\r\n    =>:\r\n        r56_neg_identity(y)=-y<-x=r56_neg_identity(x)\r\n        r56_neg_identity(y)<r56_neg_identity(x)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e260863b419f9d8dbb758ad8d7e1c39c301af06ce383668b99e690419aafa06f",
+        "excerpt": "forall x,y R:\r\n    x<y\r\n    =>:\r\n        r56_neg_identity(y)<r56_neg_identity(x)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x R:\n    r56_constant_five(x)=5=r56_constant_five(0)\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3553a6b5d49fbbef4736bba5403b9d301d150fc6a7fad8939993d53017e91eca",
+        "excerpt": "forall x R:\r\n    r56_constant_five(x)=5=r56_constant_five(0)\r\n    r56_constant_five(x)<=r56_constant_five(0)\r\n    r56_constant_five(0)<=r56_constant_five(x)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    },
+    {
+      "source": "forall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "bfcc439108c0bfa8df67a6c3bba66b3a2b86b9f80b9b690404a2e59943dc4ca0",
+        "excerpt": "forall x R:\r\n    r56_constant_five(x)<=r56_constant_five(0)\r\n    r56_constant_five(0)<=r56_constant_five(x)\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round56 current-source build blocked."
+    }
+  ]
+}

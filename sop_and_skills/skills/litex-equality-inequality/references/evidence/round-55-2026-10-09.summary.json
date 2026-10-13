@@ -1,0 +1,733 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-55-2026-10-09.json",
+  "original_sha256": "eeeb549b64136872e7e6cf531f617d3d9b55cc70d3ddf005946c45b4d16a2a3f",
+  "original_bytes": 842528,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "450043e87ce4306bbc834c5ba0a0185dabf0ee59c18d4d76e879b5632af2aef5",
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "build_session": 52713
+    },
+    "cases": [
+      {
+        "id": "source-range",
+        "source": "forall x R:\n    -1<=sin(x)<=1\n    -1<=cos(x)<=1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/source-range.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c1119033242875c70562f657b0377732010b2ba29c00375ea1a6f636a77fb119"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/source-range.lit"
+        ]
+      },
+      {
+        "id": "source-parity",
+        "source": "forall x R:\n    sin(-x)=-sin(x)\n    cos(-x)=cos(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/source-parity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f589397a4b618cabaf9a13091b3b213f692090ea419f07e9c27b4a188a4d47d6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/source-parity.lit"
+        ]
+      },
+      {
+        "id": "source-two-pi-period",
+        "source": "forall x R:\n    sin(x+2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/source-two-pi-period.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7a3d987f692aad34b4ba99c7dcc78e659bd4481f75c1bedf7859a7004dc6ef96"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/source-two-pi-period.lit"
+        ]
+      },
+      {
+        "id": "source-tangent-period",
+        "source": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    cos(x + 1 * pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n        tan(x + 1 * pi) = tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/source-tangent-period.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "00640d13e17df98840003de4e32c16f745945f733a492e437ebeb68af6887356"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/source-tangent-period.lit"
+        ]
+      },
+      {
+        "id": "tangent-one-pi-spelling",
+        "source": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-one-pi-spelling.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "da9a692f164c9298711f15ce3d3e6a957f1fba57ac97800da5404673c7c702e5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-one-pi-spelling.lit"
+        ]
+      },
+      {
+        "id": "false-sine-pi-period",
+        "source": "forall x R:\n    sin(x+pi)=sin(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/false-sine-pi-period.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc8969234ce8f7c0437f54cce23a72a704a5473e2003481344e312d3e34d8f1b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/false-sine-pi-period.lit"
+        ]
+      },
+      {
+        "id": "invalid-tangent-singularity",
+        "source": "tan(pi/2)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/invalid-tangent-singularity.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b5faf3ac2fc09f22fbb88a8f0508f0456ca51918c548cde6e5e7178944d0d7a2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/invalid-tangent-singularity.lit"
+        ]
+      },
+      {
+        "id": "source-numeric",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_transformed_sine(2, 3, pi / 6, 0) = 2 * sin(3 * 0 + pi / 6)\nr55_sine_scale_amplitude(-3) = abs(-3) = 3\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/source-numeric.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "30a1d42bd5033cdda7b49c7ad93d3db262dce6b1ebd640d5e11a8d8df50e6b5a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/source-numeric.lit"
+        ]
+      },
+      {
+        "id": "amplitude-direct",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_sine_scale_amplitude(-3)=3\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/amplitude-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "912517b55fda700f39a4b796d6fe7a970d4d8843e36994d115384870ca6ec758"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/amplitude-direct.lit"
+        ]
+      },
+      {
+        "id": "transformed-direct",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_transformed_sine(2,3,pi/6,0)=1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/transformed-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c530632b75f4147d2eeaf43e09706135ec3706288e5da03c7895988a5d5f2e00"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/transformed-direct.lit"
+        ]
+      },
+      {
+        "id": "transformed-short-chain",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nsin(pi/6)=1/2\nr55_transformed_sine(2,3,pi/6,0)=2*sin(3*0+pi/6)=2*sin(pi/6)=2*(1/2)=1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/transformed-short-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "45f55eef2f380df34d767214086de7ae5ef370a904a66a8dcedad80d3a239314"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/transformed-short-chain.lit"
+        ]
+      },
+      {
+        "id": "false-amplitude",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_sine_scale_amplitude(-3)=-3\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/false-amplitude.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2e2100fd33b09bd3908cebb9271fd96a0c68459567823b4fc2e73f85502421ac"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/false-amplitude.lit"
+        ]
+      },
+      {
+        "id": "false-transformed-value",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_transformed_sine(2,3,pi/6,0)=2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/false-transformed-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a37e345e8ed0b78cfd55c221d11600ed970fab859b70b60fe80b3d2df8b20dff"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/false-transformed-value.lit"
+        ]
+      },
+      {
+        "id": "two-pi-addition-proof",
+        "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/two-pi-addition-proof.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "46226a4d8f188f156ffa4aeb2cfddc84c1853fa35dfa10df21fd0e78e8ac8526"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/two-pi-addition-proof.lit"
+        ]
+      },
+      {
+        "id": "tangent-addition-proof",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(pi)=-1\n    sin(pi)=0\n    sin(x+pi)=sin(x)*cos(pi)+cos(x)*sin(pi)=-sin(x)\n    cos(x+pi)=cos(x)*cos(pi)-sin(x)*sin(pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-addition-proof.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "14a1dd583ee527f68176daa2212cc66f9f14660fe1be6bfe93fe89d6fb7ed215"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-addition-proof.lit"
+        ]
+      },
+      {
+        "id": "tangent-antiperiod-proof",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-antiperiod-proof.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d91272fd2e652af59bcf15f37f2cb6c6666185329295580bd289921430249db8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-antiperiod-proof.lit"
+        ]
+      },
+      {
+        "id": "tangent-argument-bridge",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-argument-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f2d12f589925bf63a3886d6893deb74803045391307de30cd3df11e9edea3f4d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-argument-bridge.lit"
+        ]
+      },
+      {
+        "id": "tangent-first-conclusion",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-first-conclusion.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5a02c863d51bcf375652445cb266275eed55ccd428ceb408e6c40c1c2a3b353a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-first-conclusion.lit"
+        ]
+      },
+      {
+        "id": "tangent-own-sin-cos",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    sin(x+1*pi)=-sin(x)\n    cos(x+1*pi)=-cos(x)\n    tan(x+1*pi)=sin(x+1*pi)/cos(x+1*pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-own-sin-cos.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "24e5bfabf6c5477042e0aa3902b4248a3fc0f1f08bf2f418b80b590476979131"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-own-sin-cos.lit"
+        ]
+      },
+      {
+        "id": "period-delete-cos-value",
+        "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/period-delete-cos-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aa14a6e770dac1124973eedee4ebc89586a5fb4c98388698ae74cfb6f960d60e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/period-delete-cos-value.lit"
+        ]
+      },
+      {
+        "id": "period-delete-sin-value",
+        "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/period-delete-sin-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "87e63d8d50ccbd6ea6ed1029aaa7341fa177a0174c3e6932afa54a939c5d10a2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/period-delete-sin-value.lit"
+        ]
+      },
+      {
+        "id": "tangent-delete-sin-value",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-delete-sin-value.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50beaa9cb730a689030472a266c06150bd7ab899b8d7ebb92d7dbeba99369432"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-delete-sin-value.lit"
+        ]
+      },
+      {
+        "id": "tangent-delete-cos-value",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-55-cases/tangent-delete-cos-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7987eb38b799fcb92cad6a5c255664a0cd32136583020c2298544efad665ac3c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round55-cases/tangent-delete-cos-value.lit"
+        ]
+      }
+    ],
+    "baseline_note": "First pre-build observations were discarded from current acceptance and retained locally. Build52713 completed before this snapshot; every source probe reran on it. Warm Session remains on round51 executable.",
+    "scope": "Actual chapter06 interfaces and source function numeric use probes, preserving tangent guard/conclusion coverage; no whole chapter."
+  }
+}

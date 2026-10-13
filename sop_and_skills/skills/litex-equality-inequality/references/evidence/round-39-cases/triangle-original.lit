@@ -1,0 +1,12 @@
+thm r39_triangle_original:
+    ? forall slope1,slope2,q R,epsilon R+:
+        abs(q-slope1)<epsilon
+        abs(q-slope2)<epsilon
+        =>:
+            abs(slope1-slope2)<2*epsilon
+    slope1-q=-(q-slope1)
+    abs(slope1-q)=abs(-(q-slope1))=abs(q-slope1)
+    slope1-slope2=(slope1-q)+(q-slope2)
+    abs(slope1-slope2)=abs((slope1-q)+(q-slope2))<=abs(slope1-q)+abs(q-slope2)
+    abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon
+

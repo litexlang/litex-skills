@@ -1,0 +1,6 @@
+thm r34_chapter09_min_native_bodyless:
+    ? forall a, b, A, B R, epsilon R+:
+        abs(a - A) <= epsilon
+        abs(b - B) <= epsilon
+        =>:
+            abs(min(a,b) - min(A,B)) <= epsilon

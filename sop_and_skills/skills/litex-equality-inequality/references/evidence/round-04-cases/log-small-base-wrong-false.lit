@@ -1,0 +1,5 @@
+forall a,x,y R+:
+    a < 1
+    x < y
+    =>:
+        log(a,x) < log(a,y)

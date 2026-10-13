@@ -1,0 +1,15 @@
+thm r38_joint_original_spine:
+    ? forall x0 R,radius R+,sample R:
+        sample=x0+radius/2
+        =>:
+            sample!=x0
+            abs(sample-x0)<radius
+    0<radius/2
+    sample=x0+radius/2>x0
+    sample!=x0
+    sample-x0=radius/2
+    sample-x0>0
+    0<=sample-x0
+    abs(sample-x0)=sample-x0=radius/2
+    radius/2<radius
+

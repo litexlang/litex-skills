@@ -1,0 +1,19 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-65-session.json",
+  "original_sha256": "88de445542adeff3014b24f0c475a9a205ef518ca92b2101f7cdccdbc78a5c64",
+  "original_bytes": 584,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "thm r65_factored_roots:\n    ? forall r,s,x R:\n        (x-r)*(x-s)=0\n        =>:\n            x=r or x=s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n        case x-s=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6e066dd5a170d6e926438f153a6a9a87abff22077e91c6f38b4cb159313884b5",
+        "excerpt": "thm r65_factored_roots:\r\n    ? forall r,s,x R:\r\n        (x-r)*(x-s)=0\r\n        =>:\r\n            x=r or x=s\r\n    by cases:\r\n        ? x=r or x=s\r\n        case x-r=0\r\n        case x-s=0\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round61 snapshot Session9174; current round65 cold files own acceptance."
+    }
+  ]
+}

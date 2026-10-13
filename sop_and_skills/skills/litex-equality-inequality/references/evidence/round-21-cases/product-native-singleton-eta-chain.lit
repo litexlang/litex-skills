@@ -1,0 +1,4 @@
+claim:
+    ? forall f fn(k N) R,m N:
+        product(m,m,fn(k N) R {f(k)})=f(m)
+    product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)

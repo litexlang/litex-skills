@@ -1,0 +1,142 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-55-session.json",
+  "original_sha256": "4c5ba20dbf3e0ec5348800c3822188804c25cbb3a5063892cd680e7c2b8bd254",
+  "original_bytes": 24264,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "forall x R:\n    -1<=sin(x)<=1\n    -1<=cos(x)<=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "416c0a2dec4e25bb0afc0cf399db2a5876b05494c4a40db161b0261ae4d06da8",
+        "excerpt": "forall x R:\r\n    -1<=sin(x)<=1\r\n    -1<=cos(x)<=1\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "forall x R:\n    sin(-x)=-sin(x)\n    cos(-x)=cos(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "89a80845a3afdbbcf72914c8937a85602c2c38a54aff98f61b4bd0f7f663e2b3",
+        "excerpt": "forall x R:\r\n    sin(-x)=-sin(x)\r\n    cos(-x)=cos(x)\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "forall x R:\n    sin(x+2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "7dc5393bba26b3595f00384caed6ef26daea4f1618a0c70e6983fc050537a06f",
+        "excerpt": "forall x R:\r\n    sin(x+2*pi)=sin(x)\r\n    cos(x+2*pi)=cos(x)\r\n\r\n... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R:\\n    sin(x + 2 * pi) = sin(x)\\n    cos(x + 2 * pi) = cos(x)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R:\\n    sin(x + 2 * pi) = sin(x)\\n    cos(x + 2 * pi) = cos(x)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    cos(x + 1 * pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n        tan(x + 1 * pi) = tan(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f05e929c8d7948a04ea6a0809c020a3c25ea0abb3efaf77587b882441e8250b1",
+        "excerpt": "forall x R:\r\n    cos(x) != 0\r\n    cos(x + pi) != 0\r\n    cos(x + 1 * pi) != 0\r\n    =>:\r\n        tan(x + pi) = tan(x)\r\n        tan(x + 1 * pi) = tan(x)\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R:\\n    cos(x) != 0\\n    cos(x + pi) != 0\\n    cos(x + 1 * pi) != 0\\n    =>:\\n        tan(x + pi) = tan(x)\\n        tan(x + 1 * pi) = tan(x)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n       "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d5964b360d84162c94cb344b53c76630d5d36516ff0c45ce42a0194baaf47784",
+        "excerpt": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "have fn r55_sine_scale_amplitude(A R) R = abs(A)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1646feeea57826d6bbfad536c8fdaf60c398d730cdd1bfb88f20c395be86117c",
+        "excerpt": "have fn r55_sine_scale_amplitude(A R) R = abs(A)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "r55_transformed_sine(2, 3, pi / 6, 0) = 2 * sin(3 * 0 + pi / 6)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "778ed3e0e22648539452021623178ea6c57b6b68ddd0638342ba1ed31154d024",
+        "excerpt": "r55_transformed_sine(2, 3, pi / 6, 0) = 2 * sin(3 * 0 + pi / 6)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "source": "r55_sine_scale_amplitude(-3) = abs(-3) = 3",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b1d6ab3ee5c7ccc9581215a8b96113f081395203fd80ce570c8f3e36b863f891",
+        "excerpt": "r55_sine_scale_amplitude(-3) = abs(-3) = 3\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Existing round51 Session binary; fresh round55 build pending."
+    },
+    {
+      "id": "two-pi-addition-proof",
+      "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "c05aef4c17e0193e33dd2f9debd651ef95838fd191973a75c2d7a8ca5b5fbb95",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        sin(x+2*pi)=sin(x)\r\n        cos(x+2*pi)=cos(x)\r\n    cos(2*pi)=1\r\n    sin(2*pi)=0\r\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\r\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; current round55 cold snapshot owns acceptance."
+    },
+    {
+      "id": "tangent-addition-proof",
+      "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(pi)=-1\n    sin(pi)=0\n    sin(x+pi)=sin(x)*cos(pi)+cos(x)*sin(pi)=-sin(x)\n    cos(x+pi)=cos(x)*cos(pi)-sin(x)*sin(pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a9494495433337c3bd30cc3ba7c0d0e3804484a550c01e3109e1e1fdea3320c5",
+        "excerpt": "Warning: truncated output (original token count: 10602)\nTotal output lines: 837\n\nclaim:\r\n    ? forall x R:\r\n        cos(x) != 0\r\n        cos(x + pi) != 0\r\n        cos(x + 1 * pi) != 0\r\n        =>:\r\n            tan(x + pi) = tan(x)\r\n            tan(x + 1 * pi) = tan(x)\r\n    cos(pi)=-1\r\n    sin(pi)=0\r\n    sin(x+pi)=sin(x)*cos(pi)+cos(x)*sin(pi)=-sin(x)\r\n    cos(x+pi)=cos(x)*cos(pi)-sin(x)*sin(pi)=-cos(x)\r\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\r\n    tan(x+1*pi)=tan(x+pi)=tan(x)\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"s"
+      },
+      "baseline": "Existing round51 Session; current round55 cold snapshot owns acceptance."
+    },
+    {
+      "id": "tangent-antiperiod-proof",
+      "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "07da96f69242a720009a0ae2c7ad5e13b39d4bad670a1be63674fbbf1aa47373",
+        "excerpt": "Warning: truncated output (original token count: 10550)\nTotal output lines: 835\n\nclaim:\r\n    ? forall x R:\r\n        cos(x) != 0\r\n        cos(x + pi) != 0\r\n        cos(x + 1 * pi) != 0\r\n        =>:\r\n            tan(x + pi) = tan(x)\r\n            tan(x + 1 * pi) = tan(x)\r\n    sin(x+pi)=-sin(x)\r\n    cos(x+pi)=-cos(x)\r\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\r\n    tan(x+1*pi)=tan(x+pi)=tan(x)\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n"
+      },
+      "baseline": "Existing round51 Session; current round55 cold snapshot owns acceptance."
+    },
+    {
+      "id": "tangent-argument-bridge",
+      "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6d8645a3c9a1e49af127e3729dad891e5249b9c2f22e7802bb2e989dd369850c",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        cos(x) != 0\r\n        cos(x + pi) != 0\r\n        cos(x + 1 * pi) != 0\r\n        =>:\r\n            tan(x + pi) = tan(x)\r\n            tan(x + 1 * pi) = tan(x)\r\n    sin(x+pi)=-sin(x)\r\n    cos(x+pi)=-cos(x)\r\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\r\n    x+1*pi=x+pi\r\n    tan(x+1*pi)=tan(x+pi)=tan(x)\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round55 cold snapshot owns acceptance."
+    },
+    {
+      "id": "tangent-first-conclusion",
+      "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "37822403b240344cd530682373a8e380d636b7e98ef7ef0583cf1da4f1c23a0b",
+        "excerpt": "claim:\r\n    ? forall x R:\r\n        cos(x) != 0\r\n        cos(x + pi) != 0\r\n        cos(x + 1 * pi) != 0\r\n        =>:\r\n            tan(x + pi) = tan(x)\r\n    sin(x+pi)=-sin(x)\r\n    cos(x+pi)=-cos(x)\r\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\r\n\r\n... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Existing round51 Session; round55 cold snapshot owns acceptance."
+    },
+    {
+      "id": "tangent-own-sin-cos",
+      "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    sin(x+1*pi)=-sin(x)\n    cos(x+1*pi)=-cos(x)\n    tan(x+1*pi)=sin(x+1*pi)/cos(x+1*pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0664698005d4839628228f72e29ff82012c4920515956e0613dd8a52a0bcae50",
+        "excerpt": "Warning: truncated output (original token count: 9570)\nTotal output lines: 776\n\nclaim:\r\n    ? forall x R:\r\n        cos(x) != 0\r\n        cos(x + pi) != 0\r\n        cos(x + 1 * pi) != 0\r\n        =>:\r\n            tan(x + pi) = tan(x)\r\n            tan(x + 1 * pi) = tan(x)\r\n    sin(x+pi)=-sin(x)\r\n    cos(x+pi)=-cos(x)\r\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\r\n    sin(x+1*pi)=-sin(x)\r\n    cos(x+1*pi)=-cos(x)\r\n    tan(x+1*pi)=sin(x+1*pi)/cos(x+1*pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\","
+      },
+      "baseline": "Existing round51 Session; round55 cold snapshot owns acceptance."
+    }
+  ]
+}

@@ -1,0 +1,1161 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-11-2026-10-08.json",
+  "original_sha256": "af83404c3cfc70e3f409a3707771e82df6d410d4cbd91b8a7d299c316090206f",
+  "original_bytes": 128858,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "2891175d3081c40e9250b1ee19709b70951041651486f7b0d72f18809cd2b0bb",
+    "version": "Litex 1.0.5-beta",
+    "source_build": {
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "success": true
+    },
+    "cases": [
+      {
+        "id": "sqrt-difference-rational-chain",
+        "source": "claim:\n    ? forall x,y R:\n        0 <= x\n        0 <= y\n        sqrt(x)+sqrt(y) != 0\n        =>:\n            sqrt(x)-sqrt(y) = (x-y)/(sqrt(x)+sqrt(y))\n    sqrt(x)^2 = x\n    sqrt(y)^2 = y\n    (sqrt(x)-sqrt(y))*(sqrt(x)+sqrt(y)) = sqrt(x)^2-sqrt(y)^2 = x-y\n    sqrt(x)-sqrt(y) = ((sqrt(x)-sqrt(y))*(sqrt(x)+sqrt(y)))/(sqrt(x)+sqrt(y)) = (x-y)/(sqrt(x)+sqrt(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-difference-rational-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eed19a236467639c81d6462ead0c1dcd591a1e7b728b4c0ead8d7be790342e1d"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-difference-rational-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-difference-rational-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-difference-rational-direct",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    sqrt(x)+sqrt(y) != 0\n    =>:\n        sqrt(x)-sqrt(y) = (x-y)/(sqrt(x)+sqrt(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-difference-rational-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c6db7e957ba93619c38a1cc4b21aaf763b8b56027cc204c53335090c6d7b3d37"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-difference-rational-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-difference-rational-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-difference-zero-denominator-invalid",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    =>:\n        sqrt(x)-sqrt(y) = (x-y)/(sqrt(x)+sqrt(y))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-difference-zero-denominator-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7be2541b4951c64b9de393c014210ecceb3ba65fd493a5a44fedbffae431b094"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-difference-zero-denominator-invalid.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-difference-zero-denominator-invalid.lit"
+        ]
+      },
+      {
+        "id": "sqrt-lower-bound-chain",
+        "source": "claim:\n    ? forall x,r R:\n        0 <= x\n        0 <= r\n        r^2 <= x\n        =>:\n            r <= sqrt(x)\n    0 <= r^2\n    r = sqrt(r^2) <= sqrt(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-lower-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc181c6e2b477c319a82fedc4189dda582dc0f332f427b52abb66849de78fea6"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-lower-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-lower-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-lower-bound-direct",
+        "source": "forall x,r R:\n    0 <= x\n    0 <= r\n    r^2 <= x\n    =>:\n        r <= sqrt(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-lower-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e00649d851ee686dd2a4e7197302133e0d68bb96c1039ca20f635410e76556f0"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-lower-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-lower-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-magnitude-direct",
+        "source": "forall x R:\n    sqrt(x^2) = abs(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-magnitude-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "491a931e35eca9e37aef6fd75f1cc747c4577c1231d8b4ff7276e837ddf222f2"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-magnitude-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-magnitude-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-monotone-strict-direct",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    x < y\n    =>:\n        sqrt(x) < sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-monotone-strict-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4fec4f2366f24aed8dcf02c91ba3088bf3091009e3ad9e6b2f619b62d557f22c"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-monotone-strict-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-monotone-strict-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-monotone-weak-direct",
+        "source": "forall x,y R:\n    0 <= x\n    x <= y\n    =>:\n        sqrt(x) <= sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-monotone-weak-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "db49f2c17695346dd180fd170225fc6f5d7574ffb5f9191f82ae236e22a79764"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-monotone-weak-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-monotone-weak-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-negative-domain-invalid",
+        "source": "forall x R:\n    x < 0\n    =>:\n        sqrt(x) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-negative-domain-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "35b68304410c28da9c897cba3b207847c3e92e17639a779f620592f4bba4318a"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-negative-domain-invalid.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-negative-domain-invalid.lit"
+        ]
+      },
+      {
+        "id": "sqrt-order-reflection-chain",
+        "source": "claim:\n    ? forall x,y R:\n        0 <= x\n        0 <= y\n        sqrt(x) <= sqrt(y)\n        =>:\n            x <= y\n    0 <= sqrt(x)\n    0 <= sqrt(y)\n    x = sqrt(x)^2 <= sqrt(y)^2 = y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-order-reflection-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ad2f687108c55293acfe3382d85345bd324e8d5d3f95292e244d53c989e0b7ea"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-order-reflection-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-order-reflection-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-order-reflection-direct",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    sqrt(x) <= sqrt(y)\n    =>:\n        x <= y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-order-reflection-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "36b035c86c335455f140b099435dd93d61ff829a4eb9b8d58c9bf4c1288ffd76"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-order-reflection-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-order-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-product-direct",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    =>:\n        sqrt(x*y) = sqrt(x)*sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-product-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6b9096c7b1e26b88431c3ac015ddcffb22cc9473996968dc179fb5754223e4fd"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-product-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-product-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-square-signed-false",
+        "source": "forall x R:\n    sqrt(x^2) = x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-square-signed-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a656dc32e1a003a0ff0eba100fc46f2cd5d28158e516fdff3e21579145cc9b9f"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-square-signed-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-square-signed-false.lit"
+        ]
+      },
+      {
+        "id": "sqrt-strict-from-weak-false",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    x <= y\n    =>:\n        sqrt(x) < sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-strict-from-weak-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ae41618c27cbd6125c9fe430302347c8ae8c48ccd8b1b5d410d09c0c3a018ed2"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-strict-from-weak-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-strict-from-weak-false.lit"
+        ]
+      },
+      {
+        "id": "sqrt-sum-bound-direct",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    =>:\n        sqrt(x+y) <= sqrt(x)+sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-sum-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fd19c9261e49f87db84954bee5595f2f8bcf03ea3afbf3493a8d81d24a40b5e6"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-sum-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-sum-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-sum-bound-square-route",
+        "source": "claim:\n    ? forall x,y R:\n        0 <= x\n        0 <= y\n        =>:\n            sqrt(x+y) <= sqrt(x)+sqrt(y)\n    0 <= sqrt(x)\n    0 <= sqrt(y)\n    0 <= sqrt(x)+sqrt(y)\n    sqrt(x)^2 = x\n    sqrt(y)^2 = y\n    (sqrt(x)+sqrt(y))^2 = x+y+2*sqrt(x)*sqrt(y) >= x+y\n    0 <= (sqrt(x)+sqrt(y))^2\n    sqrt(x+y) <= sqrt((sqrt(x)+sqrt(y))^2) = sqrt(x)+sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-sum-bound-square-route.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "19900c72fe36895fd17ccd8ac7c097235334cd82efc471a36e3e208523ce678a"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-sum-bound-square-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-sum-bound-square-route.lit"
+        ]
+      },
+      {
+        "id": "sqrt-sum-equality-false",
+        "source": "forall x,y R:\n    0 <= x\n    0 <= y\n    =>:\n        sqrt(x+y) = sqrt(x)+sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-sum-equality-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d716e7e6d000132e1011447b3ff8adf5c8a0adc152f154c20fd3f88aef6b1113"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-sum-equality-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-sum-equality-false.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-chain",
+        "source": "claim:\n    ? forall x,r R:\n        0 <= x\n        0 <= r\n        x <= r^2\n        =>:\n            sqrt(x) <= r\n    0 <= r^2\n    sqrt(x) <= sqrt(r^2) = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "91182badc5980e67c237cf98090a7bb5b630854cd6d5a4ff15b8623c2c69450d"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-direct",
+        "source": "forall x,r R:\n    0 <= x\n    0 <= r\n    x <= r^2\n    =>:\n        sqrt(x) <= r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ef757b1c58d083c3724ec892f591ecb4d748ced1b9d9c1de9377fd88bd9ea275"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-negative-r-false",
+        "source": "forall x,r R:\n    0 <= x\n    x <= r^2\n    =>:\n        sqrt(x) <= r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-negative-r-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "65f422679bd1ff8f7adb1c3e693af1e51d005bd3aad891b35d4dadf9556e9d72"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-negative-r-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-negative-r-false.lit"
+        ]
+      },
+      {
+        "id": "square-strict-reflection-direct",
+        "source": "forall a,b R:\n    0 <= b\n    a^2 < b^2\n    =>:\n        a < b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-strict-reflection-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "abfe0902cd00c41c8409152eb85621efbf1f7065e880ccc0d1c642371962ddc1"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/square-strict-reflection-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/square-strict-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "square-strict-reflection-negative-false",
+        "source": "forall a,b R:\n    a^2 < b^2\n    =>:\n        a < b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-strict-reflection-negative-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d0b339b85702b7ba0f9de41ac80429976e8cec49cfa220b3eb4aaf2a8903d034"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/square-strict-reflection-negative-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/square-strict-reflection-negative-false.lit"
+        ]
+      },
+      {
+        "id": "sqrt-sum-bound-expanded-route",
+        "source": "claim:\n    ? forall x,y R:\n        0 <= x\n        0 <= y\n        =>:\n            sqrt(x+y) <= sqrt(x)+sqrt(y)\n    0 <= sqrt(x)\n    0 <= sqrt(y)\n    0 <= sqrt(x)+sqrt(y)\n    sqrt(x)^2 = x\n    sqrt(y)^2 = y\n    0 <= sqrt(x)*sqrt(y)\n    0 <= 2*sqrt(x)*sqrt(y)\n    (sqrt(x)+sqrt(y))^2 = sqrt(x)^2+2*sqrt(x)*sqrt(y)+sqrt(y)^2\n    sqrt(x)^2+2*sqrt(x)*sqrt(y)+sqrt(y)^2 = x+2*sqrt(x)*sqrt(y)+sqrt(y)^2 = x+2*sqrt(x)*sqrt(y)+y = x+y+2*sqrt(x)*sqrt(y) >= x+y\n    0 <= (sqrt(x)+sqrt(y))^2\n    sqrt(x+y) <= sqrt((sqrt(x)+sqrt(y))^2) = sqrt(x)+sqrt(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-sum-bound-expanded-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fb773dd3d7836c7ba2e3abf6c5c86e62880f5ab07b10ee9483b4e04af545944d"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-sum-bound-expanded-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-sum-bound-expanded-route.lit"
+        ]
+      },
+      {
+        "id": "square-strict-reflection-root-route",
+        "source": "claim:\n    ? forall a,b R:\n        0 <= b\n        a^2 < b^2\n        =>:\n            a < b\n    0 <= a^2\n    0 <= b^2\n    abs(a) = sqrt(a^2) < sqrt(b^2) = abs(b)\n    a <= abs(a) < abs(b) = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-strict-reflection-root-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e2cb9919eab079b43f774e1dfed5536dbfc493f5a7226eba4368f06be6894cdf"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/square-strict-reflection-root-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/square-strict-reflection-root-route.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-strict-direct",
+        "source": "forall x R,r R+:\n    0 <= x\n    x < r^2\n    =>:\n        sqrt(x) < r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-strict-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "70a25d0c8dd75efed734db5edcc2e7192d03adac31d231f7fc4301f9f7b652de"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-strict-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-strict-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-strict-chain",
+        "source": "claim:\n    ? forall x R,r R+:\n        0 <= x\n        x < r^2\n        =>:\n            sqrt(x) < r\n    0 <= r^2\n    sqrt(x) < sqrt(r^2) = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-strict-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "70dab72eadfc07680b0d2ed3c1357f9a848fce42e5ef93dde642fe1aa7231c14"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-strict-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-strict-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-lower-bound-any-sign-direct",
+        "source": "forall x,r R:\n    0 <= x\n    r^2 <= x\n    =>:\n        r <= sqrt(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-lower-bound-any-sign-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "88faf72a89f8bde9641229ac184bdb8cfcb972812e8056780e0956fbcb6a1c92"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-lower-bound-any-sign-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-lower-bound-any-sign-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-lower-bound-any-sign-chain",
+        "source": "claim:\n    ? forall x,r R:\n        0 <= x\n        r^2 <= x\n        =>:\n            r <= sqrt(x)\n    0 <= r^2\n    r <= abs(r) = sqrt(r^2) <= sqrt(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-lower-bound-any-sign-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4f962231b299ad977d0bef2ed6e13282f22e345293f3e5e31f0efe7339299278"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-lower-bound-any-sign-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-lower-bound-any-sign-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-lower-bound-strict-direct",
+        "source": "forall x,r R:\n    0 <= x\n    r^2 < x\n    =>:\n        r < sqrt(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-lower-bound-strict-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b76a088c76397ed7f9215290ca32291261dcd64ebd949cc5518cc6251b70f8c6"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-lower-bound-strict-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-lower-bound-strict-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-lower-bound-strict-chain",
+        "source": "claim:\n    ? forall x,r R:\n        0 <= x\n        r^2 < x\n        =>:\n            r < sqrt(x)\n    0 <= r^2\n    r <= abs(r) = sqrt(r^2) < sqrt(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-lower-bound-strict-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "05d527a82cc8c3225d3eabdc3b6c69e4aca67c27f64cf22e16ea9b23eaf34b8f"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-lower-bound-strict-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-lower-bound-strict-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-strict-nonnegative-direct",
+        "source": "forall x,r R:\n    0 <= x\n    0 <= r\n    x < r^2\n    =>:\n        sqrt(x) < r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-strict-nonnegative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e1adbac657549161e3f025cb00d22b4e6bd9c14c38f635fcfcbda2221c6a309b"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-strict-nonnegative-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-strict-nonnegative-direct.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-strict-nonnegative-chain",
+        "source": "claim:\n    ? forall x,r R:\n        0 <= x\n        0 <= r\n        x < r^2\n        =>:\n            sqrt(x) < r\n    0 <= r^2\n    sqrt(x) < sqrt(r^2) = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-strict-nonnegative-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "27051ef94473023e70adb5a887197e5165f9be0e370ef752b42120461b5b0188"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-strict-nonnegative-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-strict-nonnegative-chain.lit"
+        ]
+      },
+      {
+        "id": "sqrt-upper-bound-strict-negative-r-false",
+        "source": "forall x,r R:\n    0 <= x\n    x < r^2\n    =>:\n        sqrt(x) < r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sqrt-upper-bound-strict-negative-r-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aa88efd062a8d6ff6fe1e69959a684b27eb4caa50fee993515adc3008c533591"
+        },
+        "stderr": "",
+        "replay_source": "round-11-cases/sqrt-upper-bound-strict-negative-r-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-11-cases/sqrt-upper-bound-strict-negative-r-false.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "sqrt-upper-bound-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "bac614eadad5a172d3db4ff41216f55ad0a0d1cb2fbf9084ec19f9a1ca78e233",
+          "excerpt": "... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x, r R:\\n    0 <= x\\n    0 <= r\\n    x <= r ^ 2\\n    =>:\\n        sqrt (x) <= r\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x, r R:\\n    0 <= x\\n    0 <= r\\n    x <= r ^ 2\\n    =>:\\n        sqrt (x) <= r\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "sqrt-upper-bound-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8ff140bb7796be24aa695264bf2f9ea4d75e8f1567a0936de9eeec06a2bdccdf",
+          "excerpt": "... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "sqrt-order-reflection-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6de5a1abe1431b908ad3bbcb149f752fba9177b96dab8ac67fe8e13fa05dab7e",
+          "excerpt": "... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x, y R:\\n    0 <= x\\n    0 <= y\\n    sqrt (x) <= sqrt (y)\\n    =>:\\n        x <= y\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x, y R:\\n    0 <= x\\n    0 <= y\\n    sqrt (x) <= sqrt (y)\\n    =>:\\n        x <= y\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "sqrt-order-reflection-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "sqrt-difference-rational-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b5733f73c124d81743f3f2a55e289da8b6431b21168c37b278068b6f0160d4c1",
+          "excerpt": "... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x, y R:\\n    0 <= x\\n    0 <= y\\n    sqrt (x) + sqrt (y) != 0\\n    =>:\\n        sqrt (x) - sqrt (y) = (x - y) / (sqrt (x) + sqrt (y))\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x, y R:\\n    0 <= x\\n    0 <= y\\n    sqrt (x) + sqrt (y) != 0\\n    =>:\\n        sqrt (x) - sqrt (y) = (x - y) / (sqrt (x) + sqrt (y))\"\r\n      },\r\n   "
+        }
+      },
+      {
+        "case": "sqrt-difference-rational-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e97632604fe2f19bd717ca7f7d2d6043f757bca820d4ed86a750b36151761360",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "sqrt-sum-bound-expanded-route",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b4580a9dfa83b834ea21996e09b245be537ba2172600c3780908772bf8544a6d",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "square-strict-reflection-root-route",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "sqrt-upper-bound-strict-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "40507ae0a246aeb1f15b35a9bd3bf00eb8c6aa000812b332276fc455e11075c4",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, r R+:\\n    0 <= x\\n    x < r ^ 2\\n    =>:\\n        sqrt (x) < r\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, r R+:\\n    0 <= x\\n    x < r ^ 2\\n    =>:\\n        sqrt (x) < r\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "sqrt-upper-bound-strict-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        }
+      }
+    ],
+    "source_revision": "17d99299e7d24befacd4bae289c826167630fcc9",
+    "source_note": "Current working-tree release, unrelated edits preserved; no kernel/canonical proof changes."
+  }
+}

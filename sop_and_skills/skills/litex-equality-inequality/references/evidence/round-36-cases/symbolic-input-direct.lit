@@ -1,0 +1,6 @@
+have fn r36_quadratic_solution(c,x R) R = x^2+c
+
+forall c,x,y0 R:
+    r36_quadratic_solution(c,x)=y0
+    =>:
+        c=y0-x^2

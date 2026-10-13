@@ -1,0 +1,10 @@
+have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)
+have fn det(u,v cart(R,R)) R = u(1)*v(2)-u(2)*v(1)
+claim:
+    ? forall u,v cart(R,R):
+        dot(u,v)^2+det(u,v)^2 = dot(u,u)*dot(v,v)
+    dot(u,v) = u(1)*v(1)+u(2)*v(2)
+    det(u,v) = u(1)*v(2)-u(2)*v(1)
+    dot(u,u) = u(1)*u(1)+u(2)*u(2)
+    dot(v,v) = v(1)*v(1)+v(2)*v(2)
+    dot(u,v)^2+det(u,v)^2 = (u(1)*v(1)+u(2)*v(2))^2+(u(1)*v(2)-u(2)*v(1))^2 = (u(1)*u(1)+u(2)*u(2))*(v(1)*v(1)+v(2)*v(2)) = dot(u,u)*dot(v,v)

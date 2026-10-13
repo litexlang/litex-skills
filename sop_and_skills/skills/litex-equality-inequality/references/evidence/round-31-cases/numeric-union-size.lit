@@ -1,0 +1,1 @@
+finite_set_size(union({1},{2}))=2

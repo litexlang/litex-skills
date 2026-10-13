@@ -1,0 +1,846 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-26-2026-10-09.json",
+  "original_sha256": "d9a3fee8fbfb998a50cfb80269895cfdc29500917a636ec25c5187aa99a241bc",
+  "original_bytes": 69722,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+    "sha256": "23c0c58aab9b90f93f9c473d42c31cbecf768837f5be6c21f7ffddba3e00a3ce",
+    "session": [
+      {
+        "id": "opaque-object-transitivity",
+        "source": "forall carrier nonempty_set,a,b,c carrier:\n    a=b\n    b=c\n    =>:\n        a=c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9fc052dff9927ec4e9265833bb4568cf1f4304fc21d4784aec33f4c667c362b4",
+          "excerpt": "forall carrier nonempty_set,a,b,c carrier:\r\n    a=b\r\n    b=c\r\n    =>:\r\n        a=c\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "generic-call-transitivity",
+        "source": "forall A,B set,f,g,h fn(x A) B,p A:\n    f(p)=g(p)\n    g(p)=h(p)\n    =>:\n        f(p)=h(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0780fd2cee52b38ff86731ceeb9daa18903fd24189cd283cbb39f251f1ea5ebe",
+          "excerpt": "forall A,B set,f,g,h fn(x A) B,p A:\r\n    f(p)=g(p)\r\n    g(p)=h(p)\r\n    =>:\r\n        f(p)=h(p)\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "real-call-transitivity",
+        "source": "forall f,g,h fn(x R) R,p R:\n    f(p)=g(p)\n    g(p)=h(p)\n    =>:\n        f(p)=h(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c0d0e1fbdbd3fe1ab753025d773ced9bf5013219da7fea1b6045c6ba452a612c",
+          "excerpt": "forall f,g,h fn(x R) R,p R:\r\n    f(p)=g(p)\r\n    g(p)=h(p)\r\n    =>:\r\n        f(p)=h(p)\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "generic-call-reversed-transitivity",
+        "source": "forall A,B set,f,g,h fn(x A) B,p A:\n    g(p)=f(p)\n    h(p)=g(p)\n    =>:\n        f(p)=h(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "1dd30a3c3e47b0c493c3a53b65419e3a4a9a29167fbd0469165a016f16e30c78",
+          "excerpt": "forall A,B set,f,g,h fn(x A) B,p A:\r\n    g(p)=f(p)\r\n    h(p)=g(p)\r\n    =>:\r\n        f(p)=h(p)\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "generic-call-wrong-endpoint",
+        "source": "forall A,B set,f,g,h fn(x A) B,p,q A:\n    f(p)=g(p)\n    g(p)=h(p)\n    =>:\n        f(p)=h(q)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "88d7225e23fe2d7f111b0e14ecbcdd53c5215814e28cce214d4357a90d772116",
+          "excerpt": "forall A,B set,f,g,h fn(x A) B,p,q A:\r\n    f(p)=g(p)\r\n    g(p)=h(p)\r\n    =>:\r\n        f(p)=h(q)\r\n\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall A, B set, f, g, h fn (x A) B, p, q A:\\n    f(p) = g(p)\\n    g(p) = h(p)\\n    =>:\\n        f(p) = h(q)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall A, B set, f, g, h fn (x A) B, p, q A:\\n    f(p) = g(p)\\n    g(p) = h(p)\\n    =>:\\n  "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "restriction-alias-two-supplied-links",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    result(p)=\\restricted<X,Y,f,K>(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n    =>:\n        result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9d398849e3e9c81b9580de6a63cc5256a771577a99558c070a0305969c86c7e5",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n    result=\\restricted<X,Y,f,K>\r\n    result(p)=\\restricted<X,Y,f,K>(p)\r\n    \\restricted<X,Y,f,K>(p)=f(p)\r\n    =>:\r\n        result(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "restriction-alias-exported-links",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n    result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e965c365001bfe9796e076877ff51c321a7653430248f134c387e03605fea5ea",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    result(p)=\\restricted<X,Y,f,K>(p)\r\n    \\restricted<X,Y,f,K>(p)=f(p)\r\n    result(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "restriction-alias-only-exported-definition",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b93e320cbcb4a375dbf4c775c19771185596db061b435fcadeeadaae3a4c4f3d",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    \\restricted<X,Y,f,K>(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "restriction-alias-only-exported-head",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9e89bf494a053287ff09d62f1a51cecea9b62fcca12f31d933e35ed286aca666",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    result(p)=\\restricted<X,Y,f,K>(p)\r\n\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall X, Y set, f fn (x X) Y, K power_set(X), result fn (x K) Y, p K:\\n        result = \\\\restricted<X, Y, f, K>\\n        =>:\\n            result(p) = f(p)\\n  "
+        },
+        "session_id": 85511
+      },
+      {
+        "id": "generic-call-missing-second-link",
+        "source": "forall A,B set,f,g,h fn(x A) B,p A:\n    f(p)=g(p)\n    =>:\n        f(p)=h(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5905778166f6b84dd7f4230ec97f38176c7a439744c85e480e7f69084765d9f7",
+          "excerpt": "forall A,B set,f,g,h fn(x A) B,p A:\r\n    f(p)=g(p)\r\n    =>:\r\n        f(p)=h(p)\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall A, B set, f, g, h fn (x A) B, p A:\\n    f(p) = g(p)\\n    =>:\\n        f(p) = h(p)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall A, B set, f, g, h fn (x A) B, p A:\\n    f(p) = g(p)\\n    =>:\\n        f(p) = h(p)\"\r\n      },\r\n      \"stores\": [],\r\n      \"inf"
+        },
+        "session_id": 79802
+      },
+      {
+        "id": "generic-call-definition-congruence",
+        "source": "forall A,B set,f,g fn(x A) B,p A:\n    f=g\n    =>:\n        f(p)=g(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8c1d2be10b1c3ad56bd92826805e02eee3e89b96e2ab7a08d8d9af32087f4d3e",
+          "excerpt": "forall A,B set,f,g fn(x A) B,p A:\r\n    f=g\r\n    =>:\r\n        f(p)=g(p)\r\n\r\n\r\n... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 79802
+      },
+      {
+        "id": "generic-mixed-domain-transitivity",
+        "source": "forall X,Y set,K power_set(X),r fn(x K) Y,f,g fn(x X) Y,p K:\n    p $in X\n    r(p)=f(p)\n    f(p)=g(p)\n    =>:\n        r(p)=g(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0caaf5c06eac75cec4522ed83f981629273aafe09ece97aabf96c0b46702b813",
+          "excerpt": "forall X,Y set,K power_set(X),r fn(x K) Y,f,g fn(x X) Y,p K:\r\n    p $in X\r\n    r(p)=f(p)\r\n    f(p)=g(p)\r\n    =>:\r\n        r(p)=g(p)\r\n\r\n\r\n... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 79802
+      },
+      {
+        "id": "restriction-definition-then-goal",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n    result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "747e5eb617cc5fa96581e4b3015a6d449da459fdaa8e481569439425a5884ae8",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    \\restricted<X,Y,f,K>(p)=f(p)\r\n    result(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+        },
+        "session_id": 79802
+      },
+      {
+        "id": "restriction-head-then-goal",
+        "source": "claim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)\n    result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "71f31795308a33044037d93db5cec59cdc85ee1d6efda090cc08d3a6cb733f54",
+          "excerpt": "claim:\r\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n        result=\\restricted<X,Y,f,K>\r\n        =>:\r\n            result(p)=f(p)\r\n    result(p)=\\restricted<X,Y,f,K>(p)\r\n    result(p)=f(p)\r\n\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall X, Y set, f fn (x X) Y, K power_set(X), result fn (x K) Y, p K:\\n        result = \\\\restricted<X, Y, f, K>\\n        =>:\\n        "
+        },
+        "session_id": 79802
+      },
+      {
+        "id": "restriction-supplied-link-no-alias",
+        "source": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    \\restricted<X,Y,f,K>(p)=f(p)\n    =>:\n        result(p)=f(p)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "85d651947637b742d7b46fbb7239db3f795068d8203f0f87318e4af9ad8b167f",
+          "excerpt": "forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\r\n    \\restricted<X,Y,f,K>(p)=f(p)\r\n    =>:\r\n        result(p)=f(p)\r\n\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall X, Y set, f fn (x X) Y, K power_set(X), result fn (x K) Y, p K:\\n    \\\\restricted<X, Y, f, K>(p) = f(p)\\n    =>:\\n        result(p) = f(p)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall X, Y set, f fn ("
+        },
+        "session_id": 79802
+      }
+    ],
+    "cases": [
+      {
+        "id": "opaque-object-transitivity",
+        "source": "forall carrier nonempty_set,a,b,c carrier:\n    a=b\n    b=c\n    =>:\n        a=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/opaque-object-transitivity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "42ba9511efa635e40c1474b3423405fbdf79c44ca0b33c40645c8e5340982408"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/opaque-object-transitivity.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/opaque-object-transitivity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "generic-call-transitivity",
+        "source": "forall A,B set,f,g,h fn(x A) B,p A:\n    f(p)=g(p)\n    g(p)=h(p)\n    =>:\n        f(p)=h(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/generic-call-transitivity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a08786b5525384babcf8b853a28b79558ad275b520e7d39abca0de65b6625462"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-transitivity.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-transitivity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "real-call-transitivity",
+        "source": "forall f,g,h fn(x R) R,p R:\n    f(p)=g(p)\n    g(p)=h(p)\n    =>:\n        f(p)=h(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/real-call-transitivity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f7c36511ac1232a03498ba86bf4ab012edd830e69387500043be53ca0da43bc3"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/real-call-transitivity.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/real-call-transitivity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "generic-call-reversed-transitivity",
+        "source": "forall A,B set,f,g,h fn(x A) B,p A:\n    g(p)=f(p)\n    h(p)=g(p)\n    =>:\n        f(p)=h(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/generic-call-reversed-transitivity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3541479cee03a28ac8c0569ecb8cac94d4e52644295aeffdb410e5e55e7555c0"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-reversed-transitivity.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-reversed-transitivity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "generic-call-wrong-endpoint",
+        "source": "forall A,B set,f,g,h fn(x A) B,p,q A:\n    f(p)=g(p)\n    g(p)=h(p)\n    =>:\n        f(p)=h(q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/generic-call-wrong-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "12d94d9dc049e1f1abd4e3d4d522ad65192d014bd74fbc1d116b5be3f39f6bcd"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-wrong-endpoint.lit"
+        ],
+        "current_replay": {
+          "exit_code": 1,
+          "success": false
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-wrong-endpoint.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-two-supplied-links",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    result=\\restricted<X,Y,f,K>\n    result(p)=\\restricted<X,Y,f,K>(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n    =>:\n        result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-alias-two-supplied-links.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee8e7f5e2de64c16f672616862f25a6f8652186254010306a649b6df96099c9b"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-two-supplied-links.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-two-supplied-links.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-exported-links",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n    result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-alias-exported-links.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f4f1a15a0f44489b8c6761ad069966b2efbe0a697bd091729e91cedc0aa7cb3b"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-exported-links.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-exported-links.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-only-exported-definition",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-alias-only-exported-definition.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc79a5c6a0a20485488188c846487c2f6cb1a601009660422255d92570cfc6a4"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-only-exported-definition.lit"
+        ],
+        "current_replay": {
+          "exit_code": 0,
+          "success": true
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-only-exported-definition.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-alias-only-exported-head",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-alias-only-exported-head.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "18934cb416fa227f97f49f738199127067cea7d53491dab67dd8e9c4fed25996"
+        },
+        "stderr": "",
+        "prior_command": [
+          "tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-only-exported-head.lit"
+        ],
+        "current_replay": {
+          "exit_code": 1,
+          "success": false
+        },
+        "draft_command": [
+          "tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-alias-only-exported-head.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "generic-call-missing-second-link",
+        "source": "forall A,B set,f,g,h fn(x A) B,p A:\n    f(p)=g(p)\n    =>:\n        f(p)=h(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/generic-call-missing-second-link.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "12aa992050aa02c5c953e81797d38cb6cf50be96b5f977867e0a7b007b4a18ee"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-missing-second-link.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "generic-call-definition-congruence",
+        "source": "forall A,B set,f,g fn(x A) B,p A:\n    f=g\n    =>:\n        f(p)=g(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/generic-call-definition-congruence.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e716fa3ffde8d8a79cf3a9052228405ab327d8bd23e60c70032478cec57b138d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-call-definition-congruence.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "generic-mixed-domain-transitivity",
+        "source": "forall X,Y set,K power_set(X),r fn(x K) Y,f,g fn(x X) Y,p K:\n    p $in X\n    r(p)=f(p)\n    f(p)=g(p)\n    =>:\n        r(p)=g(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/generic-mixed-domain-transitivity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d716ab640aef53e09499db346fca9508223e61faede69b96e954cdb1344f102"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/generic-mixed-domain-transitivity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-definition-then-goal",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    \\restricted<X,Y,f,K>(p)=f(p)\n    result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-definition-then-goal.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "574c52769cb211afec099753026425b5df318718aeb4350fd97fc8a0ee879875"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-definition-then-goal.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-head-then-goal",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nclaim:\n    ? forall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n        result=\\restricted<X,Y,f,K>\n        =>:\n            result(p)=f(p)\n    result(p)=\\restricted<X,Y,f,K>(p)\n    result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-head-then-goal.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "14568008080a4302c7940b19dab228bcc0082b4d031380cb428045bde117bd83"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-head-then-goal.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "restriction-supplied-link-no-alias",
+        "source": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n\nforall X,Y set,f fn(x X) Y,K power_set(X),result fn(x K) Y,p K:\n    \\restricted<X,Y,f,K>(p)=f(p)\n    =>:\n        result(p)=f(p)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-26-cases/restriction-supplied-link-no-alias.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c855812641714b4ff01507b87737a612ee48976bf0968e5e2562a7e9d62bb079"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round26-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round26-cases/restriction-supplied-link-no-alias.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      }
+    ],
+    "source_anchor": {
+      "source_path": "showcases/math_concepts_in_litex/9_topology/main.lit",
+      "source_sha256": "b283936d6de2758690e0dc01d7a9f46ece5e931842eba7e6ce5467a52322f70d",
+      "prefix": "template<A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC>:\n    have fn composition(x A) CarrierC = g(f(x))\n\ntemplate<X, Y set, f fn(x X) Y, K power_set(X)>:\n    have fn restricted(x K) Y = f(x)\n",
+      "composition_type": "thm composition_type:\n    ? forall A, B, CarrierC set, f fn(x A) B, g fn(y B) CarrierC:\n        \\composition<A,B,CarrierC,f,g> $in fn(x A) CarrierC\n    release thm fn_set_member(\\composition<A,B,CarrierC,f,g>, fn(x A) CarrierC)\n",
+      "restriction_type": "thm restriction_type:\n    ? forall X, Y set, f fn(x X) Y, K power_set(X):\n        \\restricted<X,Y,f,K> $in fn(x K) Y\n    release thm fn_set_member(\\restricted<X,Y,f,K>, fn(x K) Y)\n",
+      "restriction_value": "thm restriction_value:\n    ? forall X,Y set,f fn(x X)Y,K power_set(X),p K:\n        \\restricted<X,Y,f,K>(p) = f(p)\n    \\restricted<X,Y,f,K> $in fn(x K) Y\n    f(p) $in Y\n    \\restricted<X,Y,f,K>(p) $in Y\n    \\restricted<X,Y,f,K> = fn(x K) Y {f(x)}\n    \\restricted<X,Y,f,K>(p) = f(p)\n"
+    },
+    "scope": "Isolate known-link transitivity from implicit definition discovery; no kernel/canonical edits.",
+    "prior_binary": {
+      "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round25-litex-snapshot",
+      "sha256": "5d2608802cd612483929f0d73f9277ffd026daf5fd3e11902063cb7a92ca2f86"
+    },
+    "source_build": {
+      "command": "cargo build --release",
+      "success": true,
+      "exit_code": 0,
+      "log": "build-round-26.log"
+    },
+    "summary": {
+      "independent_files": 15,
+      "accepted": 10,
+      "rejected": 5
+    },
+    "scope_limits": {
+      "kernel_edits": false,
+      "canonical_edits": false,
+      "trust_added": false,
+      "performance_claim": false,
+      "whole_showcase_gate": false
+    }
+  }
+}

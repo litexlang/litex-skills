@@ -1,0 +1,4 @@
+claim:
+    ? forall z,y R:
+        abs(y)-abs(z-y) <= abs(z)
+    abs(y)-abs(z-y) = abs(y)-abs(y-z) <= abs(y-(y-z)) = abs(z)

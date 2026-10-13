@@ -1,0 +1,4 @@
+forall a,b Z:
+    a<b
+    =>:
+        1<=b-a

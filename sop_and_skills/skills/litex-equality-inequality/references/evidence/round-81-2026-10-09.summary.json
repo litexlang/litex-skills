@@ -1,0 +1,439 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-81-2026-10-09.json",
+  "original_sha256": "4f080f30ff8e391e149c49a1d95fa09f427fa6c88c2a617c640457d2122c1076",
+  "original_bytes": 50326,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "f98867af9f5b656748b1183d13e31d489d42b3e1310bf2a329049cd106a6a246",
+    "cases": [
+      {
+        "id": "sub-direct",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nr81_sub2((5,7),(2,3))=(3,4)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d03b76d3d1dbf52593a21aeb7f8aae78c33668735eb1c3a0a13c6b4360c60ef1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/sub-direct.lit"
+        ]
+      },
+      {
+        "id": "sub-chain-only",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nr81_sub2((5,7),(2,3))=((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2))=(5-2,7-3)=(3,4)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "96bdbd1baa1fa6ff5499372450c0d342e16f47d8af856742de7f5376ca0961e5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/sub-chain-only.lit"
+        ]
+      },
+      {
+        "id": "sub-native-chain",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates(((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2)),(5-2,7-3))\nr81_sub2((5,7),(2,3))=((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2))=(5-2,7-3)=(3,4)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-native-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-native-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "00a0b4845665c879ea0a64dfd0313bcd9163121d78c899c4af5bdbed775ac709"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/sub-native-chain.lit"
+        ]
+      },
+      {
+        "id": "sub-native-endpoint",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates(((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2)),(5-2,7-3))\nr81_sub2((5,7),(2,3))=(3,4)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-native-endpoint.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/sub-native-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "262b9155b8dc01963b88a843e4f877a454e83a51a946e6550b28f4490c5bc051"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/sub-native-endpoint.lit"
+        ]
+      },
+      {
+        "id": "smul-direct",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nr81_smul2(3,(2,-1))=(6,-3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "059e93b48b0646b4e039bfcd5d3010f934d1387d28f721f03d77d5e92fe15630"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/smul-direct.lit"
+        ]
+      },
+      {
+        "id": "smul-chain-only",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nr81_smul2(3,(2,-1))=(3*(2,-1)(1),3*(2,-1)(2))=(3*2,3*(-1))=(6,-3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4eca2a998dec71fdd099e868e29f02563b23ba1becb24756c180bb4a3d8e7c56"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/smul-chain-only.lit"
+        ]
+      },
+      {
+        "id": "smul-native-chain",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates((3*(2,-1)(1),3*(2,-1)(2)),(3*2,3*(-1)))\nr81_smul2(3,(2,-1))=(3*(2,-1)(1),3*(2,-1)(2))=(3*2,3*(-1))=(6,-3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-native-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-native-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "46c4db0e88d71bf2595bfc3f39b34d5388f3db55c01ee0564c097ab00f6420f0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/smul-native-chain.lit"
+        ]
+      },
+      {
+        "id": "smul-native-endpoint",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates((3*(2,-1)(1),3*(2,-1)(2)),(3*2,3*(-1)))\nr81_smul2(3,(2,-1))=(6,-3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-native-endpoint.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-native-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "476fcec1e4e9398de6f9251e2a8fdee90e19d06a8a61608013a1b4b891e272d3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/smul-native-endpoint.lit"
+        ]
+      },
+      {
+        "id": "both-native-chains",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates(((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2)),(5-2,7-3))\nr81_sub2((5,7),(2,3))=((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2))=(5-2,7-3)=(3,4)\nrelease thm tuple_equal_from_coordinates((3*(2,-1)(1),3*(2,-1)(2)),(3*2,3*(-1)))\nr81_smul2(3,(2,-1))=(3*(2,-1)(1),3*(2,-1)(2))=(3*2,3*(-1))=(6,-3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/both-native-chains.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/both-native-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee229bb57310a6401becf8526fe7b6d47deee6d455bb4ae081bd128dff41c0c4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/both-native-chains.lit"
+        ]
+      },
+      {
+        "id": "wrong-sub-output",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates(((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2)),(5-2,7-3))\nr81_sub2((5,7),(2,3))=((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2))=(5-2,7-3)=(3,5)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/wrong-sub-output.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/wrong-sub-output.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b01d9e6e6e3f24f01557b4f9738ba2556fbb6db60d4f65cab2efd6f3006308dd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/wrong-sub-output.lit"
+        ]
+      },
+      {
+        "id": "wrong-smul-output",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates((3*(2,-1)(1),3*(2,-1)(2)),(3*2,3*(-1)))\nr81_smul2(3,(2,-1))=(3*(2,-1)(1),3*(2,-1)(2))=(3*2,3*(-1))=(6,3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/wrong-smul-output.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/wrong-smul-output.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6d30a40e619cffbf17d9b4a63a94b3fd1c3592a123b93afe252045a1acb7b6b5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/wrong-smul-output.lit"
+        ]
+      },
+      {
+        "id": "smul-negative-coefficient",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates((-3*(2,-1)(1),-3*(2,-1)(2)),(-3*2,-3*(-1)))\nr81_smul2(-3,(2,-1))=(-3*(2,-1)(1),-3*(2,-1)(2))=(-3*2,-3*(-1))=(-6,3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-negative-coefficient.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-negative-coefficient.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c9b9e4196e369bdb27a4ad5b7e4dea69733416c07cd396d8f9abc839fa9826cc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/smul-negative-coefficient.lit"
+        ]
+      },
+      {
+        "id": "smul-zero-coefficient",
+        "source": "have fn r81_sub2(u,v cart(R,R)) cart(R,R)=(u(1)-v(1),u(2)-v(2))\nhave fn r81_smul2(k R,u cart(R,R)) cart(R,R)=(k*u(1),k*u(2))\n\nrelease thm tuple_equal_from_coordinates((0*(2,-1)(1),0*(2,-1)(2)),(0*2,0*(-1)))\nr81_smul2(0,(2,-1))=(0*(2,-1)(1),0*(2,-1)(2))=(0*2,0*(-1))=(0,0)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-zero-coefficient.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-81-cases/smul-zero-coefficient.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07390a854cd20ccfa0b76e7fcc667378eba2d5352e63e28fef173aea8b03d89d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round81-cases/smul-zero-coefficient.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 13,
+      "accepted": 5,
+      "normal_rejections": 8
+    },
+    "scope": "Exact source sub2/smul2 carriers/formulas, []→(), isolated r81 names. Native+chain numerical sub/smul consumers and coefficient sign controls; no full raw chapter acceptance."
+  }
+}

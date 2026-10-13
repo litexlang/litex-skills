@@ -1,0 +1,64 @@
+thm r34_chapter09_max_exact_original:
+    ? forall a, b, A, B R, epsilon R+:
+        abs(a - A) <= epsilon
+        abs(b - B) <= epsilon
+        =>:
+            abs(finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B}))) <= epsilon
+    a - A <= abs(a - A)
+    a - A <= abs(a - A) <= epsilon
+    a - A <= epsilon
+    (a - A) + A <= epsilon + A
+    (a - A) + A = a
+    epsilon + A = A + epsilon
+    a <= A + epsilon
+    b - B <= abs(b - B)
+    b - B <= abs(b - B) <= epsilon
+    b - B <= epsilon
+    (b - B) + B <= epsilon + B
+    (b - B) + B = b
+    epsilon + B = B + epsilon
+    b <= B + epsilon
+    A <= finite_set_max(union({A}, { B}))
+    B <= finite_set_max(union({A}, { B}))
+    A + epsilon <= finite_set_max(union({A}, { B})) + epsilon
+    B + epsilon <= finite_set_max(union({A}, { B})) + epsilon
+    a <= A + epsilon <= finite_set_max(union({A}, { B})) + epsilon
+    a <= finite_set_max(union({A}, { B})) + epsilon
+    b <= B + epsilon <= finite_set_max(union({A}, { B})) + epsilon
+    b <= finite_set_max(union({A}, { B})) + epsilon
+    finite_set_max(union({a}, { b})) <= finite_set_max(union({A}, { B})) + epsilon
+    finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B})) <= (finite_set_max(union({A}, { B})) + epsilon) - finite_set_max(union({A}, { B}))
+    (finite_set_max(union({A}, { B})) + epsilon) - finite_set_max(union({A}, { B})) = epsilon
+    finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B})) <= epsilon
+    A - a <= abs(A - a)
+    abs(A - a) = abs(a - A)
+    A - a <= abs(a - A)
+    A - a <= abs(a - A) <= epsilon
+    A - a <= epsilon
+    (A - a) + a <= epsilon + a
+    (A - a) + a = A
+    epsilon + a = a + epsilon
+    A <= a + epsilon
+    B - b <= abs(B - b)
+    abs(B - b) = abs(b - B)
+    B - b <= abs(b - B)
+    B - b <= abs(b - B) <= epsilon
+    B - b <= epsilon
+    (B - b) + b <= epsilon + b
+    (B - b) + b = B
+    epsilon + b = b + epsilon
+    B <= b + epsilon
+    a <= finite_set_max(union({a}, { b}))
+    b <= finite_set_max(union({a}, { b}))
+    a + epsilon <= finite_set_max(union({a}, { b})) + epsilon
+    b + epsilon <= finite_set_max(union({a}, { b})) + epsilon
+    A <= a + epsilon <= finite_set_max(union({a}, { b})) + epsilon
+    A <= finite_set_max(union({a}, { b})) + epsilon
+    B <= b + epsilon <= finite_set_max(union({a}, { b})) + epsilon
+    B <= finite_set_max(union({a}, { b})) + epsilon
+    finite_set_max(union({A}, { B})) <= finite_set_max(union({a}, { b})) + epsilon
+    finite_set_max(union({A}, { B})) - finite_set_max(union({a}, { b})) <= (finite_set_max(union({a}, { b})) + epsilon) - finite_set_max(union({a}, { b}))
+    (finite_set_max(union({a}, { b})) + epsilon) - finite_set_max(union({a}, { b})) = epsilon
+    finite_set_max(union({A}, { B})) - finite_set_max(union({a}, { b})) <= epsilon
+    -(finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B}))) = finite_set_max(union({A}, { B})) - finite_set_max(union({a}, { b}))
+    -(finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B}))) <= epsilon

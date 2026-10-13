@@ -1,0 +1,5 @@
+forall x,y R+, q R:
+    q < 0
+    x > y
+    =>:
+        x^q > y^q

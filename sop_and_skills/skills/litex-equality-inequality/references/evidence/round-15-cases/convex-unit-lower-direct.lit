@@ -1,0 +1,6 @@
+forall x,y,t R:
+    0 <= t
+    t <= 1
+    x <= y
+    =>:
+        x <= (1-t)*x+t*y

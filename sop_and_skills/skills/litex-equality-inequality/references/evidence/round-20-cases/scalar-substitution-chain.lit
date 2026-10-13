@@ -1,0 +1,7 @@
+claim:
+    ? forall lhs_value,coef,offset,previous_value,new_coef,scale R:
+        lhs_value = coef*previous_value+offset
+        scale*coef = new_coef
+        =>:
+            scale*lhs_value = new_coef*previous_value+scale*offset
+    scale*lhs_value = scale*(coef*previous_value+offset) = (scale*coef)*previous_value+scale*offset = new_coef*previous_value+scale*offset

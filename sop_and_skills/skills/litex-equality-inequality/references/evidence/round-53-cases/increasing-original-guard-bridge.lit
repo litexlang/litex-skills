@@ -1,0 +1,8 @@
+claim:
+    ? forall a,x,y R+:
+        a>1
+        x<y
+        =>:
+            log(a,x)<log(a,y)
+    1<a
+    log(a,x)<log(a,y)

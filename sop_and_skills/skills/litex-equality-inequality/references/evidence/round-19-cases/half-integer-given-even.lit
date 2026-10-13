@@ -1,0 +1,4 @@
+forall n Z:
+    n%2 = 0
+    =>:
+        n/2 $in Z

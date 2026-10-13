@@ -1,0 +1,503 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-67-2026-10-09.json",
+  "original_sha256": "298da57aa76592cf19243c72c8848f113fc8bc4489afd44183d5814d0dc4f77a",
+  "original_bytes": 65449,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "414a2d80bc99724a4c74452b8d1814b6c5e331d866e0e0a7063b585041766c8e",
+    "scope": "Exact complex conjugate definition and complex-number source section, independent cold deletion/negative consumers; no builtin re/img/C_abs replacement.",
+    "cases": [
+      {
+        "id": "source-section",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\n\ni^2 = -1\n\nre(3 + 4 * i) = 3\n\nimg(3 + 4 * i) = 4\n\nC_abs(3 + 4 * i) = sqrt(re(3 + 4 * i)^2 + img(3 + 4 * i)^2)\n\nre(3 + 4 * i)^2 + img(3 + 4 * i)^2 = 3^2 + 4^2\n\nC_abs(3 + 4 * i) = sqrt(re(3 + 4 * i)^2 + img(3 + 4 * i)^2) = sqrt(3^2 + 4^2) = sqrt(25) = 5\n\n# Application: conjugation keeps the real coordinate and reverses the\n# imaginary coordinate. The canonical a+b*i form bridges re and img.\n\ncomplex_conjugate(3 + 4 * i) = re(3 + 4 * i) - img(3 + 4 * i) * i = 3 + (-4) * i\n\nre(3 + (-4) * i) = 3\n\nimg(3 + (-4) * i) = -4\n\nre(complex_conjugate(3 + 4 * i)) = re(3 + (-4) * i) = 3\n\nimg(complex_conjugate(3 + 4 * i)) = img(3 + (-4) * i) = -4\n\nforall z C:\n    z = re(z) + img(z) * i\n    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/source-section.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/source-section.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "53c393a096f58db5d4e15732cf53dc29e75de9d907f1e0472a489ae92f763ef7"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "abs-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nC_abs(3+4*i)=5\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c2766c57bc23c2e83189efec168f2e2026622fc2c3e0c41986059522370f8822"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "abs-direct-after-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\nC_abs(3+4*i)=5\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-direct-after-coordinates.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-direct-after-coordinates.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e37945e62d44f12ef53a3eacc2fd05155c32c1a978317ce0bda4a9b46f44c2c4"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "abs-chain-after-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\nC_abs(3+4*i)=sqrt(re(3+4*i)^2+img(3+4*i)^2)=sqrt(3^2+4^2)=sqrt(25)=5\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-chain-after-coordinates.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-chain-after-coordinates.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e9239c6f1a23c04dc2eb4fabfcc58fceebccaf22da760d64d0f78a92f7b01afe"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "abs-chain-without-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nC_abs(3+4*i)=sqrt(re(3+4*i)^2+img(3+4*i)^2)=sqrt(3^2+4^2)=sqrt(25)=5\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-chain-without-coordinates.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/abs-chain-without-coordinates.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b58aa1071514c7c841cb6fd2f80b19849ba01ce2d07724b84f9ee364e1f76f95"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "conjugate-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "33fe0038fbe4c599d1ab936314d34ec57f963f88546c984d344d793c2c04a539"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "conjugate-chain-after-coordinates",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-chain-after-coordinates.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-chain-after-coordinates.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7d91f9b8762cda9fb2a035c8f48f23261cbe8d64284b37e6b04ad36adf7c7418"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "conjugate-consumers-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(complex_conjugate(3+4*i))=3\nimg(complex_conjugate(3+4*i))=-4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-consumers-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-consumers-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "870498793fc58e879b176d3afa3eecdd0c5d1d40f17f23f40f337c558017ce57"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "conjugate-consumers-after-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i\nre(complex_conjugate(3+4*i))=3\nimg(complex_conjugate(3+4*i))=-4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-consumers-after-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/conjugate-consumers-after-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec7de1c38d7f043d59c218b8bbb0607314fe6009cd91262819411deaf631f0f8"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "symbolic-original",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    z = re(z) + img(z) * i\n    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-original.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ab7043259451a645b769103640392ebbdcdf2b4c856013c20846799ed6bee285"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "symbolic-without-reconstruction",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-without-reconstruction.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-without-reconstruction.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3f7ecaf46601144c2bf0d4868760ac93fd94028e967a5ec249cc1d695179200a"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "symbolic-consumers-direct",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    re(complex_conjugate(z))=re(z)\n    img(complex_conjugate(z))=-img(z)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-consumers-direct.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-consumers-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee4d18eef6497940b25881800ced60df10d93d105f487d2c6c870a5811f4d211"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "wrong-abs-chain",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\nC_abs(3+4*i)=sqrt(re(3+4*i)^2+img(3+4*i)^2)=sqrt(3^2+4^2)=sqrt(25)=6\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-abs-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-abs-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "914cd59e24fefe4ef11c0a272f8e580bb1e72c50d6296e0bd4526a6e672023bc"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "wrong-conjugate-sign",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=3+4*i\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-conjugate-sign.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-conjugate-sign.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d46147ca1036a54440b72f6d0bc872ba85fa7adf8ba655b9ea8f59eb71ea29a1"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "wrong-imaginary-consumer",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(3+4*i)=3\nimg(3+4*i)=4\ncomplex_conjugate(3+4*i)=re(3+4*i)-img(3+4*i)*i=3+(-4)*i\nimg(complex_conjugate(3+4*i))=4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-imaginary-consumer.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-imaginary-consumer.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec2a7b8dbb4fd75117039bbcebc1cb6294a48a4e7e2a317717759c415ef12de6"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "numeric-consumer-chains-after-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\nre(complex_conjugate(3+4*i))=re(3+(-4)*i)=3\nimg(complex_conjugate(3+4*i))=img(3+(-4)*i)=-4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/numeric-consumer-chains-after-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/numeric-consumer-chains-after-value.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2532d24de4db7869f9d807acc0bdb96d5365f3f1a97340e09acfcea265423539"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "numeric-consumer-chains-alone",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nre(complex_conjugate(3+4*i))=re(3+(-4)*i)=3\nimg(complex_conjugate(3+4*i))=img(3+(-4)*i)=-4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/numeric-consumer-chains-alone.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/numeric-consumer-chains-alone.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0e640f30df068c37f97ff57a23e5d2f8c3291078fa9ef0fba68d3613b0d716e4"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "numeric-consumers-direct-after-canonical-values",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\nre(3+(-4)*i)=3\nimg(3+(-4)*i)=-4\nre(complex_conjugate(3+4*i))=3\nimg(complex_conjugate(3+4*i))=-4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/numeric-consumers-direct-after-canonical-values.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/numeric-consumers-direct-after-canonical-values.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "571cade5f3281271964bce1b8943caff01a5e01c97f2457293d4aa37b3d41f5f"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "symbolic-without-conjugate-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\nforall z C:\n    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)\n    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-without-conjugate-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/symbolic-without-conjugate-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "067d629e0742702234908360a7ad35b57e4178d8e63f4fa998709c821aee2754"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "wrong-consumer-chain-after-value",
+        "source": "have fn complex_conjugate(z C) C = re(z) - img(z) * i\ncomplex_conjugate(3+4*i)=3+(-4)*i\nre(complex_conjugate(3+4*i))=re(3+(-4)*i)=3\nimg(complex_conjugate(3+4*i))=img(3+(-4)*i)=4\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-consumer-chain-after-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round67-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-67-cases/wrong-consumer-chain-after-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bf8d83f43315225c865dd9b35813cb6e91e74ed7fddc1e9f05c30f053cd7a01b"
+        },
+        "stderr": ""
+      }
+    ],
+    "counts": {
+      "files": 20,
+      "accepted": 11,
+      "normal_rejections": 9
+    }
+  }
+}

@@ -1,0 +1,4 @@
+forall a,b Z:
+    b != 0
+    =>:
+        gcd(a,b) = gcd(b,a%abs(b))

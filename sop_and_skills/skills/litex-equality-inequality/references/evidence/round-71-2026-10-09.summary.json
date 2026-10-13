@@ -1,0 +1,557 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-71-2026-10-09.json",
+  "original_sha256": "2cf9e5c15b0a9687a31bd2c54c37bdc35f92103f542f89492b2d84a7d1a58641",
+  "original_bytes": 556681,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "75df5d4d285540fc2c3ea99297a75c6e628b3e174c19fafe277613e8518ce0b0",
+    "cases": [
+      {
+        "id": "prefix",
+        "source": {
+          "text_omitted": true,
+          "sha256": "03ce3b03b5ee5aaffb6ff6c81c51d55f61681ef6dbce21e930ba305cbb47773c",
+          "characters": 2786,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/prefix.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/prefix.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "385ddd714a2ff11e014c8ac888d69f4529a9fca30c2c9b9ec432224a29a3576b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/prefix.lit"
+        ]
+      },
+      {
+        "id": "source-both",
+        "source": {
+          "text_omitted": true,
+          "sha256": "1a4bddfbc142bc290d9069903424aa8dc1d94f499c7a3ca09c121f5055e2e56b",
+          "characters": 3973,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/source-both.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/source-both.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e3b6e3e9b01a4ee7c9fd02bb07f64402e326a6a223256065fb94ad162cb41952"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/source-both.lit"
+        ]
+      },
+      {
+        "id": "identity-delete-source-unit-value",
+        "source": {
+          "text_omitted": true,
+          "sha256": "45b8fe1db40debc37ed0af2c1bb36ee5b2b8058e3a130ff32315778417eb18f9",
+          "characters": 3292,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/identity-delete-source-unit-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/identity-delete-source-unit-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50ae065357dbee9d282462af61c2787a3389751a0555d1d12e5911a529a96354"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/identity-delete-source-unit-value.lit"
+        ]
+      },
+      {
+        "id": "inverse-delete-source-product",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3b2618ebd61372f939e90d6544acefe3c4d8800dd24bcc8af368228ccc256a6b",
+          "characters": 3942,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/inverse-delete-source-product.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/inverse-delete-source-product.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "55b95cd6c520f781647f3eb0e2d6f846c94c8179b8f4fbca3716ecd4d752d228"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-source-product.lit"
+        ]
+      },
+      {
+        "id": "inverse-empty-body",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d6a85c77cd95262a3368c8c8c510193ee61ba7b395e3d8b5622818ba1fdcecd8",
+          "characters": 3645,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/inverse-empty-body.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/inverse-empty-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7fce34325113fd3bb103781e218ae1eced200fa154d9313a15afba1c5e6b2e15"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-empty-body.lit"
+        ]
+      },
+      {
+        "id": "wrong-inverse-conclusion",
+        "source": {
+          "text_omitted": true,
+          "sha256": "29a6b8c9231f2ec49c798df92c57726547b771d603cb20751c7548fc278f1d27",
+          "characters": 3966,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/wrong-inverse-conclusion.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/wrong-inverse-conclusion.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a1ad6c463b35b10ff9e022cf5122cd0e402f2a1be07bca4cd498dc692204f18c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/wrong-inverse-conclusion.lit"
+        ]
+      },
+      {
+        "id": "missing-homomorphism-assumption",
+        "source": {
+          "text_omitted": true,
+          "sha256": "fa714819529499f70033cb197af52df7252ddfd741f8c36a38a434932053761c",
+          "characters": 3888,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/missing-homomorphism-assumption.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/missing-homomorphism-assumption.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4d9f91d98a010792c0bdf65ea20b03001e48e6bb517a1fd1b77f8b89a9a79cd5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/missing-homomorphism-assumption.lit"
+        ]
+      },
+      {
+        "id": "identity-delete-final-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "cc17b350db13941c02d02bd1cf86f3b20b6d86ab94f6a3026e61d681586b83bc",
+          "characters": 3303,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/identity-delete-final-echo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/identity-delete-final-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "68cc2afee5672f3413fe839e56c9cdd6abe79bdf0e075ebfe45147991d5d7fea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/identity-delete-final-echo.lit"
+        ]
+      },
+      {
+        "id": "inverse-delete-two-echoes",
+        "source": {
+          "text_omitted": true,
+          "sha256": "8c73931b0cba5d91530c4d24c5f313bfba63b55bd73d5fcc335c9616fd677240",
+          "characters": 3922,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/inverse-delete-two-echoes.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/inverse-delete-two-echoes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de854df417bb12d4a6e410288d1b069c039b96f3a02bfa4da97b29350f7dd91c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-two-echoes.lit"
+        ]
+      },
+      {
+        "id": "combined-short",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2a03fef501a7fe22393555f50f3d0e712b9fd14759a72ee0d7055ca4c28679a5",
+          "characters": 3901,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/combined-short.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/combined-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "526a55e2dbf2de4d03289d4ffd32ef86f707516ca66268de5d476ed847e1da39"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/combined-short.lit"
+        ]
+      },
+      {
+        "id": "source-through-normal-kernel",
+        "source": {
+          "text_omitted": true,
+          "sha256": "73abeb7aa4939d3dd00d2959eed5315d6d7953a2e993f51d9323857f87579300",
+          "characters": 7702,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/source-through-normal-kernel.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/source-through-normal-kernel.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3ce119d29c857c7f0201fb69bae68c14de64fef5f7495bc292a226207ab595a1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/source-through-normal-kernel.lit"
+        ]
+      },
+      {
+        "id": "short-through-normal-kernel",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ee47cd9b464360ff22c4599fd6ac10d921e81818eca986413aa2d7c84eabdf85",
+          "characters": 7491,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/short-through-normal-kernel.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-71-cases/short-through-normal-kernel.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "49fddcef1ccc414cca4ba01d57240f41b0a013533c0c8f7db94e1b0b8fb76021"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/short-through-normal-kernel.lit"
+        ]
+      }
+    ],
+    "excluded_fixture_attempts": [
+      {
+        "id": "identity-delete-final-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "e6be6ec0ad1744b1d0639c2387c96ac8c52ed7241a51414b803aa3728ba29442",
+          "characters": 3282,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/identity-delete-final-echo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/identity-delete-final-echo.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3252cbbea8f82bcaf0c9680b3f8a96abbbe84bfd5eb6701ac457177fa6c2e91a"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "inverse-delete-two-echoes",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d77331f24fc7e8ba1b840d99ea98f657b9506582994f2d04cfcf03d2ab6cab5e",
+          "characters": 3892,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-two-echoes.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-two-echoes.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: undefined name `release` at line 94 in /Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/inverse-delete-two-echoes.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3e733737ec3e43d44dc36ad9fa890ceb1bc908c614c49a64f9162890044aad34"
+        },
+        "stderr": ""
+      },
+      {
+        "id": "combined-short",
+        "source": {
+          "text_omitted": true,
+          "sha256": "96502116d9895cc3d621b4e169091534154f782a29d71058ac5439635d53ee22",
+          "characters": 3850,
+          "excerpt": "# Package 6: abstract algebra without Setting surface.\n# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.\n# Flat props keep the by-def ABI used by concrete consumers.\n\nforall x, y, z Z:\n    (x + y) + z = x + (y + z)\n    (x * y) * z = x * (y * z)\n    x * (y + z) = x * y + x * z\n    (x + y) * z = x * z + y * z\n    x + y = y + x\n    x * y = y * x\n    0 + x = x\n    x + 0 = x\n    x + (-x) = 0\n    (-x) + x = 0\n    1 * x = x\n    x * 1 = x\n    0 * x = 0\n    x * 0 = 0\n    -0 = 0\n\n# Abstract algebra — groups and homomorphisms, setting-first.\n#\n# Named settings are the reu"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/combined-short.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/combined-short.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: undefined name `release` at line 92 in /Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round71-cases/combined-short.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b145f2571a88a5aaa460faf8f5a0548bf091c9ef2c1a4c8409f650391dcd875e"
+        },
+        "stderr": ""
+      }
+    ],
+    "fixture_correction": "Unanchored four-space substring matched twelve-space goal and changed it. These three old source/results excluded. Corrected exact-line deletions preserve theorem goals.",
+    "counts": {
+      "files": 12,
+      "accepted": 7,
+      "normal_rejections": 5
+    },
+    "scope": "Exact source prefix and homomorphism identity/inverse theorem consumers, existing flat predicates and generic carriers preserved. Downstream original kernel_is_normal_subgroup theorem checked with both old and short homomorphism proofs; structs/later source excluded."
+  }
+}

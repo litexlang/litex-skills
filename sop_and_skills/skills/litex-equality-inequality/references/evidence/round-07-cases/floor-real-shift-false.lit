@@ -1,0 +1,2 @@
+forall x,n R:
+    floor(x+n) = floor(x)+n

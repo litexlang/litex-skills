@@ -1,0 +1,14 @@
+prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):
+    forall u, v, w A:
+        mul(mul(u, v), w) = mul(u, mul(v, w))
+    forall u A:
+        mul(one, u) = u
+        mul(u, one) = u
+        mul(inv(u), u) = one
+        mul(u, inv(u)) = one
+thm group_inverse_unique:
+    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:
+        $GroupSetting(A, mul, one, inv)
+        mul(b, a) = one
+        =>:
+            b = inv(a)

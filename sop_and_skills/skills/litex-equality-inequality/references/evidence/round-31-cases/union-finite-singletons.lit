@@ -1,0 +1,5 @@
+claim:
+    ? forall a,c R:
+        $is_finite_set(union({a},{c}))
+    $is_finite_set({a})
+    $is_finite_set({c})

@@ -1,0 +1,4 @@
+forall r,x R:
+    (x-r)^2=0
+    =>:
+        x=r

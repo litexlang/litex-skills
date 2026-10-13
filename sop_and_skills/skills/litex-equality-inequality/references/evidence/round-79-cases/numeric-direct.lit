@@ -1,0 +1,2 @@
+have fn quadratic_gradient(p cart(R, R)) cart(R, R) = (2 * p(1), 2 * p(2))
+quadratic_gradient((3,4))=(6,8)

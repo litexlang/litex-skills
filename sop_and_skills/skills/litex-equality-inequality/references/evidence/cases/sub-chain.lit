@@ -1,0 +1,7 @@
+claim:
+    ? forall a, b, c, d R:
+        a <= b
+        c <= d
+        =>:
+            a-d <= b-c
+    a-d <= b-d <= b-c

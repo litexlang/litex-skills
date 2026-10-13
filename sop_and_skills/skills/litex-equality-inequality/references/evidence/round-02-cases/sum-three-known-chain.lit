@@ -1,0 +1,9 @@
+claim:
+    ? forall u,v,w R:
+        0 <= u
+        0 <= v
+        0 <= w
+        =>:
+            0 <= u+v+w
+    0 <= u+v
+    0 <= u+v+w

@@ -1,0 +1,4 @@
+have fn square_function(x R) R = x^2
+have fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)
+square_function(3)=9
+square_tangent_at_three(3)=9

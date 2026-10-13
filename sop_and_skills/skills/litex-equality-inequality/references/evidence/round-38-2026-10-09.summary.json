@@ -1,0 +1,708 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-38-2026-10-09.json",
+  "original_sha256": "a9fc9c1639852d2caf898b548bb1a2cd3dec22c65d21698ad332af901c8abf9d",
+  "original_bytes": 95925,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+    "sha256": "f125e78b1db70b855e886a7493dac2886b5403976ada3734b673efeaf8e75a33",
+    "cases": [
+      {
+        "id": "joint-original-spine",
+        "source": "thm r38_joint_original_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    sample!=x0\n    sample-x0=radius/2\n    sample-x0>0\n    0<=sample-x0\n    abs(sample-x0)=sample-x0=radius/2\n    radius/2<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-original-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b6c3e06b124418736a78f0a68532a60539ab04b19215d06312abb64a28fb1956"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-original-spine.lit"
+        ]
+      },
+      {
+        "id": "joint-five-line-spine",
+        "source": "thm r38_joint_five_line_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-five-line-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d3bc18ebbfcfd4261bded004628e95a35a5d4716d6caca0427ad6bb1b25674c3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-five-line-spine.lit"
+        ]
+      },
+      {
+        "id": "joint-four-line-spine",
+        "source": "thm r38_joint_four_line_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    0<=sample-x0\n    abs(sample-x0)=sample-x0=radius/2<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-four-line-spine.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a8b6618215dd8c873b0d96ac085bdfed648c3db312409eb844cb60ba3c05f662"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-four-line-spine.lit"
+        ]
+      },
+      {
+        "id": "joint-bodyless",
+        "source": "thm r38_joint_bodyless:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1180c61d26623df3892cf00430cd7d7b8e45fdec38ac8953794615003d03d2f4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-bodyless.lit"
+        ]
+      },
+      {
+        "id": "joint-delete-abs-fold",
+        "source": "thm r38_joint_delete_abs_fold:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    0<=sample-x0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-delete-abs-fold.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "249eedb89ef67c89824dc03e996cd19638a7bf937de2ce5e1266d4f2d0affdc5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-delete-abs-fold.lit"
+        ]
+      },
+      {
+        "id": "joint-delete-nonnegative",
+        "source": "thm r38_joint_delete_nonnegative:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    abs(sample-x0)=sample-x0=radius/2<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-delete-nonnegative.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "08bdc09cf0ba0a738ba0f8b1bacb8b743b35181730370d61c457237b97347601"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-delete-nonnegative.lit"
+        ]
+      },
+      {
+        "id": "alias-error-direct",
+        "source": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        abs(sample-x0)<radius",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/alias-error-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "601058100da13b76ae4cae257d686be98f70cedf43f6d741ba9e4914b3d71606"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/alias-error-direct.lit"
+        ]
+      },
+      {
+        "id": "alias-distinct-direct",
+        "source": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        sample!=x0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/alias-distinct-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8e71e882d62aad9c4ae42579a84c34fd367553513e744a014feac3e74c41f976"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/alias-distinct-direct.lit"
+        ]
+      },
+      {
+        "id": "alias-error-one-positive-chain",
+        "source": "claim:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            abs(sample-x0)<radius\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/alias-error-one-positive-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "77a708f5e14a7ae07bc1876861ceabe98b4ede6660b35b6b7be2e1174868a938"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/alias-error-one-positive-chain.lit"
+        ]
+      },
+      {
+        "id": "zero-sample-distinct-false",
+        "source": "forall x0,sample R:\n    sample=x0+0/2\n    =>:\n        sample!=x0",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/zero-sample-distinct-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "149e0aef625674445b1522c78ad9741375168a06b953ab6ea15fa961009e0d08"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/zero-sample-distinct-false.lit"
+        ]
+      },
+      {
+        "id": "strict-half-error-false",
+        "source": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        abs(sample-x0)<radius/2",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/strict-half-error-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a8257671997f35c4f2fa706680089b6d4bfa49d5e05a5d63cf688a245301ab09"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/strict-half-error-false.lit"
+        ]
+      },
+      {
+        "id": "quotient-source-flow",
+        "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample=r38_x0+r38_radius/2>r38_x0\nr38_sample!=r38_x0\nr38_sample-r38_x0=r38_radius/2\nr38_sample-r38_x0>0\n0<=r38_sample-r38_x0\nabs(r38_sample-r38_x0)=r38_sample-r38_x0=r38_radius/2\nr38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/quotient-source-flow.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "28fdee85d623e6462ee5feebbad83942845d0665f24b491a0155bd0fe672181f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/quotient-source-flow.lit"
+        ]
+      },
+      {
+        "id": "quotient-short-flow",
+        "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample=r38_x0+r38_radius/2>r38_x0\n0<=r38_radius/2\nr38_sample-r38_x0=r38_radius/2\nabs(r38_sample-r38_x0)=abs(r38_radius/2)=r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/quotient-short-flow.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f3b02a2695213fe136d86fdfafd0fbb7ef852fafb1cf2158f5afca34241269b4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/quotient-short-flow.lit"
+        ]
+      },
+      {
+        "id": "quotient-bodyless-flow",
+        "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/quotient-bodyless-flow.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1c4af0f8ccd2a199e4b5ecc769a44a72974c2867fc35ee713e56d04976faab5b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/quotient-bodyless-flow.lit"
+        ]
+      },
+      {
+        "id": "joint-five-delete-nonnegative",
+        "source": "thm r38_joint_five_delete_nonnegative:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-five-delete-nonnegative.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "884467a12df8d491bd87a299a61161a796b944cf17a2c4cbc35bb8af8a5d81f5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-five-delete-nonnegative.lit"
+        ]
+      },
+      {
+        "id": "joint-five-delete-positive-half",
+        "source": "thm r38_joint_five_delete_positive_half:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-five-delete-positive-half.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a3a87cf450934f299d2d92f22ab2a19ce884371635c3eb053176eab977bd9e01"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-five-delete-positive-half.lit"
+        ]
+      },
+      {
+        "id": "joint-five-delete-abs-fold",
+        "source": "thm r38_joint_five_delete_abs_fold:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/joint-five-delete-abs-fold.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0af258dcb64708ab1e08c121162cfc201e09cc028619ce2f2c1a448a7a7f8b75"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/joint-five-delete-abs-fold.lit"
+        ]
+      },
+      {
+        "id": "quotient-four-difference-flow",
+        "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample-r38_x0=r38_radius/2>0\n0<=r38_sample-r38_x0\nabs(r38_sample-r38_x0)=r38_sample-r38_x0=r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/quotient-four-difference-flow.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0443c9719441e31581878d5265b3b8b336ffaf69d0491528af06a5451e45621c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/quotient-four-difference-flow.lit"
+        ]
+      },
+      {
+        "id": "quotient-four-order-flow",
+        "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample=r38_x0+r38_radius/2>r38_x0\nr38_sample-r38_x0=r38_radius/2\nabs(r38_sample-r38_x0)=abs(r38_radius/2)=r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-38-cases/quotient-four-order-flow.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2541dacb3bf3b271a51ea8cc5f313f89058bbade7d883439b0003695e9fd6960"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/quotient-four-order-flow.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "cases": [
+        {
+          "id": "joint-original-spine",
+          "source": "thm r38_joint_original_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    sample!=x0\n    sample-x0=radius/2\n    sample-x0>0\n    0<=sample-x0\n    abs(sample-x0)=sample-x0=radius/2\n    radius/2<radius\n",
+          "statement": "thm r38_joint_original_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    sample!=x0\n    sample-x0=radius/2\n    sample-x0>0\n    0<=sample-x0\n    abs(sample-x0)=sample-x0=radius/2\n    radius/2<radius\n"
+        },
+        {
+          "id": "joint-five-line-spine",
+          "source": "thm r38_joint_five_line_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n",
+          "statement": "thm r38_joint_five_line_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n"
+        },
+        {
+          "id": "joint-four-line-spine",
+          "source": "thm r38_joint_four_line_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    0<=sample-x0\n    abs(sample-x0)=sample-x0=radius/2<radius\n",
+          "statement": "thm r38_joint_four_line_spine:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    0<=sample-x0\n    abs(sample-x0)=sample-x0=radius/2<radius\n"
+        },
+        {
+          "id": "joint-bodyless",
+          "source": "thm r38_joint_bodyless:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n",
+          "statement": "thm r38_joint_bodyless:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n"
+        },
+        {
+          "id": "joint-delete-abs-fold",
+          "source": "thm r38_joint_delete_abs_fold:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    0<=sample-x0\n",
+          "statement": "thm r38_joint_delete_abs_fold:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    0<=sample-x0\n"
+        },
+        {
+          "id": "joint-delete-nonnegative",
+          "source": "thm r38_joint_delete_nonnegative:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    abs(sample-x0)=sample-x0=radius/2<radius\n",
+          "statement": "thm r38_joint_delete_nonnegative:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample-x0=radius/2>0\n    abs(sample-x0)=sample-x0=radius/2<radius\n"
+        },
+        {
+          "id": "alias-error-direct",
+          "source": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        abs(sample-x0)<radius",
+          "statement": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        abs(sample-x0)<radius"
+        },
+        {
+          "id": "alias-distinct-direct",
+          "source": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        sample!=x0",
+          "statement": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        sample!=x0"
+        },
+        {
+          "id": "alias-error-one-positive-chain",
+          "source": "claim:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            abs(sample-x0)<radius\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius",
+          "statement": "claim:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            abs(sample-x0)<radius\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius"
+        },
+        {
+          "id": "zero-sample-distinct-false",
+          "source": "forall x0,sample R:\n    sample=x0+0/2\n    =>:\n        sample!=x0",
+          "statement": "forall x0,sample R:\n    sample=x0+0/2\n    =>:\n        sample!=x0"
+        },
+        {
+          "id": "strict-half-error-false",
+          "source": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        abs(sample-x0)<radius/2",
+          "statement": "forall x0 R,radius R+,sample R:\n    sample=x0+radius/2\n    =>:\n        abs(sample-x0)<radius/2"
+        },
+        {
+          "id": "quotient-source-flow",
+          "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample=r38_x0+r38_radius/2>r38_x0\nr38_sample!=r38_x0\nr38_sample-r38_x0=r38_radius/2\nr38_sample-r38_x0>0\n0<=r38_sample-r38_x0\nabs(r38_sample-r38_x0)=r38_sample-r38_x0=r38_radius/2\nr38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n"
+        },
+        {
+          "id": "quotient-short-flow",
+          "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample=r38_x0+r38_radius/2>r38_x0\n0<=r38_radius/2\nr38_sample-r38_x0=r38_radius/2\nabs(r38_sample-r38_x0)=abs(r38_radius/2)=r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n"
+        },
+        {
+          "id": "quotient-bodyless-flow",
+          "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n"
+        },
+        {
+          "id": "joint-five-delete-nonnegative",
+          "source": "thm r38_joint_five_delete_nonnegative:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n",
+          "statement": "thm r38_joint_five_delete_nonnegative:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n"
+        },
+        {
+          "id": "joint-five-delete-positive-half",
+          "source": "thm r38_joint_five_delete_positive_half:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n",
+          "statement": "thm r38_joint_five_delete_positive_half:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n    abs(sample-x0)=abs(radius/2)=radius/2<radius\n"
+        },
+        {
+          "id": "joint-five-delete-abs-fold",
+          "source": "thm r38_joint_five_delete_abs_fold:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n",
+          "statement": "thm r38_joint_five_delete_abs_fold:\n    ? forall x0 R,radius R+,sample R:\n        sample=x0+radius/2\n        =>:\n            sample!=x0\n            abs(sample-x0)<radius\n    0<radius/2\n    sample=x0+radius/2>x0\n    0<=radius/2\n    sample-x0=radius/2\n"
+        },
+        {
+          "id": "quotient-four-difference-flow",
+          "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample-r38_x0=r38_radius/2>0\n0<=r38_sample-r38_x0\nabs(r38_sample-r38_x0)=r38_sample-r38_x0=r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n"
+        },
+        {
+          "id": "quotient-four-order-flow",
+          "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n0<r38_radius/2\nr38_sample=r38_x0+r38_radius/2>r38_x0\nr38_sample-r38_x0=r38_radius/2\nabs(r38_sample-r38_x0)=abs(r38_radius/2)=r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n"
+        }
+      ],
+      "source_path": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+      "source_sha256": "30c6fcf1c2c31e4df4548a5617aedc5968b6120ff8afa625ce485b899dd23815",
+      "adaptation": "Exact named sample equation/domain from source, isolated joint goals. Quotient flow uses declared arbitrary parameters/function to mirror actual statement ordering, not a new global theorem."
+    },
+    "excluded_authoring_error": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-authoring-errors.json",
+    "summary": {
+      "accepted": 8,
+      "rejected": 11
+    },
+    "scope": "Named sample equation and joint nonzero/error targets, declaration-flow quotient consumer with arbitrary real-valued callable. No whole derivative/showcase/kernel changes.",
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Successful current release gate and fixed binary identity; not an immutable whole-checkout audit. Warm Session uses older round29 snapshot."
+  }
+}

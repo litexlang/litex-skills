@@ -1,0 +1,6 @@
+claim:
+    ? forall a,q Z,b Z*:
+        a = b*q
+        =>:
+            a/b $in Z
+    a/b = q

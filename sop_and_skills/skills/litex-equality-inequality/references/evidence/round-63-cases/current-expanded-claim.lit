@@ -1,0 +1,6 @@
+claim:
+    ? forall x Z:
+        x>4
+        =>:
+            5<=x
+    5<=x

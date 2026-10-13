@@ -1,0 +1,66 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-52-session.json",
+  "original_sha256": "82f36a358f0d8bbdcde7e50fcca9fb12cd8b8872cd3a783ddc6e2244d169b92f",
+  "original_bytes": 15186,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8a7c34df7eba8dd8d7dafe1a5f21c6a0b46daaaac467fa77c07cb1c4737e86e7",
+        "excerpt": "have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "have fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5e76323c05fb5b5f2393d96a1140e4c64f2c46ed48c690e2c3a6dec81e8a2ca0",
+        "excerpt": "have fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "claim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x * y >= 0\n    sqrt(x * y)^2 = x * y\n    (x + y)^2 - 4 * x * y = (x - y)^2\n    0 <= (x - y)^2\n    0 <= (x + y)^2 - 4 * x * y\n    4 * x * y <= (x + y)^2\n    x * y <= (x + y)^2 / 4\n    ((x + y) / 2)^2 = (x + y)^2 / 4\n    x * y <= ((x + y) / 2)^2\n    0 <= sqrt(x * y)\n    0 <= x + y\n    0 < 2\n    0 <= (x + y) / 2\n    by contra:\n        ? sqrt(x * y) <= (x + y) / 2\n        sqrt(x * y) > (x + y) / 2\n        sqrt(x * y)^2 > ((x + y) / 2)^2\n        impossible x * y <= ((x + y) / 2)^2\n    r52_geometric_mean(x, y) = sqrt(x * y)\n    r52_arithmetic_mean(x, y) = (x + y) / 2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "767c960a6b91ac75318ee5f5f77bdc6a36a12155af923a59a5e762d852348bd4",
+        "excerpt": "claim:\r\n    ? forall x, y R:\r\n        x >= 0\r\n        y >= 0\r\n        =>:\r\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\r\n    x * y >= 0\r\n    sqrt(x * y)^2 = x * y\r\n    (x + y)^2 - 4 * x * y = (x - y)^2\r\n    0 <= (x - y)^2\r\n    0 <= (x + y)^2 - 4 * x * y\r\n    4 * x * y <= (x + y)^2\r\n    x * y <= (x + y)^2 / 4\r\n    ((x + y) / 2)^2 = (x + y)^2 / 4\r\n    x * y <= ((x + y) / 2)^2\r\n    0 <= sqrt(x * y)\r\n    0 <= x + y\r\n    0 < 2\r\n    0 <= (x + y) / 2\r\n    by contra:\r\n        ? sqrt(x * y) <= (x + y) / 2\r\n        sqrt(x * y) > (x + y) / 2\r\n        sqrt(x * y)^2 > ((x + y) / 2)^2\r\n"
+      }
+    },
+    {
+      "source": "claim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    sqrt(x*y)<=(x+y)/2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4357d4d4fc004097bc1e0e3fa9ee9a1126a945590fce3c38550856045dbec97e",
+        "excerpt": "Warning: truncated output (original token count: 20863)\nTotal output lines: 1653\n\nclaim:\r\n    ? forall x, y R:\r\n        x >= 0\r\n        y >= 0\r\n        =>:\r\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\r\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\r\n    x*y<=((x+y)/2)^2\r\n    sqrt(x*y)<=(x+y)/2\r\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)\r\n\r\n... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r"
+      }
+    },
+    {
+      "source": "claim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    sqrt(x*y)<=(x+y)/2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9be98541477e58190c0d5eb9d089dfdc2cd060d2fffbf47d5b9b38f16c715de3",
+        "excerpt": "Warning: truncated output (original token count: 10396)\nTotal output lines: 848\n\nclaim:\r\n    ? forall x, y R:\r\n        x >= 0\r\n        y >= 0\r\n        =>:\r\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\r\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\r\n    x*y<=((x+y)/2)^2\r\n    (x+y)/2>=0\r\n    sqrt(x*y)<=(x+y)/2\r\n    r52_geometric_mean(x,y)=sqrt(x*y)<=(x+y)/2=r52_arithmetic_mean(x,y)\r\n\r\n... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n     "
+      }
+    },
+    {
+      "source": "claim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    x*y>=0\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    0<=((x+y)/2)^2\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "71db040cf6e9d15f89c635b6e9699d3ab44916eabdb4cd25e55735b7942296cb",
+        "excerpt": "claim:\r\n    ? forall x, y R:\r\n        x >= 0\r\n        y >= 0\r\n        =>:\r\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\r\n    x*y>=0\r\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\r\n    x*y<=((x+y)/2)^2\r\n    (x+y)/2>=0\r\n    0<=((x+y)/2)^2\r\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "source": "claim:\n    ? forall x, y R:\n        x >= 0\n        y >= 0\n        =>:\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\n    x*y<=((x+y)/2)^2\n    (x+y)/2>=0\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3a6cd30392eaba86594c1adc865d5438593362d8764c77b7dc98e2a3446ff83f",
+        "excerpt": "claim:\r\n    ? forall x, y R:\r\n        x >= 0\r\n        y >= 0\r\n        =>:\r\n            r52_geometric_mean(x, y) <= r52_arithmetic_mean(x, y)\r\n    ((x+y)/2)^2-x*y=(x-y)^2/4>=0\r\n    x*y<=((x+y)/2)^2\r\n    (x+y)/2>=0\r\n    r52_geometric_mean(x,y)=sqrt(x*y)<=sqrt(((x+y)/2)^2)=(x+y)/2=r52_arithmetic_mean(x,y)\r\n\r\n... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    }
+  ]
+}

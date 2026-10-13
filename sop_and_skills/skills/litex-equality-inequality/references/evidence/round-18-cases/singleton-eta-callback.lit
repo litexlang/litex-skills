@@ -1,0 +1,2 @@
+forall f fn(k Z) R:
+    sum(1,1,fn(j Z) R {f(j)}) = f(1)

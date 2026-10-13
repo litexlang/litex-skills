@@ -1,0 +1,96 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-66-sources.json",
+  "original_sha256": "e00d73a4a608a82099908c3ca28f0dadcfb29ed9cd6116e861ab470edba57f15",
+  "original_bytes": 8073,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/1_middle_school_math_in_nutshell/main.lit",
+    "source_sha256": "967fb75fd2c737f9f98f47f4a413fe111b6a5f1bb5f95ee3740ffe4e94d62ba6",
+    "definitions": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n",
+    "scope": "Exact source radians and cosine-law squared-side functions; isolated scalar section, no new geometry interface.",
+    "cases": [
+      {
+        "id": "source-calculations",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(180)=180*pi/180=pi\nradians_from_degrees(60)=60*pi/180=pi/3\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=5^2+12^2-2*5*12*cos(pi/2)=169\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/source-calculations.lit"
+      },
+      {
+        "id": "radians-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(180)=pi\nradians_from_degrees(60)=pi/3\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/radians-direct.lit"
+      },
+      {
+        "id": "cosine-numeric-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncosine_law_third_side_sq(3,4,pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=169\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-numeric-direct.lit"
+      },
+      {
+        "id": "cosine-direct-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=169\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-direct-with-cos.lit"
+      },
+      {
+        "id": "cosine-original-without-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=5^2+12^2-2*5*12*cos(pi/2)=169\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-original-without-cos.lit"
+      },
+      {
+        "id": "cosine-right-angle-symbolic",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall a,b R:\n    cosine_law_third_side_sq(a,b,pi/2)=a^2+b^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-right-angle-symbolic.lit"
+      },
+      {
+        "id": "cosine-sixty-degree",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncosine_law_third_side_sq(3,4,pi/3)=13\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-sixty-degree.lit"
+      },
+      {
+        "id": "false-radians",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(60)=pi/2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/false-radians.lit"
+      },
+      {
+        "id": "false-cosine-value",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=24\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/false-cosine-value.lit"
+      },
+      {
+        "id": "false-arbitrary-angle",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nforall a,b,gamma R:\n    cosine_law_third_side_sq(a,b,gamma)=a^2+b^2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/false-arbitrary-angle.lit"
+      },
+      {
+        "id": "radians-180-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(180)=pi\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/radians-180-direct.lit"
+      },
+      {
+        "id": "radians-60-direct",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\nradians_from_degrees(60)=pi/3\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/radians-60-direct.lit"
+      },
+      {
+        "id": "cosine-chains-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\ncosine_law_third_side_sq(5,12,pi/2)=5^2+12^2-2*5*12*cos(pi/2)=169\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-chains-with-cos.lit"
+      },
+      {
+        "id": "cosine-first-chain-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-first-chain-with-cos.lit"
+      },
+      {
+        "id": "cosine-wrong-chain-with-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\ncos(pi/2)=0\ncosine_law_third_side_sq(3,4,pi/2)=3^2+4^2-2*3*4*cos(pi/2)=24\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-wrong-chain-with-cos.lit"
+      },
+      {
+        "id": "cosine-expanded-scalar-without-cos",
+        "source": "have fn radians_from_degrees(theta R) R = theta * pi / 180\nhave fn cosine_law_third_side_sq(a, b, gamma R) R = a^2 + b^2 - 2 * a * b * cos(gamma)\n\n3^2+4^2-2*3*4*cos(pi/2)=25\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round66-cases/cosine-expanded-scalar-without-cos.lit"
+      }
+    ]
+  }
+}

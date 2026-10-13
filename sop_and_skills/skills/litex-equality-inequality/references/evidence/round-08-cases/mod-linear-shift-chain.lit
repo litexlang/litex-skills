@@ -1,0 +1,6 @@
+claim:
+    ? forall a,k Z,m N+:
+        (a+k*m)%m = a%m
+    (k*m)%m = 0
+    a%m+0 = a%m
+    (a+k*m)%m = (a%m+(k*m)%m)%m = (a%m+0)%m = (a%m)%m = a%m

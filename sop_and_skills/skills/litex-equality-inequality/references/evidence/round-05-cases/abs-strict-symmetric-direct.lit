@@ -1,0 +1,5 @@
+forall x,r R:
+    x < r
+    0-x < r
+    =>:
+        abs(x) < r

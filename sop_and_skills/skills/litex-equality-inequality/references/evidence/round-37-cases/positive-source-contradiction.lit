@@ -1,0 +1,13 @@
+thm r37_positive_source:
+    ? forall slope1,slope2 R:
+        slope1!=slope2
+        =>:
+            abs(slope1-slope2)>0
+    slope1-slope2!=0
+    by contra:
+        ? abs(slope1-slope2)>0
+        abs(slope1-slope2)<=0
+        0<=abs(slope1-slope2)
+        abs(slope1-slope2)=0
+        abs(slope1-slope2)!=0
+        impossible abs(slope1-slope2)=0

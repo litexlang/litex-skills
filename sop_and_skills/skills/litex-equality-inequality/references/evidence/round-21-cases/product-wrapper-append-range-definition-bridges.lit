@@ -1,0 +1,13 @@
+have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:
+    case first<=last: product(first,last,term)
+    case first>last: 1
+
+claim:
+    ? forall f fn(k N) R,m N:
+        m>=2
+        =>:
+            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)
+    2<=m
+    2<=m+1
+    finite_coefficient_product_211(2,m,f)=product(2,m,f)
+    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)

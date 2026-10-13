@@ -1,0 +1,6 @@
+claim:
+    ? forall a,b R:
+        (a-b)^2 = 0
+        =>:
+            a = b
+    a-b = 0

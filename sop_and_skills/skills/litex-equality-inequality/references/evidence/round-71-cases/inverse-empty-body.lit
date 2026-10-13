@@ -1,0 +1,94 @@
+# Package 6: abstract algebra without Setting surface.
+# Carriers live in struct angle brackets; theorems take &Group / &CommutativeRing.
+# Flat props keep the by-def ABI used by concrete consumers.
+
+forall x, y, z Z:
+    (x + y) + z = x + (y + z)
+    (x * y) * z = x * (y * z)
+    x * (y + z) = x * y + x * z
+    (x + y) * z = x * z + y * z
+    x + y = y + x
+    x * y = y * x
+    0 + x = x
+    x + 0 = x
+    x + (-x) = 0
+    (-x) + x = 0
+    1 * x = x
+    x * 1 = x
+    0 * x = 0
+    x * 0 = 0
+    -0 = 0
+
+# Abstract algebra — groups and homomorphisms, setting-first.
+#
+# Named settings are the reusable source of parameter bundles and laws.
+# Concrete propositions elaborate those bundles to their existing flat ABI;
+# theorem-writing uses the same settings directly.
+
+prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):
+    forall u, v, w A:
+        mul(mul(u, v), w) = mul(u, mul(v, w))
+    forall u A:
+        mul(one, u) = u
+        mul(u, one) = u
+        mul(inv(u), u) = one
+        mul(u, inv(u)) = one
+
+prop is_group(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):
+    $GroupSetting(A, mul, one, inv)
+
+thm group_left_cancel:
+    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:
+        $GroupSetting(A, mul, one, inv)
+        mul(a, b) = mul(a, c)
+        =>:
+            b = c
+    mul(inv(a), a) = one
+    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c
+
+thm group_identity_unique:
+    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, identity A:
+        $GroupSetting(A, mul, one, inv)
+        forall a A:
+            mul(identity, a) = a
+            mul(a, identity) = a
+        =>:
+            identity = one
+    identity = mul(one, identity) = one
+
+thm group_inverse_unique:
+    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:
+        $GroupSetting(A, mul, one, inv)
+        mul(b, a) = one
+        =>:
+            b = inv(a)
+    mul(a, inv(a)) = one
+    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)
+
+prop is_group_homomorphism(A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B):
+    $GroupSetting(A, mul_A, one_A, inv_A)
+    $GroupSetting(B, mul_B, one_B, inv_B)
+    forall x, y A:
+        f(mul_A(x, y)) = mul_B(f(x), f(y))
+
+prop GroupHomomorphismSetting(A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B):
+    $GroupSetting(A, mul_A, one_A, inv_A)
+    $GroupSetting(B, mul_B, one_B, inv_B)
+    forall x, y A:
+        f(mul_A(x, y)) = mul_B(f(x), f(y))
+
+thm homomorphism_maps_identity:
+    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B:
+        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)
+        =>:
+            f(one_A) = one_B
+    mul_A(one_A, one_A) = one_A
+    mul_B(f(one_A), f(one_A)) = f(mul_A(one_A, one_A)) = f(one_A) = mul_B(f(one_A), one_B)
+    release thm group_left_cancel(B, mul_B, one_B, inv_B, f(one_A), f(one_A), one_B)
+    f(one_A) = one_B
+
+thm homomorphism_maps_inverse:
+    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B, a A:
+        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)
+        =>:
+            f(inv_A(a)) = inv_B(f(a))

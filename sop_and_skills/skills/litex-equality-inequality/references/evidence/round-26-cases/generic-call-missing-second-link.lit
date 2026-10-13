@@ -1,0 +1,4 @@
+forall A,B set,f,g,h fn(x A) B,p A:
+    f(p)=g(p)
+    =>:
+        f(p)=h(p)

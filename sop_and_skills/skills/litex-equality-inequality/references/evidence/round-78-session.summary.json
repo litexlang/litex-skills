@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-78-session.json",
+  "original_sha256": "fdbf42e7a3b181f2008b5b4ca061df371986fc6909c7e31806898fde8987460c",
+  "original_bytes": 1021,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn quadratic_gradient(p cart(R,R)) cart(R,R)=(2*p(1),2*p(2))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "647a4cc1b5589abfb61f1c0b8cd820f1456219a3b00fb36a518c1e83d447b368",
+        "excerpt": "have fn quadratic_gradient(p cart(R,R)) cart(R,R)=(2*p(1),2*p(2))\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; gradient coordinate slice only. Current cold round78 owns packaging theorem deletion."
+    },
+    {
+      "source": "forall point cart(R,R):\n    quadratic_gradient(point)=(2*point(1),2*point(2))\n    quadratic_gradient(point)(1)=(2*point(1),2*point(2))(1)=2*point(1)\n    quadratic_gradient(point)(2)=(2*point(1),2*point(2))(2)=2*point(2)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e95b6fcffd3f71ac1ea683418f0f68134dd00bf060b8cf134f725b2021da718f",
+        "excerpt": "forall point cart(R,R):\r\n    quadratic_gradient(point)=(2*point(1),2*point(2))\r\n    quadratic_gradient(point)(1)=(2*point(1),2*point(2))(1)=2*point(1)\r\n    quadratic_gradient(point)(2)=(2*point(1),2*point(2))(2)=2*point(2)\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; gradient coordinate slice only. Current cold round78 owns packaging theorem deletion."
+    }
+  ]
+}

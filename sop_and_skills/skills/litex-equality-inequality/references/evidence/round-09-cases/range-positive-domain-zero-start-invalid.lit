@@ -1,0 +1,2 @@
+forall f fn(x N+) R,n N+:
+    sum(0,n,f) = sum(0,n,f)

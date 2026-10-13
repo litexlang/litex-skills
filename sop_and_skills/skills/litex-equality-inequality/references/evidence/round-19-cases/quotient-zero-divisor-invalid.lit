@@ -1,0 +1,4 @@
+forall a,b Z:
+    b = 0
+    =>:
+        a/b $in Z

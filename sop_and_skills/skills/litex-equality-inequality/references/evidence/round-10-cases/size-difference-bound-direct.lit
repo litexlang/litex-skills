@@ -1,0 +1,2 @@
+forall A,B finite_set:
+    finite_set_size(set_minus(A,B)) <= finite_set_size(A)

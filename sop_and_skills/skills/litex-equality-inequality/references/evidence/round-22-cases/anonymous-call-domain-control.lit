@@ -1,0 +1,4 @@
+forall c R:
+    fn(k N+) R {c}(0)=c
+    =>:
+        fn(k N+) R {c}(0)*2=c*2

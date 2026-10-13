@@ -1,0 +1,82 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-62-session.json",
+  "original_sha256": "05f628749afee1d2df6679306ed950f76d6b5dc34455fd0b1e61422ee9cf63bd",
+  "original_bytes": 3050,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r62_zero(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: r62_zero(n - 1)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "96a76b833e8bde4b8e319048e820d06f6974aa8e6eb1e2c006804b63e940b8cd",
+        "excerpt": "have fn r62_zero(n N) N by induc n from 0:\r\n    case n = 0: 0\r\n    case n >= 1: r62_zero(n - 1)\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    },
+    {
+      "source": "r62_zero(1)=r62_zero(1-1)=r62_zero(0)=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ca62106a0f25c99ea48a35dea3555466c785068e4df01a64335380d5025ecac6",
+        "excerpt": "r62_zero(1)=r62_zero(1-1)=r62_zero(0)=0\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    },
+    {
+      "source": "r62_zero(2)=r62_zero(2-1)=r62_zero(1)=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "94ad90d2d4df93b95d7f0d7b562b9ae02afd2925463cc91856a39af6f4104b5c",
+        "excerpt": "r62_zero(2)=r62_zero(2-1)=r62_zero(1)=0\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    },
+    {
+      "source": "r62_zero(2)=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "eef1f89ab4130c1e1ec6495e57bc0ada9b0c4f2597dabd117dac8a35f37464de",
+        "excerpt": "r62_zero(2)=1\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r62_zero(2) = 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r62_zero(2) = 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; ordinary false offset rejection."
+    },
+    {
+      "source": "have fn r62_inc(n N) N by induc n from 0:\n    case n = 0: 0\n    case n >= 1: r62_inc(n - 1)+1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "315251d188eb46f24a399e3302f7dd2dd56b1083f9c4ad91daf79bbe1f24d230",
+        "excerpt": "have fn r62_inc(n N) N by induc n from 0:\r\n    case n = 0: 0\r\n    case n >= 1: r62_inc(n - 1)+1\r\n\r\n... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    },
+    {
+      "source": "r62_inc(1)=r62_inc(1-1)+1=r62_inc(0)+1=0+1=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f7b3987bda5927d3e62aa1f6e0f429eec00fdc1da5ec8614beca33f065756c27",
+        "excerpt": "r62_inc(1)=r62_inc(1-1)+1=r62_inc(0)+1=0+1=1\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r62_inc(1) = r62_inc(1 - 1) + 1 = r62_inc(0) + 1 = 0 + 1 = 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r62_inc(1) = r62_inc(1 - 1) + 1 = r62_inc(0) + 1 = 0 + 1 = 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    },
+    {
+      "source": "r62_inc(1-1)=r62_inc(0)=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1c1ee71d3c31e218bbedb19ba85262ef6166403e7b72cbc50af54481e816f834",
+        "excerpt": "r62_inc(1-1)=r62_inc(0)=0\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    },
+    {
+      "source": "r62_inc(1)=r62_inc(1-1)+1=0+1=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "cdc903182db7566fa8dcc24658ea93e747b230f0437c557d91ad24c36afda9cb",
+        "excerpt": "r62_inc(1)=r62_inc(1-1)+1=0+1=1\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round62 required."
+    }
+  ]
+}

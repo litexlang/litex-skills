@@ -1,0 +1,10 @@
+have fn quadratic_surface(p cart(R, R)) R = p(1)^2 + p(2)^2
+thm quadratic_surface_x_difference_quotient:
+    ? forall p cart(R, R), x R:
+        x != p(1)
+        =>:
+            (quadratic_surface((x, p(2))) - quadratic_surface(p)) / (x - p(1)) = x + p(1)
+    x-p(1)!=0
+    quadratic_surface((x,p(2)))=x^2+p(2)^2
+    quadratic_surface(p)=p(1)^2+p(2)^2
+    (quadratic_surface((x,p(2)))-quadratic_surface(p))/(x-p(1))=((x^2+p(2)^2)-(p(1)^2+p(2)^2))/(x-p(1))=(x^2-p(1)^2)/(x-p(1))=((x-p(1))*(x+p(1)))/(x-p(1))=x+p(1)

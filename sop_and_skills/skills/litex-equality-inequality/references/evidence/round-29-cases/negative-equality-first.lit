@@ -1,0 +1,5 @@
+forall S set,x R:
+    S=R-
+    x $in S
+    =>:
+        x<0

@@ -1,0 +1,5 @@
+forall a,b,c Z,f fn(k Z) R:
+    a <= c
+    c < b
+    =>:
+        sum(a,b,f) = sum(a,c,f)+sum(c+1,b,f)

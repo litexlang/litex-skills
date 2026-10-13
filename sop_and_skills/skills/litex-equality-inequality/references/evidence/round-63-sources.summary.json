@@ -1,0 +1,100 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-63-sources.json",
+  "original_sha256": "ed672b62b9d4f87d711daf8a9a02114960ea96dc658a8dc83beb4919c84d74d0",
+  "original_bytes": 5446,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/examples/proof_nodes/less_equal/by_builtin_rule/integer_successor_gap.lit",
+    "source_sha256": "924782f11dfeaf6e6a378d1084862cf50dbda3d8c5deac30667c90b8b4812872",
+    "scope": "Actual integer-successor gap leaf; source direct target and scoped boundary probes. No kernel change.",
+    "cases": [
+      {
+        "id": "source",
+        "source": "forall x Z:\n    x>4\n    =>:\n        5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/source.lit"
+      },
+      {
+        "id": "integer-opposite-spelling",
+        "source": "forall x Z:\n    4<x\n    =>:\n        x>=5\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/integer-opposite-spelling.lit"
+      },
+      {
+        "id": "integer-negative-threshold",
+        "source": "forall x Z:\n    x>-4\n    =>:\n        -3<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/integer-negative-threshold.lit"
+      },
+      {
+        "id": "integer-half-threshold",
+        "source": "forall x Z:\n    x>9/2\n    =>:\n        5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/integer-half-threshold.lit"
+      },
+      {
+        "id": "integer-symbolic-successor",
+        "source": "forall a,b Z:\n    a<b\n    =>:\n        a+1<=b\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/integer-symbolic-successor.lit"
+      },
+      {
+        "id": "integer-symbolic-difference",
+        "source": "forall a,b Z:\n    a<b\n    =>:\n        1<=b-a\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/integer-symbolic-difference.lit"
+      },
+      {
+        "id": "natural-source",
+        "source": "forall x N:\n    x>4\n    =>:\n        5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/natural-source.lit"
+      },
+      {
+        "id": "false-real-gap",
+        "source": "forall x R:\n    x>4\n    =>:\n        5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/false-real-gap.lit"
+      },
+      {
+        "id": "false-weak-premise",
+        "source": "forall x Z:\n    x>=4\n    =>:\n        5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/false-weak-premise.lit"
+      },
+      {
+        "id": "false-strict-conclusion",
+        "source": "forall x Z:\n    x>4\n    =>:\n        5<x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/false-strict-conclusion.lit"
+      },
+      {
+        "id": "false-integer-skip",
+        "source": "forall x Z:\n    x>4\n    =>:\n        6<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/false-integer-skip.lit"
+      },
+      {
+        "id": "numeric-real-counterexample",
+        "source": "9/2>4\n9/2<5\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/numeric-real-counterexample.lit"
+      },
+      {
+        "id": "source-expanded-claim",
+        "source": "claim:\n    prove:\n        forall x Z:\n            x>4\n            =>:\n                5<=x\n    5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/source-expanded-claim.lit"
+      },
+      {
+        "id": "current-expanded-claim",
+        "source": "claim:\n    ? forall x Z:\n        x>4\n        =>:\n            5<=x\n    5<=x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/current-expanded-claim.lit"
+      },
+      {
+        "id": "half-threshold-integer-bridge",
+        "source": "claim:\n    ? forall x Z:\n        x>9/2\n        =>:\n            5<=x\n    4<x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/half-threshold-integer-bridge.lit"
+      },
+      {
+        "id": "half-threshold-bridge-chain",
+        "source": "claim:\n    ? forall x Z:\n        x>9/2\n        =>:\n            5<=x\n    4<9/2<x\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/half-threshold-bridge-chain.lit"
+      },
+      {
+        "id": "false-symbolic-real-successor",
+        "source": "forall a,b R:\n    a<b\n    =>:\n        a+1<=b\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round63-cases/false-symbolic-real-successor.lit"
+      }
+    ]
+  }
+}

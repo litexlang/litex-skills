@@ -1,0 +1,7 @@
+claim:
+    ? forall slope1,slope2 R,epsilon R+:
+        slope1!=slope2
+        epsilon=abs(slope1-slope2)/3
+        =>:
+            2*epsilon<abs(slope1-slope2)
+    2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<abs(slope1-slope2)

@@ -1,0 +1,5 @@
+claim:
+    ? forall c R,m Z:
+        product(m,m,fn(k Z) R {c})=c
+    have fn term(k Z) R=c
+    product(m,m,fn(k Z) R {c})=product(m,m,term)=term(m)=c

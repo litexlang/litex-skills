@@ -1,0 +1,7 @@
+have fn real_safe_divide(a,b R) R by cases:
+    case b != 0: a/b
+    case b = 0: 0
+forall a,b R:
+    b != 0
+    =>:
+        real_safe_divide(a,b) = a/b

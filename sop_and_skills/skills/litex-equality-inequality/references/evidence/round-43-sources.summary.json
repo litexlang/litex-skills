@@ -1,0 +1,116 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-43-sources.json",
+  "original_sha256": "7f2b19f45d5e2909dd2a5a35922782566148c4ecdb3ed9ec28c3aac534b052ff",
+  "original_bytes": 15365,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "prefix": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n",
+    "cases": [
+      {
+        "id": "greater-original",
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_original:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    x > 0\n    x != 0\n    2 * x != 0\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_newton_sqrt_two(x) - 1 = (x + 2 / x) / 2 - 1\n    (x + 2 / x) / 2 - 1 = ((x - 1)^2 + 1) / (2 * x)\n    r43_newton_sqrt_two(x) - 1 = ((x - 1)^2 + 1) / (2 * x)\n    (x - 1)^2 >= 0\n    (x - 1)^2 + 1 > 0\n    2 * x > 0\n    ((x - 1)^2 + 1) / (2 * x) > 0\n    r43_newton_sqrt_two(x) - 1 > 0\n\n# Induction propagates the one-step lower bound through the recursive iterate.\n",
+        "statement": "thm r43_greater_original:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    x > 0\n    x != 0\n    2 * x != 0\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_newton_sqrt_two(x) - 1 = (x + 2 / x) / 2 - 1\n    (x + 2 / x) / 2 - 1 = ((x - 1)^2 + 1) / (2 * x)\n    r43_newton_sqrt_two(x) - 1 = ((x - 1)^2 + 1) / (2 * x)\n    (x - 1)^2 >= 0\n    (x - 1)^2 + 1 > 0\n    2 * x > 0\n    ((x - 1)^2 + 1) / (2 * x) > 0\n    r43_newton_sqrt_two(x) - 1 > 0\n\n# Induction propagates the one-step lower bound through the recursive iterate.\n"
+      },
+      {
+        "id": "greater-six-statements",
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_six_statements:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2>=0\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n",
+        "statement": "thm r43_greater_six_statements:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2>=0\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n"
+      },
+      {
+        "id": "greater-bodyless",
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_bodyless:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n",
+        "statement": "thm r43_greater_bodyless:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n"
+      },
+      {
+        "id": "greater-delete-square-nonnegative",
+        "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\nthm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n\nthm r43_greater_delete_square_nonnegative:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n",
+        "statement": "thm r43_greater_delete_square_nonnegative:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n"
+      },
+      {
+        "id": "contraction-scalar-short",
+        "source": "thm r43_scalar_short:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_scalar_short:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n"
+      },
+      {
+        "id": "contraction-scalar-bodyless",
+        "source": "thm r43_scalar_bodyless:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n",
+        "statement": "thm r43_scalar_bodyless:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n"
+      },
+      {
+        "id": "contraction-delete-square-bound",
+        "source": "thm r43_delete_square_bound:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_delete_square_bound:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n"
+      },
+      {
+        "id": "contraction-missing-lower-bound",
+        "source": "thm r43_missing_lower_bound:\n    ? forall x R+,a,b R:\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_missing_lower_bound:\n    ? forall x R+,a,b R:\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n"
+      },
+      {
+        "id": "literal-greater-than-one",
+        "source": "forall x R+:\n    (x+2/x)/2>1\n",
+        "statement": "forall x R+:\n    (x+2/x)/2>1"
+      },
+      {
+        "id": "scalar-square-lower-direct",
+        "source": "forall x R+:\n    x>=1\n    =>:\n        x^2>=1\n",
+        "statement": "forall x R+:\n    x>=1\n    =>:\n        x^2>=1"
+      },
+      {
+        "id": "small-input-counterexample",
+        "source": "not 1<=1^2/4\n",
+        "statement": "not 1<=1^2/4"
+      },
+      {
+        "id": "wrong-strong-step-false",
+        "source": "forall x R+:\n    (x+2/x)/2>2\n",
+        "statement": "forall x R+:\n    (x+2/x)/2>2"
+      },
+      {
+        "id": "zero-update-domain",
+        "source": "(0+2/0)/2>1\n",
+        "statement": "(0+2/0)/2>1"
+      },
+      {
+        "id": "contraction-associated",
+        "source": "thm r43_scalar_associated:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_scalar_associated:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4"
+      },
+      {
+        "id": "contraction-associated-delete-sign",
+        "source": "thm r43_delete_sign:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_delete_sign:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4"
+      },
+      {
+        "id": "contraction-associated-missing-b-sign",
+        "source": "thm r43_missing_b:\n    ? forall x R+,a,b R:\n        x>=1\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_missing_b:\n    ? forall x R+,a,b R:\n        x>=1\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4"
+      },
+      {
+        "id": "contraction-associated-short-certificate",
+        "source": "thm r43_short_certificate:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_short_certificate:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4"
+      },
+      {
+        "id": "small-input-full-counterexample",
+        "source": "4*(1/2)^2*1=1^2\n1>=0\nnot 1<=1^2/4\n\n",
+        "statement": "4*(1/2)^2*1=1^2\n1>=0\nnot 1<=1^2/4\n"
+      },
+      {
+        "id": "contraction-five-statements",
+        "source": "thm r43_scalar_five:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_scalar_five:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4"
+      },
+      {
+        "id": "contraction-four-statements",
+        "source": "thm r43_scalar_four:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+        "statement": "thm r43_scalar_four:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4"
+      }
+    ],
+    "source_path": "showcases/math_concepts_in_litex/13_numerical_analysis_in_nutshell/main.lit",
+    "source_sha256": "d3ec40fa7d1940903c5815fbcbbf8b2b16109ac14dae22ce430f5fa9dda8e56a",
+    "scope": "Actual positive Newton-step theorem and explicit scalar abstraction of contraction invariant x>=1, nonnegative next gap and exact product identity; recursion not yet accepted."
+  }
+}

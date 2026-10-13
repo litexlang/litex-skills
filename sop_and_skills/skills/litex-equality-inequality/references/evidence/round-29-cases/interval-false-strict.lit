@@ -1,0 +1,5 @@
+forall S set,a,b,x R:
+    S='[a,b]
+    x $in S
+    =>:
+        a<x

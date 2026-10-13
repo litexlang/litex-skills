@@ -1,0 +1,7 @@
+thm r43_scalar_bodyless:
+    ? forall x R+,a,b R:
+        x>=1
+        b>=0
+        4*x^2*b=a^2
+        =>:
+            b<=a^2/4

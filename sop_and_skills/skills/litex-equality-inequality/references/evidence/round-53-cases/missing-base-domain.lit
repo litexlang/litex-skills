@@ -1,0 +1,2 @@
+forall a,x,y R+:
+    log(a,x*y)=log(a,x)+log(a,y)

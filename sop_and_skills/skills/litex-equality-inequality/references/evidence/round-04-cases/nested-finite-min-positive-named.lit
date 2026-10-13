@@ -1,0 +1,3 @@
+have a,b,c R+
+have first R+ = finite_set_min(union({a},{b}))
+have delta R+ = finite_set_min(union({first},{c}))

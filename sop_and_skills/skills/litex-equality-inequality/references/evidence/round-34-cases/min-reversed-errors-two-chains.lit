@@ -1,0 +1,8 @@
+claim:
+    ? forall a,b,x,y R,epsilon R+:
+        abs(x-a)<=epsilon
+        abs(y-b)<=epsilon
+        =>:
+            abs(min(a,b)-min(x,y))<=epsilon
+    abs(a-x)=abs(x-a)<=epsilon
+    abs(b-y)=abs(y-b)<=epsilon

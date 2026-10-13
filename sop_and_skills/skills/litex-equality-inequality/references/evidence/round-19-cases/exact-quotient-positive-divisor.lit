@@ -1,0 +1,4 @@
+forall a Z,b N+:
+    a%b = 0
+    =>:
+        a/b $in Z

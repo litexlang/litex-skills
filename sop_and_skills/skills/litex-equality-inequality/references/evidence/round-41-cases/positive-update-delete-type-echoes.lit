@@ -1,0 +1,9 @@
+have fn r41_square_root_two_residual(x R) R = x^2 - 2
+claim:
+    ? forall x R+:
+        (x + 2 / x) / 2 $in R+
+    2 / x > 0
+    x + 2 / x > 0
+    (x + 2 / x) / 2 > 0
+
+have fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2

@@ -1,0 +1,3 @@
+thm r31_named_finite_union:
+    ? forall a,c R:
+        $is_finite_set(union({a},{c}))

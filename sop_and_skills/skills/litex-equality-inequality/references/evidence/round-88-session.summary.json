@@ -1,0 +1,19 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-88-session.json",
+  "original_sha256": "33f89731edf1f19155a21cc208299975acd4fd904f6d517b250b2492c778e8ae",
+  "original_bytes": 3258,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "thm r88_linear_map_kernel_is_subspace:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:\n        $is_linear_map(K, field, V, W, source, target, T)\n        =>:\n            $is_subspace(K, field, V, source, \\linear_kernel<V, W, target.zero, T>)\n    let kernel = \\linear_kernel<V, W, target.zero, T>\n    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)\n    \\linear_kernel<V, W, target.zero, T> = {x V: T(x) = target.zero}\n    release thm set_builder_member(source.zero, {x V: T(x) = target.zero})\n    claim:\n        ? forall u, v V:\n            u $in kernel\n            v $in kernel\n            =>:\n                source.add(u, v) $in kernel\n        T(source.add(u, v)) = target.add(T(u), T(v)) = target.add(target.zero, target.zero) = target.zero\n        release thm set_builder_member(source.add(u, v), {x V: T(x) = target.zero})\n    claim:\n        ? forall a K, v V:\n            v $in kernel\n            =>:\n                source.smul(a, v) $in kernel\n        release thm scalar_times_zero_vector(K, field, W, target, a)\n        T(source.smul(a, v)) = target.smul(a, T(v)) = target.smul(a, target.zero) = target.zero\n        release thm set_builder_member(source.smul(a, v), {x V: T(x) = target.zero})\n    by def $is_subspace(K, field, V, source, \\linear_kernel<V, W, target.zero, T>)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "19e5567619c56efb03db5e67ddc4181a386e37e426e4941c09115baa53e69079",
+        "excerpt": "thm r88_linear_map_kernel_is_subspace:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:\r\n        $is_linear_map(K, field, V, W, source, target, T)\r\n        =>:\r\n            $is_subspace(K, field, V, source, \\linear_kernel<V, W, target.zero, T>)\r\n    let kernel = \\linear_kernel<V, W, target.zero, T>\r\n    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)\r\n    \\linear_kernel<V, W, target.zero, T> = {x V: T(x) = target.zero}\r\n    release thm set_builder_member(s"
+      },
+      "baseline": "Round68 snapshot Session66922 already holds round87 kernel theorem; can contaminate endpoint discovery. Current independent cold round88 files exclusively own deletion."
+    }
+  ]
+}

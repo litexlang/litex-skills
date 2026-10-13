@@ -1,0 +1,2 @@
+forall delta1,delta2 R+:
+    finite_set_min(union({delta1},{delta2})) $in R+

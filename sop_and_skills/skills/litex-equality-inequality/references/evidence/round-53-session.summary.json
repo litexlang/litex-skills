@@ -1,0 +1,136 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-53-session.json",
+  "original_sha256": "5b77e7426bd5910e152a98f77b62e7f74090b052b32f586c8dad73992a9609ab",
+  "original_bytes": 14576,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "id": "source-log-equivalence",
+      "source": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "830bd5a8a851ee1785b18e1783d504bdb26fc0c8369466fdcc6a7af5ec81ddef",
+        "excerpt": "forall a, b R+, c R:\r\n    a != 1\r\n    =>:\r\n        log(a, b) = c\r\n    <=>:\r\n        a^c = b\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b R+, c R:\\n    a != 1\\n    =>:\\n        log (a, b) = c\\n    <=>:\\n        a ^ c = b\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b R+, c R:\\n    a != 1\\n    =>:\\n        log (a, b) = c\\n    <=>:\\n        a ^ c = b\"\r\n      },\r\n"
+      }
+    },
+    {
+      "id": "source-product-quotient",
+      "source": "forall a,x,y R+:\n    a!=1\n    =>:\n        log(a,x*y)=log(a,x)+log(a,y)\n        log(a,x/y)=log(a,x)-log(a,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9a5e52e6006cb1fa10d0b97dc5f5eda6af9ced2b66be23be35b83ad070c9f42f",
+        "excerpt": "forall a,x,y R+:\r\n    a!=1\r\n    =>:\r\n        log(a,x*y)=log(a,x)+log(a,y)\r\n        log(a,x/y)=log(a,x)-log(a,y)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "source-real-power",
+      "source": "forall a,x,b R+:\n    a!=1\n    =>:\n        log(a,x^b)=b*log(a,x)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "dbc59e1ef25d06910c4bb80ab353c9d3ff6b214dda399a7616359569f706b73c",
+        "excerpt": "forall a,x,b R+:\r\n    a!=1\r\n    =>:\r\n        log(a,x^b)=b*log(a,x)\r\n\r\n... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "source-increasing",
+      "source": "forall a,x,y R+:\n    a>1\n    x<y\n    =>:\n        log(a,x)<log(a,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f092f87227d903a46fc45630e80cc6342e09cd8825a1c50c3f4aecad710f5a08",
+        "excerpt": "forall a,x,y R+:\r\n    a>1\r\n    x<y\r\n    =>:\r\n        log(a,x)<log(a,y)\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, x, y R+:\\n    a > 1\\n    x < y\\n    =>:\\n        log (a, x) < log (a, y)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, x, y R+:\\n    a > 1\\n    x < y\\n    =>:\\n        log (a, x) < log (a, y)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n "
+      }
+    },
+    {
+      "id": "source-decreasing",
+      "source": "forall a,x,y R+:\n    a<1\n    x<y\n    =>:\n        log(a,x)>log(a,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3c6ea5d59f10ad346993c1f75aa2eb4d213c148c9fa6d8c1638ba734c7a7a896",
+        "excerpt": "forall a,x,y R+:\r\n    a<1\r\n    x<y\r\n    =>:\r\n        log(a,x)>log(a,y)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "numeric-product-direct",
+      "source": "log(2,8*4)=5",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "392f836c19a4703ec959120d4b92672681ad7b45043289a9ce05fb993a1e4e39",
+        "excerpt": "log(2,8*4)=5\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "numeric-base-direct",
+      "source": "log(4,64)=3",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d3eb9636b3a2a706d9a8478306e90fcd1b7245a7f89b64335a6a8dd7c92a8601",
+        "excerpt": "log(4,64)=3\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "increasing-reversed-guard",
+      "source": "forall a,x,y R+:\n    1<a\n    x<y\n    =>:\n        log(a,x)<log(a,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ce73fa9100c6e164a73955a2a86b64e148f8c3507556a0e7f3ae8348e12ee2e4",
+        "excerpt": "forall a,x,y R+:\r\n    1<a\r\n    x<y\r\n    =>:\r\n        log(a,x)<log(a,y)\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "increasing-explicit-ln",
+      "source": "claim:\n    ? forall a,x,y R+:\n        a>1\n        x<y\n        =>:\n            log(a,x)<log(a,y)\n    a!=1\n    ln(a)>0\n    ln(x)<ln(y)\n    log(a,x)=ln(x)/ln(a)<ln(y)/ln(a)=log(a,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4dc41717cf9b44d4e1661cf426e69cd81f2892c3e44514c8c78773c8e0797415",
+        "excerpt": "Warning: truncated output (original token count: 7294)\nTotal output lines: 657\n\nclaim:\r\n    ? forall a,x,y R+:\r\n        a>1\r\n        x<y\r\n        =>:\r\n            log(a,x)<log(a,y)\r\n    a!=1\r\n    ln(a)>0\r\n    ln(x)<ln(y)\r\n    log(a,x)=ln(x)/ln(a)<ln(y)/ln(a)=log(a,y)\r\n\r\n... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall a, x, y R+:\\n        a > 1\\n        x < y\\n        =>:\\n          "
+      }
+    },
+    {
+      "id": "equation-forward-chain",
+      "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        log(a,b)=c\n        =>:\n            a^c=b\n    a^c=a^log(a,b)=b",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ec1429164c55b8b158d725af6d0ad7f41c17e8aa9e4ff76314f92f316f7cf532",
+        "excerpt": "claim:\r\n    ? forall a,b R+,c R:\r\n        a!=1\r\n        log(a,b)=c\r\n        =>:\r\n            a^c=b\r\n    a^c=a^log(a,b)=b\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "equation-backward-chain",
+      "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,b)=log(a,a^c)=c*log(a,a)=c",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "284fbd4076a83abc03fa246dbfc385c6baec16de089fefde00e12db8c41851ef",
+        "excerpt": "Warning: truncated output (original token count: 46348)\nTotal output lines: 3664\n\nclaim:\r\n    ? forall a,b R+,c R:\r\n        a!=1\r\n        a^c=b\r\n        =>:\r\n            log(a,b)=c\r\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall a, b R+, c R:\\n        a != 1\\n        a ^ c = b\\n        =>:\\n            log (a, b) = c\\n    log (a, b) = log (a, a ^ c) = c "
+      }
+    },
+    {
+      "id": "increasing-original-guard-bridge",
+      "source": "claim:\n    ? forall a,x,y R+:\n        a>1\n        x<y\n        =>:\n            log(a,x)<log(a,y)\n    1<a\n    log(a,x)<log(a,y)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "df3f1ebd829b020fb67f03cc62a9a1d73454621b5abf7e58b6d17eea1826ae51",
+        "excerpt": "claim:\r\n    ? forall a,x,y R+:\r\n        a>1\r\n        x<y\r\n        =>:\r\n            log(a,x)<log(a,y)\r\n    1<a\r\n    log(a,x)<log(a,y)\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "backward-log-self-bridge",
+      "source": "claim:\n    ? forall a,b R+,c R:\n        a!=1\n        a^c=b\n        =>:\n            log(a,b)=c\n    log(a,a)=1\n    log(a,b)=log(a,a^c)=c*log(a,a)=c",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "725ad31db2f4c2bcc67376f14b690a3d83279b1af9aba02cbfc1e639096ee664",
+        "excerpt": "claim:\r\n    ? forall a,b R+,c R:\r\n        a!=1\r\n        a^c=b\r\n        =>:\r\n            log(a,b)=c\r\n    log(a,a)=1\r\n    log(a,b)=log(a,a^c)=c*log(a,a)=c\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "equivalence-after-direction-proofs",
+      "source": "forall a, b R+, c R:\n    a != 1\n    =>:\n        log(a, b) = c\n    <=>:\n        a^c = b",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d0f02c9f67166c73b8257fffb0d3f482518a13d2d7119e6b642b5e4171e6546a",
+        "excerpt": "forall a, b R+, c R:\r\n    a != 1\r\n    =>:\r\n        log(a, b) = c\r\n    <=>:\r\n        a^c = b\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      }
+    }
+  ]
+}

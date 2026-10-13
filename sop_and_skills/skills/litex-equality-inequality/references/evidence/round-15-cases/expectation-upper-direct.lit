@@ -1,0 +1,10 @@
+let two_point_vector = fn(index N+: index <= 2) R
+have fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)
+forall values,probs two_point_vector,M R:
+    probs(1) >= 0
+    probs(2) >= 0
+    probs(1)+probs(2) = 1
+    values(1) <= M
+    values(2) <= M
+    =>:
+        expectation2(values,probs) <= M

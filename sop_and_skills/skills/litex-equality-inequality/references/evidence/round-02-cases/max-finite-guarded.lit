@@ -1,0 +1,11 @@
+forall a,b,A,B R, epsilon R+:
+    abs(a-A) <= epsilon
+    abs(b-B) <= epsilon
+    $is_finite_set(union({a},{b}))
+    $is_nonempty_set(union({a},{b}))
+    union({a},{b}) $subset R
+    $is_finite_set(union({A},{B}))
+    $is_nonempty_set(union({A},{B}))
+    union({A},{B}) $subset R
+    =>:
+        abs(finite_set_max(union({a},{b}))-finite_set_max(union({A},{B}))) <= epsilon

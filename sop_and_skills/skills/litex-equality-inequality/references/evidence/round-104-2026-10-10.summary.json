@@ -1,0 +1,658 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-104-2026-10-10.json",
+  "original_sha256": "ed0f1775bbefc4f6a1a3d972d66c0206d62dbd0d36f8c533181844328fa047f4",
+  "original_bytes": 133449,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/textbooks/The-Mechanics-of-Litex-Proof/chapter02-proofs-with-structure.lit",
+    "source_sha256": "d94f0651bcacec0204d00eca8ebc4b9cbf73ce67b558bf28ff9623895323ac8f",
+    "slice": "Exact three proof statements of textbook chapter2 §2.2, comments omitted; standalone in source order.",
+    "binary_sha256": "c253a863e97c38a223d5d2a5377a706ee238401dc4c86b3eca47fc6b4f6984ae",
+    "binary_build": "Reuse successful round88 fixed snapshot",
+    "cases": [
+      {
+        "id": "baseline",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/baseline.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x != 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 != 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a5d0d079921d95f74b353d2fb1b6e0718bddc486c381e1d171be13c974cfe087"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "first-chain-only",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/first-chain-only.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 != 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/first-chain-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7b85226cd214f18e30f761aaa8c4b130d5dd90d79345972433b3d83d750fd0df"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/first-chain-only.lit"
+        ]
+      },
+      {
+        "id": "first-chain-and-order",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/first-chain-and-order.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 != 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/first-chain-and-order.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "23af54b6220b027097d19b57d8dacf79adff1d810b058e8a83b2c5aa8fcda7ae"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/first-chain-and-order.lit"
+        ]
+      },
+      {
+        "id": "first-bodyless",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/first-bodyless.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 != 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/first-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c7bfccafe947fade03c54168837ce558265ddbe158fadd5247dcf21a95585140"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/first-bodyless.lit"
+        ]
+      },
+      {
+        "id": "second-positive-only",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/second-positive-only.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x != 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 < y^2 + 1\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/second-positive-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d4e6aedeede751ca5b2b59fc210225d245a1a5eb263147a6da5a625b12f06b57"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/second-positive-only.lit"
+        ]
+      },
+      {
+        "id": "second-two-signs",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/second-two-signs.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x != 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/second-two-signs.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c612a65f321046b660e55a02e3ad88de9049afddaf8926c5c8569961c7513360"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/second-two-signs.lit"
+        ]
+      },
+      {
+        "id": "second-bodyless",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/second-bodyless.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x != 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/second-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9276864bd4e41f52282a210772529eba19e8e63e48fc6a03c4a28d0813298056"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/second-bodyless.lit"
+        ]
+      },
+      {
+        "id": "both-short",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/both-short.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 < y^2 + 1\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/both-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ef04ecf4dbd1c6b2cbc968c31c55c546e6a405673c04cb5c5557c7259849d166"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/both-short.lit"
+        ]
+      },
+      {
+        "id": "generic-strict-implies-neq",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/generic-strict-implies-neq.lit",
+        "source": "forall x, y R:\n    x < y\n    =>:\n        x != y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/generic-strict-implies-neq.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "85641472a7d1f5f9d237955015e75ef39b050cf2fcb6abbb0dfce9572fe06f95"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/generic-strict-implies-neq.lit"
+        ]
+      },
+      {
+        "id": "generic-positive-implies-nonzero",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/generic-positive-implies-nonzero.lit",
+        "source": "forall y R:\n    y > 0\n    =>:\n        y != 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/generic-positive-implies-nonzero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7989cbe2dcf0fb583b391a92e2dcc26e112bd92f9769c87e494434bbad0e5c00"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/generic-positive-implies-nonzero.lit"
+        ]
+      },
+      {
+        "id": "direct-x-less-one",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/direct-x-less-one.lit",
+        "source": "forall x Q:\n    3 * x = 2\n    =>:\n        x < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/direct-x-less-one.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dd5a67f1370cee68530523bd5a5f39d1978718adc7784245381e314d720bf891"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/direct-x-less-one.lit"
+        ]
+      },
+      {
+        "id": "direct-positive-square-plus-one",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/direct-positive-square-plus-one.lit",
+        "source": "forall y R:\n    0 < y^2 + 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/direct-positive-square-plus-one.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "188eee796681a44bf8cc56b8781e1a56540855106fbb6fc75a9bb097281bd648"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/direct-positive-square-plus-one.lit"
+        ]
+      },
+      {
+        "id": "wrong-first-equality",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/wrong-first-equality.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x = 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x = 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 != 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/wrong-first-equality.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "55acdf7e21cd39290d14ae2bbf9ba186704ae25ca87a0e696e2f93afccaf2098"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/wrong-first-equality.lit"
+        ]
+      },
+      {
+        "id": "wrong-second-zero",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/wrong-second-zero.lit",
+        "source": "claim:\n    ? forall x Q:\n        3 * x = 2\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x != 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 = 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 = 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/wrong-second-zero.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0b304ad2d335c42f07aae855ee813ba8a2b9b97f99b2003583803b3cdedc91bf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/wrong-second-zero.lit"
+        ]
+      },
+      {
+        "id": "missing-first-equation",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/missing-first-equation.lit",
+        "source": "claim:\n    ? forall x Q:\n        =>:\n            x != 1\n    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1\n    x < 1\n    by contra:\n        ? x != 1\n        x = 1\n        impossible x < 1\n\n\n\n\nclaim:\n    ? forall y R:\n        y^2 + 1 != 0\n    0 <= y^2\n    0 < y^2 + 1\n    by contra:\n        ? y^2 + 1 != 0\n        y^2 + 1 = 0\n        0 < y^2 + 1 = 0\n        impossible 0 < 0\n\n\n\n\n\n\n\n\nforall a, b R:\n    a <= b\n    b <= a\n    =>:\n        a = b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/missing-first-equation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "12369114a4eee3c0f0b81224235735af00670063620526b78f2cbf25fe80d455"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/missing-first-equation.lit"
+        ]
+      },
+      {
+        "id": "direct-nonzero-forall",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/direct-nonzero-forall.lit",
+        "source": "forall y R:\n    y^2 + 1 != 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/direct-nonzero-forall.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c9ac274c44c7334eb79b29786413c6bf8bfa2d3ca1332539c9189a053ae2105d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/direct-nonzero-forall.lit"
+        ]
+      },
+      {
+        "id": "positive-then-nonzero-forall",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/positive-then-nonzero-forall.lit",
+        "source": "forall y R:\n    0 < y^2 + 1\n    y^2 + 1 != 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/positive-then-nonzero-forall.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4be71ba2b9b70fbe15cc6802c5cfdc27e91ec1af681c05d8957bf638a1bd8245"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/positive-then-nonzero-forall.lit"
+        ]
+      },
+      {
+        "id": "nonnegative-plus-positive-direct-neq",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/nonnegative-plus-positive-direct-neq.lit",
+        "source": "forall a,b R:\n    a >= 0\n    b > 0\n    =>:\n        a + b != 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/nonnegative-plus-positive-direct-neq.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "92ce03b4fa5f2d5de00c102ec774839adcb4910f547928be9bb59442ca444d2a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/nonnegative-plus-positive-direct-neq.lit"
+        ]
+      },
+      {
+        "id": "nonnegative-plus-positive-sign-then-neq",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/nonnegative-plus-positive-sign-then-neq.lit",
+        "source": "forall a,b R:\n    a >= 0\n    b > 0\n    =>:\n        a+b>0\n        a+b!=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/nonnegative-plus-positive-sign-then-neq.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b315f012c9c3f807b9cc6b3f3d0fac952d0f567af13c4f2c708de5c12ca91d5e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/nonnegative-plus-positive-sign-then-neq.lit"
+        ]
+      },
+      {
+        "id": "nonnegative-plus-positive-sign-only",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/nonnegative-plus-positive-sign-only.lit",
+        "source": "forall a,b R:\n    a >= 0\n    b > 0\n    =>:\n        a+b>0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-104-cases/nonnegative-plus-positive-sign-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bae4dfa770fa995e1ad1916fd6defdff5a097edcbbd0be1b894b2aa3d66aecde"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round104-cases/nonnegative-plus-positive-sign-only.lit"
+        ]
+      }
+    ],
+    "excluded": []
+  }
+}

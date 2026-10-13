@@ -1,0 +1,3 @@
+have F fn(h fn(t R) R) R
+have g fn(t R) R
+F(fn(x R) R {-1*g(x)}) = F(fn(x R+) R {-1*g(x)})

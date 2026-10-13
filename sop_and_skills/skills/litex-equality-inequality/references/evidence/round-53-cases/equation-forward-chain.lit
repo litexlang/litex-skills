@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b R+,c R:
+        a!=1
+        log(a,b)=c
+        =>:
+            a^c=b
+    a^c=a^log(a,b)=b

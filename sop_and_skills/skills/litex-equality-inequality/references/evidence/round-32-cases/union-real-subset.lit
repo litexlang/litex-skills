@@ -1,0 +1,2 @@
+forall a,c R:
+    union({a},{c}) $subset R

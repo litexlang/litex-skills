@@ -1,0 +1,100 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-60-session.json",
+  "original_sha256": "887f3d0ec8d3c95137e3c6705c65884e144517076d58d859fc225bfc3f0da0e8",
+  "original_bytes": 2821,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b9c42e05d4c8489d2d78faebc2238553a18ae86b475b2f446b47cbe5c8dde4d4",
+        "excerpt": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session6037."
+    },
+    {
+      "source": "prop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "cad97aace77c6d5287b87de92eb4eee5f38ad5ce221fb02e9f94d553410681e8",
+        "excerpt": "prop r60_parallel2(u,v cart(R,R)):\r\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Round59 snapshot Session6037."
+    },
+    {
+      "source": "prop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "94969992f51136bce5f245c2c3d0fc3fc7506bf1e607887a756f0cc36c317d4c",
+        "excerpt": "prop r60_perpendicular2(u,v cart(R,R)):\r\n    r60_dot2(u,v)=0\r\n\r\n... ... success\r\nlitex> "
+      },
+      "baseline": "Round59 snapshot Session6037."
+    },
+    {
+      "source": "by def $r60_perpendicular2((1,0),(0,1))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2d498e85174993835b80b584cef1f1a52ed0d6868d247575fcb47b63371fda28",
+        "excerpt": "by def $r60_perpendicular2((1,0),(0,1))\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session; current cold round60 owns acceptance."
+    },
+    {
+      "source": "(2,4)(1)=2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "242bd70b11861a252cc45585eda93a9c25825ea3e983ce449c22dbaa0a690ac1",
+        "excerpt": "(2,4)(1)=2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session; current cold round60 owns acceptance."
+    },
+    {
+      "source": "(2,4)(2)=4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4a205ed4f6f374a8f48f0acec38a4cc72579605722ea083e0905924fd354800d",
+        "excerpt": "(2,4)(2)=4\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session; current cold round60 owns acceptance."
+    },
+    {
+      "source": "(1,2)(1)=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "397807cb1f2aa0a0d7b9c0d3d78081b831dc50ad39446a1d4eb5571636a3b788",
+        "excerpt": "(1,2)(1)=1\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session; current cold round60 owns acceptance."
+    },
+    {
+      "source": "(1,2)(2)=2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2a64e93e41b76dcce4d2abac8e7fffae087ac77aa21267532a42aedd1042b880",
+        "excerpt": "(1,2)(2)=2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session; current cold round60 owns acceptance."
+    },
+    {
+      "source": "witness $r60_parallel2((2,4),(1,2)) from 2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d88b0630e9c6a22c3b51cae3925c37cd86c241962480a8f61455e7b0392aa9a6",
+        "excerpt": "witness $r60_parallel2((2,4),(1,2)) from 2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session; current cold round60 owns acceptance."
+    },
+    {
+      "source": "by def $r60_perpendicular2((1,0),(1,0))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ebb566e8d64e6bed4e0379740fa7d3d359796ddd0be9f874c0276c713552072e",
+        "excerpt": "by def $r60_perpendicular2((1,0),(1,0))\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"by def $r60_perpendicular2((1, 0), (1, 0))\",\r\n      \"why_failed\": {\r\n        \"type\": \"by\",\r\n        \"rule_name\": \"By definition\",\r\n        \"message\": \"Prove by unfolding a definition\",\r\n        \"phase\": \"by_def\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      },
+      "baseline": "Round59 snapshot Session6037; false explicit-fold control."
+    }
+  ]
+}

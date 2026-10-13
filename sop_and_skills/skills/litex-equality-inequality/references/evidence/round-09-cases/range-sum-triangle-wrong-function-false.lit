@@ -1,0 +1,4 @@
+forall f,g fn(x Z) R,m,n Z:
+    m <= n
+    =>:
+        abs(sum(m,n,f)) <= sum(m,n,fn(x Z) R {abs(g(x))})

@@ -1,0 +1,4 @@
+forall a,b Z,f fn(k Z) Z:
+    a > b
+    =>:
+        sum(a,b,f) = 0

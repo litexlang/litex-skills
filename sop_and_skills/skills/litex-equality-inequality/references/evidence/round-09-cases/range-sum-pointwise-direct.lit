@@ -1,0 +1,8 @@
+forall f,g fn(x Z) R,m,n Z:
+    m <= n
+    forall x Z:
+        m <= x <= n
+        =>:
+            f(x) <= g(x)
+    =>:
+        sum(m,n,f) <= sum(m,n,g)

@@ -1,0 +1,8 @@
+have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:
+    case first <= last: sum(first, last, term)
+    case first > last: 0
+
+forall a,b Z,f fn(k Z) Z:
+    a <= b
+    =>:
+        finite_integer_sum(a,b,f) = finite_integer_sum(a-1,b-1,fn(k Z) Z {f(k+1)})

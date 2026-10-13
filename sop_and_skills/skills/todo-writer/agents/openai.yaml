@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Todo Writer"
+  short_description: "Track Litex math holes and blockers."
+  default_prompt: "Use $todo_writer to record this Litex blocker around one minimal tracer reproduction and, when closing a major fix, link its durable commented-before and verified-now acceptance artifact."

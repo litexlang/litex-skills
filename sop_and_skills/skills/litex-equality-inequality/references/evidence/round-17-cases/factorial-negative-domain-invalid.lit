@@ -1,0 +1,4 @@
+forall n Z:
+    n < 0
+    =>:
+        factorial(n) >= 1

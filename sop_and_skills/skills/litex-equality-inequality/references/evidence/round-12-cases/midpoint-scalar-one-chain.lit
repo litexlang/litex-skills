@@ -1,0 +1,6 @@
+claim:
+    ? forall a,c,d,f R:
+        (a+d)/2 = (c+f)/2
+        =>:
+            a-c = f-d
+    a-c = 2*((a+d)/2)-c-d = 2*((c+f)/2)-c-d = f-d

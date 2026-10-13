@@ -1,0 +1,219 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-61-sources.json",
+  "original_sha256": "1d2068bd610925a3711efddf29222ddfed06779ad1915200f9db909b47530904",
+  "original_bytes": 14785,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_paths": {
+      "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter09-solid-geometry-incidence.lit": "4b28c74a1c842abe021fd508733797b7c2f1fc3ba3436ae1aed8254ff1f39667",
+      "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter15-space-vectors.lit": "a8ed3700c091460edfa177f40bd8df7d1be096a4a6a3d334dcc03d65d5150024"
+    },
+    "adaptation": "Reduced chap09 scalar export slice with []→() spelling; original qualified chap15 consumers. No whole-chapter prefix claim.",
+    "definitions": "have fn dot3(u, v cart(R, R, R)) R = u(1) * v(1) + u(2) * v(2) + u(3) * v(3)\n\nhave fn norm3_sq(u cart(R, R, R)) R = dot3(u, u)\n",
+    "predicate": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n",
+    "cases": [
+      {
+        "id": "dot-numeric-direct",
+        "source": "chap09::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-direct/main.lit"
+      },
+      {
+        "id": "dot-numeric-source-chain",
+        "source": "chap09::dot3((1,2,3),(4,5,6))=1*4+2*5+3*6=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-source-chain/main.lit"
+      },
+      {
+        "id": "norm-numeric-direct",
+        "source": "chap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-direct/main.lit"
+      },
+      {
+        "id": "norm-numeric-source-chain",
+        "source": "chap09::norm3_sq((1,2,2))=chap09::dot3((1,2,2),(1,2,2))=1^2+2^2+2^2=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-source-chain/main.lit"
+      },
+      {
+        "id": "dot-symmetry-direct",
+        "source": "forall u,v cart(R,R,R):\n    chap09::dot3(u,v)=chap09::dot3(v,u)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-symmetry-direct/main.lit"
+      },
+      {
+        "id": "norm-definition-direct",
+        "source": "forall u cart(R,R,R):\n    chap09::norm3_sq(u)=chap09::dot3(u,u)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-definition-direct/main.lit"
+      },
+      {
+        "id": "perpendicular-source",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nchap09::dot3((1,0,0),(0,1,0))=0\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-source/main.lit"
+      },
+      {
+        "id": "perpendicular-bare",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-bare/main.lit"
+      },
+      {
+        "id": "perpendicular-fold",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-fold/main.lit"
+      },
+      {
+        "id": "false-dot-value",
+        "source": "chap09::dot3((1,2,3),(4,5,6))=31\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-dot-value/main.lit"
+      },
+      {
+        "id": "false-norm-value",
+        "source": "chap09::norm3_sq((1,2,2))=8\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-norm-value/main.lit"
+      },
+      {
+        "id": "false-perpendicular-fold",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(1,0,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-perpendicular-fold/main.lit"
+      },
+      {
+        "id": "dot-numeric-direct-file-qualified",
+        "source": "chap09:::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-direct-file-qualified/main.lit"
+      },
+      {
+        "id": "dot-numeric-source-chain-file-qualified",
+        "source": "chap09:::dot3((1,2,3),(4,5,6))=1*4+2*5+3*6=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-source-chain-file-qualified/main.lit"
+      },
+      {
+        "id": "norm-numeric-direct-file-qualified",
+        "source": "chap09:::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-direct-file-qualified/main.lit"
+      },
+      {
+        "id": "norm-numeric-source-chain-file-qualified",
+        "source": "chap09:::norm3_sq((1,2,2))=chap09:::dot3((1,2,2),(1,2,2))=1^2+2^2+2^2=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-source-chain-file-qualified/main.lit"
+      },
+      {
+        "id": "dot-symmetry-direct-file-qualified",
+        "source": "forall u,v cart(R,R,R):\n    chap09:::dot3(u,v)=chap09:::dot3(v,u)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-symmetry-direct-file-qualified/main.lit"
+      },
+      {
+        "id": "norm-definition-direct-file-qualified",
+        "source": "forall u cart(R,R,R):\n    chap09:::norm3_sq(u)=chap09:::dot3(u,u)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-definition-direct-file-qualified/main.lit"
+      },
+      {
+        "id": "perpendicular-source-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\nchap09:::dot3((1,0,0),(0,1,0))=0\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-source-file-qualified/main.lit"
+      },
+      {
+        "id": "perpendicular-bare-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-bare-file-qualified/main.lit"
+      },
+      {
+        "id": "perpendicular-fold-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-fold-file-qualified/main.lit"
+      },
+      {
+        "id": "false-dot-value-file-qualified",
+        "source": "chap09:::dot3((1,2,3),(4,5,6))=31\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-dot-value-file-qualified/main.lit"
+      },
+      {
+        "id": "false-norm-value-file-qualified",
+        "source": "chap09:::norm3_sq((1,2,2))=8\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-norm-value-file-qualified/main.lit"
+      },
+      {
+        "id": "false-perpendicular-fold-file-qualified",
+        "source": "prop perpendicular3(u,v cart(R,R,R)):\n    chap09:::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(1,0,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-perpendicular-fold-file-qualified/main.lit"
+      },
+      {
+        "id": "dot-numeric-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-direct-released/main.lit"
+      },
+      {
+        "id": "dot-numeric-source-chain-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::dot3((1,2,3),(4,5,6))=1*4+2*5+3*6=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-numeric-source-chain-released/main.lit"
+      },
+      {
+        "id": "norm-numeric-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-direct-released/main.lit"
+      },
+      {
+        "id": "norm-numeric-source-chain-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::norm3_sq((1,2,2))=chap09::dot3((1,2,2),(1,2,2))=1^2+2^2+2^2=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-numeric-source-chain-released/main.lit"
+      },
+      {
+        "id": "dot-symmetry-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nforall u,v cart(R,R,R):\n    chap09::dot3(u,v)=chap09::dot3(v,u)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-symmetry-direct-released/main.lit"
+      },
+      {
+        "id": "norm-definition-direct-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nforall u cart(R,R,R):\n    chap09::norm3_sq(u)=chap09::dot3(u,u)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-definition-direct-released/main.lit"
+      },
+      {
+        "id": "perpendicular-source-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nchap09::dot3((1,0,0),(0,1,0))=0\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-source-released/main.lit"
+      },
+      {
+        "id": "perpendicular-bare-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\n$perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-bare-released/main.lit"
+      },
+      {
+        "id": "perpendicular-fold-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-fold-released/main.lit"
+      },
+      {
+        "id": "false-dot-value-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::dot3((1,2,3),(4,5,6))=31\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-dot-value-released/main.lit"
+      },
+      {
+        "id": "false-norm-value-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nchap09::norm3_sq((1,2,2))=8\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-norm-value-released/main.lit"
+      },
+      {
+        "id": "false-perpendicular-fold-released",
+        "source": "release obj def chap09::dot3\nrelease obj def chap09::norm3_sq\n\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(1,0,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/false-perpendicular-fold-released/main.lit"
+      },
+      {
+        "id": "dot-only-release",
+        "source": "release obj def chap09::dot3\nchap09::dot3((1,2,3),(4,5,6))=32\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/dot-only-release/main.lit"
+      },
+      {
+        "id": "norm-only-release",
+        "source": "release obj def chap09::norm3_sq\nchap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-only-release/main.lit"
+      },
+      {
+        "id": "norm-dot-release-only",
+        "source": "release obj def chap09::dot3\nchap09::norm3_sq((1,2,2))=9\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/norm-dot-release-only/main.lit"
+      },
+      {
+        "id": "perpendicular-dot-release-only",
+        "source": "release obj def chap09::dot3\nprop perpendicular3(u,v cart(R,R,R)):\n    chap09::dot3(u,v)=0\n\nby def $perpendicular3((1,0,0),(0,1,0))\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round61-cases/perpendicular-dot-release-only/main.lit"
+      }
+    ]
+  }
+}

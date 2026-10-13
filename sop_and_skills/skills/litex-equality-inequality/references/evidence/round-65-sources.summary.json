@@ -1,0 +1,100 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-65-sources.json",
+  "original_sha256": "b307e11c2ae4eb05a756891ec52f3eb1950d6d299f92db636f9c1d11620ee931",
+  "original_bytes": 6394,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/1_middle_school_math_in_nutshell/main.lit",
+    "source_sha256": "967fb75fd2c737f9f98f47f4a413fe111b6a5f1bb5f95ee3740ffe4e94d62ba6",
+    "scope": "Exact factored quadratic theorem slice and numeric demonstration; preserve zero product and disjunctive target.",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x = r or x = s\n        case x - r = 0:\n            x = r\n        case x - s = 0:\n            x = s\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/source-theorem.lit"
+      },
+      {
+        "id": "bodyless-factor-cases",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n        case x-s=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/bodyless-factor-cases.lit"
+      },
+      {
+        "id": "direct-root-disjunction",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x=r or x=s\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/direct-root-disjunction.lit"
+      },
+      {
+        "id": "direct-factor-disjunction",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x-r=0 or x-s=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/direct-factor-disjunction.lit"
+      },
+      {
+        "id": "theorem-empty-body",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/theorem-empty-body.lit"
+      },
+      {
+        "id": "root-cases",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x=r\n        case x=s\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/root-cases.lit"
+      },
+      {
+        "id": "wrong-both-roots",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x=r\n        x=s\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/wrong-both-roots.lit"
+      },
+      {
+        "id": "wrong-first-root",
+        "source": "forall r,s,x R:\n    (x-r)*(x-s)=0\n    =>:\n        x=r\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/wrong-first-root.lit"
+      },
+      {
+        "id": "missing-zero-product",
+        "source": "forall r,s,x R:\n    x=r or x=s\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/missing-zero-product.lit"
+      },
+      {
+        "id": "double-root-direct",
+        "source": "forall r,x R:\n    (x-r)^2=0\n    =>:\n        x=r\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/double-root-direct.lit"
+      },
+      {
+        "id": "source-numeric-demo",
+        "source": "(3-2)*(3-3)=0\n3=3\n3=2 or 3=3\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/source-numeric-demo.lit"
+      },
+      {
+        "id": "numeric-disjunction-only",
+        "source": "3=2 or 3=3\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/numeric-disjunction-only.lit"
+      },
+      {
+        "id": "numeric-counterexample",
+        "source": "(3-2)*(3-3)=0\n3!=2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/numeric-counterexample.lit"
+      },
+      {
+        "id": "bodyless-cases-wrong-first-root",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r\n    by cases:\n        ? x=r\n        case x-r=0\n        case x-s=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/bodyless-cases-wrong-first-root.lit"
+      },
+      {
+        "id": "missing-second-case",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/missing-second-case.lit"
+      },
+      {
+        "id": "double-root-local-zero",
+        "source": "claim:\n    ? forall r,x R:\n        (x-r)^2=0\n        =>:\n            x=r\n    x-r=0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/double-root-local-zero.lit"
+      },
+      {
+        "id": "bodyless-theorem-native-call",
+        "source": "thm factored_quadratic_roots:\n    ? forall r, s, x R:\n        (x - r) * (x - s) = 0\n        =>:\n            x = r or x = s\n    by cases:\n        ? x=r or x=s\n        case x-r=0\n        case x-s=0\n\nrelease thm factored_quadratic_roots(2,3,3)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round65-cases/bodyless-theorem-native-call.lit"
+      }
+    ]
+  }
+}

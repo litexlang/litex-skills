@@ -1,0 +1,11 @@
+claim:
+    ? forall a,b R:
+        a <= b
+        b <= a
+        =>:
+            a = b
+    by contra:
+        ? a = b
+        a != b
+        a < b
+        impossible b <= a

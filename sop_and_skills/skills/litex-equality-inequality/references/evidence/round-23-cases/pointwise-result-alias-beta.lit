@@ -1,0 +1,4 @@
+forall u,v,result fn(t R) R,x R:
+    result=fn(k R) R {u(k)+v(k)}
+    =>:
+        result(x)=u(x)+v(x)

@@ -1,0 +1,7 @@
+claim:
+    ? forall x,r R:
+        r >= 0
+        x^2 <= r^2
+        =>:
+            abs(x) <= r
+    abs(x) <= abs(r) = r

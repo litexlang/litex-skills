@@ -1,0 +1,1254 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-22-2026-10-09.json",
+  "original_sha256": "4a84fd60a675975658509d9a8bdc2d4e9ec445a49dc3a784e94af86cc233e259",
+  "original_bytes": 86184,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+    "sha256": "67360fd3b37c55f6a0ec49e965c8cd099dfd1615b6d5693a16e9a1cf736f7b97",
+    "version": "Litex 1.0.6-beta",
+    "source_correspondence": "Verified selected-scalar overlay: HEAD + exact selected-scalar acceptance source manifest; not current worktree",
+    "source_manifest": {
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/in_fact.rs": "a11bae775ce6e19eadd6870f2590211ae687efbe82ef44b47d4e89da27daca4c",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/less.rs": "55707fcf4564ee256d0dcf34ee46a80c6734a04407009ed142de4f592a6bc382",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/less_equal.rs": "223590be6d6097348397cc1f73ce07f6e95275275fc52a4c4a3d2fece1b92fd3",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/mod.rs": "a1504383a346d127772baacc73090720bb22fe68e73544c4832c0751126aeb03",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/selected_scalar_bt_rules.rs": "867e135955876d1f812666e10460861db25cc181e53dacf4fec4fc2fb6d07462",
+      "src/json_output/explain/atomic_builtin_rule/in_fact.rs": "7d20007ef468e785ad912c79fb908800b3f11668674ab64023aab47840faf76d",
+      "src/json_output/explain/atomic_builtin_rule/less.rs": "818b76fc3e00506b5fc104365dd4cc67d0761c8159ce5483e1e7725fe7afb327",
+      "src/json_output/explain/atomic_builtin_rule/less_equal.rs": "f7ef8d852968ed66ca87174ed27dbcde5ae7d3a063fcf194e9cf2ae58ab68d33",
+      "src/json_output/project_detailed/builtin_atomic_gen.rs": "028268390fb7eb22a66e8c42b4fbad8660863ad5d834fec7dc462ccfc4c34132",
+      "tests/unit/execute/selected_scalar_bt_rules/tests.rs": "252cb701dfb599f40fd6148bde9e7c7a92853b1b6c9a38053c7762ef15dc2668",
+      "examples/proof_nodes/atomic/by_builtin_rule/subtraction_order_pairs.lit": "c933d17eb67c4a7314b21fe71ea18736d78c48af76c8b217449dc6408943e789",
+      "examples/proof_nodes/atomic/by_builtin_rule/abs_square_radius.lit": "80bb43ebeaf574ce5a5711d483711cf77ddb62bb8da8b18216bcca1028899690",
+      "examples/proof_nodes/atomic/by_builtin_rule/quotient_scalar_upper_bound.lit": "7f9c86d4d281e47c1841e44ce2f3b5eb78b9645746505689f540ddb7795133d0",
+      "examples/proof_nodes/atomic/by_builtin_rule/quotient_scalar_strict_upper_bound.lit": "7fcbf5bc53e23701e767ad536b0adadfe8164a551768d0c8a87b88bef1915d37",
+      "examples/proof_nodes/atomic/by_builtin_rule/exact_integer_quotient.lit": "8948a0ac939d4aa23115c855753e0ecc176c1da1fceba6e1db22ac567fa7b5bc",
+      "examples/proof_nodes/atomic/by_builtin_rule/abs_nonzero_denominator_consumer.lit": "62ad32a528af5151a24115ec55e1f1b1287ca03c10b3eeb7fd242ff317e582fa",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/helper.rs": "57179c172be8b6db10c0161ced58a72d69c47f1c328bce67948c54f3c8db3752"
+    },
+    "current_worktree_build": {
+      "success": false,
+      "log": "build-resume-round-20.log",
+      "cause": "unrelated concurrent Lean compiler lifetime/scopes errors"
+    },
+    "session": [
+      {
+        "id": "anonymous-call-product-known-values",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "315c601834ebd24a5de83bafa122a5ca317cd08d34553098326f784d53ed9b52",
+          "excerpt": "forall c R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n    fn(k Z) R {c}(m+1)=c\r\n    =>:\r\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    fn (k Z) R{c}(m + 1) = c\\n    =>:\\n        fn (k Z) R{c}(m) * fn (k Z) R{c}(m + 1) = c * c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R, m Z:\\n    fn (k Z) R{c}"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "named-call-product-known-values",
+        "source": "forall c R,m Z,f fn(k Z) R:\n    f(m)=c\n    f(m+1)=c\n    =>:\n        f(m)*f(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5a34bd48fdb588126e91dc51dc34d29e6d9b809a65b1e1a2f6eb9309b54599d9",
+          "excerpt": "forall c R,m Z,f fn(k Z) R:\r\n    f(m)=c\r\n    f(m+1)=c\r\n    =>:\r\n        f(m)*f(m+1)=c*c\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-scaled-known-value",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    =>:\n        fn(k Z) R {c}(m)*d=c*d\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b38309471e61b12335a79949e6b7335a54b3aeb67baca6caaaf70a56d599e5bf",
+          "excerpt": "forall c,d R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n    =>:\r\n        fn(k Z) R {c}(m)*d=c*d\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    =>:\\n        fn (k Z) R{c}(m) * d = c * d\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    =>:\\n        fn (k Z) R{c}(m) * d = c * d\"\r\n      },\r\n      \"stores\": [],\r\n"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-sum-known-values",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)+fn(k Z) R {c}(m+1)=c+c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2447cac3db7febc58e388020c6ccf1b818f342999a9f6c775a33a81d27c61379",
+          "excerpt": "forall c R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n    fn(k Z) R {c}(m+1)=c\r\n    =>:\r\n        fn(k Z) R {c}(m)+fn(k Z) R {c}(m+1)=c+c\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    fn (k Z) R{c}(m + 1) = c\\n    =>:\\n        fn (k Z) R{c}(m) + fn (k Z) R{c}(m + 1) = c + c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R, m Z:\\n    fn (k Z) R{c}"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-different-binders",
+        "source": "forall c R,m Z:\n    fn(first_index Z) R {c}(m)=c\n    fn(second_index Z) R {c}(m+1)=c\n    =>:\n        fn(third_index Z) R {c}(m)*fn(fourth_index Z) R {c}(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "44c0491bdaaa0efa10d961d8f8fb908731958b61174baf3d4ff909f1e3dad021",
+          "excerpt": "forall c R,m Z:\r\n    fn(first_index Z) R {c}(m)=c\r\n    fn(second_index Z) R {c}(m+1)=c\r\n    =>:\r\n        fn(third_index Z) R {c}(m)*fn(fourth_index Z) R {c}(m+1)=c*c\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    fn (first_index Z) R{c}(m) = c\\n    fn (second_index Z) R{c}(m + 1) = c\\n    =>:\\n        fn (third_index Z) R{c}(m) * fn (fourth_index Z) R{c}(m + 1) = c * c\",\r\n      \"why_failed\": {\r\n  "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "identity-call-product-known-values",
+        "source": "forall m Z:\n    fn(k Z) R {k}(m)=m\n    fn(k Z) R {k}(m+1)=m+1\n    =>:\n        fn(k Z) R {k}(m)*fn(k Z) R {k}(m+1)=m*(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "06ce7d8cf26274fc2e3102e7b8d9cf8db9ebbfe96f05ac128c3d1d215f7fd42c",
+          "excerpt": "forall m Z:\r\n    fn(k Z) R {k}(m)=m\r\n    fn(k Z) R {k}(m+1)=m+1\r\n    =>:\r\n        fn(k Z) R {k}(m)*fn(k Z) R {k}(m+1)=m*(m+1)\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m Z:\\n    fn (k Z) R{k}(m) = m\\n    fn (k Z) R{k}(m + 1) = m + 1\\n    =>:\\n        fn (k Z) R{k}(m) * fn (k Z) R{k}(m + 1) = m * (m + 1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m Z:\\n    fn (k Z) R{"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-closed-indices",
+        "source": "forall c R:\n    fn(k Z) R {c}(0)=c\n    fn(k Z) R {c}(1)=c\n    =>:\n        fn(k Z) R {c}(0)*fn(k Z) R {c}(1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3d82675123597c8bcfb75d05175c5afca3be7206288c43139c21e9c14b2c66e9",
+          "excerpt": "forall c R:\r\n    fn(k Z) R {c}(0)=c\r\n    fn(k Z) R {c}(1)=c\r\n    =>:\r\n        fn(k Z) R {c}(0)*fn(k Z) R {c}(1)=c*c\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R:\\n    fn (k Z) R{c}(0) = c\\n    fn (k Z) R{c}(1) = c\\n    =>:\\n        fn (k Z) R{c}(0) * fn (k Z) R{c}(1) = c * c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R:\\n    fn (k Z) R{c}(0) = c\\n    fn (k Z) R{c}"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-two-captures",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {d}(m+1)=d\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*d\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3393c1bd2f49b51573b559a03442e51b96abf2d4c8890c7104ec309c4d65a9b3",
+          "excerpt": "forall c,d R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n    fn(k Z) R {d}(m+1)=d\r\n    =>:\r\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*d\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    fn (k Z) R{d}(m + 1) = d\\n    =>:\\n        fn (k Z) R{c}(m) * fn (k Z) R{d}(m + 1) = c * d\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, d R, m Z:\\n    fn (k"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-two-captures-false",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {d}(m+1)=d\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "afec5fd3498e068023d16e9e7c9266dd95b1e162285fb226c51076b392f3ead1",
+          "excerpt": "forall c,d R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n    fn(k Z) R {d}(m+1)=d\r\n    =>:\r\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*c\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    fn (k Z) R{d}(m + 1) = d\\n    =>:\\n        fn (k Z) R{c}(m) * fn (k Z) R{d}(m + 1) = c * c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, d R, m Z:\\n    fn (k"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-product-wrong-result",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c+1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d9ed3c9b617bb34418b37bb04b767fe5059c15557f8f0c4608f9f2fcbe18b07c",
+          "excerpt": "forall c R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n    fn(k Z) R {c}(m+1)=c\r\n    =>:\r\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c+1\r\n\r\n... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    fn (k Z) R{c}(m) = c\\n    fn (k Z) R{c}(m + 1) = c\\n    =>:\\n        fn (k Z) R{c}(m) * fn (k Z) R{c}(m + 1) = c * c + 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R, m Z:\\n    fn (k Z"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-domain-control",
+        "source": "forall c R:\n    fn(k N+) R {c}(0)=c\n    =>:\n        fn(k N+) R {c}(0)*2=c*2\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d85ec64b9eba2863f4a13aa66f0e6111119026a84a288c0fd9bccecd3f88f442",
+          "excerpt": "forall c R:\r\n    fn(k N+) R {c}(0)=c\r\n    =>:\r\n        fn(k N+) R {c}(0)*2=c*2\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R:\\n    fn (k N+) R{c}(0) = c\\n    =>:\\n        fn (k N+) R{c}(0) * 2 = c * 2\",\r\n      \"why_failed\": {\r\n        \"phase\": \"well_defined\",\r\n        \"message\": \"Could not prove that the statement is well-defined.\",\r\n        \"verification\": {\r\n          \"type\": \"forall\",\r\n          \"success\": f"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "scalar-mul-congruence-interface",
+        "source": "thm scalar_mul_congruence_probe22:\n    ? forall lhs,rhs,factor R:\n        lhs=rhs\n        =>:\n            lhs*factor=rhs*factor\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "51e4c2e34320baad38958c1d8826d913fb495bfcf3f0eef350193a94c170c34a",
+          "excerpt": "thm scalar_mul_congruence_probe22:\r\n    ? forall lhs,rhs,factor R:\r\n        lhs=rhs\r\n        =>:\r\n            lhs*factor=rhs*factor\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-scaled-interface-author",
+        "source": "claim:\n    ? forall c,d R,m Z:\n        fn(k Z) R {c}(m)=c\n        =>:\n            fn(k Z) R {c}(m)*d=c*d\n    by thm scalar_mul_congruence_probe22(fn(k Z) R {c}(m),c,d) => fn(k Z) R {c}(m)*d=c*d\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2b942941452e9929418685c0e3d5cdefc72aefa1b570153ad0ee265b751e7d72",
+          "excerpt": "claim:\r\n    ? forall c,d R,m Z:\r\n        fn(k Z) R {c}(m)=c\r\n        =>:\r\n            fn(k Z) R {c}(m)*d=c*d\r\n    by thm scalar_mul_congruence_probe22(fn(k Z) R {c}(m),c,d) => fn(k Z) R {c}(m)*d=c*d\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "scalar-product-congruence-interface",
+        "source": "thm scalar_product_congruence_probe22:\n    ? forall lhs1,rhs1,lhs2,rhs2 R:\n        lhs1=rhs1\n        lhs2=rhs2\n        =>:\n            lhs1*lhs2=rhs1*rhs2\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "837eb5cdddae767a99ba675d42eb850db4c666966b6116f8cc6b850bb0018d79",
+          "excerpt": "thm scalar_product_congruence_probe22:\r\n    ? forall lhs1,rhs1,lhs2,rhs2 R:\r\n        lhs1=rhs1\r\n        lhs2=rhs2\r\n        =>:\r\n            lhs1*lhs2=rhs1*rhs2\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-product-interface-author",
+        "source": "claim:\n    ? forall c R,m Z:\n        fn(k Z) R {c}(m)=c\n        fn(k Z) R {c}(m+1)=c\n        =>:\n            fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n    by thm scalar_product_congruence_probe22(fn(k Z) R {c}(m),c,fn(k Z) R {c}(m+1),c) => fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0af11ff34d2aac1fc5f3dc35deafe9c17867e074b6645facb4105b413fe15413",
+          "excerpt": "claim:\r\n    ? forall c R,m Z:\r\n        fn(k Z) R {c}(m)=c\r\n        fn(k Z) R {c}(m+1)=c\r\n        =>:\r\n            fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\r\n    by thm scalar_product_congruence_probe22(fn(k Z) R {c}(m),c,fn(k Z) R {c}(m+1),c) => fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-multiplication-zero",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)*0=0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d48b1408cf278b02ad8530c596a9ff34423d4dd43ea2745a446e323c365ff6b5",
+          "excerpt": "forall c R,m Z:\r\n    fn(k Z) R {c}(m)*0=0\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-multiplication-commutes",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6fcaf62361315f932ac0eec9d6990f9b0871cc927ba461b1c19fa863130d3638",
+          "excerpt": "forall c,d R,m Z:\r\n    fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) * d = d * fn (k Z) R{c}(m)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) * d = d * fn (k Z) R{c}(m)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-beta-direct",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "f6590ba0aeb4c9ecdc2aa5680f36304dac90efce5b3a0db12bd44f41cdd9a87d",
+          "excerpt": "forall c R,m Z:\r\n    fn(k Z) R {c}(m)=c\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-alpha-equality",
+        "source": "forall c R,m Z:\n    fn(first_index Z) R {c}(m)=fn(second_index Z) R {c}(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b1cdfb721d2d4ae00f7e4f722abcb0841448bd86de90dec7d5c8b5cc919db60d",
+          "excerpt": "forall c R,m Z:\r\n    fn(first_index Z) R {c}(m)=fn(second_index Z) R {c}(m)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-capture-equality-false",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=fn(k Z) R {d}(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "f141a2a0c1a86512901871f013c19a98c1fd0f34f87ce16a9b93e5011f47a3fb",
+          "excerpt": "forall c,d R,m Z:\r\n    fn(k Z) R {c}(m)=fn(k Z) R {d}(m)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) = fn (k Z) R{d}(m)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, d R, m Z:\\n    fn (k Z) R{c}(m) = fn (k Z) R{d}(m)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-argument-equality-false",
+        "source": "forall m Z:\n    fn(k Z) R {k}(m)=fn(k Z) R {k}(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3ba916fc19d7e29de0f751caf84c240011bd1a06862edcb3b7004d0a8fca1c45",
+          "excerpt": "forall m Z:\r\n    fn(k Z) R {k}(m)=fn(k Z) R {k}(m+1)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m Z:\\n    fn (k Z) R{k}(m) = fn (k Z) R{k}(m + 1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m Z:\\n    fn (k Z) R{k}(m) = fn (k Z) R{k}(m + 1)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-distribution",
+        "source": "forall c,d,e R,m Z:\n    fn(k Z) R {c}(m)*(d+e)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*e\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9110b14872be4e4440b2ab4cf9e47e1186d3668303abbc4b5c36242f3a9153bc",
+          "excerpt": "Warning: truncated output (original token count: 1884)\nTotal output lines: 186\n\nforall c,d,e R,m Z:\r\n    fn(k Z) R {c}(m)*(d+e)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*e\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"file\",\r\n  \"path\": \"tmp/2026-10-09/equality-inequality-search/round21-accepted-prefix.lit\",\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": true,\r\n      \"statement\": \"forall f fn (k N) R, m N:\\n    product(m, m, f) = f(m)\",\r\n      \"proof_method\": {\r\n        \"type\": \"compound_fact\",\r\n        \"rule_name\": \"Universal\",\r\n   "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "anonymous-call-distribution-corrected",
+        "source": "forall c,d,right_addend R,m Z:\n    fn(k Z) R {c}(m)*(d+right_addend)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*right_addend\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "77877ff5157c362a1c5203c6bd2364c04d813f5b528b0617338961603492cc9a",
+          "excerpt": "forall c,d,right_addend R,m Z:\r\n    fn(k Z) R {c}(m)*(d+right_addend)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*right_addend\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, d, right_addend R, m Z:\\n    fn (k Z) R{c}(m) * (d + right_addend) = fn (k Z) R{c}(m) * d + fn (k Z) R{c}(m) * right_addend\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, d, right_addend R, m Z:\\n    fn (k Z) R{c}(m) *"
+        },
+        "session_id": 85133
+      },
+      {
+        "id": "named-call-multiplication-commutes",
+        "source": "forall d R,m Z,f fn(k Z) R:\n    f(m)*d=d*f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "f0ce82131998a12bba3294d9431c9c95f1ca203de31d7bc624792726f3ac411e",
+          "excerpt": "forall d R,m Z,f fn(k Z) R:\r\n    f(m)*d=d*f(m)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 85133
+      },
+      {
+        "id": "scalar-commutative-interface",
+        "source": "thm scalar_commutative_probe22:\n    ? forall lhs,rhs R:\n        lhs*rhs=rhs*lhs\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c585f6e370e5385ff45e04539f329f410bb1058c7581b6ea493d42c63c8fcd45",
+          "excerpt": "thm scalar_commutative_probe22:\r\n    ? forall lhs,rhs R:\r\n        lhs*rhs=rhs*lhs\r\n\r\n... ... ... success\r\nlitex> "
+        },
+        "session_id": 85133
+      },
+      {
+        "id": "anonymous-call-commutative-interface-author",
+        "source": "claim:\n    ? forall c,d R,m Z:\n        fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n    by thm scalar_commutative_probe22(fn(k Z) R {c}(m),d) => fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d8364088e0676e8e00ac0453d421618f34e2d7e348df61abb32e55bbf4bf619b",
+          "excerpt": "claim:\r\n    ? forall c,d R,m Z:\r\n        fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\r\n    by thm scalar_commutative_probe22(fn(k Z) R {c}(m),d) => fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 85133
+      }
+    ],
+    "cases": [
+      {
+        "id": "anonymous-call-product-known-values",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-product-known-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "642f5612844e0ceac1912e95278666dc494561bed5db7d76480c79d5868bb787"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-product-known-values.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "named-call-product-known-values",
+        "source": "forall c R,m Z,f fn(k Z) R:\n    f(m)=c\n    f(m+1)=c\n    =>:\n        f(m)*f(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/named-call-product-known-values.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5df8728caf686fa7dc1181fc74afb34068fd1647194bfde844054be090081d03"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/named-call-product-known-values.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-scaled-known-value",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    =>:\n        fn(k Z) R {c}(m)*d=c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-scaled-known-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "16036b8e1efbcf24e6c311423c6018471f2317d004a9d8a1611f1b9ebb5d88db"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-scaled-known-value.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-sum-known-values",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)+fn(k Z) R {c}(m+1)=c+c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-sum-known-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5dffd695546a760cd3db68e139bb2074e98cc78093db61087f39ba27e1ce6c2b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-sum-known-values.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-different-binders",
+        "source": "forall c R,m Z:\n    fn(first_index Z) R {c}(m)=c\n    fn(second_index Z) R {c}(m+1)=c\n    =>:\n        fn(third_index Z) R {c}(m)*fn(fourth_index Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-different-binders.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "119faf035055554861a6780e7f5f3162d5eb6bb8f0bf2adf09c3247470300443"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-different-binders.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "identity-call-product-known-values",
+        "source": "forall m Z:\n    fn(k Z) R {k}(m)=m\n    fn(k Z) R {k}(m+1)=m+1\n    =>:\n        fn(k Z) R {k}(m)*fn(k Z) R {k}(m+1)=m*(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/identity-call-product-known-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f4ad37e79e4ccffc6c0717212de85f952ee1f036a4082f7f85b758945511390"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/identity-call-product-known-values.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-closed-indices",
+        "source": "forall c R:\n    fn(k Z) R {c}(0)=c\n    fn(k Z) R {c}(1)=c\n    =>:\n        fn(k Z) R {c}(0)*fn(k Z) R {c}(1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-closed-indices.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "91819fe332460da2384966de75145e31f4aeab8e8736939ae5004d27e13e4358"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-closed-indices.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-two-captures",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {d}(m+1)=d\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-two-captures.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52f7f82d3da15bc18a3ec75ca31e6d85f68bd27c4923002072a0ea2c71c176ea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-two-captures.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-two-captures-false",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {d}(m+1)=d\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-two-captures-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "33d89572c2d7c67fcdb5bb1a04b8f57349e21894747c778e1bf62b566a58df65"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-two-captures-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-product-wrong-result",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-product-wrong-result.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3d74c91a6fe093b9b37d70dc5a6cf292ee0fb8a43e0967b4df2dded54dbdb302"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-product-wrong-result.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-domain-control",
+        "source": "forall c R:\n    fn(k N+) R {c}(0)=c\n    =>:\n        fn(k N+) R {c}(0)*2=c*2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-domain-control.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "963a1a553fd1ea2877856f7c8f0c942f5b42d1809081fdb4fdb5644323e7a76d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-domain-control.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "scalar-mul-congruence-interface",
+        "source": "thm scalar_mul_congruence_probe22:\n    ? forall lhs,rhs,factor R:\n        lhs=rhs\n        =>:\n            lhs*factor=rhs*factor\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/scalar-mul-congruence-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "adc8930e34ab23f9cb90e09328d110643e8e695f1e2a709947aa2d6848a0262d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/scalar-mul-congruence-interface.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-scaled-interface-author",
+        "source": "thm scalar_mul_congruence_probe22:\n    ? forall lhs,rhs,factor R:\n        lhs=rhs\n        =>:\n            lhs*factor=rhs*factor\n\nclaim:\n    ? forall c,d R,m Z:\n        fn(k Z) R {c}(m)=c\n        =>:\n            fn(k Z) R {c}(m)*d=c*d\n    by thm scalar_mul_congruence_probe22(fn(k Z) R {c}(m),c,d) => fn(k Z) R {c}(m)*d=c*d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-scaled-interface-author.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3fa564eddd134bd9f87d08fcbf23598ebbebb59e3820a67fe834312daf58fcc8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-scaled-interface-author.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "scalar-product-congruence-interface",
+        "source": "thm scalar_product_congruence_probe22:\n    ? forall lhs1,rhs1,lhs2,rhs2 R:\n        lhs1=rhs1\n        lhs2=rhs2\n        =>:\n            lhs1*lhs2=rhs1*rhs2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/scalar-product-congruence-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2119de06895b15b3021589218bbd71ae213b9fefc7a3a829bdc48c51b5015ca9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/scalar-product-congruence-interface.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-product-interface-author",
+        "source": "thm scalar_product_congruence_probe22:\n    ? forall lhs1,rhs1,lhs2,rhs2 R:\n        lhs1=rhs1\n        lhs2=rhs2\n        =>:\n            lhs1*lhs2=rhs1*rhs2\n\nclaim:\n    ? forall c R,m Z:\n        fn(k Z) R {c}(m)=c\n        fn(k Z) R {c}(m+1)=c\n        =>:\n            fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n    by thm scalar_product_congruence_probe22(fn(k Z) R {c}(m),c,fn(k Z) R {c}(m+1),c) => fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-product-interface-author.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "833729b66c55c9cd6cfab54f7ed579dd2ae0cbbb1c7f6a1651b1b1ba1e2fdc8e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-product-interface-author.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-multiplication-zero",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)*0=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-multiplication-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20083cc5639d2920b78a94f310c009c8c68f32ece9f39107d83f2d31c0fba303"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-multiplication-zero.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-multiplication-commutes",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-multiplication-commutes.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "24107e2d74dab42aaec13e1d62d26ec912b3fd8d4ada812368635c52738f4956"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-multiplication-commutes.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-beta-direct",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-beta-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f9ae05225adc98937d44313e9c10a3d0e7e5fef97587f849a05e0224aea8d44a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-beta-direct.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-alpha-equality",
+        "source": "forall c R,m Z:\n    fn(first_index Z) R {c}(m)=fn(second_index Z) R {c}(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-alpha-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "98052207f8086b3e0c03069fe8a01a3158b571c1cdcc87dd2ca94c8a66850d49"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-alpha-equality.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-capture-equality-false",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=fn(k Z) R {d}(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-capture-equality-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "336548f361fcd8bf6494bf44ed893fa9825dfc8810d93e756c327aa281895463"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-capture-equality-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-argument-equality-false",
+        "source": "forall m Z:\n    fn(k Z) R {k}(m)=fn(k Z) R {k}(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-argument-equality-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "839919c8922481d036de7ebe42552ae071081150a0d1851b88dc6b25ab3ceb1d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-argument-equality-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-distribution-corrected",
+        "source": "forall c,d,right_addend R,m Z:\n    fn(k Z) R {c}(m)*(d+right_addend)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*right_addend\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-distribution-corrected.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6aec4d5f85973b16eb350cb08dfcb26131f81eacea5f1d4158a4700722338968"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-distribution-corrected.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "named-call-multiplication-commutes",
+        "source": "forall d R,m Z,f fn(k Z) R:\n    f(m)*d=d*f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/named-call-multiplication-commutes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a36d757671874ef26d55e9bac6a576b475b24749ec2656785dea7a513233b234"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/named-call-multiplication-commutes.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "scalar-commutative-interface",
+        "source": "thm scalar_commutative_probe22:\n    ? forall lhs,rhs R:\n        lhs*rhs=rhs*lhs\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/scalar-commutative-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "34732c6810a6b2de87cb7ec5f222a0a0f51abd25538e7906560f31a5063264f7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/scalar-commutative-interface.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "anonymous-call-commutative-interface-author",
+        "source": "thm scalar_commutative_probe22:\n    ? forall lhs,rhs R:\n        lhs*rhs=rhs*lhs\n\nclaim:\n    ? forall c,d R,m Z:\n        fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n    by thm scalar_commutative_probe22(fn(k Z) R {c}(m),d) => fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-22-cases/anonymous-call-commutative-interface-author.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "769e0dd3c5819bea7fbcb3bdc1ddc363c9bf17273ec37db68331ddbbf3e3a379"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-commutative-interface-author.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      }
+    ],
+    "excluded_authoring_attempt": {
+      "id": "anonymous-call-distribution",
+      "reason": "e is a reserved builtin name; hard parser exit",
+      "source": "forall c,d,e R,m Z:\n    fn(k Z) R {c}(m)*(d+e)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*e\n",
+      "not_a_kernel_or_mathematical_miss": true
+    },
+    "restart": {
+      "old_session": 56695,
+      "new_session": 85133,
+      "prefix": "round22-accepted-prefix.lit",
+      "accepted_statement_count": 26,
+      "initial_success": true
+    },
+    "atom_inspection": {
+      "source": "round-22-inspect-anonymous-atoms.rs",
+      "output": {
+        "full_payload_omitted": true,
+        "sha256": "126e07dd70298b9cb84ab339907ad16d4aa169360c84a6551d6b0b0023a26f61",
+        "excerpt": "source: fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\nleft IR: fn (#4#k Z) R{#1#c}(#3#m) * #2#d\nright IR: #2#d * fn (#5#k Z) R{#1#c}(#3#m)\nrational normalization: false\nsource: fn(k Z) R {c}(m)=fn(k Z) R {c}(m)\nleft IR: fn (#6#k Z) R{#1#c}(#3#m)\nright IR: fn (#7#k Z) R{#1#c}(#3#m)\nrational normalization: false\n"
+      },
+      "library": "tmp/2026-10-09/selected-scalar-bt-rules/overlay/target/release/liblitex.rlib",
+      "library_sha256": "f834c7787984c3f17166200243d09b809f4f3b49c91363ad8e19d249ca124800",
+      "scope": "Parser IR and rational-normalization comparison only, not an implementation repair",
+      "output_file": "round-22-anonymous-atoms-ir.txt",
+      "compile_command": [
+        "rustc",
+        "--edition=2021",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/inspect-anonymous-atoms.rs",
+        "--extern",
+        "litex=/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/selected-scalar-bt-rules/overlay/target/release/liblitex.rlib",
+        "-L",
+        "dependency=/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/selected-scalar-bt-rules/overlay/target/release/deps",
+        "-o",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/inspect-anonymous-atoms"
+      ],
+      "run_command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/inspect-anonymous-atoms"
+      ],
+      "source_sha256": "e295f521475942ebf6f01b156ab65572595bc2b88e7d486b5bf5a61ae9e1ae53"
+    },
+    "scope": {
+      "kernel_edits": false,
+      "canonical_edits": false,
+      "trust_added": false
+    },
+    "summary": {
+      "independent_files": 25,
+      "accepted": 11,
+      "rejected": 14,
+      "introspection_probe_counted_as_proof_file": false
+    }
+  }
+}

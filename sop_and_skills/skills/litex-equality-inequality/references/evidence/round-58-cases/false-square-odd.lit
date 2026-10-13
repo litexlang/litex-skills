@@ -1,0 +1,6 @@
+have fn r58_identity(x R) R = x
+have fn r58_square(x R) R = x^2
+have fn r58_shifted_zero(x R) R = x-2
+
+forall x R:
+    r58_square(-x)=-r58_square(x)

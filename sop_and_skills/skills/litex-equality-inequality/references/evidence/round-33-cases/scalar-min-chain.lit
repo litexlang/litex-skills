@@ -1,0 +1,7 @@
+claim:
+    ? forall b,d,z R:
+        z<=b
+        z<=d
+        =>:
+            z<=min(b,d)
+    z=min(z,z)<=min(b,d)

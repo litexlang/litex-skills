@@ -1,0 +1,13 @@
+thm solve_linear_equation:
+    ? forall a, b, c, x R:
+        a != 0
+        a * x + b = c
+        =>:
+            x = (c - b) / a
+    a * x = c - b
+    x = (a * x) / a = (c - b) / a
+
+3!=0
+3*2+(-6)=0
+release thm solve_linear_equation(3,-6,0,2)
+2=(0-(-6))/3

@@ -1,0 +1,5 @@
+forall f,g fn(x {1,2}) R:
+    forall x {1,2}:
+        f(x) <= g(x)
+    =>:
+        finite_set_product({1,2},f) <= finite_set_product({1,2},g)

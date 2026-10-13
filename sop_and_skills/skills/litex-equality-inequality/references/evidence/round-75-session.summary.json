@@ -1,0 +1,19 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-75-session.json",
+  "original_sha256": "31cd0b863981cd492ee9851f9874eaa17fb988a9ed6df9f6ef267f700684eb67",
+  "original_bytes": 578,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "claim:\n    ? forall n1,n2 N+:\n        exist n0 N+ st {n1<=n0,n2<=n0}\n    have n0 N+=n1+n2\n    n1<=n0>=n2\n    witness exist k N+ st {n1<=k,n2<=k} from n0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "76314df3300926f1e618fe2c7b7fe67eb7d18dba1f954ed27892a66daefbd859",
+        "excerpt": "claim:\r\n    ? forall n1,n2 N+:\r\n        exist n0 N+ st {n1<=n0,n2<=n0}\r\n    have n0 N+=n1+n2\r\n    n1<=n0>=n2\r\n    witness exist k N+ st {n1<=k,n2<=k} from n0\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; scalar common-index witness only, no source sequence prefix loaded. Current cold round75 owns full proof."
+    }
+  ]
+}

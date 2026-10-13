@@ -1,0 +1,4 @@
+forall u,v R:
+    v != 0
+    =>:
+        abs(u/v) = abs(u)/abs(v)

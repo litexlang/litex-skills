@@ -1,0 +1,8 @@
+have fn r52_arithmetic_mean(x, y R) R = (x + y) / 2
+have fn r52_geometric_mean(x, y R: x >= 0, y >= 0) R = sqrt(x * y)
+
+forall x,y R:
+    x>=0
+    y>=0
+    =>:
+        sqrt(x*y)<=(x+y)/2

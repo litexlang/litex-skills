@@ -1,0 +1,2 @@
+forall a Z,b N+:
+    gcd(a,b) = gcd(b,a%b)

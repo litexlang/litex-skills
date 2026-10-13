@@ -1,0 +1,5 @@
+forall a,b Z,f fn(k Z) Z:
+    a <= b
+    a-1 <= b-1
+    =>:
+        sum(a,b,fn(k Z) Z {f(k)}) = sum(a-1,b-1,fn(j Z) Z {f(j+1)})

@@ -1,0 +1,4 @@
+forall a R+, n Z:
+    1 <= a
+    =>:
+        a^n < a^(n+1)

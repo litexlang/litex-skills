@@ -1,0 +1,712 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-41-2026-10-09.json",
+  "original_sha256": "faec9bca1bde1c08c95653468f7e92bc9290948dc4eff9516c60a3f9fd148c4a",
+  "original_bytes": 1091868,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+    "sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "identity-original",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_original:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "618d646359bcea8b223c0806eb2143067daecb34221b0b66ca1d22b31938f51a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-original.lit"
+        ]
+      },
+      {
+        "id": "identity-no-next-alias",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_no_next_alias:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-no-next-alias.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "848202072bf8d8cc871cab8ce98a83a8311f3a71987250ebfa1936d59ed0de8c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-no-next-alias.lit"
+        ]
+      },
+      {
+        "id": "identity-four-statements",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_four_statements:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-four-statements.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "72c7caa4c75cf5bd337f0ba348ab910b83955cffb6fcbedcac4f2b7367fc0576"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-four-statements.lit"
+        ]
+      },
+      {
+        "id": "identity-bodyless",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_bodyless:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1cda365c52c4198e7a375d12e11f38d37a0e1fd7bd9772420b052cc29e0379d5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-bodyless.lit"
+        ]
+      },
+      {
+        "id": "identity-values-only",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_values_only:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-values-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "438c693e754cb03ec27aaa869a3fca591529a7e96e35cb3e2b203fe2e27a6a47"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-values-only.lit"
+        ]
+      },
+      {
+        "id": "residual-nonnegative-original",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n\nthm r41_residual_nonnegative_original:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x^2 > 0\n    4 * x^2 > 0\n    4 * x^2 != 0\n    r41_square_root_two_residual(x)^2 >= 0\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) $in R\n    x^2 $in R\n    4 * x^2 $in R\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) $in R\n    (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) $in R\n    (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) >= 0\n\n# Step 1: start with an arbitrary positive x and calculate one update.\n# The new residual is nonnegative, so the exact algebraic identity also gives\n# an exact identity for the absolute residual gap.\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/residual-nonnegative-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ef541d1f4d2c6962795419a252f0691d0bb59398e9ade6fd1c2a8732ba6643cd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/residual-nonnegative-original.lit"
+        ]
+      },
+      {
+        "id": "residual-nonnegative-one-identity-call",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n\nthm r41_residual_nonnegative_one_identity_call:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/residual-nonnegative-one-identity-call.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2cad5f96ca72af99daf445c978c0a3b6fba5c761f4f3b2a1946bef3c4df71f95"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/residual-nonnegative-one-identity-call.lit"
+        ]
+      },
+      {
+        "id": "literal-identity",
+        "source": "forall x R+:\n    4*x^2*(((x+2/x)/2)^2-2)=(x^2-2)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/literal-identity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "709c9c7cd4ddaa521869215b3d350582d74b951329695fa151df1af2105bcfd2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/literal-identity.lit"
+        ]
+      },
+      {
+        "id": "literal-update-positive",
+        "source": "forall x R+:\n    (x+2/x)/2 $in R+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/literal-update-positive.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "686a3e2ac361a9c439871c7c1c80247596572b9ae97396d4c6a4617a08c8dbf4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/literal-update-positive.lit"
+        ]
+      },
+      {
+        "id": "literal-update-zero-domain",
+        "source": "(0+2/0)/2 $in R+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/literal-update-zero-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ffc0b0031e6ae1058ed3711cd6ccafa0502ed651fac542a72f869883b6d5fef"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/literal-update-zero-domain.lit"
+        ]
+      },
+      {
+        "id": "wrong-residual-coefficient",
+        "source": "forall x R+:\n    4*x^2*(((x+2/x)/2)^2-2)=(x^2-3)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/wrong-residual-coefficient.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c9aae8e86fe2ca6d3946e44401d146d9a855684e94b71776b3840ca895720a3d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/wrong-residual-coefficient.lit"
+        ]
+      },
+      {
+        "id": "literal-residual-nonnegative",
+        "source": "forall x R+:\n    ((x+2/x)/2)^2-2>=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/literal-residual-nonnegative.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ed9b3e8637e3a0cf721ebccd57482ebcc692caf2660746203f5a3bfcb1330bb2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/literal-residual-nonnegative.lit"
+        ]
+      },
+      {
+        "id": "identity-delete-newton-value",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_delete_newton_value:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-delete-newton-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9a7748b7509f9273fc88116a70848745ad6ba1bc15354bfb6c73f6da8ef3eeed"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-delete-newton-value.lit"
+        ]
+      },
+      {
+        "id": "identity-delete-old-residual-value",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_delete_old_residual_value:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/identity-delete-old-residual-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a4bd60167fbbf00c442ecf4b10fa705aef68395c157713d1eefa45c87b55dd39"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/identity-delete-old-residual-value.lit"
+        ]
+      },
+      {
+        "id": "nonnegative-five-statements",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\nthm r41_nonnegative_five_statements:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r41_square_root_two_residual(x)^2 >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x))=r41_square_root_two_residual(x)^2/(4*x^2)>=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/nonnegative-five-statements.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "94eef6dda344d2270727f12fb54e85af63903aaaf17dc6c2d8f60e561ea72a10"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/nonnegative-five-statements.lit"
+        ]
+      },
+      {
+        "id": "positive-update-delete-type-echoes",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/positive-update-delete-type-echoes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4a06a104364fb9e5da8294382de143d8ece68b0e9e20f2b7f14358e4259253f6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/positive-update-delete-type-echoes.lit"
+        ]
+      },
+      {
+        "id": "positive-update-delete-final-sign",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/positive-update-delete-final-sign.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "18597c229cc56100fc18af333e83844d4129caedb053c800de22cd7be360db2f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/positive-update-delete-final-sign.lit"
+        ]
+      },
+      {
+        "id": "positive-update-two-bridges",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/positive-update-two-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "354d5d03dd304a99ee321a9b3d9805c802845cf3771348b2422f5b9bd223b576"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/positive-update-two-bridges.lit"
+        ]
+      },
+      {
+        "id": "combined-short-identity-and-sign",
+        "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n\nthm r41_nonnegative_five_statements:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r41_square_root_two_residual(x)^2 >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x))=r41_square_root_two_residual(x)^2/(4*x^2)>=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-41-cases/combined-short-identity-and-sign.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e098640466bc787e835a76621f8225a5095a84b08f230dfe8c2f817a4138c2ed"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round41-cases/combined-short-identity-and-sign.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "prefix": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+      "cases": [
+        {
+          "id": "identity-original",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_original:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+          "statement": "thm r41_identity_original:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n"
+        },
+        {
+          "id": "identity-no-next-alias",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_no_next_alias:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+          "statement": "thm r41_identity_no_next_alias:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n"
+        },
+        {
+          "id": "identity-four-statements",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_four_statements:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+          "statement": "thm r41_identity_four_statements:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n"
+        },
+        {
+          "id": "identity-bodyless",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_bodyless:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n",
+          "statement": "thm r41_identity_bodyless:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n"
+        },
+        {
+          "id": "identity-values-only",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_values_only:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n",
+          "statement": "thm r41_identity_values_only:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n"
+        },
+        {
+          "id": "residual-nonnegative-original",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n\nthm r41_residual_nonnegative_original:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x^2 > 0\n    4 * x^2 > 0\n    4 * x^2 != 0\n    r41_square_root_two_residual(x)^2 >= 0\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) $in R\n    x^2 $in R\n    4 * x^2 $in R\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) $in R\n    (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) $in R\n    (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) >= 0\n\n# Step 1: start with an arbitrary positive x and calculate one update.\n# The new residual is nonnegative, so the exact algebraic identity also gives\n# an exact identity for the absolute residual gap.\n",
+          "statement": "thm r41_residual_nonnegative_original:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_identity_original(x)\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x^2 > 0\n    4 * x^2 > 0\n    4 * x^2 != 0\n    r41_square_root_two_residual(x)^2 >= 0\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) $in R\n    x^2 $in R\n    4 * x^2 $in R\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) $in R\n    (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) $in R\n    (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = (4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x))) / (4 * x^2) >= 0\n\n# Step 1: start with an arbitrary positive x and calculate one update.\n# The new residual is nonnegative, so the exact algebraic identity also gives\n# an exact identity for the absolute residual gap.\n"
+        },
+        {
+          "id": "residual-nonnegative-one-identity-call",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n\nthm r41_residual_nonnegative_one_identity_call:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n",
+          "statement": "thm r41_residual_nonnegative_one_identity_call:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_identity_original(x)\n"
+        },
+        {
+          "id": "literal-identity",
+          "source": "forall x R+:\n    4*x^2*(((x+2/x)/2)^2-2)=(x^2-2)^2\n",
+          "statement": "forall x R+:\n    4*x^2*(((x+2/x)/2)^2-2)=(x^2-2)^2"
+        },
+        {
+          "id": "literal-update-positive",
+          "source": "forall x R+:\n    (x+2/x)/2 $in R+\n",
+          "statement": "forall x R+:\n    (x+2/x)/2 $in R+"
+        },
+        {
+          "id": "literal-update-zero-domain",
+          "source": "(0+2/0)/2 $in R+\n",
+          "statement": "(0+2/0)/2 $in R+"
+        },
+        {
+          "id": "wrong-residual-coefficient",
+          "source": "forall x R+:\n    4*x^2*(((x+2/x)/2)^2-2)=(x^2-3)^2\n",
+          "statement": "forall x R+:\n    4*x^2*(((x+2/x)/2)^2-2)=(x^2-3)^2"
+        },
+        {
+          "id": "literal-residual-nonnegative",
+          "source": "forall x R+:\n    ((x+2/x)/2)^2-2>=0\n",
+          "statement": "forall x R+:\n    ((x+2/x)/2)^2-2>=0"
+        },
+        {
+          "id": "identity-delete-newton-value",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_delete_newton_value:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+          "statement": "thm r41_identity_delete_newton_value:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n"
+        },
+        {
+          "id": "identity-delete-old-residual-value",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_identity_delete_old_residual_value:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n",
+          "statement": "thm r41_identity_delete_old_residual_value:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n"
+        },
+        {
+          "id": "nonnegative-five-statements",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    x > 0\n    x != 0\n    have next_value R+ = r41_newton_sqrt_two(x)\n    r41_square_root_two_residual(next_value) = next_value^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(next_value) = next_value^2 - 2 = r41_newton_sqrt_two(x)^2 - 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    r41_square_root_two_residual(x)^2 = (x^2 - 2)^2\n    4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\nthm r41_nonnegative_five_statements:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r41_square_root_two_residual(x)^2 >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x))=r41_square_root_two_residual(x)^2/(4*x^2)>=0\n",
+          "statement": "thm r41_nonnegative_five_statements:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_identity_original(x)\n    x^2 > 0\n    4*x^2 > 0\n    r41_square_root_two_residual(x)^2 >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x))=r41_square_root_two_residual(x)^2/(4*x^2)>=0\n"
+        },
+        {
+          "id": "positive-update-delete-type-echoes",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+          "statement": "claim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n    (x + 2 / x) / 2 > 0\n"
+        },
+        {
+          "id": "positive-update-delete-final-sign",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+          "statement": "claim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    x > 0\n    x != 0\n    2 / x > 0\n    x + 2 / x > 0\n"
+        },
+        {
+          "id": "positive-update-two-bridges",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n",
+          "statement": "claim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n"
+        },
+        {
+          "id": "combined-short-identity-and-sign",
+          "source": "have fn r41_square_root_two_residual(x R) R = x^2 - 2\nclaim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\nhave fn r41_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\nthm r41_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_square_root_two_residual(x)^2\n    r41_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r41_square_root_two_residual(x) = x^2 - 2\n    r41_square_root_two_residual(r41_newton_sqrt_two(x)) = r41_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r41_square_root_two_residual(r41_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r41_square_root_two_residual(x)^2\n\nthm r41_nonnegative_five_statements:\n    ? forall x R+:\n        r41_square_root_two_residual(r41_newton_sqrt_two(x)) >= 0\n    release thm r41_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r41_square_root_two_residual(x)^2 >= 0\n    r41_square_root_two_residual(r41_newton_sqrt_two(x))=r41_square_root_two_residual(x)^2/(4*x^2)>=0\n"
+        }
+      ],
+      "source_path": "showcases/math_concepts_in_litex/13_numerical_analysis_in_nutshell/main.lit",
+      "source_sha256": "d3ec40fa7d1940903c5815fbcbbf8b2b16109ac14dae22ce430f5fa9dda8e56a",
+      "scope": "Actual positive update/one-step residual slice; recursion, algo extractor and full numerical-analysis showcase excluded."
+    },
+    "scope": "Positive Newton update/one-step residual slice only; no recursion, extraction, whole numerical showcase or kernel edits.",
+    "summary": {
+      "accepted": 10,
+      "rejected": 9
+    },
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Successful release build and fixed executable snapshot; not an audited immutable whole checkout. Older warm Session can inherit the original theorem, only cold files own deletion evidence."
+  }
+}

@@ -1,0 +1,6 @@
+forall a,b,A R,B R+:
+    b != 0
+    abs(a) <= A
+    abs(b) >= B
+    =>:
+        abs(a/b) <= A/B

@@ -1,0 +1,10 @@
+claim:
+    ? forall a,x,y R+:
+        a>1
+        x<y
+        =>:
+            log(a,x)<log(a,y)
+    a!=1
+    ln(a)>0
+    ln(x)<ln(y)
+    log(a,x)=ln(x)/ln(a)<ln(y)/ln(a)=log(a,y)

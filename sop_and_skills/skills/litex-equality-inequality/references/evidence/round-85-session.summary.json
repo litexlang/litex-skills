@@ -1,0 +1,37 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-85-session.json",
+  "original_sha256": "abf95ac424f4d43e6988f120f8481051dca6a57f198f1295661b94c9f0975e0e",
+  "original_bytes": 3542,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "thm vector_space_scalar_constants_in_carrier:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>:\n        field.zero $in K\n        field.one $in K\n    field.zero $in K\n    field.one $in K",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4f5ab6c936feacb6d41b5773ddf1dd894c9af8987a1ea0d6af6e19ee6e86ac41",
+        "excerpt": "thm vector_space_scalar_constants_in_carrier:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>:\r\n        field.zero $in K\r\n        field.one $in K\r\n    field.zero $in K\r\n    field.one $in K\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source Field/VectorSpace/unique neg/short cancellation accepted earlier. Current cold round85 owns zero-law deletion."
+    },
+    {
+      "source": "thm zero_scalar_times_vector:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:\n        space.smul(field.zero, x) = space.zero\n    have p V=space.smul(field.zero,x)\n    field.add(field.zero,field.zero)=field.zero\n    p=space.smul(field.zero,x)=space.smul(field.add(field.zero,field.zero),x)=space.add(space.smul(field.zero,x),space.smul(field.zero,x))=space.add(p,p)\n    space.add(p,p)=p=space.add(space.zero,p)=space.add(p,space.zero)\n    release thm add_left_cancel(K,field,V,space,p,p,space.zero)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ec73157be8a50d079a41f0f63dc4d5ce797fe1d328b9c1810abf90a2757307c0",
+        "excerpt": "thm zero_scalar_times_vector:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:\r\n        space.smul(field.zero, x) = space.zero\r\n    have p V=space.smul(field.zero,x)\r\n    field.add(field.zero,field.zero)=field.zero\r\n    p=space.smul(field.zero,x)=space.smul(field.add(field.zero,field.zero),x)=space.add(space.smul(field.zero,x),space.smul(field.zero,x))=space.add(p,p)\r\n    space.add(p,p)=p=space.add(space.zero,p)=space.add(p,space.zero)\r\n    release thm add_left_cancel(K,field,V,space,p,p,space.zero)\r\n\r\n... ... ... ... ... ... ... ... success\r"
+      },
+      "baseline": "Round68 snapshot Session66922; source Field/VectorSpace/unique neg/short cancellation accepted earlier. Current cold round85 owns zero-law deletion."
+    },
+    {
+      "source": "thm scalar_times_zero_vector:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, a K:\n        space.smul(a, space.zero) = space.zero\n    have q V=space.smul(a,space.zero)\n    space.add(space.zero,space.zero)=space.zero\n    q=space.smul(a,space.zero)=space.smul(a,space.add(space.zero,space.zero))=space.add(space.smul(a,space.zero),space.smul(a,space.zero))=space.add(q,q)\n    space.add(q,q)=q=space.add(space.zero,q)=space.add(q,space.zero)\n    release thm add_left_cancel(K,field,V,space,q,q,space.zero)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d14f2bfddc274a29bd1c7fb173a08b5381b9ea37fcec8e4c53802bfeeb7f4152",
+        "excerpt": "thm scalar_times_zero_vector:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, a K:\r\n        space.smul(a, space.zero) = space.zero\r\n    have q V=space.smul(a,space.zero)\r\n    space.add(space.zero,space.zero)=space.zero\r\n    q=space.smul(a,space.zero)=space.smul(a,space.add(space.zero,space.zero))=space.add(space.smul(a,space.zero),space.smul(a,space.zero))=space.add(q,q)\r\n    space.add(q,q)=q=space.add(space.zero,q)=space.add(q,space.zero)\r\n    release thm add_left_cancel(K,field,V,space,q,q,space.zero)\r\n\r\n... ... ... ... ... ... ... ... success\r"
+      },
+      "baseline": "Round68 snapshot Session66922; source Field/VectorSpace/unique neg/short cancellation accepted earlier. Current cold round85 owns zero-law deletion."
+    }
+  ]
+}

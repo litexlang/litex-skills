@@ -1,0 +1,579 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-30-2026-10-09.json",
+  "original_sha256": "87e30a9b874a991a420ba51b7422fc180d4e07f0bc9df0b493513b1b718387a2",
+  "original_bytes": 94612,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+    "sha256": "bfa44ec60b2e76580c3e9d41cc535a9cfa0c4331f9c1ba2ec1b9f7dbf2ad3a5f",
+    "cases": [
+      {
+        "id": "member-original",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_member_original:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n            a <= z\n            z <= b\n        case I = '[a, b):\n            z $in '[a, b)\n            a <= z\n            z < b\n            z <= b\n        case I = '(a, b]:\n            z $in '(a, b]\n            a < z\n            a <= z\n            z <= b\n        case I = '(a, b):\n            z $in '(a, b)\n            a < z\n            a <= z\n            z < b\n            z <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/member-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "901405bd04d19bdbf1ab75a69fdd822ac0634e6db8ade4d8da4337f6696e9a1d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/member-original.lit"
+        ]
+      },
+      {
+        "id": "member-members-only",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_member_members_only:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n        case I = '[a, b):\n            z $in '[a, b)\n        case I = '(a, b]:\n            z $in '(a, b]\n        case I = '(a, b):\n            z $in '(a, b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/member-members-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "60b7a9fcd7f7febcb37c1a37a65ce55778510f339148ab3d5cabdd6176f7e7fe"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/member-members-only.lit"
+        ]
+      },
+      {
+        "id": "member-no-literal",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_member_no_literal:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            a <= z\n            z <= b\n        case I = '[a, b):\n            a <= z\n            z < b\n            z <= b\n        case I = '(a, b]:\n            a < z\n            a <= z\n            z <= b\n        case I = '(a, b):\n            a < z\n            a <= z\n            z < b\n            z <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/member-no-literal.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "886828d95b0c0a37884ba0dbb723a257646c27128f4e9f0c8036b22e45f9396f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/member-no-literal.lit"
+        ]
+      },
+      {
+        "id": "member-bodyless",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_member_bodyless:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/member-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e21a93b59c1ccf3bdff35707740e1c559b36c5fe33c4a3c5330bc223af3a3522"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/member-bodyless.lit"
+        ]
+      },
+      {
+        "id": "intro-original",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_intro_original:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        a < z\n        z < b\n        =>:\n            z $in I\n    by cases:\n        ? z $in I\n        case I = '[a, b]:\n            z $in '[a, b]\n            z $in I\n        case I = '[a, b):\n            z $in '[a, b)\n            z $in I\n        case I = '(a, b]:\n            z $in '(a, b]\n            z $in I\n        case I = '(a, b):\n            z $in '(a, b)\n            z $in I\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/intro-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "02a02e53b95a1acd07ae762fdc12efb61bfc1ced8cd68172fed1cfd6406f017e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/intro-original.lit"
+        ]
+      },
+      {
+        "id": "intro-literals-only",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_intro_literals_only:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        a < z\n        z < b\n        =>:\n            z $in I\n    by cases:\n        ? z $in I\n        case I = '[a, b]:\n            z $in '[a, b]\n        case I = '[a, b):\n            z $in '[a, b)\n        case I = '(a, b]:\n            z $in '(a, b]\n        case I = '(a, b):\n            z $in '(a, b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/intro-literals-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "94bc7b102d1296fcfa17ddb18db50d3d2ae65e593e6779f77d5f7b21c9b71ebb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/intro-literals-only.lit"
+        ]
+      },
+      {
+        "id": "intro-target-echo-only",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_intro_target_echo_only:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        a < z\n        z < b\n        =>:\n            z $in I\n    by cases:\n        ? z $in I\n        case I = '[a, b]:\n            z $in I\n        case I = '[a, b):\n            z $in I\n        case I = '(a, b]:\n            z $in I\n        case I = '(a, b):\n            z $in I\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/intro-target-echo-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0c14ef0988f4e0350b6eba54ad78426f2bb2ee514b72635274eaf151bfdeda3d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/intro-target-echo-only.lit"
+        ]
+      },
+      {
+        "id": "intro-bodyless",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm r30_intro_bodyless:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        a < z\n        z < b\n        =>:\n            z $in I\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/intro-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9b9949118531b5cc63f8c006abe1eb2c8b5c78afdeb9e7fd8ddf21b89927bb0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/intro-bodyless.lit"
+        ]
+      },
+      {
+        "id": "closed-false-strict",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nforall a,b R,z '[a,b]:\n    a<z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/closed-false-strict.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7a757bcb9afdd8f4c1de0029d96bc11de91fb8fca72b8f869f9170d9d55c6e0c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/closed-false-strict.lit"
+        ]
+      },
+      {
+        "id": "open-endpoint-not-member",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nnot 0 $in '(0,1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/open-endpoint-not-member.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "712949231a27528a6f384f79f555b08d6158cb27c03e6cc26d8ec879a1f13157"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/open-endpoint-not-member.lit"
+        ]
+      },
+      {
+        "id": "mixed-endpoint-counterexample",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\n0 $in '[0,1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/mixed-endpoint-counterexample.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0ee5e974d7c0165a2293f940aacf08b1fee3af06d6631454b1d66c867c4dbcea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/mixed-endpoint-counterexample.lit"
+        ]
+      },
+      {
+        "id": "intro-missing-upper",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nforall a,b,z R:\n    a<z\n    =>:\n        z $in '(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/intro-missing-upper.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "beaea27f6c4c867822d3898ee7340e0c2d517d2c659718a7661d2550be7733ec"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/intro-missing-upper.lit"
+        ]
+      },
+      {
+        "id": "member-missing-member",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nforall I power_set(R),a,b,z R:\n    $has_interval_endpoints(I,a,b)\n    =>:\n        a<=z\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/member-missing-member.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1973e64d88414d607d22b24bea10a30b9cf0ea75f726b9ddb1ed4906f035af71"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/member-missing-member.lit"
+        ]
+      },
+      {
+        "id": "consumer-original-dependency",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n            a <= z\n            z <= b\n        case I = '[a, b):\n            z $in '[a, b)\n            a <= z\n            z < b\n            z <= b\n        case I = '(a, b]:\n            z $in '(a, b]\n            a < z\n            a <= z\n            z <= b\n        case I = '(a, b):\n            z $in '(a, b)\n            a < z\n            a <= z\n            z < b\n            z <= b\n\nthm r30_consumer_original_dependency:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n    have z0 R = z\n    z0 = z\n    z0 $in I\n    z0 $in J\n    by thm interval_endpoint_member_is_between(I, a, b, z0)\n    by thm interval_endpoint_member_is_between(J, c, d, z0)\n    finite_set_max(union({a}, { c})) <= z0\n    z0 <= finite_set_min(union({b}, { d}))\n    finite_set_max(union({a}, { c})) <= z\n    z <= finite_set_min(union({b}, { d}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/consumer-original-dependency.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bd70d08141c33375fdda0d71de8afce1402dacf4a0e5bff4763d4936278ebf5e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/consumer-original-dependency.lit"
+        ]
+      },
+      {
+        "id": "consumer-short-dependency",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n        case I = '[a, b):\n            z $in '[a, b)\n        case I = '(a, b]:\n            z $in '(a, b]\n        case I = '(a, b):\n            z $in '(a, b)\n\nthm r30_consumer_short_dependency:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n    have z0 R = z\n    z0 = z\n    z0 $in I\n    z0 $in J\n    by thm interval_endpoint_member_is_between(I, a, b, z0)\n    by thm interval_endpoint_member_is_between(J, c, d, z0)\n    finite_set_max(union({a}, { c})) <= z0\n    z0 <= finite_set_min(union({b}, { d}))\n    finite_set_max(union({a}, { c})) <= z\n    z <= finite_set_min(union({b}, { d}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/consumer-short-dependency.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e07035b1a4c7db087383252ea2453cc712270ecb95ace5f11f5683e226693165"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/consumer-short-dependency.lit"
+        ]
+      },
+      {
+        "id": "consumer-two-calls",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n        case I = '[a, b):\n            z $in '[a, b)\n        case I = '(a, b]:\n            z $in '(a, b]\n        case I = '(a, b):\n            z $in '(a, b)\n\nthm r30_consumer_two_calls:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n    by thm interval_endpoint_member_is_between(I, a, b, z)\n    by thm interval_endpoint_member_is_between(J, c, d, z)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/consumer-two-calls.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9424cf90e232c50ec4f76538eaf521a2551bfd8a1bfb1203e6b67eb6805d7720"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/consumer-two-calls.lit"
+        ]
+      },
+      {
+        "id": "consumer-members-and-calls",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n        case I = '[a, b):\n            z $in '[a, b)\n        case I = '(a, b]:\n            z $in '(a, b]\n        case I = '(a, b):\n            z $in '(a, b)\n\nthm r30_consumer_members_and_calls:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n    z $in I\n    z $in J\n    by thm interval_endpoint_member_is_between(I, a, b, z)\n    by thm interval_endpoint_member_is_between(J, c, d, z)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/consumer-members-and-calls.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b66912796e83a682d3b1507dbbce85867976cf5a490c19e31b98c27956b98cbc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/consumer-members-and-calls.lit"
+        ]
+      },
+      {
+        "id": "consumer-bodyless",
+        "source": "prop has_interval_endpoints(I power_set(R), a, b R):\n    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)\n\nthm interval_endpoint_member_is_between:\n    ? forall I power_set(R), a, b, z R:\n        $has_interval_endpoints(I, a, b)\n        z $in I\n        =>:\n            a <= z\n            z <= b\n    by cases:\n        ? a <= z\n        ? z <= b\n        case I = '[a, b]:\n            z $in '[a, b]\n        case I = '[a, b):\n            z $in '[a, b)\n        case I = '(a, b]:\n            z $in '(a, b]\n        case I = '(a, b):\n            z $in '(a, b)\n\nthm r30_consumer_bodyless:\n    ? forall I, J power_set(R), a, b, c, d R, z intersect(I, J):\n        $has_interval_endpoints(I, a, b)\n        $has_interval_endpoints(J, c, d)\n        =>:\n            finite_set_max(union({a}, { c})) <= z\n            z <= finite_set_min(union({b}, { d}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-30-cases/consumer-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8cb1faf488728ef23b60b15b1930a744f2f7a0b70f885b512c7751a74ad4819a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round30-cases/consumer-bodyless.lit"
+        ]
+      }
+    ],
+    "source_path": "scripts/旧版本的textbooks/Analysis/chapter11-riemann-integral.lit",
+    "source_sha256": "f2ffde706461b2ae85b7fc57c109b28f71847718d4b371f9bed160c96c3b642f",
+    "scope": "Isolated exact legacy theorem slice; no whole chapter verification or source mutation. Warm Session uses previous round29 binary; cold capability evidence uses fresh round30 snapshot.",
+    "summary": {
+      "accepted": 7,
+      "rejected": 11
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-83-session.json",
+  "original_sha256": "0bad119a930d5cc4a6aa811e711966aeb89fb999caa25a0281c7b36f984e9588",
+  "original_bytes": 6166,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "struct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y, z K:\n            add(add(x, y), z) = add(x, add(y, z))\n            mul(mul(x, y), z) = mul(x, mul(y, z))\n            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))\n        forall x, y K:\n            add(x, y) = add(y, x)\n            mul(x, y) = mul(y, x)\n        forall x K:\n            add(zero, x) = x\n            add(x, neg(x)) = zero\n            mul(one, x) = x\n        forall x K:\n            x != zero\n            =>:\n                mul(x, inv(x)) = one",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f2eced770c3ebae1771da659fd594ac7219152dd773cf6913d4811866123d0df",
+        "excerpt": "struct Field<K nonempty_set>:\r\n    zero K\r\n    one K\r\n    add fn(x, y K) K\r\n    neg fn(x K) K\r\n    mul fn(x, y K) K\r\n    inv fn(x K) K\r\n    <=>:\r\n        zero != one\r\n        forall x, y, z K:\r\n            add(add(x, y), z) = add(x, add(y, z))\r\n            mul(mul(x, y), z) = mul(x, mul(y, z))\r\n            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))\r\n        forall x, y K:\r\n            add(x, y) = add(y, x)\r\n            mul(x, y) = mul(y, x)\r\n        forall x K:\r\n            add(zero, x) = x\r\n            add(x, neg(x)) = zero\r\n            mul(one, x) = x\r\n        forall x K:\r\n            x !"
+      },
+      "baseline": "Round68 snapshot Session66922; literal exact structs/short proofs, current cold round83 owns deletion and interface publication boundaries."
+    },
+    {
+      "source": "struct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:\n    zero V\n    add fn(x, y V) V\n    smul fn(a K, x V) V\n    <=>:\n        forall x, y, z V:\n            add(add(x, y), z) = add(x, add(y, z))\n        forall x, y V:\n            add(x, y) = add(y, x)\n        forall x V:\n            add(zero, x) = x\n            exist y V st {add(x, y) = zero}\n        forall a, b K, x V:\n            smul(field.mul(a, b), x) = smul(a, smul(b, x))\n            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))\n        forall a K, x, y V:\n            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))\n        forall x V:\n            smul(field.one, x) = x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "771e3084ee4258eee7afd30f4c0df71014b900c38b6bcfeca436a41d0778b8bb",
+        "excerpt": "struct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:\r\n    zero V\r\n    add fn(x, y V) V\r\n    smul fn(a K, x V) V\r\n    <=>:\r\n        forall x, y, z V:\r\n            add(add(x, y), z) = add(x, add(y, z))\r\n        forall x, y V:\r\n            add(x, y) = add(y, x)\r\n        forall x V:\r\n            add(zero, x) = x\r\n            exist y V st {add(x, y) = zero}\r\n        forall a, b K, x V:\r\n            smul(field.mul(a, b), x) = smul(a, smul(b, x))\r\n            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))\r\n        forall a K, x, y V:\r\n            smul(a, add(x, y)) = add(smul("
+      },
+      "baseline": "Round68 snapshot Session66922; literal exact structs/short proofs, current cold round83 owns deletion and interface publication boundaries."
+    },
+    {
+      "source": "thm additive_identity_unique:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:\n        forall x V:\n            space.add(identity_candidate, x) = x\n        =>:\n            identity_candidate = space.zero\n    identity_candidate=space.add(space.zero,identity_candidate)=space.add(identity_candidate,space.zero)=space.zero",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "81f6713b2503494e31233fc08d87d9c5f6029ac4c8aecb695b36c20d683f5852",
+        "excerpt": "thm additive_identity_unique:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:\r\n        forall x V:\r\n            space.add(identity_candidate, x) = x\r\n        =>:\r\n            identity_candidate = space.zero\r\n    identity_candidate=space.add(space.zero,identity_candidate)=space.add(identity_candidate,space.zero)=space.zero\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; literal exact structs/short proofs, current cold round83 owns deletion and interface publication boundaries."
+    },
+    {
+      "source": "thm additive_inverse_exists_unique:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:\n        exist! y V st {space.add(x, y) = space.zero}\n    obtain y from exist y V st {space.add(x, y) = space.zero}\n    claim:\n        ? forall y1,y2 V:\n            space.add(x,y1)=space.zero\n            space.add(x,y2)=space.zero\n            =>:\n                y1=y2\n        space.add(y2, x) = space.add(x, y2) = space.zero\n        y1 = space.add(space.zero, y1) = space.add(space.add(y2, x), y1) = space.add(y2, space.add(x, y1)) = space.add(y2, space.zero) = space.add(space.zero, y2) = y2\n    witness exist! y2 V st {space.add(x, y2) = space.zero} from y",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ce7dfe23e3b0757b0ce235f9ee67b5828f94758ed7318b166a7ffc5fdcefb04c",
+        "excerpt": "thm additive_inverse_exists_unique:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, x V:\r\n        exist! y V st {space.add(x, y) = space.zero}\r\n    obtain y from exist y V st {space.add(x, y) = space.zero}\r\n    claim:\r\n        ? forall y1,y2 V:\r\n            space.add(x,y1)=space.zero\r\n            space.add(x,y2)=space.zero\r\n            =>:\r\n                y1=y2\r\n        space.add(y2, x) = space.add(x, y2) = space.zero\r\n        y1 = space.add(space.zero, y1) = space.add(space.add(y2, x), y1) = space.add(y2, space.add(x, y1)) = space.add(y2, space"
+      },
+      "baseline": "Round68 snapshot Session66922; literal exact structs/short proofs, current cold round83 owns deletion and interface publication boundaries."
+    }
+  ]
+}

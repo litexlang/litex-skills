@@ -1,0 +1,199 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-43-session.json",
+  "original_sha256": "4d9a861715bb33fed27752921ee921acca2e0f4ec2ebf8e0f7c0f7ea6bb4744f",
+  "original_bytes": 22958,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "id": "prefix-0",
+      "source": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b36f01b62e1421404113e491c067a25b13f37d9a5fe95adadd1b5122ff0623a4",
+        "excerpt": "have fn r43_square_root_two_residual(x R) R = x^2 - 2\r\n\r\n\r\nsuccess\r\nlitex> litex> litex> "
+      }
+    },
+    {
+      "id": "prefix-1",
+      "source": "claim:\n    ? forall x R+:\n        (x + 2 / x) / 2 $in R+\n    2 / x > 0\n    x + 2 / x > 0\n\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "41428d161c06027f3cfb1b9c42af6398d3d252a763405a99120c45244ef56222",
+        "excerpt": "claim:\r\n    ? forall x R+:\r\n        (x + 2 / x) / 2 $in R+\r\n    2 / x > 0\r\n    x + 2 / x > 0\r\n\r\n\r\n\r\n... ... ... ... ... success\r\nlitex> litex> litex> "
+      }
+    },
+    {
+      "id": "prefix-2",
+      "source": "have fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\n\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9d9635de92fc75575d2b0cec4f51cdce7b71e256b1dcaebe5c70e650e171f3aa",
+        "excerpt": "have fn r43_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2\r\n\r\n\r\n\r\nsuccess\r\nlitex> litex> litex> litex> "
+      }
+    },
+    {
+      "id": "prefix-3",
+      "source": "thm r43_newton_sqrt_two_residual_identity:\n    ? forall x R+:\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_square_root_two_residual(x) = x^2 - 2\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\n\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f798dca7047318e3dfedff390ca98955803b2db8f0d523b67d1734ced180e3f1",
+        "excerpt": "thm r43_newton_sqrt_two_residual_identity:\r\n    ? forall x R+:\r\n        4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_square_root_two_residual(x)^2\r\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\r\n    r43_square_root_two_residual(x) = x^2 - 2\r\n    r43_square_root_two_residual(r43_newton_sqrt_two(x)) = r43_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2\r\n    4 * x^2 * r43_square_root_two_residual(r43_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r43_square_root_two_residual(x)^2\r\n\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> litex> "
+      }
+    },
+    {
+      "id": "prefix-4",
+      "source": "thm r43_newton_sqrt_two_residual_nonnegative:\n    ? forall x R+:\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\n    release thm r43_newton_sqrt_two_residual_identity(x)\n    x^2 > 0\n    4*x^2 > 0\n    r43_square_root_two_residual(x)^2 >= 0\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6eba7f56164d1f869e9d433e1a2d67ec4e75a447b6bc0d25aa96d70e1e3195eb",
+        "excerpt": "thm r43_newton_sqrt_two_residual_nonnegative:\r\n    ? forall x R+:\r\n        r43_square_root_two_residual(r43_newton_sqrt_two(x)) >= 0\r\n    release thm r43_newton_sqrt_two_residual_identity(x)\r\n    x^2 > 0\r\n    4*x^2 > 0\r\n    r43_square_root_two_residual(x)^2 >= 0\r\n    r43_square_root_two_residual(r43_newton_sqrt_two(x))=r43_square_root_two_residual(x)^2/(4*x^2)>=0\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "greater-original",
+      "source": "thm r43_greater_original:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    x > 0\n    x != 0\n    2 * x != 0\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\n    r43_newton_sqrt_two(x) - 1 = (x + 2 / x) / 2 - 1\n    (x + 2 / x) / 2 - 1 = ((x - 1)^2 + 1) / (2 * x)\n    r43_newton_sqrt_two(x) - 1 = ((x - 1)^2 + 1) / (2 * x)\n    (x - 1)^2 >= 0\n    (x - 1)^2 + 1 > 0\n    2 * x > 0\n    ((x - 1)^2 + 1) / (2 * x) > 0\n    r43_newton_sqrt_two(x) - 1 > 0\n\n# Induction propagates the one-step lower bound through the recursive iterate.\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "554cafc4062bb556c24cf894365e329c59120f173647cee074fc35063c02cf2e",
+        "excerpt": "thm r43_greater_original:\r\n    ? forall x R+:\r\n        r43_newton_sqrt_two(x) > 1\r\n    x > 0\r\n    x != 0\r\n    2 * x != 0\r\n    r43_newton_sqrt_two(x) = (x + 2 / x) / 2\r\n    r43_newton_sqrt_two(x) - 1 = (x + 2 / x) / 2 - 1\r\n    (x + 2 / x) / 2 - 1 = ((x - 1)^2 + 1) / (2 * x)\r\n    r43_newton_sqrt_two(x) - 1 = ((x - 1)^2 + 1) / (2 * x)\r\n    (x - 1)^2 >= 0\r\n    (x - 1)^2 + 1 > 0\r\n    2 * x > 0\r\n    ((x - 1)^2 + 1) / (2 * x) > 0\r\n    r43_newton_sqrt_two(x) - 1 > 0\r\n\r\n# Induction propagates the one-step lower bound through the recursive iterate.\r\n\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... .."
+      }
+    },
+    {
+      "id": "greater-six-statements",
+      "source": "thm r43_greater_six_statements:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2>=0\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "0ad65783a5aa1607719a917b0215ce13766bdefef1f24b537d7fcf13aa748704",
+        "excerpt": "thm r43_greater_six_statements:\r\n    ? forall x R+:\r\n        r43_newton_sqrt_two(x) > 1\r\n    r43_newton_sqrt_two(x)=(x+2/x)/2\r\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\r\n    (x-1)^2>=0\r\n    (x-1)^2+1>0\r\n    2*x>0\r\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\r\n\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "greater-bodyless",
+      "source": "thm r43_greater_bodyless:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "3253b7564759cc6f9901e3d197590eef0d633ff291e3b1036a5b0cb83bd234b5",
+        "excerpt": "thm r43_greater_bodyless:\r\n    ? forall x R+:\r\n        r43_newton_sqrt_two(x) > 1\r\n\r\n\r\n... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "greater-delete-square-nonnegative",
+      "source": "thm r43_greater_delete_square_nonnegative:\n    ? forall x R+:\n        r43_newton_sqrt_two(x) > 1\n    r43_newton_sqrt_two(x)=(x+2/x)/2\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\n    (x-1)^2+1>0\n    2*x>0\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "c474e98375331c2ff6a380865f0009c0cdec37424628411b607746378476b94a",
+        "excerpt": "thm r43_greater_delete_square_nonnegative:\r\n    ? forall x R+:\r\n        r43_newton_sqrt_two(x) > 1\r\n    r43_newton_sqrt_two(x)=(x+2/x)/2\r\n    r43_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)\r\n    (x-1)^2+1>0\r\n    2*x>0\r\n    r43_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "contraction-scalar-short",
+      "source": "thm r43_scalar_short:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1927fe8d62146845eaf4482541183941a10d2a7582613de548833a18a1700af1",
+        "excerpt": "thm r43_scalar_short:\r\n    ? forall x R+,a,b R:\r\n        x>=1\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n    x-1>=0\r\n    x+1>=0\r\n    x^2-1=(x-1)*(x+1)>=0\r\n    x^2>=1\r\n    4*b<=4*x^2*b=a^2\r\n    b=(4*b)/4<=a^2/4\r\n\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... ... Warning: truncated output (original token count: 5240)\nTotal output lines: 462\n\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"thm r43_scalar_short:\\n"
+      }
+    },
+    {
+      "id": "contraction-scalar-bodyless",
+      "source": "thm r43_scalar_bodyless:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "10dec1d5cb90c5b99addf7e98867f5f34c48e6ca9eddc89ad07c55ab84bdf2ee",
+        "excerpt": "Warning: truncated output (original token count: 5459)\nTotal output lines: 520\n\nthm r43_scalar_bodyless:\r\n    ? forall x R+,a,b R:\r\n        x>=1\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"thm r43_scalar_bodyless:\\n    ? forall x R+, a, b R:\\n        x >= 1\\n        b >= 0\\n        4 * x ^ 2 * b = a ^ 2\\n        =>:\\n            b <= a ^"
+      }
+    },
+    {
+      "id": "contraction-delete-square-bound",
+      "source": "thm r43_delete_square_bound:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e8fda7cdfc7e6a0a485d508a6598eed0f4147c4f26a098a549cca2b0777d2134",
+        "excerpt": "thm r43_delete_square_bound:\r\n    ? forall x R+,a,b R:\r\n        x>=1\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n    x-1>=0\r\n    x+1>=0\r\n    x^2-1=(x-1)*(x+1)>=0\r\n    4*b<=4*x^2*b=a^2\r\n    b=(4*b)/4<=a^2/4\r\n\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... Warning: truncated output (original token count: 5238)\nTotal output lines: 462\n\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"thm r43_delete_square_bound:\\n  "
+      }
+    },
+    {
+      "id": "contraction-missing-lower-bound",
+      "source": "thm r43_missing_lower_bound:\n    ? forall x R+,a,b R:\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b<=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "bffb4ad2aea3ce01bd40fd06f013baed47019582fbc5c5ad5e72d0c5efc0532a",
+        "excerpt": "Warning: truncated output (original token count: 4279)\nTotal output lines: 407\n\nthm r43_missing_lower_bound:\r\n    ? forall x R+,a,b R:\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n    x-1>=0\r\n    x+1>=0\r\n    x^2-1=(x-1)*(x+1)>=0\r\n    x^2>=1\r\n    4*b<=4*x^2*b=a^2\r\n    b=(4*b)/4<=a^2/4\r\n\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"thm r43_missing_lower_bound:\\n    "
+      }
+    },
+    {
+      "id": "literal-greater-than-one",
+      "source": "forall x R+:\n    (x+2/x)/2>1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a520766b350061eae8f9d55e41555ea2d8fc790a1825e838e4da12b9fcee50ef",
+        "excerpt": "forall x R+:\r\n    (x+2/x)/2>1\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R+:\\n    (x + 2 / x) / 2 > 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R+:\\n    (x + 2 / x) / 2 > 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      }
+    },
+    {
+      "id": "scalar-square-lower-direct",
+      "source": "forall x R+:\n    x>=1\n    =>:\n        x^2>=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "79614511c2ad2ca9c95d245ea756001bb8e0ed5a8509a8b8adafe35ae4d774c8",
+        "excerpt": "forall x R+:\r\n    x>=1\r\n    =>:\r\n        x^2>=1\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R+:\\n    x >= 1\\n    =>:\\n        x ^ 2 >= 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R+:\\n    x >= 1\\n    =>:\\n        x ^ 2 >= 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      }
+    },
+    {
+      "id": "small-input-counterexample",
+      "source": "not 1<=1^2/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "ec4d1b710e70b612426e80bb8e03d00937b092d78cc1f31e9ef344f688fcb105",
+        "excerpt": "not 1<=1^2/4\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "wrong-strong-step-false",
+      "source": "forall x R+:\n    (x+2/x)/2>2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "52009911aedc1a1eca0968d13eca9dd502c7ce7589df56b9a11f76aed5569cec",
+        "excerpt": "forall x R+:\r\n    (x+2/x)/2>2\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R+:\\n    (x + 2 / x) / 2 > 2\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R+:\\n    (x + 2 / x) / 2 > 2\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      }
+    },
+    {
+      "id": "zero-update-domain",
+      "source": "(0+2/0)/2>1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6f70bd0983749ba96b5850787764d28a2675bc703e13acc7a4fbd6453ae3a566",
+        "excerpt": "Warning: truncated output (original token count: 692)\nTotal output lines: 83\n\n(0+2/0)/2>1\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"(0 + 2 / 0) / 2 > 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"well_defined\",\r\n        \"message\": \"Could not prove that the statement is well-defined.\",\r\n        \"verification\": {\r\n          \"type\": \"atomic_except_equality\",\r\n          \"success\": false,\r\n          \"phase\": \"well_defined\",\r\n          \"fa"
+      }
+    },
+    {
+      "id": "contraction-associated",
+      "source": "thm r43_scalar_associated:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x+1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b>=0\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "7e253549c104978dd1c9fce97f332512131fafc9d7ff3e60558cb17bfca85b82",
+        "excerpt": "thm r43_scalar_associated:\r\n    ? forall x R+,a,b R:\r\n        x>=1\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n    x-1>=0\r\n    x+1>=0\r\n    x^2-1=(x-1)*(x+1)>=0\r\n    x^2>=1\r\n    4*b>=0\r\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\r\n    b=(4*b)/4<=a^2/4\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "contraction-five-statements",
+      "source": "thm r43_scalar_five:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x-1>=0\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4fc39d8c275292c8f38fd08ab92b32efd6b5cf474b2c79debb6142143f0352df",
+        "excerpt": "thm r43_scalar_five:\r\n    ? forall x R+,a,b R:\r\n        x>=1\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n    x-1>=0\r\n    x^2-1=(x-1)*(x+1)>=0\r\n    x^2>=1\r\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\r\n    b=(4*b)/4<=a^2/4\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "id": "contraction-four-statements",
+      "source": "thm r43_scalar_four:\n    ? forall x R+,a,b R:\n        x>=1\n        b>=0\n        4*x^2*b=a^2\n        =>:\n            b<=a^2/4\n    x^2-1=(x-1)*(x+1)>=0\n    x^2>=1\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\n    b=(4*b)/4<=a^2/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "4b739dfc36c4cde22301cd1d5420bfc866ff767abfe21a36f6b8bf171ae3ca58",
+        "excerpt": "thm r43_scalar_four:\r\n    ? forall x R+,a,b R:\r\n        x>=1\r\n        b>=0\r\n        4*x^2*b=a^2\r\n        =>:\r\n            b<=a^2/4\r\n    x^2-1=(x-1)*(x+1)>=0\r\n    x^2>=1\r\n    4*b=1*(4*b)<=x^2*(4*b)=4*x^2*b=a^2\r\n    b=(4*b)/4<=a^2/4\r\n\r\n... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+      }
+    }
+  ]
+}

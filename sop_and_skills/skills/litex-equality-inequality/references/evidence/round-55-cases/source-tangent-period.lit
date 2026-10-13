@@ -1,0 +1,7 @@
+forall x R:
+    cos(x) != 0
+    cos(x + pi) != 0
+    cos(x + 1 * pi) != 0
+    =>:
+        tan(x + pi) = tan(x)
+        tan(x + 1 * pi) = tan(x)

@@ -1,0 +1,4 @@
+forall a,c R:
+    a!=c
+    =>:
+        union({a},{c})={a,c}

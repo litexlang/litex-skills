@@ -1,0 +1,8 @@
+claim:
+    ? forall a,b,p R:
+        b>=0
+        p*b=a^2
+        =>:
+            p*|b|=|a|^2
+    |b|=b
+    p*|b|=p*b=a^2=|a|^2

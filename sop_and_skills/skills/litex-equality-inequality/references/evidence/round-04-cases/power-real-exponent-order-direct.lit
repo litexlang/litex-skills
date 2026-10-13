@@ -1,0 +1,5 @@
+forall a R+, u,v R:
+    1 <= a
+    u <= v
+    =>:
+        a^u <= a^v

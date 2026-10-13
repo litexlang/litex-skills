@@ -1,0 +1,674 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-39-2026-10-09.json",
+  "original_sha256": "1104f96982df91159ee6b0c8713cae05efc43ec0e60aa650bc02faf8279528f6",
+  "original_bytes": 1028233,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+    "sha256": "f125e78b1db70b855e886a7493dac2886b5403976ada3734b673efeaf8e75a33",
+    "cases": [
+      {
+        "id": "derivative-application-direct",
+        "source": "prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):\n    forall x R:\n        x!=x0\n        abs(x-x0)<delta\n        =>:\n            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon\n\nforall f fn(t R) R,x0,slope,sample R,epsilon,delta R+:\n    $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)\n    sample!=x0\n    abs(sample-x0)<delta\n    =>:\n        abs((f(sample)-f(x0))/(sample-x0)-slope)<epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/derivative-application-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1cd8c434abe4f2a43532b07e23caf7aa286bb52c385795bcad6c19dc7863dbfc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/derivative-application-direct.lit"
+        ]
+      },
+      {
+        "id": "derivative-application-missing-distance",
+        "source": "prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):\n    forall x R:\n        x!=x0\n        abs(x-x0)<delta\n        =>:\n            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon\n\nforall f fn(t R) R,x0,slope,sample R,epsilon,delta R+:\n    $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)\n    sample!=x0\n    =>:\n        abs((f(sample)-f(x0))/(sample-x0)-slope)<epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/derivative-application-missing-distance.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3221a747cdcccb049d736be4a37f653e42c9a059eb5d9d36252d530cd7c51db6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/derivative-application-missing-distance.lit"
+        ]
+      },
+      {
+        "id": "derivative-application-wrong-slope",
+        "source": "prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):\n    forall x R:\n        x!=x0\n        abs(x-x0)<delta\n        =>:\n            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon\n\nforall f fn(t R) R,x0,slope,sample R,epsilon,delta R+:\n    $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)\n    sample!=x0\n    abs(sample-x0)<delta\n    =>:\n        abs((f(sample)-f(x0))/(sample-x0)-(slope+1))<epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/derivative-application-wrong-slope.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a1a2ebd7fc3b5ee28693fc870cf0a63789e075203c23b458af3688397e5dc6dc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/derivative-application-wrong-slope.lit"
+        ]
+      },
+      {
+        "id": "derivative-alias-direct",
+        "source": "prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):\n    forall x R:\n        x!=x0\n        abs(x-x0)<delta\n        =>:\n            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon\n\nforall f fn(t R) R,x0,slope,sample R,epsilon,delta R+,q R:\n    $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)\n    sample!=x0\n    abs(sample-x0)<delta\n    q=(f(sample)-f(x0))/(sample-x0)\n    =>:\n        abs(q-slope)<epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/derivative-alias-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fd4ea002a8a96ef0fe6b40f083fede0fee80121ab096cc7f462489c05749d755"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/derivative-alias-direct.lit"
+        ]
+      },
+      {
+        "id": "triangle-original",
+        "source": "thm r39_triangle_original:\n    ? forall slope1,slope2,q R,epsilon R+:\n        abs(q-slope1)<epsilon\n        abs(q-slope2)<epsilon\n        =>:\n            abs(slope1-slope2)<2*epsilon\n    slope1-q=-(q-slope1)\n    abs(slope1-q)=abs(-(q-slope1))=abs(q-slope1)\n    slope1-slope2=(slope1-q)+(q-slope2)\n    abs(slope1-slope2)=abs((slope1-q)+(q-slope2))<=abs(slope1-q)+abs(q-slope2)\n    abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/triangle-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a15089ab45e5d8edf2665c1be78ad4d1325280f1334107930c6fa75b496f1522"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/triangle-original.lit"
+        ]
+      },
+      {
+        "id": "triangle-short-two-lines",
+        "source": "thm r39_triangle_short:\n    ? forall slope1,slope2,q R,epsilon R+:\n        abs(q-slope1)<epsilon\n        abs(q-slope2)<epsilon\n        =>:\n            abs(slope1-slope2)<2*epsilon\n    abs(slope1-q)=abs(q-slope1)<epsilon\n    abs(slope1-slope2)<=abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/triangle-short-two-lines.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0510eec9eb2ba8d0130f22ec936f6d906cee2083a2ed0514e615dfc5b4c88a7a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/triangle-short-two-lines.lit"
+        ]
+      },
+      {
+        "id": "triangle-bodyless",
+        "source": "thm r39_triangle_bodyless:\n    ? forall slope1,slope2,q R,epsilon R+:\n        abs(q-slope1)<epsilon\n        abs(q-slope2)<epsilon\n        =>:\n            abs(slope1-slope2)<2*epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/triangle-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aff054729372c2983679515967a3d4b41832e380725a3a907eaf6e62231def25"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/triangle-bodyless.lit"
+        ]
+      },
+      {
+        "id": "triangle-one-chain",
+        "source": "thm r39_triangle_one:\n    ? forall slope1,slope2,q R,epsilon R+:\n        abs(q-slope1)<epsilon\n        abs(q-slope2)<epsilon\n        =>:\n            abs(slope1-slope2)<2*epsilon\n    abs(slope1-slope2)<=abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/triangle-one-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7a9dce1f922816f2384c95142d407e54797bc98f1648cbb8ad138e86443569e5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/triangle-one-chain.lit"
+        ]
+      },
+      {
+        "id": "triangle-missing-second-error",
+        "source": "forall slope1,slope2,q R,epsilon R+:\n    abs(q-slope1)<epsilon\n    =>:\n        abs(slope1-slope2)<2*epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/triangle-missing-second-error.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d2f58cfb2b6b2ec6a5adb74d42b5469a3cc4e1522c9c200ee5100cf12cb9a920"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/triangle-missing-second-error.lit"
+        ]
+      },
+      {
+        "id": "triangle-weak-to-strict-false",
+        "source": "forall slope1,slope2,q R,epsilon R+:\n    abs(q-slope1)<=epsilon\n    abs(q-slope2)<=epsilon\n    =>:\n        abs(slope1-slope2)<2*epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/triangle-weak-to-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8d6940612988518b251ef95d0f08b5402f43ccc1f347218eab7e53ee71378148"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/triangle-weak-to-strict-false.lit"
+        ]
+      },
+      {
+        "id": "separation-margin-direct",
+        "source": "forall slope1,slope2 R,epsilon R+:\n    slope1!=slope2\n    epsilon=abs(slope1-slope2)/3\n    =>:\n        2*epsilon<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/separation-margin-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9f27c869b3d4f8d871a92f0bfa316fc50603006d2afb7c7adf6ccbcc588b0bd6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/separation-margin-direct.lit"
+        ]
+      },
+      {
+        "id": "separation-margin-chain",
+        "source": "claim:\n    ? forall slope1,slope2 R,epsilon R+:\n        slope1!=slope2\n        epsilon=abs(slope1-slope2)/3\n        =>:\n            2*epsilon<abs(slope1-slope2)\n    2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/separation-margin-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5dddf4a686af288a0d930a5d5139b7f9503d40fc9eee96ef698f7db5c07bc257"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/separation-margin-chain.lit"
+        ]
+      },
+      {
+        "id": "derivative-alias-raw-bound-only",
+        "source": "prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):\n    forall x R:\n        x!=x0\n        abs(x-x0)<delta\n        =>:\n            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon\n\nclaim:\n    ? forall f fn(t R) R,x0,slope,sample R,epsilon,delta R+,q R:\n        $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)\n        sample!=x0\n        abs(sample-x0)<delta\n        q=(f(sample)-f(x0))/(sample-x0)\n        =>:\n            abs(q-slope)<epsilon\n    abs((f(sample)-f(x0))/(sample-x0)-slope)<epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/derivative-alias-raw-bound-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "639117f8a9bf53f639bbf2a7ffe0aa14186abddc83d1b90a30dd5618deeea7d3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/derivative-alias-raw-bound-only.lit"
+        ]
+      },
+      {
+        "id": "derivative-alias-two-lines",
+        "source": "prop r39_derivative_delta_controlled(f fn(x R) R,x0,slope R,epsilon,delta R+):\n    forall x R:\n        x!=x0\n        abs(x-x0)<delta\n        =>:\n            abs((f(x)-f(x0))/(x-x0)-slope)<epsilon\n\nclaim:\n    ? forall f fn(t R) R,x0,slope,sample R,epsilon,delta R+,q R:\n        $r39_derivative_delta_controlled(f,x0,slope,epsilon,delta)\n        sample!=x0\n        abs(sample-x0)<delta\n        q=(f(sample)-f(x0))/(sample-x0)\n        =>:\n            abs(q-slope)<epsilon\n    abs((f(sample)-f(x0))/(sample-x0)-slope)<epsilon\n    abs(q-slope)=abs((f(sample)-f(x0))/(sample-x0)-slope)<epsilon",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/derivative-alias-two-lines.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2b5931f282940e1a6be06af3f2f7fe665f409cb62995369b8716f00afaa85c87"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/derivative-alias-two-lines.lit"
+        ]
+      },
+      {
+        "id": "separation-margin-positive-bridges",
+        "source": "claim:\n    ? forall slope1,slope2 R,epsilon R+:\n        slope1!=slope2\n        epsilon=abs(slope1-slope2)/3\n        =>:\n            2*epsilon<abs(slope1-slope2)\n    slope1-slope2!=0\n    abs(slope1-slope2)>0\n    2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/separation-margin-positive-bridges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6a779b9a8b19a5b45145237505bbc2d426ef3a2e4e7168174ad7f0ad21ea7777"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/separation-margin-positive-bridges.lit"
+        ]
+      },
+      {
+        "id": "separation-margin-with-factor",
+        "source": "claim:\n    ? forall slope1,slope2 R,epsilon R+:\n        slope1!=slope2\n        epsilon=abs(slope1-slope2)/3\n        =>:\n            2*epsilon<abs(slope1-slope2)\n    slope1-slope2!=0\n    abs(slope1-slope2)>0\n    2/3<1\n    2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/separation-margin-with-factor.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d66741c641240f85870ef43720527f173ba5bcdcc966bde03b7aacee7a3dadad"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/separation-margin-with-factor.lit"
+        ]
+      },
+      {
+        "id": "margin-explicit-one-factor",
+        "source": "claim:\n    ? forall slope1,slope2 R,epsilon R+:\n        slope1!=slope2\n        epsilon=abs(slope1-slope2)/3\n        =>:\n            2*epsilon<abs(slope1-slope2)\n    slope1-slope2!=0\n    abs(slope1-slope2)>0\n    2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<1*abs(slope1-slope2)=abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/margin-explicit-one-factor.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fb5db455b77a65ac289874dcd0c07698d96ee7c331b05400cbbbf5972d9a4c53"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/margin-explicit-one-factor.lit"
+        ]
+      },
+      {
+        "id": "margin-source-factor-spine",
+        "source": "claim:\n    ? forall slope1,slope2 R,epsilon R+:\n        slope1!=slope2\n        epsilon=abs(slope1-slope2)/3\n        =>:\n            2*epsilon<abs(slope1-slope2)\n    slope1-slope2!=0\n    abs(slope1-slope2)>0\n    2/3<1\n    (2/3)*abs(slope1-slope2)<1*abs(slope1-slope2)\n    2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)\n    1*abs(slope1-slope2)=abs(slope1-slope2)\n    2*epsilon<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/margin-source-factor-spine.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec2d93443cb04d078fa0b4ada53503e62f0e5c4ae290c497c5c9032764b3772f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/margin-source-factor-spine.lit"
+        ]
+      },
+      {
+        "id": "scalar-contradiction-short",
+        "source": "claim:\n    ? forall slope1,slope2,q R,epsilon R+:\n        epsilon=abs(slope1-slope2)/3\n        abs(q-slope1)<epsilon\n        abs(q-slope2)<epsilon\n        =>:\n            slope1=slope2\n    by contra:\n        ? slope1=slope2\n        slope1-slope2!=0\n        abs(slope1-slope2)>0\n        abs(slope1-q)=abs(q-slope1)<epsilon\n        abs(slope1-slope2)<=abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon\n        2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<1*abs(slope1-slope2)=abs(slope1-slope2)\n        impossible abs(slope1-slope2)<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/scalar-contradiction-short.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d9750784a5c6d00ffbed9d7a620c281ccc9b766da674344743f912f817a5bbcd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/scalar-contradiction-short.lit"
+        ]
+      },
+      {
+        "id": "scalar-contradiction-missing-error",
+        "source": "claim:\n    ? forall slope1,slope2,q R,epsilon R+:\n        epsilon=abs(slope1-slope2)/3\n        abs(q-slope1)<epsilon\n        =>:\n            slope1=slope2\n    by contra:\n        ? slope1=slope2\n        slope1-slope2!=0\n        abs(slope1-slope2)>0\n        abs(slope1-q)=abs(q-slope1)<epsilon\n        abs(slope1-slope2)<=abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon\n        2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<1*abs(slope1-slope2)=abs(slope1-slope2)\n        impossible abs(slope1-slope2)<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/scalar-contradiction-missing-error.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "18429548edc8aadf2f9df9a388e1b08926e0899d3377b397badb15aff5b6d5b7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/scalar-contradiction-missing-error.lit"
+        ]
+      },
+      {
+        "id": "scalar-contradiction-explicit-reflexive",
+        "source": "claim:\n    ? forall slope1,slope2,q R,epsilon R+:\n        epsilon=abs(slope1-slope2)/3\n        abs(q-slope1)<epsilon\n        abs(q-slope2)<epsilon\n        =>:\n            slope1=slope2\n    by contra:\n        ? slope1=slope2\n        slope1-slope2!=0\n        abs(slope1-slope2)>0\n        abs(slope1-q)=abs(q-slope1)<epsilon\n        abs(slope1-slope2)<=abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon\n        2*epsilon=2*(abs(slope1-slope2)/3)=(2/3)*abs(slope1-slope2)<1*abs(slope1-slope2)=abs(slope1-slope2)\n        abs(slope1-slope2)>=abs(slope1-slope2)\n        not abs(slope1-slope2)<abs(slope1-slope2)\n        impossible abs(slope1-slope2)<abs(slope1-slope2)",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-39-cases/scalar-contradiction-explicit-reflexive.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0c387aca5501ee8b77c1b752c529cd7e8caeee59a8b68377d3ed3330f6775604"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round39-cases/scalar-contradiction-explicit-reflexive.lit"
+        ]
+      }
+    ],
+    "source_path": "showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+    "source_sha256": "abd26bafea5fbde10d30ebb6b91fe7bab852bc12f172a89126c3fa861e072b56",
+    "scope": "Exact derivative control definition renamed, isolated caller and final scalar triangle/separation consumers; no full theorem/showcase claim or kernel edits.",
+    "summary": {
+      "accepted": 7,
+      "rejected": 14
+    },
+    "current_anchor_correspondence": true,
+    "source_correspondence": "Successful current release build, immutable executable snapshot; no immutable whole-checkout claim. Older warm Session is iteration only."
+  }
+}

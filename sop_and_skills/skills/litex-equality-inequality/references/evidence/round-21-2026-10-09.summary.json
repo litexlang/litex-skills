@@ -1,0 +1,1865 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-21-2026-10-09.json",
+  "original_sha256": "0dad8c8829bebd8ef9d131e77bc3768415341f9092930635607769f09d934f2e",
+  "original_bytes": 1802300,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-09",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+    "sha256": "67360fd3b37c55f6a0ec49e965c8cd099dfd1615b6d5693a16e9a1cf736f7b97",
+    "version": "Litex 1.0.6-beta",
+    "source_correspondence": "Verified selected-scalar overlay: HEAD + exact selected-scalar acceptance source manifest; not current worktree",
+    "source_manifest": {
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/in_fact.rs": "a11bae775ce6e19eadd6870f2590211ae687efbe82ef44b47d4e89da27daca4c",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/less.rs": "55707fcf4564ee256d0dcf34ee46a80c6734a04407009ed142de4f592a6bc382",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/less_equal.rs": "223590be6d6097348397cc1f73ce07f6e95275275fc52a4c4a3d2fece1b92fd3",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/mod.rs": "a1504383a346d127772baacc73090720bb22fe68e73544c4832c0751126aeb03",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/selected_scalar_bt_rules.rs": "867e135955876d1f812666e10460861db25cc181e53dacf4fec4fc2fb6d07462",
+      "src/json_output/explain/atomic_builtin_rule/in_fact.rs": "7d20007ef468e785ad912c79fb908800b3f11668674ab64023aab47840faf76d",
+      "src/json_output/explain/atomic_builtin_rule/less.rs": "818b76fc3e00506b5fc104365dd4cc67d0761c8159ce5483e1e7725fe7afb327",
+      "src/json_output/explain/atomic_builtin_rule/less_equal.rs": "f7ef8d852968ed66ca87174ed27dbcde5ae7d3a063fcf194e9cf2ae58ab68d33",
+      "src/json_output/project_detailed/builtin_atomic_gen.rs": "028268390fb7eb22a66e8c42b4fbad8660863ad5d834fec7dc462ccfc4c34132",
+      "tests/unit/execute/selected_scalar_bt_rules/tests.rs": "252cb701dfb599f40fd6148bde9e7c7a92853b1b6c9a38053c7762ef15dc2668",
+      "examples/proof_nodes/atomic/by_builtin_rule/subtraction_order_pairs.lit": "c933d17eb67c4a7314b21fe71ea18736d78c48af76c8b217449dc6408943e789",
+      "examples/proof_nodes/atomic/by_builtin_rule/abs_square_radius.lit": "80bb43ebeaf574ce5a5711d483711cf77ddb62bb8da8b18216bcca1028899690",
+      "examples/proof_nodes/atomic/by_builtin_rule/quotient_scalar_upper_bound.lit": "7f9c86d4d281e47c1841e44ce2f3b5eb78b9645746505689f540ddb7795133d0",
+      "examples/proof_nodes/atomic/by_builtin_rule/quotient_scalar_strict_upper_bound.lit": "7fcbf5bc53e23701e767ad536b0adadfe8164a551768d0c8a87b88bef1915d37",
+      "examples/proof_nodes/atomic/by_builtin_rule/exact_integer_quotient.lit": "8948a0ac939d4aa23115c855753e0ecc176c1da1fceba6e1db22ac567fa7b5bc",
+      "examples/proof_nodes/atomic/by_builtin_rule/abs_nonzero_denominator_consumer.lit": "62ad32a528af5151a24115ec55e1f1b1287ca03c10b3eeb7fd242ff317e582fa",
+      "src/execute/execute_fact_stmt/verify_atomic_fact/verify_atomic_except_equality/search_atomic_except_equality_fact_proof_by_builtin_rules/helper.rs": "57179c172be8b6db10c0161ced58a72d69c47f1c328bce67948c54f3c8db3752"
+    },
+    "current_worktree_build": {
+      "success": false,
+      "log": "build-resume-round-20.log",
+      "cause": "unrelated concurrent Lean compiler lifetime/scopes errors"
+    },
+    "session": [
+      {
+        "id": "product-singleton-named",
+        "source": "forall f fn(k N) R,m N:\n    product(m,m,f)=f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0108c53cff2b0641fdb9d940910eb8b7a0c4488c855c17ee9e3a032155c19ce0",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    product(m,m,f)=f(m)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-anonymous-symbolic",
+        "source": "forall c R,m Z:\n    product(m,m,fn(k Z) R {c})=c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "1b9dc3babcf200f5caee5105f258ca887bf39ef4559d9f1e456d1660e4a860ad",
+          "excerpt": "forall c R,m Z:\r\n    product(m,m,fn(k Z) R {c})=c\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    product(m, m, fn (k Z) R{c}) = c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R, m Z:\\n    product(m, m, fn (k Z) R{c}) = c\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-append-named",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a<=b\n    =>:\n        product(a,b+1,f)=product(a,b,f)*f(b+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b1a88c5997f5d7e5fc946b772bac1749584405ddd78cdad2cfbbe6c56519e161",
+          "excerpt": "forall a,b Z,f fn(k Z) R:\r\n    a<=b\r\n    =>:\r\n        product(a,b+1,f)=product(a,b,f)*f(b+1)\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-eta-named",
+        "source": "forall a,b N,f fn(k N) R:\n    a<=b\n    =>:\n        product(a,b,f)=product(a,b,fn(k N) R {f(k)})\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "513c51823888c01d50ebf9555d4cf2c7a6619d7ca9bc383ba2ad1141c9fbae3d",
+          "excerpt": "forall a,b N,f fn(k N) R:\r\n    a<=b\r\n    =>:\r\n        product(a,b,f)=product(a,b,fn(k N) R {f(k)})\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-empty-native",
+        "source": "product(2,1,fn(k N) R {k})=1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2702dfaf469ecdf92b5b7ead68f11c8c1d7558923aa876f8afc688386b6ca4ca",
+          "excerpt": "product(2,1,fn(k N) R {k})=1\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"product(2, 1, fn (k N) R{k}) = 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"well_defined\",\r\n        \"message\": \"Could not prove that the statement is well-defined.\",\r\n        \"verification\": {\r\n          \"type\": \"equality\",\r\n          \"success\": false,\r\n          \"phase\": \"well_defined\",\r\n          \"failure\": {\r\n            \"phase\": \"IteratedOperator\",\r\n         "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-anonymous-chain",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m,fn(k Z) R {c})=c\n    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)=c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5af6e21630ed6050ef244de27f79843ee84617fff536c79c3a04ca2ba6c55dbf",
+          "excerpt": "claim:\r\n    ? forall c R,m Z:\r\n        product(m,m,fn(k Z) R {c})=c\r\n    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)=c\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-named-local",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m,fn(k Z) R {c})=c\n    have fn term(k Z) R=c\n    product(m,m,fn(k Z) R {c})=product(m,m,term)=term(m)=c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "237c61c69a15349ff7e1ba44b11f868c70227db06c61e8977e6ae8702027b31c",
+          "excerpt": "claim:\r\n    ? forall c R,m Z:\r\n        product(m,m,fn(k Z) R {c})=c\r\n    have fn term(k Z) R=c\r\n    product(m,m,fn(k Z) R {c})=product(m,m,term)=term(m)=c\r\n\r\n... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-anonymous-expression",
+        "source": "forall m Z:\n    product(m,m,fn(k Z) R {k+1})=m+1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "09f5e9ed959d90b6b2c7d1ccc52acaea8a0c1603d4c6dc7379fffcfc0938b474",
+          "excerpt": "forall m Z:\r\n    product(m,m,fn(k Z) R {k+1})=m+1\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m Z:\\n    product(m, m, fn (k Z) R{k + 1}) = m + 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m Z:\\n    product(m, m, fn (k Z) R{k + 1}) = m + 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-definition",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "103560feae3384c501200fd5373303a0bd8c6925aaffb068597a664be899b1b6",
+          "excerpt": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\r\n    case first<=last: product(first,last,term)\r\n    case first>last: 1\r\n\r\n... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-singleton",
+        "source": "forall f fn(k N) R,m N:\n    finite_coefficient_product_211(m,m,f)=f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "f943add4c38a09d23784e8b5a9721e070d40f7f39b769f349c0b6e92057c6669",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    finite_coefficient_product_211(m,m,f)=f(m)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-empty",
+        "source": "forall f fn(k N) R:\n    finite_coefficient_product_211(2,1,f)=1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "66b615856f2edadcf3fd4ce54163dffee785dbb6f330d9056d67a6eafcc2cf36",
+          "excerpt": "forall f fn(k N) R:\r\n    finite_coefficient_product_211(2,1,f)=1\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-interior",
+        "source": "forall f fn(k N) R,m N:\n    m>=2\n    =>:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8d3d645ec4aa4bbd4a291995c35a7497664252a33bd12bdc464e532fdf67fb9e",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    m>=2\r\n    =>:\r\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R, m N:\\n    m >= 2\\n    =>:\\n        finite_coefficient_product_211(2, m + 1, f) = finite_coefficient_product_211(2, m, f) * f(m + 1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-all",
+        "source": "forall f fn(k N) R,m N+:\n    finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "1bd311534c2bb91f7577f0f5ce76285bd86c1542b1f1609a0370e75622668260",
+          "excerpt": "forall f fn(k N) R,m N+:\r\n    finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R, m N+:\\n    finite_coefficient_product_211(2, m + 1, f) = finite_coefficient_product_211(2, m, f) * f(m + 1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N) R, m N+:\\n    finite_coefficient_product_211(2, "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-one-chain",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "1217be4931ecc4421d3948474877367aacef4a30bf499945f7aac38188988c94",
+          "excerpt": "Warning: truncated output (original token count: 17886)\nTotal output lines: 1452\n\nclaim:\r\n    ? forall f fn(k N) R,m N:\r\n        m>=2\r\n        =>:\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\""
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-definition-bridge",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "78018c3b7d0513fc49f5b3a9e954e4fd0891e0fe5841588dce7ee57ed8d9a5c7",
+          "excerpt": "Warning: truncated output (original token count: 17918)\nTotal output lines: 1453\n\nclaim:\r\n    ? forall f fn(k N) R,m N:\r\n        m>=2\r\n        =>:\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\r\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_"
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-append-natural-domain",
+        "source": "forall f fn(k N) R,m N:\n    m>=2\n    =>:\n        product(2,m+1,f)=product(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "c36d5b2f452c1847fd28b09f512285930b8e6e1a000798586f14ccd4c7a51834",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    m>=2\r\n    =>:\r\n        product(2,m+1,f)=product(2,m,f)*f(m+1)\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-expression-chain",
+        "source": "claim:\n    ? forall m Z:\n        product(m,m,fn(k Z) R {k+1})=m+1\n    product(m,m,fn(k Z) R {k+1})=fn(k Z) R {k+1}(m)=m+1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6e5fd885186cea11b354bad356f6a054a3f3a6d504e4ad84e7e27eb2ca62188f",
+          "excerpt": "claim:\r\n    ? forall m Z:\r\n        product(m,m,fn(k Z) R {k+1})=m+1\r\n    product(m,m,fn(k Z) R {k+1})=fn(k Z) R {k+1}(m)=m+1\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-wrong-value",
+        "source": "forall c R,m Z:\n    product(m,m,fn(k Z) R {c})=c+1\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ddf453c9d458c6c124bb852a450aab76e7365d7845003c1570fc4475e9a785e4",
+          "excerpt": "forall c R,m Z:\r\n    product(m,m,fn(k Z) R {c})=c+1\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    product(m, m, fn (k Z) R{c}) = c + 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R, m Z:\\n    product(m, m, fn (k Z) R{c}) = c + 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-wrong-domain",
+        "source": "forall f fn(k N+) R:\n    product(0,0,f)=f(0)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "014f3a54dc0fe3ebc7e798754c64b45fb8ebb9083427f2585ff65cf1ba80e353",
+          "excerpt": "forall f fn(k N+) R:\r\n    product(0,0,f)=f(0)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N+) R:\\n    product(0, 0, f) = f(0)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N+) R:\\n    product(0, 0, f) = f(0)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-append-wrong-term",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a<=b\n    =>:\n        product(a,b+1,f)=product(a,b,f)*f(b)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ec531f91e10f0069032bc8d0128e52d1e3e0b2d198135438799eaf746c4e90f0",
+          "excerpt": "forall a,b Z,f fn(k Z) R:\r\n    a<=b\r\n    =>:\r\n        product(a,b+1,f)=product(a,b,f)*f(b)\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b Z, f fn (k Z) R:\\n    a <= b\\n    =>:\\n        product(a, b + 1, f) = product(a, b, f) * f(b)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b Z, f fn (k Z) R:\\n    a <= b\\n    =>:\\n        product(a, b + 1, f) = product(a, b, f) * f(b)"
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-empty-zero-false",
+        "source": "forall f fn(k N) R:\n    finite_coefficient_product_211(2,1,f)=0\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e937e3052b776a6924bfd6fc8c9335762d46d92a1adc5aa6fba9f77cd7cb9bb3",
+          "excerpt": "forall f fn(k N) R:\r\n    finite_coefficient_product_211(2,1,f)=0\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R:\\n    finite_coefficient_product_211(2, 1, f) = 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N) R:\\n    finite_coefficient_product_211(2, 1, f) = 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-singleton-eta",
+        "source": "forall f fn(k N) R,m N:\n    finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0f1babfc2476501b152cb85174b78c7fe8aef3033918455cee83718bac8c0c7b",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=f(m)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R, m N:\\n    finite_coefficient_product_211(m, m, fn (k N) R{f(k)}) = f(m)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N) R, m N:\\n    finite_coefficient_product_211(m, m, fn (k N) R{f(k)}) = f(m)\"\r\n      },\r\n      \"stores\": [],\r\n    "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-range-bridges",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m\n    2<=m+1\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e3e97013f2f34761692e4787842ccf558d2543ee5d025068a52a6f5b9adf9ebb",
+          "excerpt": "Warning: truncated output (original token count: 39953)\nTotal output lines: 3295\n\nclaim:\r\n    ? forall f fn(k N) R,m N:\r\n        m>=2\r\n        =>:\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    2<=m\r\n    2<=m+1\r\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"succe"
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-range-definition-bridges",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m\n    2<=m+1\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6841d333ae678f1f1c5df7aeaef2d7f6e7898de7f929b06a520443449adede06",
+          "excerpt": "claim:\r\n    ? forall f fn(k N) R,m N:\r\n        m>=2\r\n        =>:\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    2<=m\r\n    2<=m+1\r\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\r\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-singleton-eta-chain",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=f(m)\n    finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "97c1a71975788f1aee44042d3a4b0180d0c57cd8f46ca3f25685182f5087b749",
+          "excerpt": "claim:\r\n    ? forall f fn(k N) R,m N:\r\n        finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=f(m)\r\n    finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-singleton-full-application",
+        "source": "forall c R,m Z:\n    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0ceb7743d29bb36d2f526762bca5b704f3102abc80a8b7d4aa8ed92b0e3ce7e9",
+          "excerpt": "forall c R,m Z:\r\n    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)\r\n\r\n... ... success\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-eta-identity",
+        "source": "forall f fn(k N) R:\n    f=fn(k N) R {f(k)}\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "118ec434ec66422e64152cafa5ab12a68e24592e1eb0540fc046b7851789cbce",
+          "excerpt": "forall f fn(k N) R:\r\n    f=fn(k N) R {f(k)}\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R:\\n    f = fn (k N) R{f(k)}\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N) R:\\n    f = fn (k N) R{f(k)}\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 10461
+      },
+      {
+        "id": "product-wrapper-append-cases",
+        "source": "claim:\n    ? forall f fn(k N) R,m N+:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    m=1 or m>1\n    by cases:\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m=1:\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m>1:\n            2<=m\n            2<=m+1\n            finite_coefficient_product_211(2,m,f)=product(2,m,f)\n            finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8c5b0df9a270abda212fc8c61a2b03010d275d30ab120d0153cfa3d990345a49",
+          "excerpt": "Warning: truncated output (original token count: 2171)\nTotal output lines: 195\n\nclaim:\r\n    ? forall f fn(k N) R,m N+:\r\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    m=1 or m>1\r\n    by cases:\r\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n        case m=1:\r\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-eta-identity-extension",
+        "source": "claim:\n    ? forall f fn(k N) R:\n        f=fn(eta_index N) R {f(eta_index)}\n    by fn_extension:\n        ? f=fn(eta_index N) R {f(eta_index)}\n        forall source_index N:\n            f(source_index)=fn(eta_index N) R {f(eta_index)}(source_index)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "843dfe24c2cd1336004bfd6e3eb2a89ecd213e72b7d93d478db87d858c803e7e",
+          "excerpt": "claim:\r\n    ? forall f fn(k N) R:\r\n        f=fn(eta_index N) R {f(eta_index)}\r\n    by fn_extension:\r\n        ? f=fn(eta_index N) R {f(eta_index)}\r\n        forall source_index N:\r\n            f(source_index)=fn(eta_index N) R {f(eta_index)}(source_index)\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-anonymous-two-factor",
+        "source": "forall c R,m Z:\n    product(m,m+1,fn(k Z) R {c})=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d77fa54080c3d78ca0edaa0a8725491b786740ed9fa1f010f1e342c9fc1ec870",
+          "excerpt": "forall c R,m Z:\r\n    product(m,m+1,fn(k Z) R {c})=c*c\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c R, m Z:\\n    product(m, m + 1, fn (k Z) R{c}) = c * c\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c R, m Z:\\n    product(m, m + 1, fn (k Z) R{c}) = c * c\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-wrapper-append-missing-range-false",
+        "source": "forall f fn(k N) R,m N:\n    finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "511438cd29617360cea629337f16c63cacec5cc65c76270614bdd92cb624e6f7",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R, m N:\\n    finite_coefficient_product_211(2, m + 1, f) = finite_coefficient_product_211(2, m, f) * f(m + 1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N) R, m N:\\n    finite_coefficient_product_211(2, m +"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-wrapper-append-cases-lower-bound",
+        "source": "claim:\n    ? forall f fn(k N) R,m N+:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    m>=1\n    m=1 or m>1\n    by cases:\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m=1:\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m>1:\n            2<=m\n            2<=m+1\n            finite_coefficient_product_211(2,m,f)=product(2,m,f)\n            finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "aabff0f77318d42e7a3bd4fd2bfc7b8e1edfad8170de18886ab613fdf1987794",
+          "excerpt": "Warning: truncated output (original token count: 8557)\nTotal output lines: 665\n\nclaim:\r\n    ? forall f fn(k N) R,m N+:\r\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    m>=1\r\n    m=1 or m>1\r\n    by cases:\r\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n        case m=1:\r\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_pro"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-anonymous-two-factor-chain",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m+1,fn(k Z) R {c})=c*c\n    product(m,m+1,fn(k Z) R {c})=product(m,m,fn(k Z) R {c})*fn(k Z) R {c}(m+1)=fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9d2a0d26e0db7b3a668dd41697edd27c923ccc61c8b2bb8fdf2e6431fa0ab12c",
+          "excerpt": "Warning: truncated output (original token count: 118841)\nTotal output lines: 8778\n\nclaim:\r\n    ? forall c R,m Z:\r\n        product(m,m+1,fn(k Z) R {c})=c*c\r\n    product(m,m+1,fn(k Z) R {c})=product(m,m,fn(k Z) R {c})*fn(k Z) R {c}(m+1)=fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall c R, m Z:\\n        product(m, m + 1, fn (k Z) R{c}) = c * c\\n    product(m, m + 1, "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-wrapper-append-no-first-range",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m+1\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a2fddf1ed1fb7f37ead15756902bdbf98b8c46fe0245b9fc764e570d6431f19",
+          "excerpt": "claim:\r\n    ? forall f fn(k N) R,m N:\r\n        m>=2\r\n        =>:\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    2<=m+1\r\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\r\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-wrapper-append-no-last-range",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "7b8b8eff815901b3b02f5e4b1b3e0ccef8fa5d3ecae5153f03bffe6a60ee1877",
+          "excerpt": "Warning: truncated output (original token count: 16731)\nTotal output lines: 1371\n\nclaim:\r\n    ? forall f fn(k N) R,m N:\r\n        m>=2\r\n        =>:\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    2<=m\r\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\r\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n\r\n... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-wrapper-append-cases-index-bridge",
+        "source": "claim:\n    ? forall f fn(k N) R,m N+:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    m>=1\n    m=1 or m>1\n    by cases:\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m=1:\n            m+1=2\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m>1:\n            2<=m\n            2<=m+1\n            finite_coefficient_product_211(2,m,f)=product(2,m,f)\n            finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "65179d16730024701b11afbebf64eddb8da506073492dd55bb0e8691b16a67e6",
+          "excerpt": "claim:\r\n    ? forall f fn(k N) R,m N+:\r\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n    m>=1\r\n    m=1 or m>1\r\n    by cases:\r\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n        case m=1:\r\n            m+1=2\r\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\r\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\r\n        case m>1:\r\n            2<=m\r\n"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-anonymous-two-factor-beta-bridges",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m+1,fn(k Z) R {c})=c*c\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    product(m,m+1,fn(k Z) R {c})=product(m,m,fn(k Z) R {c})*fn(k Z) R {c}(m+1)=fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02b73c20a8304cfe1bc6ba97bc16c4edccefa90a6dfcd107b2f563b084ef62a0",
+          "excerpt": "Warning: truncated output (original token count: 118868)\nTotal output lines: 8780\n\nclaim:\r\n    ? forall c R,m Z:\r\n        product(m,m+1,fn(k Z) R {c})=c*c\r\n    fn(k Z) R {c}(m)=c\r\n    fn(k Z) R {c}(m+1)=c\r\n    product(m,m+1,fn(k Z) R {c})=product(m,m,fn(k Z) R {c})*fn(k Z) R {c}(m+1)=fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\r\n\r\n... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall c R, m Z:\\n        produc"
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-native-singleton-eta",
+        "source": "forall f fn(k N) R,m N:\n    product(m,m,fn(k N) R {f(k)})=f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "dda4a6ccb48143ce8e256a2b0480ab3e85acb89f497e017a4ad381e2ddcc60aa",
+          "excerpt": "forall f fn(k N) R,m N:\r\n    product(m,m,fn(k N) R {f(k)})=f(m)\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall f fn (k N) R, m N:\\n    product(m, m, fn (k N) R{f(k)}) = f(m)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall f fn (k N) R, m N:\\n    product(m, m, fn (k N) R{f(k)}) = f(m)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-native-singleton-eta-chain",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        product(m,m,fn(k N) R {f(k)})=f(m)\n    product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "b54f72f9de6f2c17fac1e9c94308c9ff5288686d3472fd82f2bfbe44a73d415d",
+          "excerpt": "claim:\r\n    ? forall f fn(k N) R,m N:\r\n        product(m,m,fn(k N) R {f(k)})=f(m)\r\n    product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)\r\n\r\n... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      },
+      {
+        "id": "product-anonymous-two-factor-named-bridge",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m+1,fn(k Z) R {c})=c*c\n    have fn term(k Z) R=c\n    term(m)=c\n    term(m+1)=c\n    product(m,m+1,fn(k Z) R {c})=product(m,m+1,term)=product(m,m,term)*term(m+1)=term(m)*term(m+1)=c*c\n",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a4169fb3e0fe2d19ebf1d50d6b6338fad40769af60c18228e8e988d29a5fc1ce",
+          "excerpt": "claim:\r\n    ? forall c R,m Z:\r\n        product(m,m+1,fn(k Z) R {c})=c*c\r\n    have fn term(k Z) R=c\r\n    term(m)=c\r\n    term(m+1)=c\r\n    product(m,m+1,fn(k Z) R {c})=product(m,m+1,term)=product(m,m,term)*term(m+1)=term(m)*term(m+1)=c*c\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+        },
+        "session_id": 56695
+      }
+    ],
+    "cases": [
+      {
+        "id": "product-singleton-named",
+        "source": "forall f fn(k N) R,m N:\n    product(m,m,f)=f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-named.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "79ad214cd18f7a6e4ab50d9b0b66fdc560d57729cf26de20af31833279f993a1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-named.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-anonymous-symbolic",
+        "source": "forall c R,m Z:\n    product(m,m,fn(k Z) R {c})=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-anonymous-symbolic.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e21a82d839f31d088932484609dc2a11ef85d0c6534f88f122ae37ff2333282b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-anonymous-symbolic.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-append-named",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a<=b\n    =>:\n        product(a,b+1,f)=product(a,b,f)*f(b+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-append-named.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5b5089b1cc35c84bec4a39be2512df894506d8f912518a2fcf2b4c2818e25f39"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-append-named.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-eta-named",
+        "source": "forall a,b N,f fn(k N) R:\n    a<=b\n    =>:\n        product(a,b,f)=product(a,b,fn(k N) R {f(k)})\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-eta-named.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b83318602b9953755b926516898dc5d067c310f5c5c5cbb626f8466794107f1b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-eta-named.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-empty-native",
+        "source": "product(2,1,fn(k N) R {k})=1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-empty-native.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "98776378cf64efe32bb3bdfc2e5df16a9d5d476cb794695cd6fa2ca8aa1597df"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-empty-native.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-anonymous-chain",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m,fn(k Z) R {c})=c\n    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-anonymous-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "80d7b27a8a01ed5f98fd214253603367d9c2e75ac258b6f403f6369272eda2b0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-anonymous-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-named-local",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m,fn(k Z) R {c})=c\n    have fn term(k Z) R=c\n    product(m,m,fn(k Z) R {c})=product(m,m,term)=term(m)=c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-named-local.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee3dc6f99a93b922fdae97338ac25bd011ed9f69b436a73a1ab0e244791e5baf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-named-local.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-anonymous-expression",
+        "source": "forall m Z:\n    product(m,m,fn(k Z) R {k+1})=m+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-anonymous-expression.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2954df64207b7a1e89c549f1858675864ed24622135297a4212109f8f85d3eac"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-anonymous-expression.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-singleton",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R,m N:\n    finite_coefficient_product_211(m,m,f)=f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-singleton.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fca77b92eced566a5054474c33ef5e7914c5942489f8ebbb0648ee3b600ea8c2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-singleton.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-empty",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R:\n    finite_coefficient_product_211(2,1,f)=1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-empty.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "303bc45a47ce0e8f14dd00bd8baa07fe6e31a33c2662264b87c2d0590ca25314"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-empty.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-interior",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R,m N:\n    m>=2\n    =>:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-interior.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a46be9d92573fb5e0dc00ba8d5a55029bcd2f05835cdd4088c1bf479b3ef02e6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-interior.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-all",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R,m N+:\n    finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-all.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a3c62cb60e87c5afa575b9332567e2177e038cd6a65304852c5b4512ccde2aa4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-all.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-one-chain",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-one-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cbfc728f35273199e769ae6e9c288e726feaf23b1962c0133c4336f924a7e65b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-one-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-definition-bridge",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-definition-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cf0c1c59897d3bf1898b783684844bbc398eb81390fc86981be0084dcc6af95e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-definition-bridge.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-append-natural-domain",
+        "source": "forall f fn(k N) R,m N:\n    m>=2\n    =>:\n        product(2,m+1,f)=product(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-append-natural-domain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f71f92fb26c37a58ad8c764dc4d584c7836805a94dbf6c9c8e60caca85496b8c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-append-natural-domain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-expression-chain",
+        "source": "claim:\n    ? forall m Z:\n        product(m,m,fn(k Z) R {k+1})=m+1\n    product(m,m,fn(k Z) R {k+1})=fn(k Z) R {k+1}(m)=m+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-expression-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9722d5545249e1e3d54fa159f11b103c1358bb7f2d32ab9be77762ea7b7bcdc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-expression-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-wrong-value",
+        "source": "forall c R,m Z:\n    product(m,m,fn(k Z) R {c})=c+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-wrong-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "17427cd9b7e1f3122798064f934495646950f2de4a7281331404c4f43a5350e4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-wrong-value.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-wrong-domain",
+        "source": "forall f fn(k N+) R:\n    product(0,0,f)=f(0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-wrong-domain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0b03f13e796673475d082783b05a36a9005c2bdecd3df6a65638da8140e596b1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-wrong-domain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-append-wrong-term",
+        "source": "forall a,b Z,f fn(k Z) R:\n    a<=b\n    =>:\n        product(a,b+1,f)=product(a,b,f)*f(b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-append-wrong-term.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93b0a7559bb9e1ea88a6e93375916e18e3ce379c869707eb4826420e80118a3d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-append-wrong-term.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-empty-zero-false",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R:\n    finite_coefficient_product_211(2,1,f)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-empty-zero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ba8a1ee77ee8e9ef5e7b882285ebcb073e1c6a2853b614b6571463421182c006"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-empty-zero-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-singleton-eta",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R,m N:\n    finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-singleton-eta.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "50780bc2824a88def9d6afe16b7a48ceaa87cbe6da1249377237b41b2b973b0c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-singleton-eta.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-range-bridges",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m\n    2<=m+1\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-range-bridges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a9c96bb573e4569a083fa7b0fa6da69009eed79ea164b7f97440bb8865cc2bdb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-range-bridges.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-range-definition-bridges",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m\n    2<=m+1\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-range-definition-bridges.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9b93c63a9ca03762349ad6ffa146e109b2e9b41379fb9784263e6e108b6ac900"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-range-definition-bridges.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-singleton-eta-chain",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=f(m)\n    finite_coefficient_product_211(m,m,fn(k N) R {f(k)})=product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-singleton-eta-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "96f0ad1bf23e8e641902046a856e4502841efd9802fb4a35eb68d93cfa7b7c5c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-singleton-eta-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-singleton-full-application",
+        "source": "forall c R,m Z:\n    product(m,m,fn(k Z) R {c})=fn(k Z) R {c}(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-singleton-full-application.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "181cd2c7d94f89b8e85832d27d45e5e68ab9423254a3bd0fa1501f21b0ff7c4b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-singleton-full-application.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-eta-identity",
+        "source": "forall f fn(k N) R:\n    f=fn(k N) R {f(k)}\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-eta-identity.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "130bba0a674059fa769678bf562de6acf77a2bab78398fe46840e597e65054a4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-eta-identity.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-cases",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N+:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    m=1 or m>1\n    by cases:\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m=1:\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m>1:\n            2<=m\n            2<=m+1\n            finite_coefficient_product_211(2,m,f)=product(2,m,f)\n            finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-cases.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9f20e60ad51e239583f1a5e08673242dcd3fcc0a2b004aef14522b617166287a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-cases.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-eta-identity-extension",
+        "source": "claim:\n    ? forall f fn(k N) R:\n        f=fn(eta_index N) R {f(eta_index)}\n    by fn_extension:\n        ? f=fn(eta_index N) R {f(eta_index)}\n        forall source_index N:\n            f(source_index)=fn(eta_index N) R {f(eta_index)}(source_index)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-eta-identity-extension.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de13d7e5bd1de0811b86e3d7546a669799a7559d499533a96e7a6213b286ddcf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-eta-identity-extension.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-anonymous-two-factor",
+        "source": "forall c R,m Z:\n    product(m,m+1,fn(k Z) R {c})=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-anonymous-two-factor.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "33652b869d36fbb471ca9f423fca07c079c0bd2575e5c667fef0a94f11fba1b1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-anonymous-two-factor.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-missing-range-false",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nforall f fn(k N) R,m N:\n    finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-missing-range-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b2dbb32940a110c8ab605cc8e364f52a6791be2bc3f13afef43fe8319a6bbf5a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-missing-range-false.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-cases-lower-bound",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N+:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    m>=1\n    m=1 or m>1\n    by cases:\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m=1:\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m>1:\n            2<=m\n            2<=m+1\n            finite_coefficient_product_211(2,m,f)=product(2,m,f)\n            finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-cases-lower-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "42e9edab5f7eb2fee5f9f3374a7f85426bdf36f8fed3df4b8025eddbde2de35f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-cases-lower-bound.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-anonymous-two-factor-chain",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m+1,fn(k Z) R {c})=c*c\n    product(m,m+1,fn(k Z) R {c})=product(m,m,fn(k Z) R {c})*fn(k Z) R {c}(m+1)=fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-anonymous-two-factor-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b4d59e36467ce3d5722024408e2aa842145a7cc84051699a0088c19cc4d0ed71"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-anonymous-two-factor-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-no-first-range",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m+1\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-no-first-range.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de0dd034b52f25a5954e49b22667821b90e62bb85a341604b85ea10ea5b0cdf2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-no-first-range.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-no-last-range",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N:\n        m>=2\n        =>:\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    2<=m\n    finite_coefficient_product_211(2,m,f)=product(2,m,f)\n    finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-no-last-range.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e62dcaf08439f7c0874e95f97d37e51b104c38fc4628a1f59e4c458e45229078"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-no-last-range.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-wrapper-append-cases-index-bridge",
+        "source": "have fn finite_coefficient_product_211(first,last N,term fn(k N) R) R by cases:\n    case first<=last: product(first,last,term)\n    case first>last: 1\n\nclaim:\n    ? forall f fn(k N) R,m N+:\n        finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n    m>=1\n    m=1 or m>1\n    by cases:\n        ? finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m=1:\n            m+1=2\n            finite_coefficient_product_211(2,m,f)=finite_coefficient_product_211(2,1,f)=1\n            finite_coefficient_product_211(2,m+1,f)=finite_coefficient_product_211(2,2,f)=product(2,2,f)=f(2)=f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n        case m>1:\n            2<=m\n            2<=m+1\n            finite_coefficient_product_211(2,m,f)=product(2,m,f)\n            finite_coefficient_product_211(2,m+1,f)=product(2,m+1,f)=product(2,m,f)*f(m+1)=finite_coefficient_product_211(2,m,f)*f(m+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-wrapper-append-cases-index-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fe19dd7bb0423523e2414ccc93c884d76a027c45f71d8c8677f7f11ade91b641"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-wrapper-append-cases-index-bridge.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-anonymous-two-factor-beta-bridges",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m+1,fn(k Z) R {c})=c*c\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    product(m,m+1,fn(k Z) R {c})=product(m,m,fn(k Z) R {c})*fn(k Z) R {c}(m+1)=fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-anonymous-two-factor-beta-bridges.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8a96cc8a990f9f795eab89b5eb274976a07c2c1acd4088dde528a91a3a3568a9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-anonymous-two-factor-beta-bridges.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-native-singleton-eta",
+        "source": "forall f fn(k N) R,m N:\n    product(m,m,fn(k N) R {f(k)})=f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-native-singleton-eta.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4aa77bb3bfccee5a2aa1dec9270b6be563dddd32b9d46b6af500c1b34eefb7aa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-native-singleton-eta.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 1,
+          "success": false,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-native-singleton-eta-chain",
+        "source": "claim:\n    ? forall f fn(k N) R,m N:\n        product(m,m,fn(k N) R {f(k)})=f(m)\n    product(m,m,fn(k N) R {f(k)})=fn(k N) R {f(k)}(m)=f(m)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-native-singleton-eta-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d8e8688d6017135d04a071e8b4347a7e98d890d4dc8d7d7449deb4a3c75ecc28"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-native-singleton-eta-chain.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      },
+      {
+        "id": "product-anonymous-two-factor-named-bridge",
+        "source": "claim:\n    ? forall c R,m Z:\n        product(m,m+1,fn(k Z) R {c})=c*c\n    have fn term(k Z) R=c\n    term(m)=c\n    term(m+1)=c\n    product(m,m+1,fn(k Z) R {c})=product(m,m+1,term)=product(m,m,term)*term(m+1)=term(m)*term(m+1)=c*c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-21-cases/product-anonymous-two-factor-named-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2c86234cdb77c7020254d375c874ff693ac201bc23ce0ea60aac05304e5ca7ce"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round21-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round21-cases/product-anonymous-two-factor-named-bridge.lit"
+        ],
+        "promoted_file_replay": {
+          "exit_code": 0,
+          "success": true,
+          "session_error": null
+        }
+      }
+    ],
+    "session_limits": "Some long failure responses truncated by write_stdin output cap; full independent-file Normal outputs preserved. Warm Session results do not determine cold capability.",
+    "session_restart": {
+      "reason": "parse_error: name k is already bound in an enclosing parse scope (eta extension authoring probe)",
+      "old_process": 10461,
+      "new_process": 56695,
+      "replayed_prefix": "round21-accepted-prefix.lit",
+      "replayed_accepted_statements": 13,
+      "excluded_from_capability_counts": true,
+      "new_prefix_initial_success": true
+    },
+    "summary": {
+      "independent_files": 39,
+      "accepted": 17,
+      "rejected": 22,
+      "canonical_edits": false,
+      "trust_added": false,
+      "compiler_or_kernel_edits_in_round": false
+    }
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-56-2026-10-09.json",
+  "original_sha256": "95e15dd558f960e0c6d1967dd07882c5b57e34abf6e277eb40a7924ed63852a4",
+  "original_bytes": 63630,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "d60abacb980b43518a3af45bb958613b6731b7709b1c54784662b2c6827027de",
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "log": "build-round-56-recheck-2.log"
+    },
+    "cases": [
+      {
+        "id": "identity-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)=x<=y=r56_identity(y)\n        r56_identity(x)<=r56_identity(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/identity-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7e45129f0a016c578e74bf2b52662395b6013e58c4e0a8e9cbcaf317ed88a54c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/identity-original.lit"
+        ]
+      },
+      {
+        "id": "identity-endpoint",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/identity-endpoint.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "43a2ca752f9e1115033ea7123b291a80a80effbbfa993acbde1477fc0eac6a3d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/identity-endpoint.lit"
+        ]
+      },
+      {
+        "id": "negative-weak-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)=-y<=-x=r56_neg_identity(x)\n        r56_neg_identity(y)<=r56_neg_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/negative-weak-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2004277241b038687becd4e0f992cfb153e23eeff70ea8bd0baa713a3597caa6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/negative-weak-original.lit"
+        ]
+      },
+      {
+        "id": "negative-weak-endpoint",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/negative-weak-endpoint.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "85f6f4d706bbc085fc83bbce70f29138f135cf177a27f2a9f04d14a98c282921"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/negative-weak-endpoint.lit"
+        ]
+      },
+      {
+        "id": "negative-strict-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)=-y<-x=r56_neg_identity(x)\n        r56_neg_identity(y)<r56_neg_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/negative-strict-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8bf925ae300bfcd0176f7eddf8004f67498b836214945d5ce887cbaed0105b9b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/negative-strict-original.lit"
+        ]
+      },
+      {
+        "id": "negative-strict-endpoint",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/negative-strict-endpoint.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b13079577d414ad923efd57335a89fb2a70b6ea08f9c38e19b801b4d92ddf6de"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/negative-strict-endpoint.lit"
+        ]
+      },
+      {
+        "id": "constant-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x R:\n    r56_constant_five(x)=5=r56_constant_five(0)\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/constant-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "89dea564bb7deb57889b23f22862812f3801d554028da4d8a64af17524b4af20"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/constant-original.lit"
+        ]
+      },
+      {
+        "id": "constant-comparisons",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/constant-comparisons.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7aa51da23920356652bba29f96fb2ef02138374bb9ef4f1ff4442a7dbc367da4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/constant-comparisons.lit"
+        ]
+      },
+      {
+        "id": "false-weak-to-strict",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<r56_identity(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/false-weak-to-strict.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5316d79621b17c9085b09d536c8036433b56091501379cb3be3ef729fb38a7f9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/false-weak-to-strict.lit"
+        ]
+      },
+      {
+        "id": "false-negative-increasing",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(x)<=r56_neg_identity(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/false-negative-increasing.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "65260e024ca654d44855a41c93d4b93ec44fb4931d31520b305356b9a8579b3b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/false-negative-increasing.lit"
+        ]
+      },
+      {
+        "id": "false-constant-strict",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x R:\n    r56_constant_five(x)<r56_constant_five(0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/false-constant-strict.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8589197c026d3b31b4f6963c94f6625d7b834f370a33909389a22f0adbfcb1a0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/false-constant-strict.lit"
+        ]
+      },
+      {
+        "id": "identity-endpoint-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/identity-endpoint-definitions-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "86f06beb9062fd4ce81d80c4b7e2b0db3e5f25308c2987450acea804f928d0ea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/identity-endpoint-definitions-only.lit"
+        ]
+      },
+      {
+        "id": "negative-weak-endpoint-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/negative-weak-endpoint-definitions-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cefe2dd31824cabcbd005cc9ec23302c2da099bad5fc7931e494aad6b4548465"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/negative-weak-endpoint-definitions-only.lit"
+        ]
+      },
+      {
+        "id": "negative-strict-endpoint-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/negative-strict-endpoint-definitions-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "caf54e56b8514b7cf7bae1b37bc953577e6a5c240d94ba26d3fdf5d7dbb27a7f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/negative-strict-endpoint-definitions-only.lit"
+        ]
+      },
+      {
+        "id": "constant-comparisons-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-56-cases/constant-comparisons-definitions-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5303ed6df055547fb0e23eb4cc2559b1a883c4fb7dcf747a5294ef3c4b6ae8b3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round56-cases/constant-comparisons-definitions-only.lit"
+        ]
+      }
+    ],
+    "baseline_note": "Current-source release rebuilt successfully after concurrent compiler block. Historical round55 observations do not own this acceptance; all15 probes reran with fresh snapshot.",
+    "scope": "Actual chapter04 simple-function comparison consumers; central-goal probes distinguished from full source conclusions and no whole imported chapter claim."
+  }
+}

@@ -1,0 +1,8 @@
+claim:
+    ? forall a,b Z,m N+:
+        (a-b)%m = 0
+        =>:
+            a%m = b%m
+    a-b = m*quot(a-b,m)+(a-b)%m = m*quot(a-b,m)
+    a = b+m*quot(a-b,m)
+    a%m = (b+m*quot(a-b,m))%m = b%m

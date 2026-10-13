@@ -1,0 +1,2 @@
+forall r,s,x R:
+    x=r or x=s

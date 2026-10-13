@@ -1,0 +1,359 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-49-2026-10-09.json",
+  "original_sha256": "504f8ab6bbf605b78cb697430eea6e4d8649d8387929949bd696078221bca0d5",
+  "original_bytes": 17044845,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "affine-original",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_expectation2_affine:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(X, probs) = X(1) * probs(1) + X(2) * probs(2)\n    r49_expectation2(Y, probs) = Y(1) * probs(1) + Y(2) * probs(2)\n    have combined r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n    r49_expectation2(combined, probs) = combined(1) * probs(1) + combined(2) * probs(2)\n    \\r49_affine_coordinates<X, Y, a, b>(1) = a * X(1) + b * Y(1)\n    \\r49_affine_coordinates<X, Y, a, b>(2) = a * X(2) + b * Y(2)\n    combined(1) = a * X(1) + b * Y(1)\n    combined(2) = a * X(2) + b * Y(2)\n    r49_affine_combine2(X, Y, a, b) = combined\n    combined(1) * probs(1) + combined(2) * probs(2) = (a * X(1) + b * Y(1)) * probs(1) + (a * X(2) + b * Y(2)) * probs(2)\n    (a * X(1) + b * Y(1)) * probs(1) + (a * X(2) + b * Y(2)) * probs(2) = a * (X(1) * probs(1) + X(2) * probs(2)) + b * (Y(1) * probs(1) + Y(2) * probs(2))\n    a * (X(1) * probs(1) + X(2) * probs(2)) + b * (Y(1) * probs(1) + Y(2) * probs(2)) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/affine-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "45c5deeb3c1997d9c92e7f126ad3ff33cbd5c062087638cba326fbacccb9abb4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/affine-original.lit"
+        ]
+      },
+      {
+        "id": "affine-bodyless",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_affine_bodyless:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/affine-bodyless.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "13b221769696c271813420e05059cc36759f49685b9498d738741a2358f3b2c2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/affine-bodyless.lit"
+        ]
+      },
+      {
+        "id": "affine-five-statements",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_affine_short:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(X,probs)=X(1)*probs(1)+X(2)*probs(2)\n    r49_expectation2(Y,probs)=Y(1)*probs(1)+Y(2)*probs(2)\n    r49_affine_combine2(X,Y,a,b)(1)=a*X(1)+b*Y(1)\n    r49_affine_combine2(X,Y,a,b)(2)=a*X(2)+b*Y(2)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/affine-five-statements.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "58051891a38d3ea028152ca3b67cac8dac16c4583558467ab4e7d29c2c528668"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/affine-five-statements.lit"
+        ]
+      },
+      {
+        "id": "affine-chain-only",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_affine_chain_only:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/affine-chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9a609e7ba1fa5ec48c43cd84afd3b398bab53e9645a39e462eeff11d0dd6f0dc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/affine-chain-only.lit"
+        ]
+      },
+      {
+        "id": "affine-false-coefficient",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_affine_false_coefficient:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = 2 * a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/affine-false-coefficient.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fed122a33058dfbd052a6388a00d7764f2ef81868f1d29257f47f1e05920641f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/affine-false-coefficient.lit"
+        ]
+      },
+      {
+        "id": "delete-X-value",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_delete_X_value:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(Y,probs)=Y(1)*probs(1)+Y(2)*probs(2)\n    r49_affine_combine2(X,Y,a,b)(1)=a*X(1)+b*Y(1)\n    r49_affine_combine2(X,Y,a,b)(2)=a*X(2)+b*Y(2)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/delete-X-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cd9d35fbdf2b641ab038d56da6a57d12cd1833a05931fbdf67ccf914ce049055"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/delete-X-value.lit"
+        ]
+      },
+      {
+        "id": "delete-Y-value",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_delete_Y_value:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(X,probs)=X(1)*probs(1)+X(2)*probs(2)\n    r49_affine_combine2(X,Y,a,b)(1)=a*X(1)+b*Y(1)\n    r49_affine_combine2(X,Y,a,b)(2)=a*X(2)+b*Y(2)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/delete-Y-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "23d57b1fa0601a36bcbf00db84ed149fbdd85b68ed86741b817ed52666792214"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/delete-Y-value.lit"
+        ]
+      },
+      {
+        "id": "delete-both-values",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_delete_both_values:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_affine_combine2(X,Y,a,b)(1)=a*X(1)+b*Y(1)\n    r49_affine_combine2(X,Y,a,b)(2)=a*X(2)+b*Y(2)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/delete-both-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "72c9c798fecc544f7176f8b786c20cd1add603583c1180fa39462d0a3eeafe27"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/delete-both-values.lit"
+        ]
+      },
+      {
+        "id": "delete-first-coordinate",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_delete_first_coordinate:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(X,probs)=X(1)*probs(1)+X(2)*probs(2)\n    r49_expectation2(Y,probs)=Y(1)*probs(1)+Y(2)*probs(2)\n    r49_affine_combine2(X,Y,a,b)(2)=a*X(2)+b*Y(2)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/delete-first-coordinate.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1ace2dc33cac73c4408f05730a2a3e2b308072a2117cf9135b29a51349b9c9da"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/delete-first-coordinate.lit"
+        ]
+      },
+      {
+        "id": "delete-second-coordinate",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nthm r49_delete_second_coordinate:\n    ? forall X, Y r49_two_point_vector, probs r49_two_point_vector, a, b R:\n        r49_expectation2(r49_affine_combine2(X, Y, a, b), probs) = a * r49_expectation2(X, probs) + b * r49_expectation2(Y, probs)\n    r49_expectation2(X,probs)=X(1)*probs(1)+X(2)*probs(2)\n    r49_expectation2(Y,probs)=Y(1)*probs(1)+Y(2)*probs(2)\n    r49_affine_combine2(X,Y,a,b)(1)=a*X(1)+b*Y(1)\n    r49_expectation2(r49_affine_combine2(X,Y,a,b),probs)=r49_affine_combine2(X,Y,a,b)(1)*probs(1)+r49_affine_combine2(X,Y,a,b)(2)*probs(2)=(a*X(1)+b*Y(1))*probs(1)+(a*X(2)+b*Y(2))*probs(2)=a*(X(1)*probs(1)+X(2)*probs(2))+b*(Y(1)*probs(1)+Y(2)*probs(2))=a*r49_expectation2(X,probs)+b*r49_expectation2(Y,probs)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/delete-second-coordinate.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9639bad60c69369e9a07dc1a52572502271c3c8348d75410532ca29e92ed4345"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/delete-second-coordinate.lit"
+        ]
+      },
+      {
+        "id": "invalid-third-coordinate",
+        "source": "let r49_two_point_vector = fn(index N+: index <= 2) R\n\nhave fn r49_expectation2(values, probs r49_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\n\ntemplate<X, Y r49_two_point_vector, a, b R>:\n    have fn r49_affine_coordinates(k N+: k <= 2) R = a * X(k) + b * Y(k)\n\nhave fn r49_affine_combine2(X, Y r49_two_point_vector, a, b R) r49_two_point_vector = \\r49_affine_coordinates<X, Y, a, b>\n\nforall X,Y r49_two_point_vector,a,b R:\n    \\r49_affine_coordinates<X,Y,a,b>(3)=a*X(3)+b*Y(3)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-49-cases/invalid-third-coordinate.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f5dc261d6e13c1053b4200d5763f428fc85ad1f47c42a863728aaf4a9ff262f2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round49-cases/invalid-third-coordinate.lit"
+        ]
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Actual two-coordinate expectation affine identity; arbitrary real weights preserved. No whole probability showcase, kernel or timing claim."
+  }
+}

@@ -1,0 +1,1587 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-14-2026-10-08.json",
+  "original_sha256": "75ffd22f9d4803e0aacd317a400ba9a2e7e226d58d125a04328e396d83f86330",
+  "original_bytes": 182979,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "executed_snapshot": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+    "sha256": "c7f463dbb0f5961e65a23e1917251929e4605653d865cafd1ae1d9a0d8b07b7b",
+    "version": "Litex 1.0.6-beta",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release",
+      "log": "build-round-14.log"
+    },
+    "head": "d49fffb53276f19a6ea2abeb9dca1d82913f1086",
+    "session": [
+      {
+        "id": "circle-square-bound-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        c^2 <= 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b4246834fa96d632e09469d955318a1b27c55b9aa32398caaeaf5be69760b44",
+          "excerpt": "... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-square-bound-chain",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            c^2 <= 1\n    c^2 <= c^2+s^2 = 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-abs-bound-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        abs(c) <= 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "7fef2bb47be421475494a5f1dfd03e12929338121d778b981e9d25548f1d8298",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    =>:\\n        abs (c) <= 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    =>:\\n        abs (c) <= 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-strict-square-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    s != 0\n    =>:\n        c^2 < 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "809898ec8a0e881bf1d97ac5f9bc4f4b3e40d1d0cffc2c18f86a11d95b53ef5a",
+          "excerpt": "... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-strict-square-chain",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        s != 0\n        =>:\n            c^2 < 1\n    s^2 > 0\n    c^2 < c^2+s^2 = 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-strict-abs-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    s != 0\n    =>:\n        abs(c) < 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ee27133337de07dc2f709afba939778cf6bc4dfd9dd6243074657fdb0cc29278",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    s != 0\\n    =>:\\n        abs (c) < 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    s != 0\\n    =>:\\n        abs (c) < 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "cases": [
+      {
+        "id": "cauchy-squared-certificate",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        (a*c+b*d)^2 <= (a^2+b^2)*(c^2+d^2)\n    (a*c+b*d)^2 <= (a*c+b*d)^2+(a*d-b*c)^2 = (a^2+b^2)*(c^2+d^2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/cauchy-squared-certificate.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7e2c88953871e08def4f22363920f103fab647bc4bbd24cee8b71026db4fc919"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/cauchy-squared-certificate.lit"
+        ]
+      },
+      {
+        "id": "cauchy-squared-direct",
+        "source": "forall a,b,c,d R:\n    (a*c+b*d)^2 <= (a^2+b^2)*(c^2+d^2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/cauchy-squared-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "56da921ec1085c063266694426379d1700f17870949aa2dbaf00f974414da03d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/cauchy-squared-direct.lit"
+        ]
+      },
+      {
+        "id": "cauchy-strict-certificate",
+        "source": "claim:\n    ? forall a,b,c,d R:\n        a*d-b*c != 0\n        =>:\n            (a*c+b*d)^2 < (a^2+b^2)*(c^2+d^2)\n    (a*d-b*c)^2 > 0\n    (a*c+b*d)^2 < (a*c+b*d)^2+(a*d-b*c)^2 = (a^2+b^2)*(c^2+d^2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/cauchy-strict-certificate.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "513b6d39da48a0dc45b6e95edc47ea0b54f5ccd3f46d9abd028cb8a4ac35e05e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/cauchy-strict-certificate.lit"
+        ]
+      },
+      {
+        "id": "cauchy-strict-direct",
+        "source": "forall a,b,c,d R:\n    a*d-b*c != 0\n    =>:\n        (a*c+b*d)^2 < (a^2+b^2)*(c^2+d^2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/cauchy-strict-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b1c9821d2cbdf156c66b888f800e07fe02987f57d17fb590877906bc3dc2e713"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/cauchy-strict-direct.lit"
+        ]
+      },
+      {
+        "id": "cauchy-strict-missing-false",
+        "source": "forall a,b,c,d R:\n    (a*c+b*d)^2 < (a^2+b^2)*(c^2+d^2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/cauchy-strict-missing-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b68e06c842b2ad75747dbfb6f8878df257f2a7f1425782523d231f17b4cbb5da"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/cauchy-strict-missing-false.lit"
+        ]
+      },
+      {
+        "id": "circle-abs-bound-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        abs(c) <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-abs-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fd8dcc3d70901e5a08d20817f17b4183df43316eae0ed18da49a1d237e879953"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-abs-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "circle-bound-wrong-constant",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        abs(c) <= 1/2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-bound-wrong-constant.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1b7a5859f709d2a1975143aec946e443476bd635b731308fb4a89b7ba9712e02"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-bound-wrong-constant.lit"
+        ]
+      },
+      {
+        "id": "circle-signed-upper-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        c <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-signed-upper-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d12b07fcb7e940bf4506590c7fe6e2ce94ce24ea9854a68b773308a3a1f6df0c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-signed-upper-direct.lit"
+        ]
+      },
+      {
+        "id": "circle-square-bound-chain",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            c^2 <= 1\n    c^2 <= c^2+s^2 = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-square-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "02a27270b5d6b4f0a2a5e5367368f26e425a8abc4c13a97cfdf1d1b971eac007"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-square-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "circle-square-bound-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        c^2 <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-square-bound-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0793778187d7bff58cf569496f08b189071218dfa31f171dae4a286b2bfcaabd"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-square-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-abs-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    s != 0\n    =>:\n        abs(c) < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-abs-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a104e766dd0c0fae3afcd20d8d55154d2ad805c45250bd70aa2c3d16474af8ec"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-abs-direct.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-missing-false",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        abs(c) < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-missing-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "750a8e2c75e7f160609dad5eec5b0d56a0803b2ae2c2175a7e8af1ed753492ba"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-missing-false.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-square-chain",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        s != 0\n        =>:\n            c^2 < 1\n    s^2 > 0\n    c^2 < c^2+s^2 = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-square-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "567d31480a313e14ddc85008247dec0d92c9ad5fc4e45bb978daf7fcaf2300ad"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-square-chain.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-square-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    s != 0\n    =>:\n        c^2 < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-square-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3d0bbb15b099750ef7614f7f2dc22214faeedbc5edc235cb971d8cfda9777e61"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-square-direct.lit"
+        ]
+      },
+      {
+        "id": "dot-gram-coordinate-chain",
+        "source": "have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nhave fn det(u,v cart(R,R)) R = u(1)*v(2)-u(2)*v(1)\nclaim:\n    ? forall u,v cart(R,R):\n        dot(u,v)^2+det(u,v)^2 = dot(u,u)*dot(v,v)\n    dot(u,v) = u(1)*v(1)+u(2)*v(2)\n    det(u,v) = u(1)*v(2)-u(2)*v(1)\n    dot(u,u) = u(1)*u(1)+u(2)*u(2)\n    dot(v,v) = v(1)*v(1)+v(2)*v(2)\n    dot(u,v)^2+det(u,v)^2 = (u(1)*v(1)+u(2)*v(2))^2+(u(1)*v(2)-u(2)*v(1))^2 = (u(1)*u(1)+u(2)*u(2))*(v(1)*v(1)+v(2)*v(2)) = dot(u,u)*dot(v,v)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-gram-coordinate-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7c4cf775ba5f1a58a3aaea1c775990389868ce2e6172736a4eb0fd34c0fb543e"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/dot-gram-coordinate-chain.lit"
+        ]
+      },
+      {
+        "id": "dot-gram-direct",
+        "source": "have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\nhave fn det(u,v cart(R,R)) R = u(1)*v(2)-u(2)*v(1)\nforall u,v cart(R,R):\n    dot(u,v)^2+det(u,v)^2 = dot(u,u)*dot(v,v)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/dot-gram-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1db889aeaa0e8e7ea09ece51d548280e0ad1c627acec7dca669623ce06a956be"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/dot-gram-direct.lit"
+        ]
+      },
+      {
+        "id": "gram-polynomial-identity",
+        "source": "forall a,b,c,d R:\n    (a*c+b*d)^2+(a*d-b*c)^2 = (a^2+b^2)*(c^2+d^2)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/gram-polynomial-identity.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e1d40a42579a055df78aa564244c7342a74ecce9fae7ba93297a1ad099b0d47c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/gram-polynomial-identity.lit"
+        ]
+      },
+      {
+        "id": "rotation-missing-unit-false",
+        "source": "forall c,s,x,y R:\n    (c*x-s*y)^2+(s*x+c*y)^2 = x^2+y^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/rotation-missing-unit-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9d284ce547e5d4bf2829021e2ff61ad2de671ff0911c4716e96dfd139b1d7326"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/rotation-missing-unit-false.lit"
+        ]
+      },
+      {
+        "id": "rotation-scalar-chain",
+        "source": "claim:\n    ? forall c,s,x,y R:\n        c^2+s^2 = 1\n        =>:\n            (c*x-s*y)^2+(s*x+c*y)^2 = x^2+y^2\n    (c*x-s*y)^2+(s*x+c*y)^2 = (c^2+s^2)*(x^2+y^2) = 1*(x^2+y^2) = x^2+y^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/rotation-scalar-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bde25ddcd9f3216d6521dfc2b9fb48904b3d234aaa24d9f5b8448cc1c8cfef01"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/rotation-scalar-chain.lit"
+        ]
+      },
+      {
+        "id": "rotation-scalar-direct",
+        "source": "forall c,s,x,y R:\n    c^2+s^2 = 1\n    =>:\n        (c*x-s*y)^2+(s*x+c*y)^2 = x^2+y^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/rotation-scalar-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c5b74d8e33f15804faa54ec04494dc3b695618410d42f5fb085cfcc95347a958"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/rotation-scalar-direct.lit"
+        ]
+      },
+      {
+        "id": "square-abs-reflection-direct",
+        "source": "forall x,y R:\n    x^2 <= y^2\n    =>:\n        abs(x) <= abs(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-abs-reflection-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e1786b7a18e1feaa28c1bedc6d54f1e0a375601f3602d8f211ca05314f67e2d2"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-abs-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "square-signed-reflection-false",
+        "source": "forall x,y R:\n    x^2 <= y^2\n    =>:\n        x <= y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-signed-reflection-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "17e05dc537b0066d1242d071879e769631fdbed1d4f1a91e38f4442b7a737876"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-signed-reflection-false.lit"
+        ]
+      },
+      {
+        "id": "strict-square-abs-reflection-direct",
+        "source": "forall x,y R:\n    x^2 < y^2\n    =>:\n        abs(x) < abs(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/strict-square-abs-reflection-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "13e07467bb365329b7cdf50cf667f519c62102e3120d55c7d5e7e5428821125d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/strict-square-abs-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "sum-square-product-bound-chain",
+        "source": "claim:\n    ? forall x,y,A,B R:\n        x^2+y^2 = A*B\n        =>:\n            x^2 <= A*B\n    x^2 <= x^2+y^2 = A*B\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-square-product-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6fb6e8929c85316343fc669106e35650828b4c2ace4aa74733fc0d9a419dbed4"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/sum-square-product-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "sum-square-product-bound-direct",
+        "source": "forall x,y,A,B R:\n    x^2+y^2 = A*B\n    =>:\n        x^2 <= A*B\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/sum-square-product-bound-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "86d72a064a97ccbc79283a008684dd08bfc467cbf17c1781080726605d9582e8"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/sum-square-product-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "circle-abs-endpoint-chain",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            abs(c) <= 1\n    abs(c) <= abs(1) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-abs-endpoint-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "618f0ef9cf8e0b25ae4bdb46f82da41c276ebfa96cc8072b88e38ebdde7943f7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-abs-endpoint-chain.lit"
+        ]
+      },
+      {
+        "id": "circle-abs-one-bridge",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            abs(c) <= 1\n    c^2 <= 1\n    abs(c) <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-abs-one-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b97222e8615f250d7d9e8ca92699120d05685ad8da2fb9127a0329297d56bea"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-abs-one-bridge.lit"
+        ]
+      },
+      {
+        "id": "circle-abs-squared-endpoint",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            abs(c) <= 1\n    c^2 <= 1^2\n    abs(c) <= abs(1) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-abs-squared-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc6b01e65f36f8e1b435e26b1355ab20ccb1a8b01d3991ef3f4181bda615636f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-abs-squared-endpoint.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-abs-one-bridge",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        s != 0\n        =>:\n            abs(c) < 1\n    c^2 < 1\n    abs(c) < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-abs-one-bridge.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f56c8649668ae7d5029c333cfbeeb44371a285ad5cae7aa04fee9fe8e3f20eb1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-abs-one-bridge.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-abs-squared-endpoint",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        s != 0\n        =>:\n            abs(c) < 1\n    c^2 < 1^2\n    abs(c) < abs(1) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-abs-squared-endpoint.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "432f2d444232ea97863ffd46ce9ce1913c853c4d3ef71c5138068b5c87a3f537"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-abs-squared-endpoint.lit"
+        ]
+      },
+      {
+        "id": "square-four-abs-bound",
+        "source": "forall x R:\n    x^2 <= 4\n    =>:\n        abs(x) <= 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-four-abs-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c78fa178acaa137e2244a5adf56ea814f889969cca5eb0219731360f2138c31f"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-four-abs-bound.lit"
+        ]
+      },
+      {
+        "id": "square-general-nonnegative-bound",
+        "source": "forall x,r R:\n    r >= 0\n    x^2 <= r^2\n    =>:\n        abs(x) <= r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-general-nonnegative-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c37d4b9380fae70a7df525e6903c854bc4a248ca80767803b902bf4aa840d4f5"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-general-nonnegative-bound.lit"
+        ]
+      },
+      {
+        "id": "square-unit-abs-bound",
+        "source": "forall x R:\n    x^2 <= 1\n    =>:\n        abs(x) <= 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-unit-abs-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dae9113375d03d1c18e6c9b44df49efed7a586f8009b5138d1942782f0003bbb"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-unit-abs-bound.lit"
+        ]
+      },
+      {
+        "id": "strict-square-unit-abs-bound",
+        "source": "forall x R:\n    x^2 < 1\n    =>:\n        abs(x) < 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/strict-square-unit-abs-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "380e9ce71612843ef7ed0ec8aad664d610957eea2c012d33a51da16eb0e61f5a"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/strict-square-unit-abs-bound.lit"
+        ]
+      },
+      {
+        "id": "circle-abs-two-chains",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            abs(c) <= 1\n    c^2 <= 1 = 1^2\n    abs(c) <= abs(1) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-abs-two-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bead1e0158e1d85f28819bc35d373f6b4489a606cf894eebac4b48f9644bb7d7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-abs-two-chains.lit"
+        ]
+      },
+      {
+        "id": "circle-strict-abs-two-chains",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        s != 0\n        =>:\n            abs(c) < 1\n    c^2 < 1 = 1^2\n    abs(c) < abs(1) = 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/circle-strict-abs-two-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2fd3817d2ed9fa95b4c1b9737f20e16c4cd64ee1090bc857e286e61b88e31723"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/circle-strict-abs-two-chains.lit"
+        ]
+      },
+      {
+        "id": "absolute-general-bound-chain",
+        "source": "claim:\n    ? forall x,r R:\n        r >= 0\n        x^2 <= r^2\n        =>:\n            abs(x) <= r\n    abs(x) <= abs(r) = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/absolute-general-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1de336e2966eaf11e7e764aea8bc9c8cd3fc29135db351063be86baa113a0e6d"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/absolute-general-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "absolute-general-strict-chain",
+        "source": "claim:\n    ? forall x,r R:\n        r >= 0\n        x^2 < r^2\n        =>:\n            abs(x) < r\n    abs(x) < abs(r) = r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/absolute-general-strict-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "24446da9297f2035f5a6ecb555f85499a188162d11969a0631e4afb065d8b18c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/absolute-general-strict-chain.lit"
+        ]
+      },
+      {
+        "id": "absolute-negative-radius-false",
+        "source": "forall x,r R:\n    x^2 <= r^2\n    =>:\n        abs(x) <= r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/absolute-negative-radius-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a8c1a89ee214853b6fe61f43e024e0509ef0cf8ae40a8a4577e392886eeb9d12"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/absolute-negative-radius-false.lit"
+        ]
+      },
+      {
+        "id": "absolute-weak-to-strict-false",
+        "source": "forall x,r R:\n    r >= 0\n    x^2 <= r^2\n    =>:\n        abs(x) < r\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/absolute-weak-to-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4395db01be5609a53b8e4bc402e51804d70dca9fe2c48f554d4adb4105ba1fe1"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/absolute-weak-to-strict-false.lit"
+        ]
+      },
+      {
+        "id": "order-closed-endpoint-weak",
+        "source": "forall x R:\n    x <= 1\n    =>:\n        x <= 1^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-closed-endpoint-weak.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f19991fac221f5a7970dfa2c6e5262fd774f376ebbc778180b0f20eb58d11391"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/order-closed-endpoint-weak.lit"
+        ]
+      },
+      {
+        "id": "order-closed-endpoint-strict",
+        "source": "forall x R:\n    x < 1\n    =>:\n        x < 1^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-closed-endpoint-strict.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "154253a70de0ebe2b8e7b482b5a7ec2261a9e71d3a196f8b25f7a4fbecc39180"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/order-closed-endpoint-strict.lit"
+        ]
+      },
+      {
+        "id": "order-closed-endpoint-chain",
+        "source": "claim:\n    ? forall x R:\n        x <= 1\n        =>:\n            x <= 1^2\n    x <= 1 = 1^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-closed-endpoint-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c31c01894b34e166e41fec4ab103ef3823f9748273391e5bb241cf63fe244825"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/order-closed-endpoint-chain.lit"
+        ]
+      },
+      {
+        "id": "order-closed-endpoint-four",
+        "source": "forall x R:\n    x <= 4\n    =>:\n        x <= 2^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-closed-endpoint-four.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93d78605b862c14a241f463afc9eeba35c81e5f7989219ca778acc4da494e427"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/order-closed-endpoint-four.lit"
+        ]
+      },
+      {
+        "id": "order-closed-endpoint-false",
+        "source": "forall x R:\n    x <= 4\n    =>:\n        x <= 1^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/order-closed-endpoint-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "84544a337365147d7643ffb523c7e1b6528f7dd69080639c99fc885a63dd99b7"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/order-closed-endpoint-false.lit"
+        ]
+      },
+      {
+        "id": "square-closed-endpoint-weak",
+        "source": "forall x R:\n    x^2 <= 1\n    =>:\n        x^2 <= 1^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-closed-endpoint-weak.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "690e85b1421d6ad71fccffa92f8d6e5a29c186580e67a269330f3996e910186c"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-closed-endpoint-weak.lit"
+        ]
+      },
+      {
+        "id": "square-closed-endpoint-strict",
+        "source": "forall x R:\n    x^2 < 1\n    =>:\n        x^2 < 1^2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/square-closed-endpoint-strict.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "933b7b5a4181741d531daa7fab9afb16d1db55ad6cc811e20e32476fe90624cc"
+        },
+        "stderr": "",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-14-cases/square-closed-endpoint-strict.lit"
+        ]
+      }
+    ],
+    "magnitude_repair_session": [
+      {
+        "id": "circle-abs-bound-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    =>:\n        abs(c) <= 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "7fef2bb47be421475494a5f1dfd03e12929338121d778b981e9d25548f1d8298",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    =>:\\n        abs (c) <= 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    =>:\\n        abs (c) <= 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-abs-two-chains",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        =>:\n            abs(c) <= 1\n    c^2 <= 1 = 1^2\n    abs(c) <= abs(1) = 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "02e9c5db361bf9c4e5de14cfba3bccc9fa6df05562c6f607a0853dbc2ba64c35",
+          "excerpt": "... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-strict-abs-direct",
+        "source": "forall c,s R:\n    c^2+s^2 = 1\n    s != 0\n    =>:\n        abs(c) < 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ee27133337de07dc2f709afba939778cf6bc4dfd9dd6243074657fdb0cc29278",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    s != 0\\n    =>:\\n        abs (c) < 1\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall c, s R:\\n    c ^ 2 + s ^ 2 = 1\\n    s != 0\\n    =>:\\n        abs (c) < 1\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        },
+        "same_live_session": true
+      },
+      {
+        "id": "circle-strict-abs-two-chains",
+        "source": "claim:\n    ? forall c,s R:\n        c^2+s^2 = 1\n        s != 0\n        =>:\n            abs(c) < 1\n    c^2 < 1 = 1^2\n    abs(c) < abs(1) = 1",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        },
+        "same_live_session": true
+      }
+    ],
+    "scope": "Fresh release immutable binary; isolated scalar interfaces and exact reduced dot/det definitions, no full enclosing geometry verification.",
+    "discarded_nomination": "Generic closed numeric endpoint transport is supported; only composition with deriving a square-sum bound misses. Do not propose duplicate endpoint normalization."
+  }
+}

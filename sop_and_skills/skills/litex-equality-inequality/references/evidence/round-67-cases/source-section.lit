@@ -1,0 +1,33 @@
+have fn complex_conjugate(z C) C = re(z) - img(z) * i
+
+i^2 = -1
+
+re(3 + 4 * i) = 3
+
+img(3 + 4 * i) = 4
+
+C_abs(3 + 4 * i) = sqrt(re(3 + 4 * i)^2 + img(3 + 4 * i)^2)
+
+re(3 + 4 * i)^2 + img(3 + 4 * i)^2 = 3^2 + 4^2
+
+C_abs(3 + 4 * i) = sqrt(re(3 + 4 * i)^2 + img(3 + 4 * i)^2) = sqrt(3^2 + 4^2) = sqrt(25) = 5
+
+# Application: conjugation keeps the real coordinate and reverses the
+# imaginary coordinate. The canonical a+b*i form bridges re and img.
+
+complex_conjugate(3 + 4 * i) = re(3 + 4 * i) - img(3 + 4 * i) * i = 3 + (-4) * i
+
+re(3 + (-4) * i) = 3
+
+img(3 + (-4) * i) = -4
+
+re(complex_conjugate(3 + 4 * i)) = re(3 + (-4) * i) = 3
+
+img(complex_conjugate(3 + 4 * i)) = img(3 + (-4) * i) = -4
+
+forall z C:
+    z = re(z) + img(z) * i
+    complex_conjugate(z) = re(z) - img(z) * i = re(z) + (-img(z)) * i
+    re(complex_conjugate(z)) = re(re(z) + (-img(z)) * i) = re(z)
+    img(complex_conjugate(z)) = img(re(z) + (-img(z)) * i) = -img(z)
+

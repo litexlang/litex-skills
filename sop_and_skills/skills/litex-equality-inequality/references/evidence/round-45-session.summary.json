@@ -1,0 +1,105 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-45-session.json",
+  "original_sha256": "38d4ad30c91ae62f26eec99570a1967599473625afbe07263b3534839e73a335",
+  "original_bytes": 26673,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "id": "initial-0",
+      "source": "thm r45_sqrt_two_newton_gap_bound_positive:\n    ? forall n N:\n        4 * (1 / 4)^(2^n) $in R+\n    2^n $in R\n    1 / 4 > 0\n    (1 / 4)^(2^n) > 0\n    4 * (1 / 4)^(2^n) > 0\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "2e3a646b6fdf829b9d2b494d9209310727c70c338b555f8becf9c7a7c8259127",
+        "excerpt": "thm r45_sqrt_two_newton_gap_bound_positive:\r\n    ? forall n N:\r\n        4 * (1 / 4)^(2^n) $in R+\r\n    2^n $in R\r\n    1 / 4 > 0\r\n    (1 / 4)^(2^n) > 0\r\n    4 * (1 / 4)^(2^n) > 0\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "initial-1",
+      "source": "have fn r45_sqrt_two_newton_gap_bound(n N) R+ = 4 * (1 / 4)^(2^n)\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f31cd912fbfa6cfccb58bf3b2c59ed3b65099013dc888884c6a59ae69764541e",
+        "excerpt": "have fn r45_sqrt_two_newton_gap_bound(n N) R+ = 4 * (1 / 4)^(2^n)\r\n\r\n\r\nsuccess\r\nlitex> litex> litex> "
+      }
+    },
+    {
+      "id": "initial-2",
+      "source": "thm r45_sqrt_two_newton_gap_bound_step:\n    ? forall n N:\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\n    have t R+ = (1 / 4)^(2^n)\n    r45_sqrt_two_newton_gap_bound(n) = 4 * (1 / 4)^(2^n) = 4 * t\n    2^(n + 1) = 2^n * 2^1\n    2^1 = 2\n    2^(n + 1) = 2^n * 2\n    (1 / 4)^(2^(n + 1)) = (1 / 4)^(2^n * 2) = ((1 / 4)^(2^n))^2 = t^2\n    r45_sqrt_two_newton_gap_bound(n + 1) = 4 * (1 / 4)^(2^(n + 1)) = 4 * t^2\n    r45_sqrt_two_newton_gap_bound(n)^2 / 4 = (4 * t)^2 / 4 = 16 * t^2 / 4 = 4 * t^2\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "cd6b1b717d4a806198abfa67c915b87d2beeecb5986a28c2844bd205b5d329bb",
+        "excerpt": "thm r45_sqrt_two_newton_gap_bound_step:\r\n    ? forall n N:\r\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\r\n    have t R+ = (1 / 4)^(2^n)\r\n    r45_sqrt_two_newton_gap_bound(n) = 4 * (1 / 4)^(2^n) = 4 * t\r\n    2^(n + 1) = 2^n * 2^1\r\n    2^1 = 2\r\n    2^(n + 1) = 2^n * 2\r\n    (1 / 4)^(2^(n + 1)) = (1 / 4)^(2^n * 2) = ((1 / 4)^(2^n))^2 = t^2\r\n    r45_sqrt_two_newton_gap_bound(n + 1) = 4 * (1 / 4)^(2^(n + 1)) = 4 * t^2\r\n    r45_sqrt_two_newton_gap_bound(n)^2 / 4 = (4 * t)^2 / 4 = 16 * t^2 / 4 = 4 * t^2\r\n\r\n\r\n... ... ... ... ... ... ... ... ... ... ... success\r\n"
+      }
+    },
+    {
+      "id": "initial-3",
+      "source": "thm r45_bound_step_short:\n    ? forall n N:\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\n    have t R+ = (1/4)^(2^n)\n    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t\n    2^(n+1)=2^n*2^1=2^n*2\n    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "d21eb8e60ebac1798939bc1e3081f7bf851f4c11ade76c864c65764564f81936",
+        "excerpt": "thm r45_bound_step_short:\r\n    ? forall n N:\r\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\r\n    have t R+ = (1/4)^(2^n)\r\n    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t\r\n    2^(n+1)=2^n*2^1=2^n*2\r\n    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4\r\n\r\n\r\n... ... ... ... ... ... ... Warning: truncated output (original token count: 63155)\nTotal output lines: 4622\n\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"langua"
+      }
+    },
+    {
+      "id": "initial-4",
+      "source": {
+        "text_omitted": true,
+        "sha256": "587c534f5312ec146c8855afca4714af4d4e6128c270971cdf463c84d2aa02ec",
+        "characters": 2909,
+        "excerpt": "thm r45_sqrt_two_newton_gap_is_bounded:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n) <= r45_sqrt_two_newton_gap_bound(n)\n    by induc k from 0:\n        ? r44_sqrt_two_newton_gap(k) <= r45_sqrt_two_newton_gap_bound(k)\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0) = 1\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)) = r44_square_root_two_residual(1)\n            r44_square_root_two_residual(1) = -1\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)) = -1\n            abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate"
+      },
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6c594f8566c93547b147388c8dc6e3f26c578340d1cedc14b8c7438a5129ea69",
+        "excerpt": "Warning: truncated output (original token count: 775)\nTotal output lines: 43\n\nthm r45_sqrt_two_newton_gap_is_bounded:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n) <= r45_sqrt_two_newton_gap_bound(n)\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_gap(k) <= r45_sqrt_two_newton_gap_bound(k)\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0) = 1\r\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)) = r44_square_root_two_residual(1)\r\n            r44_square_root_two_residual(1) = -1\r\n            r44_square_root_two_residual(r44_sqrt_two_newton_it"
+      }
+    },
+    {
+      "id": "bound-step-five-statements",
+      "source": "thm r45_bound_step_five:\n    ? forall n N:\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\n    have t R+ = (1/4)^(2^n)\n    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t\n    2^(n+1)=2^n*2^1=2^n*2\n    (1/4)^(2^(n+1))=(1/4)^(2^n*2)=((1/4)^(2^n))^2=t^2\n    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "84932c8ca199c57d32c849467661e1bd490983d88c1cb28052facc2c1bae16b3",
+        "excerpt": "thm r45_bound_step_five:\r\n    ? forall n N:\r\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\r\n    have t R+ = (1/4)^(2^n)\r\n    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t\r\n    2^(n+1)=2^n*2^1=2^n*2\r\n    (1/4)^(2^(n+1))=(1/4)^(2^n*2)=((1/4)^(2^n))^2=t^2\r\n    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4\r\n\r\n\r\n... ... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "final-bound-short",
+      "source": "thm r45_final_short:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n)<=r45_sqrt_two_newton_gap_bound(n)\n    by induc k from 0:\n        ? r44_sqrt_two_newton_gap(k)<=r45_sqrt_two_newton_gap_bound(k)\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0)=1\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0))=r44_square_root_two_residual(1)=-1\n            r44_sqrt_two_newton_gap(0)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)))=abs(-1)=1\n            r45_sqrt_two_newton_gap_bound(0)=4*(1/4)^(2^0)=4*(1/4)=1\n        ? induc:\n            r44_sqrt_two_newton_gap(k)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(k)))>=0\n            r45_sqrt_two_newton_gap_bound(k)-r44_sqrt_two_newton_gap(k)>=0\n            r45_sqrt_two_newton_gap_bound(k)+r44_sqrt_two_newton_gap(k)>=0\n            r45_sqrt_two_newton_gap_bound(k)^2-r44_sqrt_two_newton_gap(k)^2=(r45_sqrt_two_newton_gap_bound(k)-r44_sqrt_two_newton_gap(k))*(r45_sqrt_two_newton_gap_bound(k)+r44_sqrt_two_newton_gap(k))>=0\n            r44_sqrt_two_newton_gap(k)^2<=r45_sqrt_two_newton_gap_bound(k)^2\n            release thm r44_sqrt_two_newton_gap_contracts_quadratically(k)\n            release thm r45_sqrt_two_newton_gap_bound_step(k)\n            r44_sqrt_two_newton_gap(k+1)<=r44_sqrt_two_newton_gap(k)^2/4<=r45_sqrt_two_newton_gap_bound(k)^2/4=r45_sqrt_two_newton_gap_bound(k+1)\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "13b7dcca330b36f87b9cd1cd1a2a2967a040e25e95ea66ad54eae94dde64198d",
+        "excerpt": "thm r45_final_short:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n)<=r45_sqrt_two_newton_gap_bound(n)\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_gap(k)<=r45_sqrt_two_newton_gap_bound(k)\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0)=1\r\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0))=r44_square_root_two_residual(1)=-1\r\n            r44_sqrt_two_newton_gap(0)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)))=abs(-1)=1\r\n            r45_sqrt_two_newton_gap_bound(0)=4*(1/4)^(2^0)=4*(1/4)=1\r\n        ? induc:\r\n           "
+      }
+    },
+    {
+      "id": "bound-step-delete-exponent",
+      "source": "thm r45_delete_exponent:\n    ? forall n N:\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\n    have t R+ = (1/4)^(2^n)\n    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t\n    (1/4)^(2^(n+1))=(1/4)^(2^n*2)=((1/4)^(2^n))^2=t^2\n    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "cb5480891ae1f3578b070233d60d2fc149208a783b30356dd4a5a7043716d0c4",
+        "excerpt": "thm r45_delete_exponent:\r\n    ? forall n N:\r\n        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4\r\n    have t R+ = (1/4)^(2^n)\r\n    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t\r\n    (1/4)^(2^(n+1))=(1/4)^(2^n*2)=((1/4)^(2^n))^2=t^2\r\n    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4\r\n\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> litex> "
+      }
+    },
+    {
+      "id": "final-delete-gap-sign",
+      "source": "thm r45_final_delete_sign:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n)<=r45_sqrt_two_newton_gap_bound(n)\n    by induc k from 0:\n        ? r44_sqrt_two_newton_gap(k)<=r45_sqrt_two_newton_gap_bound(k)\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0)=1\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0))=r44_square_root_two_residual(1)=-1\n            r44_sqrt_two_newton_gap(0)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)))=abs(-1)=1\n            r45_sqrt_two_newton_gap_bound(0)=4*(1/4)^(2^0)=4*(1/4)=1\n        ? induc:\n            r45_sqrt_two_newton_gap_bound(k)-r44_sqrt_two_newton_gap(k)>=0\n            r45_sqrt_two_newton_gap_bound(k)+r44_sqrt_two_newton_gap(k)>=0\n            r45_sqrt_two_newton_gap_bound(k)^2-r44_sqrt_two_newton_gap(k)^2=(r45_sqrt_two_newton_gap_bound(k)-r44_sqrt_two_newton_gap(k))*(r45_sqrt_two_newton_gap_bound(k)+r44_sqrt_two_newton_gap(k))>=0\n            r44_sqrt_two_newton_gap(k)^2<=r45_sqrt_two_newton_gap_bound(k)^2\n            release thm r44_sqrt_two_newton_gap_contracts_quadratically(k)\n            release thm r45_sqrt_two_newton_gap_bound_step(k)\n            r44_sqrt_two_newton_gap(k+1)<=r44_sqrt_two_newton_gap(k)^2/4<=r45_sqrt_two_newton_gap_bound(k)^2/4=r45_sqrt_two_newton_gap_bound(k+1)\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "c817b9b101a0b3d9e9a2c003c7b603b13c88601e749e77fd92d31cd95a76923b",
+        "excerpt": "thm r45_final_delete_sign:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n)<=r45_sqrt_two_newton_gap_bound(n)\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_gap(k)<=r45_sqrt_two_newton_gap_bound(k)\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0)=1\r\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0))=r44_square_root_two_residual(1)=-1\r\n            r44_sqrt_two_newton_gap(0)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)))=abs(-1)=1\r\n            r45_sqrt_two_newton_gap_bound(0)=4*(1/4)^(2^0)=4*(1/4)=1\r\n        ? induc:\r\n     "
+      }
+    },
+    {
+      "id": "final-false-half-bound",
+      "source": "thm r45_final_false_half:\n    ? forall n N:\n        r44_sqrt_two_newton_gap(n)<=r45_sqrt_two_newton_gap_bound(n)/2\n    by induc k from 0:\n        ? r44_sqrt_two_newton_gap(k)<=r45_sqrt_two_newton_gap_bound(k)\n        ? from k = 0:\n            r44_sqrt_two_newton_iterate(0)=1\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0))=r44_square_root_two_residual(1)=-1\n            r44_sqrt_two_newton_gap(0)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)))=abs(-1)=1\n            r45_sqrt_two_newton_gap_bound(0)=4*(1/4)^(2^0)=4*(1/4)=1\n        ? induc:\n            r44_sqrt_two_newton_gap(k)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(k)))>=0\n            r45_sqrt_two_newton_gap_bound(k)-r44_sqrt_two_newton_gap(k)>=0\n            r45_sqrt_two_newton_gap_bound(k)+r44_sqrt_two_newton_gap(k)>=0\n            r45_sqrt_two_newton_gap_bound(k)^2-r44_sqrt_two_newton_gap(k)^2=(r45_sqrt_two_newton_gap_bound(k)-r44_sqrt_two_newton_gap(k))*(r45_sqrt_two_newton_gap_bound(k)+r44_sqrt_two_newton_gap(k))>=0\n            r44_sqrt_two_newton_gap(k)^2<=r45_sqrt_two_newton_gap_bound(k)^2\n            release thm r44_sqrt_two_newton_gap_contracts_quadratically(k)\n            release thm r45_sqrt_two_newton_gap_bound_step(k)\n            r44_sqrt_two_newton_gap(k+1)<=r44_sqrt_two_newton_gap(k)^2/4<=r45_sqrt_two_newton_gap_bound(k)^2/4=r45_sqrt_two_newton_gap_bound(k+1)\n",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "93156ebd4f7d09a095e3736b22b595622415cc56eb5cf339a9a0b194ccdf1f83",
+        "excerpt": "thm r45_final_false_half:\r\n    ? forall n N:\r\n        r44_sqrt_two_newton_gap(n)<=r45_sqrt_two_newton_gap_bound(n)/2\r\n    by induc k from 0:\r\n        ? r44_sqrt_two_newton_gap(k)<=r45_sqrt_two_newton_gap_bound(k)\r\n        ? from k = 0:\r\n            r44_sqrt_two_newton_iterate(0)=1\r\n            r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0))=r44_square_root_two_residual(1)=-1\r\n            r44_sqrt_two_newton_gap(0)=abs(r44_square_root_two_residual(r44_sqrt_two_newton_iterate(0)))=abs(-1)=1\r\n            r45_sqrt_two_newton_gap_bound(0)=4*(1/4)^(2^0)=4*(1/4)=1\r\n        ? induc:\r\n    "
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+thm scalar_commutative_probe22:
+    ? forall lhs,rhs R:
+        lhs*rhs=rhs*lhs

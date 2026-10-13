@@ -1,0 +1,7 @@
+release obj def chap09::dot3
+release obj def chap09::norm3_sq
+
+prop perpendicular3(u,v cart(R,R,R)):
+    chap09::dot3(u,v)=0
+
+$perpendicular3((1,0,0),(0,1,0))

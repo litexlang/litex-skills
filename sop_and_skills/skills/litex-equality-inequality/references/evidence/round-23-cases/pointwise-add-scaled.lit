@@ -1,0 +1,2 @@
+forall u,v fn(t R) R,a,x R:
+    fn(k R) R {u(k)+v(k)}(x)*a=(u(x)+v(x))*a

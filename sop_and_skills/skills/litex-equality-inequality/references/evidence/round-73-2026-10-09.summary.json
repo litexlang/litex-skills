@@ -1,0 +1,567 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-73-2026-10-09.json",
+  "original_sha256": "617340b77bd0a609d9fef307d50f9294cc675b9b57deb1a73cdaa10e1764f04e",
+  "original_bytes": 430917,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "6f119c3d7067a8f7a023ea88a08952b73bf6070eeab0b7ff0a1b35b01bf5cd54",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/source-theorem.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/source-theorem.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f7fac3fd96502e2914b0515821298985db06830781f833c06fa3c9499fbed66"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/source-theorem.lit"
+        ]
+      },
+      {
+        "id": "chain-only",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)-square_tangent_at_three(x)=x^2-(9+6*(x-3))=(x-3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/chain-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/chain-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d9dd3e09cba1743c08756e1b1542f947d5d9bc7411e2f0d7202ce283734828cc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/chain-only.lit"
+        ]
+      },
+      {
+        "id": "values-only",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)=x^2\n    square_tangent_at_three(x)=9+6*(x-3)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/values-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/values-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c976feed46864bdd1bc86506a415db8760e72501a2866250084707b500a9f83f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/values-only.lit"
+        ]
+      },
+      {
+        "id": "direct-equality",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nforall x R:\n    square_function(x)-square_tangent_at_three(x)=(x-3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/direct-equality.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/direct-equality.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ef142f3cb880098486f009ec761499680b10e1319f28046eacc5becb44eaa5e8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/direct-equality.lit"
+        ]
+      },
+      {
+        "id": "empty-theorem",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/empty-theorem.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/empty-theorem.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2176fd638a01bcb4f048233e139354256198fcfc4c3c4f802085c63c40e59f92"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/empty-theorem.lit"
+        ]
+      },
+      {
+        "id": "lower-bound-source-route",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2\n    square_tangent_at_three(x)<=square_function(x)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/lower-bound-source-route.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/lower-bound-source-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b786004cd6815dbda1d187e81d0d0f0be77cf30e1d26bf10088f1499fa7ddca3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/lower-bound-source-route.lit"
+        ]
+      },
+      {
+        "id": "lower-bound-theorem-call-only",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/lower-bound-theorem-call-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/lower-bound-theorem-call-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "38f2ddc39e3c9cdb81ea94175ec94cd2dce9af1865c763abda281a9059a99e2e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/lower-bound-theorem-call-only.lit"
+        ]
+      },
+      {
+        "id": "lower-bound-bare",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nforall x R:\n    square_tangent_at_three(x)<=square_function(x)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/lower-bound-bare.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/lower-bound-bare.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "982023fbdc87998b7079fcf8348246f2a87deceae696d7de7d9ecfde61a097a7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/lower-bound-bare.lit"
+        ]
+      },
+      {
+        "id": "wrong-error-sign",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = -(x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/wrong-error-sign.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/wrong-error-sign.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee73d850d384a77fc8f247627ebdb60ff97f5ad120f2db0ece9afe7e670dc2c6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/wrong-error-sign.lit"
+        ]
+      },
+      {
+        "id": "false-strict-lower-bound",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n\nforall x R:\n    square_tangent_at_three(x)<square_function(x)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/false-strict-lower-bound.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/false-strict-lower-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d103a75896eef772b1aba0fe302fcde35852d1fb212305ca3f846bac03188d51"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/false-strict-lower-bound.lit"
+        ]
+      },
+      {
+        "id": "numeric-contact",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nsquare_function(3)=9\nsquare_tangent_at_three(3)=9\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/numeric-contact.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/numeric-contact.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "988cc5a7b1694cef6af87b0b221b79148b595f253ac2bdfe96f2d3180b377027"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/numeric-contact.lit"
+        ]
+      },
+      {
+        "id": "numeric-gap",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nsquare_function(4)-square_tangent_at_three(4)=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/numeric-gap.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/numeric-gap.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8b5c17969b183bb157cfa5b6f35ccd6d5b34b68408af042fabd8f4efe398ec65"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/numeric-gap.lit"
+        ]
+      },
+      {
+        "id": "delete-square-value",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/delete-square-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/delete-square-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8a12ce172bcd2b5d558bead7b9ecceab493cbf0300a8737964a6fe3f74f7a8ba"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/delete-square-value.lit"
+        ]
+      },
+      {
+        "id": "delete-tangent-value",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/delete-tangent-value.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/delete-tangent-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2c7c27e0cdd46396af6c2730f86fc11d0d9d4c7244160910d5cde20026330d53"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/delete-tangent-value.lit"
+        ]
+      },
+      {
+        "id": "short-theorem-lower-bound-no-echo",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)=x^2\n    square_tangent_at_three(x)=9+6*(x-3)\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/short-theorem-lower-bound-no-echo.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/short-theorem-lower-bound-no-echo.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cedaf6e3f6001973efccb453ee3b6e2d4b10ac12f54e72f2cc6063c1e0c972f0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/short-theorem-lower-bound-no-echo.lit"
+        ]
+      },
+      {
+        "id": "short-theorem-lower-bound-error-chain",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nthm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)=x^2\n    square_tangent_at_three(x)=9+6*(x-3)\n\nthm tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2=square_function(x)-square_tangent_at_three(x)\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/short-theorem-lower-bound-error-chain.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/short-theorem-lower-bound-error-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "19ed48cbc3a83a42c70c3c3f8e5bee6699086dd711362841e04d076f462e67b8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/short-theorem-lower-bound-error-chain.lit"
+        ]
+      },
+      {
+        "id": "numeric-gap-with-values",
+        "source": "have fn square_function(x R) R = x^2\nhave fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\nsquare_function(4)=16\nsquare_tangent_at_three(4)=15\nsquare_function(4)-square_tangent_at_three(4)=1\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/numeric-gap-with-values.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-73-cases/numeric-gap-with-values.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b6ceee7aec88fb35df8464defa3f969ab68373dac233114fb4bc0297ea0b1197"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round73-cases/numeric-gap-with-values.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 17,
+      "accepted": 7,
+      "normal_rejections": 10
+    },
+    "scope": "Exact calculus showcase square/tangent definitions and algebraic remainder theorem, isolated from derivative predicates; labelled lower-bound consumer probes."
+  }
+}

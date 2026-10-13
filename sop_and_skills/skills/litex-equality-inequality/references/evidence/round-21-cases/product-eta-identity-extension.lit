@@ -1,0 +1,7 @@
+claim:
+    ? forall f fn(k N) R:
+        f=fn(eta_index N) R {f(eta_index)}
+    by fn_extension:
+        ? f=fn(eta_index N) R {f(eta_index)}
+        forall source_index N:
+            f(source_index)=fn(eta_index N) R {f(eta_index)}(source_index)

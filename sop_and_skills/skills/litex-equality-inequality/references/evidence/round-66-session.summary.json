@@ -1,0 +1,46 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-66-session.json",
+  "original_sha256": "93a23673085eab0252e0a9b78c9c23d40630d2007682da6d60fa5747d50adf5b",
+  "original_bytes": 1852,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r66_radians(theta R) R = theta*pi/180",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8e985a3113cd2b04d6576c5a3563123308f674d9322e21f4a26b42a5457cb2a7",
+        "excerpt": "have fn r66_radians(theta R) R = theta*pi/180\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round66 needed."
+    },
+    {
+      "source": "r66_radians(60)=pi/3",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "f45a7d192a18b1fa5cb78599531921f736cf34d0e948f7536733c9f42b74aa29",
+        "excerpt": "r66_radians(60)=pi/3\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r66_radians(60) = pi / 3\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r66_radians(60) = pi / 3\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round66 owns acceptance."
+    },
+    {
+      "source": "r66_radians(60)=pi/2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "45b38e71bed3e39d39e325f86b5a6d35d8a210d8decae14027c7755cf2e08131",
+        "excerpt": "r66_radians(60)=pi/2\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r66_radians(60) = pi / 2\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r66_radians(60) = pi / 2\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round66 owns acceptance."
+    },
+    {
+      "source": "r66_radians(60)=60*pi/180=pi/3",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b0f36ee21abfc733d243ca65646bb0e50e46f4f810e005a94a9b4fb82b110090",
+        "excerpt": "r66_radians(60)=60*pi/180=pi/3\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; literal source-chain precheck."
+    }
+  ]
+}

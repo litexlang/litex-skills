@@ -1,0 +1,4 @@
+interface:
+  display_name: "Litex Research Writer"
+  short_description: "Write rigorous Litex research copy."
+  default_prompt: "Use $litex-research-writer to build this explanation around one small runnable tracer example; for a kernel release or major migration, ground claims in its durable commented-before and verified-now acceptance artifact."

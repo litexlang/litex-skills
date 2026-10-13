@@ -1,0 +1,5 @@
+forall a,b,x,y R,epsilon R+:
+    abs(a-x)<epsilon
+    abs(b-y)<epsilon
+    =>:
+        abs(min(a,b)-min(x,y))<epsilon

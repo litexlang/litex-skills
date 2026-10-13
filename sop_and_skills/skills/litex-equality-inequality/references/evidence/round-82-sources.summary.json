@@ -1,0 +1,55 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-82-sources.json",
+  "original_sha256": "a927d6bf6995eea289cf3c773609fd555a3a8e70861a6c8069deaddc52089bf4",
+  "original_bytes": 3867,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/12_ordinary_differential_equations_in_nutshell/main.lit",
+    "source_sha256": "abd26bafea5fbde10d30ebb6b91fe7bab852bc12f172a89126c3fa861e072b56",
+    "scope": "Exact quadratic family and original zero-initial-value parameter theorem; arbitrary-point variant separately labelled derived consumer, no derivative interface claim.",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0\n    quadratic_solution(c, 0) = 0^2 + c = c\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/source-theorem.lit"
+      },
+      {
+        "id": "value-only",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0\n    quadratic_solution(c,0)=c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/value-only.lit"
+      },
+      {
+        "id": "empty-theorem",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/empty-theorem.lit"
+      },
+      {
+        "id": "direct-parameter",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nforall c,y0 R:\n    quadratic_solution(c,0)=y0\n    =>:\n        c=y0\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/direct-parameter.lit"
+      },
+      {
+        "id": "wrong-shifted-parameter",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0+1\n    quadratic_solution(c,0)=c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/wrong-shifted-parameter.lit"
+      },
+      {
+        "id": "missing-initial-condition",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        =>:\n            c = y0\n    quadratic_solution(c, 0) = 0^2 + c = c\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/missing-initial-condition.lit"
+      },
+      {
+        "id": "numeric-origin",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nquadratic_solution(3,0)=3\nquadratic_solution(-2,0)=-2\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/numeric-origin.lit"
+      },
+      {
+        "id": "arbitrary-initial-point-consumer",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm arbitrary_initial_parameter:\n    ? forall c,x0,y0 R:\n        quadratic_solution(c,x0)=y0\n        =>:\n            c=y0-x0^2\n    quadratic_solution(c,x0)=x0^2+c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/arbitrary-initial-point-consumer.lit"
+      }
+    ]
+  }
+}

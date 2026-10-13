@@ -1,0 +1,2 @@
+forall f fn(x N+) R:
+    f(0) $in R

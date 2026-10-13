@@ -1,0 +1,2 @@
+forall c R,m Z:
+    fn(k Z) R {c}(m)*0=0

@@ -1,0 +1,14 @@
+claim:
+    ? forall x,y R:
+        x != 0
+        y != 0
+        =>:
+            abs(1/x-1/y) = abs(x-y)/(abs(x)*abs(y))
+    x*y != 0
+    abs(x*y) != 0
+    abs(x) != 0
+    abs(y) != 0
+    abs(x)*abs(y) != 0
+    (1/x-1/y)*(x*y) = y-x
+    abs(1/x-1/y)*abs(x*y) = abs((1/x-1/y)*(x*y)) = abs(y-x) = abs(x-y)
+    abs(1/x-1/y) = (abs(1/x-1/y)*abs(x*y))/abs(x*y) = abs(x-y)/abs(x*y) = abs(x-y)/(abs(x)*abs(y))

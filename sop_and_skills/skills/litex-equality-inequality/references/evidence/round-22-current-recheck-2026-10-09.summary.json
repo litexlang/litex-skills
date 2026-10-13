@@ -1,0 +1,592 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-22-current-recheck-2026-10-09.json",
+  "original_sha256": "5a4849abd19696cc320bfb4953288eeb523a20e9a27c21f6b06a46916b6c2e8a",
+  "original_bytes": 38595,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+    "sha256": "004fbde6816f2a13646973f8e12c525bc6f017c736900dd565fba04ad66a486f",
+    "compiler_hash_at_build_completion": "a04271a40cc902f18dc8bd67d3e7e7a62a524d217013e24d8517a394b111f8d4",
+    "build_log": "build-round-23.log",
+    "cases": [
+      {
+        "id": "anonymous-call-product-known-values",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-product-known-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "642f5612844e0ceac1912e95278666dc494561bed5db7d76480c79d5868bb787"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "named-call-product-known-values",
+        "source": "forall c R,m Z,f fn(k Z) R:\n    f(m)=c\n    f(m+1)=c\n    =>:\n        f(m)*f(m+1)=c*c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/named-call-product-known-values.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5df8728caf686fa7dc1181fc74afb34068fd1647194bfde844054be090081d03"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-scaled-known-value",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    =>:\n        fn(k Z) R {c}(m)*d=c*d\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-scaled-known-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "16036b8e1efbcf24e6c311423c6018471f2317d004a9d8a1611f1b9ebb5d88db"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-sum-known-values",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)+fn(k Z) R {c}(m+1)=c+c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-sum-known-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5dffd695546a760cd3db68e139bb2074e98cc78093db61087f39ba27e1ce6c2b"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-different-binders",
+        "source": "forall c R,m Z:\n    fn(first_index Z) R {c}(m)=c\n    fn(second_index Z) R {c}(m+1)=c\n    =>:\n        fn(third_index Z) R {c}(m)*fn(fourth_index Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-different-binders.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "119faf035055554861a6780e7f5f3162d5eb6bb8f0bf2adf09c3247470300443"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "identity-call-product-known-values",
+        "source": "forall m Z:\n    fn(k Z) R {k}(m)=m\n    fn(k Z) R {k}(m+1)=m+1\n    =>:\n        fn(k Z) R {k}(m)*fn(k Z) R {k}(m+1)=m*(m+1)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/identity-call-product-known-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f4ad37e79e4ccffc6c0717212de85f952ee1f036a4082f7f85b758945511390"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-closed-indices",
+        "source": "forall c R:\n    fn(k Z) R {c}(0)=c\n    fn(k Z) R {c}(1)=c\n    =>:\n        fn(k Z) R {c}(0)*fn(k Z) R {c}(1)=c*c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-closed-indices.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "91819fe332460da2384966de75145e31f4aeab8e8736939ae5004d27e13e4358"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-two-captures",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {d}(m+1)=d\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*d\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-two-captures.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52f7f82d3da15bc18a3ec75ca31e6d85f68bd27c4923002072a0ea2c71c176ea"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-two-captures-false",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {d}(m+1)=d\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {d}(m+1)=c*c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-two-captures-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "33d89572c2d7c67fcdb5bb1a04b8f57349e21894747c778e1bf62b566a58df65"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-product-wrong-result",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n    fn(k Z) R {c}(m+1)=c\n    =>:\n        fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c+1\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-product-wrong-result.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3d74c91a6fe093b9b37d70dc5a6cf292ee0fb8a43e0967b4df2dded54dbdb302"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-domain-control",
+        "source": "forall c R:\n    fn(k N+) R {c}(0)=c\n    =>:\n        fn(k N+) R {c}(0)*2=c*2\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-domain-control.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "963a1a553fd1ea2877856f7c8f0c942f5b42d1809081fdb4fdb5644323e7a76d"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "scalar-mul-congruence-interface",
+        "source": "thm scalar_mul_congruence_probe22:\n    ? forall lhs,rhs,factor R:\n        lhs=rhs\n        =>:\n            lhs*factor=rhs*factor\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/scalar-mul-congruence-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "adc8930e34ab23f9cb90e09328d110643e8e695f1e2a709947aa2d6848a0262d"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-scaled-interface-author",
+        "source": "thm scalar_mul_congruence_probe22:\n    ? forall lhs,rhs,factor R:\n        lhs=rhs\n        =>:\n            lhs*factor=rhs*factor\n\nclaim:\n    ? forall c,d R,m Z:\n        fn(k Z) R {c}(m)=c\n        =>:\n            fn(k Z) R {c}(m)*d=c*d\n    by thm scalar_mul_congruence_probe22(fn(k Z) R {c}(m),c,d) => fn(k Z) R {c}(m)*d=c*d\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-scaled-interface-author.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3fa564eddd134bd9f87d08fcbf23598ebbebb59e3820a67fe834312daf58fcc8"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "scalar-product-congruence-interface",
+        "source": "thm scalar_product_congruence_probe22:\n    ? forall lhs1,rhs1,lhs2,rhs2 R:\n        lhs1=rhs1\n        lhs2=rhs2\n        =>:\n            lhs1*lhs2=rhs1*rhs2\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/scalar-product-congruence-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2119de06895b15b3021589218bbd71ae213b9fefc7a3a829bdc48c51b5015ca9"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-product-interface-author",
+        "source": "thm scalar_product_congruence_probe22:\n    ? forall lhs1,rhs1,lhs2,rhs2 R:\n        lhs1=rhs1\n        lhs2=rhs2\n        =>:\n            lhs1*lhs2=rhs1*rhs2\n\nclaim:\n    ? forall c R,m Z:\n        fn(k Z) R {c}(m)=c\n        fn(k Z) R {c}(m+1)=c\n        =>:\n            fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n    by thm scalar_product_congruence_probe22(fn(k Z) R {c}(m),c,fn(k Z) R {c}(m+1),c) => fn(k Z) R {c}(m)*fn(k Z) R {c}(m+1)=c*c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-product-interface-author.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "833729b66c55c9cd6cfab54f7ed579dd2ae0cbbb1c7f6a1651b1b1ba1e2fdc8e"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-multiplication-zero",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)*0=0\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-multiplication-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "20083cc5639d2920b78a94f310c009c8c68f32ece9f39107d83f2d31c0fba303"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-multiplication-commutes",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-multiplication-commutes.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "24107e2d74dab42aaec13e1d62d26ec912b3fd8d4ada812368635c52738f4956"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-beta-direct",
+        "source": "forall c R,m Z:\n    fn(k Z) R {c}(m)=c\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-beta-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f9ae05225adc98937d44313e9c10a3d0e7e5fef97587f849a05e0224aea8d44a"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-alpha-equality",
+        "source": "forall c R,m Z:\n    fn(first_index Z) R {c}(m)=fn(second_index Z) R {c}(m)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-alpha-equality.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "98052207f8086b3e0c03069fe8a01a3158b571c1cdcc87dd2ca94c8a66850d49"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-capture-equality-false",
+        "source": "forall c,d R,m Z:\n    fn(k Z) R {c}(m)=fn(k Z) R {d}(m)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-capture-equality-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "336548f361fcd8bf6494bf44ed893fa9825dfc8810d93e756c327aa281895463"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-argument-equality-false",
+        "source": "forall m Z:\n    fn(k Z) R {k}(m)=fn(k Z) R {k}(m+1)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-argument-equality-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "839919c8922481d036de7ebe42552ae071081150a0d1851b88dc6b25ab3ceb1d"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "anonymous-call-distribution-corrected",
+        "source": "forall c,d,right_addend R,m Z:\n    fn(k Z) R {c}(m)*(d+right_addend)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*right_addend\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-distribution-corrected.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6aec4d5f85973b16eb350cb08dfcb26131f81eacea5f1d4158a4700722338968"
+        },
+        "previous_success": false
+      },
+      {
+        "id": "named-call-multiplication-commutes",
+        "source": "forall d R,m Z,f fn(k Z) R:\n    f(m)*d=d*f(m)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/named-call-multiplication-commutes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a36d757671874ef26d55e9bac6a576b475b24749ec2656785dea7a513233b234"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "scalar-commutative-interface",
+        "source": "thm scalar_commutative_probe22:\n    ? forall lhs,rhs R:\n        lhs*rhs=rhs*lhs\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/scalar-commutative-interface.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "34732c6810a6b2de87cb7ec5f222a0a0f51abd25538e7906560f31a5063264f7"
+        },
+        "previous_success": true
+      },
+      {
+        "id": "anonymous-call-commutative-interface-author",
+        "source": "thm scalar_commutative_probe22:\n    ? forall lhs,rhs R:\n        lhs*rhs=rhs*lhs\n\nclaim:\n    ? forall c,d R,m Z:\n        fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n    by thm scalar_commutative_probe22(fn(k Z) R {c}(m),d) => fn(k Z) R {c}(m)*d=d*fn(k Z) R {c}(m)\n",
+        "command": [
+          "tmp/2026-10-09/equality-inequality-search/round23-litex-current",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "tmp/2026-10-09/equality-inequality-search/round22-cases/anonymous-call-commutative-interface-author.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "769e0dd3c5819bea7fbcb3bdc1ddc363c9bf17273ec37db68331ddbbf3e3a379"
+        },
+        "previous_success": true
+      }
+    ],
+    "source_correspondence": "Current-source release build succeeded; exact full source hashes were not captured before this build, so concurrent mutation is not ruled out."
+  }
+}

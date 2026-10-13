@@ -1,0 +1,7 @@
+have fn r56_identity(x R) R = x
+have fn r56_neg_identity(x R) R = -x
+have fn r56_constant_five(x R) R = 5
+
+forall x R:
+    r56_constant_five(x)<=r56_constant_five(0)
+    r56_constant_five(0)<=r56_constant_five(x)

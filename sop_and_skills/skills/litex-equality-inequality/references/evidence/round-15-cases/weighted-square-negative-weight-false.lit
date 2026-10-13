@@ -1,0 +1,2 @@
+forall p,q,x,y R:
+    p*x^2+q*y^2 >= 0

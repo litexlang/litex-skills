@@ -1,0 +1,4 @@
+have fn r36_quadratic_solution(c,x R) R = x^2+c
+
+forall c R:
+    r36_quadratic_solution(c,1)=1+c

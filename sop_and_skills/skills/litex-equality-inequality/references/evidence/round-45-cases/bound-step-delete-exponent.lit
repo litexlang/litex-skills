@@ -1,0 +1,119 @@
+have fn r44_square_root_two_residual(x R) R = x^2 - 2
+claim:
+    ? forall x R+:
+        (x + 2 / x) / 2 $in R+
+    2 / x > 0
+    x + 2 / x > 0
+
+have fn r44_newton_sqrt_two(x R+) R+ = (x + 2 / x) / 2
+
+thm r44_newton_sqrt_two_residual_identity:
+    ? forall x R+:
+        4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2
+    r44_newton_sqrt_two(x) = (x + 2 / x) / 2
+    r44_square_root_two_residual(x) = x^2 - 2
+    r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_newton_sqrt_two(x)^2 - 2 = ((x + 2 / x) / 2)^2 - 2
+    4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = 4 * x^2 * (((x + 2 / x) / 2)^2 - 2) = (x^2 - 2)^2 = r44_square_root_two_residual(x)^2
+
+thm r44_newton_sqrt_two_residual_nonnegative:
+    ? forall x R+:
+        r44_square_root_two_residual(r44_newton_sqrt_two(x)) >= 0
+    release thm r44_newton_sqrt_two_residual_identity(x)
+    x^2 > 0
+    4*x^2 > 0
+    r44_square_root_two_residual(x)^2 >= 0
+    r44_square_root_two_residual(r44_newton_sqrt_two(x))=r44_square_root_two_residual(x)^2/(4*x^2)>=0
+
+claim:
+    ? forall n N:
+        n = 0 or n > 0
+    n >= 0
+
+claim:
+    ? forall n N:
+        n > 0
+        =>:
+            n - 1 >= 0
+    n - 1 $in N
+    n - 1 >= 0
+
+have fn r44_sqrt_two_newton_iterate(n N) R+ by induc n from 0:
+    case n = 0: 1
+    case n > 0: r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n - 1))
+
+have fn r44_sqrt_two_newton_gap(n N) R = |r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n))|
+
+thm r44_sqrt_two_newton_iterate_step:
+    ? forall n N:
+        r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))
+    n + 1 > 0
+    (n + 1) - 1 = n
+    r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate((n + 1) - 1))
+    r44_sqrt_two_newton_iterate((n + 1) - 1) = r44_sqrt_two_newton_iterate(n)
+
+thm r44_newton_sqrt_two_greater_than_one:
+    ? forall x R+:
+        r44_newton_sqrt_two(x) > 1
+    r44_newton_sqrt_two(x)=(x+2/x)/2
+    r44_newton_sqrt_two(x)-1=(x+2/x)/2-1=((x-1)^2+1)/(2*x)
+    (x-1)^2+1>0
+    2*x>0
+    r44_newton_sqrt_two(x)-1=((x-1)^2+1)/(2*x)>0
+
+thm r44_newton_sqrt_two_one_step_gap_identity:
+    ? forall x R+:
+        4 * x^2 * |r44_square_root_two_residual(r44_newton_sqrt_two(x))| = |r44_square_root_two_residual(x)|^2
+    release thm r44_newton_sqrt_two_residual_nonnegative(x)
+    4 * x^2 * |r44_square_root_two_residual(r44_newton_sqrt_two(x))| = 4 * x^2 * r44_square_root_two_residual(r44_newton_sqrt_two(x)) = r44_square_root_two_residual(x)^2 = |r44_square_root_two_residual(x)|^2
+
+thm r44_sqrt_two_newton_iterate_at_least_one:
+    ? forall n N:
+        r44_sqrt_two_newton_iterate(n) >= 1
+    by induc k from 0:
+        ? r44_sqrt_two_newton_iterate(k) >= 1
+        ? from k = 0:
+            r44_sqrt_two_newton_iterate(0) = 1
+        ? induc:
+            r44_sqrt_two_newton_iterate(k + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(k))
+            release thm r44_newton_sqrt_two_greater_than_one(r44_sqrt_two_newton_iterate(k))
+
+thm r44_sqrt_two_newton_gap_step_identity:
+    ? forall n N:
+        4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1) = r44_sqrt_two_newton_gap(n)^2
+    r44_sqrt_two_newton_iterate(n + 1) = r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n))
+    r44_sqrt_two_newton_gap(n + 1) = |r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1))| = |r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n)))|
+    r44_sqrt_two_newton_gap(n) = |r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n))|
+    4 * r44_sqrt_two_newton_iterate(n)^2 * r44_sqrt_two_newton_gap(n + 1) = 4 * r44_sqrt_two_newton_iterate(n)^2 * |r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n)))|
+    r44_sqrt_two_newton_gap(n)^2 = |r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n))|^2
+    release thm r44_newton_sqrt_two_one_step_gap_identity(r44_sqrt_two_newton_iterate(n))
+    4 * r44_sqrt_two_newton_iterate(n)^2 * |r44_square_root_two_residual(r44_newton_sqrt_two(r44_sqrt_two_newton_iterate(n)))| = |r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n))|^2
+
+thm r44_sqrt_two_newton_gap_contracts_quadratically:
+    ? forall n N:
+        r44_sqrt_two_newton_gap(n + 1) <= r44_sqrt_two_newton_gap(n)^2 / 4
+    release thm r44_sqrt_two_newton_iterate_at_least_one(n)
+    r44_sqrt_two_newton_iterate(n)-1>=0
+    r44_sqrt_two_newton_iterate(n)+1>=0
+    r44_sqrt_two_newton_iterate(n)^2-1=(r44_sqrt_two_newton_iterate(n)-1)*(r44_sqrt_two_newton_iterate(n)+1)>=0
+    r44_sqrt_two_newton_iterate(n)^2>=1
+    r44_sqrt_two_newton_gap(n + 1)=|r44_square_root_two_residual(r44_sqrt_two_newton_iterate(n + 1))|>=0
+    4*r44_sqrt_two_newton_gap(n + 1)=1*(4*r44_sqrt_two_newton_gap(n + 1))<=r44_sqrt_two_newton_iterate(n)^2*(4*r44_sqrt_two_newton_gap(n + 1))=4*r44_sqrt_two_newton_iterate(n)^2*r44_sqrt_two_newton_gap(n + 1)=r44_sqrt_two_newton_gap(n)^2
+    r44_sqrt_two_newton_gap(n + 1)=(4*r44_sqrt_two_newton_gap(n + 1))/4<=r44_sqrt_two_newton_gap(n)^2/4
+
+thm r45_sqrt_two_newton_gap_bound_positive:
+    ? forall n N:
+        4 * (1 / 4)^(2^n) $in R+
+    2^n $in R
+    1 / 4 > 0
+    (1 / 4)^(2^n) > 0
+    4 * (1 / 4)^(2^n) > 0
+
+have fn r45_sqrt_two_newton_gap_bound(n N) R+ = 4 * (1 / 4)^(2^n)
+
+thm r45_delete_exponent:
+    ? forall n N:
+        r45_sqrt_two_newton_gap_bound(n + 1) = r45_sqrt_two_newton_gap_bound(n)^2 / 4
+    have t R+ = (1/4)^(2^n)
+    r45_sqrt_two_newton_gap_bound(n)=4*(1/4)^(2^n)=4*t
+    (1/4)^(2^(n+1))=(1/4)^(2^n*2)=((1/4)^(2^n))^2=t^2
+    r45_sqrt_two_newton_gap_bound(n+1)=4*(1/4)^(2^(n+1))=4*((1/4)^(2^n))^2=4*t^2=(4*t)^2/4=r45_sqrt_two_newton_gap_bound(n)^2/4

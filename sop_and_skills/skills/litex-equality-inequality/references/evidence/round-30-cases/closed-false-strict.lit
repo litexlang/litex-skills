@@ -1,0 +1,5 @@
+prop has_interval_endpoints(I power_set(R), a, b R):
+    I = '[a, b] or I = '[a, b) or I = '(a, b] or I = '(a, b)
+
+forall a,b R,z '[a,b]:
+    a<z

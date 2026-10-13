@@ -1,0 +1,30 @@
+have fn finite_integer_sum(first, last Z, term fn(term_index_21 Z) Z) Z by cases:
+    case first <= last: sum(first, last, term)
+    case first > last: 0
+
+thm finite_integer_sum_shift:
+    ? forall first, last Z, term fn(term_index_shift Z) Z:
+        first <= last
+        =>:
+            finite_integer_sum(first, last, term) = finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})
+    first - 1 <= last - 1
+    finite_integer_sum(first, last, term) = sum(first, last, term)
+    finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)}) = sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})
+    claim:
+        ? forall source_index Z:
+            term(source_index) = fn(lambda_index Z) Z {term(lambda_index)}(source_index)
+        term(source_index) = fn(lambda_index Z) Z {term(lambda_index)}(source_index)
+    by def $fn_eq(term, fn(lambda_index Z) Z {term(lambda_index)})
+    term = fn(lambda_index Z) Z {term(lambda_index)}
+    sum(first, last, term) = sum(first, last, fn(lambda_index Z) Z {term(lambda_index)})
+    claim:
+        ? forall shifted_index Z:
+            first - 1 <= shifted_index
+            shifted_index <= last - 1
+            =>:
+                term(shifted_index + 1) = term(shifted_index + 1)
+        term(shifted_index + 1) = term(shifted_index + 1)
+    sum(first, last, fn(lambda_index Z) Z {term(lambda_index)}) = sum(first + (-1), last + (-1), fn(shifted_index Z) Z {term(shifted_index + 1)})
+    sum(first + (-1), last + (-1), fn(shifted_index Z) Z {term(shifted_index + 1)}) = sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})
+    finite_integer_sum(first, last, term) = finite_integer_sum(first - 1, last - 1, fn(shifted_index Z) Z {term(shifted_index + 1)})
+

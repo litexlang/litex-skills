@@ -1,0 +1,2 @@
+forall c,d,right_addend R,m Z:
+    fn(k Z) R {c}(m)*(d+right_addend)=fn(k Z) R {c}(m)*d+fn(k Z) R {c}(m)*right_addend

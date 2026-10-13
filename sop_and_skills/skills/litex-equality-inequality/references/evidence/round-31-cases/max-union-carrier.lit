@@ -1,0 +1,2 @@
+forall a,c R:
+    finite_set_max(union({a},{c})) $in R

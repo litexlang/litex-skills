@@ -1,0 +1,59 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-73-session.json",
+  "original_sha256": "bcab48d8ec0958411ecafcb2189360b34e4065e9cd25c61915373de3ef56bf7d",
+  "original_bytes": 17833,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn square_function(x R) R = x^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "335e5c9ae8449a887e8ae84ea8d032f0d3b4d5c599960ef0222069076ce68f0e",
+        "excerpt": "have fn square_function(x R) R = x^2\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; current round73 cold evidence required.",
+      "transcript_complete": true
+    },
+    {
+      "source": "have fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b5f0afe646ec5a01bf33e9b0e549931008355a4b40c1515e47dea73f51e6f841",
+        "excerpt": "have fn square_tangent_at_three(x R) R = 9 + 6 * (x - 3)\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round68 snapshot Session66922; current round73 cold evidence required.",
+      "transcript_complete": true
+    },
+    {
+      "source": "thm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x)-square_tangent_at_three(x)=x^2-(9+6*(x-3))=(x-3)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "b1df1f51b0a30ed259f465516c74eec4c7060b564603894c95f3e9cb21773658",
+        "excerpt": "Warning: truncated output (original token count: 33426)\nTotal output lines: 2423\n\nthm square_tangent_error_at_three:\r\n    ? forall x R:\r\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\r\n    square_function(x)-square_tangent_at_three(x)=x^2-(9+6*(x-3))=(x-3)^2\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"thm square_tangent_error_at_three:\\n    ? forall x R:\\n        square_function(x) - square_tangent_"
+      },
+      "baseline": "Round68 snapshot Session66922; current round73 cold evidence required.",
+      "transcript_complete": false
+    },
+    {
+      "source": "thm square_tangent_error_at_three:\n    ? forall x R:\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\n    square_function(x) = x^2\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e6947772b5c4a8e402153b3d7aedeea256ccea398467a45b7c4daf1acbf0d087",
+        "excerpt": "thm square_tangent_error_at_three:\r\n    ? forall x R:\r\n        square_function(x) - square_tangent_at_three(x) = (x - 3)^2\r\n    square_function(x) = x^2\r\n    square_tangent_at_three(x) = 9 + 6 * (x - 3)\r\n    square_function(x) - square_tangent_at_three(x) = x^2 - (9 + 6 * (x - 3)) = (x - 3)^2\r\n\r\n... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 Session66922; original theorem retry after ordinary chain-only miss, same process.",
+      "transcript_complete": true
+    },
+    {
+      "source": "thm r73_tangent_lower_bound:\n    ? forall x R:\n        square_tangent_at_three(x)<=square_function(x)\n    release thm square_tangent_error_at_three(x)\n    0<=(x-3)^2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "e540ace2f1217786b9cf8202c0dcdb098eb48a528ba68792997e95a6f199b150",
+        "excerpt": "thm r73_tangent_lower_bound:\r\n    ? forall x R:\r\n        square_tangent_at_three(x)<=square_function(x)\r\n    release thm square_tangent_error_at_three(x)\r\n    0<=(x-3)^2\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 Session66922; original source remainder theorem already accepted. Current cold short-theorem consumer owns acceptance."
+    }
+  ]
+}

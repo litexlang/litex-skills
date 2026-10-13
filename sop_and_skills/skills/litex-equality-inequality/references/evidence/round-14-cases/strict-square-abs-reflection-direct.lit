@@ -1,0 +1,4 @@
+forall x,y R:
+    x^2 < y^2
+    =>:
+        abs(x) < abs(y)

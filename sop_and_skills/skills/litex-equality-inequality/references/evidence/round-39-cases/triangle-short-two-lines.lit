@@ -1,0 +1,9 @@
+thm r39_triangle_short:
+    ? forall slope1,slope2,q R,epsilon R+:
+        abs(q-slope1)<epsilon
+        abs(q-slope2)<epsilon
+        =>:
+            abs(slope1-slope2)<2*epsilon
+    abs(slope1-q)=abs(q-slope1)<epsilon
+    abs(slope1-slope2)<=abs(slope1-q)+abs(q-slope2)<epsilon+epsilon=2*epsilon
+

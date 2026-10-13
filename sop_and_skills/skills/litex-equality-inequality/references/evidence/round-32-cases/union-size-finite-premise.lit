@@ -1,0 +1,4 @@
+forall a,c R:
+    $is_finite_set(union({a},{c}))
+    =>:
+        finite_set_size(union({a},{c}))<=finite_set_size(union({a},{c}))

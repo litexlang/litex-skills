@@ -1,0 +1,2 @@
+forall c R,m Z:
+    fn(first_index Z) R {c}(m)=fn(second_index Z) R {c}(m)

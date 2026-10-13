@@ -1,0 +1,2 @@
+forall u fn(t R) R,a R:
+    fn(k R: k>0) R {a*u(k)}(0)=a*u(0)

@@ -1,0 +1,2 @@
+forall u,v fn(t R) R:
+    fn(k R) R {u(k)+v(k)}=fn(j R) R {v(j)+u(j)}

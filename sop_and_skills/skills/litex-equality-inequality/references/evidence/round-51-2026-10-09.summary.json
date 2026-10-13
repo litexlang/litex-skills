@@ -1,0 +1,409 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-51-2026-10-09.json",
+  "original_sha256": "b2f74bc19a4ed7a33f08cabec97c0d4116c96c8499d007d02deb0029bf4027a5",
+  "original_bytes": 126513,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "b9daf3c90fa2c922ca954c378e7a43ecdedfe9624c98bc97e3a75dd416350f85",
+    "cases": [
+      {
+        "id": "legacy-raw",
+        "source": "claim:\n    ? forall n N:\n        2 ^ n >= n + 1\n    by induc n from 0:\n        ? 2 ^ n >= n + 1\n        2^0 = 1 >= 0 + 1\n\n        forall m Z:\n            m >= 0\n            2^m >= m + 1\n            =>:\n                2^m * 2^1 >= (m + 1) * 2\n                2 ^ (m + 1) = 2 ^ m * 2^1 >= (m + 1) * 2 = (m + 1) + (m + 1) >= m + 1 + 1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/legacy-raw.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "42b0a1ff3533de8e842940ed6963b5713495bc422de6041b668d62f77a877628"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/legacy-raw.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "modern-original-route",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n            2^k>=k+1\n            2^k*2^1>=(k+1)*2\n            2^(k+1)=2^k*2^1>=(k+1)*2=(k+1)+(k+1)>=k+1+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/modern-original-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8f959f2940cd56543f33e9cacb0081101bfd7433a4cda4f88ccaa495b717b9bf"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/modern-original-route.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "modern-short",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/modern-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0aada29e85161895401cf24b2b0a7a0b5380d96095ea40de7b773d36bf8244b8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/modern-short.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "direct-natural",
+        "source": "forall n N:\n    2^n>=n+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/direct-natural.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fb6c19cd659c0da10a4c1cf7e3730fdd389ae0a1ea339c1df7860fe46911ae8c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/direct-natural.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "bodyless-claim",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/bodyless-claim.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a07675e9d7547649c523640e57ebe13dfe02de45436dbe099cb352ace062ab4f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/bodyless-claim.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "empty-step-parse-control",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/empty-step-parse-control.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: block header missing body at line 8 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/empty-step-parse-control.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "360b2629cf133fb90d5046a5911b253ebd885b5c8de2365b69ef36fc22312e34"
+        },
+        "stderr": "",
+        "historical_output_path": "Original receipt path before explicitly naming this intentional parse control.",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/empty-step-parse-control.lit"
+        ],
+        "classification": "parse_control"
+      },
+      {
+        "id": "false-strict-natural",
+        "source": "forall n N:\n    2^n>n+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/false-strict-natural.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1917db05b4ea95dd4897a36e63d0823ea34fb1c081543cadb08078af1ea4137c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/false-strict-natural.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "numeric-counterexample",
+        "source": "not 2^0>0+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/numeric-counterexample.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e1cccf88b62dcb51b06278f60f5bf4d2edf423c88c1b1fc9f233008b39c06f54"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/numeric-counterexample.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "integer-extension-direct",
+        "source": "forall n Z:\n    2^n>=n+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/integer-extension-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d7a8d045f9419a4e050cf08a1036f954740e79b3bf0535ba64c86da00a1aa99"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/integer-extension-direct.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "successor-nonnegative-only",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? from k = 0:\n            2^0=1>=0+1\n        ? induc:\n            k>=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/successor-nonnegative-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "08bc88f539e4ec7c6328e0d5984129d1b1a557e7f6c8aab5cd2e0dad1032c738"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/successor-nonnegative-only.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "modern-no-base-branch",
+        "source": "claim:\n    ? forall n N:\n        2^n>=n+1\n    by induc k from 0:\n        ? 2^k>=k+1\n        ? induc:\n            2^(k+1)=2^k*2>=(k+1)*2=k+1+(k+1)>=k+1+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/modern-no-base-branch.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: by induc: structured proof needs both `? from` and `? induc` at line 6 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/modern-no-base-branch.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "627e9ff97fe488c71b7434eab227b0193ed8f247f833293fa4df59f293895fd6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/modern-no-base-branch.lit"
+        ],
+        "classification": "parse_control"
+      },
+      {
+        "id": "false-double-linear-bound",
+        "source": "forall n N:\n    2^n>=2*n+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-51-cases/false-double-linear-bound.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d8710fa34df38cd101de1f4db3621b3678630d9ff16a3715dccc341bb42dd239"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round51-cases/false-double-linear-bound.lit"
+        ],
+        "classification": "normal_rejection"
+      }
+    ],
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "scope": "Isolated exact textbook claim and faithful current structured induction; no whole chapter or migration-cause claim.",
+    "session_restart": {
+      "reason": "Hard parse error from missing-base structured induction probe ended Session42453.",
+      "new_session_id": 99217,
+      "command": "target/release/litex -strict -lang en -f tmp/2026-10-09/equality-inequality-search/round51-cases/modern-short.lit -session",
+      "observation": "Initial accepted file completed and litex> prompt appeared. Only this source-task prefix replayed."
+    }
+  }
+}

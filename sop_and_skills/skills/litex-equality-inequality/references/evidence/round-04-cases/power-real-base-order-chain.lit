@@ -1,0 +1,18 @@
+claim:
+    ? forall x,y R+, q R:
+        q > 0
+        x > y
+        =>:
+            x^q > y^q
+    x^q > 0
+    y^q > 0
+    log(2,y) < log(2,x)
+    q*log(2,y) < q*log(2,x)
+    log(2,y^q) = q*log(2,y)
+    log(2,x^q) = q*log(2,x)
+    log(2,y^q) < log(2,x^q)
+    by contra:
+        ? x^q > y^q
+        x^q <= y^q
+        log(2,x^q) <= log(2,y^q)
+        impossible log(2,y^q) < log(2,x^q)

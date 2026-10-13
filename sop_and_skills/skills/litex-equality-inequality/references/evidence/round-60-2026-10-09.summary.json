@@ -1,0 +1,860 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-60-2026-10-09.json",
+  "original_sha256": "6b4bbc8b82ace535d07b61aaf88e9347202079b9e0d9cf1373781cb406b8cf42",
+  "original_bytes": 111272,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "18bb1c74c234f69c9d2ef3787964e82e04ffa86a550e5528623136aacd5420d3",
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "cases": [
+      {
+        "id": "perpendicular-direct",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_perpendicular2((1,0),(0,1))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/perpendicular-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f241c84a1fca6b1459f858513a565339842e84d947c5a6917038a81095a621aa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/perpendicular-direct.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-by-def",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nby def $r60_perpendicular2((1,0),(0,1))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/perpendicular-by-def.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d2b43d198398804a31911a0922e1227b8dcda74caa566375a5b977344a89a650"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/perpendicular-by-def.lit"
+        ]
+      },
+      {
+        "id": "perpendicular-dot-and-fold",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nr60_dot2((1,0),(0,1))=0\nby def $r60_perpendicular2((1,0),(0,1))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/perpendicular-dot-and-fold.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0fa7b3e45717aa94c2ffbcf98d19ef7a03c171f339a59964434f9f5b151d2d28"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/perpendicular-dot-and-fold.lit"
+        ]
+      },
+      {
+        "id": "parallel-source-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n$r60_parallel2((2,4),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-source-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4e1a5533ad6850345c6eb2674e1d5e9eae3fb88d22dc5b14e937a46844ede2ed"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-source-witness.lit"
+        ]
+      },
+      {
+        "id": "parallel-direct",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((2,4),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73732a37191c7ddbb7034e118ebede410a0dbc6caecd2b3a4bcc849a6301e37b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-direct.lit"
+        ]
+      },
+      {
+        "id": "parallel-named-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-named-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f5011017b1ce589e6945cec84a9d2cc5cd6560cfcfbd406be7aaf0cbfc248f5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-named-witness.lit"
+        ]
+      },
+      {
+        "id": "parallel-existential-only",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-existential-only.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e934769d73833de6adc70da787d577626f00bb43c7a4ab80dfe888f3707dc6d1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-existential-only.lit"
+        ]
+      },
+      {
+        "id": "parallel-witness-and-fold",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\nby def $r60_parallel2((2,4),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-witness-and-fold.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "13e7f5aecd8198cf066b40b9edf5e697d9c67b4b9da99c7543e1642b5cb12014"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-witness-and-fold.lit"
+        ]
+      },
+      {
+        "id": "false-parallel",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((1,0),(0,1))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/false-parallel.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7c80f9e136453f3e739774b30328cf985c2304e8b652c1161b532dab2ae74ded"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/false-parallel.lit"
+        ]
+      },
+      {
+        "id": "false-perpendicular",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_perpendicular2((1,0),(1,0))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/false-perpendicular.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2af210b2a0cf411326387709bc29ce95b1a5cbac03bc298bbe978176970c9a05"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/false-perpendicular.lit"
+        ]
+      },
+      {
+        "id": "wrong-parallel-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nwitness $r60_parallel2((2,4),(1,2)) from 3\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/wrong-parallel-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a5acfe3d54359e500bf546dcac672927e4e14218bc67d0f9c1254254922e2797"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/wrong-parallel-witness.lit"
+        ]
+      },
+      {
+        "id": "zero-first-parallel",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((0,0),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/zero-first-parallel.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8af489d0eaf7f5f0bb5231fad06f2b42b865a9da968a30cfe3d448ebc5e39650"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/zero-first-parallel.lit"
+        ]
+      },
+      {
+        "id": "parallel-coordinates-named-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-coordinates-named-witness.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5035f9957640a5a1d36881b4a3695f0008c8737310a8e4691734f94b44f0d2c2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-coordinates-named-witness.lit"
+        ]
+      },
+      {
+        "id": "parallel-coordinates-exist-and-fold",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\nby def $r60_parallel2((2,4),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-coordinates-exist-and-fold.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1e94ac19c70650152f8d5143459a521ec6dc36ae7b7e8673d54ef50d944b2163"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-coordinates-exist-and-fold.lit"
+        ]
+      },
+      {
+        "id": "parallel-coordinates-direct",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\n$r60_parallel2((2,4),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-coordinates-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f00da8c4ef29c6b2c1e70f0fe98fa04c678ad123ec2a4f1c73c322fcca7bc1a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-coordinates-direct.lit"
+        ]
+      },
+      {
+        "id": "parallel-coordinates-wrong-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 3\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-coordinates-wrong-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6a6c8a107083100a95d59517b667fc1c27926892fca5493d2282eb2038547f3c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-coordinates-wrong-witness.lit"
+        ]
+      },
+      {
+        "id": "zero-first-named-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(0,0)(1)=0\n(0,0)(2)=0\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((0,0),(1,2)) from 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/zero-first-named-witness.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3524b1983a144946495309a36f7fae1ad633a1e0ad43490649e394501c835c43"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/zero-first-named-witness.lit"
+        ]
+      },
+      {
+        "id": "nonzero-first-zero-second",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n$r60_parallel2((1,2),(0,0))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/nonzero-first-zero-second.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9fdf6e375dc90bc3b3a8d670917dcef7e89accbbc8e158456e7f3189bed796c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/nonzero-first-zero-second.lit"
+        ]
+      },
+      {
+        "id": "parallel-delete-coordinate-1",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-delete-coordinate-1.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "81ec4813e1a9f407a1f1dac0a9d5261068983f36cad9663178541363e4e1a059"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-delete-coordinate-1.lit"
+        ]
+      },
+      {
+        "id": "parallel-delete-coordinate-2",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-delete-coordinate-2.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8f532b4a7c2bad635519cf78108b695dcad70e8d1351af16bbce72a7bb4e60b1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-delete-coordinate-2.lit"
+        ]
+      },
+      {
+        "id": "parallel-delete-coordinate-3",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-delete-coordinate-3.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d9e9044df4295ea582b735111cc5580fc31cc6601fa761dc15e40d42505cc49"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-delete-coordinate-3.lit"
+        ]
+      },
+      {
+        "id": "parallel-delete-coordinate-4",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-delete-coordinate-4.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4f5769d3e2239dd4ee22b8b3d86f43e89c05550629f145254db481ef772eb7b7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-delete-coordinate-4.lit"
+        ]
+      },
+      {
+        "id": "false-perpendicular-by-def",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\nby def $r60_perpendicular2((1,0),(1,0))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/false-perpendicular-by-def.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8a5d074aeb530d840a8edf8da057dcc06910cf2404c983220c35e920bebbb33a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/false-perpendicular-by-def.lit"
+        ]
+      },
+      {
+        "id": "parallel-coordinates-exist-and-bare",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(2,4)(1)=2\n(2,4)(2)=4\n(1,2)(1)=1\n(1,2)(2)=2\nwitness exist k R st {(2,4)(1)=k*(1,2)(1),(2,4)(2)=k*(1,2)(2)} from 2\n$r60_parallel2((2,4),(1,2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-coordinates-exist-and-bare.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4437c8e1e71daa28a49d518964bba6f3d1ee4a5521d8f5e3d163e9dbdecd0602"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-coordinates-exist-and-bare.lit"
+        ]
+      },
+      {
+        "id": "parallel-second-coordinates-only",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 2\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-second-coordinates-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "96665fa9dec86351061a9faed5f1c4150092dc9a1dd8f2ab173bbc8adfca927a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-second-coordinates-only.lit"
+        ]
+      },
+      {
+        "id": "parallel-second-coordinates-wrong-witness",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((2,4),(1,2)) from 3\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/parallel-second-coordinates-wrong-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3616b2a2bfd3ca50e3619cc629f05b7b4a3cbc8620131fc7c405a6a49704d9f2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/parallel-second-coordinates-wrong-witness.lit"
+        ]
+      },
+      {
+        "id": "zero-first-second-coordinates-only",
+        "source": "have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)\n\nprop r60_parallel2(u,v cart(R,R)):\n    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}\n\nprop r60_perpendicular2(u,v cart(R,R)):\n    r60_dot2(u,v)=0\n\n(1,2)(1)=1\n(1,2)(2)=2\nwitness $r60_parallel2((0,0),(1,2)) from 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-60-cases/zero-first-second-coordinates-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cb19c13dd18a341c3d3944b5877e1e076fd665567ca432b0c8b859bab26e41ab"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round60-cases/zero-first-second-coordinates-only.lit"
+        ]
+      }
+    ],
+    "scope": "L0 isolated syntax-adapted local chapter07 predicate consumers; no canonical chapter or kernel change. Cold files own acceptance; warm Session6037 uses round59 snapshot.",
+    "counts": {
+      "files": 27,
+      "accepted": 9,
+      "rejected": 18
+    }
+  }
+}

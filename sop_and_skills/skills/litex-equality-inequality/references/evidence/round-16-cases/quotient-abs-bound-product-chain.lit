@@ -1,0 +1,10 @@
+claim:
+    ? forall a,b,A R,B R+:
+        b != 0
+        abs(a) <= A
+        abs(b) >= B
+        =>:
+            abs(a/b) <= A/B
+    abs(a/b) >= 0
+    abs(a/b)*B <= abs(a/b)*abs(b) = abs((a/b)*b) = abs(a) <= A
+    abs(a/b) = (abs(a/b)*B)/B <= A/B

@@ -1,0 +1,2 @@
+forall x R,F fn(t R) R:
+    F((x+1)-1) = F(x)

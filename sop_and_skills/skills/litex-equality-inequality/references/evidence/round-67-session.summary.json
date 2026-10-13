@@ -1,0 +1,37 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-67-session.json",
+  "original_sha256": "84edd0dcaa16fc2afbf26cf5335191848d91a4b9759ad7b871e3d8c49fbc5196",
+  "original_bytes": 655,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "have fn r67_conjugate(z C) C = re(z)-img(z)*i",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6683c42d929fca09bf4c45ed5e23dc0a0b7db5236549cd4c5ff6d00ff1d8081c",
+        "excerpt": "have fn r67_conjugate(z C) C = re(z)-img(z)*i\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; current round67 cold required."
+    },
+    {
+      "source": "C_abs(3+4*i)=5",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "fdae7ec73811d5995060c2410b0aa63740df9fa39c19968bf30f568c39603f87",
+        "excerpt": "C_abs(3+4*i)=5\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; current round67 cold required."
+    },
+    {
+      "source": "r67_conjugate(3+4*i)=3+(-4)*i",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "334b9268b624e67237916d9779f5a92d3c9c3649c05089149a961f369f61cafe",
+        "excerpt": "r67_conjugate(3+4*i)=3+(-4)*i\r\n\r\nsuccess\r\nlitex> litex> "
+      },
+      "baseline": "Round61 snapshot Session9174; current round67 cold required."
+    }
+  ]
+}

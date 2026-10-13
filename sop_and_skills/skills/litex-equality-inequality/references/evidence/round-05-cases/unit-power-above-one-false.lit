@@ -1,0 +1,4 @@
+forall a R,n N+:
+    0 <= a
+    =>:
+        a^n <= a

@@ -1,0 +1,1513 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-07-2026-10-08.json",
+  "original_sha256": "d70012a7e089689cd6bacdb5cacd9c0a34229744ebfd629b8987157bc881ad18",
+  "original_bytes": 82909,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "661b85cfa29255ff8e16aed6a1b8419ed51cb12036db319620ef1b9708d52ed7",
+    "version": "Litex 1.0.4-beta",
+    "source_build": {
+      "command": "cargo build --release",
+      "success": true,
+      "exit_code": 0
+    },
+    "cases": [
+      {
+        "id": "ceil-characterization-chain",
+        "source": "claim:\n    ? forall x R,n Z:\n        n-1 < x\n        x <= n\n        =>:\n            ceil(x) = n\n    ceil(x) $in Z\n    ceil(x)-1 < x <= n\n    ceil(x) = (ceil(x)-1)+1 < n+1\n    ceil(x) <= n\n    n-1 < x <= ceil(x)\n    n = (n-1)+1 < ceil(x)+1\n    n <= ceil(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-characterization-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "659dced53358d4ab08317450f83c897a21cec208401338196bfb5e7a12433c62"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-characterization-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-characterization-chain.lit"
+        ]
+      },
+      {
+        "id": "ceil-characterization-direct",
+        "source": "forall x R,n Z:\n    n-1 < x\n    x <= n\n    =>:\n        ceil(x) = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-characterization-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de053d49343533f2397b60ff97a59e1de87f725a42df5482c71da24d8e24d1ac"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-characterization-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-characterization-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-characterization-lower-closed-false",
+        "source": "forall x R,n Z:\n    n-1 <= x\n    x <= n\n    =>:\n        ceil(x) = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-characterization-lower-closed-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4aa0417c019c525b098e6c3924834aa49a52ad3d35dfdfad648a8d5c5f1e87f0"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-characterization-lower-closed-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-characterization-lower-closed-false.lit"
+        ]
+      },
+      {
+        "id": "ceil-integer-shift-direct",
+        "source": "forall x R,n Z:\n    ceil(x+n) = ceil(x)+n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-integer-shift-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ac1d742c2c1f5f2bb53fd1efa26f4a49be25c1b6841835f2ae60b3746922015d"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-integer-shift-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-integer-shift-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-monotone-direct",
+        "source": "forall x,y R:\n    x <= y\n    =>:\n        ceil(x) <= ceil(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-monotone-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "366e17e88ccf0ce431c935ec8489ddb815c1a60c9fad329a40413c727b24c254"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-monotone-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-monotone-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-negation-direct",
+        "source": "forall x R:\n    ceil(-x) = -floor(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-negation-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4765c4636b81ac68c7c9de22acc5534488777a8f154656e878103878742a352c"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-negation-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-negation-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-threshold-reflection-chain",
+        "source": "claim:\n    ? forall x R,n Z:\n        n < ceil(x)\n        =>:\n            n < x\n    ceil(x) $in Z\n    ceil(x)-1 < x\n    n+1 < ceil(x)+1\n    n+1 <= ceil(x)\n    n = (n+1)-1 <= ceil(x)-1 < x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-threshold-reflection-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0f6e59d02161f9771aadfb4e1a83d078929a8bfad8a250e579535f94b53d9b88"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-threshold-reflection-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-threshold-reflection-chain.lit"
+        ]
+      },
+      {
+        "id": "ceil-threshold-reflection-direct",
+        "source": "forall x R,n Z:\n    n < ceil(x)\n    =>:\n        n < x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-threshold-reflection-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7477ae39584022e92072ed29f45a22ad3966657430b38b4a49b9bb7af06c0499"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-threshold-reflection-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-threshold-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-characterization-chain",
+        "source": "claim:\n    ? forall x R,n Z:\n        n <= x\n        x < n+1\n        =>:\n            floor(x) = n\n    floor(x) $in Z\n    floor(x) <= x < n+1\n    floor(x) <= n\n    n <= x < floor(x)+1\n    n <= floor(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-characterization-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c5bfccddfefad74f1d1781862e0e9038cc04261a8de870aaa83f977e224e3541"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-characterization-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-characterization-chain.lit"
+        ]
+      },
+      {
+        "id": "floor-characterization-direct",
+        "source": "forall x R,n Z:\n    n <= x\n    x < n+1\n    =>:\n        floor(x) = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-characterization-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4cb227540f3ea9b3a2ac5e539a6905cacf5e9337f4da33035e80c0ebcb20cd87"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-characterization-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-characterization-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-characterization-noninteger-false",
+        "source": "forall x,n R:\n    n <= x\n    x < n+1\n    =>:\n        floor(x) = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-characterization-noninteger-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1a5670075212a52a17aec09b05c08994eff60d26faadd2b01de3ca38fe406d7e"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-characterization-noninteger-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-characterization-noninteger-false.lit"
+        ]
+      },
+      {
+        "id": "floor-characterization-upper-closed-false",
+        "source": "forall x R,n Z:\n    n <= x\n    x <= n+1\n    =>:\n        floor(x) = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-characterization-upper-closed-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "233da91120a745f7c0c421273da249d71aa84fc07b7fc03b0993eadb0954712c"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-characterization-upper-closed-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-characterization-upper-closed-false.lit"
+        ]
+      },
+      {
+        "id": "floor-integer-shift-direct",
+        "source": "forall x R,n Z:\n    floor(x+n) = floor(x)+n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-integer-shift-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fb75171d596d8e25fdc4fb9460277d7e7b2d2ba1509cee5d68971beebfd4b892"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-integer-shift-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-integer-shift-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-monotone-direct",
+        "source": "forall x,y R:\n    x <= y\n    =>:\n        floor(x) <= floor(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-monotone-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "09d01adcff56c66273587a8974db5e5bf52b608f2282e57ad0d12297f884ca28"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-monotone-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-monotone-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-negation-direct",
+        "source": "forall x R:\n    floor(-x) = -ceil(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-negation-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "951f51488babaab6b52792a1829f7c024b2a3de77a54833c9c0059c1c86c3434"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-negation-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-negation-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-outer-unit-bound-chain",
+        "source": "forall x R:\n    x < floor(x)+1\n    x-1 < (floor(x)+1)-1 = floor(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-outer-unit-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "afbdb8a894f64311d2c82c6d2ba08cf35f4df5f742b3b615f9b4842d28bcf6f5"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-outer-unit-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-outer-unit-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "floor-outer-unit-bound-direct",
+        "source": "forall x R:\n    x-1 < floor(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-outer-unit-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "048344183a5f803c26d10ef42e79b0f3fff4e81e0141363d559b45a8883f473e"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-outer-unit-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-outer-unit-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-real-shift-false",
+        "source": "forall x,n R:\n    floor(x+n) = floor(x)+n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-real-shift-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d845698509e0131efabf6aa047993a852edb779f3d6a17f356a2224943b7d746"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-real-shift-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-real-shift-false.lit"
+        ]
+      },
+      {
+        "id": "floor-strict-monotone-false",
+        "source": "forall x,y R:\n    x < y\n    =>:\n        floor(x) < floor(y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-strict-monotone-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52878e8886f15833fdb9f55482be9ae4c48f55dd18f4150ba1ace57aa7db6f65"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-strict-monotone-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-strict-monotone-false.lit"
+        ]
+      },
+      {
+        "id": "floor-threshold-real-false",
+        "source": "forall x,n R:\n    floor(x) < n\n    =>:\n        x < n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-threshold-real-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e5b59abff696b6a6070cd312778cc2589897f349247e4c27402ab43634008fff"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-threshold-real-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-threshold-real-false.lit"
+        ]
+      },
+      {
+        "id": "floor-threshold-reflection-chain",
+        "source": "claim:\n    ? forall x R,n Z:\n        floor(x) < n\n        =>:\n            x < n\n    floor(x) $in Z\n    x < floor(x)+1\n    floor(x)+1 < n+1\n    floor(x)+1 <= n\n    x < floor(x)+1 <= n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-threshold-reflection-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4b0360c674c7ac74016056c4c138074345c47574f853ad3d1a6a69926b9f1e61"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-threshold-reflection-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-threshold-reflection-chain.lit"
+        ]
+      },
+      {
+        "id": "floor-threshold-reflection-direct",
+        "source": "forall x R,n Z:\n    floor(x) < n\n    =>:\n        x < n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-threshold-reflection-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "56b2d2dfab2792ab36f8e85da8c1995679b32323d01d02e116b99e562cd1bf3b"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-threshold-reflection-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-threshold-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "integer-gap-direct",
+        "source": "forall a,b Z:\n    a < b\n    =>:\n        a+1 <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/integer-gap-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5667facfe3fa3490952c2ecf0e05deffb50840e5bf1d3564b54f886d47b38828"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/integer-gap-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/integer-gap-direct.lit"
+        ]
+      },
+      {
+        "id": "integer-gap-real-false",
+        "source": "forall a,b R:\n    a < b\n    =>:\n        a+1 <= b\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/integer-gap-real-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "12ca5e26b6b8e673030ddfeb6121ea4779d8f3f1868db8a5df8a5216880f7e8e"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/integer-gap-real-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/integer-gap-real-false.lit"
+        ]
+      },
+      {
+        "id": "mod-remainder-bounds-direct",
+        "source": "forall a Z,d N+:\n    0 <= a%d\n    a%d < d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-remainder-bounds-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9561f4beabde59d77ab3451658853bfbdbcac0344bc51f11f4a51afcc2368576"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/mod-remainder-bounds-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/mod-remainder-bounds-direct.lit"
+        ]
+      },
+      {
+        "id": "mod-remainder-negative-divisor-false",
+        "source": "forall a,d Z:\n    d < 0\n    =>:\n        a%d < d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-remainder-negative-divisor-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3a1aaab279a578204d20b1fa7674e7034d1ecdcea494d9e21c28ed01e666aa6d"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/mod-remainder-negative-divisor-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/mod-remainder-negative-divisor-false.lit"
+        ]
+      },
+      {
+        "id": "mod-remainder-positive-false",
+        "source": "forall a Z,d N+:\n    0 < a%d\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/mod-remainder-positive-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a00f007eab76d4aa070266beccbf79358c603e6e07489e1386d8d2c164b72295"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/mod-remainder-positive-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/mod-remainder-positive-false.lit"
+        ]
+      },
+      {
+        "id": "ceil-outer-unit-bound-chain",
+        "source": "forall x R:\n    ceil(x)-1 < x\n    ceil(x) = (ceil(x)-1)+1 < x+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-outer-unit-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "497073340e63d5550fc298ec118b5649367a04a41e8a6cb82aa60cc8ffd026b8"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-outer-unit-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-outer-unit-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "ceil-outer-unit-bound-direct",
+        "source": "forall x R:\n    ceil(x) < x+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-outer-unit-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f92d670923ef3c594eff5e06b6973f99570c8dc1251028eeac3e889dbd9a5850"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-outer-unit-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-outer-unit-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-threshold-forward-direct",
+        "source": "forall x R,n Z:\n    n < x\n    =>:\n        n < ceil(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-threshold-forward-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1eff0c8d95415d72ca2499419ebd22a7b87be6d8d86b282477543434caace7dd"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-threshold-forward-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-threshold-forward-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-threshold-real-false",
+        "source": "forall x,n R:\n    n < ceil(x)\n    =>:\n        n < x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-threshold-real-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c3a34e94f90062dce3a94aa17aa6bbef986653dab5d110730b06b93c734262bd"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-threshold-real-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-threshold-real-false.lit"
+        ]
+      },
+      {
+        "id": "ceil-weak-threshold-chain",
+        "source": "claim:\n    ? forall x R,n Z:\n        x <= n\n        =>:\n            ceil(x) <= n\n    ceil(x) $in Z\n    ceil(x)-1 < x <= n\n    ceil(x) = (ceil(x)-1)+1 < n+1\n    ceil(x) <= n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-weak-threshold-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0b61dc0e57cf6ac16c6feb2c6967908003aea6421208c2ac9dedd7f84d88cb4b"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-weak-threshold-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-weak-threshold-chain.lit"
+        ]
+      },
+      {
+        "id": "ceil-weak-threshold-direct",
+        "source": "forall x R,n Z:\n    x <= n\n    =>:\n        ceil(x) <= n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-weak-threshold-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bd3c936573847d880b6d354ef1084f1d938819f16c37172de830713499807d48"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-weak-threshold-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-weak-threshold-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-weak-threshold-real-false",
+        "source": "forall x,n R:\n    x <= n\n    =>:\n        ceil(x) <= n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-weak-threshold-real-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "280274c381a10e92d3bbee751cc02ad1b0adf42d04ff052d48dd04ba9a65472a"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-weak-threshold-real-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-weak-threshold-real-false.lit"
+        ]
+      },
+      {
+        "id": "floor-threshold-forward-direct",
+        "source": "forall x R,n Z:\n    x < n\n    =>:\n        floor(x) < n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-threshold-forward-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ee35d93236c2d1f7a158a2e5987599249cb004e1a4e7ec66ff5a72a82596c511"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-threshold-forward-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-threshold-forward-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-weak-threshold-chain",
+        "source": "claim:\n    ? forall x R,n Z:\n        n <= x\n        =>:\n            n <= floor(x)\n    floor(x) $in Z\n    n <= x < floor(x)+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-weak-threshold-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fb9aa4014bfd60b445608ee7913a7f523dccfd849a6435cccd1e6a3cb1088d70"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-weak-threshold-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-weak-threshold-chain.lit"
+        ]
+      },
+      {
+        "id": "floor-weak-threshold-direct",
+        "source": "forall x R,n Z:\n    n <= x\n    =>:\n        n <= floor(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-weak-threshold-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "02b716173e36d2d3b9008aa887781e157a367c0aaa22dafbcffee4fd6581637e"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-weak-threshold-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-weak-threshold-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-weak-threshold-real-false",
+        "source": "forall x,n R:\n    n <= x\n    =>:\n        n <= floor(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-weak-threshold-real-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "413bd44ac59a77cdac8c4a20b235ed3db335e6180ee0bfab455372cead328f8f"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-weak-threshold-real-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-weak-threshold-real-false.lit"
+        ]
+      },
+      {
+        "id": "floor-threshold-forward-real-direct",
+        "source": "forall x,n R:\n    x < n\n    =>:\n        floor(x) < n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-threshold-forward-real-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e002e40406aa20602e673680a6f0f3505c7e4d89a2d7ff20604b0515fabecc12"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-threshold-forward-real-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-threshold-forward-real-direct.lit"
+        ]
+      },
+      {
+        "id": "floor-threshold-forward-real-chain",
+        "source": "forall x,n R:\n    x < n\n    =>:\n        floor(x) <= x < n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-threshold-forward-real-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f95c335c10b0887a454e6148450c157693b693a5daeda155e18aa4b594669a6"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-threshold-forward-real-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-threshold-forward-real-chain.lit"
+        ]
+      },
+      {
+        "id": "ceil-threshold-forward-real-direct",
+        "source": "forall x,n R:\n    n < x\n    =>:\n        n < ceil(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-threshold-forward-real-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b7fb74e447eeb0e13b287044eda40d91c63da759f765d6670b90a60c8c3761ab"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-threshold-forward-real-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-threshold-forward-real-direct.lit"
+        ]
+      },
+      {
+        "id": "ceil-threshold-forward-real-chain",
+        "source": "forall x,n R:\n    n < x\n    =>:\n        n < x <= ceil(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-threshold-forward-real-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f1dbb4df65c2cc9bab4c031c8f8fc7b9ca12ce11414114d4bbc1338b9b49cac"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-threshold-forward-real-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-threshold-forward-real-chain.lit"
+        ]
+      },
+      {
+        "id": "ceil-characterization-noninteger-false",
+        "source": "forall x,n R:\n    n-1 < x\n    x <= n\n    =>:\n        ceil(x) = n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-characterization-noninteger-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6debb2b064284763d5468a0610f98d5bb4ed4bfc558c51befb411737590f84fe"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-characterization-noninteger-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-characterization-noninteger-false.lit"
+        ]
+      },
+      {
+        "id": "floor-characterization-short",
+        "source": "claim:\n    ? forall x R,n Z:\n        n <= x\n        x < n+1\n        =>:\n            floor(x) = n\n    floor(x) <= x < n+1\n    n <= x < floor(x)+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/floor-characterization-short.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "53cb5410fb01c5748d2c1c68af97f6aff445e49e48eb42266065725d6d35f11c"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/floor-characterization-short.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/floor-characterization-short.lit"
+        ]
+      },
+      {
+        "id": "ceil-characterization-short",
+        "source": "claim:\n    ? forall x R,n Z:\n        n-1 < x\n        x <= n\n        =>:\n            ceil(x) = n\n    ceil(x)-1 < x <= n\n    ceil(x) = (ceil(x)-1)+1 < n+1\n    n-1 < x <= ceil(x)\n    n = (n-1)+1 < ceil(x)+1\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ceil-characterization-short.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "82e4abe9027d21a8dae890cabafec9abe489260b14f8b58d7ac29e51e79dfc81"
+        },
+        "stderr": "",
+        "replay_source": "round-07-cases/ceil-characterization-short.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-07-cases/ceil-characterization-short.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "floor-characterization-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "5b66f5e18fe0bc8802afc7b129f42ee5c6518986609a4a4c84084039385cab00",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, n Z:\\n    n <= x\\n    x < n + 1\\n    =>:\\n        floor(x) = n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, n Z:\\n    n <= x\\n    x < n + 1\\n    =>:\\n        floor(x) = n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "floor-characterization-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e97632604fe2f19bd717ca7f7d2d6043f757bca820d4ed86a750b36151761360",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "ceil-characterization-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "27623497d6040a7b37c59214353a9568431031031e9ffeb295e40b65690d3b83",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, n Z:\\n    n - 1 < x\\n    x <= n\\n    =>:\\n        ceil(x) = n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, n Z:\\n    n - 1 < x\\n    x <= n\\n    =>:\\n        ceil(x) = n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "ceil-characterization-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "851e882124ea21c3df339b809daf5f3dbdc671acd57a9a9117a2eaf3b51294ff",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "floor-threshold-reflection-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "469afd29fa92335c0b33d12909b2f0685d64e82f37b135c010b36db3e551ef16",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, n Z:\\n    floor(x) < n\\n    =>:\\n        x < n\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, n Z:\\n    floor(x) < n\\n    =>:\\n        x < n\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "floor-threshold-reflection-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9602d9a656fb2fb11bbc6daf7c17d0e4f626a6955a9470c0212d10c74db16705",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      }
+    ],
+    "source_revision": "422ac3c0197c3c1f49fbc506e9c33c90b14b6c4d",
+    "source_note": "Current working-tree release, preexisting edits preserved; no kernel/canonical proof edits in this round."
+  }
+}

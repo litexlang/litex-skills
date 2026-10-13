@@ -1,0 +1,6 @@
+claim:
+    ? forall lower R+,x R:
+        lower <= x
+        =>:
+            0 < x
+    0 < lower <= x

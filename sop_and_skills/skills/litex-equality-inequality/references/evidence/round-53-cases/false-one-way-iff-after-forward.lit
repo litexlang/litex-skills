@@ -1,0 +1,11 @@
+forall u,v R:
+    u=v
+    =>:
+        u^2=v^2
+
+forall u,v R:
+    0=0
+    =>:
+        u=v
+    <=>:
+        u^2=v^2

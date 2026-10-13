@@ -1,0 +1,454 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-58-2026-10-09.json",
+  "original_sha256": "a945cb5e106d022cec162d076ad2d478820bd775bad9e5b8273fb1f3e0fe1592",
+  "original_bytes": 48745,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "1a79acbedbfaef542d3c515699a0e8c45d36a6369d563d39c64814bbae4a5d45",
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0,
+      "log": "build-round-58-recheck-2.log"
+    },
+    "cases": [
+      {
+        "id": "odd-original",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_identity(-x)=-x=-r58_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/odd-original.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ca9a9a852d9449c59904278a06283fbc07c99410e10d55646133dd49c95d3ef2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/odd-original.lit"
+        ]
+      },
+      {
+        "id": "odd-direct",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_identity(-x)=-r58_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/odd-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eeecfe0f17423a6cc32372373608e3f6ea63a1f07049380eb5d71f99bd737beb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/odd-direct.lit"
+        ]
+      },
+      {
+        "id": "even-original",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_square(-x)=(-x)^2=x^2=r58_square(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/even-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e6e95963e2b2a6f3f5493f7e9dea229b255ef4d120623c6162530be43907ac85"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/even-original.lit"
+        ]
+      },
+      {
+        "id": "even-direct",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_square(-x)=r58_square(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/even-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "25de1eef471d9afa08ce78220e6cc426d6879187c6dc35bfc788d71d01b29491"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/even-direct.lit"
+        ]
+      },
+      {
+        "id": "zero-original",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nr58_shifted_zero(2)=2-2=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/zero-original.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "04486775b1801e0ba1972af460a094d2cc3d37751063ad9174f9eb924af0e871"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/zero-original.lit"
+        ]
+      },
+      {
+        "id": "zero-direct",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nr58_shifted_zero(2)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/zero-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc6cd5058821e33869be7a50a528cee52d9a6530989177905ae2733816ccbf80"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/zero-direct.lit"
+        ]
+      },
+      {
+        "id": "false-identity-even",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_identity(-x)=r58_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/false-identity-even.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1703faf57057e8fbbffe3ff4c8c44317de7517a0cd28cb14fdbc6c69d655fc56"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/false-identity-even.lit"
+        ]
+      },
+      {
+        "id": "false-square-odd",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_square(-x)=-r58_square(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/false-square-odd.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f91348bde171891d3f35a4a3fe28dccf193177027b473f972d14fdf9824a1cd8"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/false-square-odd.lit"
+        ]
+      },
+      {
+        "id": "false-zero-point",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nr58_shifted_zero(3)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/false-zero-point.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5b634cb2a2b53298bf1c437d15736e2cef9c04c0cda1edc94477165f08323be6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/false-zero-point.lit"
+        ]
+      },
+      {
+        "id": "combined-direct",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_identity(-x)=-r58_identity(x)\n\nforall x R:\n    r58_square(-x)=r58_square(x)\n\nr58_shifted_zero(2)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/combined-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4f0fd1e2232e4724b9db8e32cd7dcea98afcf8231a3cf1ff9a823e482ff6f260"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/combined-direct.lit"
+        ]
+      },
+      {
+        "id": "odd-local-value-only",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nclaim:\n    ? forall x R:\n        r58_identity(-x)=-r58_identity(x)\n    r58_identity(x)=x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/odd-local-value-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f94d22126acc7a1b0deea8996c5f51d942280ef9c100fdb9c6c5d98ef54126ea"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/odd-local-value-only.lit"
+        ]
+      },
+      {
+        "id": "odd-local-value-and-chain",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nclaim:\n    ? forall x R:\n        r58_identity(-x)=-r58_identity(x)\n    r58_identity(x)=x\n    r58_identity(-x)=-x=-r58_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/odd-local-value-and-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d0b41c5559542aadf2ab7bb8f3281fbf796010aef4bb8e2d9454f75e69fa4e86"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/odd-local-value-and-chain.lit"
+        ]
+      },
+      {
+        "id": "odd-after-global-value",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nforall x R:\n    r58_identity(x)=x\n\nforall x R:\n    r58_identity(-x)=-r58_identity(x)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/odd-after-global-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ec9b95e97367e79c998d2cfa796117222d16461a9a7fc84c3392ed856fed7d75"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/odd-after-global-value.lit"
+        ]
+      },
+      {
+        "id": "combined-local-odd-direct-even-zero",
+        "source": "have fn r58_identity(x R) R = x\nhave fn r58_square(x R) R = x^2\nhave fn r58_shifted_zero(x R) R = x-2\n\nclaim:\n    ? forall x R:\n        r58_identity(-x)=-r58_identity(x)\n    r58_identity(x)=x\n\nforall x R:\n    r58_square(-x)=r58_square(x)\n\nr58_shifted_zero(2)=0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-58-cases/combined-local-odd-direct-even-zero.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e33672210696dc5d3a8e5684e41720a97109c994002d98e3fa0619c6ed2322fd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round58-cases/combined-local-odd-direct-even-zero.lit"
+        ]
+      }
+    ],
+    "scope": "Isolated exact function parity/zero equations and repaired central consumers; imported odd_fn/even_fn/zero_of folds excluded.",
+    "baseline_note": "Current-source build77204 completed successfully before snapshot; all14 probes reran. Historical snapshots only own separately labeled draft observations."
+  }
+}

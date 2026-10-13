@@ -1,0 +1,2 @@
+forall n N+,u fn(t closed_range(1,n)) R,a R:
+    fn(k closed_range(1,n)) R {a*u(k)}(0)=a*u(0)

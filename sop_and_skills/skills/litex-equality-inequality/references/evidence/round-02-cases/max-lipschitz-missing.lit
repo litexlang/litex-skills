@@ -1,0 +1,4 @@
+forall a,b,A,B R, epsilon R+:
+    abs(a-A) <= epsilon
+    =>:
+        abs(finite_set_max(union({a},{b}))-finite_set_max(union({A},{B}))) <= epsilon

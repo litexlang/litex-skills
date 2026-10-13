@@ -1,0 +1,4 @@
+forall A,B finite_set:
+    $is_finite_set(set_minus(A,B))
+    =>:
+        finite_set_size(set_minus(A,B)) <= finite_set_size(A)

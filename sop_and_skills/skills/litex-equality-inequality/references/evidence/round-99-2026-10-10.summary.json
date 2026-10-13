@@ -1,0 +1,517 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-99-2026-10-10.json",
+  "original_sha256": "f0eb0a3136d57be64c13bb0219ca3c07a325138bf4b03515eb11fcf1d0eba9aa",
+  "original_bytes": 501836,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/3_number_theory/main.lit",
+    "source_sha256": "8bc3acbd59b3a43804c82442e6b5ae12af1c5e6ba8316fb297a23bfc6af02fc4",
+    "binary_sha256": "c253a863e97c38a223d5d2a5377a706ee238401dc4c86b3eca47fc6b4f6984ae",
+    "binary_build": "Reuse successful round88 fixed snapshot",
+    "cases": [
+      {
+        "id": "baseline",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/baseline.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    b = a * k\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m:\n        c = a * (k * m)\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a = d * p\n    b = d * q\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y:\n        a * x + b * y = d * (p * x + q * y)\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4524c366729402fbde358f553cd2d28416c7ca768d1f440c64f214ddf3be30fa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "joint-short",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/joint-short.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/joint-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "44d46a825fe9795bdaf3913efc199a7e3b811e7f22fb2617b2a209838be2e484"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/joint-short.lit"
+        ]
+      },
+      {
+        "id": "transitive-delete-calculation",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/transitive-delete-calculation.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/transitive-delete-calculation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ba804e5d3896778a46a1b7f12c5f0f9e78d770a33689c11f8005a931386dd6fd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/transitive-delete-calculation.lit"
+        ]
+      },
+      {
+        "id": "combination-delete-calculation",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-delete-calculation.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-delete-calculation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9e7f618fcc6145a26c3e7cd5b564ceb50579655884b375298c910e61d91b546"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/combination-delete-calculation.lit"
+        ]
+      },
+      {
+        "id": "transitive-wrong-witness",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/transitive-wrong-witness.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k + m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/transitive-wrong-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "07d0b8dc3f8fcc695eb850f50bff9ddbf9d4485051f7779c0779d26b46f3f8fa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/transitive-wrong-witness.lit"
+        ]
+      },
+      {
+        "id": "combination-wrong-witness",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-wrong-witness.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y + 1\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-wrong-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9f0657bf5b783d627963e2f4e27b430363abe75cfd0731071988646ae03d3dfa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/combination-wrong-witness.lit"
+        ]
+      },
+      {
+        "id": "combination-missing-premise",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-missing-premise.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-missing-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d890b1631772feb878bc6eac5860551dfd05c4480e4a4042cf58abb29539b6a1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/combination-missing-premise.lit"
+        ]
+      },
+      {
+        "id": "short-through-gcd-certificate",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-through-gcd-certificate.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "b0a68ebfb98073944fae057c2d5a4476934a597260a9d19fa999f5c78a7dc858",
+          "characters": 2691,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-through-gcd-certificate.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1a6dc39bab9807ab7b865f001eefd2bab5cc9508fda1130df79f18fc212b50fc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/short-through-gcd-certificate.lit"
+        ]
+      },
+      {
+        "id": "short-zero-divisor",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-zero-divisor.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n\nwitness $divides_by(0,0) from 0\nrelease thm common_divisor_divides_linear_combination(0,0,0,-3,5)\n$divides_by(0,0)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-zero-divisor.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2b8645be499176f4214316c36aeb6421b425e985dd8787f1b888df1a2dbe1658"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/short-zero-divisor.lit"
+        ]
+      },
+      {
+        "id": "short-negative-coefficients",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-negative-coefficients.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n\nwitness $divides_by(-2,6) from -3\nwitness $divides_by(-2,-4) from 2\nrelease thm common_divisor_divides_linear_combination(-2,6,-4,-1,3)\n$divides_by(-2,-18)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-negative-coefficients.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aaa050426282ef38dec279aa40b770be60759a8a5e0ddcdc0394c80b0995eefa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/short-negative-coefficients.lit"
+        ]
+      },
+      {
+        "id": "transitive-chain-shorter",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/transitive-chain-shorter.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = (d * p) * x + (d * q) * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/transitive-chain-shorter.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b9b569e72c131a53232d9eb957f9b49b521dd315f1288292fcca86270a851295"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/transitive-chain-shorter.lit"
+        ]
+      },
+      {
+        "id": "combination-direct-factorization",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-direct-factorization.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/combination-direct-factorization.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4b81b694cdf0f30dcac5befd7aa0845ec67172f9e26dfa209c9cf0bfa7538a3b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/combination-direct-factorization.lit"
+        ]
+      },
+      {
+        "id": "both-direct-endpoints",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/both-direct-endpoints.lit",
+        "source": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = a * (k * m)\n    witness $divides_by(a, c) from k * m\n\nwitness $divides_by(3, 12) from 4:\n    12 = 3 * 4\nwitness $divides_by(12, 60) from 5:\n    60 = 12 * 5\nrelease thm divisibility_is_transitive(3, 12, 60)\n$divides_by(3, 60)\n\n# A common divisor divides every integer linear combination. The proof is\n# witness arithmetic rather than a hidden divisibility tactic.\nthm common_divisor_divides_linear_combination:\n    ? forall d, a, b, x, y Z:\n        $divides_by(d, a)\n        $divides_by(d, b)\n        =>:\n            $divides_by(d, a * x + b * y)\n    obtain p from $divides_by(d, a)\n    obtain q from $divides_by(d, b)\n    a * x + b * y = d * (p * x + q * y)\n    witness $divides_by(d, a * x + b * y) from p * x + q * y\n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/both-direct-endpoints.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8eaae652086d8e642f2b60a6fc91b6d59b19c3e42861171ba5f8892e9609112d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/both-direct-endpoints.lit"
+        ]
+      },
+      {
+        "id": "original-full-standalone",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/original-full-standalone.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "8bc3acbd59b3a43804c82442e6b5ae12af1c5e6ba8316fb297a23bfc6af02fc4",
+          "characters": 5586,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    b = a * k\n    c = b * m = (a * k) * m = a * (k * m)\n    witness "
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/original-full-standalone.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4531baf8a0f1372c5c3f8e00929923a95a9e9e19ccafbb0113199b0057d073f3"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/original-full-standalone.lit"
+        ]
+      },
+      {
+        "id": "short-full-standalone",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-full-standalone.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "14eed53b4adac86a15233c5535ad60e1e91b2677a4d0a8580cd9d732a4c4b6bc",
+          "characters": 5474,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-99-cases/short-full-standalone.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4f2e4c47d4108b3d982827959cbfeed88cdf16e9ac563b1112d4ca7d4a6b1a8a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round99-cases/short-full-standalone.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 15,
+      "accepted": 7,
+      "normal_rejections": 8
+    },
+    "scope": "Actual number-theory transitivity6 to4 and common-divisor linear combination7 to4 proof actions, witness-domain/premises unchanged. Zero/negative consumers, gcd caller, original and short full standalone sources checked; no canonical module/current moving kernel claim."
+  }
+}

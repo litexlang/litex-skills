@@ -1,0 +1,7 @@
+claim:
+    ? forall x,y R:
+        abs(abs(x)-abs(y)) <= abs(x-y)
+    abs(x)-abs(y) <= abs(x-y)
+    abs(y)-abs(x) <= abs(y-x) = abs(x-y)
+    0-(abs(x)-abs(y)) = abs(y)-abs(x) <= abs(x-y)
+    abs(abs(x)-abs(y)) <= abs(x-y)

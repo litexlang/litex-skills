@@ -1,0 +1,4 @@
+forall x0,sample R:
+    sample=x0+0/2
+    =>:
+        sample!=x0

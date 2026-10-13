@@ -1,0 +1,10 @@
+claim:
+    ? forall x R,n Z:
+        n < ceil(x)
+        =>:
+            n < x
+    ceil(x) $in Z
+    ceil(x)-1 < x
+    n+1 < ceil(x)+1
+    n+1 <= ceil(x)
+    n = (n+1)-1 <= ceil(x)-1 < x

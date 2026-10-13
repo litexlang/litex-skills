@@ -1,0 +1,38 @@
+claim:
+    ? forall x Q:
+        3 * x = 2
+        =>:
+            x != 1
+    x = (3 * x) / 3 = 2 / 3 < 3 / 3 = 1
+    x < 1
+    by contra:
+        ? x != 1
+        x = 1
+        impossible x < 1
+
+
+
+
+claim:
+    ? forall y R:
+        y^2 + 1 != 0
+    0 <= y^2
+    0 < y^2 + 1
+    by contra:
+        ? y^2 + 1 != 0
+        y^2 + 1 = 0
+        0 < y^2 + 1 = 0
+        impossible 0 < 0
+
+
+
+
+
+
+
+
+forall a, b R:
+    a <= b
+    b <= a
+    =>:
+        a = b

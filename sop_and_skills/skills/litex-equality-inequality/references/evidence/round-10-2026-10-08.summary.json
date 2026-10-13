@@ -1,0 +1,1464 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-10-2026-10-08.json",
+  "original_sha256": "d98c17ed43ba91c191b846bff195dfa2ac6dbf9f5218677fecc9a678ec0ff3db",
+  "original_bytes": 100936,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "f2f41b84dd016c1a02e0fae12cf351c2e8ffe507373fd78ca34126a181718bf2",
+    "version": "Litex 1.0.4-beta",
+    "source_build": {
+      "command": "cargo build --release",
+      "success": true,
+      "exit_code": 0
+    },
+    "cases": [
+      {
+        "id": "finite-max-bound-from-pointwise-direct",
+        "source": "forall S finite_set,M R:\n    $is_nonempty_set(S)\n    S $subset R\n    forall x S:\n        x <= M\n    =>:\n        finite_set_max(S) <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-max-bound-from-pointwise-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b83551779e9c7370962a00b1e8853afda431c63f1d20502bbe97a6c88669802d"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-max-bound-from-pointwise-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-max-bound-from-pointwise-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-max-bound-missing-false",
+        "source": "forall S finite_set,M R:\n    $is_nonempty_set(S)\n    S $subset R\n    =>:\n        finite_set_max(S) <= M\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-max-bound-missing-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e5f464cb240bfb6af5ec7a22edd326c9c8611a4df041140d77a045bab821a8f4"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-max-bound-missing-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-max-bound-missing-false.lit"
+        ]
+      },
+      {
+        "id": "finite-max-empty-invalid",
+        "source": "finite_set_max({}) <= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-max-empty-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e4952de16a763d73db31f53ebf77c705a558c2aec42f0475f1593546396b75e0"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-max-empty-invalid.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-max-empty-invalid.lit"
+        ]
+      },
+      {
+        "id": "finite-min-bound-from-pointwise-direct",
+        "source": "forall S finite_set,M R:\n    $is_nonempty_set(S)\n    S $subset R\n    forall x S:\n        M <= x\n    =>:\n        M <= finite_set_min(S)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-min-bound-from-pointwise-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c0ea3344ea5dae486b7bafdcfa3350075351b482a8d9df404a9276ba3f3de0ef"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-min-bound-from-pointwise-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-min-bound-from-pointwise-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-lower-call-chain",
+        "source": "claim:\n    ? forall m N+,range_index Z,f fn(x N+) R:\n        m <= range_index\n        =>:\n            f(range_index) $in R\n    0 < m <= range_index\n    range_index $in N+\n    f(range_index) $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-lower-call-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6bb92632e038b3f98ad1d4bc5cfe91358fcdb6fcf7675a3419f309f7441fa419"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-lower-call-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-lower-call-chain.lit"
+        ]
+      },
+      {
+        "id": "positive-lower-call-direct",
+        "source": "forall m N+,range_index Z,f fn(x N+) R:\n    m <= range_index\n    =>:\n        f(range_index) $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-lower-call-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2d1584521b03d2ae79cb98167474dbf9faca4b2faa8e981b5805e69870a87f3c"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-lower-call-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-lower-call-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-lower-call-zero-invalid",
+        "source": "forall f fn(x N+) R:\n    f(0) $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-lower-call-zero-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "66c1f48f6310dac12e884de0fb10609550f80da699fd5e12002c6125d7ff2468"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-lower-call-zero-invalid.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-lower-call-zero-invalid.lit"
+        ]
+      },
+      {
+        "id": "positive-lower-index-chain",
+        "source": "claim:\n    ? forall m N+,range_index Z:\n        m <= range_index\n        =>:\n            range_index $in N+\n    0 < m <= range_index\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-lower-index-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bb0238785fa9d84ec8115e4359df9d308efd799276c99dcebd25668fa38dbf17"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-lower-index-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-lower-index-chain.lit"
+        ]
+      },
+      {
+        "id": "positive-lower-index-direct",
+        "source": "forall m N+,range_index Z:\n    m <= range_index\n    =>:\n        range_index $in N+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-lower-index-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e4f49ccef2632d555c1b90b12b9ffa6654c67a6577f38b6ec6e994ee4f6a4377"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-lower-index-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-lower-index-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-lower-index-zero-false",
+        "source": "forall m N,range_index Z:\n    m <= range_index\n    =>:\n        range_index $in N+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-lower-index-zero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "785034121b76210f300b08fcd13b994f568feb6e18c2cd996b22510e75f5d596"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-lower-index-zero-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-lower-index-zero-false.lit"
+        ]
+      },
+      {
+        "id": "size-difference-bound-chain",
+        "source": "claim:\n    ? forall A,B finite_set:\n        finite_set_size(set_minus(A,B)) <= finite_set_size(A)\n    set_minus(A,B) $subset A\n    finite_set_size(set_minus(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-difference-bound-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e778afeeb0dba51670b8d49169a1a9a16e79bf6f165de9e3568b5853275c69d9"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-difference-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-difference-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "size-difference-bound-direct",
+        "source": "forall A,B finite_set:\n    finite_set_size(set_minus(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-difference-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7db9fc25598653278fb8b527ba3a1af1998b84aad7cefd585cae11fc8b393de3"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-difference-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-difference-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "size-equal-alone-false",
+        "source": "forall A,B finite_set:\n    finite_set_size(A) = finite_set_size(B)\n    =>:\n        A = B\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-equal-alone-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "81d4133a823becb961876f0dfd46fec58f7e1fc36f9026dd5c0c66a17fdf2462"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-equal-alone-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-equal-alone-false.lit"
+        ]
+      },
+      {
+        "id": "size-intersection-bound-chain",
+        "source": "claim:\n    ? forall A,B finite_set:\n        finite_set_size(intersect(A,B)) <= finite_set_size(A)\n    intersect(A,B) $subset A\n    finite_set_size(intersect(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-intersection-bound-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f43e1a4e59f946ce96ad1a6cce92bdd703d15822e88578a5d6b0cb73d04b0e08"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-intersection-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-intersection-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "size-intersection-bound-direct",
+        "source": "forall A,B finite_set:\n    finite_set_size(intersect(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-intersection-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e9c2212b3f41c0f020caf393dab9a628c6b44a180af37bf31ae182920bc92b99"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-intersection-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-intersection-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "size-proper-subset-direct",
+        "source": "forall A,B finite_set:\n    A $subset B\n    A != B\n    =>:\n        finite_set_size(A) < finite_set_size(B)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-proper-subset-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a97dd8e603200c029558ca296a41253072b638867c4a56e252a96e0050a396d0"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-proper-subset-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-proper-subset-direct.lit"
+        ]
+      },
+      {
+        "id": "size-subset-direct",
+        "source": "forall A,B finite_set:\n    A $subset B\n    =>:\n        finite_set_size(A) <= finite_set_size(B)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-subset-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fad8f0352c3da0fc977d804d57cd1a126f52ab7d53ba6f7ba802d37fc266c1c3"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-subset-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-subset-direct.lit"
+        ]
+      },
+      {
+        "id": "size-subset-equal-implies-set-equal-direct",
+        "source": "forall A,B finite_set:\n    A $subset B\n    finite_set_size(A) = finite_set_size(B)\n    =>:\n        A = B\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-subset-equal-implies-set-equal-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5faffb178de02fa78767d15e57965189e2afb67f1fe2e67d0a0ea3f8d0afa3eb"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-subset-equal-implies-set-equal-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-subset-equal-implies-set-equal-direct.lit"
+        ]
+      },
+      {
+        "id": "size-subset-strict-without-ne-false",
+        "source": "forall A,B finite_set:\n    A $subset B\n    =>:\n        finite_set_size(A) < finite_set_size(B)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-subset-strict-without-ne-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "af59522f2eef2c18be6436f0b994064769fc4e84525fe02ff4886c9e20b70e1e"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-subset-strict-without-ne-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-subset-strict-without-ne-false.lit"
+        ]
+      },
+      {
+        "id": "size-union-bound-direct",
+        "source": "forall A,B finite_set:\n    finite_set_size(union(A,B)) <= finite_set_size(A)+finite_set_size(B)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-union-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4fc45d113de42d1ca07d82d02bad96818e6415ef11107aa4e8329f0884f45cc5"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-union-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-union-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "size-union-lower-chain",
+        "source": "claim:\n    ? forall A,B finite_set:\n        finite_set_size(A) <= finite_set_size(union(A,B))\n    A $subset union(A,B)\n    finite_set_size(A) <= finite_set_size(union(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-union-lower-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "28ea92a613f8918b4c27dc6898078eec9cacbebd9b0afc0175743cc180a2bd46"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-union-lower-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-union-lower-chain.lit"
+        ]
+      },
+      {
+        "id": "size-union-lower-direct",
+        "source": "forall A,B finite_set:\n    finite_set_size(A) <= finite_set_size(union(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-union-lower-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "19fd0b75867c8b19b5eee8ec2eda9e47e6f9c82453dda7633affa131ff9f1dd4"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-union-lower-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-union-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-real-lower-direct",
+        "source": "forall lower R+,x R:\n    lower <= x\n    =>:\n        0 < x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-real-lower-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d060a091ca5760c38b19595fcd723e7ed4c707915f304da7b2c81df8c468fc4d"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-real-lower-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-real-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-real-lower-chain",
+        "source": "claim:\n    ? forall lower R+,x R:\n        lower <= x\n        =>:\n            0 < x\n    0 < lower <= x\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-real-lower-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6cf905c314be6298768db58d44e964c1efd1f372e1711101a67409f9596255e8"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-real-lower-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-real-lower-chain.lit"
+        ]
+      },
+      {
+        "id": "positive-index-explicit-sign-direct",
+        "source": "forall lower,range_index Z:\n    0 < lower\n    lower <= range_index\n    =>:\n        range_index $in N+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-index-explicit-sign-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "15f1f36e431d03bac2f7d75ccdd060af2fbf30304617ddd22e9448da52f458df"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-index-explicit-sign-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-index-explicit-sign-direct.lit"
+        ]
+      },
+      {
+        "id": "positive-call-refined-domain",
+        "source": "forall range_index N+,f fn(x N+) R:\n    f(range_index) $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-call-refined-domain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a0b488a377923f9c49289c75425bb32b52d3e5c8f57e45d3611580c7f64d8c8e"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-call-refined-domain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-call-refined-domain.lit"
+        ]
+      },
+      {
+        "id": "finite-intersection-closure-direct",
+        "source": "forall A,B finite_set:\n    $is_finite_set(intersect(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-intersection-closure-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "146e615f18223d3b37973c6c43a9432ca4f0e05afeebf5663dd3d4f52dcf67c1"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-intersection-closure-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-intersection-closure-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-difference-closure-direct",
+        "source": "forall A,B finite_set:\n    $is_finite_set(set_minus(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-difference-closure-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "b92995a3d637b9c53b8f3302292706ddc819d3998d9599ad52c561143a3236e3"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-difference-closure-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-difference-closure-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-union-closure-direct",
+        "source": "forall A,B finite_set:\n    $is_finite_set(union(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-union-closure-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cef627157dc0bfea6fe26bcb52eb45665b70c8072730e6140b7affae6d068be3"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-union-closure-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-union-closure-direct.lit"
+        ]
+      },
+      {
+        "id": "size-intersection-guarded",
+        "source": "forall A,B finite_set:\n    $is_finite_set(intersect(A,B))\n    =>:\n        finite_set_size(intersect(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-intersection-guarded.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aa9dca4fdd3fb7812a846ef5a17197e4ba55df31908bbdcfad1b28593c21b1a7"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-intersection-guarded.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-intersection-guarded.lit"
+        ]
+      },
+      {
+        "id": "size-difference-guarded",
+        "source": "forall A,B finite_set:\n    $is_finite_set(set_minus(A,B))\n    =>:\n        finite_set_size(set_minus(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-difference-guarded.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9f75f393229f4f877c66eda0c050ae0cdff9d0e11cd22e7a8a12b33c1c95fdb5"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-difference-guarded.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-difference-guarded.lit"
+        ]
+      },
+      {
+        "id": "size-union-guarded",
+        "source": "forall A,B finite_set:\n    $is_finite_set(union(A,B))\n    =>:\n        finite_set_size(union(A,B)) <= finite_set_size(A)+finite_set_size(B)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-union-guarded.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ba7131e7ed14fd468df4092fd8ece1107823247c48fc527539f2f2a9e6eec9de"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-union-guarded.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-union-guarded.lit"
+        ]
+      },
+      {
+        "id": "size-intersection-declaration-flow",
+        "source": "have A,B finite_set\n$is_finite_set(intersect(A,B))\nintersect(A,B) $subset A\nfinite_set_size(intersect(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-intersection-declaration-flow.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e20e5697a6cb0616ea3bdb8ed6cf258c566a03efc3a33bc4ee091bc59490a597"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-intersection-declaration-flow.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-intersection-declaration-flow.lit"
+        ]
+      },
+      {
+        "id": "finite-union-missing-finiteness-false",
+        "source": "forall A finite_set,B set:\n    $is_finite_set(union(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-union-missing-finiteness-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "184a5a59361736634d27ae82c2c66bc007bd13d8918ced124e0a079ce42b5423"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-union-missing-finiteness-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-union-missing-finiteness-false.lit"
+        ]
+      },
+      {
+        "id": "finite-intersection-one-finite-direct",
+        "source": "forall A finite_set,B set:\n    $is_finite_set(intersect(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-intersection-one-finite-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eac9ca04aa457e18bd7e95145c9e4da640b62a2918daad83279d31aa32b4a863"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-intersection-one-finite-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-intersection-one-finite-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-difference-left-finite-direct",
+        "source": "forall A finite_set,B set:\n    $is_finite_set(set_minus(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-difference-left-finite-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ea26f4a3a23c57bd39378cdf20b47325ffe4748508e78adcacc4e639ef5e230"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-difference-left-finite-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-difference-left-finite-direct.lit"
+        ]
+      },
+      {
+        "id": "size-intersection-complete-guarded",
+        "source": "forall A,B finite_set:\n    $is_finite_set(intersect(A,B))\n    intersect(A,B) $subset A\n    =>:\n        finite_set_size(intersect(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-intersection-complete-guarded.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d5e4d29013c201f84fe12c43d00ace6419b5445d806d16d0de324cf915274da5"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-intersection-complete-guarded.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-intersection-complete-guarded.lit"
+        ]
+      },
+      {
+        "id": "size-difference-complete-guarded",
+        "source": "forall A,B finite_set:\n    $is_finite_set(set_minus(A,B))\n    set_minus(A,B) $subset A\n    =>:\n        finite_set_size(set_minus(A,B)) <= finite_set_size(A)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-difference-complete-guarded.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "93667593ba46d6a8abdf4f51e074097e6e94529d56268e7b607005a244dbe73e"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-difference-complete-guarded.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-difference-complete-guarded.lit"
+        ]
+      },
+      {
+        "id": "size-union-lower-complete-guarded",
+        "source": "forall A,B finite_set:\n    $is_finite_set(union(A,B))\n    A $subset union(A,B)\n    =>:\n        finite_set_size(A) <= finite_set_size(union(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/size-union-lower-complete-guarded.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "84aa7aa661b5ae54b4ce1fb33d7b8ddca2b720d1c0039cbda7cdf5271bb952f0"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/size-union-lower-complete-guarded.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/size-union-lower-complete-guarded.lit"
+        ]
+      },
+      {
+        "id": "positive-call-given-refinement",
+        "source": "forall m N+,range_index Z,f fn(x N+) R:\n    m <= range_index\n    range_index $in N+\n    =>:\n        f(range_index) $in R\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/positive-call-given-refinement.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "42bc85d56d36a37537802c5e594c10f8b057b5a2b9f0e017e8eff521f89ae35f"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/positive-call-given-refinement.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/positive-call-given-refinement.lit"
+        ]
+      },
+      {
+        "id": "finite-intersection-one-finite-subset-route",
+        "source": "claim:\n    ? forall A finite_set,B set:\n        $is_finite_set(intersect(A,B))\n    $is_finite_set(A)\n    intersect(A,B) $subset A\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-intersection-one-finite-subset-route.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d45232edf0976c4858dbee30cee307be7dd6d2ccc8c88ee4793f30b10fefaa40"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-intersection-one-finite-subset-route.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-intersection-one-finite-subset-route.lit"
+        ]
+      },
+      {
+        "id": "finite-intersection-right-finite-direct",
+        "source": "forall A set,B finite_set:\n    $is_finite_set(intersect(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-intersection-right-finite-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3143dd2a909d270f60908d78a308603d1f62ff2de482ee6c044a1e40a8582222"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-intersection-right-finite-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-intersection-right-finite-direct.lit"
+        ]
+      },
+      {
+        "id": "finite-intersection-neither-finite-false",
+        "source": "forall A,B set:\n    $is_finite_set(intersect(A,B))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/finite-intersection-neither-finite-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "39cd5a53e6de9b18b3455a6487abecf71d0d31848d6fa066b54afadcca4a1455"
+        },
+        "stderr": "",
+        "replay_source": "round-10-cases/finite-intersection-neither-finite-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-10-cases/finite-intersection-neither-finite-false.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "positive-lower-index-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d7b836a9cf56ad5cfe4a07972769f82ed8d1618e46e6f95e79040f3a131f5eb9",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall m N+, range_index Z:\\n    m <= range_index\\n    =>:\\n        range_index $in N+\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall m N+, range_index Z:\\n    m <= range_index\\n    =>:\\n        range_index $in N+\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "positive-lower-index-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "positive-lower-call-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b4246834fa96d632e09469d955318a1b27c55b9aa32398caaeaf5be69760b44",
+          "excerpt": "... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "positive-lower-call-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "positive-real-lower-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b4246834fa96d632e09469d955318a1b27c55b9aa32398caaeaf5be69760b44",
+          "excerpt": "... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "positive-real-lower-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "6a73b28ed27df7e8056f999e935c6d51b34198460359ee8b1fa0b381f183dfed",
+          "excerpt": "... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "positive-index-explicit-sign-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "9158ac2ebd7726d9e9a60b6c27547fabc3a3004584b0cbdfb0ab84def0d47cbe",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall lower, range_index Z:\\n    0 < lower\\n    lower <= range_index\\n    =>:\\n        range_index $in N+\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall lower, range_index Z:\\n    0 < lower\\n    lower <= range_index\\n    =>:\\n        range_index $in N+\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": nu"
+        }
+      }
+    ],
+    "discarded_generation_errors": [
+      {
+        "source": "forall m N+,i Z: ...",
+        "error": "parse_error: `i` is a reserved builtin name at line 1 in <repl>",
+        "repair": "Renamed generated binder to range_index, preserving mathematics. Hard parse error ended prior Session; restart replayed accepted initial 1=1."
+      }
+    ],
+    "source_revision": "17d99299e7d24befacd4bae289c826167630fcc9",
+    "source_note": "Current working-tree release, preexisting edits preserved. Reserved i binder generation error excluded before corrected range_index probes."
+  }
+}

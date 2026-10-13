@@ -1,0 +1,7 @@
+claim:
+    ? forall E set,p R:
+        p $in E
+        E={x R: x>0}
+        =>:
+            p>0
+    p $in {x R: x>0}

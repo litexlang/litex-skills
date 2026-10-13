@@ -1,0 +1,154 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-50-session.json",
+  "original_sha256": "96ee401061930e803d2ef7d01a764d06aa3f4a2625aa724d7dc95707a9b3c965",
+  "original_bytes": 7348,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "let r50_two_point_vector = fn(index N+: index <= 2) R",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8c44d6ec08277ae1bc6d8de41a6d521bb7517c288e65223e45a77e96e786e5f1",
+        "excerpt": "let r50_two_point_vector = fn(index N+: index <= 2) R\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "prop r50_is_probability_vector2(p r50_two_point_vector):\n    p(1) >= 0\n    p(2) >= 0\n    p(1) + p(2) = 1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9790d81861eaa14c5022fd726654b1a6c377f0946989e8b8e0c16c44c0711a24",
+        "excerpt": "prop r50_is_probability_vector2(p r50_two_point_vector):\r\n    p(1) >= 0\r\n    p(2) >= 0\r\n    p(1) + p(2) = 1\r\n\r\n... ... ... ... success\r\nlitex> "
+      }
+    },
+    {
+      "source": "have fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9511908d12c678b05a99f2df73193c24bc2364df4d8bbba76bc2a45f2c577784",
+        "excerpt": "have fn r50_expectation2(values, probs r50_two_point_vector) R = values(1) * probs(1) + values(2) * probs(2)\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "have fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5c5c1cfbde7984d258b9e0fea124bc725aaa72a50dae54ae1b3259ef519b6c1f",
+        "excerpt": "have fn r50_variance2(values, probs r50_two_point_vector) R = (values(1) - r50_expectation2(values, probs))^2 * probs(1) + (values(2) - r50_expectation2(values, probs))^2 * probs(2)\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "have fn r50_fair_coin_values(k N+: k <= 2) R = k - 1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "54fadc12dd405ff0fb2dde68ecbdaf7ce70c79ef558ebd4977814cc07877655e",
+        "excerpt": "have fn r50_fair_coin_values(k N+: k <= 2) R = k - 1\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "have fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "bd5f63b66c65e6e7f55da4f47fd13b0c85ad0829cd3302f7e368bd4c8ff5514e",
+        "excerpt": "have fn r50_fair_coin_probs(k N+: k <= 2) R = 1 / 2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "c64f915d09d7a647514872a60d3f0e0245914050ce1eb20b84da1912fc19e44b",
+        "excerpt": "r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 2\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 2\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a554ce34e8cf01f56c556ffeb4732d03874473fdc805648f9a7f2da6d2b73b0d",
+        "excerpt": "r50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r50_variance2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 4\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r50_variance2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 4\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "by def $r50_is_probability_vector2(r50_fair_coin_probs)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "5809664e58c8f7481cabff2d028dfc7de5310aec8b5bad3bf0ff5f5cc5af46d7",
+        "excerpt": "by def $r50_is_probability_vector2(r50_fair_coin_probs)\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"by def $r50_is_probability_vector2(r50_fair_coin_probs)\",\r\n      \"why_failed\": {\r\n        \"type\": \"by\",\r\n        \"rule_name\": \"By definition\",\r\n        \"message\": \"Prove by unfolding a definition\",\r\n        \"phase\": \"by_def\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_fair_coin_probs(1)=1/2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "90477a7435fa4e0e8f2f0ade1d35459ed908c288bf53dfd23c205fed0f4a7259",
+        "excerpt": "r50_fair_coin_probs(1)=1/2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_fair_coin_probs(2)=1/2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "27d8799e9f1365cf250b27b21bb3ba2942be9e80eaa7024b60acf6689214f3ec",
+        "excerpt": "r50_fair_coin_probs(2)=1/2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_fair_coin_values(1)=0",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "1333724f2e111bf7d158ff970acc255fb21e0a18959fedc66ec107d2631c8738",
+        "excerpt": "r50_fair_coin_values(1)=0\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_fair_coin_values(2)=1",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "c5126201c8b37203886a453feefd6401ed0247bcea24bc28d6e24c4aed7b4c56",
+        "excerpt": "r50_fair_coin_values(2)=1\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "c64f915d09d7a647514872a60d3f0e0245914050ce1eb20b84da1912fc19e44b",
+        "excerpt": "r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=1/2\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 2\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r50_expectation2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 2\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "a554ce34e8cf01f56c556ffeb4732d03874473fdc805648f9a7f2da6d2b73b0d",
+        "excerpt": "r50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=1/4\r\n\r\n{\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"r50_variance2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 4\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"r50_variance2(r50_fair_coin_values, r50_fair_coin_probs) = 1 / 4\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "by def $r50_is_probability_vector2(r50_fair_coin_probs)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "563e901714dbf0a92fa70ed178b6247474a2b15a7f585fb5a88ebaea50876bb8",
+        "excerpt": "by def $r50_is_probability_vector2(r50_fair_coin_probs)\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=r50_fair_coin_values(1)*r50_fair_coin_probs(1)+r50_fair_coin_values(2)*r50_fair_coin_probs(2)=0*(1/2)+1*(1/2)=1/2",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "8ab336757bb3480d6d8cd0ac30080c8c49e6dcad6f9c47f0c0bb5fdeebca2c91",
+        "excerpt": "r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs)=r50_fair_coin_values(1)*r50_fair_coin_probs(1)+r50_fair_coin_values(2)*r50_fair_coin_probs(2)=0*(1/2)+1*(1/2)=1/2\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    },
+    {
+      "source": "r50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=(r50_fair_coin_values(1)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(1)+(r50_fair_coin_values(2)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(2)=(0-1/2)^2*(1/2)+(1-1/2)^2*(1/2)=1/4",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "524b44bf0bb955ba2c38659c37f483e0b895a7091437124a1f2aae08eeccdfae",
+        "excerpt": "r50_variance2(r50_fair_coin_values,r50_fair_coin_probs)=(r50_fair_coin_values(1)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(1)+(r50_fair_coin_values(2)-r50_expectation2(r50_fair_coin_values,r50_fair_coin_probs))^2*r50_fair_coin_probs(2)=(0-1/2)^2*(1/2)+(1-1/2)^2*(1/2)=1/4\r\n\r\nsuccess\r\nlitex> litex> "
+      }
+    }
+  ]
+}

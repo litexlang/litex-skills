@@ -1,0 +1,5 @@
+forall c R,m Z,f fn(k Z) R:
+    f(m)=c
+    f(m+1)=c
+    =>:
+        f(m)*f(m+1)=c*c

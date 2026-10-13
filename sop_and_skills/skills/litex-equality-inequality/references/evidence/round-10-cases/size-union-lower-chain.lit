@@ -1,0 +1,5 @@
+claim:
+    ? forall A,B finite_set:
+        finite_set_size(A) <= finite_set_size(union(A,B))
+    A $subset union(A,B)
+    finite_set_size(A) <= finite_set_size(union(A,B))

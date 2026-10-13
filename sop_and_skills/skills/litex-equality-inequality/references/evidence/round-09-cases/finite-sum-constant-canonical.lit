@@ -1,0 +1,2 @@
+forall S finite_set,M R:
+    finite_set_sum(S,fn(x S) R {M}) = finite_set_size(S)*M

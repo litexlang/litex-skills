@@ -1,0 +1,12 @@
+have fn r60_dot2(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)
+
+prop r60_parallel2(u,v cart(R,R)):
+    exist k R st {u(1)=k*v(1),u(2)=k*v(2)}
+
+prop r60_perpendicular2(u,v cart(R,R)):
+    r60_dot2(u,v)=0
+
+(2,4)(1)=2
+(2,4)(2)=4
+(1,2)(1)=1
+witness $r60_parallel2((2,4),(1,2)) from 2

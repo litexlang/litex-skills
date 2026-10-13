@@ -1,0 +1,130 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-55-sources.json",
+  "original_sha256": "2fa5fba6795b75ed3a253570242a6ae7a7630d1652434c9173ce36340953a067",
+  "original_bytes": 11274,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter06-trigonometric-functions.lit",
+    "source_sha256": "e9ca1c86c9d628154247000aede85586c9794d2606c0b94de3ab5237d127d7de",
+    "prefix": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n",
+    "cases": [
+      {
+        "id": "source-range",
+        "source": "forall x R:\n    -1<=sin(x)<=1\n    -1<=cos(x)<=1\n",
+        "statement": "forall x R:\n    -1<=sin(x)<=1\n    -1<=cos(x)<=1\n"
+      },
+      {
+        "id": "source-parity",
+        "source": "forall x R:\n    sin(-x)=-sin(x)\n    cos(-x)=cos(x)\n",
+        "statement": "forall x R:\n    sin(-x)=-sin(x)\n    cos(-x)=cos(x)\n"
+      },
+      {
+        "id": "source-two-pi-period",
+        "source": "forall x R:\n    sin(x+2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)\n",
+        "statement": "forall x R:\n    sin(x+2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)\n"
+      },
+      {
+        "id": "source-tangent-period",
+        "source": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    cos(x + 1 * pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n        tan(x + 1 * pi) = tan(x)\n",
+        "statement": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    cos(x + 1 * pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n        tan(x + 1 * pi) = tan(x)\n"
+      },
+      {
+        "id": "tangent-one-pi-spelling",
+        "source": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n",
+        "statement": "forall x R:\n    cos(x) != 0\n    cos(x + pi) != 0\n    =>:\n        tan(x + pi) = tan(x)\n"
+      },
+      {
+        "id": "false-sine-pi-period",
+        "source": "forall x R:\n    sin(x+pi)=sin(x)\n",
+        "statement": "forall x R:\n    sin(x+pi)=sin(x)\n"
+      },
+      {
+        "id": "invalid-tangent-singularity",
+        "source": "tan(pi/2)=0\n",
+        "statement": "tan(pi/2)=0\n"
+      },
+      {
+        "id": "source-numeric",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_transformed_sine(2, 3, pi / 6, 0) = 2 * sin(3 * 0 + pi / 6)\nr55_sine_scale_amplitude(-3) = abs(-3) = 3\n",
+        "statement": "r55_transformed_sine(2, 3, pi / 6, 0) = 2 * sin(3 * 0 + pi / 6)\nr55_sine_scale_amplitude(-3) = abs(-3) = 3\n"
+      },
+      {
+        "id": "amplitude-direct",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_sine_scale_amplitude(-3)=3\n",
+        "statement": "r55_sine_scale_amplitude(-3)=3\n"
+      },
+      {
+        "id": "transformed-direct",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_transformed_sine(2,3,pi/6,0)=1\n",
+        "statement": "r55_transformed_sine(2,3,pi/6,0)=1\n"
+      },
+      {
+        "id": "transformed-short-chain",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nsin(pi/6)=1/2\nr55_transformed_sine(2,3,pi/6,0)=2*sin(3*0+pi/6)=2*sin(pi/6)=2*(1/2)=1\n",
+        "statement": "sin(pi/6)=1/2\nr55_transformed_sine(2,3,pi/6,0)=2*sin(3*0+pi/6)=2*sin(pi/6)=2*(1/2)=1\n"
+      },
+      {
+        "id": "false-amplitude",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_sine_scale_amplitude(-3)=-3\n",
+        "statement": "r55_sine_scale_amplitude(-3)=-3\n"
+      },
+      {
+        "id": "false-transformed-value",
+        "source": "have fn r55_transformed_sine(A, omega, phi, x R) R = A * sin(omega * x + phi)\nhave fn r55_sine_scale_amplitude(A R) R = abs(A)\n\nr55_transformed_sine(2,3,pi/6,0)=2\n",
+        "statement": "r55_transformed_sine(2,3,pi/6,0)=2\n"
+      },
+      {
+        "id": "two-pi-addition-proof",
+        "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n"
+      },
+      {
+        "id": "tangent-addition-proof",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(pi)=-1\n    sin(pi)=0\n    sin(x+pi)=sin(x)*cos(pi)+cos(x)*sin(pi)=-sin(x)\n    cos(x+pi)=cos(x)*cos(pi)-sin(x)*sin(pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(pi)=-1\n    sin(pi)=0\n    sin(x+pi)=sin(x)*cos(pi)+cos(x)*sin(pi)=-sin(x)\n    cos(x+pi)=cos(x)*cos(pi)-sin(x)*sin(pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n"
+      },
+      {
+        "id": "tangent-antiperiod-proof",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n"
+      },
+      {
+        "id": "tangent-argument-bridge",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n"
+      },
+      {
+        "id": "tangent-first-conclusion",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n"
+      },
+      {
+        "id": "tangent-own-sin-cos",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    sin(x+1*pi)=-sin(x)\n    cos(x+1*pi)=-cos(x)\n    tan(x+1*pi)=sin(x+1*pi)/cos(x+1*pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    sin(x+1*pi)=-sin(x)\n    cos(x+1*pi)=-cos(x)\n    tan(x+1*pi)=sin(x+1*pi)/cos(x+1*pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n"
+      },
+      {
+        "id": "period-delete-cos-value",
+        "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    sin(2*pi)=0\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n"
+      },
+      {
+        "id": "period-delete-sin-value",
+        "source": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        sin(x+2*pi)=sin(x)\n        cos(x+2*pi)=cos(x)\n    cos(2*pi)=1\n    sin(x+2*pi)=sin(x)*cos(2*pi)+cos(x)*sin(2*pi)=sin(x)\n    cos(x+2*pi)=cos(x)*cos(2*pi)-sin(x)*sin(2*pi)=cos(x)\n"
+      },
+      {
+        "id": "tangent-delete-sin-value",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    cos(x+pi)=-cos(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n"
+      },
+      {
+        "id": "tangent-delete-cos-value",
+        "source": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n",
+        "statement": "claim:\n    ? forall x R:\n        cos(x) != 0\n        cos(x + pi) != 0\n        cos(x + 1 * pi) != 0\n        =>:\n            tan(x + pi) = tan(x)\n            tan(x + 1 * pi) = tan(x)\n    sin(x+pi)=-sin(x)\n    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)\n    x+1*pi=x+pi\n    tan(x+1*pi)=tan(x+pi)=tan(x)\n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+prop is_scalar_system_laws(s nonempty_set, scalar_zero, scalar_one s, scalar_add fn(x, y s) s, scalar_neg fn(x s) s, scalar_mul fn(x, y s) s, scalar_inv fn(x s) s):
+    scalar_zero != scalar_one
+    forall x, y, z s:
+        scalar_add(scalar_add(x, y), z) = scalar_add(x, scalar_add(y, z))
+        scalar_mul(scalar_mul(x, y), z) = scalar_mul(x, scalar_mul(y, z))
+        scalar_mul(x, scalar_add(y, z)) = scalar_add(scalar_mul(x, y), scalar_mul(x, z))
+    forall x, y s:
+        scalar_add(x, y) = scalar_add(y, x)
+        scalar_mul(x, y) = scalar_mul(y, x)
+    forall x s:
+        scalar_add(scalar_zero, x) = x
+        scalar_add(x, scalar_neg(x)) = scalar_zero
+        scalar_mul(scalar_one, x) = x
+    forall x s:
+        x != scalar_zero
+        =>:
+            scalar_mul(x, scalar_inv(x)) = scalar_one
+
+struct ScalarSystem<s nonempty_set>:
+    zero s
+    one s
+    add fn(x, y s) s
+    neg fn(x s) s
+    mul fn(x, y s) s
+    inv fn(x s) s
+    <=>:
+        $is_scalar_system_laws(s, zero, one, add, neg, mul, inv)
+
+template<s nonempty_set, scalars &ScalarSystem<s>, n N+>:
+    have fn coordinate_add(x, y finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.add(x(idx), y(idx))}
+
+template<s nonempty_set, scalars &ScalarSystem<s>, n N+>:
+    have fn coordinate_smul(a s, x finite_seq(s, n)) finite_seq(s, n) = fn(idx closed_range(1, n)) s {scalars.mul(a, x(idx))}
+
+forall s nonempty_set, scalars &ScalarSystem<s>, n N+, x, y, result finite_seq(s, n), idx N+:
+    result = \coordinate_add<s, scalars, n>(x, y)
+    idx <= n
+    =>:
+        result(idx) = scalars.add(x(idx), y(idx))

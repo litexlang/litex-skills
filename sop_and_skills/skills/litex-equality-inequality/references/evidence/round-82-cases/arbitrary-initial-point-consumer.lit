@@ -1,0 +1,7 @@
+have fn quadratic_solution(c, x R) R = x^2 + c
+thm arbitrary_initial_parameter:
+    ? forall c,x0,y0 R:
+        quadratic_solution(c,x0)=y0
+        =>:
+            c=y0-x0^2
+    quadratic_solution(c,x0)=x0^2+c

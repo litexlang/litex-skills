@@ -1,0 +1,9 @@
+claim:
+    ? forall f fn(x {1,2}) R:
+        forall x {1,2}:
+            0 <= f(x)
+        =>:
+            0 <= finite_set_product({1,2},f)
+    0 <= f(1)
+    0 <= f(2)
+    0 <= f(1)*f(2) = finite_set_product({1,2},f)

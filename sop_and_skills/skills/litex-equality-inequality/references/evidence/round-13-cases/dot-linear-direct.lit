@@ -1,0 +1,4 @@
+have fn vec(A,B cart(R,R)) cart(R,R) = (B(1)-A(1),B(2)-A(2))
+have fn dot(u,v cart(R,R)) R = u(1)*v(1)+u(2)*v(2)
+forall u,v,w cart(R,R),a,b R:
+    dot((a*u(1)+b*v(1),a*u(2)+b*v(2)),w) = a*dot(u,w)+b*dot(v,w)

@@ -1,0 +1,4 @@
+forall p,q cart(R,R):
+    p(1) = q(1)
+    =>:
+        p = q

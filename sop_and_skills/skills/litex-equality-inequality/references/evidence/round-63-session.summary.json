@@ -1,0 +1,28 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-63-session.json",
+  "original_sha256": "f868c3f10fc8b8b1c11ef754c861d7bb743d83a6edc5c8a044300b44939f1fe0",
+  "original_bytes": 1062,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "forall x Z:\n    x>4\n    =>:\n        5<=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "298a2389088af1b74f6cce07d62b67881e9df688351829e3120f0a92275fab93",
+        "excerpt": "forall x Z:\r\n    x>4\r\n    =>:\r\n        5<=x\r\n\r\n... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round61 snapshot Session9174; cold round63 owns acceptance."
+    },
+    {
+      "source": "forall x R:\n    x>4\n    =>:\n        5<=x",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "68e1a667c3f7baa0638308012562340a8c11a8b2face054b80863a83e0abcab2",
+        "excerpt": "forall x R:\r\n    x>4\r\n    =>:\r\n        5<=x\r\n\r\n... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R:\\n    x > 4\\n    =>:\\n        5 <= x\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R:\\n    x > 4\\n    =>:\\n        5 <= x\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\nlitex> "
+      },
+      "baseline": "Round61 snapshot Session9174; real-domain negative."
+    }
+  ]
+}

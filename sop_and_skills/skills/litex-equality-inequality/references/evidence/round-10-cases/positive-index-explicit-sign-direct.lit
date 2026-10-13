@@ -1,0 +1,5 @@
+forall lower,range_index Z:
+    0 < lower
+    lower <= range_index
+    =>:
+        range_index $in N+

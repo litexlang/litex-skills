@@ -1,0 +1,4 @@
+forall a,b Z,m N+:
+    a%m = b%m
+    =>:
+        (a-b)%m = 0

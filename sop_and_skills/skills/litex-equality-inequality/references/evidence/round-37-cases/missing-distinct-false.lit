@@ -1,0 +1,2 @@
+forall slope1,slope2 R:
+    abs(slope1-slope2)>0

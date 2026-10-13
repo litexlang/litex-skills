@@ -1,0 +1,984 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-101-2026-10-10.json",
+  "original_sha256": "c110530223090641eaa878d5bdd1615486d9fb20e1dfc21edb59d24cd66be94c",
+  "original_bytes": 860772,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/3_number_theory/main.lit",
+    "source_sha256": "8bc3acbd59b3a43804c82442e6b5ae12af1c5e6ba8316fb297a23bfc6af02fc4",
+    "binary_sha256": "c253a863e97c38a223d5d2a5377a706ee238401dc4c86b3eca47fc6b4f6984ae",
+    "binary_build": "Reuse successful round88 fixed snapshot",
+    "cases": [
+      {
+        "id": "baseline",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/baseline.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "828a3bbebe4a45b9c0f2fe57bb13153b5b9bc12bf31a42cc7e6b12f8ab12012f",
+          "characters": 4928,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/baseline.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "12bc7109aee9a9713cab84ad5b88f991f336dee98692e515314f11f9be5399cc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/baseline.lit"
+        ]
+      },
+      {
+        "id": "delete-premise-unfolds",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/delete-premise-unfolds.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "332cbb0626b1722fe97a3e593e41e3c2d98e2aeb661590d429e031fd2ed92771",
+          "characters": 4824,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/delete-premise-unfolds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bf7faa3c0b627267f1e2933a197fa15216854859b5b8f7514efa039b42398d0c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/delete-premise-unfolds.lit"
+        ]
+      },
+      {
+        "id": "delete-obtain-echoes",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/delete-obtain-echoes.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0e974e24da7647bb1c3908bdd28ee1516b78810a66c94f59488123065bf787fd",
+          "characters": 4880,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/delete-obtain-echoes.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "eb752ced42962c4a2b495cc69aa569b4e50dbe268443d644e43ec2687fc3ce45"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/delete-obtain-echoes.lit"
+        ]
+      },
+      {
+        "id": "delete-final-fold",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/delete-final-fold.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "44877e254a983ff2f9f900df4fe6599f17b7614e6b2666ba97a57102533e48d0",
+          "characters": 4868,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/delete-final-fold.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d4fb91a5b772e09d9e0265129030c1af25fe454c30e520c448a0ad43738a3b05"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/delete-final-fold.lit"
+        ]
+      },
+      {
+        "id": "witness-no-body",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/witness-no-body.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "379fc96da3b2b165f614350011734166d501b0de93d3158965dcd3d63603121e",
+          "characters": 4881,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/witness-no-body.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "441bbd0798744fa1e46de8f1349c96647eeb58a6cea298da00ab01f2a2becff4"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/witness-no-body.lit"
+        ]
+      },
+      {
+        "id": "joint-short",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/joint-short.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0b414be4e66400576127969e35543b0430c715812b0cad5e3d69bdefbcddf065",
+          "characters": 4669,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/joint-short.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2911342fef992e3459f2f1626b02951227aa8a2e88853eed827ee401553840fb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/joint-short.lit"
+        ]
+      },
+      {
+        "id": "short-delete-calculation",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-delete-calculation.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "02cdbc129ab9009b6af6dcec7f23acfc17e425b7e22a4bfc9b87c8e9b66585c6",
+          "characters": 4579,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-delete-calculation.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3b93e12379af46bf7e67ceba972b5cf1f7b28ba5590f67efd54ac0c911ea6d3c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/short-delete-calculation.lit"
+        ]
+      },
+      {
+        "id": "short-wrong-witness",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-wrong-witness.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "b6f1beadc5ffb11d2f0d4afb3b6fa001e558493573055456db61ed8a0668d506",
+          "characters": 4669,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-wrong-witness.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7f354ae64c5a4bf83863f61d3b4a93f35dc4b7f85071e8e03c8f236377b43f6d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/short-wrong-witness.lit"
+        ]
+      },
+      {
+        "id": "short-missing-second-premise",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-missing-second-premise.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "794c75530af113924a7476d48afcfb47677917ec2ac87f6eebafcefcea8fae1d",
+          "characters": 4631,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-missing-second-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "e8d65d5a1cfa79f1322f66ca3e8c77bf0302b3948f5bd3c011149fdd480f8eaa"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/short-missing-second-premise.lit"
+        ]
+      },
+      {
+        "id": "short-direct-factorization",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-direct-factorization.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "b4e8cfca7aadf4b25fd3b1e3d2d74d366829921f4bb697ce2cf25a913afb8ea4",
+          "characters": 4621,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-direct-factorization.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c55ede2a4170af927af2053b96b01e542d4162cc6309d32238e17a242bc82dd0"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/short-direct-factorization.lit"
+        ]
+      },
+      {
+        "id": "short-three-term-chain",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-three-term-chain.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ac8ce2faef19ef14ca4f7282c79a4e984e3f8c9d79bddbdc2f7ffb0f2737386a",
+          "characters": 4641,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-three-term-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8b7900ee6e8d8a5db5f27b27d586ebb037f87e06002a19aead3b06189d50bb0f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/short-three-term-chain.lit"
+        ]
+      },
+      {
+        "id": "short-signed-consumer",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-signed-consumer.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "26381167588bf008a8085a25d347cc125e23ce39dec1b9594b8b5027a063bc74",
+          "characters": 4888,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/short-signed-consumer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2415019b0f58bf6cadc54a3c479c2f6b7be95460728b90cdf5a64d373ffef41d"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/short-signed-consumer.lit"
+        ]
+      },
+      {
+        "id": "false-zero-modulus",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/false-zero-modulus.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "32f6fd02964393a0c4e223c549d1359c429ed61853095d80474501ac1dc354cf",
+          "characters": 4692,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/false-zero-modulus.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5fe45288fad11281539432c4f41a17ce73b252fa1cda5fe948d3f984ad1b20d2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/false-zero-modulus.lit"
+        ]
+      },
+      {
+        "id": "false-residue-pair",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/false-residue-pair.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "b48db34f329eebbec6149dbff2f10cc318fe205c96004aae9f7bc14ab4160f46",
+          "characters": 4692,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/false-residue-pair.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "19cca217c421561cfbf09c35d16ce696cea60b01ddc51540c2357a2ed7f29434"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/false-residue-pair.lit"
+        ]
+      },
+      {
+        "id": "existing-native-interface",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/existing-native-interface.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "661009ebaf1ab886ae7fa7cfe1e14e715959e546eb5698c9f2334c12e1e86952",
+          "characters": 4502,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/existing-native-interface.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0230ce05a928dbe2aa400bc421e635acef78cc3c9b42d5d7bd3cff0714119713"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/existing-native-interface.lit"
+        ]
+      },
+      {
+        "id": "native-interface-plus-difference",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-plus-difference.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3f35ec1d09952520430833dc39cb12945b93d30b1c4e03c2f954814e1b6c7a12",
+          "characters": 4530,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-plus-difference.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "be7114899e9779123cbafc93682b393236272fe7b2e74d7c54a506a0f9059c18"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-plus-difference.lit"
+        ]
+      },
+      {
+        "id": "native-interface-signed-consumer",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-signed-consumer.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "23fe1982c9e57d8c53818f1ff24e4bedc96dc66477c46f1d8b71eeb1c021c5a9",
+          "characters": 4721,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-signed-consumer.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f81e043d9d7318214db3ac0eec4b86d80ff03c5e6b333e9d5c8dbdfacbe9150f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-signed-consumer.lit"
+        ]
+      },
+      {
+        "id": "native-interface-after-unfolds",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-after-unfolds.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "06bce9f144c83e4badceb817ac9f38651d297fc06bf1844fff2565dd998641ee",
+          "characters": 4580,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-after-unfolds.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "719ca7c9aa54ee3383d30bfa97da05484866129e3a593e2fbc8a5820c6eb024a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-after-unfolds.lit"
+        ]
+      },
+      {
+        "id": "native-interface-after-divisibility",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-after-divisibility.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "2e7e250002397abdcb4b0a60144a240e549b8d20d5c4a4ba535384608083af73",
+          "characters": 4560,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-after-divisibility.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9ff5f8cf57da3005bc6f6d32dae3834b27345bdb857a5d669271f60f7194ceae"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-after-divisibility.lit"
+        ]
+      },
+      {
+        "id": "native-interface-with-final-fold",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-with-final-fold.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c74f6b6fe95cb07320b39aba20bf2be20bd1686e4baab7fd33cbbea0494b173e",
+          "characters": 4545,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-with-final-fold.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6064a0195c48a946edd923137fca00d10777eaaa08c2848d710504b788fc486c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-with-final-fold.lit"
+        ]
+      },
+      {
+        "id": "native-interface-exact-argument-bridge",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-exact-argument-bridge.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0ed3f545e94f4d4f9afc1826c16aa178ecf1b5dd4af4112f21efe97922beaf84",
+          "characters": 4534,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-exact-argument-bridge.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9c487db831dec90001c1196e0aeef779646525963c7bf5545df408545e8cdf11"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-exact-argument-bridge.lit"
+        ]
+      },
+      {
+        "id": "native-interface-bridge-and-fold",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-bridge-and-fold.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "0d4444aae75a65fd100cb1f9a696d048a53467b3e53370d410a20ed7d78da45a",
+          "characters": 4577,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/native-interface-bridge-and-fold.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f483e95753701faa54a3f831cde0e075fe9fdd1e802fa2ee73cf9591cdee6d2c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/native-interface-bridge-and-fold.lit"
+        ]
+      },
+      {
+        "id": "preferred-signed-consumer",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-signed-consumer.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "d547ce193dfe9d8df4c48859b1f93bc438b8716d89a115c8ad1e65c8ec799c0f",
+          "characters": 4753,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-signed-consumer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "34a57509e78c17c723b50085375cd33e482d381a1bcedc8241a925f01a6cb07b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/preferred-signed-consumer.lit"
+        ]
+      },
+      {
+        "id": "preferred-false-zero-modulus",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-false-zero-modulus.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "35aad6f47794c2908fb7b18a060f473ec516b12068ef3ce78ad9da8e94c23a40",
+          "characters": 4557,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-false-zero-modulus.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1f884fe1484ac03ae4a1519764f898007dd4182894880afff14531a0ee6a456c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/preferred-false-zero-modulus.lit"
+        ]
+      },
+      {
+        "id": "preferred-missing-second-premise",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-missing-second-premise.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "3e467423c57c03fa3458b9e24c827c23ea4d9d384cac5e2f6a6baec5b474fdf8",
+          "characters": 4496,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-missing-second-premise.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "597e7f5d958daaa551b3733bef5df64f8b3a6814721182d21aa2086d8ccb4ef2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/preferred-missing-second-premise.lit"
+        ]
+      },
+      {
+        "id": "preferred-false-sum-goal",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-false-sum-goal.lit",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ede748d5c9d0685af075dd14b125ac3d884e15bf3edc92c066b4816c72fab7d7",
+          "characters": 4538,
+          "excerpt": "# Elementary number theory in Litex.\n#\n# Included: witness-based divisibility, linear combinations, a Bezout-style\n# gcd certificate, the linear Diophantine criterion, and modular congruence.\n\nprop divides_by(d, n Z):\n    exist k Z st {n = d * k}\n\n# Compose the two divisibility witnesses by multiplying them.\nthm divisibility_is_transitive:\n    ? forall a, b, c Z:\n        $divides_by(a, b)\n        $divides_by(b, c)\n        =>:\n            $divides_by(a, c)\n    obtain k from $divides_by(a, b)\n    obtain m from $divides_by(b, c)\n    c = b * m = (a * k) * m = a * (k * m)\n    witness $divides_by(a,"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-101-cases/preferred-false-sum-goal.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "49af4681bf4fe34ea13445b38f29eed4180d3b1f63b87832102131df54a7f521"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round88-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-10/equality-inequality-search/round101-cases/preferred-false-sum-goal.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 26,
+      "accepted": 10,
+      "normal_rejections": 16
+    },
+    "scope": "Actual congruence addition theorem; source positive modulus/premises/goals kept. Manual witness10 to4, preferred existing linear-combination native interface plus exact argument transport10 to2. Full short source and signed consumer, wrong premise/conclusion/domain controls. No new bt."
+  }
+}

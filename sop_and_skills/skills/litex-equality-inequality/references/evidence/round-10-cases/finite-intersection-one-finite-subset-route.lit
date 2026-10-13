@@ -1,0 +1,5 @@
+claim:
+    ? forall A finite_set,B set:
+        $is_finite_set(intersect(A,B))
+    $is_finite_set(A)
+    intersect(A,B) $subset A

@@ -1,0 +1,42 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-72-session.json",
+  "original_sha256": "4453386e1d31de2e0645af3934199f80aa7776001f418ea7066b8b222185050f",
+  "original_bytes": 6914,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "prop is_subgroup(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, H power_set(A)):\n    $GroupSetting(A, mul, one, inv)\n    one $in H\n    forall x, y H:\n        mul(x, y) $in H\n    forall x H:\n        inv(x) $in H",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "269705c5c7d9566c39e9ecc07457613736ea606afeea6d3013aae1b207758a86",
+        "excerpt": "prop is_subgroup(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, H power_set(A)):\r\n    $GroupSetting(A, mul, one, inv)\r\n    one $in H\r\n    forall x, y H:\r\n        mul(x, y) $in H\r\n    forall x H:\r\n        inv(x) $in H\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source GroupSetting/homomorphism dependencies already accepted. Current cold round72 owns deletion evidence."
+    },
+    {
+      "source": "prop is_normal_subgroup(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, H power_set(A)):\n    $GroupSetting(A, mul, one, inv)\n    $is_subgroup(A, mul, one, inv, H)\n    forall a A, h H:\n        mul(mul(a, h), inv(a)) $in H",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "20ebe7f4ffdf953f3d143b5ecca0497c8fc3af13839eec520c43d2c8483d230b",
+        "excerpt": "prop is_normal_subgroup(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, H power_set(A)):\r\n    $GroupSetting(A, mul, one, inv)\r\n    $is_subgroup(A, mul, one, inv, H)\r\n    forall a A, h H:\r\n        mul(mul(a, h), inv(a)) $in H\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source GroupSetting/homomorphism dependencies already accepted. Current cold round72 owns deletion evidence."
+    },
+    {
+      "source": {
+        "text_omitted": true,
+        "sha256": "824f494f1ef7dd95eb348ca85847866ac03234ef28c7eb064370f3c6c59b3034",
+        "characters": 2506,
+        "excerpt": "thm kernel_is_normal_subgroup:\n    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B:\n        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\n        =>:\n            $is_normal_subgroup(A, mul_A, one_A, inv_A, {candidate A: f(candidate) = one_B})\n    claim:\n        ? $is_subgroup(A, mul_A, one_A, inv_A, {candidate A: f(candidate) = one_B})\n        release thm homomorphism_maps_identity(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\n        release thm set_builder_memb"
+      },
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "9ee58fa0dbca9c328aea4156a6b82923931f39ec417ea3a5952d0ed415cc9432",
+        "excerpt": "thm kernel_is_normal_subgroup:\r\n    ? forall A nonempty_set, mul_A fn(x, y A) A, one_A A, inv_A fn(x A) A, B nonempty_set, mul_B fn(x, y B) B, one_B B, inv_B fn(x B) B, f fn(x A) B:\r\n        $GroupHomomorphismSetting(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\r\n        =>:\r\n            $is_normal_subgroup(A, mul_A, one_A, inv_A, {candidate A: f(candidate) = one_B})\r\n    claim:\r\n        ? $is_subgroup(A, mul_A, one_A, inv_A, {candidate A: f(candidate) = one_B})\r\n        release thm homomorphism_maps_identity(A, mul_A, one_A, inv_A, B, mul_B, one_B, inv_B, f)\r\n        release thm set_buil"
+      },
+      "baseline": "Round68 snapshot Session66922; source GroupSetting/homomorphism dependencies already accepted. Current cold round72 owns deletion evidence."
+    }
+  ]
+}

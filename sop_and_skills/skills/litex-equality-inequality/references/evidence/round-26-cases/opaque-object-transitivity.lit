@@ -1,0 +1,5 @@
+forall carrier nonempty_set,a,b,c carrier:
+    a=b
+    b=c
+    =>:
+        a=c

@@ -1,0 +1,7 @@
+claim:
+    ? forall p,q fn(x N+) R:
+        p(1) = q(1)
+        p(2) = q(2)
+        =>:
+            p = q
+    release thm tuple_equal_from_coordinates(p,q)

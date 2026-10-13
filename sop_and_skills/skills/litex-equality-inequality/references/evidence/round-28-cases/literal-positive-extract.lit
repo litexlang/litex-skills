@@ -1,0 +1,4 @@
+forall p R:
+    p $in {x R: x>0}
+    =>:
+        p>0

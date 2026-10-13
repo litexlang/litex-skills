@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b,k R:
+        k != 0
+        a*k = b*k
+        =>:
+            a = b
+    a = (a*k)/k = (b*k)/k = b

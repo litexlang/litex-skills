@@ -1,0 +1,2 @@
+forall S finite_set:
+    finite_set_sum(S,fn(x S) R {0}) = 0

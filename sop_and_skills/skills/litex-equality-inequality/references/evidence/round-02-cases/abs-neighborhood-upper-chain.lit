@@ -1,0 +1,6 @@
+claim:
+    ? forall x, L, r R:
+        abs(x-L) <= r
+        =>:
+            x <= L+r
+    x = (x-L)+L <= abs(x-L)+L <= r+L = L+r

@@ -1,0 +1,6 @@
+claim:
+    ? forall a,c R:
+        finite_set_max(union({a},{c})) $in R
+    $is_finite_set({a})
+    $is_finite_set({c})
+    $is_finite_set(union({a},{c}))

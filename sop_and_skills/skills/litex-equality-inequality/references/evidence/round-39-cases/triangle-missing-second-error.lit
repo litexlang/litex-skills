@@ -1,0 +1,4 @@
+forall slope1,slope2,q R,epsilon R+:
+    abs(q-slope1)<epsilon
+    =>:
+        abs(slope1-slope2)<2*epsilon

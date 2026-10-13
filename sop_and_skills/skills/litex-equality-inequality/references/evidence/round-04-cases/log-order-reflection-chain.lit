@@ -1,0 +1,11 @@
+claim:
+    ? forall a,x,y R+:
+        1 < a
+        log(a,x) <= log(a,y)
+        =>:
+            x <= y
+    by contra:
+        ? x <= y
+        y < x
+        log(a,y) < log(a,x)
+        impossible log(a,x) <= log(a,y)

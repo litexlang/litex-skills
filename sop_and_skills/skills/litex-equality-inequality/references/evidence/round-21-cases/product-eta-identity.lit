@@ -1,0 +1,2 @@
+forall f fn(k N) R:
+    f=fn(k N) R {f(k)}

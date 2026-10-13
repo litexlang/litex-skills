@@ -1,0 +1,731 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-59-2026-10-09.json",
+  "original_sha256": "062dcafd8dee12f580578643185a69ac31ca0a4355259d982d389c4de56bde38",
+  "original_bytes": 404018,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary_sha256": "1a79acbedbfaef542d3c515699a0e8c45d36a6369d563d39c64814bbae4a5d45",
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "cases": [
+      {
+        "id": "legacy-raw",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u[1] + v[1], u[2] + v[2])\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u[1] - v[1], u[2] - v[2])\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u[1], k * u[2])\nhave fn r59_dot2(u, v cart(R, R)) R = u[1] * v[1] + u[2] * v[2]\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_add2((1,2),(3,4))=(4,6)\nr59_sub2((5,7),(2,3))=(3,4)\nr59_smul2(3,(2,-1))=(6,-3)\nr59_dot2((1,2),(3,4))=1*3+2*4=11\nr59_norm2_sq((3,4))=r59_dot2((3,4),(3,4))=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/legacy-raw.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": "parse_error: object indexing with [] is removed: use ordinary function application t(i); singleton tuples use tuple(a) at line 1 in /Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/legacy-raw.lit",
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1c4c0e98b2f7f45ceef9ef1ec89143ec67a48700176ba88874c20b40c8778cde"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/legacy-raw.lit"
+        ],
+        "classification": "parse_error"
+      },
+      {
+        "id": "numeric-source",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_add2((1,2),(3,4))=(4,6)\nr59_sub2((5,7),(2,3))=(3,4)\nr59_smul2(3,(2,-1))=(6,-3)\nr59_dot2((1,2),(3,4))=1*3+2*4=11\nr59_norm2_sq((3,4))=r59_dot2((3,4),(3,4))=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/numeric-source.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d16e8dba9903a3015456834ce250f1d1a48b150d31e22bacd0690c23d7d0307a"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/numeric-source.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "numeric-direct",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_add2((1,2),(3,4))=(4,6)\nr59_sub2((5,7),(2,3))=(3,4)\nr59_smul2(3,(2,-1))=(6,-3)\nr59_dot2((1,2),(3,4))=11\nr59_norm2_sq((3,4))=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/numeric-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6437d1fcd43ced4db84c9401a02e87e84e9fc057301e0ae16387156c7a338357"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/numeric-direct.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "symmetry-source",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nforall u, v cart(R, R):\n    r59_add2(u, v) = (u(1) + v(1), u(2) + v(2)) = (v(1) + u(1), v(2) + u(2)) = r59_add2(v, u)\n    r59_dot2(u, v) = u(1) * v(1) + u(2) * v(2) = v(1) * u(1) + v(2) * u(2) = r59_dot2(v, u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/symmetry-source.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0d25ee7e9e7a552f8d4981f58846f72ecf04391f37ef785aa8c5a7fc5f0fba49"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/symmetry-source.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "add-symmetry-direct",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nforall u,v cart(R,R):\n    r59_add2(u,v)=r59_add2(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/add-symmetry-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1524496fc6de6a26a35485aa88575573f073251e181521a06d218a4ac1b9f5c9"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/add-symmetry-direct.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "dot-symmetry-direct",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nforall u,v cart(R,R):\n    r59_dot2(u,v)=r59_dot2(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/dot-symmetry-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c983f5096d8a44dd0e5bf85837326d5900a14525aaa7879a5e32b81735e869b5"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/dot-symmetry-direct.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "symmetry-both-direct",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nforall u,v cart(R,R):\n    r59_add2(u,v)=r59_add2(v,u)\n    r59_dot2(u,v)=r59_dot2(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/symmetry-both-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9eabdb057ad07e12a362b1fe87a57ea7cc65384aaca1fe3a8ee022bdeae4e94c"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/symmetry-both-direct.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "false-add-value",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_add2((1,2),(3,4))=(4,7)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/false-add-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "780b7a633d14c058c1ffd270773eb8363789f9b9e762c6aa9ff3e872fd857ee1"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/false-add-value.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "false-dot-value",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_dot2((1,2),(3,4))=12\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/false-dot-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5555bbbc8aab5e44d0b292635d468f8c9a8d4415736979b84ac3182174a54afb"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/false-dot-value.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "false-norm-value",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_norm2_sq((3,4))=24\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/false-norm-value.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d1b71145a966a6500d4445fbb07cb021a88dc112dc2c8df3d57151d009bca479"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/false-norm-value.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "false-sub-symmetry",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nforall u,v cart(R,R):\n    r59_sub2(u,v)=r59_sub2(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/false-sub-symmetry.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8d0671671c430cf38c3be9e1843bd8748175968842d21709ad67b6801ecfe6cd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/false-sub-symmetry.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "tuple-numeric-explicit-chains",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_add2((1,2),(3,4))=((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2))=(1+3,2+4)=(4,6)\nr59_sub2((5,7),(2,3))=((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2))=(5-2,7-3)=(3,4)\nr59_smul2(3,(2,-1))=(3*(2,-1)(1),3*(2,-1)(2))=(3*2,3*(-1))=(6,-3)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/tuple-numeric-explicit-chains.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3708bd62da274b1c20d2e282d58ff58daa59d83b9c5ee54e704e80bef88812b6"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/tuple-numeric-explicit-chains.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "add-symmetry-claim-chain",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nclaim:\n    ? forall u,v cart(R,R):\n        r59_add2(u,v)=r59_add2(v,u)\n    r59_add2(u,v)=(u(1)+v(1),u(2)+v(2))=(v(1)+u(1),v(2)+u(2))=r59_add2(v,u)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/add-symmetry-claim-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "00a4e60875a7b3dfe6ff296834a136a61394a5b559b45d5ba7e7667501afd50f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/add-symmetry-claim-chain.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "add-symmetry-local-values",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nclaim:\n    ? forall u,v cart(R,R):\n        r59_add2(u,v)=r59_add2(v,u)\n    r59_add2(u,v)=(u(1)+v(1),u(2)+v(2))\n    r59_add2(v,u)=(v(1)+u(1),v(2)+u(2))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/add-symmetry-local-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2fe0904f88615f06882b2efc026c93db6f9916117154639535b4739d82126669"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/add-symmetry-local-values.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "numeric-add-claim-chain",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nclaim:\n    ? r59_add2((1,2),(3,4))=(4,6)\n    r59_add2((1,2),(3,4))=((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2))=(1+3,2+4)=(4,6)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/numeric-add-claim-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "610d7957fec84b83bc3019147e33b480ef42d3be3c659a80f1eaba37519c0715"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/numeric-add-claim-chain.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "tuple-coordinate-values-and-chains",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\n(1,2)(1)=1\n(1,2)(2)=2\n(3,4)(1)=3\n(3,4)(2)=4\n(5,7)(1)=5\n(5,7)(2)=7\n(2,3)(1)=2\n(2,3)(2)=3\n(2,-1)(1)=2\n(2,-1)(2)=-1\nr59_add2((1,2),(3,4))=((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2))=(1+3,2+4)=(4,6)\nr59_sub2((5,7),(2,3))=((5,7)(1)-(2,3)(1),(5,7)(2)-(2,3)(2))=(5-2,7-3)=(3,4)\nr59_smul2(3,(2,-1))=(3*(2,-1)(1),3*(2,-1)(2))=(3*2,3*(-1))=(6,-3)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/tuple-coordinate-values-and-chains.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "5f16d4629e69aae437549fd386a78898c019955dad72fe8eca6da1024c43cce2"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/tuple-coordinate-values-and-chains.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "false-add-after-coordinate-values",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\n(1,2)(1)=1\n(1,2)(2)=2\n(3,4)(1)=3\n(3,4)(2)=4\n(5,7)(1)=5\n(5,7)(2)=7\n(2,3)(1)=2\n(2,3)(2)=3\n(2,-1)(1)=2\n(2,-1)(2)=-1\nr59_add2((1,2),(3,4))=(4,7)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/false-add-after-coordinate-values.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "05087efc759d5f93ccac47d5ae33e38a1e5af813673540d9d89273d9a904d113"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/false-add-after-coordinate-values.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "scalar-numeric-directs",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\nr59_dot2((1,2),(3,4))=11\nr59_norm2_sq((3,4))=25\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/scalar-numeric-directs.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "25d15bc5eb1fb02d383abb5d448504480386df00dc2effad582a3c26c7f06e4e"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/scalar-numeric-directs.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "scalar-coordinate-sums",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\n(1,2)(1)=1\n(1,2)(2)=2\n(3,4)(1)=3\n(3,4)(2)=4\n(1,2)(1)+(3,4)(1)=1+3\n(1,2)(2)+(3,4)(2)=2+4\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/scalar-coordinate-sums.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8fe9369463a24a6cae8471cfc1202b0f3bb4591903b33c4b4916b3ad91a1081b"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/scalar-coordinate-sums.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "tuple-coordinate-sums",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\n(1,2)(1)=1\n(1,2)(2)=2\n(3,4)(1)=3\n(3,4)(2)=4\n((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2))=(1+3,2+4)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/tuple-coordinate-sums.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "aea44c75eccd278e98969d319c4472bb7279dce59d5feec1bbed3432025213bd"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/tuple-coordinate-sums.lit"
+        ],
+        "classification": "normal_rejection"
+      },
+      {
+        "id": "literal-tuple-sums",
+        "source": "have fn r59_add2(u, v cart(R, R)) cart(R, R) = (u(1) + v(1), u(2) + v(2))\nhave fn r59_sub2(u, v cart(R, R)) cart(R, R) = (u(1) - v(1), u(2) - v(2))\nhave fn r59_smul2(k R, u cart(R, R)) cart(R, R) = (k * u(1), k * u(2))\nhave fn r59_dot2(u, v cart(R, R)) R = u(1) * v(1) + u(2) * v(2)\nhave fn r59_norm2_sq(u cart(R, R)) R = r59_dot2(u, u)\n\n(1+3,2+4)=(4,6)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/literal-tuple-sums.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2daa77de5cc966de8a42b43c5493cb057859c865f748e56ea6f65a058ab81a24"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/literal-tuple-sums.lit"
+        ],
+        "classification": "accepted"
+      },
+      {
+        "id": "minimal-tuple-coordinate-sums",
+        "source": "(1,2)(1)=1\n(1,2)(2)=2\n(3,4)(1)=3\n(3,4)(2)=4\n((1,2)(1)+(3,4)(1),(1,2)(2)+(3,4)(2))=(1+3,2+4)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-59-cases/minimal-tuple-coordinate-sums.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c272dbbb7de101ac877cdf613397c5793af90d7b6dfeea3264d6fc8ebf994712"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round59-cases/minimal-tuple-coordinate-sums.lit"
+        ],
+        "classification": "normal_rejection"
+      }
+    ],
+    "author_fixture_note": "Local-values generator initially split at an indented goal line and changed target; corrected exact target, previous result excluded.",
+    "scope": "Actual isolated plane-vector equations after explicit []->() syntax adaptation; unresolved tuple numeric consumer preserved. No parallel/perpendicular fold or whole chapter acceptance.",
+    "session_restart": {
+      "old": 99217,
+      "reason": "Raw legacy [] definition parse error ended old process.",
+      "new": 6037,
+      "prefix": "round59-prefix.lit",
+      "binary": "round59-litex-snapshot",
+      "observation": "Corrected prefix passed cold, new -session process loaded it and reached prompt."
+    }
+  }
+}

@@ -1,0 +1,2 @@
+forall x0 R,radius R+:
+    abs((x0+radius/2)-x0)<radius

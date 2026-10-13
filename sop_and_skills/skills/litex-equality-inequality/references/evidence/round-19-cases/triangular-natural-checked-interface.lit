@@ -1,0 +1,32 @@
+thm exact_quotient_integer:
+    ? forall a Z,b N+:
+        a%b = 0
+        =>:
+            a/b $in Z
+    a = b*quot(a,b)+a%b = b*quot(a,b)
+    a/b = quot(a,b)
+thm consecutive_product_even:
+    ? forall n Z:
+        (n*(n+1))%2 = 0
+    have q Z = quot(n,2)
+    n = 2*quot(n,2)+n%2 = 2*q+n%2
+    n%2 = 0 or n%2 = 1
+    by cases:
+        ? (n*(n+1))%2 = 0
+        case n%2 = 0:
+            n = 2*q+n%2 = 2*q
+            n*(n+1) = (2*q)*(n+1) = 2*(q*(n+1))
+            (n*(n+1))%2 = (2*(q*(n+1)))%2 = 0
+        case n%2 = 1:
+            n = 2*q+n%2 = 2*q+1
+            n+1 = 2*q+1+1 = 2*(q+1)
+            n*(n+1) = n*(2*(q+1)) = 2*(n*(q+1))
+            (n*(n+1))%2 = (2*(n*(q+1)))%2 = 0
+claim:
+    ? forall n N:
+        n*(n+1)/2 $in N
+    release thm consecutive_product_even(n)
+    release thm exact_quotient_integer(n*(n+1),2)
+    n*(n+1) >= 0
+    n*(n+1)/2 >= 0
+    n*(n+1)/2 $in N

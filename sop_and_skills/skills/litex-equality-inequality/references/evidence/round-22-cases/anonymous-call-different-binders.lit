@@ -1,0 +1,5 @@
+forall c R,m Z:
+    fn(first_index Z) R {c}(m)=c
+    fn(second_index Z) R {c}(m+1)=c
+    =>:
+        fn(third_index Z) R {c}(m)*fn(fourth_index Z) R {c}(m+1)=c*c

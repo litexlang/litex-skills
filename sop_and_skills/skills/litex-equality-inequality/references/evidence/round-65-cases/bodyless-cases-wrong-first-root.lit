@@ -1,0 +1,9 @@
+thm factored_quadratic_roots:
+    ? forall r, s, x R:
+        (x - r) * (x - s) = 0
+        =>:
+            x = r
+    by cases:
+        ? x=r
+        case x-r=0
+        case x-s=0

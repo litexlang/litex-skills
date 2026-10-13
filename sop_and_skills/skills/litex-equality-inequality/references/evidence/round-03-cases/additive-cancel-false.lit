@@ -1,0 +1,4 @@
+forall a,b,k,h R:
+    a+k = b+h
+    =>:
+        a = b

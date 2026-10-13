@@ -1,0 +1,1321 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-04-2026-10-08.json",
+  "original_sha256": "19870831d6375cae750aeee5c291c159782e2a6dc9097e64af6204024296e508",
+  "original_bytes": 208396,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "date": "2026-10-08",
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+    "sha256": "7ea4cd7308c10241be1714728ecedd57bef345534059aea5acfc6f721490b497",
+    "source_build": {
+      "success": true,
+      "exit_code": 0,
+      "command": "cargo build --release"
+    },
+    "version": "Litex 1.0.4-beta",
+    "cases": [
+      {
+        "id": "even-power-chain",
+        "source": "claim:\n    ? forall x R, n N:\n        x^(2*n) >= 0\n    x^(2*n) = (x^n)^2 >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/even-power-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "de869f72b2b6b7fd44467a12a90adb64420deffea89f9d94443d9c36c04c74f1"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/even-power-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/even-power-chain.lit"
+        ]
+      },
+      {
+        "id": "even-power-direct",
+        "source": "forall x R, n N:\n    x^(2*n) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/even-power-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fa43ae828d643aa4f2383c3d13cff43eaa944f0c43ce8d458d487595a12d6d90"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/even-power-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/even-power-direct.lit"
+        ]
+      },
+      {
+        "id": "even-real-exponent-invalid",
+        "source": "forall x R, t R:\n    x^(2*t) >= 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/even-real-exponent-invalid.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "1d76495f6ad2d211d9a8b1978180b6c274a9ec9c3d2596b04c4fa1b0a6d6a906"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/even-real-exponent-invalid.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/even-real-exponent-invalid.lit"
+        ]
+      },
+      {
+        "id": "ln-order-reflection-direct",
+        "source": "forall x,y R+:\n    ln(x) <= ln(y)\n    =>:\n        x <= y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/ln-order-reflection-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bd09463752672283ea10f21ee95022e62005972ec9c057dea5569ff3e487ded3"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/ln-order-reflection-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/ln-order-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "log-order-reflection-chain",
+        "source": "claim:\n    ? forall a,x,y R+:\n        1 < a\n        log(a,x) <= log(a,y)\n        =>:\n            x <= y\n    by contra:\n        ? x <= y\n        y < x\n        log(a,y) < log(a,x)\n        impossible log(a,x) <= log(a,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/log-order-reflection-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "ae08a9a6d5f3795d3138424d096e787a564b5366018de5f05170edcb1b1cd2d3"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/log-order-reflection-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/log-order-reflection-chain.lit"
+        ]
+      },
+      {
+        "id": "log-order-reflection-direct",
+        "source": "forall a,x,y R+:\n    1 < a\n    log(a,x) <= log(a,y)\n    =>:\n        x <= y\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/log-order-reflection-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4843dc83bf6d5b3b8ec34c5a09c0a0d1165d5149cf31377cef298370001ca767"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/log-order-reflection-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/log-order-reflection-direct.lit"
+        ]
+      },
+      {
+        "id": "log-small-base-forward-direct",
+        "source": "forall a,x,y R+:\n    a < 1\n    x < y\n    =>:\n        log(a,x) > log(a,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/log-small-base-forward-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d9cf8400e3cbdc7e782bf58f295cb719a0ce2ac73712442464a169b2365a57a5"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/log-small-base-forward-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/log-small-base-forward-direct.lit"
+        ]
+      },
+      {
+        "id": "log-small-base-wrong-false",
+        "source": "forall a,x,y R+:\n    a < 1\n    x < y\n    =>:\n        log(a,x) < log(a,y)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/log-small-base-wrong-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8d3be5e0f92c483acce843ea345cb6b7dc708917a5b91fbffcfe99928bc371a0"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/log-small-base-wrong-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/log-small-base-wrong-false.lit"
+        ]
+      },
+      {
+        "id": "min-positive-zero-false",
+        "source": "forall a,b R:\n    0 <= a\n    0 <= b\n    =>:\n        min(a,b) $in R+\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-positive-zero-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3cae999c51acdfced3f592749d308f5c1c37b340aea173723421345536cdaa2b"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-positive-zero-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-positive-zero-false.lit"
+        ]
+      },
+      {
+        "id": "min-strict-lower-chain",
+        "source": "claim:\n    ? forall x,a,b R:\n        x < a\n        x < b\n        =>:\n            x < min(a,b)\n    a <= b or a > b\n    by cases:\n        ? x < min(a,b)\n        case a <= b:\n            x < a = min(a,b)\n        case a > b:\n            x < b = min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-strict-lower-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0551f4ac527735e3c28dc9f82647ad935765323311d9836a728784cfe48cc5d8"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-strict-lower-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-strict-lower-chain.lit"
+        ]
+      },
+      {
+        "id": "min-strict-lower-direct",
+        "source": "forall x,a,b R:\n    x < a\n    x < b\n    =>:\n        x < min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-strict-lower-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "05fd2276dd8a6ac1683f91140de40c28139201988dc3b43ca0bfae94f27ab934"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-strict-lower-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-strict-lower-direct.lit"
+        ]
+      },
+      {
+        "id": "min-strict-missing-false",
+        "source": "forall x,a,b R:\n    x < a\n    =>:\n        x < min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-strict-missing-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "687f4ac4d98b43804af3d71631acfd853ce5c7237fdd489c4d7ecb4fae88f1f8"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-strict-missing-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-strict-missing-false.lit"
+        ]
+      },
+      {
+        "id": "nested-finite-min-positive-direct",
+        "source": "have a,b,c R+\nhave delta R+ = finite_set_min(union({finite_set_min(union({a},{b}))},{c}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-finite-min-positive-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc6a746a76fc24698c0c0d32ff6f1f85b8a2752e98cd2a4e3ed5c1c351275a36"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-finite-min-positive-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-finite-min-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "nested-finite-min-positive-named",
+        "source": "have a,b,c R+\nhave first R+ = finite_set_min(union({a},{b}))\nhave delta R+ = finite_set_min(union({first},{c}))\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-finite-min-positive-named.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "91955f3cc1eb4ecc329ee6e98322a222b10d6016272b33705c7e4e45f22004a4"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-finite-min-positive-named.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-finite-min-positive-named.lit"
+        ]
+      },
+      {
+        "id": "nested-min-bound-chain",
+        "source": "forall a,b,c R:\n    min(min(a,b),c) <= min(a,b) <= a\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-min-bound-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "fc362ae07de23068d445f28a822e8151b6fa7d6cc77f90d5e0978c0578391720"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-min-bound-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-min-bound-chain.lit"
+        ]
+      },
+      {
+        "id": "nested-min-bound-direct",
+        "source": "forall a,b,c R:\n    min(min(a,b),c) <= a\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-min-bound-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "48c5a15f65cb183968dc2510996ca836ba6c9a72f6be4cf8847d4354b403ce76"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-min-bound-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-min-bound-direct.lit"
+        ]
+      },
+      {
+        "id": "nested-min-positive-direct",
+        "source": "have a,b,c R+\nhave delta R+ = min(min(a,b),c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-min-positive-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d6b7f80649b85795a8d9f26aaedb364b10698b99ee774a50ebc8886a35b79dce"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-min-positive-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-min-positive-direct.lit"
+        ]
+      },
+      {
+        "id": "nested-min-positive-named",
+        "source": "have a,b,c R+\nhave first R+ = min(a,b)\nhave delta R+ = min(first,c)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-min-positive-named.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6cb4647b7bd2d01d78c7ecd85fd7b615829d3a5dd8981a31c6e29ab57445ab24"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-min-positive-named.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-min-positive-named.lit"
+        ]
+      },
+      {
+        "id": "nested-min-two-upper-bounds",
+        "source": "forall a,b,c R:\n    min(min(a,b),c) <= min(a,b)\n    min(min(a,b),c) <= c\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/nested-min-two-upper-bounds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3caf019543e585771d1303d42b8a2b769763615d92e5fa332c6fc87f7f8b57cb"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/nested-min-two-upper-bounds.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/nested-min-two-upper-bounds.lit"
+        ]
+      },
+      {
+        "id": "odd-negative-chain",
+        "source": "claim:\n    ? forall x R, n N:\n        x < 0\n        =>:\n            x^(2*n+1) < 0\n    x != 0\n    x^n != 0\n    x^(2*n+1) = x^(2*n)*x^1 = x^(2*n)*x = (x^n)^2*x < (x^n)^2*0 = 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/odd-negative-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9217ebe21cfd68ce51e6e94b1986666fe19b06ec897fafdcfd5c98800ff57e2e"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/odd-negative-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/odd-negative-chain.lit"
+        ]
+      },
+      {
+        "id": "odd-negative-direct",
+        "source": "forall x R, n N:\n    x < 0\n    =>:\n        x^(2*n+1) < 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/odd-negative-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8e4b4059784c88b5aac822648e62f50bfadd7e46c620fb6a24924a7064293b0e"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/odd-negative-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/odd-negative-direct.lit"
+        ]
+      },
+      {
+        "id": "odd-positive-false",
+        "source": "forall x R, n N:\n    x < 0\n    =>:\n        x^(2*n+1) > 0\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/odd-positive-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "73c25b0a15b3fc567592d8760f572b04923bff6b2fa02804e36b56798c516df2"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/odd-positive-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/odd-positive-false.lit"
+        ]
+      },
+      {
+        "id": "power-real-base-order-chain",
+        "source": "claim:\n    ? forall x,y R+, q R:\n        q > 0\n        x > y\n        =>:\n            x^q > y^q\n    x^q > 0\n    y^q > 0\n    log(2,y) < log(2,x)\n    q*log(2,y) < q*log(2,x)\n    log(2,y^q) = q*log(2,y)\n    log(2,x^q) = q*log(2,x)\n    log(2,y^q) < log(2,x^q)\n    by contra:\n        ? x^q > y^q\n        x^q <= y^q\n        log(2,x^q) <= log(2,y^q)\n        impossible log(2,y^q) < log(2,x^q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-real-base-order-chain.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2ae74f85b52c4b57a47f570cfaa00da94672c06ee53b364388f3804273e233f0"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-real-base-order-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-real-base-order-chain.lit"
+        ]
+      },
+      {
+        "id": "power-real-base-order-direct",
+        "source": "forall x,y R+, q R:\n    q > 0\n    x > y\n    =>:\n        x^q > y^q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-real-base-order-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "75db411aaddb8dff8803d11396fb783e4f85a04cdd85beeac6c8bb01c45d2ad1"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-real-base-order-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-real-base-order-direct.lit"
+        ]
+      },
+      {
+        "id": "power-real-base-order-negative-false",
+        "source": "forall x,y R+, q R:\n    q < 0\n    x > y\n    =>:\n        x^q > y^q\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-real-base-order-negative-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "05178485b02fad4a3d696e1fb4fea8a86c4486cdfe6d4b61ef8aa39883d71eb5"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-real-base-order-negative-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-real-base-order-negative-false.lit"
+        ]
+      },
+      {
+        "id": "power-real-exponent-order-direct",
+        "source": "forall a R+, u,v R:\n    1 <= a\n    u <= v\n    =>:\n        a^u <= a^v\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-real-exponent-order-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "2c554a6894bb3d335d0bbe548a690d609ab06cea527953aded79241b86ab00f5"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-real-exponent-order-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-real-exponent-order-direct.lit"
+        ]
+      },
+      {
+        "id": "power-step-base-one-false",
+        "source": "forall a R+, n Z:\n    1 <= a\n    =>:\n        a^n < a^(n+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-step-base-one-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "63437256c1575c7345d846f51444b3196b25dac7c2974dcf7044fb1a0779e295"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-step-base-one-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-step-base-one-false.lit"
+        ]
+      },
+      {
+        "id": "power-step-decrease-chain",
+        "source": "claim:\n    ? forall a R+, n Z:\n        a < 1\n        =>:\n            a^(n+1) < a^n\n    a^(n+1) = a^n*a^1 = a^n*a < a^n*1 = a^n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-step-decrease-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "69183d171b0f7539e4f99cb63bfb8759e14e257c6038e5e309e1a976b55ebaff"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-step-decrease-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-step-decrease-chain.lit"
+        ]
+      },
+      {
+        "id": "power-step-decrease-direct",
+        "source": "forall a R+, n Z:\n    a < 1\n    =>:\n        a^(n+1) < a^n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-step-decrease-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6bebb0893fb364d03cc7db7e00b5c99850521958b16efb3db1d1d4a9323890b0"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-step-decrease-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-step-decrease-direct.lit"
+        ]
+      },
+      {
+        "id": "power-step-increase-chain",
+        "source": "claim:\n    ? forall a R+, n Z:\n        1 < a\n        =>:\n            a^n < a^(n+1)\n    a^(n+1) = a^n*a^1 = a^n*a > a^n*1 = a^n\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-step-increase-chain.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "919162908071c9219af4f7f6011bed6622c04c47d0e8c6f70e3c9cea5cbfb701"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-step-increase-chain.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-step-increase-chain.lit"
+        ]
+      },
+      {
+        "id": "power-step-increase-direct",
+        "source": "forall a R+, n Z:\n    1 < a\n    =>:\n        a^n < a^(n+1)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-step-increase-direct.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "586af346c5960c106f7c4fdf281fc677f75124923eccfd1fb3377787135a5668"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-step-increase-direct.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-step-increase-direct.lit"
+        ]
+      },
+      {
+        "id": "min-strict-lower-bridged",
+        "source": "claim:\n    ? forall x,a,b R:\n        x < a\n        x < b\n        =>:\n            x < min(a,b)\n    a <= b or a > b\n    by cases:\n        ? x < min(a,b)\n        case a <= b:\n            x < a = min(a,b)\n        case a > b:\n            b <= a\n            x < b = min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-strict-lower-bridged.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "95c417a832104e871aee964971881a810069cfe48d9999ece7c2d6b41abb06ef"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-strict-lower-bridged.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-strict-lower-bridged.lit"
+        ]
+      },
+      {
+        "id": "power-real-base-order-bridged",
+        "source": "claim:\n    ? forall x,y R+, q R:\n        q > 0\n        x > y\n        =>:\n            x^q > y^q\n    x^q > 0\n    y^q > 0\n    1 < 2\n    y < x\n    log(2,y) < log(2,x)\n    q*log(2,y) < q*log(2,x)\n    log(2,y^q) = q*log(2,y)\n    log(2,x^q) = q*log(2,x)\n    log(2,y^q) < log(2,x^q)\n    by contra:\n        ? x^q > y^q\n        x^q <= y^q\n        log(2,x^q) <= log(2,y^q)\n        impossible log(2,y^q) < log(2,x^q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-real-base-order-bridged.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "744448b70f7ed56b848fce17df748040c06ea4770e2028802a6b08aa9acf3003"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-real-base-order-bridged.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-real-base-order-bridged.lit"
+        ]
+      },
+      {
+        "id": "min-equal-right-weak",
+        "source": "forall a,b R:\n    b <= a\n    =>:\n        b = min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-equal-right-weak.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0ee5be367d9b04bbc7f7881c4847922a311de5472dbf093588800594620fe6cf"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-equal-right-weak.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-equal-right-weak.lit"
+        ]
+      },
+      {
+        "id": "min-equal-right-strict",
+        "source": "forall a,b R:\n    a > b\n    =>:\n        b = min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-equal-right-strict.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "755517aa83f186351751d5a1e02e227826bcb6603e04e21ef45840c278024719"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-equal-right-strict.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-equal-right-strict.lit"
+        ]
+      },
+      {
+        "id": "min-strict-weak-premises-false",
+        "source": "forall x,a,b R:\n    x <= a\n    x <= b\n    =>:\n        x < min(a,b)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/min-strict-weak-premises-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0a43e1ae05c8650a96e05fa12ca027665f3a57396911abfa3956a6171960f230"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/min-strict-weak-premises-false.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/min-strict-weak-premises-false.lit"
+        ]
+      },
+      {
+        "id": "power-real-base-order-typed",
+        "source": "claim:\n    ? forall x,y R+, q R:\n        q > 0\n        x > y\n        =>:\n            x^q > y^q\n    x^q $in R+\n    y^q $in R+\n    x^q > 0\n    y^q > 0\n    1 < 2\n    y < x\n    log(2,y) < log(2,x)\n    q*log(2,y) < q*log(2,x)\n    log(2,y^q) = q*log(2,y)\n    log(2,x^q) = q*log(2,x)\n    log(2,y^q) < log(2,x^q)\n    by contra:\n        ? x^q > y^q\n        x^q <= y^q\n        log(2,x^q) <= log(2,y^q)\n        impossible log(2,y^q) < log(2,x^q)\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-08/equality-inequality-search/power-real-base-order-typed.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dbba1c69cfe6c9d9769c555026b510170609ac02558ac9d5e8322df6e47ed1b1"
+        },
+        "stderr": "",
+        "replay_source": "round-04-cases/power-real-base-order-typed.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-04-cases/power-real-base-order-typed.lit"
+        ]
+      }
+    ],
+    "session": [
+      {
+        "case": "min-strict-lower-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a24f3fb43c2f1ec1cd6afe09ff75eb4240620a31bf5eafa4345a8d94fa476ddc",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x, a, b R:\\n    x < a\\n    x < b\\n    =>:\\n        x < min(a, b)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x, a, b R:\\n    x < a\\n    x < b\\n    =>:\\n        x < min(a, b)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "min-strict-lower-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "25278ca43c922cbf261b73c4acf0b9d089dfa334567fb77fee56e197ee4b0ccb",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall x, a, b R:\\n        x < a\\n        x < b\\n        =>:\\n            x < min(a, b)\\n    a <= b or a > b\\n    by cases:\\n        ? x < min(a, b)\\n        case a <= b:\\n            x < a = min(a, b)\\n        case a > b:\\n            x < b = min(a, b)\",\r\n      \"why_failed\": {\r\n        \"type\": \"proof_block\",\r\n        \"rule_name\":"
+        }
+      },
+      {
+        "case": "even-power-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "2f55431734a616d238ba972e2873db893824cdfa1d61b6f6ff9145c3f7bc9344",
+          "excerpt": "... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, n N:\\n    x ^ (2 * n) >= 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, n N:\\n    x ^ (2 * n) >= 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "even-power-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b4246834fa96d632e09469d955318a1b27c55b9aa32398caaeaf5be69760b44",
+          "excerpt": "... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "odd-negative-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "67c70fef384665e1ea2cda00d78739771fe65d5a6752ec4b835fa08746e826b6",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x R, n N:\\n    x < 0\\n    =>:\\n        x ^ (2 * n + 1) < 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R, n N:\\n    x < 0\\n    =>:\\n        x ^ (2 * n + 1) < 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "odd-negative-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "01e9c22cc1d5203fccb1503b12cb7c84c1da55797e9af8b48d31c4b658593227",
+          "excerpt": "... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "log-order-reflection-direct",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "3914163c6c01b29d55cb37cad8e0ed90f613a5aa2d221c8a43fce97ecb0dfc62",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, x, y R+:\\n    1 < a\\n    log (a, x) <= log (a, y)\\n    =>:\\n        x <= y\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, x, y R+:\\n    1 < a\\n    log (a, x) <= log (a, y)\\n    =>:\\n        x <= y\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "log-order-reflection-chain",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "e97632604fe2f19bd717ca7f7d2d6043f757bca820d4ed86a750b36151761360",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "min-strict-lower-bridged",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "0b773098efd18cd15df2a0d51b90753f37b081447ae3c5b729ae0f188e4ca475",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "power-real-base-order-bridged",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "ffa099f16c6ac6910d2bf1a357ff81abf55b4676bc1f0209e231df35a89a4a2d",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"claim:\\n    ? forall x, y R+, q R:\\n        q > 0\\n        x > y\\n        =>:\\n            x ^ q > y ^ q\\n    x ^ q > 0\\n    y ^ q > 0\\n    1 < 2\\n    y < x\\n    log (2, y) < log (2, x)\\n    q * log (2, y) < q * log (2, x)\\n    log (2, y ^ q) = q * log (2, y)\\n    log (2, x ^ q) = q * log (2, x)\\n    log (2, y ^ q) <"
+        }
+      },
+      {
+        "case": "min-equal-right-weak",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "8b4246834fa96d632e09469d955318a1b27c55b9aa32398caaeaf5be69760b44",
+          "excerpt": "... ... ... ... success\r\n"
+        }
+      },
+      {
+        "case": "min-equal-right-strict",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "a6aba750c612ed2ae0009322645570619df5ad061184cdc638601c549789bac0",
+          "excerpt": "... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall a, b R:\\n    a > b\\n    =>:\\n        b = min(a, b)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall a, b R:\\n    a > b\\n    =>:\\n        b = min(a, b)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "min-strict-weak-premises-false",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "23511db4c295db02821d22f016a9f20071fab146d99fb7473924d380426d5f17",
+          "excerpt": "... ... ... ... ... {\r\n  \"kind\": \"run\",\r\n  \"success\": false,\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"success\": false,\r\n      \"statement\": \"forall x, a, b R:\\n    x <= a\\n    x <= b\\n    =>:\\n        x < min(a, b)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x, a, b R:\\n    x <= a\\n    x <= b\\n    =>:\\n        x < min(a, b)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_error\": null\r\n}\r\n"
+        }
+      },
+      {
+        "case": "power-real-base-order-typed",
+        "response": {
+          "full_payload_omitted": true,
+          "sha256": "d73598a13b10c90b164f4d606e839bf4c1095a01e9ae2cdf6b4164a4f2b27466",
+          "excerpt": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... success\r\n"
+        }
+      }
+    ],
+    "source_revision": "422ac3c0197c3c1f49fbc506e9c33c90b14b6c4d",
+    "source_note": "Current working-tree release with preexisting edits; no kernel changes from capability search."
+  }
+}

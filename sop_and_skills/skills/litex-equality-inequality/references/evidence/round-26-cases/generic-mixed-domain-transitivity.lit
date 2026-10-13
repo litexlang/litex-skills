@@ -1,0 +1,6 @@
+forall X,Y set,K power_set(X),r fn(x K) Y,f,g fn(x X) Y,p K:
+    p $in X
+    r(p)=f(p)
+    f(p)=g(p)
+    =>:
+        r(p)=g(p)

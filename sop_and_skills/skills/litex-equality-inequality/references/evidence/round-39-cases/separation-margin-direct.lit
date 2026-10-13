@@ -1,0 +1,5 @@
+forall slope1,slope2 R,epsilon R+:
+    slope1!=slope2
+    epsilon=abs(slope1-slope2)/3
+    =>:
+        2*epsilon<abs(slope1-slope2)

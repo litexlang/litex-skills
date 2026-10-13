@@ -1,0 +1,1168 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-34-2026-10-09.json",
+  "original_sha256": "3498ad513d0b6bb53388f6a6fc8d16609fb521f7164fb7759c4bf4da7d92c4f6",
+  "original_bytes": 141455,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+    "sha256": "cd0578584479fb79ee2902d18c3d00f1c3b51e8255d4b0d325c03ce4f6d21fed",
+    "cases": [
+      {
+        "id": "max-native-direct",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-native-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "a963d1d9c28b7b40b5d2a4349498beeee0279719d5b4ab4357ff94ec576790fd"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-native-direct.lit"
+        ]
+      },
+      {
+        "id": "max-strict-coordinate-weak-target",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-strict-coordinate-weak-target.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3e0efff731470a99f2f7514396d71804f04d319b314a97c8882b7f6a25019618"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-strict-coordinate-weak-target.lit"
+        ]
+      },
+      {
+        "id": "max-strict-coordinate-strict-target",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-strict-coordinate-strict-target.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bdfa1d90efe5ac9d91724a9a8c5b1e655f18022ac2583e40adfa0ba3a0d5269a"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-strict-coordinate-strict-target.lit"
+        ]
+      },
+      {
+        "id": "max-weak-to-strict-false",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-weak-to-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0f2fdae90c4bf06ab737aee45218786c0342b4e9f4ab835b44095ed0474518e8"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-weak-to-strict-false.lit"
+        ]
+      },
+      {
+        "id": "max-radius-real",
+        "source": "forall a,b,x,y R,epsilon R:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-radius-real.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d2eb85ca987995963530a5d19e2890fe347b0ad677185515b68ee93b28f9c696"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-radius-real.lit"
+        ]
+      },
+      {
+        "id": "max-reversed-error-bounds",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(x-a)<=epsilon\n    abs(y-b)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-reversed-error-bounds.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cf02cbd00b059826aec27d3e4421fb595073261dcac137682e0d6ef11c2e250b"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-reversed-error-bounds.lit"
+        ]
+      },
+      {
+        "id": "max-missing-second-error",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-missing-second-error.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "82837acd42c4a7c9ed5e94207f6c728d1ad45ace012008bc90ac20e930a328f7"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-missing-second-error.lit"
+        ]
+      },
+      {
+        "id": "max-zero-tolerance",
+        "source": "forall a,b,x,y R,epsilon R:\n    epsilon=0\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-zero-tolerance.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "80a92fd6d26a1c9e228f481a4bc9ef088df9251f8734a0f0e5ffff57a094b17e"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-zero-tolerance.lit"
+        ]
+      },
+      {
+        "id": "min-native-direct",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-native-direct.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "cc8a1b3b233ee6e6c194f397689f95f997be3fd37a162bd6e4f715a5da48027e"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-native-direct.lit"
+        ]
+      },
+      {
+        "id": "min-strict-coordinate-weak-target",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-strict-coordinate-weak-target.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "9b446f9ebc269742a9f4b6781d682af04b7ad1fa8138fa2d3716c193b8c1eb87"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-strict-coordinate-weak-target.lit"
+        ]
+      },
+      {
+        "id": "min-strict-coordinate-strict-target",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-strict-coordinate-strict-target.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8b678309caf74a99a84e124db43a567d8bc9581f1ac8ab2c24350625713ea954"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-strict-coordinate-strict-target.lit"
+        ]
+      },
+      {
+        "id": "min-weak-to-strict-false",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-weak-to-strict-false.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "d04f72c85ed76920cec7f0ac985f601e6a224fa6995f82e9c5f650c65660c869"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-weak-to-strict-false.lit"
+        ]
+      },
+      {
+        "id": "min-radius-real",
+        "source": "forall a,b,x,y R,epsilon R:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-radius-real.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "38d26175928e56f6c028441aa481e629c74cf0351c8a0cb4b040ff5fe3f3ea5e"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-radius-real.lit"
+        ]
+      },
+      {
+        "id": "min-reversed-error-bounds",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(x-a)<=epsilon\n    abs(y-b)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-reversed-error-bounds.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "7495f1b693b192602ddf47a1bb651370f2cefb3ab513302022e6811e7db7ebb1"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-reversed-error-bounds.lit"
+        ]
+      },
+      {
+        "id": "min-missing-second-error",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-missing-second-error.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "501b355285d744cad11a2d468288d56e6c2048cf492468217cc62b6f30196997"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-missing-second-error.lit"
+        ]
+      },
+      {
+        "id": "min-zero-tolerance",
+        "source": "forall a,b,x,y R,epsilon R:\n    epsilon=0\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-zero-tolerance.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "46ba0c4ca334ce63709a056e05a638a0a983d5d921e1eecef609c19fc0fcde0e"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-zero-tolerance.lit"
+        ]
+      },
+      {
+        "id": "max-min-mismatch",
+        "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-min(x,y))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-min-mismatch.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "db7f289782feef2d8e9e79ae6a9f7de14e5864d3d4be4399fbf2fed96b177faf"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-min-mismatch.lit"
+        ]
+      },
+      {
+        "id": "max-reversed-errors-two-chains",
+        "source": "claim:\n    ? forall a,b,x,y R,epsilon R+:\n        abs(x-a)<=epsilon\n        abs(y-b)<=epsilon\n        =>:\n            abs(max(a,b)-max(x,y))<=epsilon\n    abs(a-x)=abs(x-a)<=epsilon\n    abs(b-y)=abs(y-b)<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/max-reversed-errors-two-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "52616c597334d71d67db5888fb263e4a60f4330c2f932de432a2fcd958a836ee"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/max-reversed-errors-two-chains.lit"
+        ]
+      },
+      {
+        "id": "min-reversed-errors-two-chains",
+        "source": "claim:\n    ? forall a,b,x,y R,epsilon R+:\n        abs(x-a)<=epsilon\n        abs(y-b)<=epsilon\n        =>:\n            abs(min(a,b)-min(x,y))<=epsilon\n    abs(a-x)=abs(x-a)<=epsilon\n    abs(b-y)=abs(y-b)<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/min-reversed-errors-two-chains.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c15c8cbdce36e25d8e2a634b72d3c2333a663ba9849656a4e11463d8394615a9"
+        },
+        "stderr": "",
+        "anchor": null,
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/min-reversed-errors-two-chains.lit"
+        ]
+      },
+      {
+        "id": "chapter09-max-exact-original",
+        "source": {
+          "text_omitted": true,
+          "sha256": "02192b8d2bf2039484121c3d5ea640fb5e8dbc5d7304d36077977075b249e86d",
+          "characters": 3030,
+          "excerpt": "thm r34_chapter09_max_exact_original:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B}))) <= epsilon\n    a - A <= abs(a - A)\n    a - A <= abs(a - A) <= epsilon\n    a - A <= epsilon\n    (a - A) + A <= epsilon + A\n    (a - A) + A = a\n    epsilon + A = A + epsilon\n    a <= A + epsilon\n    b - B <= abs(b - B)\n    b - B <= abs(b - B) <= epsilon\n    b - B <= epsilon\n    (b - B) + B <= epsilon + B\n    (b - B) + B = b\n    epsilon + B = B + epsilon\n    b <= B +"
+        },
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter09-max-exact-original.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "03720bc4ba6931e55fca9ec3494fac3328d2348453be642696e84d3739ba736c"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter09-max-exact-original.lit"
+        ]
+      },
+      {
+        "id": "chapter09-max-native-original-body",
+        "source": "thm r34_chapter09_max_native_original_body:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(max(a,b) - max(A,B)) <= epsilon\n    a - A <= abs(a - A)\n    a - A <= abs(a - A) <= epsilon\n    a - A <= epsilon\n    (a - A) + A <= epsilon + A\n    (a - A) + A = a\n    epsilon + A = A + epsilon\n    a <= A + epsilon\n    b - B <= abs(b - B)\n    b - B <= abs(b - B) <= epsilon\n    b - B <= epsilon\n    (b - B) + B <= epsilon + B\n    (b - B) + B = b\n    epsilon + B = B + epsilon\n    b <= B + epsilon\n    A <= max(A,B)\n    B <= max(A,B)\n    A + epsilon <= max(A,B) + epsilon\n    B + epsilon <= max(A,B) + epsilon\n    a <= A + epsilon <= max(A,B) + epsilon\n    a <= max(A,B) + epsilon\n    b <= B + epsilon <= max(A,B) + epsilon\n    b <= max(A,B) + epsilon\n    max(a,b) <= max(A,B) + epsilon\n    max(a,b) - max(A,B) <= (max(A,B) + epsilon) - max(A,B)\n    (max(A,B) + epsilon) - max(A,B) = epsilon\n    max(a,b) - max(A,B) <= epsilon\n    A - a <= abs(A - a)\n    abs(A - a) = abs(a - A)\n    A - a <= abs(a - A)\n    A - a <= abs(a - A) <= epsilon\n    A - a <= epsilon\n    (A - a) + a <= epsilon + a\n    (A - a) + a = A\n    epsilon + a = a + epsilon\n    A <= a + epsilon\n    B - b <= abs(B - b)\n    abs(B - b) = abs(b - B)\n    B - b <= abs(b - B)\n    B - b <= abs(b - B) <= epsilon\n    B - b <= epsilon\n    (B - b) + b <= epsilon + b\n    (B - b) + b = B\n    epsilon + b = b + epsilon\n    B <= b + epsilon\n    a <= max(a,b)\n    b <= max(a,b)\n    a + epsilon <= max(a,b) + epsilon\n    b + epsilon <= max(a,b) + epsilon\n    A <= a + epsilon <= max(a,b) + epsilon\n    A <= max(a,b) + epsilon\n    B <= b + epsilon <= max(a,b) + epsilon\n    B <= max(a,b) + epsilon\n    max(A,B) <= max(a,b) + epsilon\n    max(A,B) - max(a,b) <= (max(a,b) + epsilon) - max(a,b)\n    (max(a,b) + epsilon) - max(a,b) = epsilon\n    max(A,B) - max(a,b) <= epsilon\n    -(max(a,b) - max(A,B)) = max(A,B) - max(a,b)\n    -(max(a,b) - max(A,B)) <= epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter09-max-native-original-body.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "36357badc2e7199f12c0302fa5151b3890c947a7bddf9edaf1bb0d4a68381f3b"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter09-max-native-original-body.lit"
+        ]
+      },
+      {
+        "id": "chapter09-max-native-bodyless",
+        "source": "thm r34_chapter09_max_native_bodyless:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(max(a,b) - max(A,B)) <= epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter09-max-native-bodyless.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "8b32a3027a1090bd354214066852ad247ac290be01b0a06b41859e3caa07d37c"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter09-max-native-bodyless.lit"
+        ]
+      },
+      {
+        "id": "chapter09-min-exact-header",
+        "source": "thm r34_chapter09_min_exact_header:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(finite_set_min(union({a}, { b})) - finite_set_min(union({A}, { B}))) <= epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter09-min-exact-header.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "0bae71302eac5423d9de3d6801ea7bd770ab49d0a8df131ee2068ebf136f1923"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter09-min-exact-header.lit"
+        ]
+      },
+      {
+        "id": "chapter09-min-native-bodyless",
+        "source": "thm r34_chapter09_min_native_bodyless:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(min(a,b) - min(A,B)) <= epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter09-min-native-bodyless.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "bdcb69e0db2f20b043aab716cbf735ec7704993c2ee48818e77f952959a7cb8c"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter09-min-native-bodyless.lit"
+        ]
+      },
+      {
+        "id": "chapter06-two_point_max_stability",
+        "source": "thm r34_chapter06_two_point_max_stability:\n    ? forall epsilon R+, u, v, x, y R:\n        abs(u - x) < epsilon\n        abs(v - y) < epsilon\n        $is_finite_set(union({u}, {v}))\n        $is_nonempty_set(union({u}, {v}))\n        union({u}, {v}) $subset R\n        $is_finite_set(union({x}, {y}))\n        $is_nonempty_set(union({x}, {y}))\n        union({x}, {y}) $subset R\n        =>:\n            abs(finite_set_max(union({u}, { v})) - finite_set_max(union({x}, { y}))) <= epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter06-two_point_max_stability.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "89a3e9731832a5aa85893a27427e09630afb001b91b07a3aa9736b08a17c8da3"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter06-sequential-limits.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter06-two_point_max_stability.lit"
+        ]
+      },
+      {
+        "id": "chapter06-two_point_min_stability",
+        "source": "thm r34_chapter06_two_point_min_stability:\n    ? forall epsilon R+, u, v, x, y R:\n        abs(u - x) < epsilon\n        abs(v - y) < epsilon\n        $is_finite_set(union({u}, {v}))\n        $is_nonempty_set(union({u}, {v}))\n        union({u}, {v}) $subset R\n        $is_finite_set(union({x}, {y}))\n        $is_nonempty_set(union({x}, {y}))\n        union({x}, {y}) $subset R\n        =>:\n            abs(finite_set_min(union({u}, { v})) - finite_set_min(union({x}, { y}))) <= epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/chapter06-two_point_min_stability.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "90c7dc8e145e25c13c339cfe7da3a26cf6905ba8ba11084457f411e16e1570e4"
+        },
+        "stderr": "",
+        "anchor": "scripts/Analysis/textbook/chapter06-sequential-limits.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/chapter06-two_point_min_stability.lit"
+        ]
+      },
+      {
+        "id": "maintained-max_lipschitz_from_coordinate_bounds",
+        "source": "# Tracer: MaxLipschitzFromCoordinateBounds.\n# Before (direct target rejected; the textbook used a 152-line case proof):\n# forall a,b,x,y R, epsilon R+:\n#     abs(a-x) <= epsilon\n#     abs(b-y) <= epsilon\n#     =>:\n#         abs(max(a,b)-max(x,y)) <= epsilon\n# Former behavior: search_proof miss on the direct maximum bound.\n# Now: both checked coordinate error bounds close the target directly.\n# Boundary: one error bound, a min/max mismatch, or invalid real domains\n# cannot establish this conclusion. Finite-set WD remains mandatory.\n# Evidence: target/release/litex -lang en -strict -f examples/proof_nodes/atomic/by_builtin_rule/max_lipschitz_from_coordinate_bounds.lit\n\nforall a,b,x,y R, epsilon R+:\n    abs(a-x) <= epsilon\n    abs(b-y) <= epsilon\n    =>:\n        abs(max(a,b)-max(x,y)) <= epsilon\n\n# Analysis Chapter 6's exact mathematical interface, retaining its strict\n# error bounds and the existing finite-extremum domains.\nthm two_point_max_stability:\n    ? forall epsilon R+, u,v,x,y R:\n        abs(u-x) < epsilon\n        abs(v-y) < epsilon\n        $is_finite_set(union({u},{v}))\n        $is_nonempty_set(union({u},{v}))\n        union({u},{v}) $subset R\n        $is_finite_set(union({x},{y}))\n        $is_nonempty_set(union({x},{y}))\n        union({x},{y}) $subset R\n        =>:\n            abs(finite_set_max(union({u},{v}))-finite_set_max(union({x},{y}))) <= epsilon\n\n# A displayed pair keeps the original pairwise-distinctness WD guard.\nforall a,b,x,y R, epsilon R+:\n    a!=b\n    x!=y\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    $is_finite_set({a,b})\n    $is_nonempty_set({a,b})\n    {a,b} $subset R\n    $is_finite_set({x,y})\n    $is_nonempty_set({x,y})\n    {x,y} $subset R\n    =>:\n        abs(finite_set_max({a,b})-finite_set_max({x,y}))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/maintained-max_lipschitz_from_coordinate_bounds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "13830a8a8fc6e2f8a6a3dce9d9f33f573c18357d0c823e529cb62e2076f3b3a3"
+        },
+        "stderr": "",
+        "anchor": "examples/proof_nodes/atomic/by_builtin_rule/max_lipschitz_from_coordinate_bounds.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/maintained-max_lipschitz_from_coordinate_bounds.lit"
+        ]
+      },
+      {
+        "id": "maintained-min_lipschitz_from_coordinate_bounds",
+        "source": "# Tracer: MinLipschitzFromCoordinateBounds.\n# Before (direct target rejected):\n# forall a,b,x,y R, epsilon R+:\n#     abs(a-x) <= epsilon\n#     abs(b-y) <= epsilon\n#     =>:\n#         abs(min(a,b)-min(x,y)) <= epsilon\n# Former behavior: search_proof miss; Analysis used a 152-line case proof.\n# Now: the two checked error bounds close the minimum estimate.\n# Boundary: both bounds and the real/finite-extremum domains are required.\n# Evidence: target/release/litex -lang en -strict -f examples/proof_nodes/atomic/by_builtin_rule/min_lipschitz_from_coordinate_bounds.lit\n\nforall a,b,x,y R, epsilon R+:\n    abs(a-x) <= epsilon\n    abs(b-y) <= epsilon\n    =>:\n        abs(min(a,b)-min(x,y)) <= epsilon\n\nthm two_point_min_stability:\n    ? forall epsilon R+, u,v,x,y R:\n        abs(u-x) < epsilon\n        abs(v-y) < epsilon\n        $is_finite_set(union({u},{v}))\n        $is_nonempty_set(union({u},{v}))\n        union({u},{v}) $subset R\n        $is_finite_set(union({x},{y}))\n        $is_nonempty_set(union({x},{y}))\n        union({x},{y}) $subset R\n        =>:\n            abs(finite_set_min(union({u},{v}))-finite_set_min(union({x},{y}))) <= epsilon\n\n# A displayed pair keeps the original pairwise-distinctness WD guard.\nforall a,b,x,y R, epsilon R+:\n    a!=b\n    x!=y\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    $is_finite_set({a,b})\n    $is_nonempty_set({a,b})\n    {a,b} $subset R\n    $is_finite_set({x,y})\n    $is_nonempty_set({x,y})\n    {x,y} $subset R\n    =>:\n        abs(finite_set_min({a,b})-finite_set_min({x,y}))<=epsilon\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/maintained-min_lipschitz_from_coordinate_bounds.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "f41b794bd9258c1d3ef01fb17cece2a129ece508613dfb7dceeb7c990b45b24f"
+        },
+        "stderr": "",
+        "anchor": "examples/proof_nodes/atomic/by_builtin_rule/min_lipschitz_from_coordinate_bounds.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/maintained-min_lipschitz_from_coordinate_bounds.lit"
+        ]
+      },
+      {
+        "id": "maintained-binary_max_weak_monotone",
+        "source": "# Rule: MaxWeakMonotone\n# Before (rejected):\n# forall a,b,c,d R:\n#     a<=c\n#     b<=d\n#     =>:\n#         max(a,b)<=max(c,d)\n# Former behavior: strict run success=false, phase search_proof.\n# Now (verified directly):\nforall a,b,c,d R:\n    a<=c\n    b<=d\n    =>:\n        max(a,b)<=max(c,d)\n\nforall a,b,c R:\n    a<=b\n    =>:\n        max(c,a)<=max(c,b)\n\n# Boundary: Both argument orders must be checked, or that argument must be identical; one missing unequal argument order rejects.\n# Gate: target/release/litex -strict -f examples/proof_nodes/atomic/by_builtin_rule/binary_max_weak_monotone.lit\n# Regression: tests/unit/execute/legacy_six_simple_bt/tests.rs\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/maintained-binary_max_weak_monotone.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "3e725d64174ae5cbcf33e6a7c7719d0c05ed79777da6a5e3e73f4cb392b7b821"
+        },
+        "stderr": "",
+        "anchor": "examples/proof_nodes/atomic/by_builtin_rule/binary_max_weak_monotone.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/maintained-binary_max_weak_monotone.lit"
+        ]
+      },
+      {
+        "id": "maintained-binary_min_weak_monotone",
+        "source": "# Rule: MinWeakMonotone\n# Before (rejected):\n# forall a,b,c,d R:\n#     a<=c\n#     b<=d\n#     =>:\n#         min(a,b)<=min(c,d)\n# Former behavior: strict run success=false, phase search_proof.\n# Now (verified directly):\nforall a,b,c,d R:\n    a<=c\n    b<=d\n    =>:\n        min(a,b)<=min(c,d)\n\nforall a,b,c R:\n    a<=b\n    =>:\n        min(a,c)<=min(b,c)\n\n# Boundary: Both argument orders must be checked, or that argument must be identical; one missing unequal argument order rejects.\n# Gate: target/release/litex -strict -f examples/proof_nodes/atomic/by_builtin_rule/binary_min_weak_monotone.lit\n# Regression: tests/unit/execute/legacy_six_simple_bt/tests.rs\n",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-cases/maintained-binary_min_weak_monotone.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6d856ee2a79adb7be51d8d66b65bdabe77554f92426e5beab5780996db44527d"
+        },
+        "stderr": "",
+        "anchor": "examples/proof_nodes/atomic/by_builtin_rule/binary_min_weak_monotone.lit",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round34-cases/maintained-binary_min_weak_monotone.lit"
+        ]
+      }
+    ],
+    "source_metadata": {
+      "status": "independent_current_source_gate_completed",
+      "cases": [
+        {
+          "id": "max-native-direct",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-strict-coordinate-weak-target",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-strict-coordinate-strict-target",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<epsilon\n"
+        },
+        {
+          "id": "max-weak-to-strict-false",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<epsilon\n"
+        },
+        {
+          "id": "max-radius-real",
+          "source": "forall a,b,x,y R,epsilon R:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-reversed-error-bounds",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(x-a)<=epsilon\n    abs(y-b)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-missing-second-error",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-zero-tolerance",
+          "source": "forall a,b,x,y R,epsilon R:\n    epsilon=0\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-max(x,y))<=epsilon\n"
+        },
+        {
+          "id": "min-native-direct",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "min-strict-coordinate-weak-target",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "min-strict-coordinate-strict-target",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<epsilon\n    abs(b-y)<epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<epsilon\n"
+        },
+        {
+          "id": "min-weak-to-strict-false",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<epsilon\n"
+        },
+        {
+          "id": "min-radius-real",
+          "source": "forall a,b,x,y R,epsilon R:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "min-reversed-error-bounds",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(x-a)<=epsilon\n    abs(y-b)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "min-missing-second-error",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "min-zero-tolerance",
+          "source": "forall a,b,x,y R,epsilon R:\n    epsilon=0\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(min(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-min-mismatch",
+          "source": "forall a,b,x,y R,epsilon R+:\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    =>:\n        abs(max(a,b)-min(x,y))<=epsilon\n"
+        },
+        {
+          "id": "max-reversed-errors-two-chains",
+          "source": "claim:\n    ? forall a,b,x,y R,epsilon R+:\n        abs(x-a)<=epsilon\n        abs(y-b)<=epsilon\n        =>:\n            abs(max(a,b)-max(x,y))<=epsilon\n    abs(a-x)=abs(x-a)<=epsilon\n    abs(b-y)=abs(y-b)<=epsilon\n"
+        },
+        {
+          "id": "min-reversed-errors-two-chains",
+          "source": "claim:\n    ? forall a,b,x,y R,epsilon R+:\n        abs(x-a)<=epsilon\n        abs(y-b)<=epsilon\n        =>:\n            abs(min(a,b)-min(x,y))<=epsilon\n    abs(a-x)=abs(x-a)<=epsilon\n    abs(b-y)=abs(y-b)<=epsilon\n"
+        },
+        {
+          "id": "chapter09-max-exact-original",
+          "source": {
+            "text_omitted": true,
+            "sha256": "02192b8d2bf2039484121c3d5ea640fb5e8dbc5d7304d36077977075b249e86d",
+            "characters": 3030,
+            "excerpt": "thm r34_chapter09_max_exact_original:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B}))) <= epsilon\n    a - A <= abs(a - A)\n    a - A <= abs(a - A) <= epsilon\n    a - A <= epsilon\n    (a - A) + A <= epsilon + A\n    (a - A) + A = a\n    epsilon + A = A + epsilon\n    a <= A + epsilon\n    b - B <= abs(b - B)\n    b - B <= abs(b - B) <= epsilon\n    b - B <= epsilon\n    (b - B) + B <= epsilon + B\n    (b - B) + B = b\n    epsilon + B = B + epsilon\n    b <= B +"
+          },
+          "statement": {
+            "text_omitted": true,
+            "sha256": "02192b8d2bf2039484121c3d5ea640fb5e8dbc5d7304d36077977075b249e86d",
+            "characters": 3030,
+            "excerpt": "thm r34_chapter09_max_exact_original:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(finite_set_max(union({a}, { b})) - finite_set_max(union({A}, { B}))) <= epsilon\n    a - A <= abs(a - A)\n    a - A <= abs(a - A) <= epsilon\n    a - A <= epsilon\n    (a - A) + A <= epsilon + A\n    (a - A) + A = a\n    epsilon + A = A + epsilon\n    a <= A + epsilon\n    b - B <= abs(b - B)\n    b - B <= abs(b - B) <= epsilon\n    b - B <= epsilon\n    (b - B) + B <= epsilon + B\n    (b - B) + B = b\n    epsilon + B = B + epsilon\n    b <= B +"
+          },
+          "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit"
+        },
+        {
+          "id": "chapter09-max-native-original-body",
+          "source": "thm r34_chapter09_max_native_original_body:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(max(a,b) - max(A,B)) <= epsilon\n    a - A <= abs(a - A)\n    a - A <= abs(a - A) <= epsilon\n    a - A <= epsilon\n    (a - A) + A <= epsilon + A\n    (a - A) + A = a\n    epsilon + A = A + epsilon\n    a <= A + epsilon\n    b - B <= abs(b - B)\n    b - B <= abs(b - B) <= epsilon\n    b - B <= epsilon\n    (b - B) + B <= epsilon + B\n    (b - B) + B = b\n    epsilon + B = B + epsilon\n    b <= B + epsilon\n    A <= max(A,B)\n    B <= max(A,B)\n    A + epsilon <= max(A,B) + epsilon\n    B + epsilon <= max(A,B) + epsilon\n    a <= A + epsilon <= max(A,B) + epsilon\n    a <= max(A,B) + epsilon\n    b <= B + epsilon <= max(A,B) + epsilon\n    b <= max(A,B) + epsilon\n    max(a,b) <= max(A,B) + epsilon\n    max(a,b) - max(A,B) <= (max(A,B) + epsilon) - max(A,B)\n    (max(A,B) + epsilon) - max(A,B) = epsilon\n    max(a,b) - max(A,B) <= epsilon\n    A - a <= abs(A - a)\n    abs(A - a) = abs(a - A)\n    A - a <= abs(a - A)\n    A - a <= abs(a - A) <= epsilon\n    A - a <= epsilon\n    (A - a) + a <= epsilon + a\n    (A - a) + a = A\n    epsilon + a = a + epsilon\n    A <= a + epsilon\n    B - b <= abs(B - b)\n    abs(B - b) = abs(b - B)\n    B - b <= abs(b - B)\n    B - b <= abs(b - B) <= epsilon\n    B - b <= epsilon\n    (B - b) + b <= epsilon + b\n    (B - b) + b = B\n    epsilon + b = b + epsilon\n    B <= b + epsilon\n    a <= max(a,b)\n    b <= max(a,b)\n    a + epsilon <= max(a,b) + epsilon\n    b + epsilon <= max(a,b) + epsilon\n    A <= a + epsilon <= max(a,b) + epsilon\n    A <= max(a,b) + epsilon\n    B <= b + epsilon <= max(a,b) + epsilon\n    B <= max(a,b) + epsilon\n    max(A,B) <= max(a,b) + epsilon\n    max(A,B) - max(a,b) <= (max(a,b) + epsilon) - max(a,b)\n    (max(a,b) + epsilon) - max(a,b) = epsilon\n    max(A,B) - max(a,b) <= epsilon\n    -(max(a,b) - max(A,B)) = max(A,B) - max(a,b)\n    -(max(a,b) - max(A,B)) <= epsilon\n",
+          "statement": "thm r34_chapter09_max_native_original_body:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(max(a,b) - max(A,B)) <= epsilon\n    a - A <= abs(a - A)\n    a - A <= abs(a - A) <= epsilon\n    a - A <= epsilon\n    (a - A) + A <= epsilon + A\n    (a - A) + A = a\n    epsilon + A = A + epsilon\n    a <= A + epsilon\n    b - B <= abs(b - B)\n    b - B <= abs(b - B) <= epsilon\n    b - B <= epsilon\n    (b - B) + B <= epsilon + B\n    (b - B) + B = b\n    epsilon + B = B + epsilon\n    b <= B + epsilon\n    A <= max(A,B)\n    B <= max(A,B)\n    A + epsilon <= max(A,B) + epsilon\n    B + epsilon <= max(A,B) + epsilon\n    a <= A + epsilon <= max(A,B) + epsilon\n    a <= max(A,B) + epsilon\n    b <= B + epsilon <= max(A,B) + epsilon\n    b <= max(A,B) + epsilon\n    max(a,b) <= max(A,B) + epsilon\n    max(a,b) - max(A,B) <= (max(A,B) + epsilon) - max(A,B)\n    (max(A,B) + epsilon) - max(A,B) = epsilon\n    max(a,b) - max(A,B) <= epsilon\n    A - a <= abs(A - a)\n    abs(A - a) = abs(a - A)\n    A - a <= abs(a - A)\n    A - a <= abs(a - A) <= epsilon\n    A - a <= epsilon\n    (A - a) + a <= epsilon + a\n    (A - a) + a = A\n    epsilon + a = a + epsilon\n    A <= a + epsilon\n    B - b <= abs(B - b)\n    abs(B - b) = abs(b - B)\n    B - b <= abs(b - B)\n    B - b <= abs(b - B) <= epsilon\n    B - b <= epsilon\n    (B - b) + b <= epsilon + b\n    (B - b) + b = B\n    epsilon + b = b + epsilon\n    B <= b + epsilon\n    a <= max(a,b)\n    b <= max(a,b)\n    a + epsilon <= max(a,b) + epsilon\n    b + epsilon <= max(a,b) + epsilon\n    A <= a + epsilon <= max(a,b) + epsilon\n    A <= max(a,b) + epsilon\n    B <= b + epsilon <= max(a,b) + epsilon\n    B <= max(a,b) + epsilon\n    max(A,B) <= max(a,b) + epsilon\n    max(A,B) - max(a,b) <= (max(a,b) + epsilon) - max(a,b)\n    (max(a,b) + epsilon) - max(a,b) = epsilon\n    max(A,B) - max(a,b) <= epsilon\n    -(max(a,b) - max(A,B)) = max(A,B) - max(a,b)\n    -(max(a,b) - max(A,B)) <= epsilon\n",
+          "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit"
+        },
+        {
+          "id": "chapter09-max-native-bodyless",
+          "source": "thm r34_chapter09_max_native_bodyless:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(max(a,b) - max(A,B)) <= epsilon\n",
+          "statement": "thm r34_chapter09_max_native_bodyless:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(max(a,b) - max(A,B)) <= epsilon\n",
+          "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit"
+        },
+        {
+          "id": "chapter09-min-exact-header",
+          "source": "thm r34_chapter09_min_exact_header:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(finite_set_min(union({a}, { b})) - finite_set_min(union({A}, { B}))) <= epsilon\n",
+          "statement": "thm r34_chapter09_min_exact_header:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(finite_set_min(union({a}, { b})) - finite_set_min(union({A}, { B}))) <= epsilon\n",
+          "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit"
+        },
+        {
+          "id": "chapter09-min-native-bodyless",
+          "source": "thm r34_chapter09_min_native_bodyless:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(min(a,b) - min(A,B)) <= epsilon\n",
+          "statement": "thm r34_chapter09_min_native_bodyless:\n    ? forall a, b, A, B R, epsilon R+:\n        abs(a - A) <= epsilon\n        abs(b - B) <= epsilon\n        =>:\n            abs(min(a,b) - min(A,B)) <= epsilon\n",
+          "anchor": "scripts/Analysis/textbook/chapter09-continuous-functions.lit"
+        },
+        {
+          "id": "chapter06-two_point_max_stability",
+          "source": "thm r34_chapter06_two_point_max_stability:\n    ? forall epsilon R+, u, v, x, y R:\n        abs(u - x) < epsilon\n        abs(v - y) < epsilon\n        $is_finite_set(union({u}, {v}))\n        $is_nonempty_set(union({u}, {v}))\n        union({u}, {v}) $subset R\n        $is_finite_set(union({x}, {y}))\n        $is_nonempty_set(union({x}, {y}))\n        union({x}, {y}) $subset R\n        =>:\n            abs(finite_set_max(union({u}, { v})) - finite_set_max(union({x}, { y}))) <= epsilon\n",
+          "statement": "thm r34_chapter06_two_point_max_stability:\n    ? forall epsilon R+, u, v, x, y R:\n        abs(u - x) < epsilon\n        abs(v - y) < epsilon\n        $is_finite_set(union({u}, {v}))\n        $is_nonempty_set(union({u}, {v}))\n        union({u}, {v}) $subset R\n        $is_finite_set(union({x}, {y}))\n        $is_nonempty_set(union({x}, {y}))\n        union({x}, {y}) $subset R\n        =>:\n            abs(finite_set_max(union({u}, { v})) - finite_set_max(union({x}, { y}))) <= epsilon\n",
+          "anchor": "scripts/Analysis/textbook/chapter06-sequential-limits.lit"
+        },
+        {
+          "id": "chapter06-two_point_min_stability",
+          "source": "thm r34_chapter06_two_point_min_stability:\n    ? forall epsilon R+, u, v, x, y R:\n        abs(u - x) < epsilon\n        abs(v - y) < epsilon\n        $is_finite_set(union({u}, {v}))\n        $is_nonempty_set(union({u}, {v}))\n        union({u}, {v}) $subset R\n        $is_finite_set(union({x}, {y}))\n        $is_nonempty_set(union({x}, {y}))\n        union({x}, {y}) $subset R\n        =>:\n            abs(finite_set_min(union({u}, { v})) - finite_set_min(union({x}, { y}))) <= epsilon\n",
+          "statement": "thm r34_chapter06_two_point_min_stability:\n    ? forall epsilon R+, u, v, x, y R:\n        abs(u - x) < epsilon\n        abs(v - y) < epsilon\n        $is_finite_set(union({u}, {v}))\n        $is_nonempty_set(union({u}, {v}))\n        union({u}, {v}) $subset R\n        $is_finite_set(union({x}, {y}))\n        $is_nonempty_set(union({x}, {y}))\n        union({x}, {y}) $subset R\n        =>:\n            abs(finite_set_min(union({u}, { v})) - finite_set_min(union({x}, { y}))) <= epsilon\n",
+          "anchor": "scripts/Analysis/textbook/chapter06-sequential-limits.lit"
+        },
+        {
+          "id": "maintained-max_lipschitz_from_coordinate_bounds",
+          "source": "# Tracer: MaxLipschitzFromCoordinateBounds.\n# Before (direct target rejected; the textbook used a 152-line case proof):\n# forall a,b,x,y R, epsilon R+:\n#     abs(a-x) <= epsilon\n#     abs(b-y) <= epsilon\n#     =>:\n#         abs(max(a,b)-max(x,y)) <= epsilon\n# Former behavior: search_proof miss on the direct maximum bound.\n# Now: both checked coordinate error bounds close the target directly.\n# Boundary: one error bound, a min/max mismatch, or invalid real domains\n# cannot establish this conclusion. Finite-set WD remains mandatory.\n# Evidence: target/release/litex -lang en -strict -f examples/proof_nodes/atomic/by_builtin_rule/max_lipschitz_from_coordinate_bounds.lit\n\nforall a,b,x,y R, epsilon R+:\n    abs(a-x) <= epsilon\n    abs(b-y) <= epsilon\n    =>:\n        abs(max(a,b)-max(x,y)) <= epsilon\n\n# Analysis Chapter 6's exact mathematical interface, retaining its strict\n# error bounds and the existing finite-extremum domains.\nthm two_point_max_stability:\n    ? forall epsilon R+, u,v,x,y R:\n        abs(u-x) < epsilon\n        abs(v-y) < epsilon\n        $is_finite_set(union({u},{v}))\n        $is_nonempty_set(union({u},{v}))\n        union({u},{v}) $subset R\n        $is_finite_set(union({x},{y}))\n        $is_nonempty_set(union({x},{y}))\n        union({x},{y}) $subset R\n        =>:\n            abs(finite_set_max(union({u},{v}))-finite_set_max(union({x},{y}))) <= epsilon\n\n# A displayed pair keeps the original pairwise-distinctness WD guard.\nforall a,b,x,y R, epsilon R+:\n    a!=b\n    x!=y\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    $is_finite_set({a,b})\n    $is_nonempty_set({a,b})\n    {a,b} $subset R\n    $is_finite_set({x,y})\n    $is_nonempty_set({x,y})\n    {x,y} $subset R\n    =>:\n        abs(finite_set_max({a,b})-finite_set_max({x,y}))<=epsilon\n",
+          "anchor": "examples/proof_nodes/atomic/by_builtin_rule/max_lipschitz_from_coordinate_bounds.lit"
+        },
+        {
+          "id": "maintained-min_lipschitz_from_coordinate_bounds",
+          "source": "# Tracer: MinLipschitzFromCoordinateBounds.\n# Before (direct target rejected):\n# forall a,b,x,y R, epsilon R+:\n#     abs(a-x) <= epsilon\n#     abs(b-y) <= epsilon\n#     =>:\n#         abs(min(a,b)-min(x,y)) <= epsilon\n# Former behavior: search_proof miss; Analysis used a 152-line case proof.\n# Now: the two checked error bounds close the minimum estimate.\n# Boundary: both bounds and the real/finite-extremum domains are required.\n# Evidence: target/release/litex -lang en -strict -f examples/proof_nodes/atomic/by_builtin_rule/min_lipschitz_from_coordinate_bounds.lit\n\nforall a,b,x,y R, epsilon R+:\n    abs(a-x) <= epsilon\n    abs(b-y) <= epsilon\n    =>:\n        abs(min(a,b)-min(x,y)) <= epsilon\n\nthm two_point_min_stability:\n    ? forall epsilon R+, u,v,x,y R:\n        abs(u-x) < epsilon\n        abs(v-y) < epsilon\n        $is_finite_set(union({u},{v}))\n        $is_nonempty_set(union({u},{v}))\n        union({u},{v}) $subset R\n        $is_finite_set(union({x},{y}))\n        $is_nonempty_set(union({x},{y}))\n        union({x},{y}) $subset R\n        =>:\n            abs(finite_set_min(union({u},{v}))-finite_set_min(union({x},{y}))) <= epsilon\n\n# A displayed pair keeps the original pairwise-distinctness WD guard.\nforall a,b,x,y R, epsilon R+:\n    a!=b\n    x!=y\n    abs(a-x)<=epsilon\n    abs(b-y)<=epsilon\n    $is_finite_set({a,b})\n    $is_nonempty_set({a,b})\n    {a,b} $subset R\n    $is_finite_set({x,y})\n    $is_nonempty_set({x,y})\n    {x,y} $subset R\n    =>:\n        abs(finite_set_min({a,b})-finite_set_min({x,y}))<=epsilon\n",
+          "anchor": "examples/proof_nodes/atomic/by_builtin_rule/min_lipschitz_from_coordinate_bounds.lit"
+        },
+        {
+          "id": "maintained-binary_max_weak_monotone",
+          "source": "# Rule: MaxWeakMonotone\n# Before (rejected):\n# forall a,b,c,d R:\n#     a<=c\n#     b<=d\n#     =>:\n#         max(a,b)<=max(c,d)\n# Former behavior: strict run success=false, phase search_proof.\n# Now (verified directly):\nforall a,b,c,d R:\n    a<=c\n    b<=d\n    =>:\n        max(a,b)<=max(c,d)\n\nforall a,b,c R:\n    a<=b\n    =>:\n        max(c,a)<=max(c,b)\n\n# Boundary: Both argument orders must be checked, or that argument must be identical; one missing unequal argument order rejects.\n# Gate: target/release/litex -strict -f examples/proof_nodes/atomic/by_builtin_rule/binary_max_weak_monotone.lit\n# Regression: tests/unit/execute/legacy_six_simple_bt/tests.rs\n",
+          "anchor": "examples/proof_nodes/atomic/by_builtin_rule/binary_max_weak_monotone.lit"
+        },
+        {
+          "id": "maintained-binary_min_weak_monotone",
+          "source": "# Rule: MinWeakMonotone\n# Before (rejected):\n# forall a,b,c,d R:\n#     a<=c\n#     b<=d\n#     =>:\n#         min(a,b)<=min(c,d)\n# Former behavior: strict run success=false, phase search_proof.\n# Now (verified directly):\nforall a,b,c,d R:\n    a<=c\n    b<=d\n    =>:\n        min(a,b)<=min(c,d)\n\nforall a,b,c R:\n    a<=b\n    =>:\n        min(a,c)<=min(b,c)\n\n# Boundary: Both argument orders must be checked, or that argument must be identical; one missing unequal argument order rejects.\n# Gate: target/release/litex -strict -f examples/proof_nodes/atomic/by_builtin_rule/binary_min_weak_monotone.lit\n# Regression: tests/unit/execute/legacy_six_simple_bt/tests.rs\n",
+          "anchor": "examples/proof_nodes/atomic/by_builtin_rule/binary_min_weak_monotone.lit"
+        }
+      ],
+      "source_hashes": {
+        "examples/proof_nodes/atomic/by_builtin_rule/binary_max_weak_monotone.lit": "a762a06e5e9af39c5de7a2c3a818d8eb122942c789856ec1b98b2d53c4438787",
+        "examples/proof_nodes/atomic/by_builtin_rule/binary_min_weak_monotone.lit": "5671c17746b8abfc8ef7c95eeba98e57c8713973fb4f9f33a46c715cb049e524",
+        "examples/proof_nodes/atomic/by_builtin_rule/max_lipschitz_from_coordinate_bounds.lit": "067f56dcc8ab0941eb1fc51c0cfcf1517ab0cd5774250646035672fe9a22fcc5",
+        "examples/proof_nodes/atomic/by_builtin_rule/min_lipschitz_from_coordinate_bounds.lit": "219661e5d2e1295e6e9ae622cae06bc36574818959a096ee5920c8d8a1f677a3",
+        "scripts/Analysis/textbook/chapter06-sequential-limits.lit": "63f6de9a7ede656c02e6b14205aef44a8ac786fc709975121597a2600daefbcd",
+        "scripts/Analysis/textbook/chapter09-continuous-functions.lit": "d15cc750b738fe7a3fe27e24570bd0b1d0492992e0beb684394418a97504afc6"
+      },
+      "failed_build_command": "cargo build --release",
+      "build_exit": 101,
+      "build_log": "tmp/2026-10-09/equality-inequality-search/build-round-34.log",
+      "blocking_owners": [
+        "src/run/run_compile_to_lean.rs",
+        "src/compile_to_lean/litex_to_lean_compiler.rs"
+      ],
+      "owner_hashes": {
+        "src/run/run_compile_to_lean.rs": "0b3b5c0327efcff91a3431d75b359747afa2c1bf674454b6f6553df0414012ee",
+        "src/compile_to_lean/litex_to_lean_compiler.rs": "8090ed0849065c7ad3866625e1bdb506190bae8c9f2ddd60289723ac86334826"
+      },
+      "next_step": "Rebuild current release once Lean compiler changes stabilize, copy round34 snapshot, cold strict check all 30 unique sources and promoted copies. Never treat warm results as cold acceptance.",
+      "journal_boundary_note": "The long native Chapter09 original-body response completed in the following bodyless submission response; those warm outputs are retained without per-statement acceptance attribution. Cold separate files must decide each result.",
+      "acceptance_receipt": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-34-2026-10-09.json"
+    },
+    "build_log": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/build-round-34-recheck.log",
+    "summary": {
+      "accepted": 18,
+      "rejected": 12
+    },
+    "scope": "Independent current-source strict gates; immutable executable identity, no immutable whole-checkout claim. Canonical source/kernel unchanged by search.",
+    "current_anchor_correspondence": {
+      "examples/proof_nodes/atomic/by_builtin_rule/binary_max_weak_monotone.lit": true,
+      "examples/proof_nodes/atomic/by_builtin_rule/binary_min_weak_monotone.lit": true,
+      "examples/proof_nodes/atomic/by_builtin_rule/max_lipschitz_from_coordinate_bounds.lit": true,
+      "examples/proof_nodes/atomic/by_builtin_rule/min_lipschitz_from_coordinate_bounds.lit": true,
+      "scripts/Analysis/textbook/chapter06-sequential-limits.lit": true,
+      "scripts/Analysis/textbook/chapter09-continuous-functions.lit": true
+    }
+  }
+}

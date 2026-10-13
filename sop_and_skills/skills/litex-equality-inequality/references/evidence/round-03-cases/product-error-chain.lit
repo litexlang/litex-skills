@@ -1,0 +1,2 @@
+forall u,v,x,y R:
+    abs(u*v-x*y) = abs(u*(v-y)+y*(u-x)) <= abs(u*(v-y))+abs(y*(u-x)) = abs(u)*abs(v-y)+abs(y)*abs(u-x)

@@ -1,0 +1,15 @@
+claim:
+    ? forall a,b R+,c R:
+        a!=1
+        a^c=b
+        =>:
+            log(a,b)=c
+    log(a,a)=1
+    log(a,b)=log(a,a^c)=c*log(a,a)=c
+
+forall a, b R+, c R:
+    a != 1
+    =>:
+        log(a, b) = c
+    <=>:
+        a^c = b

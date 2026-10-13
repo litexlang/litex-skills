@@ -1,0 +1,5 @@
+let two_point_vector = fn(index N+: index <= 2) R
+have fn expectation2(values,probs two_point_vector) R = values(1)*probs(1)+values(2)*probs(2)
+have fn variance2(values,probs two_point_vector) R = (values(1)-expectation2(values,probs))^2*probs(1)+(values(2)-expectation2(values,probs))^2*probs(2)
+forall values,probs two_point_vector:
+    variance2(values,probs) >= 0

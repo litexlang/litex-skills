@@ -1,0 +1,91 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-56-sources.json",
+  "original_sha256": "510d3a9864571c1b3d3bcf67e49ffad7d54e695d55437434735374273c8fc696",
+  "original_bytes": 7535,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/scripts/high_school_book/textbook/chapter04-functions.lit",
+    "source_sha256": "068c97355a2d85a8d528edc02b7f482e7a7f4e0e8e9f9ab551b4440da6b1fd97",
+    "prefix": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n",
+    "definitions": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n",
+    "cases": [
+      {
+        "id": "identity-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)=x<=y=r56_identity(y)\n        r56_identity(x)<=r56_identity(y)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)=x<=y=r56_identity(y)\n        r56_identity(x)<=r56_identity(y)\n"
+      },
+      {
+        "id": "identity-endpoint",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)\n"
+      },
+      {
+        "id": "negative-weak-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)=-y<=-x=r56_neg_identity(x)\n        r56_neg_identity(y)<=r56_neg_identity(x)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)=-y<=-x=r56_neg_identity(x)\n        r56_neg_identity(y)<=r56_neg_identity(x)\n"
+      },
+      {
+        "id": "negative-weak-endpoint",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)\n"
+      },
+      {
+        "id": "negative-strict-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)=-y<-x=r56_neg_identity(x)\n        r56_neg_identity(y)<r56_neg_identity(x)\n",
+        "statement": "forall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)=-y<-x=r56_neg_identity(x)\n        r56_neg_identity(y)<r56_neg_identity(x)\n"
+      },
+      {
+        "id": "negative-strict-endpoint",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)\n",
+        "statement": "forall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)\n"
+      },
+      {
+        "id": "constant-original",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x R:\n    r56_constant_five(x)=5=r56_constant_five(0)\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n",
+        "statement": "forall x R:\n    r56_constant_five(x)=5=r56_constant_five(0)\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n"
+      },
+      {
+        "id": "constant-comparisons",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n",
+        "statement": "forall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n"
+      },
+      {
+        "id": "false-weak-to-strict",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<r56_identity(y)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<r56_identity(y)\n"
+      },
+      {
+        "id": "false-negative-increasing",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(x)<=r56_neg_identity(y)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(x)<=r56_neg_identity(y)\n"
+      },
+      {
+        "id": "false-constant-strict",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall t R:\n    r56_neg_identity(t)=-t\n\nforall y R:\n    r56_identity(y)=y\n\nforall x R:\n    r56_constant_five(x)<r56_constant_five(0)\n",
+        "statement": "forall x R:\n    r56_constant_five(x)<r56_constant_five(0)\n"
+      },
+      {
+        "id": "identity-endpoint-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_identity(x)<=r56_identity(y)\n"
+      },
+      {
+        "id": "negative-weak-endpoint-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)\n",
+        "statement": "forall x,y R:\n    x<=y\n    =>:\n        r56_neg_identity(y)<=r56_neg_identity(x)\n"
+      },
+      {
+        "id": "negative-strict-endpoint-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)\n",
+        "statement": "forall x,y R:\n    x<y\n    =>:\n        r56_neg_identity(y)<r56_neg_identity(x)\n"
+      },
+      {
+        "id": "constant-comparisons-definitions-only",
+        "source": "have fn r56_identity(x R) R = x\nhave fn r56_neg_identity(x R) R = -x\nhave fn r56_constant_five(x R) R = 5\n\nforall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n",
+        "statement": "forall x R:\n    r56_constant_five(x)<=r56_constant_five(0)\n    r56_constant_five(0)<=r56_constant_five(x)\n"
+      }
+    ]
+  }
+}

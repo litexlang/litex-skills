@@ -1,0 +1,7 @@
+claim:
+    ? forall u fn(t R) R,a,b R:
+        fn(k R) R {a*(b*u(k))}=fn(j R) R {(a*b)*u(j)}
+    by fn_extension:
+        ? fn(k R) R {a*(b*u(k))}=fn(j R) R {(a*b)*u(j)}
+        forall eval_index R:
+            fn(k R) R {a*(b*u(k))}(eval_index)=a*(b*u(eval_index))=(a*b)*u(eval_index)=fn(j R) R {(a*b)*u(j)}(eval_index)

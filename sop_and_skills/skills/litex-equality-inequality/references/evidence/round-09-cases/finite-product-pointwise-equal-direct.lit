@@ -1,0 +1,5 @@
+forall S finite_set,f,g fn(x S) R:
+    forall x S:
+        f(x) = g(x)
+    =>:
+        finite_set_product(S,f) = finite_set_product(S,g)

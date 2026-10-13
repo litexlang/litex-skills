@@ -1,0 +1,4 @@
+forall m,n N+,f fn(x m...n) R,c R:
+    m <= n
+    =>:
+        sum(m,n,fn(x m...n) R {c*f(x)}) = c*sum(m,n,fn(x m...n) R {f(x)})

@@ -1,0 +1,4 @@
+forall S set,x,y S,F fn(t S) R:
+    x = y
+    =>:
+        F(x) = F(y)

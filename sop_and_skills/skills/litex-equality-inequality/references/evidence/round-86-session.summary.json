@@ -1,0 +1,38 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-86-session.json",
+  "original_sha256": "c5b3e10c0569ed291752d7aace0700f6c7a0a9f0c2eed2c5b7136ccd338bb07b",
+  "original_bytes": 4638,
+  "full_verifier_payloads_included": false,
+  "receipt": [
+    {
+      "source": "prop is_linear_map(K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W):\n    forall u, v V:\n        T(source.add(u, v)) = target.add(T(u), T(v))\n    forall a K, v V:\n        T(source.smul(a, v)) = target.smul(a, T(v))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "6072f1a2d15c29eb42cc033e3b287892a3e01102aad27e3477160285b0679509",
+        "excerpt": "prop is_linear_map(K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W):\r\n    forall u, v V:\r\n        T(source.add(u, v)) = target.add(T(u), T(v))\r\n    forall a K, v V:\r\n        T(source.smul(a, v)) = target.smul(a, T(v))\r\n\r\n... ... ... ... ... success\r\nlitex> "
+      },
+      "baseline": "Round68 snapshot Session66922; source structs/unique neg/cancellation/zero laws already accepted. Current cold round86 owns image-proof deletion and kernel consumer."
+    },
+    {
+      "source": "thm linear_map_sends_zero_to_zero:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:\n        $is_linear_map(K, field, V, W, source, target, T)\n        =>:\n            T(source.zero) = target.zero\n    source.add(source.zero,source.zero)=source.zero\n    target.add(T(source.zero),T(source.zero))=T(source.add(source.zero,source.zero))=T(source.zero)=target.add(target.zero,T(source.zero))=target.add(T(source.zero),target.zero)\n    release thm add_left_cancel(K,field,W,target,T(source.zero),T(source.zero),target.zero)",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "bfe385aeb6b2d0047bbb16d49bf8c91777eead0672e9a4f7df0ba23767589916",
+        "excerpt": "thm linear_map_sends_zero_to_zero:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W:\r\n        $is_linear_map(K, field, V, W, source, target, T)\r\n        =>:\r\n            T(source.zero) = target.zero\r\n    source.add(source.zero,source.zero)=source.zero\r\n    target.add(T(source.zero),T(source.zero))=T(source.add(source.zero,source.zero))=T(source.zero)=target.add(target.zero,T(source.zero))=target.add(T(source.zero),target.zero)\r\n    release thm add_left_cancel(K,field,W,target,T(source."
+      },
+      "baseline": "Round68 snapshot Session66922; source structs/unique neg/cancellation/zero laws already accepted. Current cold round86 owns image-proof deletion and kernel consumer."
+    },
+    {
+      "source": "thm linear_map_sends_neg_to_neg:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W, x V:\n        $is_linear_map(K, field, V, W, source, target, T)\n        =>:\n            T(\\vector_neg<K, field, V, source>(x)) = \\vector_neg<K, field, W, target>(T(x))\n    release thm vector_neg_spec(K, field, V, source, x)\n    release thm vector_neg_spec(K, field, W, target, T(x))\n    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)\n    target.add(T(x),T(\\vector_neg<K, field, V, source>(x)))=T(source.add(x,\\vector_neg<K, field, V, source>(x)))=T(source.zero)=target.zero=target.add(T(x),\\vector_neg<K, field, W, target>(T(x)))\n    release thm add_left_cancel(K, field, W, target, T(x), T(\\vector_neg<K, field, V, source>(x)), \\vector_neg<K, field, W, target>(T(x)))",
+      "response": {
+        "full_payload_omitted": true,
+        "sha256": "71dac560d2b2741832997a37bf41e37f8a7c89fa0a38d108e699b9921c8c3cdc",
+        "excerpt": "thm linear_map_sends_neg_to_neg:\r\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, W nonempty_set, source &VectorSpace<K, field, V>, target &VectorSpace<K, field, W>, T fn(v V) W, x V:\r\n        $is_linear_map(K, field, V, W, source, target, T)\r\n        =>:\r\n            T(\\vector_neg<K, field, V, source>(x)) = \\vector_neg<K, field, W, target>(T(x))\r\n    release thm vector_neg_spec(K, field, V, source, x)\r\n    release thm vector_neg_spec(K, field, W, target, T(x))\r\n    release thm linear_map_sends_zero_to_zero(K, field, V, W, source, target, T)\r\n    target.add(T(x),T(\\vector_neg<K, "
+      },
+      "baseline": "Round68 snapshot Session66922; source structs/unique neg/cancellation/zero laws already accepted. Current cold round86 owns image-proof deletion and kernel consumer.",
+      "prompt_observed": true
+    }
+  ]
+}

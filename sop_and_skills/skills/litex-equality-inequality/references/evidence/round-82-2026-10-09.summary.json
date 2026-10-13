@@ -1,0 +1,279 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-82-2026-10-09.json",
+  "original_sha256": "9f4231543cb2e0e3a1ed3118694b4a7ed342a2a298e7ff1b1a16d1107eefd33c",
+  "original_bytes": 29241,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "build": {
+      "command": "cargo build --release",
+      "exit_code": 0
+    },
+    "binary_sha256": "f98867af9f5b656748b1183d13e31d489d42b3e1310bf2a329049cd106a6a246",
+    "cases": [
+      {
+        "id": "source-theorem",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0\n    quadratic_solution(c, 0) = 0^2 + c = c\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/source-theorem.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/source-theorem.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c39670832d14b54028cfc5b179b890d7d2b5c56e94797a20b4e4097c8fdef315"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/source-theorem.lit"
+        ]
+      },
+      {
+        "id": "value-only",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0\n    quadratic_solution(c,0)=c\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/value-only.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/value-only.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "14121c2400d108ef021dc13bcca8df1b8089216f3f9337c5be17ae99e004e0dc"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/value-only.lit"
+        ]
+      },
+      {
+        "id": "empty-theorem",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/empty-theorem.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/empty-theorem.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "dc07fff15e131bab0e09ac07965a93ae14cbf84b43c3541159df41dfe1321c9f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/empty-theorem.lit"
+        ]
+      },
+      {
+        "id": "direct-parameter",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nforall c,y0 R:\n    quadratic_solution(c,0)=y0\n    =>:\n        c=y0\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/direct-parameter.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/direct-parameter.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6c6e4b2a4536ff89e6efc4cabea91e853e42ff77a3e55e3ed21b85d3c9a9db29"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/direct-parameter.lit"
+        ]
+      },
+      {
+        "id": "wrong-shifted-parameter",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        quadratic_solution(c, 0) = y0\n        =>:\n            c = y0+1\n    quadratic_solution(c,0)=c\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/wrong-shifted-parameter.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/wrong-shifted-parameter.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "c2dead0b2a7501cbe16e1fad0cb41ae893923569662da76b802141065b24133f"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/wrong-shifted-parameter.lit"
+        ]
+      },
+      {
+        "id": "missing-initial-condition",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm quadratic_initial_value_selects_parameter:\n    ? forall c, y0 R:\n        =>:\n            c = y0\n    quadratic_solution(c, 0) = 0^2 + c = c\n\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/missing-initial-condition.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/missing-initial-condition.lit"
+        ],
+        "exit_code": 1,
+        "output": {
+          "kind": "run",
+          "success": false,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "6f3db738867e8ba5ef4e9a08d03f6a9cfc6cd0ffebb7b51e3436c44c60cdeec7"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/missing-initial-condition.lit"
+        ]
+      },
+      {
+        "id": "numeric-origin",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nquadratic_solution(3,0)=3\nquadratic_solution(-2,0)=-2\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/numeric-origin.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/numeric-origin.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "62056ecd70f0afb9dc82a1aedeb65a1855e84d50e5940b3691fd4dcd04292e60"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/numeric-origin.lit"
+        ]
+      },
+      {
+        "id": "arbitrary-initial-point-consumer",
+        "source": "have fn quadratic_solution(c, x R) R = x^2 + c\nthm arbitrary_initial_parameter:\n    ? forall c,x0,y0 R:\n        quadratic_solution(c,x0)=y0\n        =>:\n            c=y0-x0^2\n    quadratic_solution(c,x0)=x0^2+c\n",
+        "path": "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/arbitrary-initial-point-consumer.lit",
+        "command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/.codex/skills/litex-equality-inequality/references/evidence/round-82-cases/arbitrary-initial-point-consumer.lit"
+        ],
+        "exit_code": 0,
+        "output": {
+          "kind": "run",
+          "success": true,
+          "session_error": null,
+          "target": "file",
+          "language": "en",
+          "full_payload_omitted": true,
+          "full_payload_sha256": "4c9bd09014ae42b3033c61abc4b54b21a405cbed9a16de122c02c61bdbf82957"
+        },
+        "stderr": "",
+        "draft_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round82-cases/arbitrary-initial-point-consumer.lit"
+        ]
+      }
+    ],
+    "counts": {
+      "files": 8,
+      "accepted": 4,
+      "normal_rejections": 4
+    },
+    "scope": "Exact quadratic family and original zero-initial-value parameter theorem; arbitrary-point variant separately labelled derived consumer, no derivative interface claim."
+  }
+}

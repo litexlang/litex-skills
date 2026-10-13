@@ -1,0 +1,7 @@
+claim:
+    ? forall a,b,c,d R:
+        a+d = c+b
+        =>:
+            (a-c,b-d) = (b-d,b-d)
+    a-c = (a+d)-c-d = (c+b)-c-d = b-d
+    release thm tuple_equal_from_coordinates((a-c,b-d),(b-d,b-d))

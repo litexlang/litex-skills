@@ -1,0 +1,2 @@
+forall m Z:
+    fn(k Z) R {k}(m)=fn(k Z) R {k}(m+1)

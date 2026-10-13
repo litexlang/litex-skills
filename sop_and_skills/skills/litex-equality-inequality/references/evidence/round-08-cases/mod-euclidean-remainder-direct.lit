@@ -1,0 +1,5 @@
+forall a,q Z,m N+,r N:
+    a = m*q+r
+    r < m
+    =>:
+        a%m = r

@@ -1,0 +1,4 @@
+forall x, L, r R:
+    abs(x-L) <= r
+    =>:
+        x <= L+r

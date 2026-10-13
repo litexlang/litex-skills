@@ -1,0 +1,6 @@
+interface:
+  display_name: "Litex Example Migration"
+  short_description: "Classify Litex example failures and migration gaps"
+  default_prompt: "Use $litex-example-migration to find failing Litex examples and classify the earliest failing boundary before discussing repairs."
+policy:
+  allow_implicit_invocation: true

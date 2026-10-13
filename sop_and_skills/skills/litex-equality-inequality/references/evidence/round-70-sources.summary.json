@@ -1,0 +1,85 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-70-sources.json",
+  "original_sha256": "8fea876aebea758afb43f14ad8b7a27ae1b39dc334d825b2952df1d9eff63f9f",
+  "original_bytes": 11675,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/6_abstract_algebra/main.lit",
+    "source_sha256": "cad9f2170e08dc14fea418daea245bccfb5f6e3d7f1e6bf265af2ba4ad9b625a",
+    "scope": "Exact existing flat GroupSetting and original generic-carrier theorems, no struct/library replacement, source theorem assumptions preserved for deletion.",
+    "cases": [
+      {
+        "id": "prefix",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/prefix.lit"
+      },
+      {
+        "id": "cancel-source",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_left_cancel:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\n        $GroupSetting(A, mul, one, inv)\n        mul(a, b) = mul(a, c)\n        =>:\n            b = c\n    mul(inv(a), a) = one\n    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/cancel-source.lit"
+      },
+      {
+        "id": "cancel-chain-only",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_left_cancel:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\n        $GroupSetting(A, mul, one, inv)\n        mul(a, b) = mul(a, c)\n        =>:\n            b = c\n    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/cancel-chain-only.lit"
+      },
+      {
+        "id": "inverse-source",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n    mul(a, inv(a)) = one\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/inverse-source.lit"
+      },
+      {
+        "id": "inverse-chain-only",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/inverse-chain-only.lit"
+      },
+      {
+        "id": "identity-source",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_identity_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, identity A:\n        $GroupSetting(A, mul, one, inv)\n        forall a A:\n            mul(identity, a) = a\n            mul(a, identity) = a\n        =>:\n            identity = one\n    identity = mul(one, identity) = one\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/identity-source.lit"
+      },
+      {
+        "id": "cancel-empty-body",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_left_cancel:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\n        $GroupSetting(A, mul, one, inv)\n        mul(a, b) = mul(a, c)\n        =>:\n            b = c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/cancel-empty-body.lit"
+      },
+      {
+        "id": "inverse-empty-body",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/inverse-empty-body.lit"
+      },
+      {
+        "id": "wrong-cancel-conclusion",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_left_cancel:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\n        $GroupSetting(A, mul, one, inv)\n        mul(a, b) = mul(a, c)\n        =>:\n            b = one\n    mul(inv(a), a) = one\n    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/wrong-cancel-conclusion.lit"
+      },
+      {
+        "id": "missing-group-inverse",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n    mul(a, inv(a)) = one\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/missing-group-inverse.lit"
+      },
+      {
+        "id": "cancel-by-def-and-chain",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_left_cancel:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A, c A:\n        $GroupSetting(A, mul, one, inv)\n        mul(a, b) = mul(a, c)\n        =>:\n            b = c\n    by def $GroupSetting(A,mul,one,inv)\n    b = mul(one, b) = mul(mul(inv(a), a), b) = mul(inv(a), mul(a, b)) = mul(inv(a), mul(a, c)) = mul(mul(inv(a), a), c) = mul(one, c) = c\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/cancel-by-def-and-chain.lit"
+      },
+      {
+        "id": "inverse-by-def-and-chain",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        mul(b, a) = one\n        =>:\n            b = inv(a)\n    by def $GroupSetting(A,mul,one,inv)\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/inverse-by-def-and-chain.lit"
+      },
+      {
+        "id": "inverse-missing-left-product",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_inverse_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, a A, b A:\n        $GroupSetting(A, mul, one, inv)\n        =>:\n            b = inv(a)\n    mul(a, inv(a)) = one\n    b = mul(b, one) = mul(b, mul(a, inv(a))) = mul(mul(b, a), inv(a)) = mul(one, inv(a)) = inv(a)\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/inverse-missing-left-product.lit"
+      },
+      {
+        "id": "identity-empty-body",
+        "source": "prop GroupSetting(A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A):\n    forall u, v, w A:\n        mul(mul(u, v), w) = mul(u, mul(v, w))\n    forall u A:\n        mul(one, u) = u\n        mul(u, one) = u\n        mul(inv(u), u) = one\n        mul(u, inv(u)) = one\nthm group_identity_unique:\n    ? forall A nonempty_set, mul fn(x, y A) A, one A, inv fn(x A) A, identity A:\n        $GroupSetting(A, mul, one, inv)\n        forall a A:\n            mul(identity, a) = a\n            mul(a, identity) = a\n        =>:\n            identity = one\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round70-cases/identity-empty-body.lit"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+claim:
+    ? forall S finite_set,f fn(x S) R:
+        forall x S:
+            0 <= f(x)
+        =>:
+            0 <= finite_set_sum(S,f)
+    finite_set_sum(S,fn(x S) R {0}) = 0
+    release thm finite_set_sum_le_from_pointwise(finite_set_sum(S,fn(x S) R {0}),finite_set_sum(S,f))

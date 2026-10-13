@@ -1,0 +1,33 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-38-authoring-errors.json",
+  "original_sha256": "2efcf96bbc6f6852d45490b75d5963302b335851665ea786fe08060eb3408d94",
+  "original_bytes": 1804,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "excluded": [
+      {
+        "id": "quotient-source-flow-indent",
+        "source": "have r38_x0 R,r38_radius R+\nhave r38_f fn(t R) R\nhave r38_sample R=r38_x0+r38_radius/2\n    0<r38_radius/2\n    r38_sample=r38_x0+r38_radius/2>r38_x0\n    r38_sample!=r38_x0\n    r38_sample-r38_x0=r38_radius/2\n    r38_sample-r38_x0>0\n    0<=r38_sample-r38_x0\n    abs(r38_sample-r38_x0)=r38_sample-r38_x0=r38_radius/2\n    r38_radius/2<r38_radius\nhave r38_quotient R=(r38_f(r38_sample)-r38_f(r38_x0))/(r38_sample-r38_x0)\n",
+        "historical_target": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-cases/quotient-source-flow.lit",
+        "replay_command": [
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-litex-snapshot",
+          "-strict",
+          "-lang",
+          "en",
+          "-f",
+          "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-quotient-indent-author-error.lit"
+        ],
+        "exit_code": 1,
+        "stdout": {
+          "full_payload_omitted": true,
+          "sha256": "5a61f86429e1e17e12784ecb9837d1a3d15d10e2bcdb26e863d74724e95844fa",
+          "excerpt": "{\n  \"kind\": \"run\",\n  \"success\": false,\n  \"target\": \"file\",\n  \"path\": \"/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-quotient-indent-author-error.lit\",\n  \"detail\": \"normal\",\n  \"language\": \"en\",\n  \"statement_results\": [],\n  \"session_error\": \"parse_error: unexpected indent at line 4 in /Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round38-quotient-indent-author-error.lit\"\n}\n"
+        },
+        "stderr": "",
+        "cause": "Author inserted indented body lines at root rather than in proof scope. No live Session restart; cold checkpoint only."
+      }
+    ]
+  }
+}

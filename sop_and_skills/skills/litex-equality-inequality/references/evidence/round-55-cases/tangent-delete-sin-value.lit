@@ -1,0 +1,12 @@
+claim:
+    ? forall x R:
+        cos(x) != 0
+        cos(x + pi) != 0
+        cos(x + 1 * pi) != 0
+        =>:
+            tan(x + pi) = tan(x)
+            tan(x + 1 * pi) = tan(x)
+    cos(x+pi)=-cos(x)
+    tan(x+pi)=sin(x+pi)/cos(x+pi)=(-sin(x))/(-cos(x))=sin(x)/cos(x)=tan(x)
+    x+1*pi=x+pi
+    tan(x+1*pi)=tan(x+pi)=tan(x)

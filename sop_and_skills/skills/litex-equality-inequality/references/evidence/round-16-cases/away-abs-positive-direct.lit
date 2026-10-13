@@ -1,0 +1,4 @@
+forall x R,c R+:
+    abs(x) >= c
+    =>:
+        abs(x) > 0

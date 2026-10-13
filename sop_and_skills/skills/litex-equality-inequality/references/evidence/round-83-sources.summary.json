@@ -1,0 +1,115 @@
+{
+  "format": "litex-hub-historical-receipt-summary-v1",
+  "historical": true,
+  "original_file": "references/evidence/round-83-sources.json",
+  "original_sha256": "319a46da402ad201011094f10de3d7032169708943fbffae74ee625912404e53",
+  "original_bytes": 38221,
+  "full_verifier_payloads_included": false,
+  "receipt": {
+    "source_path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/showcases/math_concepts_in_litex/5_linear_algebra/main.lit",
+    "source_sha256": "9cfe8d730f564d9a8c567d86eeef0af6e16ef8b788469e60551e7daaa3c7d89b",
+    "scope": "Exact source Field/VectorSpace structs and additive identity/inverse uniqueness proofs, no interface/struct edits.",
+    "cases": [
+      {
+        "id": "prefix",
+        "source": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y, z K:\n            add(add(x, y), z) = add(x, add(y, z))\n            mul(mul(x, y), z) = mul(x, mul(y, z))\n            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))\n        forall x, y K:\n            add(x, y) = add(y, x)\n            mul(x, y) = mul(y, x)\n        forall x K:\n            add(zero, x) = x\n            add(x, neg(x)) = zero\n            mul(one, x) = x\n        forall x K:\n            x != zero\n            =>:\n                mul(x, inv(x)) = one\n\n# A vector space over one fixed scalar field stores its vector operations and\n# compatibility laws as one first-class object.\n\nstruct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:\n    zero V\n    add fn(x, y V) V\n    smul fn(a K, x V) V\n    <=>:\n        forall x, y, z V:\n            add(add(x, y), z) = add(x, add(y, z))\n        forall x, y V:\n            add(x, y) = add(y, x)\n        forall x V:\n            add(zero, x) = x\n            exist y V st {add(x, y) = zero}\n        forall a, b K, x V:\n            smul(field.mul(a, b), x) = smul(a, smul(b, x))\n            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))\n        forall a K, x, y V:\n            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))\n        forall x V:\n            smul(field.one, x) = x\n\n# Any element acting as a left additive identity must equal the stored zero.\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/prefix.lit"
+      },
+      {
+        "id": "source-both",
+        "source": {
+          "text_omitted": true,
+          "sha256": "68e2878b092527ec66990cfdcb51adaed94b6f4d761db5db6c018b826bc4bad3",
+          "characters": 3174,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/source-both.lit"
+      },
+      {
+        "id": "inverse-delete-result-echo",
+        "source": {
+          "text_omitted": true,
+          "sha256": "ac1c39f311e4074b2eac08735bedf573827349be9157a49ae86a97fa6b4352d3",
+          "characters": 3154,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/inverse-delete-result-echo.lit"
+      },
+      {
+        "id": "identity-chain-only",
+        "source": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y, z K:\n            add(add(x, y), z) = add(x, add(y, z))\n            mul(mul(x, y), z) = mul(x, mul(y, z))\n            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))\n        forall x, y K:\n            add(x, y) = add(y, x)\n            mul(x, y) = mul(y, x)\n        forall x K:\n            add(zero, x) = x\n            add(x, neg(x)) = zero\n            mul(one, x) = x\n        forall x K:\n            x != zero\n            =>:\n                mul(x, inv(x)) = one\n\n# A vector space over one fixed scalar field stores its vector operations and\n# compatibility laws as one first-class object.\n\nstruct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:\n    zero V\n    add fn(x, y V) V\n    smul fn(a K, x V) V\n    <=>:\n        forall x, y, z V:\n            add(add(x, y), z) = add(x, add(y, z))\n        forall x, y V:\n            add(x, y) = add(y, x)\n        forall x V:\n            add(zero, x) = x\n            exist y V st {add(x, y) = zero}\n        forall a, b K, x V:\n            smul(field.mul(a, b), x) = smul(a, smul(b, x))\n            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))\n        forall a K, x, y V:\n            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))\n        forall x V:\n            smul(field.one, x) = x\n\n# Any element acting as a left additive identity must equal the stored zero.\n\nthm additive_identity_unique:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:\n        forall x V:\n            space.add(identity_candidate, x) = x\n        =>:\n            identity_candidate = space.zero\n    space.add(identity_candidate, space.zero) = space.add(space.zero, identity_candidate) = identity_candidate\n\n# Existence comes from the vector-space law; associativity and commutativity\n# show that any two additive inverses coincide.\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/identity-chain-only.lit"
+      },
+      {
+        "id": "identity-empty",
+        "source": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y, z K:\n            add(add(x, y), z) = add(x, add(y, z))\n            mul(mul(x, y), z) = mul(x, mul(y, z))\n            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))\n        forall x, y K:\n            add(x, y) = add(y, x)\n            mul(x, y) = mul(y, x)\n        forall x K:\n            add(zero, x) = x\n            add(x, neg(x)) = zero\n            mul(one, x) = x\n        forall x K:\n            x != zero\n            =>:\n                mul(x, inv(x)) = one\n\n# A vector space over one fixed scalar field stores its vector operations and\n# compatibility laws as one first-class object.\n\nstruct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:\n    zero V\n    add fn(x, y V) V\n    smul fn(a K, x V) V\n    <=>:\n        forall x, y, z V:\n            add(add(x, y), z) = add(x, add(y, z))\n        forall x, y V:\n            add(x, y) = add(y, x)\n        forall x V:\n            add(zero, x) = x\n            exist y V st {add(x, y) = zero}\n        forall a, b K, x V:\n            smul(field.mul(a, b), x) = smul(a, smul(b, x))\n            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))\n        forall a K, x, y V:\n            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))\n        forall x V:\n            smul(field.one, x) = x\n\n# Any element acting as a left additive identity must equal the stored zero.\n\nthm additive_identity_unique:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:\n        forall x V:\n            space.add(identity_candidate, x) = x\n        =>:\n            identity_candidate = space.zero\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/identity-empty.lit"
+      },
+      {
+        "id": "wrong-identity-target",
+        "source": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y, z K:\n            add(add(x, y), z) = add(x, add(y, z))\n            mul(mul(x, y), z) = mul(x, mul(y, z))\n            mul(x, add(y, z)) = add(mul(x, y), mul(x, z))\n        forall x, y K:\n            add(x, y) = add(y, x)\n            mul(x, y) = mul(y, x)\n        forall x K:\n            add(zero, x) = x\n            add(x, neg(x)) = zero\n            mul(one, x) = x\n        forall x K:\n            x != zero\n            =>:\n                mul(x, inv(x)) = one\n\n# A vector space over one fixed scalar field stores its vector operations and\n# compatibility laws as one first-class object.\n\nstruct VectorSpace<K nonempty_set, field &Field<K>, V nonempty_set>:\n    zero V\n    add fn(x, y V) V\n    smul fn(a K, x V) V\n    <=>:\n        forall x, y, z V:\n            add(add(x, y), z) = add(x, add(y, z))\n        forall x, y V:\n            add(x, y) = add(y, x)\n        forall x V:\n            add(zero, x) = x\n            exist y V st {add(x, y) = zero}\n        forall a, b K, x V:\n            smul(field.mul(a, b), x) = smul(a, smul(b, x))\n            smul(field.add(a, b), x) = add(smul(a, x), smul(b, x))\n        forall a K, x, y V:\n            smul(a, add(x, y)) = add(smul(a, x), smul(a, y))\n        forall x V:\n            smul(field.one, x) = x\n\n# Any element acting as a left additive identity must equal the stored zero.\n\nthm additive_identity_unique:\n    ? forall K nonempty_set, field &Field<K>, V nonempty_set, space &VectorSpace<K, field, V>, identity_candidate V:\n        forall x V:\n            space.add(identity_candidate, x) = x\n        =>:\n            identity_candidate != space.zero\n    space.add(identity_candidate, space.zero) = space.zero\n    space.add(identity_candidate, space.zero) = space.add(space.zero, identity_candidate) = identity_candidate\n\n# Existence comes from the vector-space law; associativity and commutativity\n# show that any two additive inverses coincide.\n\n",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/wrong-identity-target.lit"
+      },
+      {
+        "id": "inverse-delete-zero-product-bridge",
+        "source": {
+          "text_omitted": true,
+          "sha256": "a2baca99a208db3fb49af5ec5d43f96f556807cc7168ea58cf7ea1195cf38170",
+          "characters": 3093,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/inverse-delete-zero-product-bridge.lit"
+      },
+      {
+        "id": "inverse-claim-publishes-endpoint",
+        "source": {
+          "text_omitted": true,
+          "sha256": "c080ac5e4734d45cd55b3845d95a10969e2bde97624d24f69fb3ff1dc3537423",
+          "characters": 3190,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/inverse-claim-publishes-endpoint.lit"
+      },
+      {
+        "id": "inverse-claim-missing-zero-bridge",
+        "source": {
+          "text_omitted": true,
+          "sha256": "34bed415bf1666cd190484a92e77dde3fcb09186d5086c7d0a10bd9dfd68a459",
+          "characters": 3133,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/inverse-claim-missing-zero-bridge.lit"
+      },
+      {
+        "id": "inverse-claim-wrong-endpoint",
+        "source": {
+          "text_omitted": true,
+          "sha256": "15cf76a175d441916823f9377524db9d0178bcb74af4a16270ddd1b2aee1d371",
+          "characters": 3191,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/inverse-claim-wrong-endpoint.lit"
+      },
+      {
+        "id": "identity-one-directed-chain",
+        "source": {
+          "text_omitted": true,
+          "sha256": "149a8b7eaa5a28515c1e8ad19e4b841c10af6283eb5270656e47728bfdab234c",
+          "characters": 2994,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/identity-one-directed-chain.lit"
+      },
+      {
+        "id": "combined-short-route",
+        "source": {
+          "text_omitted": true,
+          "sha256": "56d47ea11fef5fe2b0194181680c88dc447e7315e57ff9b131c6c716f25deb16",
+          "characters": 3010,
+          "excerpt": "# Linear algebra begins with a scalar field and a vector space over that field.\n# Coordinate spaces appear later as instances of these interfaces.\n#\n# Included: first-class field and vector-space structures, linear maps and\n# kernels, the trivial-kernel criterion for injectivity, concrete R and R^2\n# instances, and the projection onto the x-axis.\n\n# A field packages scalar operations together with the laws used below.\nstruct Field<K nonempty_set>:\n    zero K\n    one K\n    add fn(x, y K) K\n    neg fn(x K) K\n    mul fn(x, y K) K\n    inv fn(x K) K\n    <=>:\n        zero != one\n        forall x, y,"
+        },
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/tmp/2026-10-09/equality-inequality-search/round83-cases/combined-short-route.lit"
+      }
+    ]
+  }
+}
