@@ -1,0 +1,3 @@
+prop is_above_two(t R):
+    t > 2
+$is_above_two(1)

@@ -44,6 +44,28 @@ def check(root: Path) -> list[str]:
             errors.append(f"{entry.relative_to(root)}: folder/name mismatch or duplicate name")
         names.add(name[1])
 
+    registry_path = content_root / "profiles.json"
+    if not registry_path.is_file():
+        errors.append("Missing sop_and_skills/profiles.json")
+    else:
+        registry = json.loads(registry_path.read_text())
+        registered = registry["skills"]
+        if set(registered) != names:
+            errors.append(f"Profile registry differs from skills: {sorted(set(registered) ^ names)}")
+        valid_layers = {"foundation", "reference", "task", "topic", "maintainer"}
+        if set(registered.values()) - valid_layers:
+            errors.append("Profile registry contains an unknown layer")
+        profiles = registry["profiles"]
+        if registry.get("default_profile") != "author" or profiles.get("basics") != ["litex-basics"]:
+            errors.append("Expected author default and standalone litex-basics profile")
+        author = profiles.get("author", [])
+        if len(author) != len(set(author)) or any(name not in names for name in author):
+            errors.append("Author profile has duplicate or unknown skills")
+        if set(author) != {name for name, layer in registered.items() if layer != "maintainer"}:
+            errors.append("Author profile must include all author skills and no maintainer skills")
+        if profiles.get("maintainer") != "all":
+            errors.append("Maintainer profile must preserve the full source edition")
+
     links = 0
     for document in sorted(root.rglob("*.md")):
         relative = document.relative_to(root)

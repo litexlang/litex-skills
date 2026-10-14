@@ -7,12 +7,19 @@ Always apply these rules when working in this repository.
 
 ## Persistent Session: preserve accepted work
 
+**Writing or repairing Litex code requires `-session`, kept alive throughout
+the iterative loop. Never rerun the whole file from the beginning whenever
+you add a few lines.** Load the accepted context once; submit each new or
+corrected statement to that same process. Clean file runs are for baselines,
+coherent checkpoints and final verification. See the
+[short command comparison](../../litex-reference/references/execution.md#file-and-session).
+
 **A normal failed statement is not a reason to restart Litex. Keep the same
 live process, repair that statement, and retain the accepted context.** The
-repository's `docs/AgentGuide.md` starts with a checked artificial example:
-`ready_at_seven` supplies `$ready(7)`; `$ready(8)` fails; `$ready(7)` still
-succeeds in that process. A fresh process with only the predicate declaration
-cannot use the missing axiom until the accepted prefix is replayed.
+repository's `docs/AgentGuide.md` has a minimal checked example: start
+`-session -e 'have a R = 2'`; `a = 3` fails; `a + 1 = 3` still succeeds in
+that process. A fresh process has no `a` until the accepted declaration is
+loaded or replayed. No user axiom or trust is needed for this example.
 
 This is an explicit maintainer workflow instruction, not a kernel change or a
 performance claim. The current `docs/cli.md` owns CLI syntax and output and

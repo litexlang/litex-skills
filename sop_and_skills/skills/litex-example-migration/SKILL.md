@@ -1,34 +1,31 @@
 ---
 name: litex-example-migration
-description: Diagnose Litex examples that fail after a version change. Use for migration triage, distinguishing changed contracts, capability limits, defects and environment drift.
+description: Diagnose unchanged Litex examples that fail after a version change. Use for migration triage and requested repairs, separating contract changes, capability gaps, defects and environment drift.
 ---
 
-# litex-example-migration
+# Litex example migration
 
-Anchor the unchanged failing source, its actual module configuration,
-the named old baseline and the current executable. A scan authorizes diagnosis;
-implement repairs only within the requested scope.
+Use [the foundation](../litex-basics/SKILL.md) and
+[live reading](../litex-reference/SKILL.md) for the actual target version.
+A requested scan is read-only; implement repairs only within its authorized scope.
 
-Report root cause and earliest failing phase separately. Distinguish intended
-semantic changes, intentional capability limits, migration omissions,
-implementation defects, old-example defects, environment drift and unknown
-causes. A normal proof miss is not a mathematical counterexample.
+1. Anchor the unchanged failing source, configuration, named old baseline and
+   current executable. Dated snapshots stay associated with their own version.
+2. Reproduce the first actual failure. Separate syntax, WD, proof, storage/use,
+   module-context and environment evidence instead of inferring the cause
+   from a final error alone.
+3. Read the relevant current Manual/CLI section and matching positive/negative
+   example. Use [modules](../litex-basics/references/topics/modules.md) when
+   imports/export context explain the difference.
+4. Classify intended contract change, intentional limit, migration omission,
+   implementation defect, old-example defect, environment drift or unknown.
+   State diagnostic confidence separately from repair ownership.
+5. Report the smallest real code, observed result, established expected
+   behavior and next check. A proof-search miss is not proof of a false goal.
+6. For an authorized authoring repair use
+   [proof writing](../litex-proof-writer/SKILL.md) and one persistent Session.
+   Keep expected-negative controls rejected and verify the actual saved source.
 
-Use the [source guide](references/source-guide.md) for the twelve diagnostic
-facets and investigation protocol, and the shared
-[explicit-proof boundary](../golitex-repository-policy/references/search-explicit-proof-boundary.md)
-for automatic discovery versus explicit checkability. Show the real snippet,
-observed outcome, established expected behavior and smallest next check.
-
-Do not make a reproduction pass by adding trust, dropping premises, weakening
-the goal or changing expected-negative fixtures. Respect the
-[AST authorization gate](../litex-ast-struct-authorization/SKILL.md) and
-[repository policy](../golitex-repository-policy/SKILL.md) for kernel repairs.
-
-## Execution and scope
-
-Use [the current execution contract](../litex-reference/references/execution.md)
-and the target version's Manual and CLI. Repository rules in the imported notes
-apply inside golitex; outside that repository use the owning project's paths
-and user-authorized trust policy. Existing skill references are conditional
-reading routes, not instructions to load every skill.
+Do not add trust, remove premises or weaken a goal to call migration solved.
+A proposed kernel repair belongs to a separate applicable maintainer workflow;
+respect its concrete AST/Env/Runtime authorization gates.

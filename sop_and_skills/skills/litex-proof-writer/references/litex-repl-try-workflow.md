@@ -1,5 +1,11 @@
 # Persistent Session and proof journal
 
+**Open `-session` and keep one process for the entire authoring loop.** An
+ordinary failed statement does not discard earlier accepted definitions or
+facts. Repair it there; never reload the full file after each small addition.
+The [short command comparison](../../litex-reference/references/execution.md#file-and-session)
+distinguishes authoring from clean checkpoint and final runs.
+
 The historical filename remains so existing skill links continue to resolve.
 Current execution uses [the shared contract](../../litex-reference/references/execution.md),
 with one top-level statement per input and no literal try wrapper.

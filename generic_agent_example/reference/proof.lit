@@ -1,0 +1,156 @@
+# Checked reference authored during preparation; not a Generic Agent generation result.
+# Checker supplies inputs/prefix.lit and inputs/goal.lit. Equal edge lengths remain allowed.
+
+thm maximum_edge_endpoint:
+    ? forall edge, left_one, left_two, right_one, right_two R+:
+        left_one <= edge
+        left_two <= edge
+        right_one <= edge
+        right_two <= edge
+        edge < left_one + right_one
+        edge < left_two + right_two
+        =>:
+            $triangle_edges(edge, left_one, left_two) or $triangle_edges(edge, right_one, right_two)
+    by cases:
+        ? $triangle_edges(edge, left_one, left_two) or $triangle_edges(edge, right_one, right_two)
+        case edge < left_one + left_two:
+            left_one < edge + left_two
+            left_two < edge + left_one
+            by def $triangle_edges(edge, left_one, left_two)
+        case edge >= left_one + left_two:
+            edge + edge < (left_one + right_one) + (left_two + right_two) = (left_one + left_two) + (right_one + right_two) <= edge + (right_one + right_two)
+            edge + edge < edge + (right_one + right_two)
+            (edge + edge) - edge < (edge + (right_one + right_two)) - edge
+            (edge + edge) - edge = edge
+            (edge + (right_one + right_two)) - edge = right_one + right_two
+            edge < right_one + right_two
+            right_one < edge + right_two
+            right_two < edge + right_one
+            by def $triangle_edges(edge, right_one, right_two)
+
+claim:
+    ? forall ab, ac, ad, bc, bd, cd R+:
+        $triangle_edges(ab, ac, bc)
+        $triangle_edges(ab, ad, bd)
+        $triangle_edges(ac, ad, cd)
+        $triangle_edges(bc, bd, cd)
+        =>:
+            $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+    have tail_bd R = max(bd, cd)
+    have tail_bc R = max(bc, tail_bd)
+    have tail_ad R = max(ad, tail_bc)
+    have tail_ac R = max(ac, tail_ad)
+    have longest R = max(ab, tail_ac)
+    claim:
+        ? longest = ab or longest = ac or longest = ad or longest = bc or longest = bd or longest = cd
+        by cases:
+            ? longest = ab or longest = ac or longest = ad or longest = bc or longest = bd or longest = cd
+            case ab >= tail_ac:
+                tail_ac <= ab
+                max(ab, tail_ac) = ab
+                longest = ab
+            case ab < tail_ac:
+                ab <= tail_ac
+                max(ab, tail_ac) = tail_ac
+                longest = tail_ac
+                by cases:
+                    ? longest = ab or longest = ac or longest = ad or longest = bc or longest = bd or longest = cd
+                    case ac >= tail_ad:
+                        tail_ad <= ac
+                        max(ac, tail_ad) = ac
+                        tail_ac = ac
+                        longest = ac
+                    case ac < tail_ad:
+                        ac <= tail_ad
+                        max(ac, tail_ad) = tail_ad
+                        tail_ac = tail_ad
+                        by cases:
+                            ? longest = ab or longest = ac or longest = ad or longest = bc or longest = bd or longest = cd
+                            case ad >= tail_bc:
+                                tail_bc <= ad
+                                max(ad, tail_bc) = ad
+                                tail_ad = ad
+                                longest = ad
+                            case ad < tail_bc:
+                                ad <= tail_bc
+                                max(ad, tail_bc) = tail_bc
+                                tail_ad = tail_bc
+                                by cases:
+                                    ? longest = ab or longest = ac or longest = ad or longest = bc or longest = bd or longest = cd
+                                    case bc >= tail_bd:
+                                        tail_bd <= bc
+                                        max(bc, tail_bd) = bc
+                                        tail_bc = bc
+                                        longest = bc
+                                    case bc < tail_bd:
+                                        bc <= tail_bd
+                                        max(bc, tail_bd) = tail_bd
+                                        tail_bc = tail_bd
+                                        by cases:
+                                            ? longest = ab or longest = ac or longest = ad or longest = bc or longest = bd or longest = cd
+                                            case bd >= cd:
+                                                cd <= bd
+                                                max(bd, cd) = bd
+                                                tail_bd = bd
+                                                longest = bd
+                                            case bd < cd:
+                                                bd <= cd
+                                                max(bd, cd) = cd
+                                                tail_bd = cd
+                                                longest = cd
+    ab <= longest
+    ac <= tail_ac <= longest
+    ad <= tail_ad <= tail_ac <= longest
+    bc <= tail_bc <= tail_ad <= tail_ac <= longest
+    bd <= tail_bd <= tail_bc <= tail_ad <= tail_ac <= longest
+    cd <= tail_bd <= tail_bc <= tail_ad <= tail_ac <= longest
+    by cases:
+        ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+        case longest = ab:
+            release thm maximum_edge_endpoint(ab, ac, ad, bc, bd)
+            by cases:
+                ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+                case $triangle_edges(ab, ac, ad):
+                    by def $triangle_edges(ab, ac, ad)
+                case $triangle_edges(ab, bc, bd):
+                    by def $triangle_edges(ab, bc, bd)
+        case longest = ac:
+            release thm maximum_edge_endpoint(ac, ab, ad, bc, cd)
+            by cases:
+                ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+                case $triangle_edges(ac, ab, ad):
+                    by def $triangle_edges(ab, ac, ad)
+                case $triangle_edges(ac, bc, cd):
+                    by def $triangle_edges(ac, bc, cd)
+        case longest = ad:
+            release thm maximum_edge_endpoint(ad, ab, ac, bd, cd)
+            by cases:
+                ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+                case $triangle_edges(ad, ab, ac):
+                    by def $triangle_edges(ab, ac, ad)
+                case $triangle_edges(ad, bd, cd):
+                    by def $triangle_edges(ad, bd, cd)
+        case longest = bc:
+            release thm maximum_edge_endpoint(bc, ab, bd, ac, cd)
+            by cases:
+                ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+                case $triangle_edges(bc, ab, bd):
+                    by def $triangle_edges(ab, bc, bd)
+                case $triangle_edges(bc, ac, cd):
+                    by def $triangle_edges(ac, bc, cd)
+        case longest = bd:
+            release thm maximum_edge_endpoint(bd, ab, bc, ad, cd)
+            by cases:
+                ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+                case $triangle_edges(bd, ab, bc):
+                    by def $triangle_edges(ab, bc, bd)
+                case $triangle_edges(bd, ad, cd):
+                    by def $triangle_edges(ad, bd, cd)
+        case longest = cd:
+            release thm maximum_edge_endpoint(cd, ac, bc, ad, bd)
+            by cases:
+                ? $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)
+                case $triangle_edges(cd, ac, bc):
+                    by def $triangle_edges(ac, bc, cd)
+                case $triangle_edges(cd, ad, bd):
+                    by def $triangle_edges(ad, bd, cd)

@@ -1,0 +1,3 @@
+have fn successor(n N) R = n + 1
+
+successor(2) = 3

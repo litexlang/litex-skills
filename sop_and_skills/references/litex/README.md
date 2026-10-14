@@ -4,6 +4,17 @@ This is a small offline reference subset. [Provenance](../sources.md) records
 the source checkout and hashes; the source files are snapshots, not a second
 independently maintained language specification.
 
+For active authoring use the [live reference router](../../skills/litex-reference/SKILL.md)
+and the actual paired `../golitex` by default. This page inventories the bundled
+offline snapshots. If live sources are unavailable, state that limitation and
+the snapshot version before using this fallback; do not silently replace the
+current checkout with these older sources.
+
+**Write Litex in one live `-session`.** Keep accepted definitions and facts
+after an ordinary failure; repair the failed statement there. Do not reload
+the whole file after adding a few lines. The [Agent Guide](docs/AgentGuide.md)
+shows a short command comparison and context-retention example.
+
 | Question | Entry |
 | --- | --- |
 | Install and check a version | [Setup](docs/setup.md) |

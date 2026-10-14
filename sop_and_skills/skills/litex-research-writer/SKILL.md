@@ -1,29 +1,31 @@
 ---
 name: litex-research-writer
-description: Write evidence-based Litex explanations, module documentation, comparisons and research materials. Use when communicating Litex behavior and verified scope.
+description: Write evidence-based Litex explanations, module documentation, comparisons and research material. Use when communicating mathematical meaning, verifier behavior and verified scope.
 ---
 
-# litex-research-writer
+# Litex research writer
 
-Lead with the concrete user-visible behavior and its evidence. Distinguish
-source statements, assumptions, checked artifacts, historical results and
-proposed capabilities. Do not turn a small example into an untested general
-capability or performance claim.
+Lead with a concrete user-visible behavior and its evidence. Distinguish
+source mathematics, assumptions, checked source, historical results and
+proposed capabilities. A small proof is not an untested general capability
+or performance claim.
 
-Use [textbook and showcase README guidance](references/textbook-showcase-readme.md)
-for module documentation. Read [the source guide](references/source-guide.md)
-only for the requested writing mode: public explanation, comparison, research
-packet, funding application or outreach draft. Drafting a message does not
-authorize sending it.
+1. Identify the audience and the exact claim the artifact should communicate.
+2. Anchor the real source, mathematical statement, command, executable and
+   assumption boundary. Use [reference routing](../litex-reference/SKILL.md)
+   for live docs and a relevant showcase.
+3. For module documentation describe implemented interfaces in README and
+   important mathematical design/dependencies in `math_collections.md`.
+   Explain partial chapters, scalar models and remaining debt explicitly.
+4. Show a complete small example with its actual result. For executable source
+   use [the foundation](../litex-basics/SKILL.md) and
+   [proof writing](../litex-proof-writer/SKILL.md); do not present an unrun
+   excerpt as verified evidence.
+5. Keep comparisons aligned on statement, assumptions and measured scope.
+   Report unknowns and implementation boundaries honestly.
+6. For public explanations or research packets, let source evidence support
+   each capability claim. Drafting outreach does not authorize sending it.
 
-For executable examples use [proof writing](../litex-proof-writer/SKILL.md),
-keep each example self-contained and record the actual command and trust
-boundary. Larger math projects are available through [reference routing](../litex-reference/SKILL.md).
-
-## Execution and scope
-
-Use [the current execution contract](../litex-reference/references/execution.md)
-and the target version's Manual and CLI. Repository rules in the imported notes
-apply inside golitex; outside that repository use the owning project's paths
-and user-authorized trust policy. Existing skill references are conditional
-reading routes, not instructions to load every skill.
+Expanded mode-specific historical guides remain in the source edition.
+Use [review](../litex-review/SKILL.md) when prose and the accepted mathematical
+statement need an independent read-only consistency check.

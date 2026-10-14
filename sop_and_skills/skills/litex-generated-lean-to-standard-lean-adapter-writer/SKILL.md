@@ -1,29 +1,29 @@
 ---
 name: litex-generated-lean-to-standard-lean-adapter-writer
-description: Write handwritten Lean Adapter and Final layers consuming compiler-generated Litex proofs. Use after generated output exists; keep the final theorem native to Lean and Mathlib.
+description: Write handwritten Lean Adapter and Final layers after compiler-generated Litex output exists. Use for a native Lean/Mathlib consumer without changing compiler-owned output or weakening its theorem.
 ---
 
-# litex-generated-lean-to-standard-lean-adapter-writer
+# Litex Lean Adapter and Final
 
-Consume the actual compiler-generated theorem through a handwritten
-Adapter.lean, then a real Final.lean consumer. Generated files remain compiler
-owned. The Final theorem's binders, premises and conclusion use ordinary
-Lean/Mathlib concepts; its proof body may cite native Adapter theorems.
+Keep four owners distinct: Litex source, compiler-generated Lean, handwritten
+`Adapter.lean`, and handwritten `Final.lean`. The generated layer remains
+compiler owned. This task starts after actual generated output exists.
 
-Read the [source guide](references/source-guide.md) before constructing the
-bridge. It defines the four ownership layers, reviewed Same-to-Eq
-specializations, concrete interface examples and acceptance requirements.
+1. Read the generated theorem's exact denotations, premises and conclusion.
+   Anchor the final native mathematical statement independently.
+2. Write an Adapter connecting the generated interface to intended ordinary
+   Lean/Mathlib objects. Review semantic conversion and equality specialization
+   rather than assuming a generated relation already is native equality.
+3. Keep Final's binders, premises and conclusion native. Its proof may use
+   native Adapter theorems; the generated theorem must remain a live dependency.
+4. Do not reprove unrelated mathematics, invent an axiom, weaken Final or edit
+   generated output to force the bridge to work. Report missing conversion
+   evidence with the real source and proposed interface.
+5. Check Adapter and Final with the intended Lean/Mathlib environment.
+   Successful Litex verification alone does not establish Lean acceptance.
 
-The adapter converts a proved interface; it does not reprove the mathematics
-or insert a new axiom to make the desired theorem appear. A generated theorem
-citation must be a live proof dependency. If conversion evidence is missing,
-report it without weakening the final native statement. Verify Adapter and
-Final in the intended Lean environment; Litex acceptance alone is insufficient.
-
-## Execution and scope
-
-Use [the current execution contract](../litex-reference/references/execution.md)
-and the target version's Manual and CLI. Repository rules in the imported notes
-apply inside golitex; outside that repository use the owning project's paths
-and user-authorized trust policy. Existing skill references are conditional
-reading routes, not instructions to load every skill.
+For Litex source authoring use [the foundation](../litex-basics/SKILL.md).
+For exact supported output read the target-version compiler guide through
+[reference routing](../litex-reference/SKILL.md). Compiler implementation belongs
+to the separately selected maintainer profile. The full source edition retains
+expanded adapter examples and ownership notes.

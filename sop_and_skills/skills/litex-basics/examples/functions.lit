@@ -1,0 +1,13 @@
+have fn reciprocal(x R: x != 0) R = 1 / x
+
+reciprocal(2) = 1 / 2
+
+thm reciprocal_product:
+    ? forall x R:
+        x != 0
+        =>:
+            reciprocal(x) * x = 1
+    reciprocal(x) = 1 / x
+    reciprocal(x) * x = (1 / x) * x = 1
+
+by thm reciprocal_product(2) => reciprocal(2) * 2 = 1

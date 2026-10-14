@@ -1,0 +1,8 @@
+have S set = {1, 2}
+
+1 $in S
+
+by enumerate finite_set:
+    ? forall x {1, 2}:
+        x > 0
+    x > 0

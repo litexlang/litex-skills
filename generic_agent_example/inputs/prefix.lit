@@ -1,0 +1,5 @@
+# A triple of positive lengths forms a nondegenerate triangle.
+prop triangle_edges(x, y, z R+):
+    x < y + z
+    y < x + z
+    z < x + y

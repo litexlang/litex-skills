@@ -1,7 +1,15 @@
 # IMO geometry workflow
 
+Start with [litex-basics](../../skills/litex-basics/SKILL.md); use its sets/functions
+and logic/scope topics when the geometry interface or proof requires them.
+
 Use this workflow for a contest geometry problem. The hub's general skills
 also support other mathematics; this workflow is not their universal entrypoint.
+
+Resolve the live corpus with [reference routing](../../skills/litex-reference/SKILL.md).
+Start at level 2 with `showcases/2D_Geometry/README.md`, choose the actual
+library/solution entry and inspect its configuration, assumptions and model.
+Use level 1 for local proof steps and level 3 for uncertain semantics.
 
 1. Read the original problem, identify its carriers/nondegeneracy and state the
    mathematical proof idea. Resolve the actual geometry library and its trust
@@ -11,7 +19,9 @@ also support other mathematics; this workflow is not their universal entrypoint.
    formal statement, retaining the source's conditions and conclusion.
 3. Use [proof writing](../../skills/litex-proof-writer/SKILL.md) and relevant
    [calculation cards](../../skills/litex-equality-inequality/SKILL.md). Preserve
-   accepted Session context across ordinary failed statements.
+   accepted context in one live `-session` across ordinary failed statements.
+   Load it once, repair the failed statement there, and never rerun the whole
+   file after adding a few lines. See the [command comparison](../../skills/litex-reference/references/execution.md#file-and-session).
 4. Save each problem's source and actual module configuration in its owning
    project. For several parts keep separate answer sources and ordered exports.
    Verify the saved sources and the intended complete module; use strict mode
@@ -21,7 +31,7 @@ also support other mathematics; this workflow is not their universal entrypoint.
 
 Use [reference routing](../../skills/litex-reference/SKILL.md) for current
 language and CLI rules. A full version-matched corpus supplies the larger
-2D_Geometry collection when the curated subset is insufficient.
+2D_Geometry collection; curated snapshots are an explicit offline fallback.
 
 ## Historical package
 

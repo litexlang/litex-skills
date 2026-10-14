@@ -3,98 +3,106 @@
 > Curated local worktree snapshot (2026-10-13); see [source provenance](../../sources.md). Links to material outside this subset point to its upstream location or an explicitly unbundled source note.
 
 
-> **Keep one live Session while repairing a proof. A normal failed statement
-> does not erase the definitions and facts already accepted in that Session.
-> Correct the failed statement and submit it to the same process.**
+> **Required workflow: when writing or repairing Litex code, open `-session`
+> and keep the same live process throughout the iterative loop. Never rerun
+> the whole file from the beginning whenever you add a few new lines.**
+>
+> **An ordinary failed statement does not erase the definitions and facts
+> already accepted in that Session. Correct only the failed statement and
+> submit it to the same process, then continue from the accepted context.**
 
 Litex builds a mathematical context statement by statement. Reusing that
 context preserves both earlier proof work and the cost of loading chapter or
 module dependencies. Restarting creates a new context; editing a source file
 alone does not update the running process.
 
-## See why keeping the Session matters
+Load the accepted prefix once, then submit new statements to that live Session.
+Use clean full-file runs for a baseline, coherent checkpoints, and final
+verification; they must not replace the Session as the per-candidate loop.
 
-This intentionally artificial example uses an opaque predicate so that
-arithmetic cannot prove the result automatically. `ready_at_seven` is an
-explicit teaching assumption, not a proof of a mathematical theorem. Never
-add an axiom merely to make a real failed proof pass.
+## A short command comparison
 
-From a directory without `litex.config`, start:
+These filenames illustrate the workflow; `accepted-prefix.lit` must pass.
 
 ```bash
-litex -lang en -session -e 'abstract_prop ready(n)'
+# Wrong per-edit loop: each command starts from the beginning again.
+litex -lang en -f solution.lit  # after adding a statement
+litex -lang en -f solution.lit  # after repairing it or adding another
 ```
 
-Enter these three statements **one at a time in that same process**. The
-transcript abbreviates the failure JSON; the receipt retains the exact output.
+```bash
+# Required loop: load accepted work once and keep this process open.
+litex -lang en -f accepted-prefix.lit -session
+# Submit each new/corrected statement to this REPL.
+```
+
+The example below shows the reason: `a = 3` fails, but the previously
+accepted `a = 2` still lets `a + 1 = 3` succeed in that same process.
+
+## See why keeping the Session matters
+
+This short authoring comparison was checked with Litex 1.0.7-beta on
+2026-10-14; the surrounding imported reference remains version-specific.
+The failure line below summarizes the diagnostic rather than quoting JSON.
+
+Start with one accepted declaration:
+
+```bash
+litex -lang en -session -e 'have a R = 2'
+```
+
+Submit each statement separately in that same process:
 
 ```text
-litex> axiom ready_at_seven:
-...     ? forall n N:
-...         n = 7
-...         =>:
-...             $ready(n)
-...
-success
-litex> $ready(8)
-{"success": false, ..., "session_error": null}
-litex> $ready(7)
+litex> a = 3
+... rejected at search_proof; the prompt returns ...
+litex> a + 1 = 3
 success
 ```
 
-The last success uses the fact stored by the first statement. The failed
-`$ready(8)` does not clear `$ready(7)` and does not become a stored fact.
-Retrying `$ready(8)` still fails. If you restart with only the same
-`abstract_prop ready(n)` declaration, `$ready(7)` fails too: the new process
-has the predicate's signature but lacks the old process's axiom. Replaying the
-accepted statements restores that missing context.
+The failed `a = 3` does not remove the accepted declaration or its fact `a = 2`.
+The next statement uses that fact immediately. Do not repeat the declaration
+or restart the process for the next attempt.
 
-Here is that fresh-process comparison explicitly. Start the same command
-again, then enter each statement separately:
+Compare two independent commands:
 
-```text
-litex> $ready(7)
-{"success": false, ..., "session_error": null}
-litex> axiom ready_at_seven:
-...     ? forall n N:
-...         n = 7
-...         =>:
-...             $ready(n)
-...
-success
-litex> $ready(7)
-success
+```bash
+litex -lang en -e 'have a R = 2'
+litex -lang en -e 'a + 1 = 3'
 ```
 
-The extra replay is the work a restart creates. Keep the live Session after
-an ordinary failed candidate; preserve a journal so an unavoidable restart
-can restore the accepted prefix. Failed candidates themselves are not part
-of that prefix.
-
-The practical comparison is:
+The first succeeds; the second fails because its fresh process has no `a`.
+Load or replay accepted source after an unavoidable restart. Rerunning a whole
+file supplies that context again but repeats earlier statements; keep the
+live Session for the inner loop.
 
 | After a candidate fails | Next attempt |
 | --- | --- |
-| Keep the same Session | Earlier accepted definitions and facts are available immediately. |
-| Start a fresh Session | Reload the module context and replay the accepted prefix before continuing. |
+| Keep the same Session | Earlier accepted definitions and facts are immediately available. |
+| Start a fresh process | Reload the module context and replay accepted statements before continuing. |
 
-A long textbook prefix behaves the same way as this one stored fact. The
-example demonstrates context retention; it does not measure a speedup or
-establish automatic proof discovery.
+This example uses no user axiom or trust. It demonstrates context retention,
+not a measured speedup or automatic proof discovery. Keep accepted source in
+an external journal so an unavoidable restart can recover it.
 
 ## Use the Session as the proof-writing loop
 
 1. Understand the intended mathematics and inspect the existing builtin,
-   library and module interfaces. Load the required context once.
-2. Submit one top-level statement at a time, in source order. A `claim` or
-   theorem and its entire nested proof form one statement. Consume its response
+   library and module interfaces. Open `-session` and load the required
+   accepted context once.
+2. Submit one top-level statement at a time to that same live Session, in
+   source order. A `claim` or theorem and its entire nested proof form one
+   statement. Consume its response
    before sending the next candidate; terminate multiline input with a blank line.
-3. On `success`, journal the accepted source and continue. On an ordinary
-   failure with `session_error: null` followed by another `litex>` prompt,
+3. On plain-text `success`, journal the accepted source and continue. On an
+   ordinary rejection with another `litex>` prompt and no hard termination
+   (read the target version's failure envelope),
    keep the process and repair the current statement. Failure is missing proof
    or well-definedness evidence, not proof of the proposition's negation.
-4. At a coherent checkpoint, save the accepted code and run a separate clean
-   file gate. Interactive context is not a substitute for a reproducible file.
+4. At a coherent checkpoint or final verification, save the accepted code and
+   run a separate clean file gate while keeping the authoring Session open.
+   Do not run the whole file again after each new statement or small batch.
+   Interactive context is not a substitute for a reproducible file.
 
 **The transaction boundary is the statement, not the entire pasted input.**
 A failed statement discards its own tentative parse bindings and execution
@@ -147,9 +155,10 @@ internal error is recoverable in place.
 ## Verify the saved artifact and find the right reference
 
 Use a clean `target/release/litex -lang en -f <file>` gate. Require exit 0 and
-parsed JSON with `kind: run`, `success: true`, and `session_error: null`.
+parsed Normal JSON matching the executable, as specified in the
+[version-aware execution contract](../../../skills/litex-reference/references/execution.md#acceptance).
 Use `-strict` when the intended artifact must exclude user axioms and trust;
-the artificial axiom above is deliberately rejected in strict mode. Reserve
+the accepted source in the example above passes strict mode. Reserve
 `-r` for an explicitly requested whole-module gate. See [CLI output](cli.md#json-output-contract).
 
 | Need | Read |

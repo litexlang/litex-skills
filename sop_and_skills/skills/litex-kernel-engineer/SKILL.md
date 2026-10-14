@@ -5,9 +5,19 @@ description: Develop the golitex Rust parser, verifier, runtime and mathematical
 
 # litex-kernel-engineer
 
+**When iterating on Litex reproducers or examples, keep one live `-session`.**
+Ordinary failure preserves accepted context; do not rerun the full file for
+each small edit. To adopt a rebuilt executable, save accepted source, restart
+and replay it as described in the [Session contract](../litex-reference/references/execution.md#file-and-session).
+
 Apply [golitex repository policy](../golitex-repository-policy/SKILL.md)
 before implementation. Start from a minimal real caller and the established
 mathematical/current contract; trace the earliest unsupported owner.
+
+Use [live reference routing](../litex-reference/SKILL.md) to inspect the actual
+caller: level 1 for a minimal example, level 2 for its showcase/interface,
+and level 3 for the exact documented semantics and rejection boundary.
+Source inspection does not authorize kernel changes or imply a fixture passed.
 
 Do not modify Runtime, Env, their state contracts, or Stmt/Obj/Fact payload
 structures without the user's authorization for that concrete change. Read

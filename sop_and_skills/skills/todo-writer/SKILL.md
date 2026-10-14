@@ -1,28 +1,26 @@
 ---
 name: todo-writer
-description: Record and update source-owned Litex blockers, unfinished mathematics and solved experiences. Use when a proof or translation task leaves explicit debt.
+description: Record source-owned Litex blockers, proof debt and solved experiences. Use when a proof or translation task leaves an explicit unresolved obligation or a verified resolution.
 ---
 
-# todo-writer
+# Litex todo writer
 
-Write blockers in the workspace that owns the source item. Record the
-mathematical goal, current attempt, exact failure or remaining debt, the next
-smallest action and a command that would establish completion. Use one primary
-label, trust or kernel_problem, when following the imported Litex workflow.
+Write in the workspace that owns the source item. Record the intended
+mathematical goal, current concrete attempt, actual failure or debt, smallest
+next action and a command that would establish completion.
 
-Keep an unproved mathematical step separate from a diagnosed verifier defect.
-Remove a resolved blocker only after its relevant artifact passes; retain a
-useful solved-experience note without converting one task into a universal rule.
+Keep an unproved obligation separate from a diagnosed verifier defect. When
+using the source maintainer's taxonomy, choose one primary label:
+`trust` for unfinished proof work, `kernel_problem` for a suspected/established
+verifier-level issue, with diagnostic confidence stated separately.
 
-The [source guide](references/source-guide.md) has the artifact formats and
-unfinished/solved examples. Its golitex workspace conventions apply only there;
-use a source-owned location in other projects. This helper does not authorize
-kernel repairs or broader publication.
+Remove an open blocker only after the relevant source passes; retain useful
+solved evidence. Do not convert one task's workaround into an unconditional
+language rule. A newly verified result should record exact scope and command.
 
-## Execution and scope
-
-Use [the current execution contract](../litex-reference/references/execution.md)
-and the target version's Manual and CLI. Repository rules in the imported notes
-apply inside golitex; outside that repository use the owning project's paths
-and user-authorized trust policy. Existing skill references are conditional
-reading routes, not instructions to load every skill.
+Use [the foundation](../litex-basics/SKILL.md),
+[proof writing](../litex-proof-writer/SKILL.md) and
+[translation](../litex-math-textbook-translator/SKILL.md) for their respective
+workflows. Follow the owning project's paths, debt budget and publication
+policy; recording a blocker does not authorize kernel repair or publication.
+The full source edition retains expanded formats and historical examples.

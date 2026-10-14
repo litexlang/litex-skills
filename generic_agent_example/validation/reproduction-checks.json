@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-10-14",
+  "scope": "Setup/tool integration and verifier replay; no model inference",
+  "agent_commit": "8b7d4e0a82849ccda2c83b85d4391ed7b912ec7f",
+  "litex_commit": "3c5befb5605193a53827b472b15462714ee8690b",
+  "litex_version": "Litex 1.0.6-beta",
+  "binary_sha256": "9df07d3b48a263820071ccd6dc12f017a5c1c436ac4218ba9f4db93c26de6e4f",
+  "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+  "python": "3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 12:55:12) [Clang 14.0.6 ]",
+  "checks": [
+    {
+      "case": "fresh preparation with spaces in output path",
+      "exit": 0,
+      "model_request_made": false
+    },
+    {
+      "case": "prepare existing destination",
+      "exit": 1,
+      "bytes_unchanged": true
+    },
+    {
+      "case": "complete reference",
+      "exit": 0,
+      "verified_edge_theorem": true,
+      "saved": "checks/0001/result.json"
+    },
+    {
+      "case": "unrelated but valid proof",
+      "exit": 1,
+      "verified_edge_theorem": false,
+      "saved": "checks/0002/result.json"
+    },
+    {
+      "case": "weaker theorem independently valid",
+      "exit": 0,
+      "success": true
+    },
+    {
+      "case": "weaker theorem cannot satisfy frozen goal",
+      "exit": 1,
+      "verified_edge_theorem": false,
+      "saved": "checks/0003/result.json"
+    },
+    {
+      "case": "edited frozen goal",
+      "exit": 1,
+      "rejected_before_verifier": true
+    },
+    {
+      "case": "trusted goal passes ordinary verification but fails strict frozen-goal gate",
+      "ordinary_exit": 0,
+      "strict_exit": 1,
+      "verified_edge_theorem": false
+    },
+    {
+      "case": "injected unknown JSON contract cannot be treated as success",
+      "exit": 1,
+      "recognized_pinned_contract": false,
+      "simulation": "Only this guard test substitutes a synthetic executable; not mathematical evidence."
+    },
+    {
+      "case": "wrong source revision",
+      "exit": 1,
+      "output_not_created": true
+    }
+  ],
+  "final_metadata_check": {
+    "platform_recorded": true,
+    "copied_skill_manifest_hash_recorded": true,
+    "saved_source_replay_command_executed": true,
+    "frozen_goal_passed": true
+  },
+  "integrity_checks": {
+    "hub_skills": 18,
+    "original_source_records_preserved": 2846,
+    "snapshot_hashes_passed": 2846,
+    "historical_receipt_summaries_passed": 205,
+    "author_and_maintainer_exports": "passed; full maintainer export also passed hub checker",
+    "whitespace": "passed",
+    "helper_bytecode_residue": false,
+    "model_inference_calls": 0
+  }
+}

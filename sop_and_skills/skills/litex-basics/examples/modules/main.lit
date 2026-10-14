@@ -1,0 +1,2 @@
+release obj def prefix::module_anchor
+prefix::module_anchor + 1 = 3

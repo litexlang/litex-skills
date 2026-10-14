@@ -1,0 +1,7 @@
+witness exist w R st {w^2 = 4} from 2
+
+obtain root from exist w R st {w^2 = 4}
+
+root^2 = 4
+
+witness exist! w R st {w = 2} from 2

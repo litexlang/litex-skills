@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "problem_id": "imo-1968-p4",
+  "legacy_problem_id": 16,
+  "problem_source": "https://www.imo-official.org/problems/1968/eng.pdf",
+  "generic_agent": {
+    "url": "https://github.com/lsdefine/GenericAgent.git",
+    "commit": "8b7d4e0a82849ccda2c83b85d4391ed7b912ec7f"
+  },
+  "litex": {
+    "url": "https://github.com/litexlang/golitex.git",
+    "commit": "3c5befb5605193a53827b472b15462714ee8690b",
+    "version": "Litex 1.0.6-beta",
+    "json_contract": "normal-success-session_error"
+  },
+  "platform_scope": "macOS/Linux, Python 3.11 or 3.12, pexpect PTY",
+  "result_scope": "Check the edge-length theorem from four strict face-triangle conditions. The geometric interpretation is explained in problem.md; 3D distance axioms/coordinate realizability are not formalized here.",
+  "agent_execution": "User configures their own model/API; no agent success or cost is supplied by a reference proof replay."
+}

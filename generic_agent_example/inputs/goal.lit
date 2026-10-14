@@ -1,0 +1,7 @@
+forall ab, ac, ad, bc, bd, cd R+:
+    $triangle_edges(ab, ac, bc)
+    $triangle_edges(ab, ad, bd)
+    $triangle_edges(ac, ad, cd)
+    $triangle_edges(bc, bd, cd)
+    =>:
+        $triangle_edges(ab, ac, ad) or $triangle_edges(ab, bc, bd) or $triangle_edges(ac, bc, cd) or $triangle_edges(ad, bd, cd)

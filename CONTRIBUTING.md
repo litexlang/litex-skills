@@ -12,10 +12,32 @@ containing name and description. Keep essential task guidance in that entrypoint
 put conditional detail in its references, reusable helpers in its scripts and
 output templates in its assets. The folder name matches the declared name.
 
-Import supporting files with the entrypoint. Keep skills flat to preserve
-sibling references and classify them in sop_and_skills/README.md. Distinguish
-required reading, conditional reading and historical evidence. Do not silently
-overwrite an installed personal skill while adding a hub copy.
+Keep source skills flat to preserve sibling references. Classify each in
+`sop_and_skills/profiles.json` and the hub index: foundation, reference, task,
+topic or maintainer. Foundation owns the minimum working knowledge; task
+entries own workflows; short topic guides load only when needed. Keep the
+foundation's dependencies inside its own directory so `basics` works alone.
+
+Register portable payloads explicitly. The default `author` pack includes all
+non-maintainer skills, with closed relative Markdown dependencies; no task
+should depend on an omitted source-guide or evidence archive. Retain archives
+in source and the explicit full `maintainer` edition. Do not copy the entire
+golitex documentation tree into a new skill. Inspect existing personal skills
+before merging local guidance; the exporter only creates new directories.
+
+Ordinary tasks start with `skills/litex-basics/SKILL.md`, which must teach the
+working model, execution, major syntax, common mathematics and misconception
+boundaries. Keep its complete positive examples runnable and label negative
+controls explicitly. Specialized task entries build on it without loading all
+topics at once. Prefer a small reference inside that foundation for a new
+topic; create a separate skill only when it owns a distinct task workflow.
+
+Deeper source discovery is owned by `skills/litex-reference/SKILL.md` and
+its `references/live-reading.md`: resolve the live corpus, choose a reading
+level, and read actual docs/examples/showcases. Keep other skills' routes
+short and task-specific. Do not turn copied snapshots into the default source.
+Personal installed root hints belong in the installed reference skill's
+`references/local-corpus.md`; shared instructions must remain portable.
 
 Add a task SOP under sop_and_skills/sops/<task>/ when it owns a distinct action
 sequence or acceptance scope. Keep the workflow independent of a particular
@@ -38,6 +60,10 @@ Put an agent's setup pointers, loading instructions and worked usage prompts in
 its example directory. Reference shared skills instead of maintaining another
 copy. Obtain agent code and startup instructions from that agent's upstream.
 Further agent examples can be added when needed without changing the core skills.
+A reproducible example fixes a concrete problem and source revisions, provides
+actual install/run/skill-loading commands, preserves candidate feedback and
+checks the original goal. Distinguish reference proof replay from model-driven
+generation and state which parts of the end-to-end path were actually tested.
 
 The historical Generic Agent IMO package remains under
 [generic_agent_example/legacy_imo_package](generic_agent_example/legacy_imo_package/README.md).
@@ -53,6 +79,9 @@ python3 sop_and_skills/scripts/check_hub.py
 ```
 
 This checks skill entries, internal file links, provenance hashes and receipt
-labels. Run a new/changed executable helper through its actual use path. Verify
+labels and profile membership. Exercise the exporter with each profile, verify
+the lightweight packs' dependency closure and examples outside the paired
+checkout, and check its refusal to overwrite an existing destination. Run a
+new/changed executable helper through its actual use path. Verify
 changed mathematical sources with the chosen Litex version and their real config;
 record expected negatives separately. A link check does not verify mathematics.

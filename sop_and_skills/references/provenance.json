@@ -18,8 +18,8 @@
     "sop_and_skills/skills/golitex-repository-policy/references/golitex-agents.md": {
       "source": "codex-skills/golitex-repository-policy/references/golitex-agents.md",
       "source_sha256": "3c6ea021038d49b6a8c7fbe5edf4149103fea864a1c9d800b3e7a4f8dd27b05f",
-      "transformation": "supporting note with provenance banner and relocated links; journal workflow updated where applicable; English prose translation and reference updates; mathematical source preserved",
-      "packaged_sha256": "ab0361e6afe13e8e3307b4ba88da6b3e75f8e6f20421d091e83c23d42deb4b98"
+      "transformation": "supporting note with provenance banner and relocated links; journal workflow updated where applicable; English prose translation and reference updates; mathematical source preserved; 2026-10-14 explicit maintainer Session authoring rule, short comparison and current-guide alignment",
+      "packaged_sha256": "b82be79a0443133422e646f999d4dd3ffa3e2afce5971fe6cd44ad71bc8e5f9d"
     },
     "sop_and_skills/skills/golitex-repository-policy/references/search-explicit-proof-boundary.md": {
       "source": "codex-skills/golitex-repository-policy/references/search-explicit-proof-boundary.md",
@@ -16674,8 +16674,8 @@
     "sop_and_skills/skills/litex-proof-writer/references/litex-repl-try-workflow.md": {
       "source": "codex-skills/litex-proof-writer/references/litex-repl-try-workflow.md",
       "source_sha256": "8f283ecdd19161f22057b64020aaa7c9a3591da58870a15347206aabdc64765f",
-      "transformation": "supporting note with provenance banner and relocated links; journal workflow updated where applicable",
-      "packaged_sha256": "367862f6e4c2b136903a489f7505835200c684ccc3f893f70736f2973340f477"
+      "transformation": "supporting note with provenance banner and relocated links; journal workflow updated where applicable; 2026-10-14 explicit maintainer Session authoring rule, short comparison and current-guide alignment",
+      "packaged_sha256": "ea0890cac0d9b473521c0389b9167d41c8be01659eccf29ff8a9d7cedf033193"
     },
     "sop_and_skills/skills/litex-proof-writer/references/proof-gap-mining.md": {
       "source": "codex-skills/litex-proof-writer/references/proof-gap-mining.md",
@@ -16848,8 +16848,8 @@
     "sop_and_skills/references/litex/docs/AgentGuide.md": {
       "source": "golitex/docs/AgentGuide.md",
       "source_sha256": "2b292786abe35d7348e628fe60da6566501677f811b6d0633cebe79cfee37e3c",
-      "transformation": "worktree snapshot; relative links adapted for curated distribution",
-      "packaged_sha256": "952851409f2761a2e9c0220fb61c63f71d78acef8156a8355148bc454b2af0f3"
+      "transformation": "worktree snapshot; relative links adapted for curated distribution; 2026-10-14 explicit maintainer Session authoring rule, short comparison and current-guide alignment",
+      "packaged_sha256": "5b8fd930f222aeb04734ff729677f6515ed209cd83c682e21231f48c47b20317"
     },
     "sop_and_skills/references/litex/docs/Litex_To_Lean_Compiler_Guide.md": {
       "source": "golitex/docs/Litex_To_Lean_Compiler_Guide.md",
@@ -17090,5 +17090,54 @@
     "scope": "Navigation, SOPs, skill prose, author notes and historical helper text",
     "preserved": "Original Litex/config files, problem datasets, historical receipt data, literal upstream paths and localized CLI output examples",
     "source_repositories_edited": false
-  }
+  },
+  "updates": [
+    {
+      "date": "2026-10-14",
+      "purpose": "Explicit maintainer instruction: author Litex in one live -session, retain accepted context after ordinary failure, and avoid per-edit full-file replay. Original source hashes and dated historical guides remain intact.",
+      "updated_snapshot_files": [
+        "sop_and_skills/references/litex/docs/AgentGuide.md",
+        "sop_and_skills/skills/golitex-repository-policy/references/golitex-agents.md",
+        "sop_and_skills/skills/litex-proof-writer/references/litex-repl-try-workflow.md"
+      ],
+      "new_authoring_source": "sop_and_skills/references/session-accepted-prefix.lit"
+    },
+    {
+      "date": "2026-10-14",
+      "purpose": "Explicit maintainer redesign: live golitex docs/examples/showcases are primary, with task-dependent four-level reading and explicit offline/historical fallbacks.",
+      "maintained_router": "sop_and_skills/skills/litex-reference/SKILL.md",
+      "maintained_reading_guide": "sop_and_skills/skills/litex-reference/references/live-reading.md",
+      "live_root_resolution": "User-selected root or LITEX_REFERENCE_ROOT; otherwise the paired ../golitex from the hub repository root or a checked installed personal hint.",
+      "installed_copy": "Self-contained reference router and guide; personal location stored separately in references/local-corpus.md.",
+      "snapshot_sources_changed": false
+    },
+    {
+      "date": "2026-10-14",
+      "purpose": "Approved layered implementation: self-contained foundation, task workflows, six conditional mathematical topic guides, misconception controls, read-only review, and explicit basics/author/maintainer exports.",
+      "new_skills": [
+        "litex-basics",
+        "litex-review"
+      ],
+      "profiles": "sop_and_skills/profiles.json",
+      "portable_exporter": "sop_and_skills/scripts/export_skills.py",
+      "authored_examples": "sop_and_skills/skills/litex-basics/examples/",
+      "new_evidence": "sop_and_skills/references/validation/skill-layers-2026-10-14.json",
+      "historical_material": "All imported snapshots, expanded source-guide files and historical receipt archives retained; lightweight exports select their own closed payload.",
+      "installed_copy": "New foundation/review and narrow foundation/topic routes in personal skills; existing bodies and personal corpus location preserved.",
+      "snapshot_sources_changed": false
+    },
+    {
+      "date": "2026-10-14",
+      "purpose": "User clarified generic_agent_example as a reproducible concrete geometry experiment: install upstream agent, load shared skills and solve IMO 1968 P4.",
+      "walkthrough": "generic_agent_example/README.md",
+      "frozen_experiment": "generic_agent_example/experiment.json",
+      "agent_commit": "8b7d4e0a82849ccda2c83b85d4391ed7b912ec7f",
+      "public_litex_commit": "3c5befb5605193a53827b472b15462714ee8690b",
+      "public_litex_version": "Litex 1.0.6-beta",
+      "source_data_boundary": "Use original problem without the archived paraphrase extra distinct-edge premise; formal edge-length implication and unformalized 3D interpretation are explicit.",
+      "reference_and_validation": "generic_agent_example/validation/README.md",
+      "historical_imports_changed": false,
+      "model_inference_during_preparation": false
+    }
+  ]
 }

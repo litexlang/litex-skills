@@ -1,0 +1,5 @@
+claim:
+    ? exist local_point R st {local_point = 2}
+    have helper R = 2
+    witness exist local_point R st {local_point = 2} from helper
+helper = 2

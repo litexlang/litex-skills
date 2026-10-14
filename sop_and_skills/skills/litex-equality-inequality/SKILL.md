@@ -1,35 +1,31 @@
 ---
 name: litex-equality-inequality
-description: Choose concise Litex equality and inequality proofs using dated case cards. Use for calculation chains and order estimates; replay cases against the target version.
+description: Simplify or repair Litex algebraic calculations, equality chains and order estimates while preserving domains, premises and meaningful proof steps.
 ---
 
-# litex-equality-inequality
+# Litex equality and inequality
 
-Establish domains, premises and the mathematical argument before choosing
-the proof shape. Try an existing builtin fact or reusable mathematical
-interface before expanding a long calculation waterfall.
+Use [the foundation](../litex-basics/SKILL.md) and the
+[algebra topic](../litex-basics/references/topics/algebra.md).
+Establish domains, signs and the mathematical argument first.
 
-Select the relevant topic in [the case index](references/parts-index.md).
-For the overview read [problem status](references/problem-status.md);
-for the first two layout examples read [the pilot](references/two-example-pilot.md).
-Read only the selected card. Each card separates a tested form, false or invalid
-controls, unsupported true targets and proposed improvements.
+1. Try the natural direct fact using existing builtin/library interfaces.
+2. If it fails, read the exact first phase and inspect a matching live
+   `examples/proof_nodes/` or `examples/infer/` case through
+   [reference routing](../litex-reference/SKILL.md).
+3. Split genuine jumps into justified calculations. Preserve nonzero/sign
+   premises and the equality direction/representation needed by the consumer.
+4. Compare a shortened candidate and its downstream use in the same context;
+   restore only a bridge demonstrated to be necessary.
+5. Keep one live `-session` across ordinary failures. Save accepted source and
+   use separate clean file gates at coherent checkpoints/final delivery.
+6. For cleanup or a claimed improvement, retain the actual source, invalid
+   control, command and measured result. Shorter source alone does not establish
+   faster execution or globally minimal proof.
 
-These are dated cases, not an exhaustive rule catalogue. Replay the retained
-source in its full context before relying on a historical support claim.
-Compare a shortened proof and its downstream consumers in the same context;
-retain only bridges demonstrated to be necessary. Shorter source does not
-establish faster execution or a globally minimal proof.
-
-[Receipt packaging](references/evidence-packaging.md) explains the compact
-historical summaries and the separately retained runnable sources. Kernel
-improvements are separate authorized work using [kernel engineering](../litex-kernel-engineer/SKILL.md).
-The [source guide](references/source-guide.md) retains the original case-selection method.
-
-## Execution and scope
-
-Use [the current execution contract](../litex-reference/references/execution.md)
-and the target version's Manual and CLI. Repository rules in the imported notes
-apply inside golitex; outside that repository use the owning project's paths
-and user-authorized trust policy. Existing skill references are conditional
-reading routes, not instructions to load every skill.
+Use [proof writing](../litex-proof-writer/SKILL.md) for the overall process.
+The full source repository retains the dated case index at
+`references/parts-index.md` and its historical evidence. Read only a selected
+case when needed; those archives are excluded from the lightweight author pack.
+Replay before claiming current support. Kernel improvements require their own
+authorized task and applicable maintainer rules.

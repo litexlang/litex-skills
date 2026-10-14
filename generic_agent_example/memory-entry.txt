@@ -1,6 +1,9 @@
-Litex SOP and skill hub: LITEX_HUB_ROOT
-For Litex tasks, read LITEX_HUB_ROOT/sop_and_skills/README.md and choose the relevant skill.
-Reference entry: LITEX_HUB_ROOT/sop_and_skills/skills/litex-reference/SKILL.md
-Proof authoring: LITEX_HUB_ROOT/sop_and_skills/skills/litex-proof-writer/SKILL.md
-Read supporting references only when the task needs them.
-Keep the complete checkout so shared references and the optional agent example resolve.
+Optional entry for Generic Agent's memory/global_mem_insight.txt; merge a pointer into its existing L3 index, do not replace the index.
+The frozen reproduction uses generated prompt.md to load skills directly and requires no memory edit.
+
+L3 Litex geometry experiment: LITEX_HUB_ROOT/generic_agent_example/README.md
+Task: IMO 1968 P4 (archived problem 16); prepare a fresh run, read its problem/goal and generated prompt, then use the installed upstream agent.
+Foundation: LITEX_HUB_ROOT/sop_and_skills/skills/litex-basics/SKILL.md
+Task/topic routing: LITEX_HUB_ROOT/sop_and_skills/README.md
+Keep one -session for authoring; ordinary failed statements retain accepted context. Use clean saved-file gates at checkpoints/final delivery.
+For live reference depth use litex-reference and the explicit pinned golitex root selected for the experiment. Do not resolve ../golitex from installed skill paths.

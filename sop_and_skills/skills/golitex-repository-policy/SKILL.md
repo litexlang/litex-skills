@@ -5,11 +5,20 @@ description: Apply this maintainer profile when working inside the golitex repos
 
 # golitex-repository-policy
 
+**Writing or repairing Litex requires one live `-session`.** Load accepted
+context once, retain it after an ordinary failed statement, and repair only
+that statement. Never rerun the whole file after each small addition. Read
+the [short command comparison](../litex-reference/references/execution.md#file-and-session).
+
 This is the imported maintainer profile for the golitex repository. Read
 [the detailed working agreements](references/golitex-agents.md) completely
 before taking actions there; live repository AGENTS.md and direct user
 instructions take precedence. It does not impose golitex's local workspace or
 publication layout on unrelated Litex projects.
+
+For source discovery use [live reference routing](../litex-reference/SKILL.md).
+Read the actual repository's docs, examples and showcases at the depth needed
+for the current question; copied snapshots are explicit fallbacks.
 
 Protected AST, Env and Runtime changes require concrete user authorization.
 Keep accepted Session work across an ordinary failed statement. Follow
