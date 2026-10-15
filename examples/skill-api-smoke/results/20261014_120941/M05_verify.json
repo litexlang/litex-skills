@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "document": {
+    "kind": "run",
+    "run_result": "success",
+    "target": "eval",
+    "path": null,
+    "detail": "normal",
+    "language": "en",
+    "statement_results": [
+      {
+        "statement_result": "accepted",
+        "statement": "have S set = {1, 2}",
+        "proof_method": {
+          "type": "define_obj",
+          "rule_name": "Have with equality",
+          "message": "Introduce an object equal to a given well-defined value"
+        },
+        "stores": [
+          "$is_set(S)"
+        ],
+        "infers": [
+          "S = {1, 2}"
+        ]
+      },
+      {
+        "statement_result": "accepted",
+        "statement": "1 $in S",
+        "proof_method": {
+          "type": "builtin_rewrite",
+          "rule_name": "Builtin rewrite",
+          "message": "Verified by a builtin equality rewrite"
+        },
+        "stores": [
+          "1 $in S"
+        ],
+        "infers": []
+      }
+    ],
+    "session_terminated": false,
+    "termination": null
+  },
+  "raw": "{\n  \"kind\": \"run\",\n  \"run_result\": \"success\",\n  \"target\": \"eval\",\n  \"path\": null,\n  \"detail\": \"normal\",\n  \"language\": \"en\",\n  \"statement_results\": [\n    {\n      \"statement_result\": \"accepted\",\n      \"statement\": \"have S set = {1, 2}\",\n      \"proof_method\": {\n        \"type\": \"define_obj\",\n        \"rule_name\": \"Have with equality\",\n        \"message\": \"Introduce an object equal to a given well-defined value\"\n      },\n      \"stores\": [\n        \"$is_set(S)\"\n      ],\n      \"infers\": [\n        \"S = {1, 2}\"\n      ]\n    },\n    {\n      \"statement_result\": \"accepted\",\n      \"statement\": \"1 $in S\",\n      \"proof_method\": {\n        \"type\": \"builtin_rewrite\",\n        \"rule_name\": \"Builtin rewrite\",\n        \"message\": \"Verified by a builtin equality rewrite\"\n      },\n      \"stores\": [\n        \"1 $in S\"\n      ],\n      \"infers\": []\n    }\n  ],\n  \"session_terminated\": false,\n  \"termination\": null\n}"
+}

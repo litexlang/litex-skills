@@ -1,0 +1,9 @@
+Optional entry for Generic Agent's memory/global_mem_insight.txt; merge a pointer into its existing L3 index, do not replace the index.
+The frozen reproduction uses generated prompt.md to load skills directly and requires no memory edit.
+
+L3 Litex geometry experiment: LITEX_HUB_ROOT/examples/generic-agent/README.md
+Task: IMO 1968 P4 (archived problem 16); prepare a fresh run, read its problem/goal and generated prompt, then use the installed upstream agent.
+Foundation: LITEX_HUB_ROOT/skills/litex-basics/SKILL.md
+Task/topic routing: LITEX_HUB_ROOT/README.md
+Keep one -session for authoring; ordinary failed statements retain accepted context. Use clean saved-file gates at checkpoints/final delivery.
+For live reference depth use litex-reference and the explicit pinned golitex root selected for the experiment. Do not resolve ../golitex from installed skill paths.

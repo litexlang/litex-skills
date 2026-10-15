@@ -1,0 +1,1 @@
+have fn distance_sq(a, b cart(R, R)) R = dot(vec(a, b), vec(a, b))

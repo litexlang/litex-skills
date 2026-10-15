@@ -1,0 +1,11 @@
+thm ab_to_ba:
+    ? forall a, b R:
+        a = b
+        =>:
+            b = a
+    b = a
+
+have p R = 2
+have q R = 2
+p = q
+by thm ab_to_ba(p, q) => p = q

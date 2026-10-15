@@ -1,0 +1,1799 @@
+{
+  "schema_version": 1,
+  "target": "skills/litex-basics/examples/",
+  "binary": "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+  "binary_version": "Litex 1.0.7-beta",
+  "source_correspondence": "existing executable; not rebuilt for documentation work",
+  "session_command": "litex -lang en -strict -session -e 'have fn reciprocal(x R: x != 0) R = 1 / x'",
+  "proof_idea": "State exact domains, define values/functions, verify direct consequences, and use witnesses or an explicit theorem body when needed. Reject a zero-domain call while retaining earlier accepted facts.",
+  "blocks": [
+    {
+      "id": "R01",
+      "source_order": 1,
+      "accepted_litex": "have fn reciprocal(x R: x != 0) R = 1 / x",
+      "result": "accepted at startup"
+    },
+    {
+      "id": "R02",
+      "source_order": 2,
+      "accepted_litex": "reciprocal(2) = 1 / 2",
+      "verifier_evidence": "reciprocal(2) = 1 / 2\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "reciprocal-law",
+      "source_order": 3,
+      "accepted_litex": "thm reciprocal_product:\n    ? forall x R:\n        x != 0\n        =>:\n            reciprocal(x) * x = 1\n    reciprocal(x) = 1 / x\n    reciprocal(x) * x = (1 / x) * x = 1",
+      "result": "accepted"
+    },
+    {
+      "id": "theorem-selection",
+      "source_order": 4,
+      "accepted_litex": "by thm reciprocal_product(2) => reciprocal(2) * 2 = 1",
+      "result": "accepted"
+    },
+    {
+      "id": "after-rejection",
+      "source_order": 5,
+      "accepted_litex": "reciprocal(2) * 2 = 1",
+      "result": "accepted"
+    },
+    {
+      "id": "property-definition",
+      "source_order": 6,
+      "accepted_litex": "prop is_above_two(t R):\n    t > 2",
+      "result": "accepted"
+    },
+    {
+      "id": "definition-use",
+      "source_order": 7,
+      "accepted_litex": "by def $is_above_two(3)",
+      "result": "accepted"
+    },
+    {
+      "id": "existence",
+      "source_order": 8,
+      "accepted_litex": "witness exist w R st {w^2 = 4} from 2",
+      "result": "accepted"
+    },
+    {
+      "id": "obtain",
+      "source_order": 9,
+      "accepted_litex": "obtain root from exist w R st {w^2 = 4}",
+      "result": "accepted"
+    },
+    {
+      "id": "witness-use",
+      "source_order": 10,
+      "accepted_litex": "root^2 = 4",
+      "result": "accepted"
+    },
+    {
+      "id": "dependent-witness",
+      "source_order": 11,
+      "accepted_litex": "claim:\n    ? forall x R:\n        exist y R st {y = x + 1}\n    witness exist y R st {y = x + 1} from x + 1",
+      "result": "accepted"
+    },
+    {
+      "id": "unique-witness",
+      "source_order": 12,
+      "accepted_litex": "witness exist! w R st {w = 2} from 2",
+      "result": "accepted"
+    },
+    {
+      "id": "set-value",
+      "source_order": 13,
+      "accepted_litex": "have S set = {1, 2}",
+      "result": "accepted"
+    },
+    {
+      "id": "membership",
+      "source_order": 14,
+      "accepted_litex": "1 $in S",
+      "result": "accepted"
+    },
+    {
+      "id": "finite-enumeration",
+      "source_order": 15,
+      "accepted_litex": "by enumerate finite_set:\n    ? forall x {1, 2}:\n        x > 0\n    x > 0",
+      "result": "accepted"
+    },
+    {
+      "id": "sequence-function",
+      "source_order": 16,
+      "accepted_litex": "have fn successor(n N) R = n + 1",
+      "result": "accepted"
+    },
+    {
+      "id": "sequence-value",
+      "source_order": 17,
+      "accepted_litex": "successor(2) = 3",
+      "result": "accepted"
+    },
+    {
+      "id": "polynomial",
+      "source_order": 18,
+      "accepted_litex": "forall x R:\n    (x + 1)^2 = x^2 + 2 * x + 1",
+      "result": "accepted"
+    },
+    {
+      "id": "conditional-universal",
+      "source_order": 19,
+      "accepted_litex": "forall x R:\n    x > 0\n    =>:\n        x != 0",
+      "result": "accepted"
+    },
+    {
+      "id": "induction",
+      "source_order": 20,
+      "accepted_litex": "claim:\n    ? forall n N:\n        2^n >= n + 1\n    by induc n from 0:\n        ? 2^n >= n + 1\n        ? from n = 0:\n            2^n = 1 = n + 1\n        ? induc:\n            2^(n + 1) = 2^n * 2^1 = 2^n * 2\n            2^n * 2 >= (n + 1) * 2\n            (n + 1) * 2 = (n + 1) + (n + 1) >= (n + 1) + 1\n            2^(n + 1) = 2^n * 2 >= (n + 1) * 2 >= (n + 1) + 1",
+      "result": "accepted"
+    },
+    {
+      "id": "quickstart-object",
+      "source_order": 21,
+      "accepted_litex": "have a R = 2",
+      "result": "accepted"
+    },
+    {
+      "id": "quickstart-add",
+      "source_order": 22,
+      "accepted_litex": "a + 1 = 3",
+      "result": "accepted"
+    },
+    {
+      "id": "quickstart-square",
+      "source_order": 23,
+      "accepted_litex": "a^2 = 4",
+      "result": "accepted"
+    },
+    {
+      "id": "module-prefix",
+      "source_order": 24,
+      "accepted_litex": "have module_anchor R = 2",
+      "result": "accepted"
+    },
+    {
+      "id": "module-consumer",
+      "source_order": 25,
+      "accepted_litex": "module_anchor + 1 = 3",
+      "result": "accepted"
+    },
+    {
+      "id": "local-helper-claim",
+      "source_order": 26,
+      "accepted_litex": "claim:\n    ? exist local_point R st {local_point = 2}\n    have helper R = 2\n    witness exist local_point R st {local_point = 2} from helper",
+      "result": "accepted"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "reciprocal-law",
+      "candidate": "thm reciprocal_product:\n    ? forall x R:\n        x != 0\n        =>:\n            reciprocal(x) * x = 1\n    reciprocal(x) = 1 / x\n    reciprocal(x) * x = (1 / x) * x = 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "thm reciprocal_product:\r\n    ? forall x R:\r\n        x != 0\r\n        =>:\r\n            reciprocal(x) * x = 1\r\n    reciprocal(x) = 1 / x\r\n    reciprocal(x) * x = (1 / x) * x = 1\r\n\r\n... ... ... ... ... ... ... success\r\nlitex> "
+    },
+    {
+      "id": "theorem-selection",
+      "candidate": "by thm reciprocal_product(2) => reciprocal(2) * 2 = 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "by thm reciprocal_product(2) => reciprocal(2) * 2 = 1\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "zero-domain",
+      "candidate": "reciprocal(0) = 0",
+      "expected": "rejected",
+      "accepted": false,
+      "verifier_evidence": "reciprocal(0) = 0\r\n{\r\n  \"kind\": \"run\",\r\n  \"run_result\": \"failure\",\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"statement_result\": \"rejected\",\r\n      \"statement\": \"reciprocal(0) = 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"well_defined\",\r\n        \"message\": \"Could not prove that the statement is well-defined.\",\r\n        \"verification\": {\r\n          \"type\": \"equality\",\r\n          \"verification_result\": \"rejected\",\r\n          \"phase\": \"well_defined\",\r\n          \"failure\": {\r\n            \"phase\": \"FnObj\",\r\n            \"failure\": {\r\n              \"phase\": \"requirement\",\r\n              \"obj\": \"reciprocal(0)\",\r\n              \"result\": {\r\n                \"type\": \"atomic_except_equality\",\r\n                \"verification_result\": \"rejected\",\r\n                \"phase\": \"search_proof\",\r\n                \"fact\": \"0 != 0\",\r\n                \"well_defined\": {\r\n                  \"well_defined_of_each_parameter\": [\r\n                    {\r\n                      \"type\": \"by_def\",\r\n                      \"family\": \"Literal\",\r\n                      \"kind\": \"Number\",\r\n                      \"obj\": \"0\"\r\n                    },\r\n                    {\r\n                      \"type\": \"by_def\",\r\n                      \"family\": \"Literal\",\r\n                      \"kind\": \"Number\",\r\n                      \"obj\": \"0\"\r\n                    }\r\n                  ],\r\n                  \"predicate_signature\": {\r\n                    \"type\": \"builtin\"\r\n                  },\r\n                  \"predicate_domain\": []\r\n                }\r\n              }\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_terminated\": false,\r\n  \"termination\": null\r\n}\r\nlitex> "
+    },
+    {
+      "id": "after-rejection",
+      "candidate": "reciprocal(2) * 2 = 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "reciprocal(2) * 2 = 1\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "property-definition",
+      "candidate": "prop is_above_two(t R):\n    t > 2",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "prop is_above_two(t R):\r\n    t > 2\r\n\r\n... ... success\r\nlitex> "
+    },
+    {
+      "id": "definition-use",
+      "candidate": "by def $is_above_two(3)",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "by def $is_above_two(3)\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "existence",
+      "candidate": "witness exist w R st {w^2 = 4} from 2",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "witness exist w R st {w^2 = 4} from 2\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "obtain",
+      "candidate": "obtain root from exist w R st {w^2 = 4}",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "obtain root from exist w R st {w^2 = 4}\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "witness-use",
+      "candidate": "root^2 = 4",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "root^2 = 4\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "dependent-witness",
+      "candidate": "claim:\n    ? forall x R:\n        exist y R st {y = x + 1}\n    witness exist y R st {y = x + 1} from x + 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "claim:\r\n    ? forall x R:\r\n        exist y R st {y = x + 1}\r\n    witness exist y R st {y = x + 1} from x + 1\r\n\r\n... ... ... ... success\r\nlitex> "
+    },
+    {
+      "id": "unique-witness",
+      "candidate": "witness exist! w R st {w = 2} from 2",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "witness exist! w R st {w = 2} from 2\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "false-uniqueness",
+      "candidate": "witness exist! w R st {w^2 = 4} from 2",
+      "expected": "rejected",
+      "accepted": false,
+      "verifier_evidence": "witness exist! w R st {w^2 = 4} from 2\r\n{\r\n  \"kind\": \"run\",\r\n  \"run_result\": \"failure\",\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"statement_result\": \"rejected\",\r\n      \"statement\": \"witness exist! w R st {w ^ 2 = 4} from 2\",\r\n      \"why_failed\": {\r\n        \"type\": \"witness\",\r\n        \"rule_name\": \"Witness exist\",\r\n        \"message\": \"Witness an existential fact\",\r\n        \"phase\": \"witness_exist\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_terminated\": false,\r\n  \"termination\": null\r\n}\r\nlitex> "
+    },
+    {
+      "id": "set-value",
+      "candidate": "have S set = {1, 2}",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "have S set = {1, 2}\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "membership",
+      "candidate": "1 $in S",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "1 $in S\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "finite-enumeration",
+      "candidate": "by enumerate finite_set:\n    ? forall x {1, 2}:\n        x > 0\n    x > 0",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "by enumerate finite_set:\r\n    ? forall x {1, 2}:\r\n        x > 0\r\n    x > 0\r\n\r\n... ... ... ... success\r\nlitex> "
+    },
+    {
+      "id": "sequence-function",
+      "candidate": "have fn successor(n N) R = n + 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "have fn successor(n N) R = n + 1\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "sequence-value",
+      "candidate": "successor(2) = 3",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "successor(2) = 3\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "polynomial",
+      "candidate": "forall x R:\n    (x + 1)^2 = x^2 + 2 * x + 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "forall x R:\r\n    (x + 1)^2 = x^2 + 2 * x + 1\r\n\r\n... ... success\r\nlitex> "
+    },
+    {
+      "id": "conditional-universal",
+      "candidate": "forall x R:\n    x > 0\n    =>:\n        x != 0",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "forall x R:\r\n    x > 0\r\n    =>:\r\n        x != 0\r\n\r\n... ... ... ... success\r\nlitex> "
+    },
+    {
+      "id": "induction",
+      "candidate": "claim:\n    ? forall n N:\n        2^n >= n + 1\n    by induc n from 0:\n        ? 2^n >= n + 1\n        ? from n = 0:\n            2^n = 1 = n + 1\n        ? induc:\n            2^(n + 1) = 2^n * 2^1 = 2^n * 2\n            2^n * 2 >= (n + 1) * 2\n            (n + 1) * 2 = (n + 1) + (n + 1) >= (n + 1) + 1\n            2^(n + 1) = 2^n * 2 >= (n + 1) * 2 >= (n + 1) + 1",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "claim:\r\n    ? forall n N:\r\n        2^n >= n + 1\r\n    by induc n from 0:\r\n        ? 2^n >= n + 1\r\n        ? from n = 0:\r\n            2^n = 1 = n + 1\r\n        ? induc:\r\n            2^(n + 1) = 2^n * 2^1 = 2^n * 2\r\n            2^n * 2 >= (n + 1) * 2\r\n            (n + 1) * 2 = (n + 1) + (n + 1) >= (n + 1) + 1\r\n            2^(n + 1) = 2^n * 2 >= (n + 1) * 2 >= (n + 1) + 1\r\n\r\n... ... ... ... ... ... ... ... ... ... ... ... success\r\nlitex> "
+    },
+    {
+      "id": "quickstart-object",
+      "candidate": "have a R = 2",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "have a R = 2\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "quickstart-add",
+      "candidate": "a + 1 = 3",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "a + 1 = 3\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "quickstart-square",
+      "candidate": "a^2 = 4",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "a^2 = 4\r\nsuccess\r\nlitex> "
+    },
+    {
+      "id": "bad-property",
+      "candidate": "$is_above_two(1)",
+      "expected": "rejected",
+      "accepted": false,
+      "verifier_evidence": "$is_above_two(1)\r\n{\r\n  \"kind\": \"run\",\r\n  \"run_result\": \"failure\",\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"statement_result\": \"rejected\",\r\n      \"statement\": \"$is_above_two(1)\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"$is_above_two(1)\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_terminated\": false,\r\n  \"termination\": null\r\n}\r\nlitex> "
+    },
+    {
+      "id": "missing-premise",
+      "candidate": "forall x R:\n    x != 0",
+      "expected": "rejected",
+      "accepted": false,
+      "verifier_evidence": "forall x R:\r\n    x != 0\r\n\r\n... ... {\r\n  \"kind\": \"run\",\r\n  \"run_result\": \"failure\",\r\n  \"target\": \"repl\",\r\n  \"path\": null,\r\n  \"detail\": \"normal\",\r\n  \"language\": \"en\",\r\n  \"statement_results\": [\r\n    {\r\n      \"statement_result\": \"rejected\",\r\n      \"statement\": \"forall x R:\\n    x != 0\",\r\n      \"why_failed\": {\r\n        \"phase\": \"search_proof\",\r\n        \"goal\": \"forall x R:\\n    x != 0\"\r\n      },\r\n      \"stores\": [],\r\n      \"infers\": []\r\n    }\r\n  ],\r\n  \"session_terminated\": false,\r\n  \"termination\": null\r\n}\r\nlitex> "
+    },
+    {
+      "id": "module-prefix",
+      "candidate": "have module_anchor R = 2",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "have module_anchor R = 2\r\nsuccess\r\nlitex> ",
+      "context": "Initial authoring Session with a global module_anchor declaration; not a configured cross-export consumer"
+    },
+    {
+      "id": "module-consumer",
+      "candidate": "module_anchor + 1 = 3",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "module_anchor + 1 = 3\r\nsuccess\r\nlitex> ",
+      "context": "Initial authoring Session with a global module_anchor declaration; not a configured cross-export consumer"
+    },
+    {
+      "id": "local-helper-claim",
+      "candidate": "claim:\n    ? exist local_point R st {local_point = 2}\n    have helper R = 2\n    witness exist local_point R st {local_point = 2} from helper",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "claim:\r\n    ? exist local_point R st {local_point = 2}\r\n    have helper R = 2\r\n    witness exist local_point R st {local_point = 2} from helper\r\n\r\n... ... ... ... success\r\nlitex> "
+    },
+    {
+      "id": "module-consumer-unqualified-file",
+      "candidate": "module_anchor + 1 = 3",
+      "context": "registered modules/main.lit with preceding prefix export",
+      "expected": "rejected",
+      "accepted": false,
+      "verifier_evidence": "exit 1; parse_error: undefined name module_anchor; the producer belongs to export prefix"
+    },
+    {
+      "id": "module-consumer-qualified",
+      "candidate": "prefix::module_anchor + 1 = 3",
+      "expected": "accepted",
+      "accepted": true,
+      "verifier_evidence": "prefix::module_anchor + 1 = 3\r\nsuccess\r\nlitex> ",
+      "context": "Session opened on modules/prefix.lit (producer context); this success is not a fresh consumer-context check"
+    }
+  ],
+  "clean_gates": [
+    {
+      "file": "skills/litex-basics/examples/existence.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/existence.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "6043598aa6579ab0dd425419b5f8a63869d80c89371c131364d8726a86f99661",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/existence.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "witness exist w R st {w ^ 2 = 4} from 2",
+            "proof_method": {
+              "type": "witness",
+              "rule_name": "Witness exist",
+              "message": "Witness an existential fact"
+            },
+            "stores": [
+              "exist w R st {w ^ 2 = 4}"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "obtain root from exist w R st {w ^ 2 = 4}",
+            "proof_method": {
+              "type": "define_obj",
+              "rule_name": "Obtain from exist",
+              "message": "Obtain objects from a known existential fact"
+            },
+            "stores": [
+              "root $in R"
+            ],
+            "infers": [
+              "root ^ 2 = 4"
+            ]
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "root ^ 2 = 4",
+            "proof_method": {
+              "type": "equivalence_class",
+              "rule_name": "Equivalence class",
+              "message": "Equality follows from stored paths, possibly joined by a checked peer proof"
+            },
+            "stores": [
+              "root ^ 2 = 4"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "witness exist! w R st {w = 2} from 2",
+            "proof_method": {
+              "type": "witness",
+              "rule_name": "Witness exist",
+              "message": "Witness an existential fact"
+            },
+            "stores": [
+              "exist! w R st {w = 2}"
+            ],
+            "infers": [
+              "forall w_a0 R, w_b0 R:\n    w_a0 = 2\n    w_b0 = 2\n    =>:\n        w_a0 = w_b0"
+            ]
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/functions.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/functions.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "be84a32f018575a8eb1a9de50573c30a9989319cb9bf3945eddf09de0168dbb9",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/functions.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have fn reciprocal(x R: x != 0) = 1 / x",
+            "proof_method": {
+              "type": "define_fn",
+              "rule_name": "Have function equal",
+              "message": "Define a named function equal to an anonymous function"
+            },
+            "stores": [
+              "reciprocal $in fn (x R: x != 0) R"
+            ],
+            "infers": [
+              "reciprocal = fn (x R: x != 0) R{1 / x}"
+            ]
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "reciprocal(2) = 1 / 2",
+            "proof_method": {
+              "type": "object_definition",
+              "rule_name": "Object definition",
+              "message": "Equality follows from an object definition"
+            },
+            "stores": [
+              "reciprocal(2) = 1 / 2"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "thm reciprocal_product:\n    ? forall x R:\n        x != 0\n        =>:\n            reciprocal(x) * x = 1\n    reciprocal(x) = 1 / x\n    reciprocal(x) * x = 1 / x * x = 1",
+            "proof_method": {
+              "type": "definition",
+              "rule_name": "Define theorem",
+              "message": "Record a theorem"
+            },
+            "stores": [
+              "forall x R:\n    x != 0\n    =>:\n        reciprocal(x) * x = 1"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "by thm reciprocal_product(2) => reciprocal(2) * 2 = 1",
+            "proof_method": {
+              "type": "by",
+              "rule_name": "By theorem",
+              "message": "Apply a recorded theorem"
+            },
+            "stores": [
+              "reciprocal(2) * 2 = 1"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/induction.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/induction.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "c020796b41cabf4c01cb5f13661425077ba732ea0d00358a6b2021b861a39065",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/induction.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "claim:\n    ? forall n N:\n        2 ^ n >= n + 1\n    by induc n from 0:\n        ? 2 ^ n >= n + 1\n        ? from n = 0:\n            2 ^ n = 1 = n + 1\n        ? induc:\n            2 ^ (n + 1) = 2 ^ n * 2 ^ 1 = 2 ^ n * 2\n            2 ^ n * 2 >= (n + 1) * 2\n            (n + 1) * 2 = n + 1 + (n + 1) >= n + 1 + 1\n            2 ^ (n + 1) = 2 ^ n * 2 >= (n + 1) * 2 >= n + 1 + 1",
+            "proof_method": {
+              "type": "proof_block",
+              "rule_name": "Claim",
+              "message": "Prove a claim block and store its conclusions"
+            },
+            "stores": [
+              "forall n N:\n    2 ^ n >= n + 1"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/logic.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/logic.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "660e7b3da10a331fac677f1f4116a20f3f952cc9d2faff39228b1399b1ad85c3",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/logic.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "prop is_above_two(t R):\n    t > 2",
+            "proof_method": {
+              "type": "definition",
+              "rule_name": "Define prop",
+              "message": "Define a predicate"
+            },
+            "stores": [],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "by def $is_above_two(3)",
+            "proof_method": {
+              "type": "by",
+              "rule_name": "By definition",
+              "message": "Prove by unfolding a definition"
+            },
+            "stores": [
+              "$is_above_two(3)"
+            ],
+            "infers": [
+              "3 $in R",
+              "3 > 2"
+            ]
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "forall x R:\n    x > 0\n    =>:\n        x != 0",
+            "proof_method": {
+              "type": "compound_fact",
+              "rule_name": "Universal",
+              "message": "Verified as a forall fact (details omitted in Normal)"
+            },
+            "stores": [
+              "forall x R:\n    x > 0\n    =>:\n        x != 0"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "claim:\n    ? forall x R:\n        exist y R st {y = x + 1}\n    witness exist y R st {y = x + 1} from x + 1",
+            "proof_method": {
+              "type": "proof_block",
+              "rule_name": "Claim",
+              "message": "Prove a claim block and store its conclusions"
+            },
+            "stores": [
+              "forall x R:\n    exist y R st {y = x + 1}"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/modules/main.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/main.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "1b0860e5bdf6e2e361e93a55628c722853c7e0656bc789421da100c47c450fc0",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/main.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "release obj def f0::module_anchor",
+            "proof_method": {
+              "type": "release",
+              "rule_name": "Release object def",
+              "message": "Release an object definition"
+            },
+            "stores": [
+              "f0::module_anchor $in R",
+              "f0::module_anchor = 2"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "f0::module_anchor + 1 = 3",
+            "proof_method": {
+              "type": "builtin_rewrite",
+              "rule_name": "Builtin rewrite",
+              "message": "Verified by a builtin equality rewrite"
+            },
+            "stores": [
+              "f0::module_anchor + 1 = 3"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/modules/negative-unqualified.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/negative-unqualified.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "a6faa31234a7aeba627b2b6e2db052e7b0776add09f9cc9fa13bac3f910323d6",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/negative-unqualified.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [],
+        "session_terminated": true,
+        "termination": {
+          "phase": "parse",
+          "message": "parse_error: undefined name `module_anchor` at line 1 in /Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/negative-unqualified.lit"
+        }
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/modules/prefix.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/prefix.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "a774ad379d345d11a86c4e088918643b98c4f9db8ebf42368579b2a7240e0d3a",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/prefix.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have module_anchor R = 2",
+            "proof_method": {
+              "type": "define_obj",
+              "rule_name": "Have with equality",
+              "message": "Introduce an object equal to a given well-defined value"
+            },
+            "stores": [
+              "f0::module_anchor $in R"
+            ],
+            "infers": [
+              "f0::module_anchor = 2"
+            ]
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/arbitrary-member.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/arbitrary-member.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "304e9f8cf1e5dabc93dbf4782ff28986444b701ac7e9b052a67f6024193d0186",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/arbitrary-member.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have n N",
+            "proof_method": {
+              "type": "define_obj",
+              "rule_name": "Have from nonempty set",
+              "message": "Introduce an object from a nonempty carrier / parameter type"
+            },
+            "stores": [
+              "n $in N"
+            ],
+            "infers": [
+              "0 <= n"
+            ]
+          },
+          {
+            "statement_result": "rejected",
+            "statement": "n = 2",
+            "why_failed": {
+              "phase": "search_proof",
+              "goal": "n = 2"
+            },
+            "stores": [],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/fact-body-command.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/fact-body-command.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "de738e58b8cda013f8c53963657ffe11e7d68eea1f59fcfc75852d066329a09c",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/fact-body-command.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [],
+        "session_terminated": true,
+        "termination": {
+          "phase": "parse",
+          "message": "parse_error: undefined name `witness` at line 2 in /Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/fact-body-command.lit"
+        }
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/function-domain.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/function-domain.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "60038668d105a8f4293b0cb85efd9860def4761e1cedd9d4812c5e1c0ceae302",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/function-domain.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have fn reciprocal(x R: x != 0) = 1 / x",
+            "proof_method": {
+              "type": "define_fn",
+              "rule_name": "Have function equal",
+              "message": "Define a named function equal to an anonymous function"
+            },
+            "stores": [
+              "reciprocal $in fn (x R: x != 0) R"
+            ],
+            "infers": [
+              "reciprocal = fn (x R: x != 0) R{1 / x}"
+            ]
+          },
+          {
+            "statement_result": "rejected",
+            "statement": "reciprocal(0) = 0",
+            "why_failed": {
+              "phase": "well_defined",
+              "message": "Could not prove that the statement is well-defined.",
+              "verification": {
+                "type": "equality",
+                "verification_result": "rejected",
+                "phase": "well_defined",
+                "failure": {
+                  "phase": "FnObj",
+                  "failure": {
+                    "phase": "requirement",
+                    "obj": "reciprocal(0)",
+                    "result": {
+                      "type": "atomic_except_equality",
+                      "verification_result": "rejected",
+                      "phase": "search_proof",
+                      "fact": "0 != 0",
+                      "well_defined": {
+                        "well_defined_of_each_parameter": [
+                          {
+                            "type": "by_def",
+                            "family": "Literal",
+                            "kind": "Number",
+                            "obj": "0"
+                          },
+                          {
+                            "type": "by_def",
+                            "family": "Literal",
+                            "kind": "Number",
+                            "obj": "0"
+                          }
+                        ],
+                        "predicate_signature": {
+                          "type": "builtin"
+                        },
+                        "predicate_domain": []
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "stores": [],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/local-name.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/local-name.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "033102a4703a8f710069e6c313d4dddc34eecfcc8ad18d17a64995d4739d00c2",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/local-name.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "claim:\n    ? exist local_point R st {local_point = 2}\n    have helper R = 2\n    witness exist local_point R st {local_point = 2} from helper",
+            "proof_method": {
+              "type": "proof_block",
+              "rule_name": "Claim",
+              "message": "Prove a claim block and store its conclusions"
+            },
+            "stores": [
+              "exist local_point R st {local_point = 2}"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": true,
+        "termination": {
+          "phase": "parse",
+          "message": "parse_error: undefined name `helper` at line 5 in /Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/local-name.lit"
+        }
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/missing-premise.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/missing-premise.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "c64bf25c52c6f59627344951c5ced62e6d1c38ed6ee6ba536ae5dbc1f9cd284c",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/missing-premise.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "rejected",
+            "statement": "forall x R:\n    x != 0",
+            "why_failed": {
+              "phase": "search_proof",
+              "goal": "forall x R:\n    x != 0"
+            },
+            "stores": [],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/nonunique-witness.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/nonunique-witness.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "812550959ae869c5c6f1d6b7685c514fcde350cb8f9179882d18cdcedf83d493",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/nonunique-witness.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "rejected",
+            "statement": "witness exist! w R st {w ^ 2 = 4} from 2",
+            "why_failed": {
+              "type": "witness",
+              "rule_name": "Witness exist",
+              "message": "Witness an existential fact",
+              "phase": "witness_exist"
+            },
+            "stores": [],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/negative/property-instance.lit",
+      "expected": "rejected",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/property-instance.lit"
+      ],
+      "exit": 1,
+      "source_sha256": "6a86ad16a4beb643e2fe8ea3239bec5280fd84c46d0cf05d392df37142711b76",
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/negative/property-instance.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "prop is_above_two(t R):\n    t > 2",
+            "proof_method": {
+              "type": "definition",
+              "rule_name": "Define prop",
+              "message": "Define a predicate"
+            },
+            "stores": [],
+            "infers": []
+          },
+          {
+            "statement_result": "rejected",
+            "statement": "$is_above_two(1)",
+            "why_failed": {
+              "phase": "search_proof",
+              "goal": "$is_above_two(1)"
+            },
+            "stores": [],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/quickstart.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/quickstart.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "1c99821be3bbcda56e4006675fdb5078e1669d0b297247db3a7fe0ebbdb3444e",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/quickstart.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have a R = 2",
+            "proof_method": {
+              "type": "define_obj",
+              "rule_name": "Have with equality",
+              "message": "Introduce an object equal to a given well-defined value"
+            },
+            "stores": [
+              "a $in R"
+            ],
+            "infers": [
+              "a = 2"
+            ]
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "a + 1 = 3",
+            "proof_method": {
+              "type": "builtin_rewrite",
+              "rule_name": "Builtin rewrite",
+              "message": "Verified by a builtin equality rewrite"
+            },
+            "stores": [
+              "a + 1 = 3"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "a ^ 2 = 4",
+            "proof_method": {
+              "type": "builtin_rewrite",
+              "rule_name": "Builtin rewrite",
+              "message": "Verified by a builtin equality rewrite"
+            },
+            "stores": [
+              "a ^ 2 = 4"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "forall x R:\n    (x + 1) ^ 2 = x ^ 2 + 2 * x + 1",
+            "proof_method": {
+              "type": "compound_fact",
+              "rule_name": "Universal",
+              "message": "Verified as a forall fact (details omitted in Normal)"
+            },
+            "stores": [
+              "forall x R:\n    (x + 1) ^ 2 = x ^ 2 + 2 * x + 1"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/sequences.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/sequences.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "33a07ebdd59feac30a4cb24376de6e0bc094b9198a3c4665cd3ea903df918da3",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/sequences.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have fn successor(n N) = n + 1",
+            "proof_method": {
+              "type": "define_fn",
+              "rule_name": "Have function equal",
+              "message": "Define a named function equal to an anonymous function"
+            },
+            "stores": [
+              "successor $in fn (n N) R"
+            ],
+            "infers": [
+              "successor = fn (n N) R{n + 1}"
+            ]
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "successor(2) = 3",
+            "proof_method": {
+              "type": "object_definition",
+              "rule_name": "Object definition",
+              "message": "Equality follows from an object definition"
+            },
+            "stores": [
+              "successor(2) = 3"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    },
+    {
+      "file": "skills/litex-basics/examples/sets.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/sets.lit"
+      ],
+      "exit": 0,
+      "source_sha256": "dfe3c1abf2e549fa46e40ee2c22f7dd99ab5b62f21a8cb01d86cd2721355f0ff",
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/sets.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have S set = {1, 2}",
+            "proof_method": {
+              "type": "define_obj",
+              "rule_name": "Have with equality",
+              "message": "Introduce an object equal to a given well-defined value"
+            },
+            "stores": [
+              "$is_set(S)"
+            ],
+            "infers": [
+              "S = {1, 2}"
+            ]
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "1 $in S",
+            "proof_method": {
+              "type": "builtin_rewrite",
+              "rule_name": "Builtin rewrite",
+              "message": "Verified by a builtin equality rewrite"
+            },
+            "stores": [
+              "1 $in S"
+            ],
+            "infers": []
+          },
+          {
+            "statement_result": "accepted",
+            "statement": "by enumerate finite_set:\n    ? forall x {1, 2}:\n        x > 0\n    x > 0",
+            "proof_method": {
+              "type": "by",
+              "rule_name": "By finite enumeration",
+              "message": "Prove by enumerating a finite set"
+            },
+            "stores": [
+              "forall x {1, 2}:\n    x > 0"
+            ],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      },
+      "check_passed": true
+    }
+  ],
+  "binary_sha256": "f98a3454895f291d8b75f39bced13a4c2b727c8d46e756399af8d102c8031a84",
+  "historical_failures": [
+    {
+      "file": "skills/litex-basics/examples/modules/main.lit",
+      "expected": "accepted",
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-f",
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/main.lit"
+      ],
+      "exit": 1,
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "file",
+        "path": "/Users/shenjiachen/主要文件夹/GeekGems/litex/litex-skills/skills/litex-basics/examples/modules/main.lit",
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "rejected",
+            "statement": "f0::module_anchor + 1 = 3",
+            "why_failed": {
+              "phase": "well_defined",
+              "message": "Could not prove that the statement is well-defined.",
+              "verification": {
+                "type": "equality",
+                "verification_result": "rejected",
+                "phase": "well_defined",
+                "failure": {
+                  "phase": "ArithmeticOperator",
+                  "failure": {
+                    "phase": "Add",
+                    "failure": {
+                      "phase": "requirement",
+                      "obj": "f0::module_anchor + 1",
+                      "result": {
+                        "type": "atomic_except_equality",
+                        "verification_result": "rejected",
+                        "phase": "search_proof",
+                        "fact": "f0::module_anchor $in C",
+                        "well_defined": {
+                          "well_defined_of_each_parameter": [
+                            {
+                              "type": "by_def",
+                              "family": "Identifier",
+                              "kind": "Identifier",
+                              "obj": "f0::module_anchor"
+                            },
+                            {
+                              "type": "by_def",
+                              "family": "StandardSet",
+                              "kind": "StandardSet",
+                              "obj": "C"
+                            }
+                          ],
+                          "predicate_signature": {
+                            "type": "builtin"
+                          },
+                          "predicate_domain": []
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "stores": [],
+            "infers": []
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      }
+    }
+  ],
+  "module_correction": "A fresh configured consumer needs release obj def prefix::module_anchor before using its defining type/value in arithmetic. Qualification alone parsed but failed well-definedness; unqualified names failed parsing. Corrected source uses explicit release, without kernel changes.",
+  "export_checks": [
+    {
+      "profile": "basics",
+      "skills": 1,
+      "source_files": 31,
+      "source_bytes": 37342,
+      "export_stdout": "Exported 1 skills and 31 source files to /var/folders/3f/vclnfl0d35x_82gqzww4gfqr0000gn/T/litex-layer-export-check-pc5g7sbe/basics (basics).",
+      "all_copied_hashes_match": true,
+      "packaged_link_closure": "passed",
+      "no_corpus_checkout": true,
+      "clean_gates": [
+        {
+          "file": "skills/litex-basics/examples/existence.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/functions.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/induction.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/logic.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/modules/main.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/modules/negative-unqualified.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/modules/prefix.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/arbitrary-member.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/fact-body-command.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/function-domain.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/local-name.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/missing-premise.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/nonunique-witness.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/property-instance.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/quickstart.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/sequences.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/sets.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        }
+      ],
+      "existing_destination_refused_without_changes": true
+    },
+    {
+      "profile": "author",
+      "skills": 12,
+      "source_files": 43,
+      "source_bytes": 68418,
+      "export_stdout": "Exported 12 skills and 43 source files to /var/folders/3f/vclnfl0d35x_82gqzww4gfqr0000gn/T/litex-layer-export-check-pc5g7sbe/author (author).",
+      "all_copied_hashes_match": true,
+      "packaged_link_closure": "passed",
+      "no_corpus_checkout": true,
+      "clean_gates": [
+        {
+          "file": "skills/litex-basics/examples/existence.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/functions.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/induction.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/logic.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/modules/main.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/modules/negative-unqualified.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/modules/prefix.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/arbitrary-member.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/fact-body-command.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/function-domain.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/local-name.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/missing-premise.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/nonunique-witness.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/negative/property-instance.lit",
+          "expected": "rejected",
+          "exit": 1,
+          "run_result": "failure"
+        },
+        {
+          "file": "skills/litex-basics/examples/quickstart.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/sequences.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        },
+        {
+          "file": "skills/litex-basics/examples/sets.lit",
+          "expected": "accepted",
+          "exit": 0,
+          "run_result": "success"
+        }
+      ],
+      "existing_destination_refused_without_changes": true
+    },
+    {
+      "profile": "maintainer",
+      "skills": 18,
+      "source_files": 2929,
+      "source_bytes": 15476441,
+      "export_stdout": "Exported 18 skills and 2929 source files to /var/folders/3f/vclnfl0d35x_82gqzww4gfqr0000gn/T/litex-layer-export-check-pc5g7sbe/maintainer (maintainer).",
+      "all_copied_hashes_match": true,
+      "packaged_link_closure": "passed",
+      "no_corpus_checkout": false,
+      "clean_gates": [],
+      "existing_destination_refused_without_changes": true
+    },
+    {
+      "guard_controls": {
+        "existing_dangling_symlink": "refused, preserved",
+        "unknown_profile": "refused before creating output",
+        "inside_source_root": "refused before creating output"
+      }
+    }
+  ],
+  "installed_sync": {
+    "new_skills": [
+      "litex-basics",
+      "litex-review"
+    ],
+    "narrow_route_updates": [
+      "litex-proof-writer",
+      "litex-concept-modeler",
+      "litex-math-textbook-translator",
+      "litex-example-migration",
+      "litex-research-writer",
+      "litex-equality-inequality",
+      "litex-strict-definitions",
+      "todo_writer",
+      "litex-generated-lean-to-standard-lean-adapter-writer",
+      "litex-kernel-engineer"
+    ],
+    "all_existing_route_bodies_preserved": true,
+    "reference_router_and_guide_match_source": true,
+    "personal_reference_location_hint_preserved": true
+  },
+  "authoring_session_exit": {
+    "input": "quit",
+    "exit": 1,
+    "run_result": "failure",
+    "session_terminated": false,
+    "termination": null,
+    "interpretation": "Aggregate rejection status after expected failed candidates; the same process accepted later statements. Separate clean saved-file gates all meet expectations."
+  },
+  "fresh_process_comparison": [
+    {
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-e",
+        "have a R = 2"
+      ],
+      "exit": 0,
+      "envelope": {
+        "kind": "run",
+        "run_result": "success",
+        "target": "eval",
+        "path": null,
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [
+          {
+            "statement_result": "accepted",
+            "statement": "have a R = 2",
+            "proof_method": {
+              "type": "define_obj",
+              "rule_name": "Have with equality",
+              "message": "Introduce an object equal to a given well-defined value"
+            },
+            "stores": [
+              "a $in R"
+            ],
+            "infers": [
+              "a = 2"
+            ]
+          }
+        ],
+        "session_terminated": false,
+        "termination": null
+      }
+    },
+    {
+      "command": [
+        "/Users/shenjiachen/主要文件夹/GeekGems/litex/golitex/target/release/litex",
+        "-lang",
+        "en",
+        "-strict",
+        "-e",
+        "a + 1 = 3"
+      ],
+      "exit": 1,
+      "envelope": {
+        "kind": "run",
+        "run_result": "failure",
+        "target": "eval",
+        "path": null,
+        "detail": "normal",
+        "language": "en",
+        "statement_results": [],
+        "session_terminated": true,
+        "termination": {
+          "phase": "parse",
+          "message": "parse_error: undefined name `a` at line 1 in <eval>"
+        }
+      }
+    }
+  ],
+  "final_integrity": {
+    "hub_skills": 18,
+    "installed_entrypoints_validated": 13,
+    "local_markdown_links": 1759,
+    "recorded_snapshot_hashes": 2846,
+    "historical_receipt_summaries": 205,
+    "original_import_paths_and_source_hashes_preserved": true,
+    "whitespace_check": "passed",
+    "new_installed_payloads_and_reference_router_match_source": true,
+    "new_installed_local_links": "all resolved",
+    "scope_limit": "No independent autonomous agent trial, kernel/whole-book/Lean suite or current-source rebuild."
+  },
+  "final_export_snapshots": [
+    {
+      "profile": "basics",
+      "skills": 1,
+      "source_files": 31,
+      "copied_source_bytes": 38031,
+      "dependency_closure": "passed",
+      "copied_hashes": "passed"
+    },
+    {
+      "profile": "author",
+      "skills": 12,
+      "source_files": 43,
+      "copied_source_bytes": 69107,
+      "dependency_closure": "passed",
+      "copied_hashes": "passed"
+    },
+    {
+      "profile": "maintainer",
+      "skills": 18,
+      "source_files": 2929,
+      "copied_source_bytes": 15496145,
+      "dependency_closure": "passed",
+      "copied_hashes": "passed"
+    }
+  ]
+}

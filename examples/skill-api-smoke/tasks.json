@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "name": "litex-basics-api-mini",
+  "skill": "skills/litex-basics/SKILL.md",
+  "notes": "Mini suite for pure-API skill smoke. Expect a single ```litex block with exactly the requested declaration(s).",
+  "tasks": [
+    {
+      "id": "M01",
+      "name": "points",
+      "prompt_zh": "用 Litex 定义平面点集 points 为实数有序对的笛卡尔积。只输出定义本身。",
+      "prompt_en": "Define the plane point set `points` as the Cartesian product of the reals with itself. Output only the Litex definition.",
+      "must_contain": ["have points", "cart(R, R)"],
+      "must_not_contain": ["R * R", "R \\times R", "R × R"]
+    },
+    {
+      "id": "M02",
+      "name": "vec",
+      "prompt_zh": "定义函数 vec(A,B)：A、B 属于 cart(R,R)，返回从 A 到 B 的位移向量，坐标用一元函数应用写出。只输出定义。",
+      "prompt_en": "Define `vec(A, B)` for `A, B` in `cart(R, R)` as the displacement from A to B. Use one-based coordinate applications. Output only the definition.",
+      "must_contain": ["have fn vec", "cart(R, R)", "B(1)", "A(1)", "B(2)", "A(2)"],
+      "must_not_contain": ["B.1", "A.1", "B[1]", "A[1]", "B[0]"]
+    },
+    {
+      "id": "M03",
+      "name": "pair_coords",
+      "prompt_zh": "引入 p = (2, 3) 属于 cart(R,R)，并检查 p 的两个坐标分别等于 2 和 3。只输出这三行。",
+      "prompt_en": "Introduce `p = (2, 3)` in `cart(R, R)` and check both coordinates equal 2 and 3. Output only those three lines.",
+      "must_contain": ["have p cart(R, R)", "p(1) = 2", "p(2) = 3"],
+      "must_not_contain": ["p.1", "p[1]"]
+    },
+    {
+      "id": "M04",
+      "name": "reciprocal",
+      "prompt_zh": "定义非零实数上的倒数函数 reciprocal。只输出 have fn 定义。",
+      "prompt_en": "Define the reciprocal function on nonzero reals. Output only the `have fn` definition.",
+      "must_contain": ["have fn reciprocal", "x != 0", "1 / x"],
+      "must_not_contain": []
+    },
+    {
+      "id": "M05",
+      "name": "finite_set",
+      "prompt_zh": "定义有限集 S = {1, 2}，并断言 1 属于 S。只输出这两行。",
+      "prompt_en": "Define the finite set `S = {1, 2}` and assert that 1 is a member of S. Output only those two lines.",
+      "must_contain": ["have S set = {1, 2}", "1 $in S"],
+      "must_not_contain": []
+    }
+  ]
+}

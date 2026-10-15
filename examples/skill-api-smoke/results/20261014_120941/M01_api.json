@@ -1,0 +1,21 @@
+{
+  "id": "msg_011Cg2770mb9yo8MpnYffk8I",
+  "object": "chat.completion",
+  "created": 1791979825,
+  "model": "claude-opus-4-6",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "```litex\nhave points set = cart(R, R)\n```"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1835,
+    "completion_tokens": 19,
+    "total_tokens": 1854
+  }
+}
